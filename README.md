@@ -1,6 +1,6 @@
 # Automated Financial Report Extraction & Local RAG System
 
-*A step-by-step description of how the system goes from a list of companies to a working, self-correcting local question-answering system over their financial reports.*
+*A step-by-step description of the system from a list of companies to a working, self correcting local question-answering system over their financial reports.*
 
 ---
 
@@ -20,7 +20,7 @@ Everything else — every report, every extracted number, every chunk in the vec
 
 For each company in the seed list:
 
-**1.1 Fall back to search only if 1.2–1.3 find nothing.** Some companies host reports on a third-party IR platform under a different domain, or use a site structure the heuristics above don't handle. A query like `"<company name>" annual report filetype:pdf` catches these without needing site-specific rules.
+**1.1 Search** Find the webapge to crawl in the next step. A query like `"<company name>" financial reports`
 
 **1.2 Crawl candidate pages one level deeper.** Render each candidate with Playwright (scrolling to trigger lazy-loaded document lists, common on IR pages). Collect every link that either ends in `.pdf` or resolves to `content-type: application/pdf` via a HEAD request. Capture surrounding context too — the year and report type ("Annual Report 2023", "Q4 2023") are usually right next to the link in a table row, and this context feeds the classification step below.
 
