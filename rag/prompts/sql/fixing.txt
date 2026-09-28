@@ -1,0 +1,15 @@
+MODE: fix_error
+
+Original question: {{question}}
+
+Your previous query:
+{{previous_sql}}
+
+It failed with this exact database error:
+{{error_message}}
+
+Attempt {{attempt_number}} of {{max_attempts}}.
+
+Fix the query. Change only what the error requires, unless the error reveals
+a deeper misunderstanding of the schema. Do not repeat the same query.
+Return the same JSON format.
