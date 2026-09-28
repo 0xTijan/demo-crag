@@ -51,4 +51,8 @@ def promptReformulator(history: list, q: str = "What is your question? ") -> str
         promptReformulator(history, "The question is out of scope. Please try asking a different question?")
     else:
         qToReturn = response.get("refined_question")
-        return qToReturn
+        dataToReturn = {
+            "prompt": qToReturn,
+            "history": history
+        }
+        return dataToReturn

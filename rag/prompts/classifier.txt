@@ -9,7 +9,7 @@ NUMERIC source: a SQL table of standardized figures with exactly these
 metrics: revenue, cogs, gross_profit, operating_income, ebitda, net_income,
 total_assets, total_liabilities, total_equity, cash_operating,
 cash_investing, cash_financing. Per company, per fiscal year (and quarter).
-Anything computable from these (growth, margins, ratios, rankings,
+Anything computable from these (change, increase/decrease, growth, margins, ratios, rankings,
 comparisons between companies or years) is also NUMERIC.
 
 NARRATIVE source: the full text of the reports (management discussion, risk
@@ -22,12 +22,12 @@ share, order backlog, ESG figures, etc.).
 
 Ask in this order:
 
-1. Can the question be fully answered by looking up or calculating from the
+1. Can the question be fully answered by looking up OR calculating OR comparing from the
    12 metrics? -> NUMERIC.
 2. Does it ask for reasons, explanations, opinions, strategy, risks,
    outlook, descriptions, events, or any fact stated only in text (including
    numeric facts outside the 12 metrics)? -> NARRATIVE.
-3. Does it need BOTH a figure from the table AND information from the text?
+3. Does it need BOTH a figure from the table AND asks about the information from the text?
    -> MIXED.
 
 Edge cases:
@@ -35,6 +35,7 @@ Edge cases:
   and only asks for the reason -> NARRATIVE.
 - "Did X's profit fall, and why?" (must verify/quantify AND explain)
   -> MIXED.
+- "Did X's revenue increase in 2024?" -> NUMERIC
 - Comparing a claim made in the text (guidance, targets, promises) against
   actual results -> MIXED.
 - A numeric-sounding question about something outside the 12 metrics
@@ -44,7 +45,7 @@ Edge cases:
 
 ## Splitting rules (for MIXED; also used to clean NUMERIC / NARRATIVE)
 
-- Produce at most ONE numeric_question and ONE narrative_question. If the
+- Produce ONE numeric_question AND ONE narrative_question. If the
   user asks for several figures (e.g. revenue and net income), keep them in
   the same numeric_question.
 - Each sub-question must be fully self-contained: include the company name
@@ -107,8 +108,10 @@ Respond with ONLY this JSON object, no prose, no markdown fences:
   "clarification_question": null
 }
 
-Consistency: NUMERIC -> numeric_question set, narrative_question null.
-NARRATIVE -> the reverse. MIXED -> both set.
+Consistency:
+NUMERIC -> numeric_question set, narrative_question null.
+NARRATIVE -> the reverse.
+MIXED -> BOTH set.
 
 ## Examples
 

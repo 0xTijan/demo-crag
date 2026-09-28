@@ -3,9 +3,10 @@ from pathlib import Path
 from helpers.config import read_config
 import json
 from helpers.helpers import clean_json_string
+from rag.promptReformulator import promptReformulator
 
 
-def promptClassifier(prompt: str):
+def promptClassifier(history: list, prompt: str):
     config = read_config()
     model = config.get("promptReformulatorModel", "gemma3:4b")
     PROMPT_PATH = Path(__file__).parent / "prompts" / "classifier.txt"
@@ -29,3 +30,16 @@ def promptClassifier(prompt: str):
 
     cleaned_json = clean_json_string(responseJson)
     response = json.loads(cleaned_json)
+
+    # check if the question is clear enough
+    if response.get("needs_clarification"):
+        history.append({"role": "assistant", "content": response.get("clarification_question")})
+        print("\n" + response.get("clarification_question"))
+        newPrompt = promptReformulator(history, "Please clarify your question: ")
+        promptClassifier(history, newPrompt)
+    elif response.get("classification") == "NUMERIC":
+        print("\nNumeric processing path selected. Proceeding with numeric processing...")
+    elif response.get("classification") == "NARRATIVE":
+        print("\nNarrative processing path selected. Proceeding with narrative processing...")
+    else:
+        print("\nMixed processing path selected. Proceeding with mixed processing...")

@@ -3,8 +3,8 @@ from rag.promptClassifier import promptClassifier
 
 
 def main() -> None:
-	prompt = promptReformulator([], "What is your question? ")
-	promptClassifier(prompt)
+	chat = promptReformulator([], "What is your question? ")
+	promptClassifier(chat.get("history"), chat.get("prompt"))
 
 
 if __name__ == "__main__":
