@@ -1,0 +1,35 @@
+MODE: examine_empty
+
+Original question: {{question}}
+
+Your query:
+{{previous_sql}}
+
+It ran successfully but returned 0 rows.
+
+Diagnostic data (facts from the database, use these, don't guess):
+- Companies matching the name filter: {{matching_companies_or_none}}
+- Fiscal years available for the resolved company: {{available_years}}
+- Metrics available for the resolved company/year: {{available_metrics}}
+- Comparative-only rows exist for the requested year: {{comparative_only_flag}}
+
+Decide whether the empty result is caused by a mistake in your query or by
+genuinely missing data.
+
+Respond with ONLY this JSON:
+
+{
+  "verdict": "retry" | "accept_no_data",
+  "diagnosis": "<one or two sentences: what specifically was wrong, or why
+                the data is genuinely absent>",
+  "sql": "<corrected query if verdict is retry, else null>",
+  "user_message": "<if accept_no_data: a short, honest statement of what is
+                   missing, e.g. 'No 2022 report is stored for this company;
+                   available years are 2023-2024.' else null>"
+}
+
+Rules: choose "retry" only if the diagnostic data shows a concrete fixable
+cause (wrong year filter, name mismatch, wrong metric_name string, missing
+comparative fallback). If the diagnostic data confirms the data is not
+there, choose "accept_no_data". Never widen the query so far that it answers
+a different question than the one asked.
