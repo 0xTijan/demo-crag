@@ -1,0 +1,10 @@
+MODE: generate
+
+Question: {{question}}
+
+Extracted entities (from the classifier, may be incomplete):
+- companies: {{company_candidates}}      # e.g. [{"id": 12, "name": "Krka"}]
+- fiscal_years: {{fiscal_years}}          # e.g. [2023, 2024] or []
+- metrics: {{metrics}}                    # e.g. ["net_income"] or []
+
+Write the query.
