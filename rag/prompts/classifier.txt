@@ -146,3 +146,9 @@ Question: Which company had the highest net margin in 2023, and what risks does 
  "numeric_question":"Which company had the highest net margin (net income divided by revenue) in 2023?",
  "narrative_question":"What risks does the company identified by the numeric result report in its 2023 annual report?",
  "narrative_depends_on_numeric":true,"needs_clarification":false,"clarification_question":null}
+
+
+------------
+
+USERS PROMPT:
+Question: {{question}}
