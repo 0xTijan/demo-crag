@@ -9,16 +9,21 @@ from rag.promptReformulator import promptReformulator
 def promptClassifier(history: list, prompt: str):
     config = read_config()
     model = config.get("promptReformulatorModel", "gemma3:4b")
-    PROMPT_PATH = Path(__file__).parent / "prompts" / "classifier.txt"
-    promptBoilerplate = PROMPT_PATH.read_text(encoding="utf-8")
-    prompt = promptBoilerplate.replace("{{question}}", prompt)
+    SYSTEM_PROMPT_PATH = Path(__file__).parent / "prompts" / "classifier" / "system.txt"
+    USER_PROMPT_PATH = Path(__file__).parent / "prompts" / "classifier" / "user.txt"
+    promptBoilerplate = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
+    userPrompt = USER_PROMPT_PATH.read_text(encoding="utf-8").replace("{{question}}", prompt)
 
     client = Client()
     messages = [
         {
-            'role': 'user',
-            'content': prompt,
+            'role': 'system',
+            'content': promptBoilerplate,
         },
+        {
+            'role': 'user',
+            'content': userPrompt,
+        }
     ]
 
     print("Choosing best path to process your question...")

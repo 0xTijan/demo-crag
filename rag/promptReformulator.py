@@ -9,17 +9,22 @@ def promptReformulator(history: list, q: str = "What is your question? ") -> str
     print("\n" + history_to_string(history))
     config = read_config()
     model = config.get("promptReformulatorModel", "gemma3:4b")
-    PROMPT_PATH = Path(__file__).parent / "prompts" / "reformulator.txt"
-    promptBoilerplate = PROMPT_PATH.read_text(encoding="utf-8")
+    SYSTEM_PROMPT_PATH = Path(__file__).parent / "prompts" / "reformulator" / "system.txt"
+    USER_PROMPT_PATH = Path(__file__).parent / "prompts" / "reformulator" / "user.txt"
+    promptBoilerplate = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
     question = input(q)
-    prompt = promptBoilerplate.replace("{{question}}", question).replace("{{chat_history}}", history_to_string(history))
+    userBoilerplate = USER_PROMPT_PATH.read_text(encoding="utf-8").replace("{{question}}", question).replace("{{chat_history}}", history_to_string(history))
 
     client = Client()
     messages = [
         {
-            'role': 'user',
-            'content': prompt,
+            'role': 'system',
+            'content': promptBoilerplate,
         },
+        {
+            'role': 'user',
+            'content': userBoilerplate,
+        }
     ]
 
     print("Understanding your question and reformulating for better results...")

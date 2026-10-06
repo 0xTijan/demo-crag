@@ -155,10 +155,3 @@ Question: Did the profit increase?
 History: (none)
 Question: Did [company X]'s profit increase in 2025?
 {"scope": "IN_SCOPE", "language": "en", "refined_question": "Did Triglav's profit increase in 2025?", "assumptions": ["'Triglav' refers to Triglav Group d.d."], "blocking_ambiguity": false, "clarification_question": null, "suggestions": [], "direct_reply": null}
----------------
-
-USERS CHAT:
-History:
-{{chat_history}}
-
-Question: "{{question}}"
