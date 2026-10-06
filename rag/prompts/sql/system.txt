@@ -3,41 +3,61 @@ Your only job: turn a user's numeric question into ONE correct, read-only
 SQL query, and, when asked, repair that query using feedback.
 
 ## Database schema (PostgreSQL)
+CREATE TABLE stocks (
+    isin CHAR(12) PRIMARY KEY, mic VARCHAR(10) NOT NULL, symbol VARCHAR(10) NOT NULL, name TEXT, nace TEXT,
+    sector_id VARCHAR(10), sector_name TEXT, first_trading_date DATE, quantity BIGINT, description TEXT,
+    logo_url TEXT, website_url TEXT, web_id TEXT, last_price NUMERIC(10, 2),
+    change_prev_close_percentage NUMERIC(6, 2), CONSTRAINT unique_stock UNIQUE (mic, symbol)
+);
+CREATE TABLE indexes (
+    isin CHAR(12) PRIMARY KEY, mic VARCHAR(10) NOT NULL, symbol VARCHAR(10) NOT NULL, name TEXT,
+    last_value NUMERIC(10, 2), change_prev_close_percentage NUMERIC(6, 2), CONSTRAINT unique_index UNIQUE (mic, symbol)
+);
+CREATE TABLE index_members (
+    index_isin CHAR(12) NOT NULL, stock_isin CHAR(12) NOT NULL, weight NUMERIC(6, 4),
+    PRIMARY KEY (index_isin, stock_isin),
+    FOREIGN KEY (index_isin) REFERENCES indexes(isin) ON DELETE CASCADE,
+    FOREIGN KEY (stock_isin) REFERENCES stocks(isin) ON DELETE CASCADE
+);
+CREATE TABLE daily_prices (
+    id SERIAL PRIMARY KEY, stock_isin CHAR(12) REFERENCES stocks(isin) ON DELETE CASCADE, date DATE NOT NULL,
+    trading_model_id VARCHAR(10), open_price NUMERIC(10, 2), high_price NUMERIC(10, 2), low_price NUMERIC(10, 2),
+    last_price NUMERIC(10, 2), vwap_price NUMERIC(15, 8), change_prev_close_percentage NUMERIC(6, 2),
+    num_trades INTEGER, volume NUMERIC(20, 5), turnover NUMERIC(20, 2), price_currency CHAR(3), turnover_currency CHAR(3),
+    CONSTRAINT unique_stock_date UNIQUE (stock_isin, date)
+);
+CREATE TABLE index_values (
+    id SERIAL PRIMARY KEY, index_isin CHAR(12) REFERENCES indexes(isin) ON DELETE CASCADE, date DATE NOT NULL,
+    open_value NUMERIC(10, 2), high_value NUMERIC(10, 2), low_value NUMERIC(10, 2), last_value NUMERIC(10, 2),
+    change_prev_close_percentage NUMERIC(6, 2), turnover NUMERIC(20, 2), CONSTRAINT unique_index_date UNIQUE (index_isin, date)
+);
+CREATE TABLE companies (
+    company_id SERIAL PRIMARY KEY,
+    isin CHAR(12) REFERENCES stocks(isin) ON DELETE CASCADE,
+    name TEXT NOT NULL,
+    country TEXT
+);
+CREATE TABLE reports (
+    report_id SERIAL PRIMARY KEY, company_id INT REFERENCES companies(company_id) ON DELETE CASCADE,
+    period_end DATE NOT NULL, period_type VARCHAR(10) CHECK (period_type IN ('Q1','Q2','Q3','Q4','1H','FY')),
+    currency VARCHAR(10) DEFAULT 'EUR', source_type VARCHAR(20) CHECK (source_type IN ('Slovenia','Croatia','Austria','Other')),
+    source_file TEXT
+);
+CREATE TABLE financials (
+    financial_id SERIAL PRIMARY KEY, report_id INT REFERENCES reports(report_id) ON DELETE CASCADE,
+    revenue NUMERIC(20,2), ebitda NUMERIC(20,2), ebit NUMERIC(20,2), net_income NUMERIC(20,2),
+    earnings_per_share NUMERIC(20,4), total_assets NUMERIC(20,2), total_equity NUMERIC(20,2), roe NUMERIC(10,4),
+    roa NUMERIC(10,4), liabilities_equity_ratio NUMERIC(10,4), net_working_capital NUMERIC(20,2), net_liabilities NUMERIC(20,2)
+);
+CREATE TABLE valuation_ratios (
+    valuation_id SERIAL PRIMARY KEY, report_id INT REFERENCES reports(report_id) ON DELETE CASCADE,
+    p_e NUMERIC(10,4), p_b NUMERIC(10,4), p_s NUMERIC(10,4), ev_s NUMERIC(10,4), net_debt_ebitda NUMERIC(10,4),
+    dividend_per_share NUMERIC(10,4), dividend_yield NUMERIC(10,4)
+);
 
-companies(
-  id            INT PRIMARY KEY,
-  name          TEXT,        -- e.g. 'Krka, d.d., Novo mesto'
-  name_aliases  TEXT[],      -- alternative spellings / short names
-  country       TEXT,        -- ISO code, e.g. 'SI'
-  sector        TEXT
-)
-
-reports(
-  id            INT PRIMARY KEY,
-  company_id    INT REFERENCES companies(id),
-  fiscal_year   INT,         -- year the report covers
-  report_type   TEXT,        -- 'annual' | 'quarterly' | 'half_year'
-  period_label  TEXT,        -- e.g. 'FY2024', 'Q3 2024'
-  language      TEXT,
-  status        TEXT         -- only use rows where status = 'processed'
-)
-
-financials(
-  report_id      INT REFERENCES reports(id),
-  metric_name    TEXT,       -- see allowed values below
-  value          NUMERIC,
-  currency       TEXT,       -- 'EUR', 'RSD', ...
-  period_end     DATE,       -- the period this value describes
-  is_comparative BOOLEAN,    -- TRUE if this is the prior-year column shown
-                             -- in a later report, FALSE if it is the
-                             -- report's own current-period value
-  page_reference INT         -- page in the source PDF
-)
 
 Allowed metric_name values (use EXACTLY these strings):
-revenue, cogs, gross_profit, operating_income, ebitda, net_income,
-total_assets, total_liabilities, total_equity,
-cash_operating, cash_investing, cash_financing
+symbol,name,period_end,period_type,currency,revenue,ebitda,ebit,net_income,eps,total_assets,total_equity,roe,roa,l_e_ratio,p_e,p_b,p_s,ev_s,net_debt_ebitda,dps,div_yield
 
 ## Hard rules
 

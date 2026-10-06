@@ -4,7 +4,7 @@ from helpers.config import read_config
 import json
 from helpers.helpers import clean_json_string
 from rag.promptReformulator import promptReformulator
-
+from rag.numeric import numeric
 
 def promptClassifier(history: list, prompt: str):
     config = read_config()
@@ -26,7 +26,7 @@ def promptClassifier(history: list, prompt: str):
         }
     ]
 
-    print("Choosing best path to process your question...")
+    print("\nChoosing best path to process your question...")
 
     responseJson = ""
     for part in client.chat(model, messages=messages, stream=True, format="json"):
@@ -44,6 +44,7 @@ def promptClassifier(history: list, prompt: str):
         promptClassifier(history, newPrompt)
     elif response.get("classification") == "NUMERIC":
         print("\nNumeric processing path selected. Proceeding with numeric processing...")
+        numeric(prompt)
     elif response.get("classification") == "NARRATIVE":
         print("\nNarrative processing path selected. Proceeding with narrative processing...")
     else:

@@ -18,8 +18,6 @@ CREATE TABLE stocks (
     CONSTRAINT unique_stock UNIQUE (mic, symbol)
 );
 
--- add stock financial data table (revenue, equity, assests, net profit, net liability, ROE, liability/equity, p/e, p/b, p/s, gross dividend, dividend yield, )
-
 -- Table: indexes
 CREATE TABLE indexes (
     isin CHAR(12) PRIMARY KEY,
