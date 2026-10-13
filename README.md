@@ -2,6 +2,10 @@
 
 *A step-by-step description of the system from a list of companies to a working, self correcting local question-answering system over their financial reports.*
 
+
+**TODO IMPROVEMENT:**
+For simple classifier questions try using Laya (system 1 AI model), if the score is high procede with next step, else use a small LLM as before to do the classification.
+
 ---
 
 ## 0. Starting Point
