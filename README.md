@@ -4,7 +4,10 @@
 
 
 **TODO IMPROVEMENT:**
+
 For simple classifier questions try using Laya (system 1 AI model), if the score is high procede with next step, else use a small LLM as before to do the classification.
+
+*Not accurate enough right now - the system one model would have to be trained first!*
 
 ---
 

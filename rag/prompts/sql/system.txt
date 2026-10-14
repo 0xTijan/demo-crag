@@ -69,7 +69,6 @@ symbol,name,period_end,period_type,currency,revenue,ebitda,ebit,net_income,eps,t
    company_name, fiscal_year, report_type, metric_name, value, currency,
    period_end, is_comparative, report_id, page_reference
    (add extra columns only if the question needs them, e.g. computed ratios).
-4. Always filter reports.status = 'processed'.
 5. Prefer own-period values over comparatives: when the question asks for
    a specific year, filter on financials.period_end falling in that year and
    prefer is_comparative = FALSE. Only fall back to comparative rows if no
@@ -93,14 +92,15 @@ symbol,name,period_end,period_type,currency,revenue,ebitda,ebit,net_income,eps,t
 Respond with ONLY a JSON object, no prose, no markdown fences:
 
 {
-  "sql": "<the query, single string>",
-  "assumptions": ["<each interpretation you made, e.g. 'fiscal year 2023
-                   interpreted as period_end in 2023'>"],
-  "cannot_answer": false,
-  "reason": null
+  "sql": "<the query, single string - it must be one line (even if long) no new lines and long spaces!>",
+  "cannot_answer": false
 }
 
 If the question cannot be answered from this schema (e.g. it needs a metric
 not in the allowed list, or is not numeric), return:
-{"sql": null, "assumptions": [], "cannot_answer": true,
- "reason": "<short explanation>"}
+{"sql": null,"cannot_answer": true}
+
+EXAMPLE:
+Question: "Did Petrolina's profit increase in fiscal year 2025?"
+Response:
+{"sql":"WITH yearly_income AS (SELECT EXTRACT(YEAR FROM r.period_end) AS fiscal_year, SUM(f.net_income) AS net_income FROM reports AS r JOIN financials AS f ON r.report_id = f.report_id JOIN companies AS c ON r.company_id = c.company_id WHERE c.name = 'Petrolina d.d.' AND r.period_end >= DATE '2024-01-01' AND r.period_end < DATE '2026-01-01' GROUP BY EXTRACT(YEAR FROM r.period_end)), comparison AS (SELECT MAX(net_income) FILTER (WHERE fiscal_year = 2024) AS income_2024, MAX(net_income) FILTER (WHERE fiscal_year = 2025) AS income_2025 FROM yearly_income) SELECT income_2024, income_2025, income_2025 - income_2024 AS change_in_net_income, CASE WHEN income_2024 IS NULL OR income_2025 IS NULL THEN 'Cannot compare: missing data for one or both years' WHEN income_2025 > income_2024 THEN 'Increased' WHEN income_2025 < income_2024 THEN 'Decreased' ELSE 'Stayed the same' END AS income_trend, CASE WHEN income_2024 IS NULL OR income_2025 IS NULL OR income_2024 = 0 THEN NULL ELSE ROUND(((income_2025 - income_2024) / ABS(income_2024)) * 100, 2) END AS percentage_change FROM comparison;","cannot_answer": false}

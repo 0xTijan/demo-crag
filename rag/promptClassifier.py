@@ -44,7 +44,7 @@ def promptClassifier(history: list, prompt: str):
         promptClassifier(history, newPrompt)
     elif response.get("classification") == "NUMERIC":
         print("\nNumeric processing path selected. Proceeding with numeric processing...")
-        numeric(prompt)
+        numeric(prompt, response)
     elif response.get("classification") == "NARRATIVE":
         print("\nNarrative processing path selected. Proceeding with narrative processing...")
     else:

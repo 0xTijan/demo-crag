@@ -4,6 +4,7 @@ from rag.promptClassifier import promptClassifier
 
 def main() -> None:
 	chat = promptReformulator([], "What is your question? ")
+	print(f"\n{chat}")
 	promptClassifier(chat.get("history"), chat.get("prompt"))
 
 

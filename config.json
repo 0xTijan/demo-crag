@@ -1,4 +1,4 @@
 {
-    "promptReformulatorModel": "gemma3:1b",
+    "promptReformulatorModel": "gemma3:4b",
     "sqlGeneratorModel": "gemma3:4b"
 }
