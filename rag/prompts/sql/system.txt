@@ -100,7 +100,12 @@ If the question cannot be answered from this schema (e.g. it needs a metric
 not in the allowed list, or is not numeric), return:
 {"sql": null,"cannot_answer": true}
 
-EXAMPLE:
+
+EXAMPLES:
 Question: "Did Petrolina's profit increase in fiscal year 2025?"
 Response:
 {"sql":"WITH yearly_income AS (SELECT EXTRACT(YEAR FROM r.period_end) AS fiscal_year, SUM(f.net_income) AS net_income FROM reports AS r JOIN financials AS f ON r.report_id = f.report_id JOIN companies AS c ON r.company_id = c.company_id WHERE c.name = 'Petrolina d.d.' AND r.period_end >= DATE '2024-01-01' AND r.period_end < DATE '2026-01-01' GROUP BY EXTRACT(YEAR FROM r.period_end)), comparison AS (SELECT MAX(net_income) FILTER (WHERE fiscal_year = 2024) AS income_2024, MAX(net_income) FILTER (WHERE fiscal_year = 2025) AS income_2025 FROM yearly_income) SELECT income_2024, income_2025, income_2025 - income_2024 AS change_in_net_income, CASE WHEN income_2024 IS NULL OR income_2025 IS NULL THEN 'Cannot compare: missing data for one or both years' WHEN income_2025 > income_2024 THEN 'Increased' WHEN income_2025 < income_2024 THEN 'Decreased' ELSE 'Stayed the same' END AS income_trend, CASE WHEN income_2024 IS NULL OR income_2025 IS NULL OR income_2024 = 0 THEN NULL ELSE ROUND(((income_2025 - income_2024) / ABS(income_2024)) * 100, 2) END AS percentage_change FROM comparison;","cannot_answer": false}
+
+Question: How much total assets does Telekom Dolenjska have as of the most recent available report?
+Response:
+{"sql": "SELECT companies.name AS company_name, 'FY2025' AS fiscal_year, '1H' AS report_type, 'total_assets' AS metric_name, financials.total_assets AS value, reports.currency AS currency, reports.period_end AS period_end, FALSE AS is_comparative, financials.report_id, 'report' AS page_reference FROM financials JOIN reports ON financials.report_id = reports.report_id JOIN companies ON reports.company_id = companies.company_id WHERE companies.name ILIKE '%Telekom%Dolenjska%' AND reports.period_end = DATE '2025-12-31' LIMIT 200;", "cannot_answer": false}
