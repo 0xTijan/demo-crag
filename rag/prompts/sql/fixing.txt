@@ -8,7 +8,7 @@ Your previous query:
 It failed with this exact database error:
 {{error_message}}
 
-Attempt {{attempt_number}} of {{max_attempts}}.
+Attempt {{attempt_number}} of 2.
 
 Fix the query. Change only what the error requires, unless the error reveals
 a deeper misunderstanding of the schema. Do not repeat the same query.
