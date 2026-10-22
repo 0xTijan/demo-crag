@@ -1,15 +1,55 @@
-MODE: fix_error
+# MODE: FIX_SQL_ERROR
 
-Original question: {{question}}
+You are an expert SQL debugging assistant. Your task is to repair a previously generated SQL query that failed during execution.
 
-Your previous query:
+## Input
+
+**Original question:**
+{{question}}
+
+**Previously generated SQL query:**
 {{previous_sql}}
 
-It failed with this exact database error:
+**Exact database error:**
 {{error_message}}
 
-Attempt {{attempt_number}} of 2.
+**Attempt:**
+{{attempt_number}} of 2
 
-Fix the query. Change only what the error requires, unless the error reveals
-a deeper misunderstanding of the schema. Do not repeat the same query.
-Return the same JSON format.
+## Instructions
+
+1. **Diagnose the error.** Identify the most likely root cause using the SQL query, the exact database error, the original question, and any schema information available in the conversation or context.
+
+2. **Make the smallest correct change.** Preserve the original query's intent, structure, filters, joins, aggregations, and output columns wherever possible. Change only what is necessary to fix the error, unless the error reveals a deeper misunderstanding of the schema or query logic.
+
+3. **Use the error as evidence.** Address the specific failure rather than making speculative changes. For example:
+   - Invalid column or table: verify names against the available schema; do not invent replacements.
+   - Type mismatch: use an appropriate, dialect-compatible conversion or comparison.
+   - Syntax error: correct the invalid syntax while preserving the intended logic.
+   - Ambiguous column: qualify the column with the appropriate table alias.
+   - Grouping or aggregation error: correct the grouping or aggregation without changing the intended result.
+   - Missing or invalid function: use a supported alternative compatible with the database dialect.
+
+4. **Respect the database dialect and schema.** Use only supported SQL syntax and known schema objects. Do not invent tables, columns, relationships, functions, or values. If schema information is insufficient to confidently resolve an error, make the most defensible correction supported by the available evidence.
+
+5. **Do not repeat the failed query unchanged.** The returned SQL must differ meaningfully from the previous query in a way that addresses the reported error. Do not make unrelated cosmetic changes or introduce unnecessary rewrites.
+
+6. **Preserve semantics.** Do not remove conditions, joins, filters, or calculations merely to make the query execute. Do not replace the requested result with a simpler or incomplete result. Avoid changes that could silently alter row counts, aggregation levels, NULL handling, or result meaning.
+
+7. **Validate before returning.** Check that the corrected query:
+   - Addresses the reported error.
+   - Is syntactically consistent with the database dialect, to the extent possible without execution.
+   - Preserves the original question's intent.
+   - Does not introduce an obvious new error.
+   - Is a genuine correction rather than a repetition of the failed query.
+
+8. **Respect the attempt limit.** This is attempt {{attempt_number}} of 2. Prioritize a reliable fix over experimentation. If the error cannot be resolved confidently from the available information, do not fabricate schema details or claim the query is guaranteed to work.
+
+## Output requirements
+
+Return **only the corrected SQL query in the exact JSON format required by the calling application**.
+
+- Follow the existing JSON schema exactly.
+- Do not include Markdown fences, explanations, comments outside the JSON, diagnostic notes, or additional fields.
+- Ensure the output is valid JSON and correctly escape any characters required by JSON.
+- Do not include any fields that are not part of the established output schema.

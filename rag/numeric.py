@@ -76,12 +76,17 @@ def numeric(prompt: str, prevResponse):
             print(f"\nQuery executed successfully. Row count: {result.get('row_count')}")
             print(f"Rows: {result.get('rows')}")
             if result.get("row_count") == 0:
-                processZeroRows(prompt, sql_query, result, 1)
+                processZeroRows(prompt, sql_query, result, prevResponse, 1)
         else:
-            processPromptFixing(prompt, sql_query, result, 1)
+            processPromptFixing(prompt, sql_query, result, prevResponse, 1)
 
 
-def processZeroRows(q, sql, result, attempt):
+def processZeroRows(q, sql, result, prevResponse, attempt):
+    isDataAvailable = checkDatabaseForData(q, prevResponse)
+    if not isDataAvailable:
+        print("\nNo data available for the requested companies and fiscal years.")
+        return
+    
     if attempt > 2:
         print("\nMaximum attempts reached. The model could not find the requested data.")
         return
@@ -126,14 +131,54 @@ def processZeroRows(q, sql, result, attempt):
             print(f"\nQuery executed successfully. Row count: {result.get('row_count')}")
             print(f"Rows: {result.get('rows')}")
             if result.get("row_count") == 0:
-                processZeroRows(q, sql_query, result, attempt+1)
+                processZeroRows(q, sql_query, result, prevResponse, attempt+1)
         else:
-            processPromptFixing(q, sql_query, result, attempt)
+            processPromptFixing(q, sql_query, result, prevResponse, attempt)
     else:
         print("\nThe model indicated it cannot answer the question.")
 
 
-def processPromptFixing(q, sql_query, result, attempt): 
+def checkDatabaseForData(q, prevResponse):
+    companies = prevResponse.get("entities", {}).get("companies_mentioned", [])
+    fiscal_years = prevResponse.get("entities", {}).get("fiscal_years", [])
+
+    availability = {}
+    isDataAvailable = True
+    for company in companies:
+        for fiscal_year in fiscal_years:
+            # Escape quotes because execute_sql_query accepts a SQL string, not parameters.
+            company_value = str(company).replace("'", "''")
+            year_value = str(fiscal_year).replace("'", "''")
+            sql_query = (
+                "SELECT COUNT(*) AS report_count "
+                "FROM reports r "
+                "JOIN companies c ON c.company_id = r.company_id "
+                f"WHERE c.name LIKE '%{company_value}%' "
+                f"AND EXTRACT(YEAR FROM r.period_end) = {year_value}"
+            )
+
+            result = json.loads(execute_sql_query(sql_query))
+            if result.get("status") != "success":
+                availability[(company, fiscal_year)] = None
+                print(
+                    f"Could not check reports for {company} in fiscal year "
+                    f"{fiscal_year}: {result.get('error', 'unknown error')}"
+                )
+                continue
+
+            rows = result.get("rows", [])
+            count = rows[0].get("report_count", 0) if rows else 0
+            availability[(company, fiscal_year)] = count > 0
+            if count > 0:
+                print(f"Report found for {company} in fiscal year {fiscal_year}.")
+            else:
+                isDataAvailable = False
+                print(f"No report found for {company} in fiscal year {fiscal_year}.")
+
+    return isDataAvailable
+
+
+def processPromptFixing(q, sql_query, result, prevResponse, attempt): 
     if attempt > 2:
         print("\nMaximum attempts reached. The model failed to fetch the requested data.")
         return
@@ -180,8 +225,8 @@ def processPromptFixing(q, sql_query, result, attempt):
         print(f"\nQuery executed successfully. Row count: {result.get('row_count')}")
         print(f"Rows: {result.get('rows')}")
         if result.get("row_count") == 0:
-            processZeroRows(q, sql_query, result, 1)
+            processZeroRows(q, sql_query, result, prevResponse, attempt+1)
     else:
-        processPromptFixing(q, sql_query, result, attempt+1)
+        processPromptFixing(q, sql_query, result, prevResponse, attempt+1)
 
     
