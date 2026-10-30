@@ -46,14 +46,14 @@ def promptReformulator(history: list, q: str = "What is your question? ") -> str
             for i, clarifying_question in enumerate(response.get("suggestions", []), start=1):
                 print(f"{i}. {clarifying_question}")
         history.append({"role": "assistant", "content": response.get("clarification_question")})
-        promptReformulator(history, "Please clarify your question: ")
+        return promptReformulator(history, "Please clarify your question: ")
     elif response.get("direct_reply") and response.get("direct_reply").strip() != "":
         print("in elif direct reply \n" + response.get("direct_reply"))
         history.append({"role": "assistant", "content": response.get("direct_reply")})
-        promptReformulator(history, "Any new questions? ")
+        return promptReformulator(history, "Any new questions? ")
     elif response.get("scope") == "OUT_OF_SCOPE":
         history.append({"role": "assistant", "content": response.get("direct_reply")})
-        promptReformulator(history, "The question is out of scope. Please try asking a different question?")
+        return promptReformulator(history, "The question is out of scope. Please try asking a different question?")
     else:
         qToReturn = response.get("refined_question")
         dataToReturn = {

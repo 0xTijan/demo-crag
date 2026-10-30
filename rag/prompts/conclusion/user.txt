@@ -1,0 +1,14 @@
+Answer the following user's question using the provided data.
+
+## User question
+{{question}}
+
+## SQL results
+{{sql_results}}
+
+## Task
+Analyze the SQL results in the context of the user's question. Draw the most accurate conclusion supported by the data and provide a direct, natural-language answer.
+
+If the data supports a definitive answer, state it clearly and include relevant evidence. If the data is insufficient, ambiguous, or empty, explain what can and cannot be concluded without guessing.
+
+Return only the final answer to the user.

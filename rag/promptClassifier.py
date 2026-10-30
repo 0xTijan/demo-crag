@@ -41,7 +41,7 @@ def promptClassifier(history: list, prompt: str):
         history.append({"role": "assistant", "content": response.get("clarification_question")})
         print("\n" + response.get("clarification_question"))
         newPrompt = promptReformulator(history, "Please clarify your question: ")
-        promptClassifier(history, newPrompt)
+        promptClassifier(newPrompt.get("history"), newPrompt.get("prompt"))
     elif response.get("classification") == "NUMERIC":
         print("\nNumeric processing path selected. Proceeding with numeric processing...")
         numeric(prompt, response)

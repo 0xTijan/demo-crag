@@ -3,6 +3,7 @@ from pathlib import Path
 from helpers.config import read_config
 import json
 from helpers.helpers import clean_json_string
+from rag.conclusion import conclusion
 from rag.sql import execute_sql_query
 
 """
@@ -30,6 +31,11 @@ systemPrompt = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
 
 
 def numeric(prompt: str, prevResponse):
+    isDataAvailable = checkDatabaseForData(prevResponse)
+    if not isDataAvailable:
+        print("\nNo data available for the requested companies and fiscal years.")
+        return
+    
     config = read_config()
     model = config.get("sqlGeneratorModel", "gemma3:4b")
 
@@ -75,18 +81,15 @@ def numeric(prompt: str, prevResponse):
         if result.get("status") == "success":
             print(f"\nQuery executed successfully. Row count: {result.get('row_count')}")
             print(f"Rows: {result.get('rows')}")
-            if result.get("row_count") == 0:
+            if result.get("row_count") > 0:
+                conclusion(prompt, result_json)
+            else:
                 processZeroRows(prompt, sql_query, result, prevResponse, 1)
         else:
             processPromptFixing(prompt, sql_query, result, prevResponse, 1)
 
 
-def processZeroRows(q, sql, result, prevResponse, attempt):
-    isDataAvailable = checkDatabaseForData(q, prevResponse)
-    if not isDataAvailable:
-        print("\nNo data available for the requested companies and fiscal years.")
-        return
-    
+def processZeroRows(q, sql, result, prevResponse, attempt):  
     if attempt > 2:
         print("\nMaximum attempts reached. The model could not find the requested data.")
         return
@@ -130,7 +133,9 @@ def processZeroRows(q, sql, result, prevResponse, attempt):
         if result.get("status") == "success":
             print(f"\nQuery executed successfully. Row count: {result.get('row_count')}")
             print(f"Rows: {result.get('rows')}")
-            if result.get("row_count") == 0:
+            if result.get("row_count") > 0:
+                conclusion(q, result_json)
+            else:
                 processZeroRows(q, sql_query, result, prevResponse, attempt+1)
         else:
             processPromptFixing(q, sql_query, result, prevResponse, attempt)
@@ -138,7 +143,7 @@ def processZeroRows(q, sql, result, prevResponse, attempt):
         print("\nThe model indicated it cannot answer the question.")
 
 
-def checkDatabaseForData(q, prevResponse):
+def checkDatabaseForData(prevResponse):
     companies = prevResponse.get("entities", {}).get("companies_mentioned", [])
     fiscal_years = prevResponse.get("entities", {}).get("fiscal_years", [])
 
@@ -224,6 +229,10 @@ def processPromptFixing(q, sql_query, result, prevResponse, attempt):
     if result.get("status") == "success":
         print(f"\nQuery executed successfully. Row count: {result.get('row_count')}")
         print(f"Rows: {result.get('rows')}")
+        print(result.get("row_count"))
+        if result.get('row_count') > 0:
+            print("\ndoing conclusion...")
+            conclusion(q, result_json)
         if result.get("row_count") == 0:
             processZeroRows(q, sql_query, result, prevResponse, attempt+1)
     else:
