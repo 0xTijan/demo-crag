@@ -1,12 +1,11 @@
 from ollama import Client
 from pathlib import Path
-from helpers.config import read_config
+from helpers.config import model_settings
 import json
 from helpers.helpers import clean_json_string
 
 def conclusion(prompt: str, sql):
-    config = read_config()
-    model = config.get("promptReformulatorModel", "gemma3:4b")
+    model, options = model_settings("conclusionGeneratorModel")
     SYSTEM_PROMPT_PATH = Path(__file__).parent / "prompts" / "conclusion" / "system.txt"
     USER_PROMPT_PATH = Path(__file__).parent / "prompts" / "conclusion" / "user.txt"
     promptBoilerplate = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
@@ -28,7 +27,7 @@ def conclusion(prompt: str, sql):
     print("\nWriting conclusion...")
 
     responseJson = ""
-    for part in client.chat(model, messages=messages, stream=True, format="json"):
+    for part in client.chat(model, messages=messages, stream=True, format="json", options=options):
         print(part.message.content, end='', flush=True)
         responseJson += part.message.content
 

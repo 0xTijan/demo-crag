@@ -1,14 +1,13 @@
 from ollama import Client
 from pathlib import Path
-from helpers.config import read_config
+from helpers.config import model_settings
 import json
 from helpers.helpers import clean_json_string
 from rag.promptReformulator import promptReformulator
 from rag.numeric import numeric
 
 def promptClassifier(history: list, prompt: str):
-    config = read_config()
-    model = config.get("promptReformulatorModel", "gemma3:4b")
+    model, options = model_settings("promptReformulatorModel")
     SYSTEM_PROMPT_PATH = Path(__file__).parent / "prompts" / "classifier" / "system.txt"
     USER_PROMPT_PATH = Path(__file__).parent / "prompts" / "classifier" / "user.txt"
     promptBoilerplate = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
@@ -29,7 +28,7 @@ def promptClassifier(history: list, prompt: str):
     print("\nChoosing best path to process your question...")
 
     responseJson = ""
-    for part in client.chat(model, messages=messages, stream=True, format="json"):
+    for part in client.chat(model, messages=messages, stream=True, format="json", options=options):
         print(part.message.content, end='', flush=True)
         responseJson += part.message.content
 

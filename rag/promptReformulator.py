@@ -1,14 +1,13 @@
 from ollama import Client
 from pathlib import Path
-from helpers.config import read_config
+from helpers.config import model_settings
 import json
 from helpers.helpers import clean_json_string, history_to_string
 
 
 def promptReformulator(history: list, q: str = "What is your question? ") -> str:
     print("\n" + history_to_string(history))
-    config = read_config()
-    model = config.get("promptReformulatorModel", "gemma3:4b")
+    model, options = model_settings("promptReformulatorModel")
     SYSTEM_PROMPT_PATH = Path(__file__).parent / "prompts" / "reformulator" / "system.txt"
     USER_PROMPT_PATH = Path(__file__).parent / "prompts" / "reformulator" / "user.txt"
     promptBoilerplate = SYSTEM_PROMPT_PATH.read_text(encoding="utf-8")
@@ -30,7 +29,7 @@ def promptReformulator(history: list, q: str = "What is your question? ") -> str
     print("Understanding your question and reformulating for better results...")
 
     responseJson = ""
-    for part in client.chat(model, messages=messages, stream=True, format="json"):
+    for part in client.chat(model, messages=messages, stream=True, format="json", options=options):
         print(part.message.content, end='', flush=True)
         responseJson += part.message.content
 

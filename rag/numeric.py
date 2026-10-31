@@ -1,6 +1,6 @@
 from ollama import Client
 from pathlib import Path
-from helpers.config import read_config
+from helpers.config import model_settings
 import json
 from helpers.helpers import clean_json_string
 from rag.conclusion import conclusion
@@ -36,8 +36,7 @@ def numeric(prompt: str, prevResponse):
         print("\nNo data available for the requested companies and fiscal years.")
         return
     
-    config = read_config()
-    model = config.get("sqlGeneratorModel", "gemma3:4b")
+    model, options = model_settings("sqlGeneratorModel")
 
     GENERATION_PROMPT_PATH = Path(__file__).parent / "prompts" / "sql" / "generation.txt"
     
@@ -63,7 +62,7 @@ def numeric(prompt: str, prevResponse):
     print("\nSearching database...")
 
     responseJson = ""
-    for part in client.chat(model, messages=messages, stream=True, format="json"):
+    for part in client.chat(model, messages=messages, stream=True, format="json", options=options):
         print(part.message.content, end='', flush=True)
         responseJson += part.message.content
 
@@ -94,8 +93,7 @@ def processZeroRows(q, sql, result, prevResponse, attempt):
         print("\nMaximum attempts reached. The model could not find the requested data.")
         return
     
-    config = read_config()
-    model = config.get("sqlGeneratorModel", "gemma3:4b")
+    model, options = model_settings("sqlGeneratorModel")
     REEXAMINATION_PROMPT_PATH = Path(__file__).parent / "prompts" / "sql" / "reexamination.txt"
     reexaminationPrompt = REEXAMINATION_PROMPT_PATH.read_text(encoding="utf-8")
     reexaminationPrompt = reexaminationPrompt.replace("{{question}}", q)
@@ -116,7 +114,7 @@ def processZeroRows(q, sql, result, prevResponse, attempt):
     print(f"\nFetched no data, reexamining the process...")
 
     responseJson = ""
-    for part in client.chat(model, messages=messages, stream=True, format="json"):
+    for part in client.chat(model, messages=messages, stream=True, format="json", options=options):
         print(part.message.content, end='', flush=True)
         responseJson += part.message.content
 
@@ -188,8 +186,7 @@ def processPromptFixing(q, sql_query, result, prevResponse, attempt):
         print("\nMaximum attempts reached. The model failed to fetch the requested data.")
         return
     
-    config = read_config()
-    model = config.get("sqlGeneratorModel", "gemma3:4b")
+    model, options = model_settings("sqlGeneratorModel")
     FIXING_PROMPT_PATH = Path(__file__).parent / "prompts" / "sql" / "fixing.txt"
     fixingPrompt = FIXING_PROMPT_PATH.read_text(encoding="utf-8")
     fixingPrompt = fixingPrompt.replace("{{question}}", q)
@@ -214,7 +211,7 @@ def processPromptFixing(q, sql_query, result, prevResponse, attempt):
     print(f"\nAn error occurred, attempting to fix {attempt}/2...")
 
     responseJson = ""
-    for part in client.chat(model, messages=messages, stream=True, format="json"):
+    for part in client.chat(model, messages=messages, stream=True, format="json", options=options):
         print(part.message.content, end='', flush=True)
         responseJson += part.message.content
 

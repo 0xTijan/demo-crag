@@ -1,4 +1,14 @@
 {
-    "promptReformulatorModel": "gemma3:4b",
-    "sqlGeneratorModel": "gemma3:4b"
+    "promptReformulatorModel": {
+        "model": "gemma3:4b",
+        "temperature": 0
+    },
+    "sqlGeneratorModel": {
+        "model": "gemma3:4b",
+        "temperature": 0
+    },
+    "conclusionGeneratorModel": {
+        "model": "gemma3:4b",
+        "temperature": 0.3
+    }
 }
