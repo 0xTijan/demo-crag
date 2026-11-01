@@ -9,6 +9,9 @@ For simple classifier questions try using Laya (system 1 AI model), if the score
 
 *Not accurate enough right now - the system one model would have to be trained first!*
 
+Some way to store SQL errors - so that they do not appear next time??
+
+
 ---
 
 ## 0. Starting Point

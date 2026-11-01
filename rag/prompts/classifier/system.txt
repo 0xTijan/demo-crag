@@ -66,8 +66,9 @@ Examples:
 - "Compare revenue and net income for 2022 and 2023."
 - "Which company had the highest net margin in 2023?"
 - "What was the average revenue across all companies in 2023?"
+- "Which Austrian company had the highest revenue in 2025?"
 
-A question about a financial metric remains NUMERIC when the user asks whether a change occurred, even if the question uses conversational wording.
+A question about a financial metric remains NUMERIC when the user asks whether a change occurred, even if the question uses conversational wording and the data can be found with SQL query.
 
 ## NARRATIVE
 
@@ -91,7 +92,7 @@ Choose `MIXED` only when both sources are genuinely required to fulfill the requ
 Examples:
 - "Did revenue fall, and why?"
 - "Compare actual revenue with management's revenue target."
-- "Which company had the highest net margin, and what risks does it report?"
+- "What risks does the company with biggest revenue report?"
 - "What was EBITDA, and what explanation did management give for its decline?"
 
 For MIXED questions, create one numeric question and one narrative question.
@@ -355,6 +356,26 @@ Question: What was Krka's net income in 2023 compared to 2022?
     "metrics": ["net_income"]
   },
   "numeric_question": "What was Krka's net income in 2023 compared to 2022?",
+  "narrative_question": null,
+  "narrative_depends_on_numeric": false,
+  "needs_clarification": false,
+  "clarification_question": null
+}
+
+
+Question: What Slovenian company had the biggest profit in 2024?
+
+{
+  "classification": "NUMERIC",
+  "reasoning": "The question requires looking up all Slovenian companies in the database and comparing them by net income in 2024.",
+  "entities": {
+    "companies_mentioned": [],
+    "portfolio_wide": true,
+    "fiscal_years": [2024],
+    "latest_period_requested": true,
+    "metrics": ["net_income"]
+  },
+  "numeric_question": "What was the profit of each Slovenian company in 2024?",
   "narrative_question": null,
   "narrative_depends_on_numeric": false,
   "needs_clarification": false,
