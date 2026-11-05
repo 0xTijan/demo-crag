@@ -7,6 +7,7 @@ import logging
 import os
 import re
 import sys
+import time
 import traceback
 from importlib.metadata import version as pkg_version
 from pathlib import Path
@@ -140,6 +141,33 @@ def build_converter() -> DocumentConverter:
     )
 
 
+def log(msg: str) -> None:
+    """Print a progress line immediately (flushed, so it shows even when piped)."""
+    print(msg, flush=True)
+
+
+def conversion_reason(engine, rel: str, file_hash: str, force: bool) -> str:
+    """Human-readable reason this PDF is being (re)converted, for the progress log."""
+    if force:
+        return "--force"
+    with engine.connect() as conn:
+        same = conn.execute(
+            text("SELECT status, markdown_path FROM report_files WHERE pdf_path = :p AND file_hash = :h"),
+            {"p": rel, "h": file_hash},
+        ).first()
+        if same:
+            if same[0] == "failed":
+                return "retrying after an earlier failure"
+            return "markdown file is missing"
+        older = conn.execute(
+            text("SELECT file_hash FROM report_files WHERE pdf_path = :p ORDER BY converted_at DESC LIMIT 1"),
+            {"p": rel},
+        ).scalar()
+    if older:
+        return f"content changed (previous hash {older[:8]})"
+    return "new file"
+
+
 class OcrEmptyCounter(logging.Handler):
     """Counts log records saying RapidOCR returned an empty result.
 
@@ -185,7 +213,9 @@ def vision_ocr_pages(pdf: Path, page_numbers: list[int]) -> dict[int, str]:
     results: dict[int, str] = {}
     pdf_doc = pdfium.PdfDocument(str(pdf))
     try:
-        for page_no in page_numbers:
+        for i, page_no in enumerate(page_numbers, 1):
+            started = time.time()
+            log(f"    [vision {i}/{len(page_numbers)}] page {page_no}: sending to {model} ...")
             image = pdf_doc[page_no - 1].render(scale=RENDER_SCALE).to_pil()
             buf = io.BytesIO()
             image.save(buf, format="PNG")
@@ -197,6 +227,9 @@ def vision_ocr_pages(pdf: Path, page_numbers: list[int]) -> dict[int, str]:
             text_out = (reply["message"]["content"] or "").strip()
             if text_out:
                 results[page_no] = text_out
+                log(f"    [vision {i}/{len(page_numbers)}] page {page_no}: got {len(text_out)} chars in {time.time() - started:.1f}s")
+            else:
+                log(f"    [vision {i}/{len(page_numbers)}] page {page_no}: empty answer, keeping Docling text")
     finally:
         pdf_doc.close()
     return results
@@ -278,15 +311,18 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
     md_path = OUTPUT_DIR / Path(rel).with_suffix(".md")
     md_rel = md_path.relative_to(ROOT).as_posix()
 
+    started = time.time()
     try:
         file_hash = sha256_file(pdf)
         file_size = pdf.stat().st_size
     except Exception as exc:  # noqa: BLE001
         raise StageError("hash", exc) from exc
+    log(f"  hashed: {file_hash[:8]}... ({file_size / 1_048_576:.1f} MB)")
 
     try:
         if not force and already_converted(engine, rel, file_hash):
             return "skipped"
+        log(f"  will convert: {conversion_reason(engine, rel, file_hash, force)}")
     except Exception as exc:  # noqa: BLE001
         raise StageError("db", exc) from exc
 
@@ -300,7 +336,12 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
 
     try:
         if not converter_holder:
+            log("  loading Docling models (first conversion this run) ...")
+            t0 = time.time()
             converter_holder.append(build_converter())
+            log(f"  models ready in {time.time() - t0:.1f}s")
+        log("  converting with Docling (OCR + table structure) ...")
+        t0 = time.time()
         counter = OcrEmptyCounter()
         logging.getLogger().addHandler(counter)
         try:
@@ -309,23 +350,26 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
             logging.getLogger().removeHandler(counter)
         markdown = doc.export_to_markdown()
         pages, tables = len(doc.pages), len(doc.tables)
+        log(f"  Docling done in {time.time() - t0:.1f}s: {pages} pages, {tables} tables")
         sparse = find_sparse_pages(doc)
+        log(f"  OCR check: {len(sparse)} sparse page(s) under {MIN_PAGE_CHARS} chars"
+            f"{' ' + str(sparse[:10]) if sparse else ''}; RapidOCR empty-result messages: {counter.count}")
     except Exception as exc:  # noqa: BLE001
         _record_failure(engine, params, "convert", exc)
         raise StageError("convert", exc) from exc
 
     fallback_pages, fallback_model = 0, None
     if sparse:
-        print(
-            f"  {len(sparse)} page(s) with little text {sparse[:10]}"
-            f" (RapidOCR empty-result messages: {counter.count}); trying vision OCR"
-        )
+        log(f"  running vision OCR fallback on {len(sparse)} page(s) ...")
         try:
             replacements = vision_ocr_pages(pdf, sparse)
             if replacements:
                 markdown = merge_pages(doc, replacements)
                 fallback_pages = len(replacements)
                 fallback_model = model_settings("ocrFallbackModel", "qwen2.5vl:7b")[0]
+                log(f"  vision OCR replaced {fallback_pages}/{len(sparse)} page(s)")
+            else:
+                log("  vision OCR returned nothing; keeping Docling text")
         except Exception as exc:  # noqa: BLE001
             # The file still converts with Docling's own text; the failed
             # fallback is only logged so it can be retried or reviewed.
@@ -335,6 +379,7 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
     params["ocr_fallback_model"] = fallback_model
     params["ocr_empty_events"] = counter.count
 
+    log(f"  writing {md_rel} ...")
     try:
         write_atomic(md_path, markdown)
     except Exception as exc:  # noqa: BLE001
@@ -351,7 +396,7 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
         raise StageError("db", exc) from exc
 
     extra = f", vision OCR pages: {fallback_pages}" if fallback_pages else ""
-    print(f"  -> {md_rel} (pages: {pages}, tables: {tables}{extra})")
+    log(f"  saved to database. -> {md_rel} (pages: {pages}, tables: {tables}{extra}) in {time.time() - started:.1f}s")
     return "converted"
 
 
@@ -384,7 +429,7 @@ def main() -> None:
 
     if not INPUT_DIR.exists():
         sys.exit(f"Input folder not found: {INPUT_DIR}")
-    print("connecting to db")
+    log("connecting to db")
     engine = create_engine(DATABASE_URL)
     try:
         with engine.begin() as conn:
@@ -393,18 +438,21 @@ def main() -> None:
     except Exception as exc:  # noqa: BLE001
         sys.exit(f"Database unavailable ({DATABASE_URL.split('@')[-1]}): {exc}")
 
+    log("database ready (tables checked)")
     docling_version = pkg_version("docling")
     converter_holder: list = []  # built lazily so an all-skipped run loads no models
     counts = {"converted": 0, "skipped": 0, "failed": 0}
 
-    for pdf in sorted(INPUT_DIR.rglob("*.pdf")):
+    pdfs = sorted(INPUT_DIR.rglob("*.pdf"))
+    log(f"Found {len(pdfs)} PDF(s) in {INPUT_DIR}{' (--force)' if args.force else ''}")
+    for idx, pdf in enumerate(pdfs, 1):
         rel = pdf.relative_to(INPUT_DIR).as_posix()
-        print(f"{rel}")
+        log(f"[{idx}/{len(pdfs)}] {rel}")
         try:
             outcome = process_pdf(engine, pdf, converter_holder, args.force, docling_version)
         except StageError as err:
             counts["failed"] += 1
-            print(f"  FAILED at {err.stage}: {err}", file=sys.stderr)
+            log(f"  FAILED at stage '{err.stage}': {err}")
             file_hash = None
             try:
                 file_hash = sha256_file(pdf) if err.stage != "hash" else None
@@ -414,7 +462,7 @@ def main() -> None:
             continue
         counts[outcome] += 1
         if outcome == "skipped":
-            print("  unchanged, skipped")
+            log("  unchanged (same path + hash, markdown present), skipped")
 
     print(
         f"Done: {counts['converted']} converted, {counts['skipped']} skipped, "
