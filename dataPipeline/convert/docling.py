@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 import argparse
 import hashlib
 import os
@@ -96,7 +98,7 @@ def build_converter() -> DocumentConverter:
     opts = PdfPipelineOptions()
     opts.do_ocr = True                     # handles scanned pages / image-only tables
     opts.do_table_structure = True         # run TableFormer table-structure model
-    opts.table_structure_options.mode = TableFormerMode.FAST  # slower, better on complex/merged cells
+    opts.table_structure_options.mode = TableFormerMode.ACCURATE  # slower, better on complex/merged cells
     opts.table_structure_options.do_cell_matching = True          # map cells back to the PDF text layer
 
     return DocumentConverter(
@@ -242,7 +244,7 @@ def main() -> None:
 
     if not INPUT_DIR.exists():
         sys.exit(f"Input folder not found: {INPUT_DIR}")
-
+    print("connecting to db")
     engine = create_engine(DATABASE_URL)
     try:
         with engine.begin() as conn:
