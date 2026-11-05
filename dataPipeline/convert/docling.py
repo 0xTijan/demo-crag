@@ -1,5 +1,27 @@
+"""Convert new or changed PDFs in reports/ to Markdown with Docling.
+
+Usage:  python dataPipeline/convert/docling.py [--force]
+
+Overview of one run
+-------------------
+1. Connect to PostgreSQL and make sure the tracking tables exist.
+2. For every reports/**/*.pdf: compute its SHA-256. A PDF is identified by
+   (path relative to reports/, hash), so the same name with new content is
+   treated as a new version.
+3. Skip it if that exact (path, hash) was already converted and its Markdown
+   still exists; otherwise convert it with Docling (OCR + table structure).
+4. Pages where Docling found almost no text are re-read by a local vision model
+   (Ollama) and swapped into the Markdown.
+5. Write the Markdown to markdowns/ and record the result (or the failure) in
+   the database. One bad PDF never stops the batch.
+
+Merged table cells: Docling's Markdown export repeats the text of a cell that
+spans several rows/columns in every row/column it covers (see
+tests/test_table_spans.py).
+"""
 from dotenv import load_dotenv
-load_dotenv()
+
+load_dotenv()  # read DATABASE_URL etc. from a local .env file, if present
 import argparse
 import hashlib
 import io
@@ -31,7 +53,7 @@ from sqlalchemy import create_engine, text  # noqa: E402
 
 from helpers.config import model_settings  # noqa: E402
 
-ROOT = SCRIPT_DIR.parents[1]
+ROOT = SCRIPT_DIR.parents[1]  # repository root (two levels above dataPipeline/convert)
 INPUT_DIR = ROOT / "reports"
 OUTPUT_DIR = ROOT / "markdowns"
 
@@ -52,11 +74,20 @@ FALLBACK_PROMPT = (
     "Output only the Markdown."
 )
 
+# SQLAlchemy connection URL; same variable and default as db_gui.py / rag/sql.py.
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
     "postgresql+psycopg2://username:postgres@localhost:5432/postgres",
 )
 
+# Idempotent schema, executed on every start so a fresh database just works.
+#   report_files        one row per (pdf_path, file_hash): a changed PDF gets a
+#                       new row and the old one stays as history.
+#   report_file_errors  append-only failure log (never updated), so retries that
+#                       overwrite the report_files row cannot erase old errors.
+# The ALTER TABLE ... ADD COLUMN IF NOT EXISTS lines upgrade databases created by
+# an earlier version of this script, because CREATE TABLE IF NOT EXISTS leaves an
+# existing table unchanged.
 DDL = [
     """
     CREATE TABLE IF NOT EXISTS report_files (
@@ -98,6 +129,10 @@ DDL = [
     """,
 ]
 
+# Insert-or-update one report_files row. ON CONFLICT on the unique
+# (pdf_path, file_hash) means reprocessing identical content updates the row in
+# place (a 'failed' row becomes 'converted' and its error is cleared) instead of
+# adding duplicates. Values are bound parameters, never string-formatted.
 UPSERT = text(
     """
     INSERT INTO report_files
@@ -123,6 +158,7 @@ UPSERT = text(
     """
 )
 
+# Append one row to report_file_errors (used by log_error()).
 LOG_ERROR = text(
     """
     INSERT INTO report_file_errors (pdf_path, file_hash, stage, error, traceback)
@@ -132,7 +168,13 @@ LOG_ERROR = text(
 
 
 def build_converter() -> DocumentConverter:
+    """Build the Docling converter used for every PDF.
+
+    Constructing it loads the ML models, which is slow, so callers create it once
+    per run and only when a file really needs converting (see process_pdf).
+    """
     opts = PdfPipelineOptions()
+    # Options below control the PDF pipeline (the comments say what each does).
     opts.do_ocr = True                     # handles scanned pages / image-only tables
     opts.do_table_structure = True         # run TableFormer table-structure model
     opts.table_structure_options.mode = TableFormerMode.ACCURATE  # slower, better on complex/merged cells
@@ -149,10 +191,17 @@ def log(msg: str) -> None:
 
 
 def conversion_reason(engine, rel: str, file_hash: str, force: bool) -> str:
-    """Human-readable reason this PDF is being (re)converted, for the progress log."""
+    """Human-readable reason this PDF is being (re)converted, for the progress log.
+
+    Only used for printing; it never affects what gets converted. Checks, in order:
+    --force, an existing row for the same hash (failed row or missing .md), an
+    older row for the same path (content changed), else the file is new.
+    """
     if force:
         return "--force"
     with engine.connect() as conn:
+        # Same path and same content already known: it can only be converting
+        # again because it failed last time or its Markdown file was deleted.
         same = conn.execute(
             text("SELECT status, markdown_path FROM report_files WHERE pdf_path = :p AND file_hash = :h"),
             {"p": rel, "h": file_hash},
@@ -161,6 +210,7 @@ def conversion_reason(engine, rel: str, file_hash: str, force: bool) -> str:
             if same[0] == "failed":
                 return "retrying after an earlier failure"
             return "markdown file is missing"
+        # Same path but no row for this hash: the file was replaced with new content.
         older = conn.execute(
             text("SELECT file_hash FROM report_files WHERE pdf_path = :p ORDER BY converted_at DESC LIMIT 1"),
             {"p": rel},
@@ -179,10 +229,11 @@ class OcrEmptyCounter(logging.Handler):
     """
 
     def __init__(self) -> None:
-        super().__init__(level=logging.DEBUG)
+        super().__init__(level=logging.DEBUG)  # DEBUG = see every record
         self.count = 0
 
     def emit(self, record: logging.LogRecord) -> None:
+        # Called by the logging system for every record; count the matching ones.
         if OCR_EMPTY_MARKER in record.getMessage():
             self.count += 1
 
@@ -190,11 +241,17 @@ class OcrEmptyCounter(logging.Handler):
 def page_text_length(doc, page_no: int) -> int:
     """Characters of real text Docling extracted for one page (markup ignored)."""
     md = doc.export_to_markdown(page_no=page_no)
+    # Drop whitespace and Markdown symbols (table pipes/dashes, #, *, _, >) so an
+    # empty table skeleton or a lone heading does not count as page content.
     return len(re.sub(r"[\s|#*_>\-]", "", md))
 
 
 def find_sparse_pages(doc) -> list[int]:
-    """Page numbers whose extracted text is below MIN_PAGE_CHARS."""
+    """Page numbers (1-based) whose extracted text is below MIN_PAGE_CHARS.
+
+    This is the real trigger for the vision fallback; the RapidOCR log counter is
+    only a hint because it also fires on harmless blank regions.
+    """
     return [n for n in sorted(doc.pages) if page_text_length(doc, n) < MIN_PAGE_CHARS]
 
 
@@ -210,12 +267,14 @@ def vision_ocr_pages(pdf: Path, page_numbers: list[int]) -> dict[int, str]:
     import pypdfium2 as pdfium
     from ollama import Client
 
+    # Model name and options (temperature etc.) come from config.json.
     model, options = model_settings("ocrFallbackModel", default_model="qwen2.5vl:7b")
     client = Client()
     results: dict[int, str] = {}
     pdf_doc = pdfium.PdfDocument(str(pdf))
     try:
         for i, page_no in enumerate(page_numbers, 1):
+            # Per flagged page: render to an image -> PNG bytes -> vision model.
             started = time.time()
             log(f"    [vision {i}/{len(page_numbers)}] page {page_no}: sending to {model} ...")
             image = pdf_doc[page_no - 1].render(scale=RENDER_SCALE).to_pil()
@@ -226,6 +285,8 @@ def vision_ocr_pages(pdf: Path, page_numbers: list[int]) -> dict[int, str]:
                 messages=[{"role": "user", "content": FALLBACK_PROMPT, "images": [buf.getvalue()]}],
                 options=options,
             )
+            # An empty answer means "no usable result": the page is left out so the
+            # caller keeps Docling's own text for it.
             text_out = (reply["message"]["content"] or "").strip()
             if text_out:
                 results[page_no] = text_out
@@ -233,7 +294,7 @@ def vision_ocr_pages(pdf: Path, page_numbers: list[int]) -> dict[int, str]:
             else:
                 log(f"    [vision {i}/{len(page_numbers)}] page {page_no}: empty answer, keeping Docling text")
     finally:
-        pdf_doc.close()
+        pdf_doc.close()  # always release the PDF handle, even if the model call raised
     return results
 
 
@@ -245,12 +306,18 @@ def merge_pages(doc, replacements: dict[int, str]) -> str:
     """
     parts = []
     for n in sorted(doc.pages):
+        # Prefer the vision text for flagged pages; fall back to Docling's text.
         body = replacements.get(n) or doc.export_to_markdown(page_no=n)
         parts.append(f"<!-- page: {n} -->\n\n{body.strip()}")
     return "\n\n".join(parts) + "\n"
 
 
 def sha256_file(path: Path) -> str:
+    """Hex SHA-256 of a file's bytes (64 chars, fits CHAR(64)).
+
+    Read in 1 MiB chunks so memory stays constant for very large reports. Based
+    on content only: renaming or touching a file does not change it, editing does.
+    """
     digest = hashlib.sha256()
     with path.open("rb") as f:
         for chunk in iter(lambda: f.read(1024 * 1024), b""):
@@ -259,7 +326,11 @@ def sha256_file(path: Path) -> str:
 
 
 class StageError(Exception):
-    """Wraps an exception with the pipeline stage it happened in."""
+    """Wraps an exception with the pipeline stage it happened in.
+
+    stage is 'hash', 'convert', 'write' or 'db'. `original` keeps the real
+    exception so main() can store its true traceback.
+    """
 
     def __init__(self, stage: str, original: BaseException):
         super().__init__(str(original))
@@ -268,7 +339,12 @@ class StageError(Exception):
 
 
 def log_error(engine, pdf_path: str, file_hash: str | None, stage: str, exc: BaseException) -> None:
-    """Append an error to report_file_errors; never raise (DB may be the problem)."""
+    """Append one failure to report_file_errors; never raises.
+
+    Stores path, hash (None if the file could not be hashed), stage, message and
+    the full traceback. If the database is the cause of the failure the secondary
+    error is only printed, so the original problem is not masked.
+    """
     try:
         with engine.begin() as conn:
             conn.execute(
@@ -288,7 +364,12 @@ def log_error(engine, pdf_path: str, file_hash: str | None, stage: str, exc: Bas
 
 
 def already_converted(engine, pdf_path: str, file_hash: str) -> bool:
-    """True if this exact content was converted and its Markdown still exists."""
+    """True if this exact (path, hash) needs no conversion.
+
+    Requires a 'converted' row AND the Markdown file still on disk, so deleting an
+    output file makes the next run regenerate it. 'failed' rows never count, which
+    is why failed files are retried automatically.
+    """
     with engine.connect() as conn:
         md_path = conn.execute(
             text(
@@ -301,6 +382,11 @@ def already_converted(engine, pdf_path: str, file_hash: str) -> bool:
 
 
 def write_atomic(path: Path, content: str) -> None:
+    """Write UTF-8 text so readers never see a half-written file.
+
+    Writes to <name>.tmp next to the target, then renames it over the final name
+    (atomic on the same filesystem). A crash leaves the old Markdown intact.
+    """
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_name(path.name + ".tmp")
     tmp.write_text(content, encoding="utf-8")
@@ -308,12 +394,23 @@ def write_atomic(path: Path, content: str) -> None:
 
 
 def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_version: str) -> str:
-    """Process one PDF. Returns 'converted' or 'skipped'; raises StageError on failure."""
+    """Process one PDF end to end. Returns 'converted' or 'skipped'.
+
+    Raises StageError(stage, original) on failure; main() logs it and moves on.
+    converter_holder is an empty list used as a lazy shared cell: the slow Docling
+    converter is appended on first real use and reused for all later files.
+
+    Stages: hash -> skip check -> convert -> (vision OCR fallback) -> write -> db.
+    """
+    # Path relative to reports/ is the file's identity (with the hash); the output
+    # mirrors it: reports/a/b.pdf -> markdowns/a/b.md.
     rel = pdf.relative_to(INPUT_DIR).as_posix()
     md_path = OUTPUT_DIR / Path(rel).with_suffix(".md")
     md_rel = md_path.relative_to(ROOT).as_posix()
 
     started = time.time()
+    # Stage "hash": fingerprint the content. No hash means no row can be keyed,
+    # so a failure here only goes to the error log.
     try:
         file_hash = sha256_file(pdf)
         file_size = pdf.stat().st_size
@@ -321,6 +418,7 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
         raise StageError("hash", exc) from exc
     log(f"  hashed: {file_hash[:8]}... ({file_size / 1_048_576:.1f} MB)")
 
+    # Stage "db": skip files whose exact content was already converted.
     try:
         if not force and already_converted(engine, rel, file_hash):
             return "skipped"
@@ -328,6 +426,7 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
     except Exception as exc:  # noqa: BLE001
         raise StageError("db", exc) from exc
 
+    # Values shared by every report_files upsert for this file.
     params = {
         "pdf_path": rel,
         "file_hash": file_hash,
@@ -336,6 +435,7 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
         "converter_version": docling_version,
     }
 
+    # Stage "convert": Docling parse. Failure records a 'failed' row (retried next run).
     try:
         if not converter_holder:
             log("  loading Docling models (first conversion this run) ...")
@@ -344,13 +444,14 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
             log(f"  models ready in {time.time() - t0:.1f}s")
         log("  converting with Docling (OCR + table structure) ...")
         t0 = time.time()
+        # Count RapidOCR "empty result" log messages during this conversion only.
         counter = OcrEmptyCounter()
         logging.getLogger().addHandler(counter)
         try:
             doc = converter_holder[0].convert(pdf).document
         finally:
             logging.getLogger().removeHandler(counter)
-        markdown = doc.export_to_markdown()
+        markdown = doc.export_to_markdown()  # merged cells are repeated in every row/column
         pages, tables = len(doc.pages), len(doc.tables)
         log(f"  Docling done in {time.time() - t0:.1f}s: {pages} pages, {tables} tables")
         sparse = find_sparse_pages(doc)
@@ -360,13 +461,15 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
         _record_failure(engine, params, "convert", exc)
         raise StageError("convert", exc) from exc
 
+    # Vision OCR fallback for pages where Docling found (almost) no text. It never
+    # fails the file: on any error we keep Docling's text and just log it.
     fallback_pages, fallback_model = 0, None
     if sparse:
         log(f"  running vision OCR fallback on {len(sparse)} page(s) ...")
         try:
             replacements = vision_ocr_pages(pdf, sparse)
             if replacements:
-                markdown = merge_pages(doc, replacements)
+                markdown = merge_pages(doc, replacements)  # now page by page with <!-- page: N --> markers
                 fallback_pages = len(replacements)
                 fallback_model = model_settings("ocrFallbackModel", "qwen2.5vl:7b")[0]
                 log(f"  vision OCR replaced {fallback_pages}/{len(sparse)} page(s)")
@@ -377,10 +480,13 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
             # fallback is only logged so it can be retried or reviewed.
             print(f"  vision OCR failed, keeping Docling text: {exc}", file=sys.stderr)
             log_error(engine, rel, file_hash, "ocr_fallback", exc)
+    # Remember what the fallback did, for the report_files row.
     params["ocr_fallback_pages"] = fallback_pages
     params["ocr_fallback_model"] = fallback_model
     params["ocr_empty_events"] = counter.count
 
+    # Stage "write": the Markdown is written BEFORE the success row, so a DB failure
+    # only causes a reconversion next run and never a success row for a missing file.
     log(f"  writing {md_rel} ...")
     try:
         write_atomic(md_path, markdown)
@@ -388,6 +494,7 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
         _record_failure(engine, params, "write", exc)
         raise StageError("write", exc) from exc
 
+    # Stage "db": record the success (one transaction, commits on exit).
     try:
         with engine.begin() as conn:
             conn.execute(
@@ -403,7 +510,11 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
 
 
 def _record_failure(engine, params: dict, stage: str, exc: BaseException) -> None:
-    """Mark this (path, hash) as failed so it is retried next run."""
+    """Upsert a 'failed' row for this (path, hash) so it is retried next run.
+
+    Clears markdown_path/pages/tables and stores "<stage>: <message>" in error.
+    Never raises: if the DB is down it only prints, to avoid hiding the real error.
+    """
     try:
         with engine.begin() as conn:
             conn.execute(
@@ -425,12 +536,18 @@ def _record_failure(engine, params: dict, stage: str, exc: BaseException) -> Non
 
 
 def main() -> None:
+    """CLI entry point: convert every new/changed PDF and print a summary.
+
+    Exits with status 1 if any PDF failed, so cron/CI can detect a partial run.
+    """
     parser = argparse.ArgumentParser(description="Convert new/changed PDFs in reports/ to Markdown.")
     parser.add_argument("--force", action="store_true", help="reconvert every PDF, ignoring the hash table")
     args = parser.parse_args()
 
     if not INPUT_DIR.exists():
         sys.exit(f"Input folder not found: {INPUT_DIR}")
+    # Connect and create/upgrade the tables in one transaction. On failure print
+    # only the host part of the URL (after "@") so the password is never shown.
     log("connecting to db")
     engine = create_engine(DATABASE_URL)
     try:
@@ -442,9 +559,10 @@ def main() -> None:
 
     log("database ready (tables checked)")
     docling_version = pkg_version("docling")
-    converter_holder: list = []  # built lazily so an all-skipped run loads no models
+    converter_holder: list = []  # lazy shared Docling converter; built lazily so an all-skipped run loads no models
     counts = {"converted": 0, "skipped": 0, "failed": 0}
 
+    # Recursive and sorted, so the order is deterministic.
     pdfs = sorted(INPUT_DIR.rglob("*.pdf"))
     log(f"Found {len(pdfs)} PDF(s) in {INPUT_DIR}{' (--force)' if args.force else ''}")
     for idx, pdf in enumerate(pdfs, 1):
@@ -453,9 +571,10 @@ def main() -> None:
         try:
             outcome = process_pdf(engine, pdf, converter_holder, args.force, docling_version)
         except StageError as err:
+            # One bad PDF must not stop the batch: count it, store the error, go on.
             counts["failed"] += 1
             log(f"  FAILED at stage '{err.stage}': {err}")
-            file_hash = None
+            file_hash = None  # re-hash for the error row (impossible if hashing was what failed)
             try:
                 file_hash = sha256_file(pdf) if err.stage != "hash" else None
             except Exception:  # noqa: BLE001
