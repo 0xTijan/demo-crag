@@ -2,7 +2,10 @@ from dotenv import load_dotenv
 load_dotenv()
 import argparse
 import hashlib
+import io
+import logging
 import os
+import re
 import sys
 import traceback
 from importlib.metadata import version as pkg_version
@@ -14,6 +17,9 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path = [p for p in sys.path if Path(p or ".").resolve() != SCRIPT_DIR]
 
+# Make the repo root importable so helpers.config (model settings) can be reused.
+sys.path.insert(0, str(SCRIPT_DIR.parents[1]))
+
 from docling.datamodel.base_models import InputFormat  # noqa: E402
 from docling.datamodel.pipeline_options import (  # noqa: E402
     PdfPipelineOptions,
@@ -22,9 +28,26 @@ from docling.datamodel.pipeline_options import (  # noqa: E402
 from docling.document_converter import DocumentConverter, PdfFormatOption  # noqa: E402
 from sqlalchemy import create_engine, text  # noqa: E402
 
+from helpers.config import model_settings  # noqa: E402
+
 ROOT = SCRIPT_DIR.parents[1]
 INPUT_DIR = ROOT / "reports"
 OUTPUT_DIR = ROOT / "markdowns"
+
+# --- Vision-LLM OCR fallback -------------------------------------------------
+# After Docling finishes, pages whose extracted text is shorter than this many
+# characters (markdown/whitespace symbols ignored) are treated as "OCR came back
+# empty" and are re-read by a local vision model through Ollama.
+MIN_PAGE_CHARS = int(os.getenv("OCR_FALLBACK_MIN_PAGE_CHARS", "100"))
+RENDER_SCALE = 2.0  # page render scale for the vision model (~144 dpi)
+OCR_EMPTY_MARKER = "returned empty result"  # RapidOCR log text (hint only)
+FALLBACK_PROMPT = (
+    "Transcribe this page of a financial report into Markdown. Keep headings, "
+    "paragraphs and lists. Render every table as a Markdown table, preserving all "
+    "rows, columns and numbers exactly as printed. Do not summarise, translate or "
+    "invent anything. Write [unreadable] where text cannot be read. "
+    "Output only the Markdown."
+)
 
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
@@ -49,6 +72,12 @@ DDL = [
         UNIQUE (pdf_path, file_hash)
     )
     """,
+    # Columns added after the first release; ADD COLUMN IF NOT EXISTS upgrades
+    # existing databases because CREATE TABLE IF NOT EXISTS leaves them untouched.
+    "ALTER TABLE report_files ADD COLUMN IF NOT EXISTS error TEXT",
+    "ALTER TABLE report_files ADD COLUMN IF NOT EXISTS ocr_fallback_pages INT",
+    "ALTER TABLE report_files ADD COLUMN IF NOT EXISTS ocr_fallback_model TEXT",
+    "ALTER TABLE report_files ADD COLUMN IF NOT EXISTS ocr_empty_events INT",
     """
     CREATE INDEX IF NOT EXISTS report_files_path_idx
         ON report_files (pdf_path, converted_at DESC)
@@ -70,10 +99,12 @@ UPSERT = text(
     """
     INSERT INTO report_files
         (pdf_path, file_hash, file_size, markdown_path, status, pages, tables,
-         converter_version, error, converted_at)
+         converter_version, error, ocr_fallback_pages, ocr_fallback_model,
+         ocr_empty_events, converted_at)
     VALUES
         (:pdf_path, :file_hash, :file_size, :markdown_path, :status, :pages, :tables,
-         :converter_version, :error, now())
+         :converter_version, :error, :ocr_fallback_pages, :ocr_fallback_model,
+         :ocr_empty_events, now())
     ON CONFLICT (pdf_path, file_hash) DO UPDATE SET
         file_size = EXCLUDED.file_size,
         markdown_path = EXCLUDED.markdown_path,
@@ -82,6 +113,9 @@ UPSERT = text(
         tables = EXCLUDED.tables,
         converter_version = EXCLUDED.converter_version,
         error = EXCLUDED.error,
+        ocr_fallback_pages = EXCLUDED.ocr_fallback_pages,
+        ocr_fallback_model = EXCLUDED.ocr_fallback_model,
+        ocr_empty_events = EXCLUDED.ocr_empty_events,
         converted_at = now()
     """
 )
@@ -104,6 +138,81 @@ def build_converter() -> DocumentConverter:
     return DocumentConverter(
         format_options={InputFormat.PDF: PdfFormatOption(pipeline_options=opts)}
     )
+
+
+class OcrEmptyCounter(logging.Handler):
+    """Counts log records saying RapidOCR returned an empty result.
+
+    Attached to the root logger while a PDF is converted. This is only a hint
+    (it also fires on harmless blank regions); the page text-length check below
+    decides whether the vision model actually runs.
+    """
+
+    def __init__(self) -> None:
+        super().__init__(level=logging.DEBUG)
+        self.count = 0
+
+    def emit(self, record: logging.LogRecord) -> None:
+        if OCR_EMPTY_MARKER in record.getMessage():
+            self.count += 1
+
+
+def page_text_length(doc, page_no: int) -> int:
+    """Characters of real text Docling extracted for one page (markup ignored)."""
+    md = doc.export_to_markdown(page_no=page_no)
+    return len(re.sub(r"[\s|#*_>\-]", "", md))
+
+
+def find_sparse_pages(doc) -> list[int]:
+    """Page numbers whose extracted text is below MIN_PAGE_CHARS."""
+    return [n for n in sorted(doc.pages) if page_text_length(doc, n) < MIN_PAGE_CHARS]
+
+
+def vision_ocr_pages(pdf: Path, page_numbers: list[int]) -> dict[int, str]:
+    """Transcribe the given 1-based pages with the Ollama vision model.
+
+    Renders each page with pypdfium2 (already a Docling dependency) and sends the
+    PNG to the model configured as "ocrFallbackModel" in config.json. Returns
+    {page_no: markdown}. A page the model fails on is left out, so the caller
+    keeps Docling's text for it. Imports are lazy: a run that never needs the
+    fallback does not need Ollama.
+    """
+    import pypdfium2 as pdfium
+    from ollama import Client
+
+    model, options = model_settings("ocrFallbackModel", default_model="qwen2.5vl:7b")
+    client = Client()
+    results: dict[int, str] = {}
+    pdf_doc = pdfium.PdfDocument(str(pdf))
+    try:
+        for page_no in page_numbers:
+            image = pdf_doc[page_no - 1].render(scale=RENDER_SCALE).to_pil()
+            buf = io.BytesIO()
+            image.save(buf, format="PNG")
+            reply = client.chat(
+                model=model,
+                messages=[{"role": "user", "content": FALLBACK_PROMPT, "images": [buf.getvalue()]}],
+                options=options,
+            )
+            text_out = (reply["message"]["content"] or "").strip()
+            if text_out:
+                results[page_no] = text_out
+    finally:
+        pdf_doc.close()
+    return results
+
+
+def merge_pages(doc, replacements: dict[int, str]) -> str:
+    """Markdown for the whole document, page by page, with vision text swapped in.
+
+    Each page is emitted as `<!-- page: N -->` followed by either the vision
+    transcription (for replaced pages) or Docling's own text for that page.
+    """
+    parts = []
+    for n in sorted(doc.pages):
+        body = replacements.get(n) or doc.export_to_markdown(page_no=n)
+        parts.append(f"<!-- page: {n} -->\n\n{body.strip()}")
+    return "\n\n".join(parts) + "\n"
 
 
 def sha256_file(path: Path) -> str:
@@ -192,12 +301,39 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
     try:
         if not converter_holder:
             converter_holder.append(build_converter())
-        doc = converter_holder[0].convert(pdf).document
+        counter = OcrEmptyCounter()
+        logging.getLogger().addHandler(counter)
+        try:
+            doc = converter_holder[0].convert(pdf).document
+        finally:
+            logging.getLogger().removeHandler(counter)
         markdown = doc.export_to_markdown()
         pages, tables = len(doc.pages), len(doc.tables)
+        sparse = find_sparse_pages(doc)
     except Exception as exc:  # noqa: BLE001
         _record_failure(engine, params, "convert", exc)
         raise StageError("convert", exc) from exc
+
+    fallback_pages, fallback_model = 0, None
+    if sparse:
+        print(
+            f"  {len(sparse)} page(s) with little text {sparse[:10]}"
+            f" (RapidOCR empty-result messages: {counter.count}); trying vision OCR"
+        )
+        try:
+            replacements = vision_ocr_pages(pdf, sparse)
+            if replacements:
+                markdown = merge_pages(doc, replacements)
+                fallback_pages = len(replacements)
+                fallback_model = model_settings("ocrFallbackModel", "qwen2.5vl:7b")[0]
+        except Exception as exc:  # noqa: BLE001
+            # The file still converts with Docling's own text; the failed
+            # fallback is only logged so it can be retried or reviewed.
+            print(f"  vision OCR failed, keeping Docling text: {exc}", file=sys.stderr)
+            log_error(engine, rel, file_hash, "ocr_fallback", exc)
+    params["ocr_fallback_pages"] = fallback_pages
+    params["ocr_fallback_model"] = fallback_model
+    params["ocr_empty_events"] = counter.count
 
     try:
         write_atomic(md_path, markdown)
@@ -214,7 +350,8 @@ def process_pdf(engine, pdf: Path, converter_holder: list, force: bool, docling_
     except Exception as exc:  # noqa: BLE001
         raise StageError("db", exc) from exc
 
-    print(f"  -> {md_rel} (pages: {pages}, tables: {tables})")
+    extra = f", vision OCR pages: {fallback_pages}" if fallback_pages else ""
+    print(f"  -> {md_rel} (pages: {pages}, tables: {tables}{extra})")
     return "converted"
 
 
@@ -230,6 +367,9 @@ def _record_failure(engine, params: dict, stage: str, exc: BaseException) -> Non
                     "status": "failed",
                     "pages": None,
                     "tables": None,
+                    "ocr_fallback_pages": None,
+                    "ocr_fallback_model": None,
+                    "ocr_empty_events": None,
                     "error": f"{stage}: {exc}",
                 },
             )

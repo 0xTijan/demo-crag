@@ -74,6 +74,8 @@ To be able to effectivly use the data in pdfs for RAG and easier (cheaper) proce
 
 **Change tracking.** `python dataPipeline/convert/docling.py` converts every PDF in `reports/` that is new or whose SHA-256 changed (same filename, new content included) and skips the rest (`--force` reconverts all). Each run is recorded in `report_files` (path, hash, markdown path, pages, tables, status), and every failure is also appended to `report_file_errors` with its stage and traceback. Needs `DATABASE_URL`.
 
+**Vision-OCR fallback.** After Docling, any page with fewer than `OCR_FALLBACK_MIN_PAGE_CHARS` (default 100) characters of extracted text is re-read by a local vision model through Ollama (`ocrFallbackModel` in `config.json`, default `qwen2.5vl:7b`). RapidOCR "returned empty result" log messages are counted as a hint only. When any page is replaced, the Markdown is written page by page with `<!-- page: N -->` markers. If Ollama is unavailable the file still converts with Docling's text and the failure is logged in `report_file_errors` (stage `ocr_fallback`).
+
 **3.4 Locate the financial statements inside the Markdown.** Search headings for multilingual keyword pairs (*balance sheet / bilanca stanja*, *income statement / izkaz poslovnega izida*, *cash flow statement / izkaz denarnih tokov*). If a report's formatting is unusual enough that this misses, fall back to embedding each page/section and semantically searching for "balance sheet showing total assets and liabilities" — the embedding infrastructure needed for this is the same one built in Step 5, so this fallback costs nothing extra to add.
 
 **Output of Step 3:** a Markdown file per report, with the financial-statement sections located and flagged.

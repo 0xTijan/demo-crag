@@ -131,6 +131,10 @@ CREATE TABLE IF NOT EXISTS report_files (
     tables            INT,
     converter         TEXT        DEFAULT 'docling',
     converter_version TEXT,
+    error             TEXT,                          -- "<stage>: <message>" when failed
+    ocr_fallback_pages INT,                          -- pages re-read by the vision model
+    ocr_fallback_model TEXT,                         -- e.g. qwen2.5vl:7b
+    ocr_empty_events  INT,                           -- RapidOCR 'empty result' log count (hint)
     converted_at      TIMESTAMPTZ DEFAULT now(),
     UNIQUE (pdf_path, file_hash)
 );
