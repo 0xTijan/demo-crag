@@ -1,0 +1,233 @@
+ ▐▛███▛█   Claude Code v2.1.316
+▝▜██████▀  Opus 5.5 · Claude Pro
+ ▝▝   ▝▝   D:\dev\demo-crag
+
+
+❯ how would i transform complex pdfs to markdown - some pdfs have multipage     
+  tables (which i want intact and accurate in markdown), some have just texts,  
+  some have images (which i want to be in markdown - not the image itself but   
+  an accurate description: for example: Graph shows revenue growth year over    
+  year, 2023 +3%, 2024 +5%...)                                                  
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Your repo has no PDF ingestion yet, so this is a general recommendation.
+  Accurate numbers matter for your numeric retrieval path, so I've weighted it
+  toward accuracy.
+
+  Recommended approach: a layout parser plus a vision LLM for the hard parts
+
+  No single tool does all three jobs well. A pipeline that splits the work does:
+
+  ┌───────────────┬───────────────────────────┬────────────────────────────┐
+  │    Content    │           Tool            │            Why             │
+  ├───────────────┼───────────────────────────┼────────────────────────────┤
+  │ Plain text,   │ Docling (IBM, open        │ Fast, runs locally, and    │
+  │ headings,     │ source) or Marker         │ copies text exactly        │
+  │ reading order │                           │ instead of regenerating it │
+  ├───────────────┼───────────────────────────┼────────────────────────────┤
+  │               │ Docling's TableFormer in  │ Gets the cell structure    │
+  │ Tables        │ ACCURATE mode, then a     │ right; no parser reliably  │
+  │               │ merge step for tables     │ joins tables across pages  │
+  │               │ that span pages           │ without help               │
+  ├───────────────┼───────────────────────────┼────────────────────────────┤
+  │               │ Crop each one at high     │ Only a vision model can    │
+  │ Images and    │ resolution, then send it  │ turn a chart into "2023    │
+  │ charts        │ to Claude with its        │ +3%, 2024 +5%"             │
+  │               │ caption and nearby text   │                            │
+  └───────────────┴───────────────────────────┴────────────────────────────┘
+
+  1. Parse with Docling
+
+  from docling.document_converter import DocumentConverter, PdfFormatOption
+  from docling.datamodel.base_models import InputFormat
+  from docling.datamodel.pipeline_options import PdfPipelineOptions,
+  TableFormerMode
+
+  opts = PdfPipelineOptions(
+      do_table_structure=True,
+      generate_picture_images=True,   # keep image crops for step 3
+      images_scale=2.0,               # ~144 DPI crops; charts need the 
+  resolution
+  )
+  opts.table_structure_options.mode = TableFormerMode.ACCURATE
+  opts.table_structure_options.do_cell_matching = True  # use the PDF's text 
+  layer for cell text, not OCR
+
+  conv = DocumentConverter(format_options={InputFormat.PDF:
+  PdfFormatOption(pipeline_options=opts)})
+  doc = conv.convert("report.pdf").document
+
+  2. Merge tables that span pages
+
+  Docling outputs a multipage table as separate tables, one per page. Join them
+  yourself. Two consecutive tables are fragments of the same table when:
+  - one ends at the bottom of page N and the other starts at the top of page N+1
+    (check table.prov[0].page_no and the bounding box),
+  - and both have the same number of columns,
+  - and the second one either repeats the first one's header row or has no
+    header.
+
+  When those conditions hold, add the second table's rows to the first and drop
+  the repeated header. For layouts where this rule guesses wrong, give an LLM
+  the last rows of page N and the first rows of page N+1 and ask: "is this a
+  continuation?"
+
+  Marker has this built in: marker_single file.pdf --use_llm merges tables
+  across pages. It's worth comparing against Docling on your own documents.
+
+  3. Describe images with Claude
+
+  import base64, io, anthropic
+  client = anthropic.Anthropic()
+
+  PROMPT = """Describe this figure for a text-only search index.
+  - State the chart type and what it measures.
+  - Extract EVERY data point visible (labels, years, values, units) as a 
+  markdown table.
+  - Summarize the main trend in 1-2 sentences.
+  - If a value is unreadable, write "unreadable"; never guess.
+  Caption/context: {ctx}"""
+
+  def describe(pil_img, ctx):
+      buf = io.BytesIO(); pil_img.save(buf, "PNG")
+      msg = client.messages.create(
+          model="claude-sonnet-5-5", max_tokens=1500,
+          messages=[{"role": "user", "content": [
+              {"type": "image", "source": {"type": "base64", "media_type":
+  "image/png",
+                                           "data":
+  base64.b64encode(buf.getvalue()).decode()}},
+              {"type": "text", "text": PROMPT.format(ctx=ctx)}]}])
+      return msg.content[0].text
+
+  md = doc.export_to_markdown(image_placeholder="<!-- IMG -->")
+  for pic in doc.pictures:  # same reading order as the placeholders
+      desc = describe(pic.get_image(doc), pic.caption_text(doc))
+      md = md.replace("<!-- IMG -->", f"\n> **Figure:** {desc}\n", 1)
+
+  Before calling the model, skip logos and decorative images: drop anything
+  below a minimum size, or use Docling's picture classifier
+  (do_picture_classification=True).
+
+  Alternative: send each page to Claude as an image
+
+  For very messy layouts (scanned pages, nested tables, multi-column financial
+  statements), skip the parser. Render each page to an image, or send the PDF
+  directly since the Claude API accepts PDFs, and ask for markdown. Include the
+  last table of the previous page so the model can continue it. This handles
+  layout best, but it costs more, and the model can invent numbers.
+
+  Whichever approach you use, check the numbers
+
+  Because your retrieval depends on numbers, add a check for every table (and,
+  where possible, every chart):
+  1. Extract all numbers from the markdown table.
+  2. Extract all numbers from that page's real text layer (pdfplumber or
+     pymupdf).
+  3. Flag any number in the markdown that isn't in the PDF. That number was
+     misread or made up.
+
+  Charts have no text layer, so their extracted values can't be checked this
+  way. Mark them as coming from the model (for example source: vlm) so your
+  numeric path can rank them lower than table values.
+
+  Routing summary
+
+  - Text-only pages: Docling alone; no LLM cost.
+  - Pages with tables: Docling ACCURATE, then the merge step, then the number
+    check.
+  - Pages with images: Docling crops, then Claude descriptions.
+  - Scanned pages, or pages where the number check fails: fall back to sending
+    the whole page to Claude.
+
+  I can add this as an ingest/ module in the repo and connect its output to your
+  existing chunking if you'd like.
+
+✻ Brewed for 36s · done 9:25 PM
+
+❯ can any local model turn images / charts to text?                             
+
+● Yes. Several open vision-language models run locally and can read charts,
+  including extracting the values. Since my knowledge stops at a cutoff, check
+  each model's page for newer versions before you pick one.
+
+  Models that are good at charts
+
+  ┌───────────────────┬────────────┬───────────────────────────────────────┐
+  │       Model       │    Size    │                 Notes                 │
+  ├───────────────────┼────────────┼───────────────────────────────────────┤
+  │ Qwen2.5-VL /      │ 3B, 7B,    │ The best open choice for charts,      │
+  │ Qwen3-VL          │ 32B, 72B   │ tables and OCR. 7B is the sweet spot. │
+  ├───────────────────┼────────────┼───────────────────────────────────────┤
+  │ InternVL3         │ 1B–78B     │ Similar to Qwen at chart and document │
+  │                   │            │  questions                            │
+  ├───────────────────┼────────────┼───────────────────────────────────────┤
+  │ MiniCPM-V 2.6 /   │ ~8B        │ Strong OCR and runs light on hardware │
+  │ 4.x               │            │                                       │
+  ├───────────────────┼────────────┼───────────────────────────────────────┤
+  │ Gemma 3           │            │ Decent at charts and widely supported │
+  │ (4B/12B/27B)      │            │                                       │
+  ├───────────────────┼────────────┼───────────────────────────────────────┤
+  │ Llama 3.2 Vision  │ 11B        │ Works, but weaker than Qwen at        │
+  │                   │            │ reading exact numbers                 │
+  ├───────────────────┼────────────┼───────────────────────────────────────┤
+  │ granite-docling / │            │ Tiny and fast. Fine for short         │
+  │  SmolVLM          │ ~250M–2B   │ captions ("bar chart of revenue"),    │
+  │                   │            │ not reliable for extracting values    │
+  ├───────────────────┼────────────┼───────────────────────────────────────┤
+  │                   │            │ Older, but built specifically to turn │
+  │ DePlot (Google)   │ ~300M      │  a chart into a data table. Gives no  │
+  │                   │            │ narrative description                 │
+  └───────────────────┴────────────┴───────────────────────────────────────┘
+
+  Hardware: a 7B vision model needs about 6–8 GB of VRAM with 4-bit
+  quantization, or about 16 GB at fp16. The 32B models need about 24 GB at
+  4-bit. CPU-only works, but takes tens of seconds per image.
+
+  Easiest setup on Windows: Ollama, called from Docling
+
+  ollama pull qwen2.5vl:7b
+
+  Docling can call the local model during parsing, so you don't need the
+  separate Claude step I showed earlier:
+
+  from docling.datamodel.pipeline_options import PdfPipelineOptions,
+  PictureDescriptionApiOptions
+
+  opts = PdfPipelineOptions(generate_picture_images=True, images_scale=2.0)
+  opts.enable_remote_services = True          # needed even though "remote" is 
+  localhost
+  opts.do_picture_description = True
+  opts.picture_description_options = PictureDescriptionApiOptions(
+      url="http://localhost:11434/v1/chat/completions",
+      params={"model": "qwen2.5vl:7b"},
+      prompt=("Describe this chart for a search index. State the chart type and 
+  what it measures. "
+              "List EVERY visible data point (label, value, unit) as a markdown 
+  table. "
+              "Write 'unreadable' instead of guessing."),
+      timeout=180,
+  )
+
+  The descriptions then appear in pic.annotations, and in the markdown export.
+  The same settings work with LM Studio or vLLM; just change the URL.
+
+  Local versus Claude for charts
+
+  - Simple bar, line or pie charts with labeled values: a 7B Qwen gets most of
+    them right.
+  - Dense charts (many series, values only readable from the axis, small text):
+    local 7B models misread or invent values noticeably more often. The 32B and
+    72B versions close much of the gap.
+  - Practical setup: run the local model by default and send an image to Claude
+    only when the local result contains "unreadable" or looks like a complex
+    chart. That keeps API cost low without giving up accuracy where it matters.
+
+  Whichever model you use, chart values can't be checked against the PDF's text
+  layer the way table values can. Keep marking them as coming from a vision
+  model so your numeric path can rank them lower than table values.
+
+✻ Cooked for 19s · done 9:27 PM
+
+※ recap: You're planning how to convert complex PDFs into accurate markdown for your RAG pipeline, and we just went over local vision models for describing charts. Next, pull qwen2.5vl:7b in Ollama and test it through Docling on a few of your PDFs. (disable recaps in /config)

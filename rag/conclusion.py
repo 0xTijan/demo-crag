@@ -25,9 +25,10 @@ def conclusion(prompt: str, sql):
     ]
 
     print("\nWriting conclusion...")
+    print("\n", messages)
 
     responseJson = ""
-    for part in client.chat(model, messages=messages, stream=True, format="json", options=options):
+    for part in client.chat(model, messages=messages, stream=True, format="markdown", options=options):
         print(part.message.content, end='', flush=True)
         responseJson += part.message.content
 

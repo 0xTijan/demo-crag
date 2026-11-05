@@ -12,3 +12,5 @@ Analyze the SQL results in the context of the user's question. Draw the most acc
 If the data supports a definitive answer, state it clearly and include relevant evidence. If the data is insufficient, ambiguous, or empty, explain what can and cannot be concluded without guessing.
 
 Return only the final answer to the user.
+
+Answer in Markdown and in human readable conclusion.
