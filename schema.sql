@@ -145,3 +145,37 @@ CREATE TABLE IF NOT EXISTS report_file_errors (
     traceback   TEXT,
     occurred_at TIMESTAMPTZ DEFAULT now()
 );
+
+-- ==========================
+-- 6. Downloaded report / announcement PDFs (dataPipeline/download)
+-- ==========================
+-- Website URLs are read from stocks.website_url through companies.isin.
+-- NOTE: `companies` is referenced here and by `reports`, but is only defined in sample_data.sql:
+--   companies(company_id SERIAL PRIMARY KEY, isin CHAR(12) REFERENCES stocks(isin), name TEXT NOT NULL, country TEXT)
+CREATE TABLE IF NOT EXISTS downloaded_files (
+    download_id   SERIAL PRIMARY KEY,
+    company_id    INT REFERENCES companies(company_id) ON DELETE CASCADE,
+    category      TEXT        NOT NULL CHECK (category IN ('reports','announcements','other')),
+    source_url    TEXT        NOT NULL,
+    page_url      TEXT,                              -- page the link was found on
+    link_text     TEXT,
+    file_path     TEXT        NOT NULL,              -- relative to reports/
+    file_hash     CHAR(64)    NOT NULL,              -- SHA-256 of the PDF bytes
+    file_size     BIGINT,
+    fiscal_year   INT,                               -- guessed from link text / URL
+    downloaded_at TIMESTAMPTZ DEFAULT now(),
+    UNIQUE (company_id, source_url)
+);
+CREATE INDEX IF NOT EXISTS downloaded_files_hash_idx ON downloaded_files (company_id, file_hash);
+
+CREATE TABLE IF NOT EXISTS download_errors (
+    error_id    SERIAL PRIMARY KEY,
+    company_id  INT REFERENCES companies(company_id) ON DELETE CASCADE,
+    url         TEXT,
+    stage       TEXT NOT NULL,  -- website | english_version | robots | crawl | render | head_check | download | verify | write | db | company
+    error       TEXT NOT NULL,
+    http_status INT,
+    traceback   TEXT,
+    occurred_at TIMESTAMPTZ DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (company_id, occurred_at DESC);
