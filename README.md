@@ -72,6 +72,8 @@ To be able to effectivly use the data in pdfs for RAG and easier (cheaper) proce
 
 **3.3 Save the Markdown** next to the raw PDF (`processed/{company_id}/{fiscal_year}/{report_type}.md`). This file is now the single working representation used by *both* remaining branches of the pipeline — numeric extraction (Step 4) and narrative indexing (Step 5) — so this conversion only has to happen once per report.
 
+**Change tracking.** `python dataPipeline/convert/docling.py` converts every PDF in `reports/` that is new or whose SHA-256 changed (same filename, new content included) and skips the rest (`--force` reconverts all). Each run is recorded in `report_files` (path, hash, markdown path, pages, tables, status), and every failure is also appended to `report_file_errors` with its stage and traceback. Needs `DATABASE_URL`.
+
 **3.4 Locate the financial statements inside the Markdown.** Search headings for multilingual keyword pairs (*balance sheet / bilanca stanja*, *income statement / izkaz poslovnega izida*, *cash flow statement / izkaz denarnih tokov*). If a report's formatting is unusual enough that this misses, fall back to embedding each page/section and semantically searching for "balance sheet showing total assets and liabilities" — the embedding infrastructure needed for this is the same one built in Step 5, so this fallback costs nothing extra to add.
 
 **Output of Step 3:** a Markdown file per report, with the financial-statement sections located and flagged.
