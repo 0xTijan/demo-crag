@@ -1,3 +1,4 @@
 reports/
 __pycache__/
-.env.claude/worktrees/
+.env
+.claude/worktrees/
