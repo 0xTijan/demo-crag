@@ -131,7 +131,6 @@ CREATE TABLE IF NOT EXISTS report_files (
     tables            INT,
     converter         TEXT        DEFAULT 'docling',
     converter_version TEXT,
-    error             TEXT,
     converted_at      TIMESTAMPTZ DEFAULT now(),
     UNIQUE (pdf_path, file_hash)
 );
