@@ -117,3 +117,31 @@ CREATE TABLE valuation_ratios (
     dividend_per_share NUMERIC(10,4),
     dividend_yield NUMERIC(10,4)
 );
+-- ==========================
+-- 5. Converted report PDFs (dataPipeline/convert/docling.py)
+-- ==========================
+CREATE TABLE IF NOT EXISTS report_files (
+    file_id           SERIAL PRIMARY KEY,
+    pdf_path          TEXT        NOT NULL,          -- relative to reports/
+    file_hash         CHAR(64)    NOT NULL,          -- SHA-256 of the PDF bytes
+    file_size         BIGINT,
+    markdown_path     TEXT,                          -- relative to repo root
+    status            TEXT        NOT NULL CHECK (status IN ('converted','failed')),
+    pages             INT,
+    tables            INT,
+    converter         TEXT        DEFAULT 'docling',
+    converter_version TEXT,
+    converted_at      TIMESTAMPTZ DEFAULT now(),
+    UNIQUE (pdf_path, file_hash)
+);
+CREATE INDEX IF NOT EXISTS report_files_path_idx ON report_files (pdf_path, converted_at DESC);
+
+CREATE TABLE IF NOT EXISTS report_file_errors (
+    error_id    SERIAL PRIMARY KEY,
+    pdf_path    TEXT NOT NULL,
+    file_hash   CHAR(64),
+    stage       TEXT NOT NULL,                       -- hash | convert | write | db
+    error       TEXT NOT NULL,
+    traceback   TEXT,
+    occurred_at TIMESTAMPTZ DEFAULT now()
+);
