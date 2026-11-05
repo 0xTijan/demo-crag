@@ -155,8 +155,8 @@ def checkDatabaseForData(prevResponse):
             sql_query = (
                 "SELECT COUNT(*) AS report_count "
                 "FROM reports r "
-                "JOIN companies c ON c.company_id = r.company_id "
-                f"WHERE c.name LIKE '%{company_value}%' "
+                "JOIN stocks s ON s.isin = r.stock_isin "
+                f"WHERE s.name LIKE '%{company_value}%' "
                 f"AND EXTRACT(YEAR FROM r.period_end) = {year_value}"
             )
 
