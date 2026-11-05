@@ -75,7 +75,7 @@ CREATE TABLE index_values (
 
 CREATE TABLE reports (
     report_id SERIAL PRIMARY KEY,
-    company_id INT REFERENCES companies(company_id) ON DELETE CASCADE,
+    stock_isin CHAR(12) NOT NULL REFERENCES stocks(isin) ON DELETE CASCADE,
     period_end DATE NOT NULL,
     period_type VARCHAR(10) CHECK (period_type IN ('Q1','Q2','Q3','Q4','1H','FY')),
     currency VARCHAR(10) DEFAULT 'EUR',

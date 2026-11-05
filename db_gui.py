@@ -138,16 +138,14 @@ with tab_stocks:
         with d2:
             fin = query("""SELECT r.period_end, r.period_type, r.source_file, f.revenue, f.ebitda, f.ebit, f.net_income,
                                   f.earnings_per_share AS eps, f.total_assets, f.total_equity, f.roe, f.roa
-                           FROM reports r JOIN companies c ON c.company_id=r.company_id
-                           JOIN financials f ON f.report_id=r.report_id
-                           WHERE c.isin=:i ORDER BY r.period_end DESC""", {"i": isin})
+                           FROM reports r JOIN financials f ON f.report_id=r.report_id
+                           WHERE r.stock_isin=:i ORDER BY r.period_end DESC""", {"i": isin})
             st.dataframe(fin, hide_index=True, width="stretch")
         with d3:
             val = query("""SELECT r.period_end, r.period_type, v.p_e, v.p_b, v.p_s, v.ev_s, v.net_debt_ebitda,
                                   v.dividend_per_share, v.dividend_yield
-                           FROM reports r JOIN companies c ON c.company_id=r.company_id
-                           JOIN valuation_ratios v ON v.report_id=r.report_id
-                           WHERE c.isin=:i ORDER BY r.period_end DESC""", {"i": isin})
+                           FROM reports r JOIN valuation_ratios v ON v.report_id=r.report_id
+                           WHERE r.stock_isin=:i ORDER BY r.period_end DESC""", {"i": isin})
             st.dataframe(val, hide_index=True, width="stretch")
         with d4:
             mem = query("""SELECT i.symbol AS index_symbol, i.name AS index_name, m.weight
@@ -198,16 +196,16 @@ with tab_fin:
         where.append(in_clause(ycol, years, "y", params))
     if f_q:
         params["q"] = f"%{f_q.lower()}%"
-        where.append("(LOWER(c.name) LIKE :q OR LOWER(s.symbol) LIKE :q)")
-    fdf = query(f"""SELECT s.symbol, c.name, r.period_end, r.period_type, r.currency, f.revenue, f.ebitda, f.ebit, f.net_income,
+        where.append("(LOWER(s.name) LIKE :q OR LOWER(s.symbol) LIKE :q)")
+    fdf = query(f"""SELECT s.symbol, s.name, r.period_end, r.period_type, r.currency, f.revenue, f.ebitda, f.ebit, f.net_income,
                            f.earnings_per_share AS eps, f.total_assets, f.total_equity, f.roe, f.roa,
                            f.liabilities_equity_ratio AS l_e_ratio, v.p_e, v.p_b, v.p_s, v.ev_s, v.net_debt_ebitda,
                            v.dividend_per_share AS dps, v.dividend_yield AS div_yield
                     FROM reports r
-                    JOIN companies c ON c.company_id=r.company_id JOIN stocks s ON s.isin=c.isin
+                    JOIN stocks s ON s.isin=r.stock_isin
                     JOIN financials f ON f.report_id=r.report_id
                     LEFT JOIN valuation_ratios v ON v.report_id=r.report_id
-                    WHERE {' AND '.join(where)} ORDER BY r.period_end DESC, c.name""", params)
+                    WHERE {' AND '.join(where)} ORDER BY r.period_end DESC, s.name""", params)
     st.caption(f"{len(fdf)} rows")
     st.dataframe(fdf, hide_index=True, width="stretch")
     st.download_button("Download CSV", fdf.to_csv(index=False), "financials.csv", "text/csv")
@@ -745,8 +743,8 @@ with tab_schema:
 EXAMPLES = {
     "(pick an example)": "",
     "Top 10 stocks by market cap": "SELECT symbol, name, last_price, quantity, last_price*quantity AS mcap\nFROM stocks ORDER BY mcap DESC LIMIT 10;",
-    "Highest ROE (FY 2025)": "SELECT s.symbol, c.name, f.roe\nFROM financials f JOIN reports r ON r.report_id=f.report_id\nJOIN companies c ON c.company_id=r.company_id JOIN stocks s ON s.isin=c.isin\nWHERE r.period_type='FY' AND r.period_end='2025-12-31' ORDER BY f.roe DESC LIMIT 10;",
-    "Average P/E per sector": "SELECT s.sector_name, ROUND(AVG(v.p_e),2) AS avg_pe\nFROM valuation_ratios v JOIN reports r ON r.report_id=v.report_id\nJOIN companies c ON c.company_id=r.company_id JOIN stocks s ON s.isin=c.isin\nWHERE r.period_type='FY' GROUP BY s.sector_name ORDER BY avg_pe;",
+    "Highest ROE (FY 2025)": "SELECT s.symbol, s.name, f.roe\nFROM financials f JOIN reports r ON r.report_id=f.report_id\nJOIN stocks s ON s.isin=r.stock_isin\nWHERE r.period_type='FY' AND r.period_end='2025-12-31' ORDER BY f.roe DESC LIMIT 10;",
+    "Average P/E per sector": "SELECT s.sector_name, ROUND(AVG(v.p_e),2) AS avg_pe\nFROM valuation_ratios v JOIN reports r ON r.report_id=v.report_id\nJOIN stocks s ON s.isin=r.stock_isin\nWHERE r.period_type='FY' GROUP BY s.sector_name ORDER BY avg_pe;",
     "Index weights": "SELECT i.symbol AS idx, s.symbol, m.weight FROM index_members m\nJOIN indexes i ON i.isin=m.index_isin JOIN stocks s ON s.isin=m.stock_isin\nORDER BY i.symbol, m.weight DESC;",
 }
 with tab_sql:
