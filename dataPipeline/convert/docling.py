@@ -45,7 +45,9 @@ OCR_EMPTY_MARKER = "returned empty result"  # RapidOCR log text (hint only)
 FALLBACK_PROMPT = (
     "Transcribe this page of a financial report into Markdown. Keep headings, "
     "paragraphs and lists. Render every table as a Markdown table, preserving all "
-    "rows, columns and numbers exactly as printed. Do not summarise, translate or "
+    "rows, columns and numbers exactly as printed. When a cell spans several rows or "
+    "columns, repeat that cell's text in every row and column it covers (Markdown "
+    "has no merged cells). Do not summarise, translate or "
     "invent anything. Write [unreadable] where text cannot be read. "
     "Output only the Markdown."
 )
