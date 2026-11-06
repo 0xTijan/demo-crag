@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS report_files (
     status            TEXT        NOT NULL CHECK (status IN ('converted','failed')),
     pages             INT,
     tables            INT,
-    converter         TEXT        NOT NULL DEFAULT 'docling',  -- docling | pdfplumber | llamaparse
+    converter         TEXT        NOT NULL DEFAULT 'docling',  -- docling | pdfplumber
     converter_version TEXT,
     error             TEXT,                          -- "<stage>: <message>" when failed
     ocr_fallback_pages INT,                          -- pages re-read by the vision model
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS report_file_errors (
     error_id    SERIAL PRIMARY KEY,
     pdf_path    TEXT NOT NULL,
     file_hash   CHAR(64),
-    stage       TEXT NOT NULL,                       -- hash | convert | write | db | ruled_tables | ocr_fallback | llamaparse_page
+    stage       TEXT NOT NULL,                       -- hash | convert | write | db | ruled_tables | ocr_fallback
     error       TEXT NOT NULL,
     traceback   TEXT,
     occurred_at TIMESTAMPTZ DEFAULT now(),

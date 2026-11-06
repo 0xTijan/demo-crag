@@ -72,19 +72,18 @@ To be able to effectivly use the data in pdfs for RAG and easier (cheaper) proce
 
 **3.3 Save the Markdown** next to the raw PDF (`processed/{company_id}/{fiscal_year}/{report_type}.md`). This file is now the single working representation used by *both* remaining branches of the pipeline — numeric extraction (Step 4) and narrative indexing (Step 5) — so this conversion only has to happen once per report.
 
-**Three pipelines.** All three convert every PDF in `reports/` that is new or whose SHA-256 changed (same filename, new content included), skip the rest (`--force` reconverts all), write Markdown with a `<!-- page: N -->` marker per page, and record each run in `report_files` (keyed by path + hash + `converter`, so each pipeline tracks its own conversions). Every failure is appended to `report_file_errors` with its stage, traceback and converter. Shared code: `dataPipeline/convert/common.py`. Needs `DATABASE_URL`.
+**Two pipelines.** Both convert every PDF in `reports/` that is new or whose SHA-256 changed (same filename, new content included), skip the rest (`--force` reconverts all), write Markdown with a `<!-- page: N -->` marker per page, and record each run in `report_files` (keyed by path + hash + `converter`, so each pipeline tracks its own conversions). Every failure is appended to `report_file_errors` with its stage, traceback and converter. Shared code: `dataPipeline/convert/common.py`. Needs `DATABASE_URL`.
 
 | Pipeline | Command | Output | How |
 |---|---|---|---|
 | Docling | `python dataPipeline/convert/docling.py` | `markdowns/` | Docling layout + OCR + TableFormer; ruled tables replaced by exact ones from the PDF (below) |
 | pdfplumber | `python dataPipeline/convert/pdfplumber_pipeline.py` | `markdowns_pdfplumber/` | No ML: ruled tables from PDF lines, whitespace-aligned tables, column-aware text, headers/footers removed |
-| LlamaParse | `LLAMA_CLOUD_API_KEY=... python dataPipeline/convert/llamaparse_pipeline.py` | `markdowns_llamaparse/` | LlamaCloud API (uploads the PDF, costs credits); tables requested as HTML so merged cells survive. Tier in `config.json` → `llamaParse` |
 
 **Exact tables.** `dataPipeline/convert/ruled_tables.py` rebuilds every table drawn with lines from the PDF's own vector graphics and text layer (used by the Docling and pdfplumber pipelines). Invisible frames are ignored, merged cells are repeated in every row/column they cover, a table nested inside a cell is folded into that cell (one line per nested row), rows of framed boxes become one table, and key/value blocks drawn with horizontal rules only are detected. Scanned pages and unruled tables keep Docling's result.
 
 **Vision-OCR fallback.** In the Docling and pdfplumber pipelines (`dataPipeline/convert/vision_ocr.py`), any page with fewer than `OCR_FALLBACK_MIN_PAGE_CHARS` (default 100) characters of extracted text is re-read by a local vision model through Ollama (`ocrFallbackModel` in `config.json`, default `qwen2.5vl:7b`). In the pdfplumber pipeline this is the only OCR, so scanned PDFs always use it. If Ollama is unavailable the file still converts and the failure is logged in `report_file_errors` (stage `ocr_fallback`).
 
-Dependencies: `docling`, `pdfplumber`, `sqlalchemy`, `psycopg2`, `python-dotenv`, `ollama` (fallback), `llama-cloud>=1.0` (LlamaParse pipeline).
+Dependencies: `docling`, `pdfplumber`, `sqlalchemy`, `psycopg2`, `python-dotenv`, `ollama` (fallback).
 
 **3.4 Locate the financial statements inside the Markdown.** Search headings for multilingual keyword pairs (*balance sheet / bilanca stanja*, *income statement / izkaz poslovnega izida*, *cash flow statement / izkaz denarnih tokov*). If a report's formatting is unusual enough that this misses, fall back to embedding each page/section and semantically searching for "balance sheet showing total assets and liabilities" — the embedding infrastructure needed for this is the same one built in Step 5, so this fallback costs nothing extra to add.
 

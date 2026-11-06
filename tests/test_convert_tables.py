@@ -10,7 +10,6 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from dataPipeline.convert import ruled_tables  # noqa: E402
-from dataPipeline.convert.llamaparse_pipeline import html_tables_to_markdown  # noqa: E402
 
 
 def test_gutter_boundaries_are_merged():
@@ -51,19 +50,6 @@ def test_plain_column_span_is_kept():
     grid = [[0, 0], [1, 2], [3, 4]]
     rows = ruled_tables._fill(ruled_tables._flatten_nested(grid, texts), texts)
     assert rows == [["Group", "Group"], ["A", "B"], ["1", "2"]]
-
-
-def test_html_tables_spans_and_nested():
-    html = ("<table><tr><th>Item</th><th>Spec</th></tr>"
-            "<tr><td>A</td><td rowspan='2'>Same</td></tr>"
-            "<tr><td>B<table><tr><th>Step</th></tr><tr><td>1</td></tr></table></td></tr>"
-            "<tr><td colspan='2'>Wide</td></tr></table>")
-    md, count = html_tables_to_markdown("x\n" + html + "\ny")
-    assert count == 1
-    assert "| A | Same |" in md
-    assert "| B Step: 1 | Same |" in md
-    assert "| Wide | Wide |" in md
-    assert md.startswith("x\n") and md.endswith("\ny")
 
 
 def test_rows_to_markdown_escapes_pipes():
