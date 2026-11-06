@@ -31,14 +31,8 @@ CREATE TABLE index_values (
     open_value NUMERIC(10, 2), high_value NUMERIC(10, 2), low_value NUMERIC(10, 2), last_value NUMERIC(10, 2),
     change_prev_close_percentage NUMERIC(6, 2), turnover NUMERIC(20, 2), CONSTRAINT unique_index_date UNIQUE (index_isin, date)
 );
-CREATE TABLE companies (
-    company_id SERIAL PRIMARY KEY,
-    isin CHAR(12) REFERENCES stocks(isin) ON DELETE CASCADE,
-    name TEXT NOT NULL,
-    country TEXT
-);
 CREATE TABLE reports (
-    report_id SERIAL PRIMARY KEY, company_id INT REFERENCES companies(company_id) ON DELETE CASCADE,
+    report_id SERIAL PRIMARY KEY, stock_isin CHAR(12) NOT NULL REFERENCES stocks(isin) ON DELETE CASCADE,
     period_end DATE NOT NULL, period_type VARCHAR(10) CHECK (period_type IN ('Q1','Q2','Q3','Q4','1H','FY')),
     currency VARCHAR(10) DEFAULT 'EUR', source_type VARCHAR(20) CHECK (source_type IN ('Slovenia','Croatia','Austria','Other')),
     source_file TEXT
@@ -74,9 +68,9 @@ symbol,name,period_end,period_type,currency,revenue,ebitda,ebit,net_income,eps,t
    a specific year, filter on financials.period_end falling in that year and
    prefer is_comparative = FALSE. Only fall back to comparative rows if no
    own-period row exists, and say so in "assumptions".
-6. Match companies by the resolved IDs when provided ({{company_candidates}}).
+6. Match companies by the resolved ISINs when provided ({{company_candidates}}).
    If no ID is provided, match with:
-   companies.name ILIKE '%COMPANY_NAME%' OR '...' ILIKE ANY(companies.name_aliases).
+   stocks.name ILIKE '%COMPANY_NAME%' (join stocks ON stocks.isin = reports.stock_isin).
    Never guess a company ID, or complete it yourself!
 7. Do not silently convert currencies. If the question compares companies
    with different currencies, return currency as its own column and note
@@ -106,12 +100,12 @@ not in the allowed list, or is not numeric), return:
 EXAMPLES:
 Question: "Did Petrolina's profit increase in fiscal year 2025?"
 Response:
-{"sql":"SELECT c.name AS company_name, EXTRACT(YEAR FROM r.period_end)::INTEGER AS fiscal_year, r.period_type AS report_type, 'net_income' AS metric_name, f.net_income AS value, r.currency AS currency, r.period_end AS period_end, NULL::BOOLEAN AS is_comparative, r.report_id AS report_id, NULL::TEXT AS page_reference FROM reports AS r JOIN financials AS f ON r.report_id = f.report_id JOIN companies AS c ON r.company_id = c.company_id WHERE c.name ILIKE '%Petrolina%' AND r.period_end >= DATE '2024-01-01' AND r.period_end < DATE '2026-01-01' AND r.period_type = 'FY' ORDER BY r.period_end ASC LIMIT 200;","cannot_answer": false}
+{"sql":"SELECT c.name AS company_name, EXTRACT(YEAR FROM r.period_end)::INTEGER AS fiscal_year, r.period_type AS report_type, 'net_income' AS metric_name, f.net_income AS value, r.currency AS currency, r.period_end AS period_end, NULL::BOOLEAN AS is_comparative, r.report_id AS report_id, NULL::TEXT AS page_reference FROM reports AS r JOIN financials AS f ON r.report_id = f.report_id JOIN stocks AS c ON r.stock_isin = c.isin WHERE c.name ILIKE '%Petrolina%' AND r.period_end >= DATE '2024-01-01' AND r.period_end < DATE '2026-01-01' AND r.period_type = 'FY' ORDER BY r.period_end ASC LIMIT 200;","cannot_answer": false}
 
 Question: How much total assets does Telekom Dolenjska have as of the most recent available report?
 Response:
-{"sql": "SELECT companies.name AS company_name, 'FY2025' AS fiscal_year, '1H' AS report_type, 'total_assets' AS metric_name, financials.total_assets AS value, reports.currency AS currency, reports.period_end AS period_end, FALSE AS is_comparative, financials.report_id, 'report' AS page_reference FROM financials JOIN reports ON financials.report_id = reports.report_id JOIN companies ON reports.company_id = companies.company_id WHERE companies.name ILIKE '%Telekom%Dolenjska%' AND reports.period_end = DATE '2025-12-31' LIMIT 200;", "cannot_answer": false}
+{"sql": "SELECT stocks.name AS company_name, 'FY2025' AS fiscal_year, '1H' AS report_type, 'total_assets' AS metric_name, financials.total_assets AS value, reports.currency AS currency, reports.period_end AS period_end, FALSE AS is_comparative, financials.report_id, 'report' AS page_reference FROM financials JOIN reports ON financials.report_id = reports.report_id JOIN stocks ON reports.stock_isin = stocks.isin WHERE stocks.name ILIKE '%Telekom%Dolenjska%' AND reports.period_end = DATE '2025-12-31' LIMIT 200;", "cannot_answer": false}
 
 Questions: What was Mercator's revenue in 2023?
 Response:
-{"sql": SELECT c.name AS company_name, '2023' AS fiscal_year, 'revenue' AS metric_name, f.revenue AS value, r.currency AS currency, r.period_end AS period_end, FALSE AS is_comparative, r.report_id, 'report' AS page_reference FROM reports AS r JOIN financials AS f ON r.report_id = f.report_id JOIN companies AS c ON r.company_id = c.company_id WHERE c.name ILIKE '%Mercator%' AND r.period_end >= DATE '2023-01-01' AND r.period_end < DATE '2024-01-01' AND r.period_type = 'FY' LIMIT 200;", "cannot_answer": false}
+{"sql": SELECT c.name AS company_name, '2023' AS fiscal_year, 'revenue' AS metric_name, f.revenue AS value, r.currency AS currency, r.period_end AS period_end, FALSE AS is_comparative, r.report_id, 'report' AS page_reference FROM reports AS r JOIN financials AS f ON r.report_id = f.report_id JOIN stocks AS c ON r.stock_isin = c.isin WHERE c.name ILIKE '%Mercator%' AND r.period_end >= DATE '2023-01-01' AND r.period_end < DATE '2024-01-01' AND r.period_type = 'FY' LIMIT 200;", "cannot_answer": false}

@@ -2,3 +2,4 @@ reports/
 __pycache__/
 .env
 .claude/worktrees/
+markdowns/

@@ -75,7 +75,7 @@ CREATE TABLE index_values (
 
 CREATE TABLE reports (
     report_id SERIAL PRIMARY KEY,
-    company_id INT REFERENCES companies(company_id) ON DELETE CASCADE,
+    stock_isin CHAR(12) NOT NULL REFERENCES stocks(isin) ON DELETE CASCADE,
     period_end DATE NOT NULL,
     period_type VARCHAR(10) CHECK (period_type IN ('Q1','Q2','Q3','Q4','1H','FY')),
     currency VARCHAR(10) DEFAULT 'EUR',
@@ -129,10 +129,14 @@ CREATE TABLE IF NOT EXISTS report_files (
     status            TEXT        NOT NULL CHECK (status IN ('converted','failed')),
     pages             INT,
     tables            INT,
-    converter         TEXT        DEFAULT 'docling',
+    converter         TEXT        NOT NULL DEFAULT 'docling',  -- docling
     converter_version TEXT,
+    error             TEXT,                          -- "<stage>: <message>" when failed
+    ocr_fallback_pages INT,                          -- pages re-read by the vision model
+    ocr_fallback_model TEXT,                         -- e.g. qwen2.5vl:7b
+    ocr_empty_events  INT,                           -- RapidOCR 'empty result' log count (hint)
     converted_at      TIMESTAMPTZ DEFAULT now(),
-    UNIQUE (pdf_path, file_hash)
+    UNIQUE (pdf_path, file_hash, converter)          -- each pipeline tracks its own conversions
 );
 CREATE INDEX IF NOT EXISTS report_files_path_idx ON report_files (pdf_path, converted_at DESC);
 
@@ -140,10 +144,11 @@ CREATE TABLE IF NOT EXISTS report_file_errors (
     error_id    SERIAL PRIMARY KEY,
     pdf_path    TEXT NOT NULL,
     file_hash   CHAR(64),
-    stage       TEXT NOT NULL,                       -- hash | convert | write | db
+    stage       TEXT NOT NULL,                       -- hash | convert | write | db | ruled_tables | ocr_fallback
     error       TEXT NOT NULL,
     traceback   TEXT,
-    occurred_at TIMESTAMPTZ DEFAULT now()
+    occurred_at TIMESTAMPTZ DEFAULT now(),
+    converter   TEXT                                 -- pipeline that hit the error
 );
 
 -- ==========================
