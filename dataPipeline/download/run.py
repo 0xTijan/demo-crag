@@ -1,10 +1,10 @@
 """Download financial reports and announcements (PDF) for every company in the database.
 
     python -m dataPipeline.download.run                   # all companies
-    python -m dataPipeline.download.run --company-id 3 7  # selected companies
+    python -m dataPipeline.download.run --isin SI0031104332  # selected companies
     python -m dataPipeline.download.run --dry-run         # list PDFs, download nothing
 
-Website URLs come from `stocks.website_url` (joined via `companies.isin`).
+Companies are the rows of `stocks`; the website is `stocks.website_url`.
 Files go to reports/{company}/{reports|announcements|other}/. Every download is
 recorded in `downloaded_files` and every failure in `download_errors`.
 """
@@ -25,7 +25,7 @@ from .settings import REPORTS_DIR  # noqa: E402
 
 def process_company(engine, fetcher, company, args) -> dict:
     stats = {"found": 0, "downloaded": 0, "skipped": 0, "duplicates": 0, "failed": 0}
-    log_error = db.ErrorLog(engine, company["company_id"])
+    log_error = db.ErrorLog(engine, company["isin"])
     url = (company.get("website_url") or "").strip()
     if not url:
         log_error("website", "company has no website_url in stocks")
@@ -43,7 +43,7 @@ def process_company(engine, fetcher, company, args) -> dict:
 
     pdfs = [p for p in result.pdfs.values() if wanted(p)]
     stats["found"] = len(pdfs)
-    known_urls, known_hashes = db.known_downloads(engine, company["company_id"])
+    known_urls, known_hashes = db.known_downloads(engine, company["isin"])
     company_dir = REPORTS_DIR / slugify(company["name"])
 
     for pdf in pdfs:
@@ -63,7 +63,7 @@ def process_company(engine, fetcher, company, args) -> dict:
             continue
         try:
             db.record_download(engine, {
-                "company_id": company["company_id"], "category": category, "source_url": pdf.url,
+                "stock_isin": company["isin"], "category": category, "source_url": pdf.url,
                 "page_url": pdf.page_url, "link_text": pdf.text[:500], **{
                     k: info[k] for k in ("file_path", "file_hash", "file_size", "fiscal_year")},
             })
@@ -81,7 +81,7 @@ def process_company(engine, fetcher, company, args) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--company-id", type=int, nargs="+", help="only these company_id values")
+    parser.add_argument("--isin", nargs="+", help="only these ISINs")
     parser.add_argument("--limit", type=int, help="process at most N companies")
     parser.add_argument("--max-pages", type=int, default=150, help="pages crawled per site (default 150)")
     parser.add_argument("--max-depth", type=int, default=3, help="link depth from the homepage (default 3)")
@@ -93,7 +93,7 @@ def main() -> int:
 
     engine = db.get_engine()
     db.ensure_tables(engine)
-    companies = db.load_companies(engine, args.company_id, args.limit)
+    companies = db.load_companies(engine, args.isin, args.limit)
     if not companies:
         print("No companies found.")
         return 1
@@ -107,7 +107,7 @@ def main() -> int:
             try:
                 stats = process_company(engine, fetcher, company, args)
             except Exception as exc:  # noqa: BLE001 - one bad site must not stop the run
-                db.ErrorLog(engine, company["company_id"])("company", exc, url=company.get("website_url"))
+                db.ErrorLog(engine, company["isin"])("company", exc, url=company.get("website_url"))
                 continue
             print("    " + ", ".join(f"{k}: {v}" for k, v in stats.items()))
             for key in totals:

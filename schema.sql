@@ -154,12 +154,10 @@ CREATE TABLE IF NOT EXISTS report_file_errors (
 -- ==========================
 -- 6. Downloaded report / announcement PDFs (dataPipeline/download)
 -- ==========================
--- Website URLs are read from stocks.website_url through companies.isin.
--- NOTE: `companies` is referenced here and by `reports`, but is only defined in sample_data.sql:
---   companies(company_id SERIAL PRIMARY KEY, isin CHAR(12) REFERENCES stocks(isin), name TEXT NOT NULL, country TEXT)
+-- Companies are the rows of `stocks`; the website to crawl is stocks.website_url.
 CREATE TABLE IF NOT EXISTS downloaded_files (
     download_id   SERIAL PRIMARY KEY,
-    company_id    INT REFERENCES companies(company_id) ON DELETE CASCADE,
+    stock_isin    CHAR(12) NOT NULL REFERENCES stocks(isin) ON DELETE CASCADE,
     category      TEXT        NOT NULL CHECK (category IN ('reports','announcements','other')),
     source_url    TEXT        NOT NULL,
     page_url      TEXT,                              -- page the link was found on
@@ -169,13 +167,13 @@ CREATE TABLE IF NOT EXISTS downloaded_files (
     file_size     BIGINT,
     fiscal_year   INT,                               -- guessed from link text / URL
     downloaded_at TIMESTAMPTZ DEFAULT now(),
-    UNIQUE (company_id, source_url)
+    UNIQUE (stock_isin, source_url)
 );
-CREATE INDEX IF NOT EXISTS downloaded_files_hash_idx ON downloaded_files (company_id, file_hash);
+CREATE INDEX IF NOT EXISTS downloaded_files_hash_idx ON downloaded_files (stock_isin, file_hash);
 
 CREATE TABLE IF NOT EXISTS download_errors (
     error_id    SERIAL PRIMARY KEY,
-    company_id  INT REFERENCES companies(company_id) ON DELETE CASCADE,
+    stock_isin  CHAR(12) REFERENCES stocks(isin) ON DELETE CASCADE,
     url         TEXT,
     stage       TEXT NOT NULL,  -- website | english_version | robots | crawl | render | head_check | download | verify | write | db | company
     error       TEXT NOT NULL,
@@ -183,4 +181,4 @@ CREATE TABLE IF NOT EXISTS download_errors (
     traceback   TEXT,
     occurred_at TIMESTAMPTZ DEFAULT now()
 );
-CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (company_id, occurred_at DESC);
+CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (stock_isin, occurred_at DESC);

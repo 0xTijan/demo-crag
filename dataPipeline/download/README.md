@@ -8,7 +8,7 @@ pip install httpx beautifulsoup4 playwright sqlalchemy psycopg2-binary python-do
 python -m playwright install chromium   # optional: falls back to PLAYWRIGHT_CHROMIUM_PATH
 
 python -m dataPipeline.download.run                    # all companies
-python -m dataPipeline.download.run --company-id 3 7   # selected companies
+python -m dataPipeline.download.run --isin SI0031104332   # selected companies
 python -m dataPipeline.download.run --dry-run          # list what would be downloaded
 ```
 
@@ -18,7 +18,7 @@ Env: `DATABASE_URL`, `CRAWLER_DELAY` (seconds per host, default 1), `CRAWLER_USE
 
 ## How it works
 
-1. **Input:** `companies JOIN stocks ON isin` → `stocks.website_url`.
+1. **Input:** every row of `stocks` → `stocks.website_url`.
 2. **English version:** `<link hreflang="en">` → `<html lang="en">` → language-switcher link
    → probing `/en/`, `/eng/`, `/en-gb/`. If none exists, the default language is crawled and an
    `english_version` row is logged. Pages under other language prefixes (`/sl/`, `/hr/`, `?lang=de`, …) are skipped.
@@ -39,7 +39,7 @@ Env: `DATABASE_URL`, `CRAWLER_DELAY` (seconds per host, default 1), `CRAWLER_USE
 
 ```sql
 SELECT stage, count(*) FROM download_errors GROUP BY stage;          -- what is failing
-SELECT * FROM download_errors WHERE company_id = 3 ORDER BY occurred_at DESC;
+SELECT * FROM download_errors WHERE stock_isin = 'SI0031104332' ORDER BY occurred_at DESC;
 ```
 
 ## Known limits

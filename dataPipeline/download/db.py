@@ -1,7 +1,6 @@
 """Database access for the PDF download step.
 
-Companies and their website URLs are read from `companies` joined to `stocks`
-(`stocks.website_url`). Two tables are owned by this step:
+Companies are rows of `stocks` (keyed by ISIN); their website is `stocks.website_url`. Two tables are owned by this step:
   * `downloaded_files`: one row per downloaded source URL. It deduplicates
     reruns, both by URL and by SHA-256 of the content.
   * `download_errors`: one row per failure, with the stage it failed at.
@@ -17,7 +16,7 @@ DDL = [
     """
     CREATE TABLE IF NOT EXISTS downloaded_files (
         download_id   SERIAL PRIMARY KEY,
-        company_id    INT REFERENCES companies(company_id) ON DELETE CASCADE,
+        stock_isin    CHAR(12) NOT NULL REFERENCES stocks(isin) ON DELETE CASCADE,
         category      TEXT        NOT NULL CHECK (category IN ('reports','announcements','other')),
         source_url    TEXT        NOT NULL,
         page_url      TEXT,
@@ -27,14 +26,14 @@ DDL = [
         file_size     BIGINT,
         fiscal_year   INT,
         downloaded_at TIMESTAMPTZ DEFAULT now(),
-        UNIQUE (company_id, source_url)
+        UNIQUE (stock_isin, source_url)
     )
     """,
-    "CREATE INDEX IF NOT EXISTS downloaded_files_hash_idx ON downloaded_files (company_id, file_hash)",
+    "CREATE INDEX IF NOT EXISTS downloaded_files_hash_idx ON downloaded_files (stock_isin, file_hash)",
     """
     CREATE TABLE IF NOT EXISTS download_errors (
         error_id    SERIAL PRIMARY KEY,
-        company_id  INT REFERENCES companies(company_id) ON DELETE CASCADE,
+        stock_isin  CHAR(12) REFERENCES stocks(isin) ON DELETE CASCADE,
         url         TEXT,
         stage       TEXT NOT NULL,
         error       TEXT NOT NULL,
@@ -43,7 +42,7 @@ DDL = [
         occurred_at TIMESTAMPTZ DEFAULT now()
     )
     """,
-    "CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (company_id, occurred_at DESC)",
+    "CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (stock_isin, occurred_at DESC)",
 ]
 
 
@@ -57,17 +56,13 @@ def ensure_tables(engine) -> None:
             conn.execute(text(stmt))
 
 
-def load_companies(engine, company_ids=None, limit=None) -> list[dict]:
-    sql = """
-        SELECT c.company_id, c.name, s.website_url
-        FROM companies c
-        LEFT JOIN stocks s ON s.isin = c.isin
-    """
+def load_companies(engine, isins=None, limit=None) -> list[dict]:
+    sql = "SELECT isin, name, website_url FROM stocks"
     params = {}
-    if company_ids:
-        sql += " WHERE c.company_id = ANY(:ids)"
-        params["ids"] = list(company_ids)
-    sql += " ORDER BY c.company_id"
+    if isins:
+        sql += " WHERE isin = ANY(:isins)"
+        params["isins"] = [i.upper() for i in isins]
+    sql += " ORDER BY isin"
     if limit:
         sql += " LIMIT :limit"
         params["limit"] = limit
@@ -75,12 +70,12 @@ def load_companies(engine, company_ids=None, limit=None) -> list[dict]:
         return [dict(r._mapping) for r in conn.execute(text(sql), params)]
 
 
-def known_downloads(engine, company_id: int) -> tuple[dict, dict]:
+def known_downloads(engine, stock_isin: str) -> tuple[dict, dict]:
     """Return ({source_url: file_path}, {file_hash: file_path}) for a company."""
     with engine.connect() as conn:
         rows = conn.execute(
-            text("SELECT source_url, file_hash, file_path FROM downloaded_files WHERE company_id = :c"),
-            {"c": company_id},
+            text("SELECT source_url, file_hash, file_path FROM downloaded_files WHERE stock_isin = :c"),
+            {"c": stock_isin},
         ).all()
     return {r.source_url: r.file_path for r in rows}, {r.file_hash: r.file_path for r in rows}
 
@@ -91,11 +86,11 @@ def record_download(engine, row: dict) -> None:
             text(
                 """
                 INSERT INTO downloaded_files
-                    (company_id, category, source_url, page_url, link_text,
+                    (stock_isin, category, source_url, page_url, link_text,
                      file_path, file_hash, file_size, fiscal_year)
-                VALUES (:company_id, :category, :source_url, :page_url, :link_text,
+                VALUES (:stock_isin, :category, :source_url, :page_url, :link_text,
                         :file_path, :file_hash, :file_size, :fiscal_year)
-                ON CONFLICT (company_id, source_url) DO UPDATE SET
+                ON CONFLICT (stock_isin, source_url) DO UPDATE SET
                     category = EXCLUDED.category, page_url = EXCLUDED.page_url,
                     link_text = EXCLUDED.link_text, file_path = EXCLUDED.file_path,
                     file_hash = EXCLUDED.file_hash, file_size = EXCLUDED.file_size,
@@ -109,9 +104,9 @@ def record_download(engine, row: dict) -> None:
 class ErrorLog:
     """Writes failures to `download_errors`. It never raises."""
 
-    def __init__(self, engine, company_id=None):
+    def __init__(self, engine, stock_isin=None):
         self.engine = engine
-        self.company_id = company_id
+        self.stock_isin = stock_isin
         self.count = 0
 
     def __call__(self, stage: str, error, url: str | None = None, http_status: int | None = None) -> None:
@@ -126,10 +121,10 @@ class ErrorLog:
             with self.engine.begin() as conn:
                 conn.execute(
                     text(
-                        "INSERT INTO download_errors (company_id, url, stage, error, http_status, traceback) "
+                        "INSERT INTO download_errors (stock_isin, url, stage, error, http_status, traceback) "
                         "VALUES (:c, :u, :s, :e, :h, :t)"
                     ),
-                    {"c": self.company_id, "u": url, "s": stage, "e": message[:4000],
+                    {"c": self.stock_isin, "u": url, "s": stage, "e": message[:4000],
                      "h": http_status, "t": trace},
                 )
         except Exception as db_exc:  # noqa: BLE001
