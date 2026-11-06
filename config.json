@@ -14,5 +14,9 @@
     "ocrFallbackModel": {
         "model": "qwen2.5vl:7b",
         "temperature": 0
+    },
+    "llamaParse": {
+        "tier": "agentic",
+        "version": "latest"
     }
 }
