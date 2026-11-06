@@ -10,5 +10,9 @@
     "conclusionGeneratorModel": {
         "model": "gemma3:4b",
         "temperature": 0.3
+    },
+    "ocrFallbackModel": {
+        "model": "qwen2.5vl:7b",
+        "temperature": 0
     }
 }
