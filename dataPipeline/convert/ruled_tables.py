@@ -48,6 +48,13 @@ FINDER_SETTINGS = {
 }
 
 
+# A group of drawn cells is only a ruled table if its cells contain (almost) all
+# the text inside its area. Otherwise the lines are decoration (e.g. a dotted
+# frame highlighting one column of an unruled table, plus section rules) and the
+# table is left to Docling.
+MIN_TEXT_IN_CELLS = 0.98
+
+
 @dataclass
 class ExtractedTable:
     page_no: int                                  # 1-based
@@ -422,6 +429,17 @@ def _rules_to_table(page, chain, page_no):
     bounds = [x0] + cols + [x1]
     bands = [(ys[0] - spacing, ys[0])] + list(zip(ys, ys[1:]))
     chars = page.chars
+
+    def text_lines(top, bottom):
+        """Number of distinct text lines in a band (tops more than 2 pt apart)."""
+        tops = sorted({round(c["top"], 1) for c in chars
+                       if x0 <= (c["x0"] + c["x1"]) / 2 <= x1 and top < (c["top"] + c["bottom"]) / 2 <= bottom})
+        return sum(1 for i, t in enumerate(tops) if i == 0 or t - tops[i - 1] > 2)
+
+    # a key/value form has exactly one text line per band; several lines per band
+    # means the rules are section separators of some other layout
+    if any(text_lines(top, bottom) > 1 for top, bottom in zip(ys, ys[1:])):
+        return None
     rows = []
     for top, bottom in bands:
         row = []
@@ -434,6 +452,19 @@ def _rules_to_table(page, chain, page_no):
         top_y = ys[0]
     else:
         top_y = ys[0] - spacing
+
+    # Fragment check: if the text line just above the table has words in two or
+    # more of its columns, the table continues upward without rules (only its
+    # last rows are ruled) -> not a complete table, leave it to Docling.
+    above = [c for c in chars if x0 <= (c["x0"] + c["x1"]) / 2 <= x1 and c["bottom"] <= top_y + 1]
+    if above:
+        last_bottom = max(c["bottom"] for c in above)
+        if top_y - last_bottom <= spacing:
+            line = [c for c in above if last_bottom - c["bottom"] <= 2]
+            cols_hit = {next(k for k, (a, b) in enumerate(zip(bounds, bounds[1:])) if a <= (c["x0"] + c["x1"]) / 2 < b or k == len(bounds) - 2)
+                        for c in line}
+            if len(cols_hit) >= 2:
+                return None
     if len(rows) < 2 or len(rows[0]) < 2:
         return None
     return ExtractedTable(page_no, (x0, top_y, x1, ys[-1]), rows, "rules")
@@ -460,6 +491,11 @@ def extract_tables(pdf_path) -> list[ExtractedTable]:
                          if gx0 <= (ch["x0"] + ch["x1"]) / 2 <= gx1 and gt <= (ch["top"] + ch["bottom"]) / 2 <= gb]
                 if not chars:
                     continue  # drawing / decoration
+                in_cells = sum(1 for ch in chars if any(
+                    c[0] <= (ch["x0"] + ch["x1"]) / 2 <= c[2] and c[1] <= (ch["top"] + ch["bottom"]) / 2 <= c[3]
+                    for c in cells))
+                if in_cells < MIN_TEXT_IN_CELLS * len(chars):
+                    continue  # lines do not enclose the text: not a ruled table
                 grid, texts = _build_grid(cells, chars)
                 if grid is None:
                     continue

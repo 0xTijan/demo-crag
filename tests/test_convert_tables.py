@@ -71,6 +71,43 @@ def test_rows_to_markdown_escapes_pipes():
     assert md.splitlines()[0] == "| a\\|b | c |"
 
 
+class _FakePage:
+    """Just enough of a pdfplumber page for _rule_tables(): edges and chars."""
+
+    def __init__(self, rules, words):
+        self.edges = [{"orientation": "h", "top": y, "x0": a, "x1": b} for y, segs in rules for a, b in segs]
+        self.chars = []
+        for x, top, text in words:  # one fake char per word is enough for the checks
+            self.chars.append({"x0": x, "x1": x + 6 * len(text), "top": top, "bottom": top + 8,
+                               "text": text, "upright": True, "doctop": top, "size": 8,
+                               "fontname": "F", "adv": 6})
+
+
+def _form_rules(ys):
+    # rules split at x=185 (the column split of a key/value form)
+    return [(y, [(100, 185), (185, 500)]) for y in ys]
+
+
+def test_rules_form_is_detected():
+    words = [(101, 172, "Customer:"), (101, 196, "Product:"), (190, 196, "DRGR"),
+             (101, 220, "Sizes:"), (190, 220, "664"), (101, 244, "Edition:"), (190, 244, "B5")]
+    tables = ruled_tables._rule_tables(_FakePage(_form_rules([188, 212, 236, 260]), words), [], 1)
+    assert [t.rows for t in tables] == [[["Customer:", ""], ["Product:", "DRGR"], ["Sizes:", "664"], ["Edition:", "B5"]]]
+
+
+def test_rules_with_several_lines_per_band_are_not_a_form():
+    # section separators: each band holds several text lines -> not a table
+    words = [(101, 172, "A"), (101, 196, "B"), (101, 202, "B2"), (101, 220, "C"), (101, 244, "D")]
+    assert ruled_tables._rule_tables(_FakePage(_form_rules([188, 212, 236, 260]), words), [], 1) == []
+
+
+def test_ruled_bottom_rows_of_unruled_table_are_rejected():
+    # the row just above the ruled rows has text in both columns: fragment
+    words = [(101, 148, "Above"), (190, 148, "1.0"), (101, 172, "Total"), (190, 172, "2.0"),
+             (101, 196, "AUM"), (190, 196, "3.0"), (101, 220, "Sum"), (190, 220, "5.0")]
+    assert ruled_tables._rule_tables(_FakePage(_form_rules([188, 212, 236]), words), [], 1) == []
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):
