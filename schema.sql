@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS report_files (
     status            TEXT        NOT NULL CHECK (status IN ('converted','failed')),
     pages             INT,
     tables            INT,
-    converter         TEXT        NOT NULL DEFAULT 'docling',  -- docling | pdfplumber
+    converter         TEXT        NOT NULL DEFAULT 'docling',  -- docling
     converter_version TEXT,
     error             TEXT,                          -- "<stage>: <message>" when failed
     ocr_fallback_pages INT,                          -- pages re-read by the vision model

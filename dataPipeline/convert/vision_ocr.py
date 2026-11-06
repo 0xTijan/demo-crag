@@ -1,6 +1,6 @@
 """Vision-LLM OCR fallback (local Ollama model) for pages with (almost) no text.
 
-Used by docling.py and pdfplumber_pipeline.py: after the normal conversion,
+Used by docling.py: after the normal conversion,
 pages whose Markdown has fewer than MIN_PAGE_CHARS real characters are rendered
 to an image and transcribed by the model configured as "ocrFallbackModel" in
 config.json (default qwen2.5vl:7b).

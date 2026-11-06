@@ -1,6 +1,6 @@
 """Shared plumbing for the PDF -> Markdown pipelines.
 
-Every pipeline (docling.py, pdfplumber_pipeline.py)
+Every pipeline (currently docling.py)
 does the same bookkeeping and only differs in how a PDF becomes Markdown:
 
 1. Connect to PostgreSQL and create/upgrade the tracking tables.
