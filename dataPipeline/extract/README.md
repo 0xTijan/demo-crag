@@ -41,7 +41,7 @@ Done: 3 extracted, 1 needs review, 4 skipped, 12 unchanged, 0 failed
 
 and exits with status 1 if any file failed.
 
-A Markdown file that has no `report_files` row (put in `markdowns/` by hand) needs its company: `--file path.md --isin SI…`.
+Without `--file`, only files the download step filed as reports (`downloaded_files.category = 'reports'`) are read. A file named with `--file` is read whatever its category, so a report the downloader mistook for an announcement can still be extracted. A Markdown file with no `report_files` row (put in `markdowns/` by hand) needs its company: `--file path.md --isin SI…`.
 
 ---
 

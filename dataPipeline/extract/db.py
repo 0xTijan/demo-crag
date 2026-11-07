@@ -114,13 +114,21 @@ INPUTS_SQL = """
     FROM report_files rf
     JOIN downloaded_files df ON df.file_path = rf.pdf_path
     JOIN stocks s ON s.isin = df.stock_isin
-    WHERE rf.status = 'converted' AND rf.markdown_path IS NOT NULL AND df.category = 'reports'
+    WHERE rf.status = 'converted' AND rf.markdown_path IS NOT NULL
 """
 
 
-def list_inputs(engine, isins: list[str] | None = None, markdown_paths: list[str] | None = None) -> list[dict]:
-    """Converted Markdown reports with their company, newest conversion per file."""
+def list_inputs(engine, isins: list[str] | None = None, markdown_paths: list[str] | None = None,
+                any_category: bool = False) -> list[dict]:
+    """Converted Markdown files with their company, newest conversion per file.
+
+    Only files the download step filed as reports, unless any_category (used for
+    --file: a file named on the command line is extracted whatever its category,
+    since the download step's report/announcement guess can be wrong).
+    """
     sql, params = INPUTS_SQL, {}
+    if not any_category:
+        sql += " AND df.category = 'reports'"
     if isins:
         sql += " AND df.stock_isin = ANY(:isins)"
         params["isins"] = [i.upper() for i in isins]

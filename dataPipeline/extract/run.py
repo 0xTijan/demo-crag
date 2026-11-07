@@ -271,7 +271,7 @@ def resolve_inputs(engine, args) -> list[dict]:
             rels.append(p.relative_to(ROOT).as_posix())
         except ValueError:
             sys.exit(f"{f} is not inside the repository ({ROOT})")
-    known = {r["markdown_path"]: r for r in db.list_inputs(engine, markdown_paths=rels)} \
+    known = {r["markdown_path"]: r for r in db.list_inputs(engine, markdown_paths=rels, any_category=True)} \
         if db.table_exists(engine, "report_files") else {}
     out = []
     for rel in rels:
@@ -279,7 +279,8 @@ def resolve_inputs(engine, args) -> list[dict]:
             out.append(known[rel])
             continue
         if not args.isin or len(args.isin) != 1:
-            sys.exit(f"{rel} has no report_files/downloaded_files row: give its company with --isin ISIN")
+            sys.exit(f"{rel} is not a converted file with a known company (no matching report_files + "
+                     f"downloaded_files rows): give its company with --isin ISIN")
         comp = db.company(engine, args.isin[0])
         if comp is None:
             sys.exit(f"ISIN {args.isin[0]} is not in stocks")
