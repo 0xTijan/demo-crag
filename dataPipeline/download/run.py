@@ -21,6 +21,7 @@ from .crawler import SiteCrawler, categorise, wanted  # noqa: E402
 from .downloader import DownloadError, download, slugify  # noqa: E402
 from .fetcher import FetchError, Fetcher  # noqa: E402
 from .settings import REPORTS_DIR  # noqa: E402
+from helpers.run_log import start_run_log  # noqa: E402
 
 
 def process_company(engine, fetcher, company, args) -> dict:
@@ -90,6 +91,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="list PDFs without downloading")
     parser.add_argument("--force", action="store_true", help="download again even if already recorded")
     args = parser.parse_args()
+    start_run_log("download")  # copy everything printed below to logs/download_<time>.log
 
     engine = db.get_engine()
     db.ensure_tables(engine)
