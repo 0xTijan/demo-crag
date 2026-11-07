@@ -84,7 +84,7 @@ Requirements:
 
 - `reports/` exists at the repo root (gitignored; you put PDFs there, subfolders allowed).
 - PostgreSQL reachable through `DATABASE_URL` (environment variable or `.env`). Default: `postgresql+psycopg2://username:postgres@localhost:5432/postgres`.
-- Python packages: `docling`, `pdfplumber`, `sqlalchemy`, `psycopg2`, `python-dotenv`; `ollama` and `pypdfium2` only if the vision fallback is needed.
+- Python packages: `pip install -r requirements.txt` (repo root). The converter uses `docling`, `pdfplumber`, `SQLAlchemy`, `psycopg2-binary`, `python-dotenv`; `ollama` and `pypdfium2` only matter for the vision fallback.
 - Ollama running with `qwen2.5vl:7b` pulled, only if some page triggers the fallback. The model is configured in `config.json`:
 
 ```json

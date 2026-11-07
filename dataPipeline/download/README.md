@@ -111,7 +111,7 @@ Environment variables: `DATABASE_URL` (default `postgresql+psycopg2://username:p
 Requirements:
 
 - PostgreSQL reachable through `DATABASE_URL`, with the `stocks` table filled and `stocks.website_url` set for the companies you want.
-- Python packages: `pip install -r dataPipeline/download/requirements.txt` (`httpx`, `beautifulsoup4`, `playwright`, `SQLAlchemy`, `psycopg2-binary`, `python-dotenv`, `cryptography`).
+- Python packages: `pip install -r requirements.txt` (repo root; the download step uses `httpx`, `beautifulsoup4`, `playwright`, `cryptography`, `SQLAlchemy`, `psycopg2-binary`, `python-dotenv`).
 - A Chromium for Playwright (`python -m playwright install chromium`), only needed for sites that require JavaScript.
 
 Output:
