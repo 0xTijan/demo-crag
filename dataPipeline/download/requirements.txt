@@ -1,0 +1,11 @@
+# Python packages for the PDF download step (dataPipeline/download).
+# Install from the repo root:  pip install -r dataPipeline/download/requirements.txt
+# For sites that need JavaScript, also download a browser once:  python -m playwright install chromium
+
+httpx==0.28.1
+beautifulsoup4==4.15.0
+playwright==1.64.1
+SQLAlchemy==2.1.8
+psycopg2-binary==2.9.13
+python-dotenv==1.2.3
+cryptography==50.0.1
