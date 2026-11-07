@@ -91,6 +91,7 @@ python -m dataPipeline.download.run                          # every company in 
 python -m dataPipeline.download.run --isin SI0031890831      # one company
 python -m dataPipeline.download.run --isin SI0031890831 SI0031104332   # several
 python -m dataPipeline.download.run --skip-by-name           # only download file names not saved before
+python -m dataPipeline.download.run --recrawl                # ignore the saved crawl, visit the sites again
 python -m dataPipeline.download.run --dry-run                # list PDFs, download nothing
 python -m dataPipeline.download.run --force                  # download again even if recorded
 ```
@@ -104,6 +105,8 @@ Run it from the repository root (the `-m` form needs the root on the path).
 | `--max-pages N` | 150 | Pages crawled per site |
 | `--max-depth N` | 3 | Link depth from the English homepage |
 | `--js auto\|always\|never` | `auto` | Render pages with Playwright: decide per site, always, or never |
+| `--recrawl` | off | Crawl again even if a recent crawl is saved (see 8) |
+| `--max-age-days N` | 7 | Reuse a saved crawl younger than N days; `0` always crawls |
 | `--skip-by-name` | off | Also skip a PDF whose file name was already saved for this company, even under a different URL (see 8) |
 | `--dry-run` | off | List what would be downloaded; write nothing |
 | `--force` | off | Download again even if the URL is recorded and the file exists |
@@ -119,7 +122,7 @@ Requirements:
 Output:
 
 - `reports/{company-slug}/{reports|announcements|other}/*.pdf`. `reports/` is gitignored.
-- Rows in `downloaded_files` and `download_errors`.
+- Rows in `downloaded_files` and `download_errors`, and the result of each crawl in `crawl_runs` and `discovered_pdfs`.
 - **A copy of everything printed** in `logs/download_<date>_<time>.log` (one file per run, gitignored). The first line of the file is the exact command; the last is the finish time.
 - Exit code `0`, also when some downloads failed (look in `download_errors`); `1` only if no company matched.
 
@@ -130,6 +133,7 @@ A typical log, with what each line means:
 [1/1] Triglavska Zavarovalnica d.d. - https://www.triglav.eu        # run.py: one line per company
     ! [crawl] http://ar2013.triglav.eu/ FetchError: ConnectError ... # a failure, also saved in download_errors
     English site: https://www.triglav.eu/en (language_switcher); 118 pages; 591 PDF links
+    # a rerun within 7 days prints instead:  English site: ... 591 PDF links from the saved crawl of 2026-11-07 11:30 (0.2 days old; --recrawl to refresh)
       + triglavska-zavarovalnica-d-d/reports/2024_..._8ead0c46.pdf   # a new file was saved
     found: 590, downloaded: 103, skipped: 455, same_name: 0, duplicates: 31, failed: 1
 Done in 1002s - found: 590, downloaded: 103, skipped: 455, same_name: 0, duplicates: 31, failed: 1
@@ -143,7 +147,7 @@ Failures are in the download_errors table.
 
 ## 4. Database
 
-Both tables are created every time `run.py` starts (`CREATE TABLE IF NOT EXISTS`, in `db.DDL` and in `schema.sql`). Companies are the rows of `stocks`; there is no separate company table.
+The tables are created every time `run.py` starts (`CREATE TABLE IF NOT EXISTS`, in `db.DDL` and in `schema.sql`). Companies are the rows of `stocks`; there is no separate company table.
 
 ### `downloaded_files`: one row per (company, source URL)
 
@@ -184,6 +188,13 @@ SELECT stage, count(*) FROM download_errors GROUP BY stage;                     
 SELECT url, error FROM download_errors WHERE stock_isin = 'SI0031890831'
 ORDER BY occurred_at DESC;                                                        -- one company
 ```
+
+### `crawl_runs` and `discovered_pdfs`: the saved crawl
+
+`crawl_runs` has one row per company, the latest crawl: `crawled_at`, the `website_url` it was made for, the English `base_url` and how it was found (`english`), `pages_visited`, `used_js`, `pdf_links`.
+`discovered_pdfs` has one row per PDF link that crawl found, **before** any filtering: `source_url`, `link_text`, `context`, `page_url`, `page_title`, `page_relevance`, `first_seen`, `last_seen`. `last_seen` equals the crawl's `crawled_at` for every link the latest crawl saw; a link a newer crawl no longer finds keeps its older `last_seen` and is not used.
+
+Because the links are stored unfiltered, a change to the keyword lists (`wanted`, `categorise`) takes effect on the next run without crawling again.
 
 Errors accumulate: every run adds rows for the same dead links. Filter by `occurred_at` to see one run.
 
@@ -280,6 +291,15 @@ The temporary file is always removed, also on errors. Failures raise `DownloadEr
 1. Parse arguments and start the run log (`helpers/run_log.py` → `logs/download_<time>.log`).
 2. Connect, create the two tables, load the companies (`db.load_companies`, filtered by `--isin`/`--limit`).
 3. For each company (`process_company`): crawl; keep `wanted` PDFs; for each, compute its category; skip if recorded with the file present (unless `--force`); with `--skip-by-name` also skip if the file name is already known (below); otherwise download and write the `downloaded_files` row.
+**Saved crawl.** Crawling is the slow part (one request per second per page). After a successful crawl `run.py` saves its result (`db.save_crawl`). A later run uses it instead of visiting the site (`db.load_crawl`) if **all** of these hold:
+
+- `--recrawl` is not given and `--max-age-days` is above 0,
+- the crawl is younger than `--max-age-days` (default 7),
+- `stocks.website_url` is unchanged since that crawl,
+- that crawl found at least one PDF (an empty crawl is probably a failure and is repeated).
+
+The run then prints `from the saved crawl of <date> (<n> days old)` and sends no page requests at all; only new PDFs are downloaded. A `--dry-run` reads a saved crawl but never writes one. The trade-off is freshness: a report published after the saved crawl is not seen until the crawl is older than `--max-age-days` or you pass `--recrawl`. The errors of the original crawl (dead pages, `robots.txt`) are not repeated on later runs.
+
 **What counts as "already downloaded".** The crawl always looks at the whole website. Then, per PDF:
 
 | Check | When | Compares | Cost when it matches |
@@ -320,7 +340,7 @@ With `--dry-run` step 3 only prints `[category] 'link text' url` for each PDF.
 4. The same report under `/files/mirror/AR_2023_EN.pdf` has identical bytes: one file on disk, two rows in `downloaded_files`.
 5. A link the server answers with 404 and one that serves HTML with a `.pdf` name end up in `download_errors` (stages `download` and `verify`).
 
-A second run skips every file already on disk and logs only the same two failures again.
+A second run within a week does not visit the site at all (it uses the saved crawl) and skips every file already on disk; `--recrawl` visits the site again and logs the same two failures again.
 
 ---
 
@@ -399,7 +419,7 @@ When a PDF is missed or wrongly kept, find out which rule decided: the page may 
 - Documents that exist only on old sites that no longer resolve cannot be fetched.
 - `--skip-by-name` trusts the file name only: different documents with the same name are skipped, and a document re-published under the same name with new content is not downloaded again (use `--force`).
 - Slow by design: one request per second per host and one company at a time. A big site takes tens of minutes.
-- Every run crawls again before downloading, even when all files are already on disk.
+- A saved crawl can be up to `--max-age-days` old, so a newly published report may be missed until `--recrawl` or the age limit. The saved crawl is per company and ignores `--max-pages`, `--max-depth` and `--js`: after changing those, add `--recrawl`.
 - `download_errors` grows with every run and is never cleaned.
 - Companies without a `website_url` are only logged as errors.
 - No locking: two simultaneous runs could both download the same file. The unique key keeps `downloaded_files` consistent, and the file name contains the hash, so the result is the same file.

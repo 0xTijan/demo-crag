@@ -4,6 +4,7 @@
     python -m dataPipeline.download.run --isin SI0031104332  # selected companies
     python -m dataPipeline.download.run --dry-run         # list PDFs, download nothing
     python -m dataPipeline.download.run --skip-by-name    # skip file names already downloaded
+    python -m dataPipeline.download.run --recrawl         # ignore the saved crawl, visit the site again
 
 Companies are the rows of `stocks`; the website is `stocks.website_url`.
 Files go to reports/{company}/{reports|announcements|other}/. Every download is
@@ -18,7 +19,7 @@ import sys  # noqa: E402
 import time  # noqa: E402
 
 from . import db  # noqa: E402
-from .crawler import SiteCrawler, categorise, wanted  # noqa: E402
+from .crawler import CrawlResult, PdfLink, SiteCrawler, categorise, wanted  # noqa: E402
 from .downloader import DownloadError, download, name_key, slugify  # noqa: E402
 from .fetcher import FetchError, Fetcher  # noqa: E402
 from .settings import REPORTS_DIR  # noqa: E402
@@ -36,15 +37,31 @@ def process_company(engine, fetcher, company, args) -> dict:
         log_error("website", "company has no website_url in stocks")
         return stats
 
-    crawler = SiteCrawler(fetcher, log_error, max_pages=args.max_pages, max_depth=args.max_depth, js=args.js)
-    try:
-        result = crawler.crawl(url)
-    except FetchError as exc:
-        log_error("website", exc, url=url, http_status=exc.status)
-        return stats
-    print(f"    English site: {result.base_url} ({result.english}); "
-          f"{result.pages_visited} pages{' with browser' if result.used_js else ''}; "
-          f"{len(result.pdfs)} PDF links")
+    saved = None if args.recrawl else db.load_crawl(engine, company["isin"], url, args.max_age_days)
+    if saved:
+        meta, rows = saved
+        result = CrawlResult(meta["base_url"], meta["english"], {
+            r["source_url"]: PdfLink(r["source_url"], r["link_text"] or "", r["context"] or "",
+                                     r["page_url"] or "", r["page_title"] or "", r["page_relevance"] or 0)
+            for r in rows}, meta["pages_visited"] or 0, bool(meta["used_js"]))
+        print(f"    English site: {result.base_url} ({result.english}); {len(result.pdfs)} PDF links "
+              f"from the saved crawl of {meta['crawled_at']:%Y-%m-%d %H:%M} ({meta['age_days']:.1f} days old; "
+              f"--recrawl to refresh)")
+    else:
+        crawler = SiteCrawler(fetcher, log_error, max_pages=args.max_pages, max_depth=args.max_depth, js=args.js)
+        try:
+            result = crawler.crawl(url)
+        except FetchError as exc:
+            log_error("website", exc, url=url, http_status=exc.status)
+            return stats
+        print(f"    English site: {result.base_url} ({result.english}); "
+              f"{result.pages_visited} pages{' with browser' if result.used_js else ''}; "
+              f"{len(result.pdfs)} PDF links")
+        if not args.dry_run:
+            try:
+                db.save_crawl(engine, company["isin"], url, result)
+            except Exception as exc:  # noqa: BLE001 - a missing cache must not stop the downloads
+                log_error("db", exc, url=url)
 
     pdfs = [p for p in result.pdfs.values() if wanted(p)]
     stats["found"] = len(pdfs)
@@ -105,6 +122,10 @@ def main() -> int:
     parser.add_argument("--max-depth", type=int, default=3, help="link depth from the homepage (default 3)")
     parser.add_argument("--js", choices=("auto", "always", "never"), default="auto",
                         help="render pages with Playwright: auto-detect, always or never (default auto)")
+    parser.add_argument("--recrawl", action="store_true",
+                        help="crawl the website again even if a recent crawl is saved")
+    parser.add_argument("--max-age-days", type=float, default=7,
+                        help="reuse a saved crawl younger than this many days (default 7; 0 = always crawl)")
     parser.add_argument("--dry-run", action="store_true", help="list PDFs without downloading")
     parser.add_argument("--skip-by-name", action="store_true",
                         help="also skip a PDF whose file name (end of the URL, query ignored) was already "

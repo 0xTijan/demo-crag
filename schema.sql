@@ -182,3 +182,29 @@ CREATE TABLE IF NOT EXISTS download_errors (
     occurred_at TIMESTAMPTZ DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (stock_isin, occurred_at DESC);
+
+-- Saved crawl results (dataPipeline/download): a rerun reuses them instead of crawling the site again.
+-- crawl_runs holds the latest crawl of a company; discovered_pdfs every PDF link it found.
+-- A link that a later crawl no longer finds stays with an older last_seen.
+CREATE TABLE IF NOT EXISTS crawl_runs (
+    stock_isin    CHAR(12) PRIMARY KEY REFERENCES stocks(isin) ON DELETE CASCADE,
+    crawled_at    TIMESTAMPTZ NOT NULL,
+    website_url   TEXT        NOT NULL,   -- stocks.website_url at crawl time; a change forces a new crawl
+    base_url      TEXT        NOT NULL,   -- English homepage that was crawled
+    english       TEXT        NOT NULL,   -- hreflang | html_lang | language_switcher | path_probe | not_found
+    pages_visited INT,
+    used_js       BOOLEAN,
+    pdf_links     INT
+);
+CREATE TABLE IF NOT EXISTS discovered_pdfs (
+    stock_isin     CHAR(12) NOT NULL REFERENCES stocks(isin) ON DELETE CASCADE,
+    source_url     TEXT        NOT NULL,
+    link_text      TEXT,
+    context        TEXT,                  -- table row / list item around the link
+    page_url       TEXT,
+    page_title     TEXT,
+    page_relevance INT,
+    first_seen     TIMESTAMPTZ NOT NULL,
+    last_seen      TIMESTAMPTZ NOT NULL,
+    PRIMARY KEY (stock_isin, source_url)
+);
