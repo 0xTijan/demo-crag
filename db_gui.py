@@ -191,48 +191,59 @@ def price_trends(url: str) -> dict:
     return series_trends(url, "daily_prices", "stock_isin", "last_price")
 
 
-with st.sidebar:
-    st.subheader(":material/database: Connection", anchor=False)
-    st.session_state["db_url"] = st.text_input("Database URL", DEFAULT_URL, type="password")
-    try:
-        insp = inspect(get_engine(st.session_state["db_url"]))
-        tables = sorted(insp.get_table_names())
-    except Exception as e:  # noqa: BLE001
-        st.error(f"Cannot connect: {e}", icon=":material/error:")
-        st.stop()
-    try:
-        u = make_url(st.session_state["db_url"])
-        where_db = f"{u.database or ''}{' @ ' + u.host if u.host else ''}"
-    except Exception:  # noqa: BLE001
-        where_db = ""
-    st.badge(f"Connected · {len(tables)} tables", icon=":material/check_circle:", color="green")
-    if where_db:
-        st.caption(f"`{where_db}`")
-    if st.button("Clear cache & refresh", icon=":material/refresh:", width="stretch"):
-        st.cache_data.clear()
-        st.rerun()
-    with st.expander("Row counts", icon=":material/table_rows:"):
-        counts = []
-        for t in tables:
-            try:
-                counts.append({"table": t, "rows": int(query(f'SELECT COUNT(*) AS n FROM "{t}"')["n"][0])})
-            except Exception:  # noqa: BLE001
-                pass
-        if counts:
-            cdf = pd.DataFrame(counts)
-            st.dataframe(cdf, hide_index=True, width="stretch", column_config={
-                "table": st.column_config.TextColumn("Table"),
-                "rows": st.column_config.ProgressColumn("Rows", format="%d", min_value=0,
-                                                        max_value=int(max(cdf["rows"].max(), 1)))})
-
 st.html("<style>.st-key-sql textarea { font-family: 'Source Code Pro', ui-monospace, monospace; font-size: .9rem; }</style>")
 st.title(":material/query_stats: RAG DB Explorer", anchor=False)
-st.caption("Browse the source data behind RAG answers: stocks, indexes, financial reports and the raw tables.")
-tab_stocks, tab_idx, tab_fin, tab_tables, tab_schema, tab_sql = url_tabs("tab", {
+status = st.empty()  # subtitle + connection status, filled in once the Database tab has connected
+tab_stocks, tab_idx, tab_fin, tab_tables, tab_schema, tab_sql, tab_db = url_tabs("tab", {
     "stocks": ":material/search: Stocks", "indexes": ":material/monitoring: Indexes",
     "financials": ":material/receipt_long: Financials", "tables": ":material/table_view: Tables",
-    "schema": ":material/schema: Schema", "sql": ":material/terminal: SQL",
+    "schema": ":material/schema: Schema", "sql": ":material/terminal: SQL", "database": ":material/database: Database",
 })
+SUBTITLE = "Browse the source data behind RAG answers: stocks, indexes, financial reports and the raw tables."
+
+# ------------------------------------------------------------------- database
+# Shown as the last tab but filled first: every other tab needs the connection.
+with tab_db:
+    with st.container(border=True):
+        st.subheader("Connection", anchor=False)
+        # deliberately not URL-bound: it contains the password
+        st.session_state["db_url"] = st.text_input("Database URL", DEFAULT_URL, type="password", key="db_url_input",
+                                                   help="SQLAlchemy URL; defaults to `DATABASE_URL` from the environment / .env")
+        try:
+            insp = inspect(get_engine(st.session_state["db_url"]))
+            tables = sorted(insp.get_table_names())
+        except Exception as e:  # noqa: BLE001
+            st.error(f"Cannot connect: {e}", icon=":material/error:")
+            status.caption(f"{SUBTITLE}  \n:red-badge[:material/error: Not connected] · fix the URL in the **Database** tab")
+            st.stop()
+        try:
+            u = make_url(st.session_state["db_url"])
+            where_db = f"{u.database or ''}{' @ ' + u.host if u.host else ''}"
+        except Exception:  # noqa: BLE001
+            where_db = ""
+        c1, c2 = st.columns([3, 1], vertical_alignment="center")
+        c1.markdown(f":green-badge[:material/check_circle: Connected · {len(tables)} tables]"
+                    + (f" `{where_db}`" if where_db else ""))
+        if c2.button("Clear cache & refresh", icon=":material/refresh:", width="stretch"):
+            st.cache_data.clear()
+            st.rerun()
+
+    st.subheader("Row counts", anchor=False)
+    counts = []
+    for t in tables:
+        try:
+            counts.append({"table": t, "rows": int(query(f'SELECT COUNT(*) AS n FROM "{t}"')["n"][0])})
+        except Exception:  # noqa: BLE001
+            pass
+    if counts:
+        cdf = pd.DataFrame(counts).sort_values("rows", ascending=False)
+        st.dataframe(cdf, hide_index=True, width="stretch", column_config={
+            "table": st.column_config.TextColumn("Table"),
+            "rows": st.column_config.ProgressColumn("Rows", format="localized", min_value=0,
+                                                    max_value=int(max(cdf["rows"].max(), 1)))})
+
+status.caption(f"{SUBTITLE}  \n:green-badge[:material/check_circle: Connected · {len(tables)} tables]"
+               + (f" `{where_db}`" if where_db else ""))
 
 # ------------------------------------------------------------------- stocks
 STOCK_COLS = {
