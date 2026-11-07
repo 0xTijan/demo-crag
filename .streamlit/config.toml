@@ -1,0 +1,37 @@
+# Look & feel for db_gui.py (picked up when you run `streamlit run db_gui.py` from the repo root).
+# Light and dark are both defined, so the app follows the OS setting and the ⋮ > Settings menu can switch.
+# Chart colours are the validated categorical palette, stepped separately for each surface.
+
+[theme]
+baseRadius = "0.6rem"
+showWidgetBorder = true
+headingFontWeights = [700, 650, 600, 600, 600, 600]
+metricValueFontSize = "1.7rem"
+metricValueFontWeight = 600
+paddingTop = "3rem"  # Streamlit >= 1.66; older versions ignore it with a startup warning
+
+[theme.light]
+primaryColor = "#2a78d6"
+backgroundColor = "#fcfcfb"
+secondaryBackgroundColor = "#f2f1ee"
+textColor = "#1b1b19"
+borderColor = "#e3e2de"
+linkColor = "#256abf"
+chartCategoricalColors = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#6250d6", "#e34948"]
+
+[theme.light.sidebar]
+backgroundColor = "#f5f4f1"
+secondaryBackgroundColor = "#ebeae6"
+
+[theme.dark]
+primaryColor = "#3987e5"
+backgroundColor = "#1a1a19"
+secondaryBackgroundColor = "#262624"
+textColor = "#f0efec"
+borderColor = "#383835"
+linkColor = "#6da7ec"
+chartCategoricalColors = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#008300", "#9085e9", "#e66767"]
+
+[theme.dark.sidebar]
+backgroundColor = "#141413"
+secondaryBackgroundColor = "#222220"

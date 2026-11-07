@@ -10,9 +10,11 @@ import html
 from pathlib import Path
 import json
 import hashlib
+import altair as alt
 import pandas as pd
 import streamlit as st
 from sqlalchemy import create_engine, inspect, text
+from sqlalchemy.engine import make_url
 
 st.set_page_config(page_title="RAG DB Explorer", page_icon="📈", layout="wide")
 
@@ -65,54 +67,238 @@ def url_tabs(param: str, tabs: dict[str, str]):
     return st.tabs(list(tabs.values()), key=param, default=default, on_change=sync)
 
 
+# ------------------------------------------------------------------ look & feel
+# Chart colours: validated categorical slots 1-2 (blue, orange), stepped for each surface; "up"/"down" are the
+# status colours used for gains / losses (always together with a +/- sign, never colour alone).
+_COLORS = {
+    "light": {"s1": "#2a78d6", "s2": "#eb6834", "rule": "#8d8c87", "surface": "#fcfcfb", "up": "#006300", "down": "#c62f2f"},
+    "dark": {"s1": "#3987e5", "s2": "#d95926", "rule": "#8d8c87", "surface": "#1a1a19", "up": "#3fbf3f", "down": "#ee7b7b"},
+}
+RANGES = {"1M": 1, "3M": 3, "6M": 6, "1Y": 12, "All": None}
+
+
+def colors() -> dict:
+    return _COLORS["dark" if st.context.theme.type == "dark" else "light"]
+
+
+def compact(v, prefix: str = "") -> str:
+    """1234567 -> 1.2M (for headline numbers; tables use the column formats)."""
+    if v is None or pd.isna(v):
+        return "–"
+    for div, suffix in ((1e12, "T"), (1e9, "B"), (1e6, "M"), (1e3, "K")):
+        if abs(v) >= div:
+            return f"{prefix}{v / div:,.1f}{suffix}"
+    return f"{prefix}{v:,.0f}"
+
+
+def signed_color(v) -> str:
+    """Styler cell style: gains / losses in the status colours (the +/- sign carries the meaning too)."""
+    if v is None or pd.isna(v) or v == 0:
+        return ""
+    return f"color: {colors()['up' if v > 0 else 'down']}"
+
+
+def range_picker(key: str):
+    return st.segmented_control("Range", list(RANGES), default="1Y", required=True, key=key, bind="query-params",
+                                label_visibility="collapsed")
+
+
+def in_range(df: pd.DataFrame, col: str, choice: str) -> pd.DataFrame:
+    months = RANGES.get(choice)
+    if not months or df.empty:
+        return df
+    return df[df[col] >= df[col].max() - pd.DateOffset(months=months)]
+
+
+def time_chart(df: pd.DataFrame, x: str, y: str, label: str, fmt: str = ",.2f", height: int = 300) -> None:
+    """Single-series line + 10% area wash, y-axis fitted to the data, crosshair + tooltip on hover."""
+    c = colors()
+    base = alt.Chart(df).encode(x=alt.X(f"{x}:T", title=None, axis=alt.Axis(grid=False, labelOverlap=True)))
+    lo, hi = float(df[y].min()), float(df[y].max())
+    pad = (hi - lo) * 0.08 or abs(hi) * 0.05 or 1.0
+    # explicit domain: the area layer would otherwise pull 0 into the scale and flatten the line
+    yenc = alt.Y(f"{y}:Q", title=None, scale=alt.Scale(domain=[lo - pad, hi + pad], nice=False),
+                 axis=alt.Axis(tickCount=5))
+    hover = alt.selection_point(fields=[x], nearest=True, on="pointerover", clear="pointerout", empty=False)
+    shown = alt.condition(hover, alt.value(1), alt.value(0))
+    chart = alt.layer(
+        base.mark_area(color=c["s1"], opacity=0.1, clip=True).encode(y=yenc),
+        base.mark_line(color=c["s1"], strokeWidth=2, strokeJoin="round", strokeCap="round").encode(y=yenc),
+        base.mark_rule(color=c["rule"], strokeWidth=1).encode(opacity=shown),
+        base.mark_point(filled=True, size=80, color=c["s1"], stroke=c["surface"], strokeWidth=2)
+            .encode(y=yenc, opacity=shown),
+        base.mark_point(opacity=0, size=400).encode(  # invisible hit layer: nearest point drives hover + tooltip
+            y=yenc, tooltip=[alt.Tooltip(f"{x}:T", title="Date", format="%d %b %Y"),
+                             alt.Tooltip(f"{y}:Q", title=label, format=fmt)]).add_params(hover),
+    ).properties(height=height)
+    st.altair_chart(chart, width="stretch")
+
+
+def bar_chart(df: pd.DataFrame, x: str, y: str, label: str, height: int = 110) -> None:
+    """Thin single-series columns under a time chart (e.g. volume), with a tooltip per bar."""
+    chart = alt.Chart(df).mark_bar(color=colors()["s1"], opacity=0.55, cornerRadiusTopLeft=1, cornerRadiusTopRight=1).encode(
+        x=alt.X(f"{x}:T", title=None, axis=None),
+        y=alt.Y(f"{y}:Q", title=None, axis=alt.Axis(format="~s", tickCount=2)),
+        tooltip=[alt.Tooltip(f"{x}:T", title="Date", format="%d %b %Y"), alt.Tooltip(f"{y}:Q", title=label, format=",.0f")],
+    ).properties(height=height)
+    st.altair_chart(chart, width="stretch")
+
+
+# number formats shared by every financials / valuation table
+FIN_COLS = {
+    "period_end": st.column_config.DateColumn("Period end"),
+    "period_type": st.column_config.TextColumn("Period"),
+    "source_file": st.column_config.TextColumn("Source file"),
+    "currency": st.column_config.TextColumn("Ccy"),
+    "revenue": st.column_config.NumberColumn("Revenue", format="compact"),
+    "ebitda": st.column_config.NumberColumn("EBITDA", format="compact"),
+    "ebit": st.column_config.NumberColumn("EBIT", format="compact"),
+    "net_income": st.column_config.NumberColumn("Net income", format="compact"),
+    "total_assets": st.column_config.NumberColumn("Total assets", format="compact"),
+    "total_equity": st.column_config.NumberColumn("Total equity", format="compact"),
+    "eps": st.column_config.NumberColumn("EPS", format="%.2f"),
+    "roe": st.column_config.NumberColumn("ROE", format="%.1f%%"),
+    "roa": st.column_config.NumberColumn("ROA", format="%.1f%%"),
+    "l_e_ratio": st.column_config.NumberColumn("Liab./equity", format="%.1f"),
+    "p_e": st.column_config.NumberColumn("P/E", format="%.1f"),
+    "p_b": st.column_config.NumberColumn("P/B", format="%.2f"),
+    "p_s": st.column_config.NumberColumn("P/S", format="%.2f"),
+    "ev_s": st.column_config.NumberColumn("EV/S", format="%.2f"),
+    "net_debt_ebitda": st.column_config.NumberColumn("Net debt/EBITDA", format="%.2f"),
+    "dividend_per_share": st.column_config.NumberColumn("DPS", format="%.2f"),
+    "dps": st.column_config.NumberColumn("DPS", format="%.2f"),
+    "dividend_yield": st.column_config.NumberColumn("Div. yield", format="%.2f%%"),
+    "div_yield": st.column_config.NumberColumn("Div. yield", format="%.2f%%"),
+    "symbol": st.column_config.TextColumn("Symbol"),
+    "name": st.column_config.TextColumn("Company"),
+}
+
+
+@st.cache_data(ttl=120, show_spinner=False)
+def series_trends(url: str, table: str, key_col: str, value_col: str, days: int = 90) -> dict:
+    """{key: [values of the last `days` days, oldest first]} for sparklines (identifiers are fixed, not user input)."""
+    with get_engine(url).connect() as conn:
+        last = conn.execute(text(f"SELECT MAX(date) FROM {table}")).scalar()
+        if last is None:
+            return {}
+        cut = (pd.Timestamp(last) - pd.Timedelta(days=days)).date().isoformat()
+        data = pd.read_sql(text(f"SELECT {key_col} AS k, {value_col} AS v FROM {table} WHERE date >= :cut ORDER BY date"),
+                           conn, params={"cut": cut})
+    return {k: [float(v) for v in g["v"].dropna()] for k, g in data.groupby("k")}
+
+
+def price_trends(url: str) -> dict:
+    return series_trends(url, "daily_prices", "stock_isin", "last_price")
+
+
 with st.sidebar:
-    st.header("Connection")
+    st.subheader(":material/database: Connection", anchor=False)
     st.session_state["db_url"] = st.text_input("Database URL", DEFAULT_URL, type="password")
     try:
         insp = inspect(get_engine(st.session_state["db_url"]))
         tables = sorted(insp.get_table_names())
-        st.success(f"Connected · {len(tables)} tables")
     except Exception as e:  # noqa: BLE001
-        st.error(f"Cannot connect: {e}")
+        st.error(f"Cannot connect: {e}", icon=":material/error:")
         st.stop()
-    if st.button("Clear cache / refresh"):
+    try:
+        u = make_url(st.session_state["db_url"])
+        where_db = f"{u.database or ''}{' @ ' + u.host if u.host else ''}"
+    except Exception:  # noqa: BLE001
+        where_db = ""
+    st.badge(f"Connected · {len(tables)} tables", icon=":material/check_circle:", color="green")
+    if where_db:
+        st.caption(f"`{where_db}`")
+    if st.button("Clear cache & refresh", icon=":material/refresh:", width="stretch"):
         st.cache_data.clear()
         st.rerun()
-    with st.expander("Row counts"):
+    with st.expander("Row counts", icon=":material/table_rows:"):
+        counts = []
         for t in tables:
             try:
-                n = query(f'SELECT COUNT(*) AS n FROM "{t}"')["n"][0]
-                st.write(f"`{t}`: {n:,}")
+                counts.append({"table": t, "rows": int(query(f'SELECT COUNT(*) AS n FROM "{t}"')["n"][0])})
             except Exception:  # noqa: BLE001
                 pass
+        if counts:
+            cdf = pd.DataFrame(counts)
+            st.dataframe(cdf, hide_index=True, width="stretch", column_config={
+                "table": st.column_config.TextColumn("Table"),
+                "rows": st.column_config.ProgressColumn("Rows", format="%d", min_value=0,
+                                                        max_value=int(max(cdf["rows"].max(), 1)))})
 
-st.title("📈 RAG DB Explorer")
+st.html("<style>.st-key-sql textarea { font-family: 'Source Code Pro', ui-monospace, monospace; font-size: .9rem; }</style>")
+st.title(":material/query_stats: RAG DB Explorer", anchor=False)
+st.caption("Browse the source data behind RAG answers: stocks, indexes, financial reports and the raw tables.")
 tab_stocks, tab_idx, tab_fin, tab_tables, tab_schema, tab_sql = url_tabs("tab", {
-    "stocks": "🔎 Stocks", "indexes": "📊 Indexes", "financials": "🧾 Financials",
-    "tables": "🗂️ Tables", "schema": "🧬 Schema", "sql": "⌨️ SQL",
+    "stocks": ":material/search: Stocks", "indexes": ":material/monitoring: Indexes",
+    "financials": ":material/receipt_long: Financials", "tables": ":material/table_view: Tables",
+    "schema": ":material/schema: Schema", "sql": ":material/terminal: SQL",
 })
 
 # ------------------------------------------------------------------- stocks
+STOCK_COLS = {
+    "isin": st.column_config.TextColumn("ISIN"),
+    "mic": st.column_config.TextColumn("Exchange"),
+    "symbol": st.column_config.TextColumn("Symbol"),
+    "name": st.column_config.TextColumn("Company", width="medium"),
+    "sector_name": st.column_config.TextColumn("Sector"),
+    "last_price": st.column_config.NumberColumn("Price (EUR)", format="%.2f"),
+    "change_pct": st.column_config.NumberColumn("Change", format="%+.2f%%"),
+    "trend": st.column_config.LineChartColumn("90-day trend", width="small"),
+    "quantity": st.column_config.NumberColumn("Shares", format="compact"),
+    "first_trading_date": st.column_config.DateColumn("Listed since", format="MMM YYYY"),
+}
+PRICE_COLS = {
+    "date": st.column_config.DateColumn("Date"),
+    **{c: st.column_config.NumberColumn(c.replace("_price", "").capitalize(), format="%.2f")
+       for c in ("open_price", "high_price", "low_price", "last_price")},
+    "volume": st.column_config.NumberColumn("Volume", format="localized"),
+    "turnover": st.column_config.NumberColumn("Turnover", format="compact"),
+    "num_trades": st.column_config.NumberColumn("Trades", format="localized"),
+}
+
+
+def grouped_bars(df: pd.DataFrame, x: str, series: dict[str, str], height: int = 260) -> None:
+    """Two-series column chart (categorical slots 1-2) with a legend on top and a tooltip per bar."""
+    c = colors()
+    labels = list(series.values())
+    long = df.melt(id_vars=[x], value_vars=list(series), var_name="metric", value_name="value")
+    long["metric"] = long["metric"].map(series)
+    # bars capped at 24px; the chart is sized from the number of periods so groups don't spread out
+    chart = alt.Chart(long).mark_bar(size=24, cornerRadiusTopLeft=4, cornerRadiusTopRight=4).encode(
+        x=alt.X(f"{x}:N", title=None, sort=None, axis=alt.Axis(labelAngle=0, domain=False, ticks=False),
+                scale=alt.Scale(paddingInner=0.5, paddingOuter=0.25)),
+        xOffset=alt.XOffset("metric:N", sort=labels),
+        y=alt.Y("value:Q", title=None, axis=alt.Axis(tickCount=4, labelExpr="replace(format(datum.value, '~s'), 'G', 'B')")),
+        color=alt.Color("metric:N", sort=labels, scale=alt.Scale(domain=labels, range=[c["s1"], c["s2"]]),
+                        legend=alt.Legend(orient="top", title=None, symbolType="square")),
+        tooltip=[alt.Tooltip(f"{x}:N", title="Period"), alt.Tooltip("metric:N", title="Metric"),
+                 alt.Tooltip("value:Q", title="Value", format=",.0f")],
+    ).properties(height=height, width=max(360, 120 * df[x].nunique()))
+    st.altair_chart(chart, width="content")
+
+
 with tab_stocks:
     url = st.session_state["db_url"]
-    c1, c2, c3 = st.columns([2, 2, 3])
-    mics = c1.multiselect("Exchange (MIC)", distinct(url, "SELECT DISTINCT mic FROM stocks ORDER BY 1"),
-                          key="s_mic", bind="query-params")
-    sectors = c2.multiselect("Sector", distinct(url, "SELECT DISTINCT sector_name FROM stocks ORDER BY 1"),
-                             key="s_sector", bind="query-params")
-    search = c3.text_input("Search name / symbol / ISIN / description", placeholder="e.g. hydro, bank, SAVB ...",
-                           key="s_q", bind="query-params")
+    with st.container(border=True):
+        c1, c2, c3 = st.columns([2, 2, 3])
+        mics = c1.multiselect("Exchange (MIC)", distinct(url, "SELECT DISTINCT mic FROM stocks ORDER BY 1"),
+                              key="s_mic", bind="query-params", placeholder="All exchanges")
+        sectors = c2.multiselect("Sector", distinct(url, "SELECT DISTINCT sector_name FROM stocks ORDER BY 1"),
+                                 key="s_sector", bind="query-params", placeholder="All sectors")
+        search = c3.text_input("Search name / symbol / ISIN / description", placeholder="e.g. hydro, bank, SAVB ...",
+                               key="s_q", bind="query-params", icon=":material/search:")
 
-    c4, c5, c6 = st.columns([2, 3, 3])
-    idx_opts = {"(any)": None}
-    for iso, sym in query("SELECT isin, symbol FROM indexes ORDER BY symbol").itertuples(index=False):
-        idx_opts[sym] = iso
-    idx_choice = c4.selectbox("Member of index", list(idx_opts), key="s_index", bind="query-params")
-    quick = c5.radio("Quick filter", ["All", "Top gainers", "Top losers", "Largest market cap", "Highest price"],
-                     horizontal=True, key="s_sort", bind="query-params")
-    price_max = float(query("SELECT COALESCE(MAX(last_price),0) AS m FROM stocks")["m"][0] or 0)
-    price_rng = c6.slider("Last price range (EUR)", 0.0, max(price_max, 1.0), (0.0, max(price_max, 1.0)),
-                          key="s_price", bind="query-params")
+        c4, c5, c6 = st.columns([2, 5, 3])
+        idx_opts = {"(any)": None}
+        for iso, sym in query("SELECT isin, symbol FROM indexes ORDER BY symbol").itertuples(index=False):
+            idx_opts[sym] = iso
+        idx_choice = c4.selectbox("Member of index", list(idx_opts), key="s_index", bind="query-params")
+        # no format_func on bound segmented controls: the URL stores the displayed label
+        quick = c5.segmented_control("Order by", ["Symbol", "Top gainers", "Top losers", "Market cap", "Price"],
+                                     default="Symbol", required=True, key="s_sort", bind="query-params")
+        price_max = float(query("SELECT COALESCE(MAX(last_price),0) AS m FROM stocks")["m"][0] or 0)
+        price_rng = c6.slider("Last price range (EUR)", 0.0, max(price_max, 1.0), (0.0, max(price_max, 1.0)),
+                              key="s_price", bind="query-params")
 
     where, params = ["last_price BETWEEN :pmin AND :pmax"], {"pmin": price_rng[0], "pmax": price_rng[1]}
     if mics:
@@ -125,24 +311,39 @@ with tab_stocks:
     if idx_choice != "(any)":
         params["idx"] = idx_opts[idx_choice]
         where.append("isin IN (SELECT stock_isin FROM index_members WHERE index_isin = :idx)")
-    order = {"All": "symbol", "Top gainers": "change_prev_close_percentage DESC",
-             "Top losers": "change_prev_close_percentage ASC", "Largest market cap": "(last_price*quantity) DESC",
-             "Highest price": "last_price DESC"}[quick]
+    order = {"Symbol": "symbol", "Top gainers": "change_prev_close_percentage DESC",
+             "Top losers": "change_prev_close_percentage ASC", "Market cap": "(last_price*quantity) DESC",
+             "Price": "last_price DESC"}[quick]
     df = query(
         f"""SELECT isin, mic, symbol, name, sector_name, last_price,
                    change_prev_close_percentage AS change_pct, quantity,
                    ROUND(last_price*quantity/1000000.0, 1) AS mcap_m_eur, first_trading_date
             FROM stocks WHERE {' AND '.join(where)} ORDER BY {order}""", params)
+    trends = price_trends(url)
+    df["trend"] = [trends.get(i, []) for i in df["isin"]]
+    df["mcap"] = df["mcap_m_eur"] * 1e6
 
-    st.caption(f"{len(df)} stocks · click a row to see details")
+    k1, k2, k3, k4 = st.columns(4)
+    k1.metric("Stocks shown", f"{len(df):,}", border=True)
+    k2.metric("Advancing · declining", f"{int((df['change_pct'] > 0).sum())} · {int((df['change_pct'] < 0).sum())}",
+              border=True)
+    k3.metric("Median change", f"{df['change_pct'].median():+.2f}%" if len(df) else "–", border=True)
+    k4.metric("Total market cap", compact(df["mcap"].sum(), "€") if len(df) else "–", border=True)
+
+    st.caption("Click a row to see the company details.")
     # the selected stock is kept in the URL by ISIN (row positions shift when filters change); the table key
     # follows the rows shown, so a new result set starts from the URL selection instead of a stale row position
     url_isin = st.query_params.get("s_isin")
     url_rows = [i for i, v in enumerate(df["isin"]) if v == url_isin][:1]
-    ev = st.dataframe(df, hide_index=True, width="stretch", on_select="rerun", selection_mode="single-row",
-                      column_config={"change_pct": st.column_config.NumberColumn("change %", format="%.2f")},
-                      key="s_table_" + hashlib.sha1("|".join(df["isin"]).encode()).hexdigest()[:12],
-                      selection_default={"selection": {"rows": url_rows}} if url_rows else None)
+    ev = st.dataframe(
+        df.style.map(signed_color, subset=["change_pct"]), hide_index=True, width="stretch",
+        on_select="rerun", selection_mode="single-row",
+        column_order=["symbol", "name", "sector_name", "mic", "last_price", "change_pct", "trend", "mcap",
+                      "first_trading_date", "isin"],
+        column_config={**STOCK_COLS, "mcap": st.column_config.ProgressColumn(
+            "Market cap (EUR)", format="compact", min_value=0, max_value=float(max(df["mcap"].max(), 1) if len(df) else 1))},
+        key="s_table_" + hashlib.sha1("|".join(df["isin"]).encode()).hexdigest()[:12],
+        selection_default={"selection": {"rows": url_rows}} if url_rows else None)
 
     if not ev.selection.rows:
         st.query_params.pop("s_isin", None)
@@ -152,80 +353,155 @@ with tab_stocks:
         row = df.iloc[ev.selection.rows[0]]
         isin = row["isin"]
         st.query_params["s_isin"] = isin
-        st.divider()
-        st.subheader(f"{row['name']} ({row['symbol']}) · {row['isin']}")
         info = query("SELECT description, nace, website_url, logo_url, web_id FROM stocks WHERE isin=:i", {"i": isin}).iloc[0]
-        m1, m2, m3 = st.columns(3)
-        m1.metric("Last price", f"{row['last_price']:.2f}", f"{row['change_pct']:.2f}%")
-        m2.metric("Market cap (M EUR)", f"{row['mcap_m_eur']:,.1f}")
-        m3.metric("Sector", row["sector_name"])
-        st.write(info["description"])
-        st.caption(f"NACE: {info['nace']} · {info['website_url']} · web_id: {info['web_id']}")
+        px = query("SELECT date, open_price, high_price, low_price, last_price, volume, turnover, num_trades "
+                   "FROM daily_prices WHERE stock_isin=:i ORDER BY date", {"i": isin})
+        px["date"] = pd.to_datetime(px["date"])
+        year = in_range(px, "date", "1Y")
+
+        with st.container(border=True):
+            st.subheader(row["name"], anchor=False)
+            st.markdown(f":blue-badge[{row['symbol']}] :gray-badge[:material/account_balance: {row['mic']}] "
+                        f":gray-badge[:material/category: {row['sector_name']}] :gray-badge[{isin}]")
+            st.write(info["description"])
+            links = [f"NACE {info['nace']}"] if info["nace"] else []
+            if info["website_url"]:
+                links.append(f"[:material/open_in_new: {info['website_url'].split('//')[-1]}]({info['website_url']})")
+            if info["web_id"]:
+                links.append(f"web_id `{info['web_id']}`")
+            st.caption(" · ".join(links))
+            m1, m2, m3, m4 = st.columns(4)
+            m1.metric("Last price", f"€{row['last_price']:,.2f}", f"{row['change_pct']:+.2f}%",
+                      chart_data=px["last_price"].tail(60).tolist() or None, chart_type="area")
+            m2.metric("Market cap", compact(row["mcap"], "€"))
+            m3.metric("52-week range", f"{year['low_price'].min():,.2f} – {year['high_price'].max():,.2f}"
+                      if not year.empty else "–")
+            m4.metric("Avg daily turnover (30d)", compact(px["turnover"].tail(30).mean(), "€") if not px.empty else "–")
 
         d1, d2, d3, d4 = url_tabs("s_view", {"prices": "Price history", "financials": "Financials",
                                              "valuation": "Valuation", "indexes": "Index memberships"})
         with d1:
-            px = query("SELECT date, open_price, high_price, low_price, last_price, volume, turnover, num_trades "
-                       "FROM daily_prices WHERE stock_isin=:i ORDER BY date", {"i": isin})
             if px.empty:
-                st.info("No price data.")
+                st.info("No price data.", icon=":material/info:")
             else:
-                px["date"] = pd.to_datetime(px["date"])
-                st.line_chart(px.set_index("date")["last_price"])
-                st.dataframe(px.sort_values("date", ascending=False), hide_index=True, width="stretch")
+                shown = in_range(px, "date", range_picker("s_range"))
+                time_chart(shown, "date", "last_price", "Close (EUR)")
+                st.caption("Daily volume")
+                bar_chart(shown, "date", "volume", "Volume")
+                with st.expander("Daily prices", icon=":material/table:"):
+                    st.dataframe(px.sort_values("date", ascending=False), hide_index=True, width="stretch",
+                                 column_config=PRICE_COLS, placeholder="–")
         with d2:
-            fin = query("""SELECT r.period_end, r.period_type, r.source_file, f.revenue, f.ebitda, f.ebit, f.net_income,
-                                  f.earnings_per_share AS eps, f.total_assets, f.total_equity, f.roe, f.roa
+            fin = query("""SELECT r.period_end, r.period_type, r.currency, f.revenue, f.ebitda, f.ebit, f.net_income,
+                                  f.earnings_per_share AS eps, f.total_assets, f.total_equity, f.roe, f.roa, r.source_file
                            FROM reports r JOIN financials f ON f.report_id=r.report_id
                            WHERE r.stock_isin=:i ORDER BY r.period_end DESC""", {"i": isin})
-            st.dataframe(fin, hide_index=True, width="stretch")
+            if fin.empty:
+                st.info("No financial reports.", icon=":material/info:")
+            else:
+                yearly = fin[fin["period_type"] == "FY"]
+                chart_df = (yearly if not yearly.empty else fin).iloc[::-1].copy()
+                chart_df["period"] = chart_df["period_type"] + " " + pd.to_datetime(chart_df["period_end"]).dt.strftime(
+                    "%Y" if not yearly.empty else "%b %Y")
+                st.caption(f"Revenue and net income per {'fiscal year' if not yearly.empty else 'period'} "
+                           f"({chart_df['currency'].iloc[-1]})")
+                grouped_bars(chart_df, "period", {"revenue": "Revenue", "net_income": "Net income"})
+                st.dataframe(fin, hide_index=True, width="stretch", column_config=FIN_COLS, placeholder="–")
         with d3:
             val = query("""SELECT r.period_end, r.period_type, v.p_e, v.p_b, v.p_s, v.ev_s, v.net_debt_ebitda,
                                   v.dividend_per_share, v.dividend_yield
                            FROM reports r JOIN valuation_ratios v ON v.report_id=r.report_id
                            WHERE r.stock_isin=:i ORDER BY r.period_end DESC""", {"i": isin})
-            st.dataframe(val, hide_index=True, width="stretch")
+            if val.empty:
+                st.info("No valuation data.", icon=":material/info:")
+            else:
+                st.caption("Most recent value of each ratio (hover ⓘ for the report it comes from)")
+                v1, v2, v3, v4 = st.columns(4)
+                for col, (label, field, fmt) in zip((v1, v2, v3, v4), (
+                        ("P/E", "p_e", "{:.1f}"), ("P/B", "p_b", "{:.2f}"),
+                        ("Net debt / EBITDA", "net_debt_ebitda", "{:.2f}"), ("Dividend yield", "dividend_yield", "{:.2f}%"))):
+                    known = val[val[field].notna()]
+                    if known.empty:
+                        col.metric(label, "–", border=True)
+                    else:
+                        r0 = known.iloc[0]
+                        col.metric(label, fmt.format(r0[field]), border=True,
+                                   help=f"{r0['period_type']} report, period ending {r0['period_end']}")
+                st.dataframe(val, hide_index=True, width="stretch", column_config=FIN_COLS, placeholder="–")
         with d4:
             mem = query("""SELECT i.symbol AS index_symbol, i.name AS index_name, m.weight
                            FROM index_members m JOIN indexes i ON i.isin=m.index_isin WHERE m.stock_isin=:i""", {"i": isin})
-            st.dataframe(mem, hide_index=True, width="stretch")
+            if mem.empty:
+                st.info("Not a member of any index.", icon=":material/info:")
+            else:
+                st.dataframe(mem, hide_index=True, width="stretch", column_config={
+                    "index_symbol": st.column_config.TextColumn("Index"),
+                    "index_name": st.column_config.TextColumn("Name"),
+                    "weight": st.column_config.ProgressColumn("Weight in index", format="%.2f%%", min_value=0, max_value=100)})
 
 # ------------------------------------------------------------------ indexes
 with tab_idx:
     idx_df = query("SELECT isin, mic, symbol, name, last_value, change_prev_close_percentage AS change_pct FROM indexes ORDER BY symbol")
-    st.dataframe(idx_df, hide_index=True, width="stretch")
-    if not idx_df.empty:
-        sel = st.selectbox("Index", idx_df["symbol"], key="i_index", bind="query-params")
-        iso = idx_df.loc[idx_df["symbol"] == sel, "isin"].iloc[0]
+    if idx_df.empty:
+        st.info("No indexes in the database.", icon=":material/info:")
+    else:
+        idx_trends = series_trends(st.session_state["db_url"], "index_values", "index_isin", "last_value")
+        for start in range(0, len(idx_df), 4):
+            for col, r in zip(st.columns(4), idx_df.iloc[start:start + 4].itertuples(index=False)):
+                col.metric(r.symbol, f"{r.last_value:,.2f}", f"{r.change_pct:+.2f}%", help=r.name, border=True,
+                           chart_data=idx_trends.get(r.isin) or None, chart_type="area")
+        st.caption("Last value and change vs previous close · sparkline: last 90 days")
+
+        sel = st.segmented_control("Index", idx_df["symbol"].tolist(), default=idx_df["symbol"].iloc[0], required=True,
+                                   key="i_index", bind="query-params")
+        r = idx_df[idx_df["symbol"] == sel].iloc[0]
+        iso = r["isin"]
         vals = query("SELECT date, open_value, high_value, low_value, last_value, change_prev_close_percentage AS change_pct, turnover "
                      "FROM index_values WHERE index_isin=:i ORDER BY date", {"i": iso})
         vals["date"] = pd.to_datetime(vals["date"])
-        a, b = st.columns([3, 2])
+        a, b = st.columns(2, gap="medium")
         with a:
-            st.subheader("Value history")
-            st.line_chart(vals.set_index("date")["last_value"])
+            with st.container(border=True):
+                st.subheader(f"{r['name']}", anchor=False)
+                st.markdown(f":blue-badge[{r['symbol']}] :gray-badge[:material/account_balance: {r['mic']}] :gray-badge[{iso}]")
+                if vals.empty:
+                    st.info("No index values.", icon=":material/info:")
+                else:
+                    time_chart(in_range(vals, "date", range_picker("i_range")), "date", "last_value", r["symbol"], height=340)
         with b:
-            st.subheader("Members")
-            st.dataframe(query("""SELECT s.symbol, s.name, m.weight, s.last_price, s.change_prev_close_percentage AS change_pct
-                                  FROM index_members m JOIN stocks s ON s.isin=m.stock_isin
-                                  WHERE m.index_isin=:i ORDER BY m.weight DESC""", {"i": iso}),
-                         hide_index=True, width="stretch")
-        with st.expander("Raw index values"):
-            st.dataframe(vals.sort_values("date", ascending=False), hide_index=True, width="stretch")
+            with st.container(border=True):
+                st.subheader("Members", anchor=False)
+                st.dataframe(query("""SELECT s.symbol, s.name, m.weight, s.last_price, s.change_prev_close_percentage AS change_pct
+                                      FROM index_members m JOIN stocks s ON s.isin=m.stock_isin
+                                      WHERE m.index_isin=:i ORDER BY m.weight DESC""", {"i": iso})
+                             .style.map(signed_color, subset=["change_pct"]),
+                             hide_index=True, width="stretch", height=430,
+                             column_order=["symbol", "name", "weight"], column_config={
+                                 **STOCK_COLS, "name": st.column_config.TextColumn("Company", width="medium"),
+                                 "weight": st.column_config.ProgressColumn("Weight", format="%.1f%%", min_value=0, max_value=100)})
+        with st.expander("Raw index values", icon=":material/table:"):
+            st.dataframe(vals.sort_values("date", ascending=False), hide_index=True, width="stretch", column_config={
+                "date": st.column_config.DateColumn("Date"),
+                **{c: st.column_config.NumberColumn(c.replace("_value", "").capitalize(), format="%.2f")
+                   for c in ("open_value", "high_value", "low_value", "last_value")},
+                "change_pct": st.column_config.NumberColumn("Change", format="%+.2f%%"),
+                "turnover": st.column_config.NumberColumn("Turnover", format="compact")})
 
 # ---------------------------------------------------------------- financials
 with tab_fin:
     url = st.session_state["db_url"]
-    f1, f2, f3, f4 = st.columns(4)
-    f_period = f1.multiselect("Period type", ["Q1", "Q2", "Q3", "Q4", "1H", "FY"], default=["FY"],
-                              key="f_period", bind="query-params")
-    f_src = f2.multiselect("Source country", distinct(url, "SELECT DISTINCT source_type FROM reports ORDER BY 1"),
-                           key="f_country", bind="query-params")
-    year_sql = ("SELECT DISTINCT substr(period_end,1,4) FROM reports ORDER BY 1" if url.startswith("sqlite") else
-                "SELECT DISTINCT EXTRACT(YEAR FROM period_end) FROM reports ORDER BY 1")
-    # plain ints (EXTRACT returns Decimal('2025')) so the URL reads ?f_year=2025
-    f_year = f3.multiselect("Year", [int(float(y)) for y in distinct(url, year_sql)], key="f_year", bind="query-params")
-    f_q = f4.text_input("Company name / symbol", key="f_q", bind="query-params")
+    with st.container(border=True):
+        f1, f2, f3, f4 = st.columns(4)
+        f_period = f1.multiselect("Period type", ["Q1", "Q2", "Q3", "Q4", "1H", "FY"], default=["FY"],
+                                  key="f_period", bind="query-params", placeholder="All periods")
+        f_src = f2.multiselect("Source country", distinct(url, "SELECT DISTINCT source_type FROM reports ORDER BY 1"),
+                               key="f_country", bind="query-params", placeholder="All countries")
+        year_sql = ("SELECT DISTINCT substr(period_end,1,4) FROM reports ORDER BY 1" if url.startswith("sqlite") else
+                    "SELECT DISTINCT EXTRACT(YEAR FROM period_end) FROM reports ORDER BY 1")
+        # plain ints (EXTRACT returns Decimal('2025')) so the URL reads ?f_year=2025
+        f_year = f3.multiselect("Year", [int(float(y)) for y in distinct(url, year_sql)], key="f_year",
+                                bind="query-params", placeholder="All years")
+        f_q = f4.text_input("Company name / symbol", key="f_q", bind="query-params", icon=":material/search:")
     where, params = ["1=1"], {}
     if f_period:
         where.append(in_clause("r.period_type", f_period, "p", params))
@@ -246,35 +522,41 @@ with tab_fin:
                     JOIN financials f ON f.report_id=r.report_id
                     LEFT JOIN valuation_ratios v ON v.report_id=r.report_id
                     WHERE {' AND '.join(where)} ORDER BY r.period_end DESC, s.name""", params)
-    st.caption(f"{len(fdf)} rows")
-    st.dataframe(fdf, hide_index=True, width="stretch")
-    st.download_button("Download CSV", fdf.to_csv(index=False), "financials.csv", "text/csv")
+    h1, h2 = st.columns([4, 1], vertical_alignment="bottom")
+    h1.caption(f"{len(fdf):,} reports · {fdf['symbol'].nunique() if len(fdf) else 0} companies")
+    h2.download_button("Download CSV", fdf.to_csv(index=False), "financials.csv", "text/csv",
+                       icon=":material/download:", width="stretch")
+    st.dataframe(fdf, hide_index=True, width="stretch", height=560, column_config=FIN_COLS, placeholder="–")
 
 # -------------------------------------------------------------- table browser
 with tab_tables:
-    t = st.selectbox("Table", tables, key="t_table", bind="query-params",  # sort column belongs to the old table
-                     on_change=lambda: st.session_state.update(t_sort="(none)"))
-    cols = [c["name"] for c in inspect(get_engine(st.session_state["db_url"])).get_columns(t)]
-    g1, g2, g3, g4 = st.columns([3, 2, 2, 1])
-    s_all = g1.text_input("Search across all columns", key="t_q", bind="query-params")
-    s_col = g2.selectbox("Sort by", ["(none)"] + cols, key="t_sort", bind="query-params")
-    s_dir = g3.radio("Direction", ["ASC", "DESC"], horizontal=True, key="t_dir", bind="query-params")
-    lim = g4.number_input("Limit", 10, 100000, 500, step=100, key="t_limit", bind="query-params")
+    with st.container(border=True):
+        g0, g1, g2, g3, g4 = st.columns([2, 3, 2, 2, 1])
+        t = g0.selectbox("Table", tables, key="t_table", bind="query-params",  # sort column belongs to the old table
+                         on_change=lambda: st.session_state.update(t_sort="(none)"))
+        cols = [c["name"] for c in inspect(get_engine(st.session_state["db_url"])).get_columns(t)]
+        s_all = g1.text_input("Search across all columns", key="t_q", bind="query-params", icon=":material/search:")
+        s_col = g2.selectbox("Sort by", ["(none)"] + cols, key="t_sort", bind="query-params")
+        s_dir = g3.segmented_control("Direction", ["Asc", "Desc"], default="Asc", required=True, key="t_dir",
+                                     bind="query-params")
+        lim = g4.number_input("Limit", 10, 100000, 500, step=100, key="t_limit", bind="query-params")
     params = {}
     sql = f'SELECT * FROM "{t}"'
     if s_all:
         params["q"] = f"%{s_all.lower()}%"
         sql += " WHERE " + " OR ".join(f'LOWER(CAST("{c}" AS TEXT)) LIKE :q' for c in cols)
     if s_col != "(none)":
-        sql += f' ORDER BY "{s_col}" {s_dir}'
+        sql += f' ORDER BY "{s_col}" {s_dir.upper()}'
     sql += f" LIMIT {int(lim)}"
     tdf = query(sql, params)
-    st.caption(f"{len(tdf)} rows shown")
-    st.dataframe(tdf, hide_index=True, width="stretch")
-    st.download_button("Download CSV", tdf.to_csv(index=False), f"{t}.csv", "text/csv")
-    with st.expander("Columns"):
+    h1, h2 = st.columns([4, 1], vertical_alignment="bottom")
+    h1.caption(f"`{t}` · {len(tdf):,} rows shown")
+    h2.download_button("Download CSV", tdf.to_csv(index=False), f"{t}.csv", "text/csv",
+                       icon=":material/download:", width="stretch")
+    st.dataframe(tdf, hide_index=True, width="stretch", height=560, placeholder="NULL")
+    with st.expander("Columns", icon=":material/view_column:"):
         st.dataframe(pd.DataFrame(inspect(get_engine(st.session_state["db_url"])).get_columns(t))[["name", "type", "nullable"]]
-                     .astype(str), hide_index=True)
+                     .astype(str), hide_index=True, width="stretch")
 
 # -------------------------------------------------------------------- schema
 SCHEMA_FILE = Path(__file__).with_name("schema.sql")
@@ -451,7 +733,7 @@ def schema_to_dot(schema: dict, tables: list[str], keys_only: bool, rankdir: str
 GRAPHVIZ_JS = Path(__file__).with_name("vendor") / "hpcc-js-wasm-graphviz" / "graphviz.js"
 
 _ZOOM_VIEWER = """
-<div id="wrap">
+<div id="wrap" class="__THEME__">
   <div id="toolbar">
     <button id="zin" title="Zoom in">+</button>
     <button id="zout" title="Zoom out">&minus;</button>
@@ -480,6 +762,11 @@ _ZOOM_VIEWER = """
   #toolbar button:hover { background: #2a3140; }
   #pct { font-size: 12px; color: #fff; background: rgba(46,90,172,.9); padding: 4px 6px; border-radius: 6px; }
   #msg { padding: 16px; color: #aaa; }
+  /* light app theme: light canvas + toolbar (the tables themselves are white in both) */
+  #wrap.light { background: #f2f1ee; border-color: #e3e2de; }
+  #wrap.light #toolbar button { background: #fcfcfb; color: #1b1b19; border-color: #d6d5d0; }
+  #wrap.light #toolbar button:hover { background: #e9e8e4; }
+  #wrap.light #msg { color: #52514e; }
 </style>
 <script type="module">
 const DOT = __DOT__;
@@ -706,13 +993,14 @@ def render_zoomable_dot(dot: str, edges: list[dict], height: int) -> None:
 
     values = {
         "H": str(height),
+        "THEME": "dark" if st.context.theme.type == "dark" else "light",
         "KEY": hashlib.sha1(dot.encode("utf-8")).hexdigest()[:16],
         "EDGES": js(edges),
         "DOT": js(dot),
         "GVSRC": _graphviz_js_literal(),
     }
     # single pass, so placeholder-like text inside the DOT or the bundle is never substituted
-    page = re.sub(r"__(H|KEY|EDGES|DOT|GVSRC)__", lambda m: values[m.group(1)], _ZOOM_VIEWER)
+    page = re.sub(r"__(H|THEME|KEY|EDGES|DOT|GVSRC)__", lambda m: values[m.group(1)], _ZOOM_VIEWER)
     st.iframe(page, height=height + 4)
 
 
@@ -721,7 +1009,7 @@ with tab_schema:
     src = s1.radio("Source", ["schema.sql file", "Live database"], horizontal=True, key="sch_src", bind="query-params")
     schema_path = s2.text_input("Schema file", str(SCHEMA_FILE), key="schema_path", disabled=src == "Live database")
     s3.write("")
-    if s3.button("🔄 Refresh schema", width="stretch"):
+    if s3.button("Refresh schema", icon=":material/refresh:", width="stretch"):
         st.session_state.pop("schema_data", None)
 
     cache_key = (src, schema_path if src != "Live database" else st.session_state["db_url"])
@@ -797,32 +1085,36 @@ def _load_example():
 
 
 with tab_sql:
-    st.selectbox("Examples", list(EXAMPLES), key="sql_ex", on_change=_load_example, bind="query-params")
-    sql_text = st.text_area("SQL", value=DEFAULT_SQL, height=180, key="sql", bind="query-params")
-    # deliberately not URL-bound: a link must never switch writes on
-    allow_write = st.checkbox("Allow write statements (INSERT / UPDATE / DELETE / DDL)", value=False)
-    if st.button("▶ Run", type="primary"):
+    with st.container(border=True):
+        st.selectbox("Examples", list(EXAMPLES), key="sql_ex", on_change=_load_example, bind="query-params")
+        sql_text = st.text_area("SQL", value=DEFAULT_SQL, height=180, key="sql", bind="query-params")
+        b1, b2 = st.columns([1, 4], vertical_alignment="center")
+        run = b1.button("Run", type="primary", icon=":material/play_arrow:", width="stretch")
+        # deliberately not URL-bound: a link must never switch writes on
+        allow_write = b2.toggle("Allow write statements (INSERT / UPDATE / DELETE / DDL)", value=False)
+    if run:
         stmt = sql_text.strip().rstrip(";")
         is_read = stmt.lower().split(None, 1)[0] in ("select", "with", "explain", "show", "values") if stmt else False
         if not stmt:
-            st.warning("Empty query.")
+            st.warning("Empty query.", icon=":material/warning:")
         elif not is_read and not allow_write:
-            st.error("Only read queries are allowed. Tick the checkbox above to enable writes.")
+            st.error("Only read queries are allowed. Switch on writes above to run this statement.", icon=":material/block:")
         else:
             try:
                 if is_read:
-                    res = query(stmt)
-                    st.session_state["sql_res"] = res
-                    st.success(f"{len(res)} rows")
+                    st.session_state["sql_res"] = query(stmt)
                 else:
                     with get_engine(st.session_state["db_url"]).begin() as conn:
                         r = conn.execute(text(stmt))
                     st.session_state["sql_res"] = None
-                    st.success(f"Done. Rows affected: {r.rowcount}")
+                    st.success(f"Done. Rows affected: {r.rowcount}", icon=":material/check_circle:")
             except Exception as e:  # noqa: BLE001
                 st.session_state["sql_res"] = None
-                st.error(str(e))
+                st.error(str(e), icon=":material/error:")
     res = st.session_state.get("sql_res")
     if res is not None:
+        h1, h2 = st.columns([4, 1], vertical_alignment="bottom")
+        h1.caption(f"{len(res):,} rows")
+        h2.download_button("Download CSV", res.to_csv(index=False), "query_result.csv", "text/csv",
+                           icon=":material/download:", width="stretch")
         st.dataframe(res, hide_index=True, width="stretch")
-        st.download_button("Download CSV", res.to_csv(index=False), "query_result.csv", "text/csv")
