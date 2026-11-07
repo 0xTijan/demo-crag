@@ -150,3 +150,35 @@ CREATE TABLE IF NOT EXISTS report_file_errors (
     occurred_at TIMESTAMPTZ DEFAULT now(),
     converter   TEXT                                 -- pipeline that hit the error
 );
+
+-- ==========================
+-- 6. Downloaded report / announcement PDFs (dataPipeline/download)
+-- ==========================
+-- Companies are the rows of `stocks`; the website to crawl is stocks.website_url.
+CREATE TABLE IF NOT EXISTS downloaded_files (
+    download_id   SERIAL PRIMARY KEY,
+    stock_isin    CHAR(12) NOT NULL REFERENCES stocks(isin) ON DELETE CASCADE,
+    category      TEXT        NOT NULL CHECK (category IN ('reports','announcements','other')),
+    source_url    TEXT        NOT NULL,
+    page_url      TEXT,                              -- page the link was found on
+    link_text     TEXT,
+    file_path     TEXT        NOT NULL,              -- relative to reports/
+    file_hash     CHAR(64)    NOT NULL,              -- SHA-256 of the PDF bytes
+    file_size     BIGINT,
+    fiscal_year   INT,                               -- guessed from link text / URL
+    downloaded_at TIMESTAMPTZ DEFAULT now(),
+    UNIQUE (stock_isin, source_url)
+);
+CREATE INDEX IF NOT EXISTS downloaded_files_hash_idx ON downloaded_files (stock_isin, file_hash);
+
+CREATE TABLE IF NOT EXISTS download_errors (
+    error_id    SERIAL PRIMARY KEY,
+    stock_isin  CHAR(12) REFERENCES stocks(isin) ON DELETE CASCADE,
+    url         TEXT,
+    stage       TEXT NOT NULL,  -- website | english_version | robots | crawl | render | head_check | download | verify | write | db | company
+    error       TEXT NOT NULL,
+    http_status INT,
+    traceback   TEXT,
+    occurred_at TIMESTAMPTZ DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (stock_isin, occurred_at DESC);

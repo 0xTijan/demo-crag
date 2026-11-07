@@ -84,7 +84,7 @@ Requirements:
 
 - `reports/` exists at the repo root (gitignored; you put PDFs there, subfolders allowed).
 - PostgreSQL reachable through `DATABASE_URL` (environment variable or `.env`). Default: `postgresql+psycopg2://username:postgres@localhost:5432/postgres`.
-- Python packages: `docling`, `pdfplumber`, `sqlalchemy`, `psycopg2`, `python-dotenv`; `ollama` and `pypdfium2` only if the vision fallback is needed.
+- Python packages: `pip install -r requirements.txt` (repo root). The converter uses `docling`, `pdfplumber`, `SQLAlchemy`, `psycopg2-binary`, `python-dotenv`; `ollama` and `pypdfium2` only matter for the vision fallback.
 - Ollama running with `qwen2.5vl:7b` pulled, only if some page triggers the fallback. The model is configured in `config.json`:
 
 ```json
@@ -95,6 +95,7 @@ Output:
 
 - `markdowns/<same path as the PDF>.md`. `markdowns/` is gitignored. `reports/a/b.pdf` becomes `markdowns/a/b.md`.
 - Rows in `report_files` and `report_file_errors`.
+- A copy of everything printed, in `logs/convert_docling_<date>_<time>.log` at the repo root (one file per run, gitignored; written by `helpers/run_log.py`).
 - Exit code `0` if nothing failed, `1` if any PDF failed.
 
 A typical log, with what each line means:

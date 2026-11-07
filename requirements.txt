@@ -1,0 +1,25 @@
+# Python packages for the whole repository.
+# Install from the repo root:  pip install -r requirements.txt
+# Pinned (==) = versions the code was run with. Unpinned = not installed where this
+# file was written, so no version has been tested: pin them once they work for you.
+
+# --- dataPipeline/download: company website -> PDFs ---
+httpx==0.28.1
+beautifulsoup4==4.15.0
+playwright==1.64.1             # then, once:  python -m playwright install chromium  (only for JavaScript sites)
+cryptography==50.0.1           # repairs servers that send an incomplete TLS certificate chain
+
+# --- dataPipeline/convert: PDF -> Markdown ---
+docling                        # also installs docling-core
+pdfplumber==0.11.10
+pypdfium2==5.13.0              # vision-OCR fallback
+
+# --- shared: PostgreSQL, configuration, LLM client ---
+SQLAlchemy==2.1.8
+psycopg2-binary==2.9.13
+python-dotenv==1.2.3
+ollama                         # rag/ and the vision-OCR fallback
+
+# --- db_gui.py ---
+streamlit
+pandas==3.0.5

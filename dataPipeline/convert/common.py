@@ -29,6 +29,8 @@ from typing import Callable
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
 
+from helpers.run_log import start_run_log
+
 load_dotenv()  # read DATABASE_URL etc. from a local .env file, if present
 
 ROOT = Path(__file__).resolve().parents[2]  # repository root
@@ -338,6 +340,7 @@ def run_pipeline(converter: str, version: str, output_dir: Path,
     parser = argparse.ArgumentParser(description=description)
     parser.add_argument("--force", action="store_true", help="reconvert every PDF, ignoring the hash table")
     args = parser.parse_args()
+    start_run_log(f"convert_{converter}")  # copy everything printed below to logs/convert_<converter>_<time>.log
 
     if not INPUT_DIR.exists():
         sys.exit(f"Input folder not found: {INPUT_DIR}")
