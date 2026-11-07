@@ -3,7 +3,7 @@ import hashlib
 import re
 import unicodedata
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import unquote, unquote_plus, urlsplit
 
 from .crawler import PdfLink
 from .fetcher import FetchError, Fetcher
@@ -24,6 +24,16 @@ def slugify(text: str, max_len: int = 80) -> str:
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
     text = re.sub(r"[^a-zA-Z0-9]+", "-", text).strip("-").lower()
     return text[:max_len].rstrip("-") or "document"
+
+
+def name_key(url: str) -> str | None:
+    """File name of a PDF URL for `--skip-by-name`: last path part, query ignored, lower case.
+
+    Returns None when the URL path does not end in .pdf (e.g. /download?id=5), because then
+    the path says nothing about which document it is.
+    """
+    name = unquote_plus(urlsplit(url).path).rsplit("/", 1)[-1].strip().lower()
+    return " ".join(name.split()) if name.endswith(".pdf") else None
 
 
 def guess_year(pdf: PdfLink) -> int | None:

@@ -90,6 +90,7 @@ The key design point: **the crawler returns data and writes nothing.** `crawl()`
 python -m dataPipeline.download.run                          # every company in stocks
 python -m dataPipeline.download.run --isin SI0031890831      # one company
 python -m dataPipeline.download.run --isin SI0031890831 SI0031104332   # several
+python -m dataPipeline.download.run --skip-by-name           # only download file names not saved before
 python -m dataPipeline.download.run --dry-run                # list PDFs, download nothing
 python -m dataPipeline.download.run --force                  # download again even if recorded
 ```
@@ -103,6 +104,7 @@ Run it from the repository root (the `-m` form needs the root on the path).
 | `--max-pages N` | 150 | Pages crawled per site |
 | `--max-depth N` | 3 | Link depth from the English homepage |
 | `--js auto\|always\|never` | `auto` | Render pages with Playwright: decide per site, always, or never |
+| `--skip-by-name` | off | Also skip a PDF whose file name was already saved for this company, even under a different URL (see 8) |
 | `--dry-run` | off | List what would be downloaded; write nothing |
 | `--force` | off | Download again even if the URL is recorded and the file exists |
 
@@ -129,13 +131,13 @@ A typical log, with what each line means:
     ! [crawl] http://ar2013.triglav.eu/ FetchError: ConnectError ... # a failure, also saved in download_errors
     English site: https://www.triglav.eu/en (language_switcher); 118 pages; 591 PDF links
       + triglavska-zavarovalnica-d-d/reports/2024_..._8ead0c46.pdf   # a new file was saved
-    found: 590, downloaded: 103, skipped: 455, duplicates: 31, failed: 1
-Done in 1002s - found: 590, downloaded: 103, skipped: 455, duplicates: 31, failed: 1
+    found: 590, downloaded: 103, skipped: 455, same_name: 0, duplicates: 31, failed: 1
+Done in 1002s - found: 590, downloaded: 103, skipped: 455, same_name: 0, duplicates: 31, failed: 1
 Failures are in the download_errors table.
 ```
 
 - `English site: <url> (<how>)`: `how` is `hreflang`, `html_lang`, `language_switcher`, `path_probe` or `not_found`. `118 pages` is how many pages were fetched; `591 PDF links` how many `.pdf` links were seen before filtering.
-- `found`: PDFs that passed `wanted()`. `downloaded`: new files. `skipped`: the URL was recorded and the file exists. `duplicates`: the bytes already existed under another URL (nothing new saved). `failed`: the download or the database write failed.
+- `found`: PDFs that passed `wanted()`. `downloaded`: new files. `skipped`: the URL was recorded and the file exists. `same_name`: skipped by `--skip-by-name` (0 without the flag). `duplicates`: the bytes already existed under another URL (nothing new saved). `failed`: the download or the database write failed.
 
 ---
 
@@ -277,7 +279,19 @@ The temporary file is always removed, also on errors. Failures raise `DownloadEr
 
 1. Parse arguments and start the run log (`helpers/run_log.py` → `logs/download_<time>.log`).
 2. Connect, create the two tables, load the companies (`db.load_companies`, filtered by `--isin`/`--limit`).
-3. For each company (`process_company`): crawl; keep `wanted` PDFs; for each, compute its category; skip if recorded with the file present (unless `--force`); otherwise download and write the `downloaded_files` row.
+3. For each company (`process_company`): crawl; keep `wanted` PDFs; for each, compute its category; skip if recorded with the file present (unless `--force`); with `--skip-by-name` also skip if the file name is already known (below); otherwise download and write the `downloaded_files` row.
+**What counts as "already downloaded".** The crawl always looks at the whole website. Then, per PDF:
+
+| Check | When | Compares | Cost when it matches |
+|---|---|---|---|
+| Same URL | always | the full `source_url` (query included) in `downloaded_files`, file still on disk | no request |
+| Same file name (`--skip-by-name`) | only with the flag | the last part of the URL path, query ignored, lower case, `+`/`%20` read as spaces (`name_key` in `downloader.py`) | no request |
+| Same content | always, after downloading | SHA-256 | the file is downloaded, then discarded (`duplicates`) |
+
+The flag is for sites whose links change while the documents do not (a cache id or session in the query, a new folder). Without it each such link is downloaded again and only then recognised as a duplicate. It only applies to URLs that end in `.pdf`; a link like `/download?id=5` has no usable name and is always matched by URL. Names are compared with the URLs recorded in `downloaded_files`, so a name counts only if its file is still on disk, and a name seen earlier in the same run counts too.
+
+Trade-off: two different documents with the same file name (`report.pdf` in a 2023 and a 2024 folder) are treated as one, and the second is skipped. Use the flag when you check for new reports on companies you already downloaded; leave it off for a first full download.
+
 4. One bad company never stops the run: an unexpected exception is stored as stage `company` and the next company starts.
 5. Close the browser and HTTP client, print the totals.
 
@@ -383,6 +397,7 @@ When a PDF is missed or wrongly kept, find out which rule decided: the page may 
 - Sites on other domains are followed only through iframes. Direct `.pdf` links to other domains are downloaded.
 - `robots.txt` is checked for crawled pages, not for PDF downloads.
 - Documents that exist only on old sites that no longer resolve cannot be fetched.
+- `--skip-by-name` trusts the file name only: different documents with the same name are skipped, and a document re-published under the same name with new content is not downloaded again (use `--force`).
 - Slow by design: one request per second per host and one company at a time. A big site takes tens of minutes.
 - Every run crawls again before downloading, even when all files are already on disk.
 - `download_errors` grows with every run and is never cleaned.
