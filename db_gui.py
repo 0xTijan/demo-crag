@@ -44,6 +44,27 @@ def in_clause(col: str, values: list, prefix: str, params: dict) -> str:
     return f"{col} IN ({', '.join(names)})"
 
 
+# UI state lives in the URL so a page refresh (or a shared link) restores it. Widgets use Streamlit's
+# bind="query-params" (key = query parameter name, default values are left out of the URL); tabs go
+# through url_tabs() so the URL holds a short slug instead of the emoji label.
+def url_tabs(param: str, tabs: dict[str, str]):
+    """st.tabs ({slug: label}) whose active tab is kept in the URL as ?<param>=<slug>."""
+    slugs = {label: slug for slug, label in tabs.items()}
+    first = next(iter(tabs))
+
+    def sync():
+        slug = slugs[st.session_state[param]]
+        if slug == first:
+            st.query_params.pop(param, None)
+        else:
+            st.query_params[param] = slug
+
+    if param in st.query_params and st.query_params[param] not in tabs:
+        st.query_params.pop(param)  # unknown slug: fall back to the first tab
+    default = tabs[st.query_params.get(param, first)]
+    return st.tabs(list(tabs.values()), key=param, default=default, on_change=sync)
+
+
 with st.sidebar:
     st.header("Connection")
     st.session_state["db_url"] = st.text_input("Database URL", DEFAULT_URL, type="password")
@@ -66,27 +87,32 @@ with st.sidebar:
                 pass
 
 st.title("📈 RAG DB Explorer")
-tab_stocks, tab_idx, tab_fin, tab_tables, tab_schema, tab_sql = st.tabs(
-    ["🔎 Stocks", "📊 Indexes", "🧾 Financials", "🗂️ Tables", "🧬 Schema", "⌨️ SQL"]
-)
+tab_stocks, tab_idx, tab_fin, tab_tables, tab_schema, tab_sql = url_tabs("tab", {
+    "stocks": "🔎 Stocks", "indexes": "📊 Indexes", "financials": "🧾 Financials",
+    "tables": "🗂️ Tables", "schema": "🧬 Schema", "sql": "⌨️ SQL",
+})
 
 # ------------------------------------------------------------------- stocks
 with tab_stocks:
     url = st.session_state["db_url"]
     c1, c2, c3 = st.columns([2, 2, 3])
-    mics = c1.multiselect("Exchange (MIC)", distinct(url, "SELECT DISTINCT mic FROM stocks ORDER BY 1"))
-    sectors = c2.multiselect("Sector", distinct(url, "SELECT DISTINCT sector_name FROM stocks ORDER BY 1"))
-    search = c3.text_input("Search name / symbol / ISIN / description", placeholder="e.g. hydro, bank, SAVB ...")
+    mics = c1.multiselect("Exchange (MIC)", distinct(url, "SELECT DISTINCT mic FROM stocks ORDER BY 1"),
+                          key="s_mic", bind="query-params")
+    sectors = c2.multiselect("Sector", distinct(url, "SELECT DISTINCT sector_name FROM stocks ORDER BY 1"),
+                             key="s_sector", bind="query-params")
+    search = c3.text_input("Search name / symbol / ISIN / description", placeholder="e.g. hydro, bank, SAVB ...",
+                           key="s_q", bind="query-params")
 
     c4, c5, c6 = st.columns([2, 3, 3])
     idx_opts = {"(any)": None}
     for iso, sym in query("SELECT isin, symbol FROM indexes ORDER BY symbol").itertuples(index=False):
         idx_opts[sym] = iso
-    idx_choice = c4.selectbox("Member of index", list(idx_opts))
+    idx_choice = c4.selectbox("Member of index", list(idx_opts), key="s_index", bind="query-params")
     quick = c5.radio("Quick filter", ["All", "Top gainers", "Top losers", "Largest market cap", "Highest price"],
-                     horizontal=True)
+                     horizontal=True, key="s_sort", bind="query-params")
     price_max = float(query("SELECT COALESCE(MAX(last_price),0) AS m FROM stocks")["m"][0] or 0)
-    price_rng = c6.slider("Last price range (EUR)", 0.0, max(price_max, 1.0), (0.0, max(price_max, 1.0)))
+    price_rng = c6.slider("Last price range (EUR)", 0.0, max(price_max, 1.0), (0.0, max(price_max, 1.0)),
+                          key="s_price", bind="query-params")
 
     where, params = ["last_price BETWEEN :pmin AND :pmax"], {"pmin": price_rng[0], "pmax": price_rng[1]}
     if mics:
@@ -109,12 +135,23 @@ with tab_stocks:
             FROM stocks WHERE {' AND '.join(where)} ORDER BY {order}""", params)
 
     st.caption(f"{len(df)} stocks · click a row to see details")
+    # the selected stock is kept in the URL by ISIN (row positions shift when filters change); the table key
+    # follows the rows shown, so a new result set starts from the URL selection instead of a stale row position
+    url_isin = st.query_params.get("s_isin")
+    url_rows = [i for i, v in enumerate(df["isin"]) if v == url_isin][:1]
     ev = st.dataframe(df, hide_index=True, width="stretch", on_select="rerun", selection_mode="single-row",
-                      column_config={"change_pct": st.column_config.NumberColumn("change %", format="%.2f")})
+                      column_config={"change_pct": st.column_config.NumberColumn("change %", format="%.2f")},
+                      key="s_table_" + hashlib.sha1("|".join(df["isin"]).encode()).hexdigest()[:12],
+                      selection_default={"selection": {"rows": url_rows}} if url_rows else None)
 
-    if ev.selection.rows:
+    if not ev.selection.rows:
+        st.query_params.pop("s_isin", None)
+        st.query_params.pop("s_view", None)
+        st.session_state.pop("s_view", None)  # next selected stock opens on the first detail tab
+    else:
         row = df.iloc[ev.selection.rows[0]]
         isin = row["isin"]
+        st.query_params["s_isin"] = isin
         st.divider()
         st.subheader(f"{row['name']} ({row['symbol']}) · {row['isin']}")
         info = query("SELECT description, nace, website_url, logo_url, web_id FROM stocks WHERE isin=:i", {"i": isin}).iloc[0]
@@ -125,7 +162,8 @@ with tab_stocks:
         st.write(info["description"])
         st.caption(f"NACE: {info['nace']} · {info['website_url']} · web_id: {info['web_id']}")
 
-        d1, d2, d3, d4 = st.tabs(["Price history", "Financials", "Valuation", "Index memberships"])
+        d1, d2, d3, d4 = url_tabs("s_view", {"prices": "Price history", "financials": "Financials",
+                                             "valuation": "Valuation", "indexes": "Index memberships"})
         with d1:
             px = query("SELECT date, open_price, high_price, low_price, last_price, volume, turnover, num_trades "
                        "FROM daily_prices WHERE stock_isin=:i ORDER BY date", {"i": isin})
@@ -157,7 +195,7 @@ with tab_idx:
     idx_df = query("SELECT isin, mic, symbol, name, last_value, change_prev_close_percentage AS change_pct FROM indexes ORDER BY symbol")
     st.dataframe(idx_df, hide_index=True, width="stretch")
     if not idx_df.empty:
-        sel = st.selectbox("Index", idx_df["symbol"], key="idx_sel")
+        sel = st.selectbox("Index", idx_df["symbol"], key="i_index", bind="query-params")
         iso = idx_df.loc[idx_df["symbol"] == sel, "isin"].iloc[0]
         vals = query("SELECT date, open_value, high_value, low_value, last_value, change_prev_close_percentage AS change_pct, turnover "
                      "FROM index_values WHERE index_isin=:i ORDER BY date", {"i": iso})
@@ -179,21 +217,23 @@ with tab_idx:
 with tab_fin:
     url = st.session_state["db_url"]
     f1, f2, f3, f4 = st.columns(4)
-    f_period = f1.multiselect("Period type", ["Q1", "Q2", "Q3", "Q4", "1H", "FY"], default=["FY"])
-    f_src = f2.multiselect("Source country", distinct(url, "SELECT DISTINCT source_type FROM reports ORDER BY 1"))
-    f_year = f3.multiselect("Year", distinct(url, "SELECT DISTINCT EXTRACT(YEAR FROM period_end) FROM reports ORDER BY 1")
-                            if not url.startswith("sqlite") else
-                            distinct(url, "SELECT DISTINCT substr(period_end,1,4) FROM reports ORDER BY 1"))
-    f_q = f4.text_input("Company name / symbol", key="fin_q")
+    f_period = f1.multiselect("Period type", ["Q1", "Q2", "Q3", "Q4", "1H", "FY"], default=["FY"],
+                              key="f_period", bind="query-params")
+    f_src = f2.multiselect("Source country", distinct(url, "SELECT DISTINCT source_type FROM reports ORDER BY 1"),
+                           key="f_country", bind="query-params")
+    year_sql = ("SELECT DISTINCT substr(period_end,1,4) FROM reports ORDER BY 1" if url.startswith("sqlite") else
+                "SELECT DISTINCT EXTRACT(YEAR FROM period_end) FROM reports ORDER BY 1")
+    # plain ints (EXTRACT returns Decimal('2025')) so the URL reads ?f_year=2025
+    f_year = f3.multiselect("Year", [int(float(y)) for y in distinct(url, year_sql)], key="f_year", bind="query-params")
+    f_q = f4.text_input("Company name / symbol", key="f_q", bind="query-params")
     where, params = ["1=1"], {}
     if f_period:
         where.append(in_clause("r.period_type", f_period, "p", params))
     if f_src:
         where.append(in_clause("r.source_type", f_src, "c", params))
     if f_year:
-        years = [int(float(y)) for y in f_year]
         ycol = "CAST(substr(r.period_end,1,4) AS INTEGER)" if url.startswith("sqlite") else "EXTRACT(YEAR FROM r.period_end)"
-        where.append(in_clause(ycol, years, "y", params))
+        where.append(in_clause(ycol, f_year, "y", params))
     if f_q:
         params["q"] = f"%{f_q.lower()}%"
         where.append("(LOWER(s.name) LIKE :q OR LOWER(s.symbol) LIKE :q)")
@@ -212,13 +252,14 @@ with tab_fin:
 
 # -------------------------------------------------------------- table browser
 with tab_tables:
-    t = st.selectbox("Table", tables, key="tbl")
+    t = st.selectbox("Table", tables, key="t_table", bind="query-params",  # sort column belongs to the old table
+                     on_change=lambda: st.session_state.update(t_sort="(none)"))
     cols = [c["name"] for c in inspect(get_engine(st.session_state["db_url"])).get_columns(t)]
     g1, g2, g3, g4 = st.columns([3, 2, 2, 1])
-    s_all = g1.text_input("Search across all columns", key="tbl_q")
-    s_col = g2.selectbox("Sort by", ["(none)"] + cols)
-    s_dir = g3.radio("Direction", ["ASC", "DESC"], horizontal=True)
-    lim = g4.number_input("Limit", 10, 100000, 500, step=100)
+    s_all = g1.text_input("Search across all columns", key="t_q", bind="query-params")
+    s_col = g2.selectbox("Sort by", ["(none)"] + cols, key="t_sort", bind="query-params")
+    s_dir = g3.radio("Direction", ["ASC", "DESC"], horizontal=True, key="t_dir", bind="query-params")
+    lim = g4.number_input("Limit", 10, 100000, 500, step=100, key="t_limit", bind="query-params")
     params = {}
     sql = f'SELECT * FROM "{t}"'
     if s_all:
@@ -677,7 +718,7 @@ def render_zoomable_dot(dot: str, edges: list[dict], height: int) -> None:
 
 with tab_schema:
     s1, s2, s3 = st.columns([2, 3, 1])
-    src = s1.radio("Source", ["schema.sql file", "Live database"], horizontal=True, key="schema_src")
+    src = s1.radio("Source", ["schema.sql file", "Live database"], horizontal=True, key="sch_src", bind="query-params")
     schema_path = s2.text_input("Schema file", str(SCHEMA_FILE), key="schema_path", disabled=src == "Live database")
     s3.write("")
     if s3.button("🔄 Refresh schema", width="stretch"):
@@ -706,10 +747,10 @@ with tab_schema:
 
         o1, o2, o3, o4 = st.columns([4, 1, 1, 2])
         all_tables = sorted(schema)
-        shown = o1.multiselect("Tables", all_tables, default=all_tables, key=f"schema_tables_{hash(tuple(all_tables))}")
-        keys_only = o2.toggle("Keys only", key="schema_keys_only")
-        rankdir = "LR" if o3.toggle("Horizontal", value=True, key="schema_lr") else "TB"
-        view_h = o4.slider("Viewer height (px)", 300, 1600, 700, step=50, key="schema_view_h")
+        shown = o1.multiselect("Tables", all_tables, default=all_tables, key="sch_tables", bind="query-params")
+        keys_only = o2.toggle("Keys only", key="sch_keys", bind="query-params")
+        rankdir = "LR" if o3.toggle("Horizontal", value=True, key="sch_lr", bind="query-params") else "TB"
+        view_h = o4.slider("Viewer height (px)", 300, 1600, 700, step=50, key="sch_h", bind="query-params")
 
         if not shown:
             st.info("Select at least one table.")
@@ -747,9 +788,18 @@ EXAMPLES = {
     "Average P/E per sector": "SELECT s.sector_name, ROUND(AVG(v.p_e),2) AS avg_pe\nFROM valuation_ratios v JOIN reports r ON r.report_id=v.report_id\nJOIN stocks s ON s.isin=r.stock_isin\nWHERE r.period_type='FY' GROUP BY s.sector_name ORDER BY avg_pe;",
     "Index weights": "SELECT i.symbol AS idx, s.symbol, m.weight FROM index_members m\nJOIN indexes i ON i.isin=m.index_isin JOIN stocks s ON s.isin=m.stock_isin\nORDER BY i.symbol, m.weight DESC;",
 }
+DEFAULT_SQL = "SELECT * FROM stocks LIMIT 20;"
+
+
+def _load_example():
+    # a bound widget can only be changed through session state (Streamlit logs a one-off harmless warning)
+    st.session_state["sql"] = EXAMPLES[st.session_state["sql_ex"]] or DEFAULT_SQL
+
+
 with tab_sql:
-    ex = st.selectbox("Examples", list(EXAMPLES))
-    sql_text = st.text_area("SQL", value=EXAMPLES[ex] or "SELECT * FROM stocks LIMIT 20;", height=180, key=f"sql_{ex}")
+    st.selectbox("Examples", list(EXAMPLES), key="sql_ex", on_change=_load_example, bind="query-params")
+    sql_text = st.text_area("SQL", value=DEFAULT_SQL, height=180, key="sql", bind="query-params")
+    # deliberately not URL-bound: a link must never switch writes on
     allow_write = st.checkbox("Allow write statements (INSERT / UPDATE / DELETE / DDL)", value=False)
     if st.button("▶ Run", type="primary"):
         stmt = sql_text.strip().rstrip(";")
