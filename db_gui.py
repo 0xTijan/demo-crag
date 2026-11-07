@@ -191,7 +191,11 @@ def price_trends(url: str) -> dict:
     return series_trends(url, "daily_prices", "stock_isin", "last_price")
 
 
-st.html("<style>.st-key-sql textarea { font-family: 'Source Code Pro', ui-monospace, monospace; font-size: .9rem; }</style>")
+MAX_CONTENT_WIDTH = 1600  # px; on wider screens the content stays centred and only the side margins grow
+st.html(f"""<style>
+  [data-testid="stMainBlockContainer"] {{ max-width: calc({MAX_CONTENT_WIDTH}px + 10rem); margin-inline: auto; }}
+  .st-key-sql textarea {{ font-family: 'Source Code Pro', ui-monospace, monospace; font-size: .9rem; }}
+</style>""")
 st.title(":material/query_stats: RAG DB Explorer", anchor=False)
 status = st.empty()  # subtitle + connection status, filled in once the Database tab has connected
 tab_stocks, tab_idx, tab_fin, tab_tables, tab_schema, tab_sql, tab_db = url_tabs("tab", {
