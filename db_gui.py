@@ -191,7 +191,7 @@ def price_trends(url: str) -> dict:
     return series_trends(url, "daily_prices", "stock_isin", "last_price")
 
 
-MAX_CONTENT_WIDTH = 1600  # px; on wider screens the content stays centred and only the side margins grow
+MAX_CONTENT_WIDTH = 2400  # px; on wider screens the content stays centred and only the side margins grow
 st.html(f"""<style>
   [data-testid="stMainBlockContainer"] {{ max-width: calc({MAX_CONTENT_WIDTH}px + 10rem); margin-inline: auto; }}
   .st-key-sql textarea {{ font-family: 'Source Code Pro', ui-monospace, monospace; font-size: .9rem; }}
