@@ -110,6 +110,8 @@ Nulls are allowed for anything the company doesn't report — the schema stays u
 
 **4.4 Mark the report as `processed`.**
 
+**Extraction pipeline.** `python -m dataPipeline.extract.run` reads every converted report (`report_files` joined to `downloaded_files` with category `reports`), finds the income statement and balance sheet pages, and asks a local model (`extractionModel` in `config.json`) which row holds each line item. The model only copies cell text. Every number must appear on the page it came from, and Python parses it (`1.234,5`, `(12)`, units in thousands or millions). Ratios (EBITDA, ROE, ROA, L/E, net working capital, net debt, P/E, P/B, …) are computed in code. Checks such as assets = liabilities + equity, the comparative column against last year's report, and Q1 ≤ 1H ≤ Q3 ≤ FY mark a report `needs_review` instead of dropping it. One row goes to `reports`, `financials` and `valuation_ratios` per period. `report_extractions` keeps the page and row label of every number. Options: `--isin`, `--file`, `--dry-run`, `--force`. Details: `dataPipeline/extract/README.md`.
+
 **Output of Step 4:** rows in `financials`, each traceable back to a specific report and page.
 
 ---

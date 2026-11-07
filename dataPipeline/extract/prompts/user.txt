@@ -1,0 +1,9 @@
+Company: {{company}}
+Statement: {{statement}}
+{{industry_hint}}
+
+Line items to find:
+{{items}}
+
+Report pages:
+{{pages}}

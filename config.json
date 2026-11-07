@@ -11,6 +11,11 @@
         "model": "gemma3:4b",
         "temperature": 0.3
     },
+    "extractionModel": {
+        "model": "qwen2.5:14b",
+        "temperature": 0,
+        "num_ctx": 16384
+    },
     "ocrFallbackModel": {
         "model": "qwen3-vl:8b",
         "temperature": 0,

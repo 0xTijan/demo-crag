@@ -64,10 +64,11 @@ symbol,name,period_end,period_type,currency,revenue,ebitda,ebit,net_income,eps,t
    company_name, fiscal_year, report_type, metric_name, value, currency,
    period_end, is_comparative, report_id, page_reference
    (add extra columns only if the question needs them, e.g. computed ratios).
-5. Prefer own-period values over comparatives: when the question asks for
-   a specific year, filter on financials.period_end falling in that year and
-   prefer is_comparative = FALSE. Only fall back to comparative rows if no
-   own-period row exists, and say so in "assumptions".
+   is_comparative and page_reference are NOT table columns: always return them
+   as constants, FALSE AS is_comparative, NULL::TEXT AS page_reference.
+5. Every report row holds the values for its own period only (no comparative
+   rows). When the question asks for a specific year, filter on
+   reports.period_end falling in that year.
 6. Match companies by the resolved ISINs when provided ({{company_candidates}}).
    If no ID is provided, match with:
    stocks.name ILIKE '%COMPANY_NAME%' (join stocks ON stocks.isin = reports.stock_isin).
@@ -77,7 +78,7 @@ symbol,name,period_end,period_type,currency,revenue,ebitda,ebit,net_income,eps,t
    the mismatch in "assumptions".
 8. For growth/margin/ratio questions, compute in SQL (e.g. self-join on the
    two periods, NULLIF on denominators to avoid division by zero) AND still
-   return the underlying raw values and their page_reference so the
+   return the underlying raw values and their report_id so the
    answer can be verified.
 9. Add LIMIT 200 unless the question needs an aggregate over everything.
 10. String literals: single quotes, escape embedded quotes by doubling.

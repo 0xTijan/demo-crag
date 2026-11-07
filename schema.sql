@@ -182,3 +182,40 @@ CREATE TABLE IF NOT EXISTS download_errors (
     occurred_at TIMESTAMPTZ DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (stock_isin, occurred_at DESC);
+
+-- ==========================
+-- 7. Markdown reports -> reports / financials / valuation_ratios (dataPipeline/extract)
+-- ==========================
+-- One row per period and per report, so a rerun updates instead of inserting twice.
+CREATE UNIQUE INDEX IF NOT EXISTS reports_period_key          ON reports (stock_isin, period_end, period_type);
+CREATE UNIQUE INDEX IF NOT EXISTS financials_report_key       ON financials (report_id);
+CREATE UNIQUE INDEX IF NOT EXISTS valuation_ratios_report_key ON valuation_ratios (report_id);
+
+CREATE TABLE IF NOT EXISTS report_extractions (
+    extraction_id     SERIAL PRIMARY KEY,
+    markdown_path     TEXT     NOT NULL,                 -- relative to repo root
+    markdown_hash     CHAR(64) NOT NULL,                 -- SHA-256 of the Markdown file
+    extractor_version TEXT     NOT NULL,                 -- bump to re-extract every report
+    stock_isin        CHAR(12) REFERENCES stocks(isin) ON DELETE CASCADE,
+    report_id         INT REFERENCES reports(report_id) ON DELETE SET NULL,
+    status            TEXT NOT NULL CHECK (status IN ('extracted','needs_review','skipped','failed')),
+    scope             TEXT CHECK (scope IN ('consolidated','separate')),
+    unit_scale        INT,                               -- 1, 1000, 1000000 (table unit)
+    model             TEXT,                              -- e.g. qwen2.5:14b
+    items             JSONB,                             -- per item: row label, raw cell, page, parsed value
+    checks            JSONB,                             -- failed validation checks (why needs_review)
+    error             TEXT,                              -- "<stage>: <message>" when failed, reason when skipped
+    extracted_at      TIMESTAMPTZ DEFAULT now(),
+    UNIQUE (markdown_path, markdown_hash, extractor_version)
+);
+CREATE INDEX IF NOT EXISTS report_extractions_report_idx ON report_extractions (report_id);
+
+CREATE TABLE IF NOT EXISTS report_extraction_errors (
+    error_id      SERIAL PRIMARY KEY,
+    markdown_path TEXT NOT NULL,
+    markdown_hash CHAR(64),
+    stage         TEXT NOT NULL,                         -- read | db | locate | period | llm | parse | validate
+    error         TEXT NOT NULL,
+    traceback     TEXT,
+    occurred_at   TIMESTAMPTZ DEFAULT now()
+);

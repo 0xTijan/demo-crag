@@ -81,6 +81,14 @@ from dataPipeline.convert import ruled_tables
 |---|---|---|
 | `test_table_spans.py` | 1 | A behaviour of `docling-core` that the pipeline relies on |
 | `test_convert_tables.py` | 7 | The table-building and table-rejecting rules in `ruled_tables.py` |
+| `test_extract_numbers.py` | 6 | Number parsing for `dataPipeline/extract` (`1.234,5`, `(12)`, dashes, ambiguous `1.234`) |
+| `test_extract_locate.py` | 8 | Page splitting, statement locating (group vs company, table of contents), period/unit/currency detection, industry |
+| `test_extract_derive.py` | 4 | Derived `financials` / `valuation_ratios` columns and NUMERIC overflow |
+| `test_extract_validate.py` | 4 | The consistency checks that set `needs_review` |
+| `test_extract_llm.py` | 6 | Model mapping with a fake model: which calls are made, numbers not on the page are dropped, signs come from the cell |
+| `extract_sample.py` | – | Shared synthetic report (Markdown in the `convert/` format) and the fake model's answers |
+
+The `test_extract_*` files need only `sqlalchemy` and `python-dotenv` (imported through `dataPipeline/convert/common.py`). No database, no Ollama.
 
 ---
 
