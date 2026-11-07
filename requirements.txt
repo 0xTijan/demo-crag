@@ -21,5 +21,5 @@ python-dotenv==1.2.3
 ollama                         # rag/ and the vision-OCR fallback
 
 # --- db_gui.py ---
-streamlit
+streamlit>=1.64  # db_gui.py: widget bind="query-params", tabs key/on_change
 pandas==3.0.5
