@@ -31,8 +31,9 @@ are needed (section 10).
 | Labels | set by code from the spec list | set by code from the registry |
 | Proof per value | page + raw-text check + min ≤ max check | page + table + row + raw-text check + validation rules |
 | First working version | ~5–8 weeks | ~15–24 weeks |
+| Upgrade later | most parts kept; ~10–16 weeks for a complete upgrade (section 10) | — |
 | Code size | small | several times larger |
-| Engineer time | spec lists (~10 min per type) + test set | type tree review + spec-list review + alias review |
+| Engineer time | spec lists (~10–20 min review per type) + test set | type tree review + spec-list review + alias review |
 
 ---
 
@@ -72,8 +73,11 @@ are needed (section 10).
 
 ### Simple plan
 - **A spec-list file per type** (`spec_lists/mosfet_n.yaml`): 5–10 specs, each with its unit, comparison rule
-  (`=`, `>=`, `<=`, `≈`, `contains`) and whether it's critical. The LLM drafts it, and a person checks it in about 10 minutes.
-- **Types are added by hand**, starting with the ~10 with the most datasheets. Datasheets of other types are stored
+  (`=`, `>=`, `<=`, `≈`, `contains`) and whether it's critical. The LLM drafts it from ~10 sample datasheets,
+  code counts how often each spec is found, a person reviews it (~10–20 min), and a trial run on ~30 datasheets
+  checks it: ~45–60 min per type in total.
+- **All datasheets are classified by type once** (Step 0: first pages only, labels grouped into one type list).
+  Spec lists are then written for the ~10 types with the most datasheets. Datasheets of other types are stored
   with their type only, and requests answer "type not supported yet".
 
 ### Full design
@@ -183,9 +187,9 @@ plus separate database users per pipeline.
 | First working version | ~5–8 weeks | ~15–24 weeks |
 | Part-time as a student (~20 h/week) | ~2–4 months | ~8–12 months |
 | Fits the paid proof of concept | yes, it basically is the proof of concept | no, too large up front |
-| Engineer time at the start | ~10 min per spec list + ~30–50 test cases | 1–2 h type-tree review + schema reviews + test cases |
+| Engineer time at the start | ~10–20 min review per spec list (~45–60 min per type in total) + ~30–50 test cases | 1–2 h type-tree review + schema reviews + test cases |
 | Engineer time per month later | new spec lists, confirmations | alias review, schema review, confirmations |
-| Adding a new type | write one spec list, re-index that type | usually automatic; review if important |
+| Adding a new type | create one spec list (~45–60 min), index that type | usually automatic; review if important |
 | Code to understand and hand over | small | large: harder for the company to take over |
 
 ---
@@ -209,9 +213,55 @@ plus separate database users per pipeline.
 
 ## 10. Moving from the simple plan to the full design
 
-The simple plan is built so that moving up doesn't need a rewrite: the spec-list files become the full
-design's registry, and the stored specs stay where they are. Each piece is added **only when a measurement
-shows it's needed**:
+**Mostly no rewrite.** About half of the simple plan stays as it is when upgrading; the rest is extended or
+replaced piece by piece. The one real replacement is the inside of the extractor. The details are in
+section 11 of [`parts_alternatives_plan.md`](parts_alternatives_plan.md).
+
+### What happens to each part of the simple plan
+
+| Part of the simple plan | When upgrading | What happens |
+|---|---|---|
+| Open WebUI tool + spec table | **stays** | Same `find_alternatives` entry point and table format. |
+| Fetching the external datasheet | **stays** | Same web search → PDF → markdown. |
+| Confirm / reject flow + `matches` table | **stays** | Already in its final shape. |
+| Test set + measurements | **stays** | Shows whether each upgrade helps. |
+| Step 0 type list | **stays** | Becomes the starting point of the automatic type tree. |
+| Spec-list YAML files | **extended** | Become the registry: aliases, conditions and importance are added. |
+| Storage (`catalog_parts`, `external_parts`) | **extended** | Specs stay as JSON per part; tables are added around them; existing data is migrated by a script, not re-extracted. |
+| Shortlist + scoring | **extended** | More specs, per-spec penalties, SQL pre-filter; the label rules stay. |
+| Family part numbers | **replaced** (small) | LLM call swapped for the decoder-based generator, same input and output. |
+| Extractor (one LLM call per datasheet) | **replaced** | Becomes triage + table-by-table reading + alias dictionary + unit conversion in code; output format unchanged. |
+| LLM review, validation rules, corrections, DB users | **new** | Added alongside; nothing existing changes. |
+
+### Effort
+
+| | Time (agentic coding, full-time) |
+|---|---|
+| Simple plan first | ~5–8 weeks |
+| Complete upgrade afterwards | ~10–16 weeks |
+| **Total, simple then full** | **~15–24 weeks**, about the same as the full design from scratch |
+| Full design from scratch | ~15–24 weeks |
+
+Going through the simple plan first costs about the same in total, but there's a working system after
+5–8 weeks, and the upgrade is usually only partial, so the real total is lower.
+
+### What the simple plan must do so that this works
+
+1. Store every value in the full design's format (`value` or `min`/`max`, `unit`, `stat`, `conditions`,
+   `page`, `raw`) from day one.
+2. Put conditions and min/typ/max into spec names (`rds_on_max@vgs_10v`).
+3. Keep each step a separate module with fixed input and output (`classify`, `extract`, `shortlist`,
+   `label`, `build_part_number`, `render`).
+4. Write spec lists in the registry's terms (`unit`, `rule`, `critical`, optional `aliases`).
+5. Store the file hash and extractor version on every part.
+6. Measure from the first week (see below).
+
+**What would force a rewrite:** specs stored as free-form JSON with varying names, or extraction, scoring and
+display mixed in one script. Then replacing the extractor breaks everything after it.
+
+### When to add which piece
+
+Each piece is added **only when a measurement shows it's needed**:
 
 | What you see in testing | Piece to add from the full design |
 |---|---|
