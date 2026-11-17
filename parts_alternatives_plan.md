@@ -307,7 +307,58 @@ Long documents are processed in page groups and merged.
 
 ---
 
-## 7. Confirmation loop
+## 7. Performance: time for a part that hasn't been seen or saved
+
+**Usually 1–4 minutes for a part nobody has asked about before.** Almost all of that is getting the
+external part's datasheet and reading it. The matching itself takes seconds. These are estimates: the real
+numbers depend on the GPU and the local model, so measure them on about 20 real requests.
+
+### Time for one new part number
+
+| Step | What happens | Estimated time |
+|---|---|---|
+| 1. Find the datasheet | web search, pick the right PDF, download it | 10–60 s |
+| 2. PDF → markdown | Docling, typical 4–15 pages | 10–60 s (longer if the PDF is scanned and needs OCR) |
+| 3. Extract its specs | classify the datasheet, read its ~5–15 spec tables, map names to the standard ones (mostly dictionary hits), decode the part number if it's from a family | 30 s – 2 min |
+| 4. Find and score candidates | database query within one component type, compare spec by spec | under 1 s |
+| 5. LLM check of the top 5–10 | read the cited pages, add warnings | 20–60 s (optional, can run after the table is shown) |
+| **Total** | | **about 1–4 min** |
+
+How the other cases compare:
+
+| Case | Time |
+|---|---|
+| Asked before, not confirmed (specs already stored) | seconds, up to ~1 min with step 5 |
+| Engineer-confirmed match saved | instant |
+| Specs given to the system directly, no datasheet | seconds: only name mapping + steps 4–5 |
+
+### How complex the per-request search is
+
+- **There's little new code in it.** Steps 1–3 reuse the same extraction the supplier datasheets need
+  anyway. The only new parts are the database query, the spec-by-spec comparison and the labels. That's
+  a few hundred lines of ordinary code, with no AI in the scoring itself.
+- **Search time doesn't grow with the 10k datasheets.** Filtering by component type first leaves a few
+  hundred to a few thousand candidates, and scoring those is trivial.
+- **The heavy work happens beforehand.** Extracting, standardizing and storing 10k datasheets is done
+  offline. That's why a request can be fast.
+
+### What makes a request slower or harder
+
+- Scanned PDFs, which need OCR.
+- Very large family datasheets (100+ pages). Fix: read only the part-numbering and spec pages.
+- The manufacturer isn't given, and the part number matches several different parts. The system has to
+  pick one or ask the user.
+- The component type is rare and its spec list hasn't been reviewed. It still works, but it shows a warning.
+
+### Ways to speed it up
+
+- Store every external datasheet and its specs, so the second request for that part takes seconds.
+- Show the comparison table as soon as step 4 finishes, and add the step-5 warnings when they're ready.
+- Pre-process common competitor parts in the two-weekly run, for example parts from past requests.
+
+---
+
+## 8. Confirmation loop
 
 `proposed` → sales clicks confirm → `sales_confirmed` (shown, but not treated as a fact) → engineer
 confirms → `engineer_confirmed`. Only engineer-confirmed rows:
@@ -320,7 +371,7 @@ survive re-extraction.
 
 ---
 
-## 8. Evaluation (set up before tuning anything)
+## 9. Evaluation (set up before tuning anything)
 
 - **Matching**: historical cross-references (requested part → accepted alternative). Metrics: recall@1,
   recall@5, label agreement, and the share of results that carry a warning. Run on every schema, extractor
@@ -331,7 +382,7 @@ survive re-extraction.
 
 ---
 
-## 9. Phases
+## 10. Phases
 
 | Phase | Scope | Done when |
 |---|---|---|
@@ -346,7 +397,7 @@ This is what makes the system extendable rather than rewritten per category.
 
 ---
 
-## 10. Open questions
+## 11. Open questions
 
 1. What do the historical cross-references look like (format, how many, do they include the label
    drop-in / functional)? They decide the evaluation set and the weight tuning.
