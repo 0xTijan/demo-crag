@@ -1,4 +1,4 @@
-# Finding alternatives from supplier datasheets: plan
+# Finding alternatives from supplier datasheets: plan (v1, simple)
 
 > **The problem.** Given a part number from a manufacturer we don't stock, we need to read its datasheet
 > and find the closest parts from our 110 suppliers. Those suppliers' 10,000+ markdown datasheets cover
@@ -8,470 +8,197 @@
 > result drop-in, functional or partial, show the datasheet page behind every value, and keep a match as
 > fact only after an engineer confirms it.
 
-Written 2026-11-17. Input: ~10,000 datasheet markdowns from 110 suppliers, about 200 component types,
-all in English, with tables already converted correctly. Everything runs locally; only web search reaches the internet.
-Goal: for a part number we don't sell, return the closest offerings from our suppliers, labelled
-**Drop-in / Functional / Partial**, with every compared value traceable to a datasheet page.
+**The approach in one sentence:** find candidates using a few key specs per component type, then list
+their specs side by side with the requested part (like the reference screenshot), and let an engineer decide.
+
+Written 2026-11-17. Everything runs locally (30B+ model); only web search reaches the internet.
+The complete, more complex design is kept in [`parts_alternatives_full_design.md`](parts_alternatives_full_design.md)
+and is used only where v1 turns out not to be enough.
 
 ---
 
-## 0. Overview: the four stages
+## 1. Overview: 4 steps
 
 ```
- ONE-TIME + EVERY 2 WEEKS                          PER CUSTOMER REQUEST
-┌───────────────┐   ┌───────────────┐        ┌───────────────┐   ┌───────────────┐
-│ 1. EXTRACT    │──►│ 2. STORE      │◄──────►│ 3. MATCH      │──►│ 4. CONFIRM    │
-│ supplier .md  │   │ one database, │        │ external part │   │ sales → eng.  │
-│ → spec values │   │ standard spec │        │ vs. our parts │   │ → saved match │
-└───────────────┘   │ names & units │        └───────────────┘   └───────┬───────┘
-                    └───────▲───────┘                                    │
-                            └────────── confirmed matches ───────────────┘
+ OFFLINE (once, then every 2 weeks)              PER REQUEST
+┌──────────────────────┐   ┌────────────────┐   ┌──────────────────────┐   ┌────────────────┐
+│ 1. INDEX             │──►│ 2. SHORTLIST   │──►│ 3. SPEC TABLE        │──►│ 4. CONFIRM     │
+│ each datasheet →     │   │ same type,     │   │ requested vs top     │   │ sales → eng.   │
+│ type + key specs     │   │ % key specs    │   │ candidates, label,   │   │ confirm/reject │
+│ (one LLM call)       │   │ met → top 10   │   │ page per value       │   │ + reason       │
+└──────────────────────┘   └────────────────┘   └──────────────────────┘   └────────────────┘
 ```
 
-### Stage 1. Extract: turn supplier markdowns into spec values
-
-**When:** once for all ~10k files, then every two weeks only for new or changed files.
-
-1. **Classify each datasheet.** Which supplier, which component type (for example "N-channel MOSFET" or
-   "MLCC capacitor"), and whether it describes one part or a whole family.
-2. **Read the tables.** Keep the spec tables and skip packaging, reel and reliability-test tables. Each spec
-   becomes one value: name, value, unit, min/typ/max, test condition, and the page it came from.
-3. **Translate the names into one shared vocabulary.** `VDS`, `V(BR)DSS` and "Drain-Source Voltage" all
-   become `drain_source_voltage`, in volts. Each component type has its own list of specs, generated
-   automatically and checked by an engineer only for the important types.
-
-**Result:** every supplier part is described the same way, whichever supplier wrote the datasheet.
-
-### Stage 2. Store: one database, three separate areas
-
-```
-┌─────────────────────────────┐   ┌──────────────────────────────┐   ┌───────────────────────────────┐
-│ CATALOGUE (our suppliers)   │   │ SHARED VOCABULARY            │   │ EXTERNAL (requested parts)    │
-│ suppliers, datasheets,      │   │ component types, spec names, │   │ manufacturers, datasheets,    │
-│ families, variants, specs   │   │ units, aliases, packages     │   │ parts, specs                  │
-│ written only by Stage 1     │   │ (words only, no part data)   │   │ written only by Stage 3       │
-└──────────────┬──────────────┘   └──────────────────────────────┘   └───────────────┬───────────────┘
-               └────────────────────► MATCHES (one catalogue part ↔ one external part) ◄┘
-```
-
-- **Catalogue and external parts are never mixed.** They have separate tables, separate datasheet folders
-  and separate writers. A catalogue search can't return an external part.
-- **They share only the vocabulary:** the same spec names and units on both sides, so they can be compared.
-- **Matches is the only place both sides meet:** one row links a catalogue part and an external part.
-
-What the catalogue holds (the external area has the same structure, but for external parts):
-
-- **Parts:** supplier → datasheet → family → variant (for example one MLCC size / voltage / dielectric).
-- **Spec values:** one row per part per spec, in standard units, linked back to the datasheet page.
-  That link is the proof shown to the engineer.
-- **Spec list per component type:** which specs that type has and how each one is compared. For example:
-  package must be the same, voltage rating must be equal or higher, resistance must be equal or lower.
-- **Generated tables:** code builds one readable table per component type from the above. Nobody
-  maintains 200 tables by hand.
-
-### Stage 3. Match: one external part number against our parts
-
-**Input:** the customer's part number plus its specs. The web pipeline finds its datasheet and
-converts it to markdown.
-
-1. **Put the external specs through the same translation as Stage 1, step 3**, so both sides use the same
-   names and units. Without this the comparison doesn't work.
-2. **Check for a saved, engineer-confirmed match.** If one exists, show it first.
-3. **Narrow down:** keep only our parts of the **same component type**, and drop the clearly impossible
-   ones, such as a much lower voltage rating.
-4. **Compare spec by spec** using each spec's comparison rule, and score the result as the share of
-   important specs met.
-5. **Label each result:**
-   - **Drop-in:** same footprint and all important specs met.
-   - **Functional:** important specs met, but a different package or some minor specs are worse.
-   - **Partial:** the best available, with the failing specs listed.
-6. **Warn** when a spec is missing on either side, when test conditions differ, or when something can
-   only be checked in a drawing, like pinout.
-
-**Output:** the comparison table from the reference screenshot. Each value comes with its datasheet page.
-
-### Stage 4. Confirm: saving a match as a known fact
-
-```
-proposed ──► sales confirms ──► engineer confirms ──► SAVED (now a fact)
-             (only a note)  └──► engineer rejects  ──► SAVED as rejected, with the reason
-```
-
-A confirmation covers only the two exact part numbers. A rejected match is never hidden: it keeps
-appearing, marked "Rejected", with the engineer's reason.
-
-A saved match:
-- is shown first the next time anyone asks for that part number,
-- becomes a test case for checking that system changes don't make matching worse,
-- over time shows which specs engineers accept being worse, which improves the scoring.
-
-If an engineer finds a wrongly extracted value, the correction is saved too, and it stays when the
-datasheet is processed again.
-
-### Example
-
-A customer asks for **2N7000** (60 V N-channel MOSFET, TO-92 package).
-
-1. Its datasheet is extracted into standard specs: drain_source_voltage 60 V, drain_current 0.2 A,
-   RDS(on) max 5 Ω @ VGS=10 V, package TO-92.
-2. The database returns our N-channel MOSFETs with at least about 50 V and at least about 0.2 A.
-3. The comparison finds one supplier part in TO-92 that meets every important spec → **Drop-in**.
-   A SOT-23 part with the same specs → **Functional**, because the package differs. A note says to check
-   the pinout on the drawing.
-4. A salesperson clicks confirm, then an engineer confirms. From then on, 2N7000 → that part is the
-   saved answer.
-
-The sections below give the details of each stage.
+Only **4 things are stored**: the spec-list files, `catalog_parts`, `external_parts` and `matches`.
 
 ---
 
-## 1. The core idea
+## 2. Step 1: Index (offline)
 
-Don't make one SQL table per category, and don't run vector search over the markdowns.
+### A spec list per component type
 
-- **One generic store.** Categories and their attributes are *rows* in a registry. Part specs are
-  stored as typed values (point, range, set, enum) with units converted to SI. A new category is new
-  registry rows, not a migration.
-- **Specs come from LLM extraction, guided by the category schema.** The LLM copies raw strings out of
-  the tables. Code does the rest: converts units, expands part-number codes, checks values.
-- **Matching is deterministic.** SQL filters, then Python scores against per-attribute comparison rules.
-  An LLM only reviews the top results and adds warnings. It cannot change the numbers. This makes the
-  results reproducible and lets every result show its evidence.
-- **The requested part goes through the same extractor and schema as the catalogue.** That way both sides
-  of the comparison use the same attribute keys, units and test conditions.
+One small file per type, e.g. `spec_lists/mosfet_n.yaml`. The LLM drafts it from a few datasheets; you or
+an engineer check it in about 10 minutes. It names only the **5–10 specs that decide a replacement**.
 
-```
-               (offline, every two weeks, hash-based like the report pipeline)
-markdowns ─► triage ─► category ─► schema-guided extraction ─► normalize + validate ─► families / offerings
-                         ▲                                                             │
-           taxonomy + attribute registry (auto-generated, light review)                │
-                                                                                       ▼
-part number ─► catalogue? ─► cache? ─► web fetch → md → same extraction ─► SQL candidates ─► scoring ─► LLM review ─► table
-                                                                                              ▲
-                                                                     engineer-confirmed cross-refs
+```yaml
+type: mosfet_n
+name: N-channel MOSFET
+must_match: [package]                  # different → can't be Drop-in
+visual_check: "Confirm pinout (G/D/S order) on the package drawing."
+specs:
+  package:        {label: "Package (footprint)",      rule: "="}
+  vds_max:        {label: "V(DS) max",                unit: V,    rule: ">=", critical: true}
+  id_max:         {label: "I(D) max",                 unit: A,    rule: ">=", critical: true}
+  rds_on_max_10v: {label: "R(DS)on max @ VGS=10 V",   unit: ohm,  rule: "<="}
+  vgs_th_max:     {label: "V(GS)th max",              unit: V,    rule: "<="}
+  tj_max:         {label: "T(J) max",                 unit: degC, rule: ">="}
 ```
 
----
+Rules: `=` must be equal, `>=` / `<=` equal or better, `≈` close to (with a tolerance), `contains`
+the candidate's range must cover the requested one (e.g. temperature range).
 
-## 2. What the two sample datasheets show
+### One LLM call per datasheet
 
-| Observation | Sample | Design consequence |
-|---|---|---|
-| A family datasheet describes a **space of part numbers**: a part-number decoder plus an availability matrix, with no list of parts | IM Series MLCC: 8 sizes × 5 dielectrics × ~15 voltages × E-series values × 9 tolerances | Store an **offering** as one row of the availability matrix, with *range/set* values (`size=0603, V=50V, X7R, C∈[150pF,470nF], tol∈{F,G,J,K,M}`), and build the exact part number from the decoder. Don't expand into millions of rows. |
-| The same parameter is given **under different test conditions** | 2N7000 RDS(on): 6 Ω @ VGS=4.5 V and 5 Ω @ VGS=10 V | Conditions are part of the attribute's identity: `rds_on_max@vgs_10v` and `rds_on_max@vgs_4v5` are separate keys. Comparing different conditions → warning, not a match. |
-| min / typ / max columns | 2N7000 VGS(th) gives min 0.8 V and max 3 V, no typ | Store which statistic each value is. Compare max with max. If only typ exists on one side, show the value and warn. The reference screenshot compares "V(GS)th typ", which the 2N7000 sheet doesn't have. |
-| Units written wrong | `ms` for transconductance (should be mS), `nS` | Convert units **using the attribute's expected dimension** from the schema: siemens → `ms` = mS. Never guess from the string alone. |
-| Typos and broken values in the source | `225~1.6【1.6】` (X7S, 1206, 6V3); `NOP(COG)` | Validation rules (range order, code parse, value grounded in source) send these to a review list. The row is not silently dropped. |
-| Codes stand for numbers | `104` = 100 nF, `3R9` = 3.9 pF, `6V3`, `【0.8】` = thickness | A small library of code parsers (EIA cap/res codes, voltage codes, tolerance letters). Code, not the LLM, expands them. |
-| The package name is ambiguous | `0603` here is inch; metric 0603 is a much smaller part | Package **normalization dictionary** with explicit systems: `0603-imperial` = `1608-metric`; `SOT-23` ≈ `TO-236AB`. Footprint is the main must-match, so it needs its own table. |
-| Same function, different package | 2N7000 (TO-92, through-hole) vs 2N7002 (SOT-23) | Becomes **Functional**, not Drop-in. This is exactly the case the label exists for. |
-| Pinout lives only in a drawing | 2N7000 page 4 (images) | The category has `requires_visual_check` set: "Confirm pinout (G/D/S order) on the package drawing." |
-| Enum values can be "better" than others | X7R (-55…125 °C, ±15%) can replace X5R (-55…85 °C, ±15%) | Turn enums into numbers wherever the datasheet defines them (dielectric → temperature range + ΔC). Compare the numbers instead of the names. |
-
----
-
-## 3. Data model (Postgres + pgvector)
-
-Four Postgres schemas. **`catalog` and `external` never reference each other**: they share only `vocab`,
-and only `matching` points to both.
-
-| Schema | Holds | Written by | Read by |
-|---|---|---|---|
-| `vocab` | component types, spec names and units, aliases, package dictionary | Stage 1 + engineer review (new aliases found in external datasheets may be added: words, not part data) | everyone |
-| `catalog` | our suppliers' datasheets, families, variants, spec values; generated per-type views | supplier extraction (Stage 1) only | matching (read-only) |
-| `external` | requested parts: their datasheets, families, parts, spec values | request pipeline (Stage 3) only | matching (read-only) |
-| `matching` | proposed / confirmed matches | matching + confirmation flow | everyone |
-
-Rules that keep them apart:
-- Separate file folders: `markdowns/suppliers/…` and `markdowns/external/…`.
-- Separate database users: the supplier pipeline can't write to `external`, and the request pipeline
-  can't write to `catalog`. The matcher only reads both.
-- The generated per-type views (e.g. `catalog.mosfet_n`) are built from `catalog` only.
-- An engineer correcting an external value saves it in `external`, never in the catalogue.
-- If an external manufacturer later becomes a supplier, their datasheets go through the supplier pipeline
-  from scratch. External rows are never moved into the catalogue.
-
-```sql
--- ── vocab: shared vocabulary (generated automatically, reviewed lightly) ──
-categories (
-  id, parent_id, key, name, description,
-  requires_visual_check bool, visual_check_note text,    -- e.g. "confirm pinout"
-  schema_status text,          -- auto | reviewed
-  schema_version int
-);
-
-attributes (
-  id, category_id,             -- NULL category_id = universal attribute
-  key text,                    -- 'rds_on_max@vgs_10v'
-  label text, symbol_aliases text[],   -- {'RDS(ON)','R DS(on)','Drain-Source On-Resistance'}
-  dimension text,              -- 'resistance' -> canonical unit ohm
-  value_kind text,             -- number | range | set | enum | bool | text
-  stat text,                   -- min | typ | max | nominal
-  conditions jsonb,            -- {"vgs":"10 V","ta":"25 °C"}
-  comparison text,             -- gte | lte | eq | near | contains_range | superset | info
-  tolerance jsonb,             -- for 'near': {"rel":0.0} for capacitance, {"rel":0.05} ...
-  importance text,             -- critical | important | minor | info
-  is_footprint bool,           -- package / pitch / pin count -> drop-in gate
-  status text                  -- auto | reviewed
-);
-
-package_aliases (alias text, canonical text, system text, pin_count int, mounting text);
-
--- ── catalog: our suppliers only ──
-suppliers  (id, name, summary, categories text[]);
-documents  (id, supplier_id, path, sha256, extractor_version, extracted_at, status);
-families   (id, document_id, category_id, series, title, description,
-            pn_decoder jsonb,           -- segments -> attribute values
-            shared_attrs jsonb,         -- values that hold for every offering
-            embedding vector);          -- for triage / fallback search only
-offerings  (id, family_id,
-            part_number text NULL,      -- concrete PN when the datasheet lists one
-            pn_template text NULL,      -- '03{tol}T B 500 {cap}' when generated
-            attrs jsonb);               -- shared_attrs merged with row-specific values
-offering_values (                       -- flattened copy of attrs, for SQL filtering
-  offering_id, attr_key, num_lo, num_hi, text_val, set_val text[], stat, confidence);
-
-extraction_issues (document_id, page, attr_key, raw, problem, resolved bool);
-
--- ── external: requested parts only (same structure, no links to catalog) ──
-manufacturers (id, name);
-documents     (id, manufacturer_id, source_url, path, sha256, extractor_version, fetched_at, status);
-families      (id, document_id, category_id, series, pn_decoder jsonb, shared_attrs jsonb);
-                                         -- kept so other part numbers of the same family decode instantly
-parts         (id, family_id, part_number, manufacturer_id, category_id,
-               decode_status, attrs jsonb, requested_count int, last_requested_at);
-part_values   (part_id, attr_key, num_lo, num_hi, text_val, set_val text[], stat, confidence);
-value_overrides (part_id, attr_key, corrected_value jsonb, corrected_by, corrected_at);
-extraction_issues (document_id, page, attr_key, raw, problem, resolved bool);
-
--- ── matching: the only place both sides meet ──
-matches (id,
-         external_part_id,          -- → external.parts
-         catalog_offering_id,       -- → catalog.offerings
-         concrete_pn, label, score, coverage, diff jsonb, warnings jsonb,
-         status text,     -- proposed | sales_confirmed | engineer_confirmed | engineer_rejected | needs_recheck
-         decided_by, decided_role, decided_at,
-         reason text,     -- required when engineer_rejected
-         compared_spec_hash text);  -- hash of the compared specs; a change → needs_recheck
-```
-
-**Format of one stored attribute value.** Every value carries its proof:
+Input: the markdown + the list of spec lists. Output (JSON, temperature 0):
+- the component type (or "no spec list yet"),
+- every part, or for families every row of the ordering/availability table, with its key specs
+  **in the units of the spec list** and the **page** each value came from.
 
 ```json
-"rds_on_max@vgs_10v": {
-  "kind": "number", "value": 5.0, "unit": "ohm", "stat": "max",
-  "conditions": {"vgs": "10 V", "id": "500 mA", "ta": "25 °C"},
-  "source": {"doc": 4711, "page": 2, "table": 1, "row": "Drain-Source On-Resistance",
-             "raw": "5 | Ω"},
-  "confidence": "grounded"   // grounded | inferred | unverified
-}
+{"type": "mosfet_n",
+ "parts": [{"part_number": "2N7000",
+            "specs": {"package":        {"value": "TO-92", "page": 4},
+                      "vds_max":        {"value": 60,  "unit": "V",   "page": 1, "raw": "60"},
+                      "id_max":         {"value": 0.2, "unit": "A",   "page": 1, "raw": "0.2"},
+                      "rds_on_max_10v": {"value": 5,   "unit": "ohm", "page": 2, "raw": "5"}}}]}
 ```
 
-`grounded` means the raw string was found word for word on the cited page. Checking this is cheap and
-catches most hallucinations.
+A family (like the Viking MLCC) gives one entry per availability row, with ranges:
+`0603 (inch) / X7R / 50 V → capacitance 150 pF – 470 nF, page 5`, plus the page of the ordering
+("Part Numbering") table, used later to build an exact part number.
+
+**One check in code:** each value's `raw` text must appear on the cited page. If it doesn't, the value
+is marked *unverified* and shows a warning. This catches most invented values.
+
+- Supplier = folder name. Only new or changed files are indexed (file hash), like the report pipeline.
+- Datasheets of types without a spec list are stored with their type only; requests for those types
+  answer "type not supported yet" until a spec list is added.
+
+### Watch out for (seen in the sample datasheets)
+
+- **Test conditions:** RDS(on) is given at VGS=10 V and 4.5 V → separate specs in the list.
+- **min / typ / max:** the spec list says which one (e.g. `vgs_th_max`), so like is compared with like.
+- **Package names:** `0603` can be inch or metric → the spec list says which; the LLM writes the standard name.
+- **Typos in the source** (e.g. `225~1.6` in the MLCC table) → caught by the raw-text check or shown as unverified.
 
 ---
 
-## 4. Building the taxonomy and schemas once (keeping engineer time low)
+## 3. Step 2: Shortlist (per request)
 
-1. **Triage every document** (local LLM, pages 1–2 only, JSON schema, temperature 0): supplier, series,
-   free-text component type, family or single part, does it have an ordering/decoder table, and the
-   headline specs from the front-page table. What manufacturers put on page 1 is the best available signal
-   for which specs matter most.
-2. **Cluster into a taxonomy**: embed the triage outputs and cluster them. The LLM names and merges
-   clusters into a tree of about 200 leaves. An engineer reviews the tree once, in about 1–2 h.
-3. **Generate a schema per category**: for each leaf, sample 10–20 datasheets from different suppliers.
-   The LLM proposes attributes with key, aliases, dimension, stat, conditions, **comparison direction**
-   and **importance** (headline specs → critical). Merge synonyms across suppliers
-   (`V(BR)DSS` = `VDS` = "Drain-Source Voltage").
-4. **Universal attributes** shared by all categories: package/case (normalized), mounting type,
-   pin count / pitch, operating temperature range, qualifications (AEC-Q100/101/200, etc.), RoHS,
-   lifecycle status.
-5. **Review only where the volume is.** Engineers check the schemas of the top 10–20 categories by
-   requests and sales. All other categories run on `schema_status = auto`, and their results show
-   "category schema not reviewed". This fits within "a few hours per month".
-
-Comparison semantics:
-
-| comparison | meaning | examples |
-|---|---|---|
-| `eq` | must be equal | package, channel type (N/P), polarity, pin count |
-| `gte` / `lte` | equal or better in one direction | VDS, ID ≥; RDS(on), leakage, tolerance ≤ |
-| `near` | same nominal value, within a tolerance | capacitance, resistance, frequency, coil voltage |
-| `contains_range` | candidate range must cover the requested range | operating temperature, input voltage range |
-| `superset` | candidate must have everything requested; extras are fine | qualifications (AEC-Q ⊇ none), certifications |
-| `info` | shown, not scored | packaging quantity, marking |
+1. **Saved answers first:** engineer-confirmed matches for this part number are shown first; rejected
+   ones are shown with their reason.
+2. **Get the requested part's specs:** from `external_parts` if fetched before, otherwise the existing web
+   pipeline → markdown → **the same Step 1 LLM call** → the exact part number's specs (for a family part
+   the LLM reads the ordering table to decode it). If no manufacturer is given and several parts fit,
+   **ask the salesperson** which one.
+3. **Filter and score in plain Python:** only catalogue parts of the **same type**, scored by the
+   share of key specs met (critical specs count more). Take the top ~10; if equally good parts come from
+   different suppliers, list all of them.
 
 ---
 
-## 5. Extraction pipeline (offline, incremental)
+## 4. Step 3: Spec table (the screenshot)
 
-Same pattern as `dataPipeline/convert/docling.py`: SHA-256 per file, only new or changed files,
-`extractor_version` stored so that a schema change re-extracts only the categories it affects.
+- **Columns:** requested part + top candidates. **Rows:** the type's key specs. Each cell: value,
+  ✓ meets / ✗ worse / ? not stated, and the datasheet page.
+- **Labels, set by code from the spec list:**
+  - **Drop-in:** `must_match` specs equal and all key specs met.
+  - **Functional:** all critical specs met; package differs or a non-critical spec is worse.
+  - **Partial:** a critical spec fails or is missing; shown last, with a warning.
+- **One short LLM call per family candidate:** build the exact part number from the ordering table
+  (e.g. Viking `03KTB500104` for a 0603 / X7R / 50 V / 100 nF request).
+- **Warnings:** unverified values, missing specs, and the type's `visual_check` note (e.g. pinout).
 
-1. **Triage** (above). This assigns the category; low confidence goes to a review list.
-2. **Schema-guided extraction**, per document or per page group. Prompt = the category's attribute list
-   (keys, aliases, expected dimension) + markdown. Output JSON with **raw strings** + page + table + row label.
-   Families are extracted in three parts: `shared_attrs`, `pn_decoder` (segments → values) and
-   `availability rows`.
-3. **Normalization in code**: unit conversion with `pint`, guided by dimension (`ms` + siemens → mS); EIA code
-   parsers; package aliases; conditions parsed into canonical keys.
-4. **Expansion in code**: availability rows → offerings with range/set values; the decoder → `pn_template`.
-5. **Validation**: dimension check, min ≤ max, values grounded in the source, plausibility bounds per
-   dimension, decoder round-trip (encode → decode gives the same values). Failures go to
-   `extraction_issues` and the value becomes `unverified`, which is still usable but shown with a warning.
-6. **Schema drift**: attributes the LLM finds that aren't in the schema are collected. A periodic job
-   proposes new attributes or aliases.
-
-Models: a strong local instruction model with structured JSON output (Ollama `format=SCHEMA`,
-`temperature 0`, as the RAG code already does). The largest sample (693 lines) fits easily in 32k context.
-Long documents are processed in page groups and merged.
+The matching service has one entry point: `find_alternatives(part_number, manufacturer=None)` → JSON
+(or a question back to the salesperson). The Open WebUI tool calls it and renders the table.
 
 ---
 
-## 6. Matching at query time
+## 5. Step 4: Confirm
 
-1. **Normalize the part number** and look it up in our catalogue, including decoder matches (it may
-   be ours under a different code). If no manufacturer is given and the part number fits several
-   different parts, **ask the salesperson which one** before going on.
-2. **Requested part**: from `external.parts` (already fetched before), or via the existing web pipeline → markdown →
-   the **same** triage + extraction → **decode the specific part number** inside its family
-   (e.g. Murata `GRM188R71H104KA93D` → 0603-imp, X7R, 50 V, 100 nF, ±10%).
-3. **Category gate**: candidates must have the **same leaf category**. No cross-category matches
-   (a Schottky never matches a standard rectifier). If the requested part's category is uncertain, say so.
-4. **SQL candidate retrieval** on `offering_values`: critical attributes with loose bounds (e.g. VDS ≥ 0.8×,
-   capacitance within ±20%) → about 200 candidates. Loose bounds let "Partial" results still appear.
-5. **Scoring in Python, one score per attribute**:
-   - meets the requirement → 1
-   - worse → penalty that grows with the log ratio (slightly worse costs less than 10× worse)
-   - missing on one side → 0 and the attribute counts as "not stated" (lowers *coverage*, not just the score)
-   - different conditions or statistic → shown, scored at 0.5, warning
-   - Score = weighted share of requested specs met (critical 5, important 2, minor 1). This is the "% of weighted specs met" in the screenshot.
-6. **Labels**:
-   - **Drop-in**: footprint attributes all `eq` AND every critical + important spec met.
-   - **Functional**: every critical spec met; footprint differs and/or some important specs are worse.
-   - **Partial**: everything else; ranked by score, with the failing specs listed. Parts that fail a
-     **critical** spec are still shown, ranked last, with a warning.
-   - Always return the best results. In addition, show a **confidence warning** when coverage is low,
-     values are `unverified`, the category or decode is uncertain, the schema isn't reviewed, or
-     `requires_visual_check` is set.
-7. **For families: build the concrete part number** with the cheapest matching options
-   (requested capacitance, tolerance ≤ requested, voltage ≥ requested), e.g. Viking `03KTB500104`
-   for the Murata example above (0603, 50 V, X7R, 100 nF; available per the X7R table, 151~474【0.8】).
-8. **LLM review of the top 5–10**: it gets the requested and candidate spec JSON plus the cited
-   markdown pages. It can **only add** warnings and a one-line justification (pinout note,
-   "not for new designs", a condition the schema missed). It cannot change scores or labels.
-9. **Same part from several suppliers**: when equally good candidates come from different suppliers,
-   all of them are listed, one per supplier.
-10. **Output JSON**: requested, candidates[label, score, coverage, supplier, per-attribute {req, cand,
-    verdict, source page}], warnings, visual-check notes. The chat tool renders it as the table.
-    **Engineer-confirmed** matches for this part number always appear first. **Engineer-rejected**
-    matches are still shown, marked "Rejected" with the engineer's reason, below the others.
+```
+proposed ──► sales confirms ──► engineer confirms ──► confirmed (a fact)
+             (only a note)  └──► engineer rejects  ──► rejected, with a written reason (still shown)
+```
 
-The matching service exposes one function / endpoint, e.g.
-`find_alternatives(part_number, manufacturer=None) → JSON` (or a question back, see step 1).
-The current chat tool only has demo data and will be adapted to this interface.
+- A confirmation covers only the **two exact part numbers**.
+- The match stores a copy of the compared specs. When a datasheet is re-indexed and one of those specs
+  changed, the match goes to **needs re-check**.
+- "Engineer" = a role in your own system.
 
 ---
 
-## 7. Performance: time for a part that hasn't been seen or saved
+## 6. Storage
 
-**Usually 1–4 minutes for a part nobody has asked about before.** Almost all of that is getting the
-external part's datasheet and reading it. The matching itself takes seconds. These are estimates: the real
-numbers depend on the GPU and the local model, so measure them on about 20 real requests.
+```sql
+catalog_parts  (id, supplier, file, file_hash, type, part_number, family_row text,
+                ordering_page int, specs jsonb, indexed_at);
+external_parts (id, manufacturer, part_number, file, file_hash, type, specs jsonb, fetched_at);
+matches        (id, external_part_id, catalog_part_id, concrete_pn, label, score,
+                compared_specs jsonb,
+                status,        -- proposed | sales_confirmed | confirmed | rejected | needs_recheck
+                decided_by, decided_role, decided_at, reason);
+-- + spec_lists/*.yaml files
+```
 
-### Time for one new part number
+**Our parts and external parts are never mixed:** separate tables and separate folders
+(`markdowns/suppliers/…`, `markdowns/external/…`). `matches` is the only table that points to both.
 
-| Step | What happens | Estimated time |
-|---|---|---|
-| 1. Find the datasheet | web search, pick the right PDF, download it | 10–60 s |
-| 2. PDF → markdown | Docling, typical 4–15 pages | 10–60 s (longer if the PDF is scanned and needs OCR) |
-| 3. Extract its specs | classify the datasheet, read its ~5–15 spec tables, map names to the standard ones (mostly dictionary hits), decode the part number if it's from a family | 30 s – 2 min |
-| 4. Find and score candidates | database query within one component type, compare spec by spec | under 1 s |
-| 5. LLM check of the top 5–10 | read the cited pages, add warnings | 20–60 s (optional, can run after the table is shown) |
-| **Total** | | **about 1–4 min** |
+---
 
-How the other cases compare:
+## 7. Time per request
 
 | Case | Time |
 |---|---|
-| Asked before, not confirmed (specs already stored) | seconds, up to ~1 min with step 5 |
-| Engineer-confirmed match saved | instant |
+| Never seen before | **~1–3 min**: find + download + convert the datasheet (20 s – 2 min), index it (20–60 s), shortlist (< 1 s), part numbers for families (10–30 s) |
+| Seen before | seconds |
+| Confirmed match exists | instant |
 
-### How complex the per-request search is
-
-- **There's little new code in it.** Steps 1–3 reuse the same extraction the supplier datasheets need
-  anyway. The only new parts are the database query, the spec-by-spec comparison and the labels. That's
-  a few hundred lines of ordinary code, with no AI in the scoring itself.
-- **Search time doesn't grow with the 10k datasheets.** Filtering by component type first leaves a few
-  hundred to a few thousand candidates, and scoring those is trivial.
-- **The heavy work happens beforehand.** Extracting, standardizing and storing 10k datasheets is done
-  offline. That's why a request can be fast.
-
-### What makes a request slower or harder
-
-- Scanned PDFs, which need OCR.
-- Very large family datasheets (100+ pages). Fix: read only the part-numbering and spec pages.
-- The manufacturer isn't given, and the part number matches several different parts. The system asks
-  the salesperson which one is meant.
-- The component type is rare and its spec list hasn't been reviewed. It still works, but it shows a warning.
-
-### Ways to speed it up
-
-- Store every external datasheet and its specs in the `external` area (never in the catalogue), so the second request for that part takes seconds.
-- Show the comparison table as soon as step 4 finishes, and add the step-5 warnings when they're ready.
-- Pre-process common competitor parts in the two-weekly run, for example parts from past requests.
+Estimates; measure on ~20 real requests.
 
 ---
 
-## 8. Confirmation loop
+## 8. Testing
 
-```
-proposed ──► sales confirms ──► engineer confirms ──► engineer_confirmed (a fact)
-                               └► engineer rejects  ──► engineer_rejected (+ written reason)
-```
-
-- **Who is an engineer** comes from the role a user has in your system; the match stores the user and role
-  of each confirmation.
-- **A confirmation covers only the two exact part numbers** (e.g. `GRM188R71H104KA93D` → `03KTB500104`),
-  not other members of either family.
-- **Engineer-confirmed** matches are pinned as the top answer for that requested part number, go into the
-  evaluation set, and are later used to tune importance weights per component type.
-- **Engineer-rejected** matches are never hidden: they keep appearing, marked "Rejected", with the
-  engineer's reason, below the other results.
-- **When a datasheet changes** (supplier or external): a confirmed match stays valid unless a spec that
-  was compared in it changed. If one did, the match goes back to "needs re-check" for an engineer.
-
-Corrections to extracted values (an engineer fixes "VDS = 600 V" to 60 V) are stored as overrides that
-survive re-extraction.
+- **Starter test set:** an engineer writes ~30–50 requests with the correct alternative and label.
+  Every confirmed or rejected match is added later.
+- **Measure:** is the engineer's answer in the top 10? Does the label agree?
+- **Spot-check extraction:** ~30 datasheets, key specs compared by hand.
 
 ---
 
-## 9. Evaluation (set up before tuning anything)
+## 9. Phases (~5–8 weeks)
 
-- **Matching**: there are no historical cross-references yet, so the evaluation set is built:
-  an engineer picks ~30–50 real or typical requests from the first component types and writes down the
-  correct alternative and label. After that, every engineer-confirmed or -rejected match is added
-  automatically. Metrics: recall@1, recall@5, label agreement, and the share of results that carry a
-  warning. Run on every schema, extractor or scoring change.
-- **Extraction**: hand-check ~50 datasheets across the top categories. Precision and recall of critical
-  attributes, accuracy of unit conversion, decoder round-trip accuracy.
-- Keep a regression folder of difficult datasheets: multi-condition specs, decoders, typos (like the X7S `225~1.6` row).
-
----
-
-## 10. Phases
-
-| Phase | Scope | Done when |
+| Phase | Work | Done when |
 |---|---|---|
-| 0 | Triage all ~10k docs (supplier from folder name); taxonomy; package dictionary | every doc has a category or sits in the review list |
-| 1 | Pick the first ~10 component types (by datasheet count from Phase 0 until sales data exists); engineer writes the starter evaluation set | ~30–50 known pairs |
-| 2 | Schemas + extraction + matching for the top 10 categories, end to end with the chat tool | recall@5 measured on the evaluation set |
-| 3 | Auto schemas for the remaining ~190 categories; fallback path | every category returns results (with "unreviewed" warnings) |
-| 4 | Confirmation workflow, two-weekly incremental runs, override handling | engineer-confirmed rows pinned and evaluated |
+| 1 | Spec lists for the first ~10 types (those with the most datasheets until sales data exists); index all datasheets | every datasheet has a type; the first 10 types have key specs |
+| 2 | Request flow, shortlist, spec table in Open WebUI | a real part number returns the table |
+| 3 | Confirm / reject, test set, measurements | results measured on the test set |
 
-Phases 2→3 add no new code: a new category is registry rows plus a re-run of extraction.
-This is what makes the system extendable rather than rewritten per category.
+**Adding a type later = writing one spec-list file + re-indexing that type.** No code changes.
+
+---
+
+## 10. When to add more (from the full design)
+
+| Add | Only when |
+|---|---|
+| Raw-facts layer + alias dictionary | key specs come out inconsistent across suppliers |
+| Deterministic part-number generator for families | the LLM gets family part numbers wrong |
+| More specs per type / weighted scoring | the engineer's answer is often missing from the top 10 |
+| LLM review of candidates' full datasheets | engineers often find problems the key specs didn't show |
+| Automatic type tree for all ~200 types | after the first ~10 types work well |
+| Package alias table, separate DB users, per-type SQL views | before wider production use, or when reports are needed |
 
 ---
 
@@ -479,23 +206,24 @@ This is what makes the system extendable rather than rewritten per category.
 
 | # | Topic | Decision |
 |---|---|---|
-| 1 | Datasheet update vs confirmed match | Stays valid unless a compared spec changed; then back to "needs re-check" |
+| 1 | Datasheet update vs confirmed match | Stays valid unless a compared spec changed; then "needs re-check" |
 | 2 | What a confirmation covers | Only the two exact part numbers |
-| 3 | Rejected matches | Engineer rejects with a written reason; the match is still shown, marked "Rejected", with the reason |
-| 4 | Specs not from a datasheet | Won't happen: every external spec comes from a datasheet with a page as proof |
-| 5 | Same part from several suppliers | List all equally good candidates, one per supplier |
+| 3 | Rejected matches | Engineer writes a reason; the match is still shown, marked "Rejected" |
+| 4 | Specs not from a datasheet | Won't happen: every value has a datasheet page as proof |
+| 5 | Same part from several suppliers | List all equally good ones, one per supplier |
 | 6 | Part number without manufacturer, several possible parts | Ask the salesperson |
-| 7 | Partial results failing a critical spec | Shown, ranked last, with a warning |
-| 8 | Historical cross-references | None yet: build a starter evaluation set (~30–50 pairs), then grow it from confirmations |
+| 7 | Partial results failing a critical spec | Shown last, with a warning |
+| 8 | Historical cross-references | None yet: starter test set of ~30–50, then grow from confirmations |
 | 9 | Top component types | Not known yet: start with the types that have the most datasheets |
-| 10 | Package / footprint list | None yet: build the package dictionary from the datasheets + standard package names, engineer reviews the most common |
-| 11 | Local model | 30B+ parameters: whole typical datasheets fit in context; tables are still extracted one at a time for reliability |
-| 12 | Supplier | Taken from the folder structure (`markdowns/<supplier>/...`), not detected by the LLM |
-| 13 | Chat tool | Only demo data now; will be adapted to the matching service's interface |
-| 14 | Who is an engineer | A role in your own system; not part of this plan |
-| 15 | Drawings for mechanical / electromechanical parts | Ignored for now; `requires_visual_check` notes still appear where relevant |
+| 10 | Package list | None yet: the LLM writes standard package names; a dictionary only if needed |
+| 11 | Local model | 30B+: a whole typical datasheet fits in one call |
+| 12 | Supplier | From the folder name |
+| 13 | Chat tool | Demo data now; will call `find_alternatives` |
+| 14 | Who is an engineer | A role in your own system |
+| 15 | Drawings (mechanical / electromechanical) | Ignored for now; `visual_check` notes still shown |
+| 16 | Scope of v1 | Simple version: key specs for shortlisting, side-by-side spec table, engineer decides |
 
 ### Still open
 
-- The real priority list of component types (by requests and sales), once that data is available.
-- How much engineer time is available for the starter evaluation set and the first schema reviews.
+- The real priority list of component types, once request and sales data is available.
+- How much engineer time is available for the spec lists and the starter test set.
