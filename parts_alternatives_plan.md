@@ -1,5 +1,13 @@
 # Finding alternatives from supplier datasheets: plan
 
+> **The problem.** Given a part number from a manufacturer we don't stock, we need to read its datasheet
+> and find the closest parts from our 110 suppliers. Those suppliers' 10,000+ markdown datasheets cover
+> about 200 component types, each with its own specs, and many datasheets describe whole families of part
+> numbers. The hard part is turning all of that into specs with one shared set of names and units, without
+> building and maintaining a table per type. Then we compare spec by spec within the same type, label each
+> result drop-in, functional or partial, show the datasheet page behind every value, and keep a match as
+> fact only after an engineer confirms it.
+
 Written 2026-11-17. Input: ~10,000 datasheet markdowns from 110 suppliers, about 200 component types,
 all in English, with tables already converted correctly. Everything runs locally; only web search reaches the internet.
 Goal: for a part number we don't sell, return the closest offerings from our suppliers, labelled
