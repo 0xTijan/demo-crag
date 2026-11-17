@@ -31,14 +31,31 @@ and is used only where v1 turns out not to be enough.
 
 Only **4 things are stored**: the spec-list files, `catalog_parts`, `external_parts` and `matches`.
 
+**Before Step 1, once:** every datasheet is classified by type, and a spec list is created for each of the
+first ~10 types (section 2, "Step 0" and "How a spec list is created").
+
 ---
 
 ## 2. Step 1: Index (offline)
 
+### Step 0: Classify all datasheets (once, before anything else)
+
+The first types to support can only be chosen once it's known which types exist and how many datasheets
+each has.
+
+1. **Quick classification of all ~10k datasheets:** the LLM reads only the first 1–2 pages and returns a
+   free-text type ("N-channel MOSFET", "MLCC", "Schottky diode"). Short calls; runs overnight.
+2. **Group the labels:** the LLM merges synonyms ("MLCC", "multilayer ceramic capacitor", "SMD ceramic cap"
+   → `mlcc`) into one type list. You check the list once.
+3. **Count datasheets per type** and pick the first ~10. Later the choice is made by request volume,
+   once that data exists.
+
+Every datasheet is stored with its type. New datasheets in the two-weekly run are classified the same way.
+
 ### A spec list per component type
 
-One small file per type, e.g. `spec_lists/mosfet_n.yaml`. The LLM drafts it from a few datasheets; you or
-an engineer check it in about 10 minutes. It names only the **5–10 specs that decide a replacement**.
+One small file per type, e.g. `spec_lists/mosfet_n.yaml`. It names only the **5–10 specs that decide a
+replacement**. How it's created is described below.
 
 ```yaml
 type: mosfet_n
@@ -49,7 +66,7 @@ specs:
   package:        {label: "Package (footprint)",      rule: "="}
   vds_max:        {label: "V(DS) max",                unit: V,    rule: ">=", critical: true}
   id_max:         {label: "I(D) max",                 unit: A,    rule: ">=", critical: true}
-  rds_on_max_10v: {label: "R(DS)on max @ VGS=10 V",   unit: ohm,  rule: "<="}
+  rds_on_max@vgs_10v: {label: "R(DS)on max @ VGS=10 V", unit: ohm, rule: "<="}
   vgs_th_max:     {label: "V(GS)th max",              unit: V,    rule: "<="}
   tj_max:         {label: "T(J) max",                 unit: degC, rule: ">="}
 ```
@@ -57,10 +74,58 @@ specs:
 Rules: `=` must be equal, `>=` / `<=` equal or better, `≈` close to (with a tolerance), `contains`
 the candidate's range must cover the requested one (e.g. temperature range).
 
+### How a spec list is created (~45–60 min per type)
+
+**1. Draft (LLM, ~5 min).** Pick ~10 sample datasheets of the type: different suppliers, single parts and
+families, small and large parts. Give the LLM their spec tables, the YAML format and the MOSFET example,
+with an instruction like:
+
+> "List the 5–10 specs that decide whether one part can replace another. Use specs that most of these
+> datasheets give. For each: a key with its condition and min/max (e.g. `rds_on_max@vgs_10v`), label, unit,
+> rule (`=`, `>=`, `<=`, `≈`, `contains`), critical yes/no. Name what must match for a drop-in (package…),
+> and anything that can only be checked on a drawing."
+
+**2. Check the draft against the samples (automatic).** Run the normal index call (below) with the draft
+on the same 10 datasheets, and count how often each spec was found:
+
+```
+mosfet_n draft — found in 10 sample datasheets
+  package            10/10
+  vds_max            10/10
+  id_max             10/10
+  rds_on_max@vgs_10v  8/10
+  rds_on_max@vgs_4v5  5/10   ← keep as non-critical, or drop
+  qg_total_max        3/10   ← drop: too rarely given to shortlist with
+```
+
+Specs that are rarely given can't help find candidates: drop them, or use the version most datasheets give.
+
+**3. Review by a person (~10–20 min).** An engineer, or you with an engineer for the important types,
+checks what the LLM most often gets wrong:
+- **Direction:** voltage rating `>=`, RDS(on) `<=`, capacitance `≈` (equal, not "more is better").
+- **Critical:** which specs make a part unusable when worse.
+- **Must match for a drop-in:** package, size system (inch vs metric), pin count, polarity / channel type.
+- **Missing:** a spec engineers always look at that the samples didn't show.
+
+A useful reference while reviewing: the filter list Digi-Key or Mouser use for that category. It shows which
+specs the industry uses to choose this type of part. Look at it; don't copy data from it.
+
+**4. Trial run (~20–30 min).** Index ~30 datasheets of the type and look at the extracted values as a table
+(wrong units, empty columns, odd values). Fix the YAML if needed, then index all datasheets of the type.
+
+| Per type | Time |
+|---|---|
+| LLM draft + automatic check | ~10 min, mostly waiting |
+| Human review | ~10–20 min |
+| Trial run + fixes | ~20–30 min |
+| **Total** | **~45–60 min**, so ~1–1.5 days for the first 10 types |
+
+The YAML files are kept in git. Changing one means re-indexing only that type.
+
 ### One LLM call per datasheet
 
-Input: the markdown + the list of spec lists. Output (JSON, temperature 0):
-- the component type (or "no spec list yet"),
+Runs only for datasheets whose type (from Step 0) has a spec list.
+Input: the markdown + that type's spec list. Output (JSON, temperature 0):
 - every part, or for families every row of the ordering/availability table, with its key specs
   **in the units of the spec list** and the **page** each value came from.
 
@@ -70,7 +135,7 @@ Input: the markdown + the list of spec lists. Output (JSON, temperature 0):
             "specs": {"package":        {"value": "TO-92", "page": 4},
                       "vds_max":        {"value": 60,  "unit": "V",   "page": 1, "raw": "60"},
                       "id_max":         {"value": 0.2, "unit": "A",   "page": 1, "raw": "0.2"},
-                      "rds_on_max_10v": {"value": 5,   "unit": "ohm", "page": 2, "raw": "5"}}}]}
+                      "rds_on_max@vgs_10v": {"value": 5, "unit": "ohm", "page": 2, "raw": "5"}}}]}
 ```
 
 A family (like the Viking MLCC) gives one entry per availability row, with ranges:
@@ -182,11 +247,12 @@ Estimates; measure on ~20 real requests.
 
 | Phase | Work | Done when |
 |---|---|---|
-| 1 | Spec lists for the first ~10 types (those with the most datasheets until sales data exists); index all datasheets | every datasheet has a type; the first 10 types have key specs |
+| 0 | Classify all datasheets by type (Step 0); group the labels into a type list; pick the first ~10 types | every datasheet has a type; counts per type known |
+| 1 | Spec lists for the first ~10 types (~1–1.5 days), then index their datasheets | the first 10 types have key specs, checked by a trial run |
 | 2 | Request flow, shortlist, spec table in Open WebUI | a real part number returns the table |
 | 3 | Confirm / reject, test set, measurements | results measured on the test set |
 
-**Adding a type later = writing one spec-list file + re-indexing that type.** No code changes.
+**Adding a type later = creating one spec list (~45–60 min, as above) + indexing that type.** No code changes.
 
 ---
 
