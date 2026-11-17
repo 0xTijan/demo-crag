@@ -132,11 +132,18 @@ Input: the markdown + that type's spec list. Output (JSON, temperature 0):
 ```json
 {"type": "mosfet_n",
  "parts": [{"part_number": "2N7000",
-            "specs": {"package":        {"value": "TO-92", "page": 4},
-                      "vds_max":        {"value": 60,  "unit": "V",   "page": 1, "raw": "60"},
-                      "id_max":         {"value": 0.2, "unit": "A",   "page": 1, "raw": "0.2"},
-                      "rds_on_max@vgs_10v": {"value": 5, "unit": "ohm", "page": 2, "raw": "5"}}}]}
+   "specs": {
+     "package":            {"value": "TO-92", "page": 4, "raw": "TO-92"},
+     "vds_max":            {"value": 60,  "unit": "V",   "stat": "max", "conditions": {},
+                            "page": 1, "raw": "60"},
+     "id_max":             {"value": 0.2, "unit": "A",   "stat": "max", "conditions": {"ta": "25 °C"},
+                            "page": 1, "raw": "0.2"},
+     "rds_on_max@vgs_10v": {"value": 5,   "unit": "ohm", "stat": "max",
+                            "conditions": {"vgs": "10 V", "id": "500 mA"}, "page": 2, "raw": "5"}}}]}
 ```
+
+Every value uses the same fields as the full design (`value`, `unit`, `stat`, `conditions`, `page`, `raw`),
+even where v1 doesn't use all of them yet. Ranges use `min` / `max` instead of `value`. See section 11.
 
 A family (like the Viking MLCC) gives one entry per availability row, with ranges:
 `0603 (inch) / X7R / 50 V → capacitance 150 pF – 470 nF, page 5`, plus the page of the ordering
@@ -207,9 +214,10 @@ proposed ──► sales confirms ──► engineer confirms ──► confirme
 ## 6. Storage
 
 ```sql
-catalog_parts  (id, supplier, file, file_hash, type, part_number, family_row text,
-                ordering_page int, specs jsonb, indexed_at);
-external_parts (id, manufacturer, part_number, file, file_hash, type, specs jsonb, fetched_at);
+catalog_parts  (id, supplier, file, file_hash, extractor_version, type, part_number,
+                family_row text, ordering_page int, specs jsonb, indexed_at);
+external_parts (id, manufacturer, part_number, file, file_hash, extractor_version, type,
+                specs jsonb, fetched_at);
 matches        (id, external_part_id, catalog_part_id, concrete_pn, label, score,
                 compared_specs jsonb,
                 status,        -- proposed | sales_confirmed | confirmed | rejected | needs_recheck
@@ -269,7 +277,58 @@ Estimates; measure on ~20 real requests.
 
 ---
 
-## 11. Decisions (review 2026-11-17)
+## 11. Upgrade path to the full design
+
+**Mostly no rewrite.** About half of v1 stays as it is; the rest is extended or replaced piece by piece.
+The one real replacement is the inside of the extractor, and it stays cheap only if v1 follows the rules below.
+
+### Part by part
+
+| Part of v1 | When upgrading | What happens |
+|---|---|---|
+| Open WebUI tool + spec table | **stays** | Same `find_alternatives` entry point and the same table format. |
+| Fetching the external datasheet | **stays** | Same web search → PDF → markdown. |
+| Confirm / reject flow + `matches` table | **stays** | Already in its final shape: statuses, reason, compared specs, re-check. |
+| Test set + measurements | **stays** | This is how each upgrade is shown to help. |
+| Step 0 type list | **stays** | Becomes the starting point of the automatic type tree. |
+| Spec-list YAML files | **extended** | They become the registry: add aliases, conditions and importance, load them into the database. |
+| Storage (`catalog_parts`, `external_parts`) | **extended** | The full design also keeps specs as JSON per part. Tables are added around it (documents, families, a flattened values table built from the JSON, the vocabulary). Existing data is migrated by a script, not re-extracted. |
+| Shortlist + scoring | **extended** | Same function; more specs, per-spec penalties and an SQL pre-filter are added. The label rules stay. |
+| Family part numbers | **replaced** (small) | The LLM call is swapped for the decoder-based generator, with the same input and output. |
+| Extractor (one LLM call per datasheet) | **replaced** | Becomes triage + table-by-table reading + alias dictionary + unit conversion in code. The biggest change; its output format stays the same, so nothing after it notices. |
+| LLM review, validation rules, corrections, separate DB users | **new** | Separate additions; nothing existing changes. |
+
+**Effort:** a complete upgrade is roughly **10–16 more weeks** (with agentic coding, full-time), compared with
+15–24 weeks for the full design from scratch. In practice only the pieces the tests call for are added
+(section 10).
+
+### Rules for v1 that keep the upgrade cheap
+
+1. **Full value format from day one.** Every value carries `value` (or `min`/`max`), `unit`, `stat`,
+   `conditions`, `page` and `raw`, as in the example in section 2. Storage, scoring and the table then don't
+   care which extractor produced a value.
+2. **Conditions and min/typ/max in the spec names**, e.g. `rds_on_max@vgs_10v`. These become the
+   registry's keys; renaming them later means migrating data and confirmed matches.
+3. **Each step a separate module with a fixed input and output:**
+   `classify(markdown) → type`, `extract(markdown, spec_list) → parts with specs`,
+   `shortlist(requested_part) → candidates`, `label(requested, candidate, spec_list) → label`,
+   `build_part_number(candidate, requested) → part number`, `render(result) → table`.
+   Replacing the extractor then means swapping one module.
+4. **Spec lists written in the registry's terms:** `unit`, `rule`, `critical`, optional `aliases`,
+   so they load into the registry one to one.
+5. **File hash and extractor version stored on every part**, so a new extractor re-processes only what changed.
+6. **Measure from the first week:** rows extracted vs rows in the table (family datasheets), and whether the
+   engineer's answer is in the top 10. These numbers say which upgrade, if any, is worth doing.
+
+### What would force a rewrite
+
+Breaking rules 1–3: specs stored as free-form JSON with varying names, or extraction, scoring and display
+mixed in one script. Then everything after the extractor depends on how the extractor works, and replacing
+it breaks the rest.
+
+---
+
+## 12. Decisions (review 2026-11-17)
 
 | # | Topic | Decision |
 |---|---|---|
