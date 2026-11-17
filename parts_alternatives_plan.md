@@ -77,8 +77,8 @@ A family (like the Viking MLCC) gives one entry per availability row, with range
 `0603 (inch) / X7R / 50 V → capacitance 150 pF – 470 nF, page 5`, plus the page of the ordering
 ("Part Numbering") table, used later to build an exact part number.
 
-**One check in code:** each value's `raw` text must appear on the cited page. If it doesn't, the value
-is marked *unverified* and shows a warning. This catches most invented values.
+**Two checks in code:** each value's `raw` text must appear on the cited page, and every range must have
+min ≤ max. A value that fails is marked *unverified* and shows a warning. This catches most invented or broken values.
 
 - Supplier = folder name. Only new or changed files are indexed (file hash), like the report pipeline.
 - Datasheets of types without a spec list are stored with their type only; requests for those types
@@ -89,7 +89,8 @@ is marked *unverified* and shows a warning. This catches most invented values.
 - **Test conditions:** RDS(on) is given at VGS=10 V and 4.5 V → separate specs in the list.
 - **min / typ / max:** the spec list says which one (e.g. `vgs_th_max`), so like is compared with like.
 - **Package names:** `0603` can be inch or metric → the spec list says which; the LLM writes the standard name.
-- **Typos in the source** (e.g. `225~1.6` in the MLCC table) → caught by the raw-text check or shown as unverified.
+- **Typos in the source** (e.g. `225~1.6` in the MLCC table): the raw-text check doesn't catch these, because
+  the text really is on the page. A simple check in code that every range has min ≤ max marks them unverified.
 
 ---
 

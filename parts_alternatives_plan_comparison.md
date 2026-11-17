@@ -29,7 +29,7 @@ are needed (section 10).
 | Storage | 3 tables + YAML files | 4 database schemas, ~15 tables, generated per-type views |
 | Matching | Python filter + % of key specs met | SQL filter + weighted per-spec scoring + LLM review |
 | Labels | set by code from the spec list | set by code from the registry |
-| Proof per value | page + raw-text check | page + table + row + raw-text check + validation rules |
+| Proof per value | page + raw-text check + min ≤ max check | page + table + row + raw-text check + validation rules |
 | First working version | ~5–8 weeks | ~15–24 weeks |
 | Code size | small | several times larger |
 | Engineer time | spec lists (~10 min per type) + test set | type tree review + spec-list review + alias review |
@@ -41,8 +41,8 @@ are needed (section 10).
 ### Simple plan
 - **One LLM call per datasheet.** Input: the markdown and the list of spec lists. Output: the component
   type, every part (or availability row), and its 5–10 key specs in the spec list's units, with page and raw text.
-- **One check in code:** the raw text of each value must appear on the cited page, otherwise the value is
-  marked *unverified*.
+- **Two checks in code:** the raw text of each value must appear on the cited page, and every range must have
+  min ≤ max. Otherwise the value is marked *unverified*.
 
 ### Full design
 - **Triage call** (first pages only): type, family or single part, headline specs.
@@ -60,7 +60,7 @@ are needed (section 10).
 | | Simple | Full |
 |---|---|---|
 | Rows skipped in long tables | possible: one call over a long document can miss rows | not possible: code reads every row |
-| Invented values | caught by the raw-text check | caught by the raw-text check + validation rules |
+| Invented or broken values | raw-text check + min ≤ max check | raw-text check + full validation rules (units, plausible values, part-number round trip) |
 | Unit mistakes | possible, the LLM converts | rare, code converts and checks the unit type |
 | Specs outside the spec list | not stored | all stored, so they can be used later without re-extracting |
 | LLM calls for 10k datasheets | ~10k long calls | many short calls, fewer over time thanks to caching |
@@ -168,7 +168,7 @@ plus separate database users per pipeline.
 | RDS(on) given at VGS = 10 V and 4.5 V | separate specs in the spec list | test conditions are part of each spec's identity, parsed automatically |
 | min / typ / max | the spec list says which one | stored for every value, compared like with like, warning if they differ |
 | `ms` written instead of mS | depends on the LLM | code fixes it using the expected unit type |
-| Typo `225~1.6` in the MLCC table | raw-text check may pass it (the text is there) → value can be wrong | validation rule (range order) catches it → review list |
+| Typo `225~1.6` in the MLCC table | raw-text check passes it (the text is there); the min ≤ max check marks it unverified | validation rules catch it → review list for correction |
 | `0603` inch vs metric | the spec list says which; the LLM writes the standard name | package dictionary with explicit systems |
 | Docling moved subscripts (`V =10V, I =500mA GS D`) | the LLM reads it in context | dedicated condition-repair step |
 | Pinout only in the drawing | `visual_check` note in the spec list | `requires_visual_check` per type |
@@ -220,7 +220,7 @@ shows it's needed**:
 | LLM-built part numbers that don't exist | part-number generator from the decoder |
 | The engineer's answer often not in the top 10 | more specs per type, weighted scoring |
 | Engineers often find problems the key specs didn't show | LLM review of the candidates' datasheets |
-| Wrong values like the `225~1.6` typo reach the table | validation rules + review list |
+| Wrong values get past the two simple checks and reach the table | full validation rules + review list |
 | Many requests for types without a spec list | automatic type tree and generated spec lists |
 | The company wants reports per type | generated per-type SQL views |
 
