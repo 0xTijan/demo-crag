@@ -7,6 +7,96 @@ Goal: for a part number we don't sell, return the closest offerings from our sup
 
 ---
 
+## 0. Overview: the four stages
+
+```
+ ONE-TIME + EVERY 2 WEEKS                          PER CUSTOMER REQUEST
+┌───────────────┐   ┌───────────────┐        ┌───────────────┐   ┌───────────────┐
+│ 1. EXTRACT    │──►│ 2. STORE      │◄──────►│ 3. MATCH      │──►│ 4. CONFIRM    │
+│ supplier .md  │   │ one database, │        │ external part │   │ sales → eng.  │
+│ → spec values │   │ standard spec │        │ vs. our parts │   │ → saved match │
+└───────────────┘   │ names & units │        └───────────────┘   └───────┬───────┘
+                    └───────▲───────┘                                    │
+                            └────────── confirmed matches ───────────────┘
+```
+
+### Stage 1. Extract: turn supplier markdowns into spec values
+
+**When:** once for all ~10k files, then every two weeks only for new or changed files.
+
+1. **Classify each datasheet.** Which supplier, which component type (for example "N-channel MOSFET" or
+   "MLCC capacitor"), and whether it describes one part or a whole family.
+2. **Read the tables.** Keep the spec tables and skip packaging, reel and reliability-test tables. Each spec
+   becomes one value: name, value, unit, min/typ/max, test condition, and the page it came from.
+3. **Translate the names into one shared vocabulary.** `VDS`, `V(BR)DSS` and "Drain-Source Voltage" all
+   become `drain_source_voltage`, in volts. Each component type has its own list of specs, generated
+   automatically and checked by an engineer only for the important types.
+
+**Result:** every supplier part is described the same way, whichever supplier wrote the datasheet.
+
+### Stage 2. Store: one database for every component type
+
+- **Parts:** supplier → datasheet → family → variant (for example one MLCC size / voltage / dielectric).
+- **Spec values:** one row per part per spec, in standard units, linked back to the datasheet page.
+  That link is the proof shown to the engineer.
+- **Spec list per component type:** which specs that type has and how each one is compared. For example:
+  package must be the same, voltage rating must be equal or higher, resistance must be equal or lower.
+- **Generated tables:** code builds one readable table per component type from the above. Nobody
+  maintains 200 tables by hand.
+
+### Stage 3. Match: one external part number against our parts
+
+**Input:** the customer's part number plus its specs. The web pipeline finds its datasheet and
+converts it to markdown.
+
+1. **Put the external specs through the same translation as Stage 1, step 3**, so both sides use the same
+   names and units. Without this the comparison doesn't work.
+2. **Check for a saved, engineer-confirmed match.** If one exists, show it first.
+3. **Narrow down:** keep only our parts of the **same component type**, and drop the clearly impossible
+   ones, such as a much lower voltage rating.
+4. **Compare spec by spec** using each spec's comparison rule, and score the result as the share of
+   important specs met.
+5. **Label each result:**
+   - **Drop-in:** same footprint and all important specs met.
+   - **Functional:** important specs met, but a different package or some minor specs are worse.
+   - **Partial:** the best available, with the failing specs listed.
+6. **Warn** when a spec is missing on either side, when test conditions differ, or when something can
+   only be checked in a drawing, like pinout.
+
+**Output:** the comparison table from the reference screenshot. Each value comes with its datasheet page.
+
+### Stage 4. Confirm: saving a match as a known fact
+
+```
+proposed ──► sales confirms ──► engineer confirms ──► SAVED
+             (only a note)      (now a fact)
+```
+
+A saved match:
+- is shown first the next time anyone asks for that part number,
+- becomes a test case for checking that system changes don't make matching worse,
+- over time shows which specs engineers accept being worse, which improves the scoring.
+
+If an engineer finds a wrongly extracted value, the correction is saved too, and it stays when the
+datasheet is processed again.
+
+### Example
+
+A customer asks for **2N7000** (60 V N-channel MOSFET, TO-92 package).
+
+1. Its datasheet is extracted into standard specs: drain_source_voltage 60 V, drain_current 0.2 A,
+   RDS(on) max 5 Ω @ VGS=10 V, package TO-92.
+2. The database returns our N-channel MOSFETs with at least about 50 V and at least about 0.2 A.
+3. The comparison finds one supplier part in TO-92 that meets every important spec → **Drop-in**.
+   A SOT-23 part with the same specs → **Functional**, because the package differs. A note says to check
+   the pinout on the drawing.
+4. A salesperson clicks confirm, then an engineer confirms. From then on, 2N7000 → that part is the
+   saved answer.
+
+The sections below give the details of each stage.
+
+---
+
 ## 1. The core idea
 
 Don't make one SQL table per category, and don't run vector search over the markdowns.
