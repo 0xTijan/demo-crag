@@ -34,7 +34,24 @@ Goal: for a part number we don't sell, return the closest offerings from our sup
 
 **Result:** every supplier part is described the same way, whichever supplier wrote the datasheet.
 
-### Stage 2. Store: one database for every component type
+### Stage 2. Store: one database, three separate areas
+
+```
+┌─────────────────────────────┐   ┌──────────────────────────────┐   ┌───────────────────────────────┐
+│ CATALOGUE (our suppliers)   │   │ SHARED VOCABULARY            │   │ EXTERNAL (requested parts)    │
+│ suppliers, datasheets,      │   │ component types, spec names, │   │ manufacturers, datasheets,    │
+│ families, variants, specs   │   │ units, aliases, packages     │   │ parts, specs                  │
+│ written only by Stage 1     │   │ (words only, no part data)   │   │ written only by Stage 3       │
+└──────────────┬──────────────┘   └──────────────────────────────┘   └───────────────┬───────────────┘
+               └────────────────────► MATCHES (one catalogue part ↔ one external part) ◄┘
+```
+
+- **Catalogue and external parts are never mixed.** They have separate tables, separate datasheet folders
+  and separate writers. A catalogue search can't return an external part.
+- **They share only the vocabulary:** the same spec names and units on both sides, so they can be compared.
+- **Matches is the only place both sides meet:** one row links a catalogue part and an external part.
+
+What the catalogue holds (the external area has the same structure, but for external parts):
 
 - **Parts:** supplier → datasheet → family → variant (for example one MLCC size / voltage / dielectric).
 - **Spec values:** one row per part per spec, in standard units, linked back to the datasheet page.
@@ -144,8 +161,27 @@ part number ─► catalogue? ─► cache? ─► web fetch → md → same ext
 
 ## 3. Data model (Postgres + pgvector)
 
+Four Postgres schemas. **`catalog` and `external` never reference each other**: they share only `vocab`,
+and only `matching` points to both.
+
+| Schema | Holds | Written by | Read by |
+|---|---|---|---|
+| `vocab` | component types, spec names and units, aliases, package dictionary | Stage 1 + engineer review (new aliases found in external datasheets may be added: words, not part data) | everyone |
+| `catalog` | our suppliers' datasheets, families, variants, spec values; generated per-type views | supplier extraction (Stage 1) only | matching (read-only) |
+| `external` | requested parts: their datasheets, families, parts, spec values | request pipeline (Stage 3) only | matching (read-only) |
+| `matching` | proposed / confirmed matches | matching + confirmation flow | everyone |
+
+Rules that keep them apart:
+- Separate file folders: `markdowns/suppliers/…` and `markdowns/external/…`.
+- Separate database users: the supplier pipeline can't write to `external`, and the request pipeline
+  can't write to `catalog`. The matcher only reads both.
+- The generated per-type views (e.g. `catalog.mosfet_n`) are built from `catalog` only.
+- An engineer correcting an external value saves it in `external`, never in the catalogue.
+- If an external manufacturer later becomes a supplier, their datasheets go through the supplier pipeline
+  from scratch. External rows are never moved into the catalogue.
+
 ```sql
--- taxonomy & registry (generated automatically, reviewed lightly)
+-- ── vocab: shared vocabulary (generated automatically, reviewed lightly) ──
 categories (
   id, parent_id, key, name, description,
   requires_visual_check bool, visual_check_note text,    -- e.g. "confirm pinout"
@@ -170,7 +206,7 @@ attributes (
 
 package_aliases (alias text, canonical text, system text, pin_count int, mounting text);
 
--- catalogue
+-- ── catalog: our suppliers only ──
 suppliers  (id, name, summary, categories text[]);
 documents  (id, supplier_id, path, sha256, extractor_version, extracted_at, status);
 families   (id, document_id, category_id, series, title, description,
@@ -184,17 +220,26 @@ offerings  (id, family_id,
 offering_values (                       -- flattened copy of attrs, for SQL filtering
   offering_id, attr_key, num_lo, num_hi, text_val, set_val text[], stat, confidence);
 
--- requested (external) parts
-requested_parts (id, part_number, manufacturer, document_id, category_id, attrs jsonb,
-                 decode_status, fetched_at);
+extraction_issues (document_id, page, attr_key, raw, problem, resolved bool);
 
--- results & feedback
-matches (id, requested_id, offering_id, concrete_pn, label, score, coverage,
-         diff jsonb, warnings jsonb,
+-- ── external: requested parts only (same structure, no links to catalog) ──
+manufacturers (id, name);
+documents     (id, manufacturer_id, source_url, path, sha256, extractor_version, fetched_at, status);
+families      (id, document_id, category_id, series, pn_decoder jsonb, shared_attrs jsonb);
+                                         -- kept so other part numbers of the same family decode instantly
+parts         (id, family_id, part_number, manufacturer_id, category_id,
+               decode_status, attrs jsonb, requested_count int, last_requested_at);
+part_values   (part_id, attr_key, num_lo, num_hi, text_val, set_val text[], stat, confidence);
+value_overrides (part_id, attr_key, corrected_value jsonb, corrected_by, corrected_at);
+extraction_issues (document_id, page, attr_key, raw, problem, resolved bool);
+
+-- ── matching: the only place both sides meet ──
+matches (id,
+         external_part_id,          -- → external.parts
+         catalog_offering_id,       -- → catalog.offerings
+         concrete_pn, label, score, coverage, diff jsonb, warnings jsonb,
          status text,     -- proposed | sales_confirmed | engineer_confirmed | rejected
          confirmed_by, confirmed_at, note);
-
-extraction_issues (document_id, page, attr_key, raw, problem, resolved bool);
 ```
 
 **Format of one stored attribute value.** Every value carries its proof:
@@ -275,7 +320,7 @@ Long documents are processed in page groups and merged.
 
 1. **Normalize the part number** and look it up in our catalogue, including decoder matches (it may
    be ours under a different code).
-2. **Requested part**: from the `requested_parts` cache, or via the existing web pipeline → markdown →
+2. **Requested part**: from `external.parts` (already fetched before), or via the existing web pipeline → markdown →
    the **same** triage + extraction → **decode the specific part number** inside its family
    (e.g. Murata `GRM188R71H104KA93D` → 0603-imp, X7R, 50 V, 100 nF, ±10%).
 3. **Category gate**: candidates must have the **same leaf category**. No cross-category matches
@@ -352,7 +397,7 @@ How the other cases compare:
 
 ### Ways to speed it up
 
-- Store every external datasheet and its specs, so the second request for that part takes seconds.
+- Store every external datasheet and its specs in the `external` area (never in the catalogue), so the second request for that part takes seconds.
 - Show the comparison table as soon as step 4 finishes, and add the step-5 warnings when they're ready.
 - Pre-process common competitor parts in the two-weekly run, for example parts from past requests.
 
