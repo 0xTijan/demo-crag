@@ -215,7 +215,7 @@ plus separate database users per pipeline.
 
 **Mostly no rewrite.** About half of the simple plan stays as it is when upgrading; the rest is extended or
 replaced piece by piece. The one real replacement is the inside of the extractor. The details are in
-section 11 of [`parts_alternatives_plan.md`](parts_alternatives_plan.md).
+section 13 of [`parts_alternatives_plan.md`](parts_alternatives_plan.md).
 
 ### What happens to each part of the simple plan
 

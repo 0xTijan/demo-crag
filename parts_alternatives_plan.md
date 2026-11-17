@@ -143,7 +143,7 @@ Input: the markdown + that type's spec list. Output (JSON, temperature 0):
 ```
 
 Every value uses the same fields as the full design (`value`, `unit`, `stat`, `conditions`, `page`, `raw`),
-even where v1 doesn't use all of them yet. Ranges use `min` / `max` instead of `value`. See section 11.
+even where v1 doesn't use all of them yet. Ranges use `min` / `max` instead of `value`. See section 13.
 
 A family (like the Viking MLCC) gives one entry per availability row, with ranges:
 `0603 (inch) / X7R / 50 V → capacitance 150 pF – 470 nF, page 5`, plus the page of the ordering
@@ -225,6 +225,8 @@ matches        (id, external_part_id, catalog_part_id, concrete_pn, label, score
 -- + spec_lists/*.yaml files
 ```
 
+Every extraction result is also saved as a file in the index cache (section 9).
+
 **Our parts and external parts are never mixed:** separate tables and separate folders
 (`markdowns/suppliers/…`, `markdowns/external/…`). `matches` is the only table that points to both.
 
@@ -242,7 +244,79 @@ Estimates; measure on ~20 real requests.
 
 ---
 
-## 8. Testing
+## 8. Indexing time (one-time, then incremental)
+
+A local LLM reads input fast and writes output slowly, so the time depends mostly on **how much it writes**.
+Estimates for a 30B model on one good GPU writing ~40 tokens/s; **measure with the pilot below**.
+
+| Datasheet | Input | Output | Time, one at a time |
+|---|---|---|---|
+| Single part (2N7000) | ~3k tokens | ~300–500 tokens | ~10–15 s |
+| Typical | ~8k tokens | ~1k tokens | ~25–35 s |
+| Big family (Viking MLCC, ~200 availability rows) | ~20k tokens | ~5–10k tokens | ~2–5 min |
+
+| Run | One at a time (Ollama) | Many in parallel (e.g. vLLM)* |
+|---|---|---|
+| Step 0, classification (first pages, tiny output) | ~3–8 h | < 1 h |
+| Index only the first ~10 types (maybe 2–4k datasheets) | ~1–2 days | ~3–6 h |
+| Index all ~10k datasheets | ~3–5 days | ~0.5–1 day |
+
+*One GPU can handle many requests at once, usually 5–10× more total output; measure on the real setup.
+
+### Making it faster
+
+1. **Parallel requests** with a batching server such as vLLM instead of one request at a time. The biggest win.
+2. **Compact LLM output:** one short line per value (`vds_max | 60 | V | max | p1 | "60"`); code turns it into
+   the full value format. Output is the slow part, so this can cut the time 2–3×.
+3. **Skip pages that don't matter:** code drops tape-and-reel, packaging, soldering and reliability pages
+   before the LLM sees them (about a third of the MLCC file).
+4. **Index only the supported types**, starting with the first ~10.
+5. **Test a mixture-of-experts model:** some 30B-class models use only a few billion parameters per token and
+   write several times faster at similar quality. Compare on the sample datasheets.
+6. **Run overnight / on weekends;** the run can stop and resume where it left off.
+
+### Afterwards
+
+- Two-weekly runs: only new or changed files (by file hash), usually minutes to an hour.
+- Changing a spec list: only that type's datasheets are re-run.
+- A new external part: ~20–60 s for its datasheet (section 7).
+- A new installation: no LLM run at all (section 9).
+
+### Pilot (first task of Phase 0)
+
+Index ~50 datasheets (single parts, normal families, a few huge ones like the MLCC). Measure seconds per
+datasheet one at a time and in parallel, then extrapolate. One afternoon replaces these estimates with real numbers.
+
+---
+
+## 9. Index cache (no re-indexing on a new installation)
+
+Every datasheet's extraction result is also saved as a file:
+
+```
+index_cache/
+  <supplier>/<file_hash>.json   →  {file, file_hash, extractor_version, spec_list_versions,
+                                    type, parts: [... specs with page + raw ...]}
+index_cache_external/
+  <manufacturer>/<file_hash>.json   (external parts, kept apart from our suppliers' data)
+```
+
+- **New installation:** a `load_cache` script reads these files into Postgres in minutes, with no LLM.
+- **Indexing skips** a datasheet when its cache file has the same file hash, extractor version and spec-list
+  version. Only new, changed or re-specced files go to the LLM.
+- **Kept in git:** small text files; a two-weekly run only changes the files of datasheets that changed.
+  Roughly 2–20 KB per datasheet (more for big families), so very roughly 50–300 MB in total. If it grows
+  much larger: Git LFS or a separate data repository.
+- **Not in the cache:** the `matches` table (confirmations and rejections). It is company data created by
+  people and can't be recomputed, so it gets regular database backups.
+- **Where the repository lives:** supplier specs and customer requests are company data. They go to the
+  company's own git server or a private repository the company owns and approves, never a personal one.
+- **Also needed on a new PC:** the markdown files (the spec table links to their pages and the raw-text
+  check reads them), the spec-list YAML files and the code.
+
+---
+
+## 10. Testing
 
 - **Starter test set:** an engineer writes ~30–50 requests with the correct alternative and label.
   Every confirmed or rejected match is added later.
@@ -251,12 +325,12 @@ Estimates; measure on ~20 real requests.
 
 ---
 
-## 9. Phases (~5–8 weeks)
+## 11. Phases (~5–8 weeks)
 
 | Phase | Work | Done when |
 |---|---|---|
-| 0 | Classify all datasheets by type (Step 0); group the labels into a type list; pick the first ~10 types | every datasheet has a type; counts per type known |
-| 1 | Spec lists for the first ~10 types (~1–1.5 days), then index their datasheets | the first 10 types have key specs, checked by a trial run |
+| 0 | Pilot: index ~50 datasheets and measure the speed (section 8). Then classify all datasheets by type (Step 0), group the labels into a type list, pick the first ~10 types | real speed numbers; every datasheet has a type; counts per type known |
+| 1 | Spec lists for the first ~10 types (~1–1.5 days), then index their datasheets, writing the index cache | the first 10 types have key specs, checked by a trial run; cache loads on a clean database |
 | 2 | Request flow, shortlist, spec table in Open WebUI | a real part number returns the table |
 | 3 | Confirm / reject, test set, measurements | results measured on the test set |
 
@@ -264,7 +338,7 @@ Estimates; measure on ~20 real requests.
 
 ---
 
-## 10. When to add more (from the full design)
+## 12. When to add more (from the full design)
 
 | Add | Only when |
 |---|---|
@@ -277,7 +351,7 @@ Estimates; measure on ~20 real requests.
 
 ---
 
-## 11. Upgrade path to the full design
+## 13. Upgrade path to the full design
 
 **Mostly no rewrite.** About half of v1 stays as it is; the rest is extended or replaced piece by piece.
 The one real replacement is the inside of the extractor, and it stays cheap only if v1 follows the rules below.
@@ -300,7 +374,7 @@ The one real replacement is the inside of the extractor, and it stays cheap only
 
 **Effort:** a complete upgrade is roughly **10–16 more weeks** (with agentic coding, full-time), compared with
 15–24 weeks for the full design from scratch. In practice only the pieces the tests call for are added
-(section 10).
+(section 12).
 
 ### Rules for v1 that keep the upgrade cheap
 
@@ -328,7 +402,7 @@ it breaks the rest.
 
 ---
 
-## 12. Decisions (review 2026-11-17)
+## 14. Decisions (review 2026-11-17)
 
 | # | Topic | Decision |
 |---|---|---|
@@ -348,6 +422,7 @@ it breaks the rest.
 | 14 | Who is an engineer | A role in your own system |
 | 15 | Drawings (mechanical / electromechanical) | Ignored for now; `visual_check` notes still shown |
 | 16 | Scope of v1 | Simple version: key specs for shortlisting, side-by-side spec table, engineer decides |
+| 17 | Re-indexing on a new installation | Not needed: extraction results are kept as an index cache in the company's git and loaded in minutes |
 
 ### Still open
 
