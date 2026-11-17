@@ -442,15 +442,39 @@ This is what makes the system extendable rather than rewritten per category.
 
 ---
 
-## 11. Open questions
+## 11. Open questions (for review)
 
-1. What do the historical cross-references look like (format, how many, do they include the label
-   drop-in / functional)? They decide the evaluation set and the weight tuning.
-2. Is there an existing package or footprint list in your ERP or CAD library (land patterns)? That would
-   seed `package_aliases`.
-3. Which local model and GPU: does a ~30B+ model with 32k context fit? This sets how big the extraction chunks are.
-4. Does the datasheet folder structure encode the supplier (`markdowns/<supplier>/...`)?
-5. How are mechanical and electromechanical parts (bearings, relays, connectors) specified in your
-   datasheets? Connectors and mechanical parts depend much more on drawings, so most of them will
-   carry `requires_visual_check`.
-6. Should "Partial" results show parts with a failing **critical** spec at all, or only with a warning?
+**A. Change the design if the answer differs from what's assumed**
+
+1. **Datasheet updates vs saved matches.** When a supplier or external datasheet changes, should matches
+   confirmed against the old version be re-checked by an engineer, or stay valid unless a compared spec
+   changed? *Assumed: stay valid unless a compared spec changed; otherwise flagged for re-check.*
+2. **What a confirmation covers.** Does a confirmed match apply only to the exact part numbers
+   (`GRM188R71H104KA93D` → `03KTB500104`), or also to other members of the same families?
+   *Assumed: exact part numbers only.*
+3. **Rejected matches.** When an engineer rejects a match, should that candidate be hidden for the same
+   part number in the future, or only shown lower with the reason? *Assumed: shown lower, with the reason.*
+4. **Specs not from a datasheet.** Will external specs ever come from somewhere other than a datasheet
+   (customer email, distributor web page, typed in by sales)? *Assumed: always a datasheet, so every value
+   has a page as proof. Other sources would need a "customer-provided" proof type and a warning.*
+5. **Same part from several suppliers.** Can one part (same manufacturer part number) be available through
+   more than one of our suppliers? Show it once with all suppliers listed, or once per supplier?
+6. **Part number without a manufacturer** that matches several different parts: should the system ask
+   the salesperson which one, or pick the most likely and warn? *Assumed: ask.*
+7. **Partial results with a failing critical spec**: show them with a warning, or hide them?
+   *Assumed: show, ranked last, with a warning.*
+
+**B. Inputs needed to start**
+
+8. Historical cross-references: format, how many, and do they say drop-in / functional?
+   They become the evaluation set.
+9. The top ~10 component types by requests and sales, to build and test first.
+10. An existing package or footprint list in the ERP or CAD library, to start the package dictionary.
+11. Which local model and context length will run extraction (sets how big each extraction chunk is).
+12. Is the supplier visible from the datasheet folder structure (`markdowns/<supplier>/...`)?
+13. How the chat tool (`partsfinder_find_alternatives`) calls the backend: a Python function, an HTTP
+    API? This sets the interface of the matching service.
+14. Who counts as an engineer for confirmation: a list of people, a role in an existing login system,
+    one expert per component type?
+15. For mechanical and electromechanical parts (bearings, relays, connectors): how much of the key
+    information is only in drawings? Those types will mostly carry `requires_visual_check`.
