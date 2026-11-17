@@ -85,9 +85,12 @@ converts it to markdown.
 ### Stage 4. Confirm: saving a match as a known fact
 
 ```
-proposed ──► sales confirms ──► engineer confirms ──► SAVED
-             (only a note)      (now a fact)
+proposed ──► sales confirms ──► engineer confirms ──► SAVED (now a fact)
+             (only a note)  └──► engineer rejects  ──► SAVED as rejected, with the reason
 ```
+
+A confirmation covers only the two exact part numbers. A rejected match is never hidden: it keeps
+appearing, marked "Rejected", with the engineer's reason.
 
 A saved match:
 - is shown first the next time anyone asks for that part number,
@@ -238,8 +241,10 @@ matches (id,
          external_part_id,          -- → external.parts
          catalog_offering_id,       -- → catalog.offerings
          concrete_pn, label, score, coverage, diff jsonb, warnings jsonb,
-         status text,     -- proposed | sales_confirmed | engineer_confirmed | rejected
-         confirmed_by, confirmed_at, note);
+         status text,     -- proposed | sales_confirmed | engineer_confirmed | engineer_rejected | needs_recheck
+         decided_by, decided_role, decided_at,
+         reason text,     -- required when engineer_rejected
+         compared_spec_hash text);  -- hash of the compared specs; a change → needs_recheck
 ```
 
 **Format of one stored attribute value.** Every value carries its proof:
@@ -319,7 +324,8 @@ Long documents are processed in page groups and merged.
 ## 6. Matching at query time
 
 1. **Normalize the part number** and look it up in our catalogue, including decoder matches (it may
-   be ours under a different code).
+   be ours under a different code). If no manufacturer is given and the part number fits several
+   different parts, **ask the salesperson which one** before going on.
 2. **Requested part**: from `external.parts` (already fetched before), or via the existing web pipeline → markdown →
    the **same** triage + extraction → **decode the specific part number** inside its family
    (e.g. Murata `GRM188R71H104KA93D` → 0603-imp, X7R, 50 V, 100 nF, ±10%).
@@ -336,7 +342,8 @@ Long documents are processed in page groups and merged.
 6. **Labels**:
    - **Drop-in**: footprint attributes all `eq` AND every critical + important spec met.
    - **Functional**: every critical spec met; footprint differs and/or some important specs are worse.
-   - **Partial**: everything else; ranked by score, with the failing specs listed.
+   - **Partial**: everything else; ranked by score, with the failing specs listed. Parts that fail a
+     **critical** spec are still shown, ranked last, with a warning.
    - Always return the best results. In addition, show a **confidence warning** when coverage is low,
      values are `unverified`, the category or decode is uncertain, the schema isn't reviewed, or
      `requires_visual_check` is set.
@@ -346,9 +353,16 @@ Long documents are processed in page groups and merged.
 8. **LLM review of the top 5–10**: it gets the requested and candidate spec JSON plus the cited
    markdown pages. It can **only add** warnings and a one-line justification (pinout note,
    "not for new designs", a condition the schema missed). It cannot change scores or labels.
-9. **Output JSON**: requested, candidates[label, score, coverage, per-attribute {req, cand, verdict,
-   source page}], warnings, visual-check notes. The chat tool renders it as the table.
-   **Engineer-confirmed** cross-references for this part number always appear first.
+9. **Same part from several suppliers**: when equally good candidates come from different suppliers,
+   all of them are listed, one per supplier.
+10. **Output JSON**: requested, candidates[label, score, coverage, supplier, per-attribute {req, cand,
+    verdict, source page}], warnings, visual-check notes. The chat tool renders it as the table.
+    **Engineer-confirmed** matches for this part number always appear first. **Engineer-rejected**
+    matches are still shown, marked "Rejected" with the engineer's reason, below the others.
+
+The matching service exposes one function / endpoint, e.g.
+`find_alternatives(part_number, manufacturer=None) → JSON` (or a question back, see step 1).
+The current chat tool only has demo data and will be adapted to this interface.
 
 ---
 
@@ -375,7 +389,6 @@ How the other cases compare:
 |---|---|
 | Asked before, not confirmed (specs already stored) | seconds, up to ~1 min with step 5 |
 | Engineer-confirmed match saved | instant |
-| Specs given to the system directly, no datasheet | seconds: only name mapping + steps 4–5 |
 
 ### How complex the per-request search is
 
@@ -391,8 +404,8 @@ How the other cases compare:
 
 - Scanned PDFs, which need OCR.
 - Very large family datasheets (100+ pages). Fix: read only the part-numbering and spec pages.
-- The manufacturer isn't given, and the part number matches several different parts. The system has to
-  pick one or ask the user.
+- The manufacturer isn't given, and the part number matches several different parts. The system asks
+  the salesperson which one is meant.
 - The component type is rare and its spec list hasn't been reviewed. It still works, but it shows a warning.
 
 ### Ways to speed it up
@@ -405,11 +418,21 @@ How the other cases compare:
 
 ## 8. Confirmation loop
 
-`proposed` → sales clicks confirm → `sales_confirmed` (shown, but not treated as a fact) → engineer
-confirms → `engineer_confirmed`. Only engineer-confirmed rows:
-- are pinned as the top answer for that requested part number,
-- go into the evaluation set,
-- are used to tune importance weights per category later (which specs engineers actually accept as worse).
+```
+proposed ──► sales confirms ──► engineer confirms ──► engineer_confirmed (a fact)
+                               └► engineer rejects  ──► engineer_rejected (+ written reason)
+```
+
+- **Who is an engineer** comes from the role a user has in your system; the match stores the user and role
+  of each confirmation.
+- **A confirmation covers only the two exact part numbers** (e.g. `GRM188R71H104KA93D` → `03KTB500104`),
+  not other members of either family.
+- **Engineer-confirmed** matches are pinned as the top answer for that requested part number, go into the
+  evaluation set, and are later used to tune importance weights per component type.
+- **Engineer-rejected** matches are never hidden: they keep appearing, marked "Rejected", with the
+  engineer's reason, below the other results.
+- **When a datasheet changes** (supplier or external): a confirmed match stays valid unless a spec that
+  was compared in it changed. If one did, the match goes back to "needs re-check" for an engineer.
 
 Corrections to extracted values (an engineer fixes "VDS = 600 V" to 60 V) are stored as overrides that
 survive re-extraction.
@@ -418,9 +441,11 @@ survive re-extraction.
 
 ## 9. Evaluation (set up before tuning anything)
 
-- **Matching**: historical cross-references (requested part → accepted alternative). Metrics: recall@1,
-  recall@5, label agreement, and the share of results that carry a warning. Run on every schema, extractor
-  or scoring change.
+- **Matching**: there are no historical cross-references yet, so the evaluation set is built:
+  an engineer picks ~30–50 real or typical requests from the first component types and writes down the
+  correct alternative and label. After that, every engineer-confirmed or -rejected match is added
+  automatically. Metrics: recall@1, recall@5, label agreement, and the share of results that carry a
+  warning. Run on every schema, extractor or scoring change.
 - **Extraction**: hand-check ~50 datasheets across the top categories. Precision and recall of critical
   attributes, accuracy of unit conversion, decoder round-trip accuracy.
 - Keep a regression folder of difficult datasheets: multi-condition specs, decoders, typos (like the X7S `225~1.6` row).
@@ -431,8 +456,8 @@ survive re-extraction.
 
 | Phase | Scope | Done when |
 |---|---|---|
-| 0 | Evaluation set from historical cross-refs; pick the top 10 categories | ≥100 known pairs loaded |
-| 1 | Triage all ~10k docs; taxonomy; package dictionary | every doc has a category or sits in the review list |
+| 0 | Triage all ~10k docs (supplier from folder name); taxonomy; package dictionary | every doc has a category or sits in the review list |
+| 1 | Pick the first ~10 component types (by datasheet count from Phase 0 until sales data exists); engineer writes the starter evaluation set | ~30–50 known pairs |
 | 2 | Schemas + extraction + matching for the top 10 categories, end to end with the chat tool | recall@5 measured on the evaluation set |
 | 3 | Auto schemas for the remaining ~190 categories; fallback path | every category returns results (with "unreviewed" warnings) |
 | 4 | Confirmation workflow, two-weekly incremental runs, override handling | engineer-confirmed rows pinned and evaluated |
@@ -442,39 +467,27 @@ This is what makes the system extendable rather than rewritten per category.
 
 ---
 
-## 11. Open questions (for review)
+## 11. Decisions (review 2026-11-17)
 
-**A. Change the design if the answer differs from what's assumed**
+| # | Topic | Decision |
+|---|---|---|
+| 1 | Datasheet update vs confirmed match | Stays valid unless a compared spec changed; then back to "needs re-check" |
+| 2 | What a confirmation covers | Only the two exact part numbers |
+| 3 | Rejected matches | Engineer rejects with a written reason; the match is still shown, marked "Rejected", with the reason |
+| 4 | Specs not from a datasheet | Won't happen: every external spec comes from a datasheet with a page as proof |
+| 5 | Same part from several suppliers | List all equally good candidates, one per supplier |
+| 6 | Part number without manufacturer, several possible parts | Ask the salesperson |
+| 7 | Partial results failing a critical spec | Shown, ranked last, with a warning |
+| 8 | Historical cross-references | None yet: build a starter evaluation set (~30–50 pairs), then grow it from confirmations |
+| 9 | Top component types | Not known yet: start with the types that have the most datasheets |
+| 10 | Package / footprint list | None yet: build the package dictionary from the datasheets + standard package names, engineer reviews the most common |
+| 11 | Local model | 30B+ parameters: whole typical datasheets fit in context; tables are still extracted one at a time for reliability |
+| 12 | Supplier | Taken from the folder structure (`markdowns/<supplier>/...`), not detected by the LLM |
+| 13 | Chat tool | Only demo data now; will be adapted to the matching service's interface |
+| 14 | Who is an engineer | A role in your own system; not part of this plan |
+| 15 | Drawings for mechanical / electromechanical parts | Ignored for now; `requires_visual_check` notes still appear where relevant |
 
-1. **Datasheet updates vs saved matches.** When a supplier or external datasheet changes, should matches
-   confirmed against the old version be re-checked by an engineer, or stay valid unless a compared spec
-   changed? *Assumed: stay valid unless a compared spec changed; otherwise flagged for re-check.*
-2. **What a confirmation covers.** Does a confirmed match apply only to the exact part numbers
-   (`GRM188R71H104KA93D` → `03KTB500104`), or also to other members of the same families?
-   *Assumed: exact part numbers only.*
-3. **Rejected matches.** When an engineer rejects a match, should that candidate be hidden for the same
-   part number in the future, or only shown lower with the reason? *Assumed: shown lower, with the reason.*
-4. **Specs not from a datasheet.** Will external specs ever come from somewhere other than a datasheet
-   (customer email, distributor web page, typed in by sales)? *Assumed: always a datasheet, so every value
-   has a page as proof. Other sources would need a "customer-provided" proof type and a warning.*
-5. **Same part from several suppliers.** Can one part (same manufacturer part number) be available through
-   more than one of our suppliers? Show it once with all suppliers listed, or once per supplier?
-6. **Part number without a manufacturer** that matches several different parts: should the system ask
-   the salesperson which one, or pick the most likely and warn? *Assumed: ask.*
-7. **Partial results with a failing critical spec**: show them with a warning, or hide them?
-   *Assumed: show, ranked last, with a warning.*
+### Still open
 
-**B. Inputs needed to start**
-
-8. Historical cross-references: format, how many, and do they say drop-in / functional?
-   They become the evaluation set.
-9. The top ~10 component types by requests and sales, to build and test first.
-10. An existing package or footprint list in the ERP or CAD library, to start the package dictionary.
-11. Which local model and context length will run extraction (sets how big each extraction chunk is).
-12. Is the supplier visible from the datasheet folder structure (`markdowns/<supplier>/...`)?
-13. How the chat tool (`partsfinder_find_alternatives`) calls the backend: a Python function, an HTTP
-    API? This sets the interface of the matching service.
-14. Who counts as an engineer for confirmation: a list of people, a role in an existing login system,
-    one expert per component type?
-15. For mechanical and electromechanical parts (bearings, relays, connectors): how much of the key
-    information is only in drawings? Those types will mostly carry `requires_visual_check`.
+- The real priority list of component types (by requests and sales), once that data is available.
+- How much engineer time is available for the starter evaluation set and the first schema reviews.
