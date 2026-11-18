@@ -4,6 +4,9 @@ Companies are rows of `stocks` (keyed by ISIN); their website is `stocks.website
   * `downloaded_files`: one row per downloaded source URL. It deduplicates
     reruns, both by URL and by SHA-256 of the content.
   * `download_errors`: one row per failure, with the stage it failed at.
+
+The part crawler (parts_run.py) has its own two tables, keyed by manufacturer
+instead of ISIN: `datasheet_files` and `datasheet_errors` (PART_DDL).
 """
 import sys
 import traceback as tb
@@ -46,13 +49,47 @@ DDL = [
 ]
 
 
+PART_DDL = [
+    """
+    CREATE TABLE IF NOT EXISTS datasheet_files (
+        datasheet_id  SERIAL PRIMARY KEY,
+        manufacturer  TEXT        NOT NULL,
+        source_url    TEXT        NOT NULL,
+        page_url      TEXT,
+        link_text     TEXT,
+        context       TEXT,
+        trail         TEXT,
+        file_path     TEXT        NOT NULL,
+        file_hash     CHAR(64)    NOT NULL,
+        file_size     BIGINT,
+        downloaded_at TIMESTAMPTZ DEFAULT now(),
+        UNIQUE (manufacturer, source_url)
+    )
+    """,
+    "CREATE INDEX IF NOT EXISTS datasheet_files_hash_idx ON datasheet_files (manufacturer, file_hash)",
+    """
+    CREATE TABLE IF NOT EXISTS datasheet_errors (
+        error_id     SERIAL PRIMARY KEY,
+        manufacturer TEXT,
+        url          TEXT,
+        stage        TEXT NOT NULL,
+        error        TEXT NOT NULL,
+        http_status  INT,
+        traceback    TEXT,
+        occurred_at  TIMESTAMPTZ DEFAULT now()
+    )
+    """,
+    "CREATE INDEX IF NOT EXISTS datasheet_errors_manufacturer_idx ON datasheet_errors (manufacturer, occurred_at DESC)",
+]
+
+
 def get_engine():
     return create_engine(DATABASE_URL, pool_pre_ping=True)
 
 
-def ensure_tables(engine) -> None:
+def ensure_tables(engine, ddl=None) -> None:
     with engine.begin() as conn:
-        for stmt in DDL:
+        for stmt in ddl or DDL:
             conn.execute(text(stmt))
 
 
@@ -101,12 +138,46 @@ def record_download(engine, row: dict) -> None:
         )
 
 
-class ErrorLog:
-    """Writes failures to `download_errors`. It never raises."""
+def known_datasheets(engine, manufacturer: str) -> tuple[dict, dict]:
+    """Return ({source_url: file_path}, {file_hash: file_path}) for a manufacturer."""
+    with engine.connect() as conn:
+        rows = conn.execute(
+            text("SELECT source_url, file_hash, file_path FROM datasheet_files WHERE manufacturer = :m"),
+            {"m": manufacturer},
+        ).all()
+    return {r.source_url: r.file_path for r in rows}, {r.file_hash: r.file_path for r in rows}
 
-    def __init__(self, engine, stock_isin=None):
+
+def record_datasheet(engine, row: dict) -> None:
+    with engine.begin() as conn:
+        conn.execute(
+            text(
+                """
+                INSERT INTO datasheet_files
+                    (manufacturer, source_url, page_url, link_text, context, trail,
+                     file_path, file_hash, file_size)
+                VALUES (:manufacturer, :source_url, :page_url, :link_text, :context, :trail,
+                        :file_path, :file_hash, :file_size)
+                ON CONFLICT (manufacturer, source_url) DO UPDATE SET
+                    page_url = EXCLUDED.page_url, link_text = EXCLUDED.link_text,
+                    context = EXCLUDED.context, trail = EXCLUDED.trail,
+                    file_path = EXCLUDED.file_path, file_hash = EXCLUDED.file_hash,
+                    file_size = EXCLUDED.file_size, downloaded_at = now()
+                """
+            ),
+            row,
+        )
+
+
+class ErrorLog:
+    """Writes failures to `download_errors` (or, for the part crawler, `datasheet_errors`).
+    It never raises. With `engine=None` failures are only printed."""
+
+    def __init__(self, engine, stock_isin=None, table="download_errors", owner_column="stock_isin"):
         self.engine = engine
-        self.stock_isin = stock_isin
+        self.stock_isin = stock_isin  # value of owner_column: an ISIN, or a manufacturer
+        self.table = table
+        self.owner_column = owner_column
         self.count = 0
 
     def __call__(self, stage: str, error, url: str | None = None, http_status: int | None = None) -> None:
@@ -117,11 +188,13 @@ class ErrorLog:
         else:
             message, trace = str(error), None
         print(f"    ! [{stage}] {url or ''} {message[:200]}", file=sys.stderr)
+        if self.engine is None:
+            return
         try:
             with self.engine.begin() as conn:
                 conn.execute(
                     text(
-                        "INSERT INTO download_errors (stock_isin, url, stage, error, http_status, traceback) "
+                        f"INSERT INTO {self.table} ({self.owner_column}, url, stage, error, http_status, traceback) "
                         "VALUES (:c, :u, :s, :e, :h, :t)"
                     ),
                     {"c": self.stock_isin, "u": url, "s": stage, "e": message[:4000],

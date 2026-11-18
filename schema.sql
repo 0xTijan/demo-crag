@@ -182,3 +182,36 @@ CREATE TABLE IF NOT EXISTS download_errors (
     occurred_at TIMESTAMPTZ DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (stock_isin, occurred_at DESC);
+
+-- ==========================
+-- 7. Downloaded datasheets of component manufacturers (dataPipeline/download/parts_run.py)
+-- ==========================
+-- Manufacturers are given on the command line (product page or homepage URL);
+-- `manufacturer` is a short name such as "goodark" (from the domain, or --name).
+CREATE TABLE IF NOT EXISTS datasheet_files (
+    datasheet_id  SERIAL PRIMARY KEY,
+    manufacturer  TEXT        NOT NULL,
+    source_url    TEXT        NOT NULL,
+    page_url      TEXT,                              -- catalogue page the PDF was found on
+    link_text     TEXT,                              -- link / button text ("Datasheet", ...)
+    context       TEXT,                              -- table row or section (part number, family)
+    trail         TEXT,                              -- links/clicks from the start page, " > "-separated
+    file_path     TEXT        NOT NULL,              -- relative to datasheets/
+    file_hash     CHAR(64)    NOT NULL,              -- SHA-256 of the PDF bytes
+    file_size     BIGINT,
+    downloaded_at TIMESTAMPTZ DEFAULT now(),
+    UNIQUE (manufacturer, source_url)
+);
+CREATE INDEX IF NOT EXISTS datasheet_files_hash_idx ON datasheet_files (manufacturer, file_hash);
+
+CREATE TABLE IF NOT EXISTS datasheet_errors (
+    error_id     SERIAL PRIMARY KEY,
+    manufacturer TEXT,
+    url          TEXT,
+    stage        TEXT NOT NULL,  -- website | robots | crawl | render | click | head_check | datasheet_unavailable | download | verify | write | db | manufacturer
+    error        TEXT NOT NULL,
+    http_status  INT,
+    traceback    TEXT,
+    occurred_at  TIMESTAMPTZ DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS datasheet_errors_manufacturer_idx ON datasheet_errors (manufacturer, occurred_at DESC);

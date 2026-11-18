@@ -209,7 +209,15 @@ class Fetcher:
             raise FetchError(f"HTTP {resp.status_code}", resp.status_code)
         return resp
 
+    def wait(self, url: str) -> None:
+        """Public form of the per-host pause, for callers that drive the browser themselves."""
+        self._wait(url)
+
     # ------------------------------------------------------------ browser
+    def browser_context(self):
+        """The shared Playwright context (started on first use)."""
+        return self._browser_context()
+
     def _browser_context(self):
         if self._context is None:
             from playwright.sync_api import sync_playwright
@@ -222,7 +230,8 @@ class Fetcher:
                     executable_path=CHROMIUM_PATH, args=["--no-sandbox"], headless=True
                 )
             self._context = self._browser.new_context(
-                user_agent=USER_AGENT, locale="en-GB", accept_downloads=False,
+                user_agent=USER_AGENT, locale="en-GB", accept_downloads=True,
+                viewport={"width": 1440, "height": 900},
                 extra_http_headers={"Accept-Language": "en-GB,en;q=0.9"},
             )
         return self._context

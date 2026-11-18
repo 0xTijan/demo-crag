@@ -44,8 +44,21 @@ def guess_title(pdf: PdfLink, disposition: str) -> str:
     return name or pdf.context[:80]
 
 
-def download(fetcher: Fetcher, pdf: PdfLink, target_dir: Path, known_hashes: dict, reports_dir: Path) -> dict:
+def guess_filename(pdf: PdfLink, disposition: str) -> str:
+    """The document's own name: Content-Disposition, then the URL's last part, then the link text."""
+    match = re.search(r"filename\*?=(?:UTF-8'')?\"?([^\";]+)", disposition or "", re.I)
+    if match:
+        return Path(unquote(match.group(1))).stem
+    name = Path(unquote(urlsplit(pdf.url).path)).stem
+    return name or pdf.text or "document"
+
+
+def download(fetcher: Fetcher, pdf: PdfLink, target_dir: Path, known_hashes: dict, reports_dir: Path,
+             naming: str = "report") -> dict:
     """Download `pdf` into `target_dir`.
+
+    `naming` chooses the file name: "report" -> {year}_{title}_{hash8}.pdf (financial
+    reports), "document" -> {file name from the server or URL}_{hash8}.pdf (datasheets).
 
     Returns a dict with file_path (relative to reports/), file_hash, file_size,
     fiscal_year and duplicate_of (set when the same bytes were saved earlier).
@@ -92,7 +105,10 @@ def download(fetcher: Fetcher, pdf: PdfLink, target_dir: Path, known_hashes: dic
             return {"file_path": existing, "file_hash": file_hash, "file_size": size,
                     "fiscal_year": year, "duplicate_of": existing}
 
-        name = f"{year or 'undated'}_{slugify(guess_title(pdf, disposition))}_{file_hash[:8]}.pdf"
+        if naming == "document":
+            name = f"{slugify(guess_filename(pdf, disposition))}_{file_hash[:8]}.pdf"
+        else:
+            name = f"{year or 'undated'}_{slugify(guess_title(pdf, disposition))}_{file_hash[:8]}.pdf"
         final = target_dir / name
         try:
             tmp.replace(final)

@@ -2,6 +2,8 @@
 
 `python -m dataPipeline.download.run` visits the English website of every company in the `stocks` table, finds the PDFs in its financial-report and announcement sections, and saves them in `reports/`. Every file and every failure is recorded in PostgreSQL.
 
+**Datasheets of component manufacturers** are downloaded by a second crawler in the same folder, `python -m dataPipeline.download.parts_run <url>`: see [14. Part crawler](#14-part-crawler-every-datasheet-of-a-manufacturer).
+
 This document explains the pipeline from the first line to the last, so that an engineer who has never seen it can understand what each part does and how the parts connect.
 
 - [1. What it does, in one picture](#1-what-it-does-in-one-picture)
@@ -17,6 +19,7 @@ This document explains the pipeline from the first line to the last, so that an 
 - [11. Every threshold in one place](#11-every-threshold-in-one-place)
 - [12. Tests](#12-tests)
 - [13. Extending and known limits](#13-extending-and-known-limits)
+- [14. Part crawler: every datasheet of a manufacturer](#14-part-crawler-every-datasheet-of-a-manufacturer)
 
 ---
 
@@ -69,6 +72,8 @@ stocks(isin, name, website_url)
 | `fetcher.py` | All network access: rate limit per host, `robots.txt`, retries, HEAD checks, the Playwright browser, repair of incomplete TLS chains. | `settings` |
 | `crawler.py` | Finds the English site, runs the focused crawl, decides which PDFs to keep and their category. Knows nothing about disks or databases. | `fetcher`, `settings` |
 | `downloader.py` | Streams one PDF to disk, verifies it, removes duplicates, names the file. | `fetcher`, `crawler.PdfLink` |
+| `parts_run.py` | Part crawler: the script you run for manufacturers' datasheets ([14](#14-part-crawler-every-datasheet-of-a-manufacturer)). | `parts_crawler`, `downloader`, `fetcher`, `db` |
+| `parts_crawler.py` | Walks a product catalogue (static links, or clicking in a browser) and reports every PDF. | `fetcher`, `crawler` (URL helpers), `settings` |
 | `settings.py` | Constants, limits and all keyword lists. | none |
 
 ```
@@ -388,3 +393,101 @@ When a PDF is missed or wrongly kept, find out which rule decided: the page may 
 - `download_errors` grows with every run and is never cleaned.
 - Companies without a `website_url` are only logged as errors.
 - No locking: two simultaneous runs could both download the same file. The unique key keeps `downloaded_files` consistent, and the file name contains the hash, so the result is the same file.
+
+---
+
+## 14. Part crawler: every datasheet of a manufacturer
+
+`parts_run.py` + `parts_crawler.py` download **every datasheet PDF** from a component manufacturer's website. You give the product page (or just the homepage); the crawler walks every product category, family, series and part page, the way a person would click through the catalogue, and saves each datasheet once. Nothing in the code knows a particular website: the two sites below are only the examples it was built and checked against.
+
+```bash
+python -m dataPipeline.download.parts_run https://en.goodark.com/product.php
+python -m dataPipeline.download.parts_run https://www.novosns.com/en/ https://en.goodark.com/product.php
+python -m dataPipeline.download.parts_run --file manufacturers.txt        # one URL per line, # comments
+python -m dataPipeline.download.parts_run https://www.novosns.com/en/ --dry-run -v   # list, download nothing
+python -m dataPipeline.download.parts_run https://en.goodark.com/product.php --no-db   # no PostgreSQL
+```
+
+| Option | Default | Meaning |
+|---|---|---|
+| `--file PATH` | none | More URLs, one per line |
+| `--name NAME` | from the domain (`goodark`, `novosns`) | Manufacturer name: folder and database key (one URL only) |
+| `--max-pages N` | 20000 | Pages (static or rendered) per manufacturer |
+| `--max-depth N` | 10 | Links/clicks from the start URL |
+| `--js auto\|always\|never` | `auto` | Clicking browser: decide per site, always, or never |
+| `--all-pdfs` | off | Keep every PDF of the catalogue, not only datasheets |
+| `--dry-run` | off | Print the datasheets found; download and write nothing (no database needed) |
+| `--force` | off | Download again even if already saved |
+| `--no-db` | off | Only `manifest.jsonl`, no PostgreSQL |
+| `-v` | off | Print every page and every click |
+
+Output:
+
+- `datasheets/{manufacturer}/{name-of-the-pdf}_{hash8}.pdf` (`datasheets/` is gitignored). The name is the server's file name (`Content-Disposition`) or the URL's last part, so `MT6835_Rev.1.3.pdf` stays recognisable.
+- `datasheets/{manufacturer}/manifest.jsonl`: one JSON line per source URL: `source_url`, `page_url` (where it was found), `link_text`, `context` (the table row, usually the part number), `trail` (links/clicks from the start page, e.g. `Sensor > Magnetic Sensor > ABS Speed Sensor > NSM4101-Q0TOMR > Datasheet`), `file_path`, `file_hash`, `file_size`.
+- With a database: the same rows in `datasheet_files`, failures in `datasheet_errors` (both created by `parts_run.py`, also in `schema.sql`). Files saved by a `--no-db` run get their row on the next run with a database.
+- Logs: `logs/datasheets_<date>_<time>.log`.
+
+Every file is saved as soon as it is found, so a crawl stopped half-way keeps what it has. A rerun skips URLs whose file exists; identical bytes under another URL (many parts share one datasheet) are stored once and recorded for every URL (`duplicates`).
+
+### 14.1 How the catalogue is walked
+
+```
+start URL ──► static HTML usable? (≥ 10 links, ≥ 300 characters of text)
+                 │ yes                                   │ no (JavaScript app)
+                 ▼                                       ▼
+        follow <a href> links                  Chromium: render, close pop-ups,
+        (families, pagination,                 click every clickable element in
+         part pages) and collect               the page and its iframes, page through
+         every .pdf link                       JavaScript tables with their "next" button
+                 │                                       │
+                 └──────────► every PDF ──► is_datasheet? ──► download (downloader.py)
+```
+
+Breadth-first: categories first, then families, then part pages. Pages are only on the start URL's host (and hosts of iframes the catalogue embeds), so other language subdomains (`www.goodark.com` is Chinese) are not crawled.
+
+**Which links/elements are the catalogue** (`PartCrawler._decide`):
+
+- The **start URL** is the catalogue, unless it is the site root (`/`, `/en/`, `/index.php`): then it is only a way in, and only items about products are followed from it.
+- An item is **about products** when its own text, or the **section label** it sits under, matches `PRODUCT_KEYWORDS` (`product`, `catalog`, `series`, `family`, `selection guide`, `产品`, ...). The section label is the nearest short text before the item that is not another item of the same kind: for the footer entry "Sensor" it is the column title "Products"; for "Automotive" it is "Applications" (not followed).
+- **Inside the catalogue**, everything in the page content is followed (family links, part numbers, pagination, "Datasheet" buttons). Header, footer and navigation bars (`<header>`, `<footer>`, `<nav>`, or classes such as `header2`, `foot`, `nav-bg` near `<body>`) only when the item's own text is about products, so a "Support" or "Careers" menu entry on a part page is not followed.
+- **Never**: `PART_NEGATIVE_KEYWORDS` in the item text or in the target URL path (news, careers, about, contact, investors, login, cart, buy, sample requests, cross-reference search, document libraries, ...). They match **whole words** only, so "Pressure Sensor" is not a "press" link and "Sampling ADC" is not a "sample" button. Controls that never navigate are skipped by `CLICK_SKIP_RE` (reset, export, columns, language names, "10 / page", ...), as are form fields, table headers, tabs and checkboxes.
+
+### 14.2 Clicking (JavaScript sites)
+
+Some catalogues have no links at all: menus, category tiles, table rows and "Datasheet" buttons are `<div>`s with click handlers, often inside an iframe. For each page the crawler:
+
+1. Opens it in Chromium, waits until the page stops changing (rows of JavaScript tables arrive after the page has "loaded"), closes language choosers / cookie banners / notices (prefers an "English" button).
+2. Lists **clickable elements** in every frame: elements whose cursor is a pointer, buttons, `role=button`, `onclick`. Icons without text are clicked only when their `alt`/`title`/`aria-label` says document (`dataSheet`, `pdf`, `download`, ...).
+3. Pages through JavaScript tables/lists: presses the enabled "next" button of a pagination bar until the rows stop changing, recording the elements of every page.
+4. Clicks each element (document buttons first, visible before hidden). A click may open a **new tab** or start a **download** (its URL: a PDF if it ends in `.pdf` or the server says `application/pdf`), **change the URL** (a new page for the queue; the page is reloaded, and re-paged, before the next click), or **change the page in place** (new links are collected; a notice such as "datasheet not publicly available" is retried once, then logged as stage `datasheet_unavailable`).
+5. Remembers what was clicked: a named item ("Magnetic Sensor", "NSM4101-Q0TOMR") is clicked once per site; a generic one ("Datasheet", an icon) once per table row or page.
+
+### 14.3 Which PDFs are datasheets (`is_datasheet`)
+
+1. The PDF's own URL, link/button text and last click decide first: `DATASHEET_KEYWORDS` (`datasheet`, `specification`, `规格书`, ...) against `OTHER_DOC_KEYWORDS` (application notes and `AN-12-0029`-style numbers, user guides, manuals, reliability reports, certificates, brochures, catalogues, selection/solution guides, package drawings, ...).
+2. Otherwise its table row / list item.
+3. A PDF with no hint at all is kept if it was found inside the catalogue.
+
+`--all-pdfs` turns the filter off.
+
+### 14.4 The two example sites
+
+| | Good-Ark (`https://en.goodark.com/product.php`) | NOVOSENSE (`https://www.novosns.com/en/`) |
+|---|---|---|
+| Mode | static HTML | browser + clicking (Nuxt app, no `<a href>`) |
+| Path to a datasheet | product page → family `prolist.php?id=551` → pages `&page=2..` → part `proshow.php?id=26552` → `specification/10A05 thru 10A10.pdf` | homepage footer "Products › Sensor" → `/en/sensor` → "Magnetic Sensor" → "ABS Speed Sensor" (table in an iframe from `wwwapi.novosns.com`) → row "NSM4101-Q0TOMR" / its `dataSheet` icon → new tab `/en/datasheet/<part>/<file>.pdf` |
+| Particulars | Chinese/Japanese/Korean sites on other subdomains are ignored; one datasheet covers a whole series (`10A05 thru 10A10`), so most part pages repeat a known URL | language chooser pop-up on every page; some parts answer "datasheet is not publicly available" (logged, not an error); all parts of a series share one PDF under different URLs (saved once) |
+
+Network: in a sandboxed environment both sites' hosts must be allowed, for NOVOSENSE also `wwwapi.novosns.com` (the iframe and its data).
+
+### 14.5 Limits
+
+- **Slow on JavaScript sites**: every click that changes the URL means reloading the page before the next click, about 5–10 s each, plus the 1 s per-host pause. A large catalogue takes hours. Static sites are about one page per 1–2 s.
+- Filters and search forms are not used; the crawl relies on the category tree and pagination reaching every part. Parts reachable only through a search box are missed.
+- Clicks on elements that do nothing (or whose effect is not a URL, tab, download or new link) are not explored further.
+- `is_datasheet` uses words, not the PDF content: a datasheet named only by a number on a page outside the catalogue is dropped; a brochure without any keyword found on a catalogue page is kept.
+- Login-only datasheets are not fetched (no credentials are used).
+- No resume: a stopped crawl starts from the start URL again (already saved files are skipped, not downloaded again).
+
+Tests: `python tests/test_parts_crawler.py` (or pytest) checks the static walk, scope rules, click decisions and datasheet filter on a synthetic site, without network or browser. The clicking path was checked by hand against NOVOSENSE.
