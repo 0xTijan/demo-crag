@@ -64,7 +64,14 @@ def start_run_log(name: str) -> Path | None:
         LOG_DIR.mkdir(parents=True, exist_ok=True)
         started = datetime.now()
         path = LOG_DIR / f"{name}_{started:%Y-%m-%d_%H-%M-%S}.log"
-        sink = path.open("a", encoding="utf-8", errors="replace")
+        n = 2
+        while True:  # two runs started in the same second get separate files
+            try:
+                sink = path.open("x", encoding="utf-8", errors="replace")
+                break
+            except FileExistsError:
+                path = LOG_DIR / f"{name}_{started:%Y-%m-%d_%H-%M-%S}_{n}.log"
+                n += 1
     except OSError as exc:
         print(f"could not create run log in {LOG_DIR}: {exc}", file=sys.stderr)
         return None
