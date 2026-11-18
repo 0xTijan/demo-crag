@@ -280,6 +280,21 @@ def test_negative_keywords_are_whole_words():
     assert not url_negative("https://x.com/en/pressure-sensor") and not url_negative("https://x.com/sampling-adc")
 
 
+def test_investor_relations_is_excluded():
+    from dataPipeline.download.crawler import negative_score, url_negative
+    for nav in ("Shareholders Meeting", "Corporate Governance", "Monthly Revenue", "股東會", "Annual Report"):
+        assert negative_score(nav) > 0, nav
+    assert url_negative("https://x.com/en/ir/index.html") and url_negative("https://x.com/en/shareholders/")
+    assert negative_score("IR LED") == 0 and not url_negative("https://x.com/en/product/ir-led.html")
+
+    def pdf(url):
+        return DatasheetLink(url, "", "", "https://x/p", "", ("x",), True)
+    for name in ("2024 AGM handbook.pdf", "2024股東會議事錄.pdf", "112年報.pdf", "Q3_2024_Financial_Statements.pdf",
+                 "Minutes_of_2024_Shareholders_Meeting.pdf"):
+        assert not is_datasheet(pdf("https://x/upload/" + name)), name
+    assert is_datasheet(pdf("https://x/upload/AR05.pdf"))
+
+
 def test_click_memo_keys():
     crawler = PartCrawler(FakeFetcher(), lambda *a, **k: None)
     node = Node("https://x/product/A", 2, True)

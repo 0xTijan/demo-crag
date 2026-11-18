@@ -38,6 +38,7 @@ from .settings import (
     MAX_HEAD_CHECKS, MODAL_DISMISS_RE, NON_PAGE_EXT, OTHER_DOC_KEYWORDS,
     PAGINATION_RE, PAGINATION_TEXT_RE, PART_MAX_CLICKS_PER_PAGE, PART_MAX_DEPTH,
     PART_MAX_PAGES, PART_MAX_PAGINATION, PART_NEGATIVE_KEYWORDS, PRODUCT_KEYWORDS, URL_NEGATIVE_PREFIXES,
+    URL_NEGATIVE_SEGMENTS,
     keyword_score, whole_word_score,
 )
 
@@ -202,6 +203,8 @@ def negative_score(text: str) -> int:
 def url_negative(url: str) -> bool:
     path = unquote(urlsplit(url).path)
     if negative_score(path) > 0:
+        return True
+    if any(seg.lower() in URL_NEGATIVE_SEGMENTS for seg in path.split("/")):
         return True
     return any(word.startswith(URL_NEGATIVE_PREFIXES) for word in re.findall(r"[a-z]+", path.lower()))
 
