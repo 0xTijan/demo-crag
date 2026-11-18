@@ -160,17 +160,18 @@ CREATE TABLE IF NOT EXISTS report_file_errors (
 -- click trail) is in datasheets/{manufacturer}/manifest.jsonl. Datasheets that
 -- could not be obtained keep their full context in datasheet_errors.context
 -- (and datasheets/{manufacturer}/missing.jsonl).
-CREATE TABLE IF NOT EXISTS datasheet_files (
+CREATE TABLE IF NOT EXISTS datasheet_files (       -- one row per distinct PDF
     datasheet_id  SERIAL PRIMARY KEY,
     manufacturer  TEXT        NOT NULL,
-    source_url    TEXT        NOT NULL,
-    file_path     TEXT        NOT NULL,              -- relative to datasheets/
     file_hash     CHAR(64)    NOT NULL,              -- SHA-256 of the PDF bytes
+    file_path     TEXT        NOT NULL,              -- relative to datasheets/
     file_size     BIGINT,
+    source_urls   TEXT[]      NOT NULL DEFAULT '{}', -- every URL that delivers this PDF (parts of a series share one)
     downloaded_at TIMESTAMPTZ DEFAULT now(),
-    UNIQUE (manufacturer, source_url)
+    updated_at    TIMESTAMPTZ DEFAULT now(),
+    UNIQUE (manufacturer, file_hash)
 );
-CREATE INDEX IF NOT EXISTS datasheet_files_hash_idx ON datasheet_files (manufacturer, file_hash);
+CREATE INDEX IF NOT EXISTS datasheet_files_urls_idx ON datasheet_files USING GIN (source_urls);
 
 CREATE TABLE IF NOT EXISTS datasheet_errors (
     error_id     SERIAL PRIMARY KEY,

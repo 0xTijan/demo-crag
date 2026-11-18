@@ -1,9 +1,9 @@
 """Database access for the datasheet download step.
 
 Only what the crawler needs to work systematically is stored:
-  * `datasheet_files`: one row per downloaded source URL, with the file it was saved
-    to and the SHA-256 of its bytes. Reruns skip known URLs, and the same bytes under
-    another URL are stored once.
+  * `datasheet_files`: one row per distinct PDF (manufacturer + SHA-256 of its bytes),
+    with the file it was saved to and `source_urls`, every URL that delivers it (many
+    parts of a series share one datasheet). Reruns skip known URLs.
   * `datasheet_errors`: one row per failure, with the stage it failed at. For a
     datasheet that could not be obtained (404, not a PDF, "not publicly available")
     `context` holds everything known about the part: page, headings, section, the
@@ -25,15 +25,16 @@ DDL = [
     CREATE TABLE IF NOT EXISTS datasheet_files (
         datasheet_id  SERIAL PRIMARY KEY,
         manufacturer  TEXT        NOT NULL,
-        source_url    TEXT        NOT NULL,
-        file_path     TEXT        NOT NULL,
         file_hash     CHAR(64)    NOT NULL,
+        file_path     TEXT        NOT NULL,
         file_size     BIGINT,
+        source_urls   TEXT[]      NOT NULL DEFAULT '{}',
         downloaded_at TIMESTAMPTZ DEFAULT now(),
-        UNIQUE (manufacturer, source_url)
+        updated_at    TIMESTAMPTZ DEFAULT now(),
+        UNIQUE (manufacturer, file_hash)
     )
     """,
-    "CREATE INDEX IF NOT EXISTS datasheet_files_hash_idx ON datasheet_files (manufacturer, file_hash)",
+    "CREATE INDEX IF NOT EXISTS datasheet_files_urls_idx ON datasheet_files USING GIN (source_urls)",
     """
     CREATE TABLE IF NOT EXISTS datasheet_errors (
         error_id     SERIAL PRIMARY KEY,
@@ -57,8 +58,33 @@ def get_engine():
     return create_engine(DATABASE_URL, pool_pre_ping=True)
 
 
+# Databases from before the one-row-per-PDF layout had one row per URL (column source_url).
+MIGRATE_PER_URL = [
+    "ALTER TABLE datasheet_files RENAME TO datasheet_files_per_url",
+    "ALTER INDEX IF EXISTS datasheet_files_pkey RENAME TO datasheet_files_per_url_pkey",
+    "ALTER SEQUENCE IF EXISTS datasheet_files_datasheet_id_seq RENAME TO datasheet_files_per_url_id_seq",
+    "DROP INDEX IF EXISTS datasheet_files_hash_idx",
+    DDL[0],
+    DDL[1],
+    """
+    INSERT INTO datasheet_files (manufacturer, file_hash, file_path, file_size, source_urls, downloaded_at, updated_at)
+    SELECT manufacturer, file_hash, min(file_path), max(file_size), array_agg(DISTINCT source_url),
+           min(downloaded_at), max(downloaded_at)
+    FROM datasheet_files_per_url GROUP BY manufacturer, file_hash
+    """,
+    "DROP TABLE datasheet_files_per_url",
+]
+
+
 def ensure_tables(engine) -> None:
     with engine.begin() as conn:
+        old_layout = conn.execute(text(
+            "SELECT 1 FROM information_schema.columns "
+            "WHERE table_name = 'datasheet_files' AND column_name = 'source_url'")).first()
+        if old_layout:
+            for stmt in MIGRATE_PER_URL:
+                conn.execute(text(stmt))
+            print("    datasheet_files migrated to one row per PDF (source_urls)")
         for stmt in DDL:
             conn.execute(text(stmt))
 
@@ -67,27 +93,39 @@ def known_datasheets(engine, manufacturer: str) -> tuple[dict, dict]:
     """Return ({source_url: file_path}, {file_hash: file_path}) for a manufacturer."""
     with engine.connect() as conn:
         rows = conn.execute(
-            text("SELECT source_url, file_hash, file_path FROM datasheet_files WHERE manufacturer = :m"),
+            text("SELECT file_hash, file_path, source_urls FROM datasheet_files WHERE manufacturer = :m"),
             {"m": manufacturer},
         ).all()
-    return {r.source_url: r.file_path for r in rows}, {r.file_hash: r.file_path for r in rows}
+    urls = {u: r.file_path for r in rows for u in r.source_urls}
+    return urls, {r.file_hash: r.file_path for r in rows}
 
 
 def record_datasheet(engine, row: dict) -> None:
-    """row: manufacturer, source_url, file_path, file_hash, file_size."""
+    """Add `source_url` to the row of its PDF (one row per manufacturer + file_hash).
+
+    row: manufacturer, source_url, file_path, file_hash, file_size. A URL that used to
+    deliver another PDF (e.g. a new datasheet revision) is moved to this one; a PDF left
+    without any URL loses its row (its file stays on disk)."""
+    params = {k: row[k] for k in ("manufacturer", "source_url", "file_path", "file_hash", "file_size")}
     with engine.begin() as conn:
-        conn.execute(
-            text(
-                """
-                INSERT INTO datasheet_files (manufacturer, source_url, file_path, file_hash, file_size)
-                VALUES (:manufacturer, :source_url, :file_path, :file_hash, :file_size)
-                ON CONFLICT (manufacturer, source_url) DO UPDATE SET
-                    file_path = EXCLUDED.file_path, file_hash = EXCLUDED.file_hash,
-                    file_size = EXCLUDED.file_size, downloaded_at = now()
-                """
-            ),
-            {k: row[k] for k in ("manufacturer", "source_url", "file_path", "file_hash", "file_size")},
-        )
+        conn.execute(text(
+            """
+            UPDATE datasheet_files SET source_urls = array_remove(source_urls, :source_url), updated_at = now()
+            WHERE manufacturer = :manufacturer AND file_hash <> :file_hash AND :source_url = ANY(source_urls)
+            """), params)
+        conn.execute(text(
+            "DELETE FROM datasheet_files WHERE manufacturer = :manufacturer AND cardinality(source_urls) = 0"),
+            params)
+        conn.execute(text(
+            """
+            INSERT INTO datasheet_files (manufacturer, file_hash, file_path, file_size, source_urls)
+            VALUES (:manufacturer, :file_hash, :file_path, :file_size, ARRAY[CAST(:source_url AS TEXT)])
+            ON CONFLICT (manufacturer, file_hash) DO UPDATE SET
+                source_urls = CASE WHEN :source_url = ANY(datasheet_files.source_urls)
+                                   THEN datasheet_files.source_urls
+                                   ELSE array_append(datasheet_files.source_urls, CAST(:source_url AS TEXT)) END,
+                updated_at = now()
+            """), params)
 
 
 # Failures that are about one datasheet (and can be retried with run.py --retry-failed)

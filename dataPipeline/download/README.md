@@ -194,13 +194,14 @@ Elements are found again after a reload by frame, text, icon text, table row and
 
 | Table | Columns | Purpose |
 |---|---|---|
-| `datasheet_files` | `manufacturer`, `source_url` (unique per manufacturer), `file_path` (relative to `datasheets/`), `file_hash` (SHA-256), `file_size`, `downloaded_at` | Skip known URLs, store identical bytes once |
+| `datasheet_files` | **one row per distinct PDF**: `manufacturer`, `file_hash` (SHA-256; unique per manufacturer), `file_path` (relative to `datasheets/`), `file_size`, `source_urls` (every URL that delivers this PDF), `downloaded_at`, `updated_at` | Skip known URLs; a datasheet shared by many parts is one file and one row |
 | `datasheet_errors` | `manufacturer`, `url`, `stage`, `error`, `http_status`, `traceback`, `context` (JSONB), `occurred_at` | Append-only failure log; `context` = everything known about a datasheet that could not be obtained ([7.1](#71-datasheets-that-could-not-be-obtained)) |
 
-Files saved by a `--no-db` run get their `datasheet_files` row on the next run with a database.
+Files saved by a `--no-db` run get their `datasheet_files` row on the next run with a database. If a URL later delivers a different PDF (a new revision), the URL moves to that PDF's row; a PDF left without URLs loses its row (the file stays on disk). Databases with the earlier one-row-per-URL layout are migrated automatically (rows grouped by hash).
 
 ```sql
-SELECT manufacturer, count(*), count(DISTINCT file_hash) FROM datasheet_files GROUP BY 1;  -- URLs vs. files
+SELECT manufacturer, count(*) AS pdfs, sum(cardinality(source_urls)) AS urls FROM datasheet_files GROUP BY 1;
+SELECT file_path FROM datasheet_files WHERE 'https://…/NSM4101_Datasheet.pdf' = ANY(source_urls);  -- PDF of a URL
 SELECT stage, count(*) FROM datasheet_errors GROUP BY 1;                                    -- what is failing
 ```
 
