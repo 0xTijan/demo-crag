@@ -104,16 +104,24 @@ Environment variables: `DATABASE_URL` (default `postgresql+psycopg2://username:p
 
 Requirements: `pip install -r requirements.txt` (the download step uses `httpx`, `beautifulsoup4`, `playwright`, `cryptography`, `SQLAlchemy`, `psycopg2-binary`, `python-dotenv`); a Chromium for Playwright (`python -m playwright install chromium`), needed for JavaScript catalogues; PostgreSQL unless `--no-db`. In a sandbox with a network allowlist, every host of the catalogue must be allowed (for NOVOSENSE also `wwwapi.novosns.com`, which serves its iframes).
 
-A typical log (also saved in `logs/datasheets_<date>_<time>.log`):
+A real log (excerpt; also saved in `logs/datasheets_<date>_<time>.log`):
 
 ```
 [1/1] novosns - https://www.novosns.com/en/
     catalogue crawl of https://www.novosns.com/en/ (browser, clicking)
-    ! [datasheet_unavailable] https://www.novosns.com/en/abs-speed-sensor dataSheet (NSM4101-Q0TOMR ...): Sorry, the datasheet is not publicly available ...
-      + novosns/mt6835-rev-1-3_0c2d5a1f.pdf
-    .. 25 pages, 140 queued, 61 PDFs, 410 clicks, 1630s  [https://www.novosns.com/en/product/...]
-    ...
-    pdfs: 812, datasheets: 790, downloaded: 301, skipped: 0, duplicates: 489, failed: 0, not_datasheet: 22
+      + novosns/nsm2117-datasheet-1-0-en_c35ffd7d.pdf
+      + novosns/nsm2111-datasheet-1-0-en_12e3fd33.pdf
+    .. 19 pages, 109 queued, 0 PDFs, 130 clicks, 1514s  [https://www.novosns.com/en/pressure-sensor]
+[1/1] goodark - https://en.goodark.com/product.php
+    catalogue crawl of https://en.goodark.com/product.php (static HTML)
+    .. 1000 pages, 1771 queued, 372 PDFs, 0 clicks, 2432s  [https://en.goodark.com/proshow.php?id=17564]
+    ! [crawl] https://en.goodark.com/ESGP SKY汽车中文SHAEC25019833626(SUP25-002863)-Final FetchError: HTTP 404
+```
+
+`.. N pages` is printed every 25 pages (every page with `-v`): pages done, pages queued, PDFs seen, clicks, seconds. `+` is a new file. `!` is a failure (also a `datasheet_errors` row). At the end of each manufacturer:
+
+```
+    pdfs: …, datasheets: …, downloaded: …, skipped: …, duplicates: …, failed: …, not_datasheet: …
 ```
 
 `pdfs`: PDFs found. `datasheets`: passed `is_datasheet`. `downloaded`: new files. `skipped`: URL already saved. `duplicates`: the bytes already existed under another URL (many parts of a series share one datasheet). `failed`: download or database write failed. `not_datasheet`: dropped by the filter. Exit code `0` also when some downloads failed (see `datasheet_errors`).
