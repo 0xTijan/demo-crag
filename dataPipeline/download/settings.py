@@ -100,6 +100,9 @@ PART_NEGATIVE_KEYWORDS = [
     # general document libraries: the crawl follows the product tree instead
     "document download", "documents download", "download center", "download centre",
 ]
+# URL path words that start with these are never followed ("newsshow.php", "joblist",
+# "/careers-at-x/"). Only stems that cannot start a product name.
+URL_NEGATIVE_PREFIXES = ("news", "career", "job", "blog", "investor", "webinar")
 # Datasheet vs. other technical documents (decides which PDFs are kept).
 DATASHEET_KEYWORDS = [
     "datasheet", "data sheet", "specification", "spec sheet",

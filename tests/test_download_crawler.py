@@ -140,6 +140,9 @@ def test_negative_keywords_are_whole_words():
     for nav in ("Careers", "News & Events", "Sample Application", "Buy Now", "/en/news-details/123",
                 "/en/documents-download", "Investor Relations"):
         assert negative_score(nav) > 0, nav
+    from dataPipeline.download.crawler import url_negative
+    assert url_negative("https://x.com/newsshow.php?id=7") and url_negative("https://x.com/en/news-details/1")
+    assert not url_negative("https://x.com/en/pressure-sensor") and not url_negative("https://x.com/sampling-adc")
 
 
 def test_click_memo_keys():

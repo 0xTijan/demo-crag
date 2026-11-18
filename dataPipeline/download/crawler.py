@@ -37,7 +37,7 @@ from .settings import (
     CLICK_SKIP_RE, DATASHEET_KEYWORDS, EN_SEGMENTS, LANG_QUERY_KEYS, OTHER_LANG_SEGMENTS, DOC_HINT_RE, DOWNLOAD_HINT_RE, GENERIC_CLICK_RE,
     MAX_HEAD_CHECKS, MODAL_DISMISS_RE, NON_PAGE_EXT, OTHER_DOC_KEYWORDS,
     PAGINATION_RE, PAGINATION_TEXT_RE, PART_MAX_CLICKS_PER_PAGE, PART_MAX_DEPTH,
-    PART_MAX_PAGES, PART_MAX_PAGINATION, PART_NEGATIVE_KEYWORDS, PRODUCT_KEYWORDS,
+    PART_MAX_PAGES, PART_MAX_PAGINATION, PART_NEGATIVE_KEYWORDS, PRODUCT_KEYWORDS, URL_NEGATIVE_PREFIXES,
     keyword_score, whole_word_score,
 )
 
@@ -147,6 +147,13 @@ def product_score(text: str) -> int:
 
 def negative_score(text: str) -> int:
     return whole_word_score(text, PART_NEGATIVE_KEYWORDS)
+
+
+def url_negative(url: str) -> bool:
+    path = unquote(urlsplit(url).path)
+    if negative_score(path) > 0:
+        return True
+    return any(word.startswith(URL_NEGATIVE_PREFIXES) for word in re.findall(r"[a-z]+", path.lower()))
 
 
 def is_datasheet(pdf: DatasheetLink) -> bool:
@@ -448,7 +455,7 @@ class PartCrawler:
             return
         if path_ext(url) in NON_PAGE_EXT or is_other_language(url):
             return
-        if negative_score(unquote(urlsplit(url).path)) > 0:  # /news-details/..., /careers/...
+        if url_negative(url):  # /news-details/..., /newsshow.php, /careers/...
             return
         self.seen.add(url)
         self.queue.append(Node(url, node.depth + 1, product, node.trail + (text[:60],)))
