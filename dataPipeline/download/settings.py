@@ -1,19 +1,20 @@
-"""Constants and keyword lists for the PDF download step.
+"""Constants and keyword lists for the datasheet download step (crawler.py, run.py).
 
-Keywords are matched against normalised text (lower case, with `-_/.?=&` turned
-into spaces) by `keyword_score`:
-  * a keyword containing a space is a substring match ("annual report"),
-  * a keyword of 3 characters or fewer must equal a whole word ("ir", "q1"),
-  * a longer keyword matches any word starting with it, so stems such as
-    "report" also match "reports" and "porocil" matches "porocila".
+Two kinds of keyword matching are used on normalised text (lower case, with
+`-_/.?=&` turned into spaces):
+  * `keyword_score` (product and datasheet words): a keyword containing a space is
+    a substring match ("data sheet"), one of 3 characters or fewer must equal a
+    whole word ("evm"), a longer one matches any word starting with it, so
+    "product" also matches "products";
+  * `whole_word_score` (PART_NEGATIVE_KEYWORDS): whole words/phrases only, plural
+    allowed, so "press release" never matches "Pressure Sensor".
 """
 import os
 import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-REPORTS_DIR = ROOT / "reports"
-DATASHEETS_DIR = ROOT / "datasheets"  # part crawler (parts_run.py)
+DATASHEETS_DIR = ROOT / "datasheets"
 
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
@@ -22,7 +23,7 @@ DATABASE_URL = os.getenv(
 
 USER_AGENT = os.getenv(
     "CRAWLER_USER_AGENT",
-    "Mozilla/5.0 (compatible; demo-crag-report-crawler/0.1; financial research)",
+    "Mozilla/5.0 (compatible; demo-crag-datasheet-crawler/0.2)",
 )
 REQUEST_DELAY = float(os.getenv("CRAWLER_DELAY", "1.0"))  # seconds between requests to one host
 REQUEST_TIMEOUT = 30.0
@@ -35,12 +36,10 @@ MAX_HEAD_CHECKS = 200  # extension-less "download" links checked per site
 # browser, so this path is used as a fallback.
 CHROMIUM_PATH = os.getenv("PLAYWRIGHT_CHROMIUM_PATH", "/opt/pw-browsers/chromium")
 
-CATEGORIES = ("reports", "announcements", "other")
-
 # ---------------------------------------------------------------- language
 EN_SEGMENTS = {"en", "eng", "english", "en-gb", "en-us", "en_gb", "en_us", "en-en"}
 # First path segments that mark a non-English section of a site. This list is
-# explicit on purpose: a regex such as `[a-z]{2}` would also skip "ir" or "pr".
+# explicit on purpose: a regex such as `[a-z]{2}` would also skip "ic" or "pr".
 OTHER_LANG_SEGMENTS = {
     "sl", "si", "slo", "sl-si", "hr", "hrv", "hr-hr", "de", "deu", "de-de", "de-at",
     "it", "ita", "sr", "srb", "rs", "sr-latn", "bs", "ba", "mk", "hu", "cs", "cz",
@@ -48,61 +47,14 @@ OTHER_LANG_SEGMENTS = {
     "zh-cn", "zh-tw", "cn", "tw", "jp", "ja", "ko", "kr",
 }
 LANG_QUERY_KEYS = {"lang", "language", "locale", "lng", "l"}
-EN_SWITCH_TEXT = {"en", "eng", "english", "en-gb", "gb", "uk english"}
 
-# ---------------------------------------------------------------- keywords
-NAV_KEYWORDS = [
-    "investor", "ir", "shareholder", "stockholder", "financial information",
-    "financials", "financial", "publication", "download", "document", "archive",
-    "for investors", "capital market", "share", "governance", "media", "news",
-    "report", "result", "announcement", "disclosure",
-    # local-language fallbacks, used when a site has no English version
-    "vlagatelj", "investitor", "delnicar", "delničar", "dionicar", "dioničar",
-    "ulagatelj", "objav", "porocil", "poročil", "izvjesc", "izvješć", "financijsk",
-]
-REPORT_KEYWORDS = [
-    "annual report", "financial report", "financial statement", "report",
-    "half year", "half-year", "halfyear", "semi annual", "interim", "quarterly",
-    "quarter", "q1", "q2", "q3", "q4", "h1", "h2", "9m", "results", "audited",
-    "unaudited", "consolidated", "integrated report", "sustainability report",
-    "esg", "esef",
-    "letno", "polletn", "četrtletn", "cetrtletn", "porocil", "poročil",
-    "godisnj", "godišnj", "polugodisnj", "polugodišnj", "tromjesecn",
-    "tromjesečn", "izvjesc", "izvješć", "financijsk",
-]
-ANNOUNCEMENT_KEYWORDS = [
-    "announcement", "press release", "press", "news", "notice", "notification",
-    "ad hoc", "adhoc", "regulated information", "general meeting",
-    "shareholders meeting", "agm", "egm", "dividend", "convocation", "resolution",
-    "insider", "disclosure", "invitation", "voting", "proxy", "major holding",
-    "managers transactions", "treasury share", "own shares",
-    "obvestil", "objav", "sporocil", "sporočil", "skupscin", "skupščin",
-    "obavijest", "skupstin", "skupštin",
-]
-NEGATIVE_KEYWORDS = [
-    "career", "job", "privacy", "cookie", "login", "register", "cart", "shop",
-    "product", "gdpr", "terms", "catalog", "catalogue", "brochure", "price list",
-    "pricelist", "menu", "tender", "procurement", "recipe", "certificate",
-    "safety data sheet", "datasheet", "manual", "instructions",
-]
-
+# ---------------------------------------------------------------- links
 PAGINATION_RE = re.compile(
-    r"([?&](page|p|pg|offset|start|year|y|leto|godina|pagenum)=)|(/page/\d+)|(/(19|20)\d\d/?$)",
+    r"([?&](page|p|pg|offset|start|pagenum|pageindex|curpage)=)|(/page/\d+)",
     re.I,
 )
 PAGINATION_TEXT_RE = re.compile(
-    r"^(\d{1,3}|(19|20)\d\d|next|more|older|previous|prev|archive|›|»|>|>>|"
-    r"naprej|naslednja|starejše|sljedeća|starije)$",
-    re.I,
-)
-LOAD_MORE_RE = re.compile(
-    r"load more|show more|more results|view more|see more|show all|view all|"
-    r"prikaži več|naloži več|učitaj više|prikaži više|prikaži sve",
-    re.I,
-)
-COOKIE_ACCEPT_RE = re.compile(
-    r"^(accept|accept all|agree|i agree|allow all|ok|got it|sprejmi|sprejmem|"
-    r"strinjam se|prihvati|prihvaćam|slažem se)$",
+    r"^(\d{1,3}|next|next page|more|previous|prev|first|last|›|»|>|>>|<|<<|下一页|上一页)$",
     re.I,
 )
 DOWNLOAD_HINT_RE = re.compile(
@@ -114,11 +66,10 @@ NON_PAGE_EXT = {
     ".pptx", ".mp4", ".mp3", ".avi", ".mov", ".xml", ".json", ".rss", ".csv",
     ".txt", ".woff", ".woff2", ".ttf", ".eot", ".exe", ".dmg",
 }
-YEAR_RE = re.compile(r"(?<!\d)(19[89]\d|20\d\d)(?!\d)")
 
-# ---------------------------------------------------------------- part crawler (datasheets)
-# Used by parts_crawler.py / parts_run.py, which crawl a component manufacturer's
-# product catalogue (families -> series -> parts) and download every datasheet.
+# ---------------------------------------------------------------- catalogue crawl
+# crawler.py walks a component manufacturer's product catalogue
+# (categories -> families -> series -> parts) and reports every datasheet.
 PART_MAX_PAGES = 20000          # pages (static or rendered) per manufacturer
 PART_MAX_DEPTH = 10             # link/click depth from the start URL
 PART_MAX_CLICKS_PER_PAGE = 400  # clickable elements tried on one rendered page

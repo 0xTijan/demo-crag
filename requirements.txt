@@ -3,10 +3,10 @@
 # Pinned (==) = versions the code was run with. Unpinned = not installed where this
 # file was written, so no version has been tested: pin them once they work for you.
 
-# --- dataPipeline/download: company website -> PDFs ---
+# --- dataPipeline/download: manufacturer website -> datasheet PDFs ---
 httpx==0.28.1
 beautifulsoup4==4.15.0
-playwright==1.64.1             # then, once:  python -m playwright install chromium  (only for JavaScript sites)
+playwright==1.64.1             # then, once:  python -m playwright install chromium  (JavaScript catalogues: clicking)
 cryptography==50.0.1           # repairs servers that send an incomplete TLS certificate chain
 
 # --- dataPipeline/convert: PDF -> Markdown ---

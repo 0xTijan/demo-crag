@@ -1,16 +1,13 @@
-"""Download one PDF, verify it, and save it under reports/{company}/{category}/."""
+"""Download one datasheet PDF, verify it, and save it under datasheets/{manufacturer}/."""
 import hashlib
 import re
 import unicodedata
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from .crawler import PdfLink
+from .crawler import DatasheetLink
 from .fetcher import FetchError, Fetcher
-from .settings import MAX_PDF_BYTES, YEAR_RE
-
-GENERIC_TEXT = {"", "download", "pdf", "here", "click here", "open", "view", "more", "read more",
-                "prenesi", "preuzmi", "datoteka", "file"}
+from .settings import MAX_PDF_BYTES
 
 
 class DownloadError(Exception):
@@ -26,25 +23,7 @@ def slugify(text: str, max_len: int = 80) -> str:
     return text[:max_len].rstrip("-") or "document"
 
 
-def guess_year(pdf: PdfLink) -> int | None:
-    for source in (pdf.text, unquote(urlsplit(pdf.url).path), pdf.context):
-        years = YEAR_RE.findall(source or "")
-        if years:
-            return int(years[0])
-    return None
-
-
-def guess_title(pdf: PdfLink, disposition: str) -> str:
-    if pdf.text.strip().lower() not in GENERIC_TEXT:
-        return pdf.text
-    match = re.search(r"filename\*?=(?:UTF-8'')?\"?([^\";]+)", disposition or "", re.I)
-    if match:
-        return Path(unquote(match.group(1))).stem
-    name = Path(unquote(urlsplit(pdf.url).path)).stem
-    return name or pdf.context[:80]
-
-
-def guess_filename(pdf: PdfLink, disposition: str) -> str:
+def guess_filename(pdf: DatasheetLink, disposition: str) -> str:
     """The document's own name: Content-Disposition, then the URL's last part, then the link text."""
     match = re.search(r"filename\*?=(?:UTF-8'')?\"?([^\";]+)", disposition or "", re.I)
     if match:
@@ -53,15 +32,11 @@ def guess_filename(pdf: PdfLink, disposition: str) -> str:
     return name or pdf.text or "document"
 
 
-def download(fetcher: Fetcher, pdf: PdfLink, target_dir: Path, known_hashes: dict, reports_dir: Path,
-             naming: str = "report") -> dict:
-    """Download `pdf` into `target_dir`.
+def download(fetcher: Fetcher, pdf: DatasheetLink, target_dir: Path, known_hashes: dict, base_dir: Path) -> dict:
+    """Download `pdf` into `target_dir` as {file name from the server or URL}_{hash8}.pdf.
 
-    `naming` chooses the file name: "report" -> {year}_{title}_{hash8}.pdf (financial
-    reports), "document" -> {file name from the server or URL}_{hash8}.pdf (datasheets).
-
-    Returns a dict with file_path (relative to reports/), file_hash, file_size,
-    fiscal_year and duplicate_of (set when the same bytes were saved earlier).
+    Returns a dict with file_path (relative to `base_dir`, i.e. datasheets/), file_hash,
+    file_size and duplicate_of (set when the same bytes were saved earlier).
     Raises DownloadError on failure.
     """
     target_dir.mkdir(parents=True, exist_ok=True)
@@ -98,26 +73,19 @@ def download(fetcher: Fetcher, pdf: PdfLink, target_dir: Path, known_hashes: dic
             raise DownloadError("verify", f"not a PDF (starts with {head[:16]!r})")
 
         file_hash = digest.hexdigest()
-        year = guess_year(pdf)
         existing = known_hashes.get(file_hash)
-        if existing and (reports_dir / existing).exists():
+        if existing and (base_dir / existing).exists():
             tmp.unlink()
-            return {"file_path": existing, "file_hash": file_hash, "file_size": size,
-                    "fiscal_year": year, "duplicate_of": existing}
+            return {"file_path": existing, "file_hash": file_hash, "file_size": size, "duplicate_of": existing}
 
-        if naming == "document":
-            name = f"{slugify(guess_filename(pdf, disposition))}_{file_hash[:8]}.pdf"
-        else:
-            name = f"{year or 'undated'}_{slugify(guess_title(pdf, disposition))}_{file_hash[:8]}.pdf"
-        final = target_dir / name
+        final = target_dir / f"{slugify(guess_filename(pdf, disposition))}_{file_hash[:8]}.pdf"
         try:
             tmp.replace(final)
         except OSError as exc:
             raise DownloadError("write", f"{exc.__class__.__name__}: {exc}") from exc
-        rel = final.relative_to(reports_dir).as_posix()
+        rel = final.relative_to(base_dir).as_posix()
         known_hashes[file_hash] = rel
-        return {"file_path": rel, "file_hash": file_hash, "file_size": size,
-                "fiscal_year": year, "duplicate_of": None}
+        return {"file_path": rel, "file_hash": file_hash, "file_size": size, "duplicate_of": None}
     finally:
         if tmp.exists():
             tmp.unlink()

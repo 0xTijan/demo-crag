@@ -1,10 +1,10 @@
-"""Rules of the datasheet crawler (dataPipeline/download/parts_crawler.py), on synthetic data.
+"""Rules of the datasheet crawler (dataPipeline/download/crawler.py), on synthetic data.
 
 A fake fetcher serves a tiny static catalogue (homepage -> products -> family list
 with two pages -> part pages -> PDFs), so there is no network and no browser. The
 JavaScript click path needs a real browser and is checked by hand (see
-dataPipeline/download/README.md, section 14).
-Run: python tests/test_parts_crawler.py   (or pytest)
+dataPipeline/download/README.md, section 4).
+Run: python tests/test_download_crawler.py   (or pytest)
 """
 import sys
 from pathlib import Path
@@ -12,7 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from dataPipeline.download.fetcher import Page  # noqa: E402
-from dataPipeline.download.parts_crawler import (  # noqa: E402
+from dataPipeline.download.crawler import (  # noqa: E402
     DatasheetLink, Node, PartCrawler, is_datasheet, same_host,
 )
 
@@ -130,7 +130,7 @@ def test_rendered_click_decisions():
 
 
 def test_negative_keywords_are_whole_words():
-    from dataPipeline.download.parts_crawler import negative_score
+    from dataPipeline.download.crawler import negative_score
     for product in ("Pressure Sensor", "Sampling ADC", "Video Amplifiers", "Contactless Sensors", "Cartridge Heater"):
         assert negative_score(product) == 0, product
     for nav in ("Careers", "News & Events", "Sample Application", "Buy Now", "/en/news-details/123",

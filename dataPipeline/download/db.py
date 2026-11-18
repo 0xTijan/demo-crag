@@ -1,12 +1,13 @@
-"""Database access for the PDF download step.
+"""Database access for the datasheet download step.
 
-Companies are rows of `stocks` (keyed by ISIN); their website is `stocks.website_url`. Two tables are owned by this step:
-  * `downloaded_files`: one row per downloaded source URL. It deduplicates
-    reruns, both by URL and by SHA-256 of the content.
-  * `download_errors`: one row per failure, with the stage it failed at.
+Only what the crawler needs to work systematically is stored:
+  * `datasheet_files`: one row per downloaded source URL, with the file it was saved
+    to and the SHA-256 of its bytes. Reruns skip known URLs, and the same bytes under
+    another URL are stored once.
+  * `datasheet_errors`: one row per failure, with the stage it failed at.
 
-The part crawler (parts_run.py) has its own two tables, keyed by manufacturer
-instead of ISIN: `datasheet_files` and `datasheet_errors` (PART_DDL).
+Details of where a PDF was found (page, table row, click trail) are not stored here;
+they are in datasheets/{manufacturer}/manifest.jsonl.
 """
 import sys
 import traceback as tb
@@ -17,48 +18,10 @@ from .settings import DATABASE_URL
 
 DDL = [
     """
-    CREATE TABLE IF NOT EXISTS downloaded_files (
-        download_id   SERIAL PRIMARY KEY,
-        stock_isin    CHAR(12) NOT NULL REFERENCES stocks(isin) ON DELETE CASCADE,
-        category      TEXT        NOT NULL CHECK (category IN ('reports','announcements','other')),
-        source_url    TEXT        NOT NULL,
-        page_url      TEXT,
-        link_text     TEXT,
-        file_path     TEXT        NOT NULL,
-        file_hash     CHAR(64)    NOT NULL,
-        file_size     BIGINT,
-        fiscal_year   INT,
-        downloaded_at TIMESTAMPTZ DEFAULT now(),
-        UNIQUE (stock_isin, source_url)
-    )
-    """,
-    "CREATE INDEX IF NOT EXISTS downloaded_files_hash_idx ON downloaded_files (stock_isin, file_hash)",
-    """
-    CREATE TABLE IF NOT EXISTS download_errors (
-        error_id    SERIAL PRIMARY KEY,
-        stock_isin  CHAR(12) REFERENCES stocks(isin) ON DELETE CASCADE,
-        url         TEXT,
-        stage       TEXT NOT NULL,
-        error       TEXT NOT NULL,
-        http_status INT,
-        traceback   TEXT,
-        occurred_at TIMESTAMPTZ DEFAULT now()
-    )
-    """,
-    "CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (stock_isin, occurred_at DESC)",
-]
-
-
-PART_DDL = [
-    """
     CREATE TABLE IF NOT EXISTS datasheet_files (
         datasheet_id  SERIAL PRIMARY KEY,
         manufacturer  TEXT        NOT NULL,
         source_url    TEXT        NOT NULL,
-        page_url      TEXT,
-        link_text     TEXT,
-        context       TEXT,
-        trail         TEXT,
         file_path     TEXT        NOT NULL,
         file_hash     CHAR(64)    NOT NULL,
         file_size     BIGINT,
@@ -87,55 +50,10 @@ def get_engine():
     return create_engine(DATABASE_URL, pool_pre_ping=True)
 
 
-def ensure_tables(engine, ddl=None) -> None:
+def ensure_tables(engine) -> None:
     with engine.begin() as conn:
-        for stmt in ddl or DDL:
+        for stmt in DDL:
             conn.execute(text(stmt))
-
-
-def load_companies(engine, isins=None, limit=None) -> list[dict]:
-    sql = "SELECT isin, name, website_url FROM stocks"
-    params = {}
-    if isins:
-        sql += " WHERE isin = ANY(:isins)"
-        params["isins"] = [i.upper() for i in isins]
-    sql += " ORDER BY isin"
-    if limit:
-        sql += " LIMIT :limit"
-        params["limit"] = limit
-    with engine.connect() as conn:
-        return [dict(r._mapping) for r in conn.execute(text(sql), params)]
-
-
-def known_downloads(engine, stock_isin: str) -> tuple[dict, dict]:
-    """Return ({source_url: file_path}, {file_hash: file_path}) for a company."""
-    with engine.connect() as conn:
-        rows = conn.execute(
-            text("SELECT source_url, file_hash, file_path FROM downloaded_files WHERE stock_isin = :c"),
-            {"c": stock_isin},
-        ).all()
-    return {r.source_url: r.file_path for r in rows}, {r.file_hash: r.file_path for r in rows}
-
-
-def record_download(engine, row: dict) -> None:
-    with engine.begin() as conn:
-        conn.execute(
-            text(
-                """
-                INSERT INTO downloaded_files
-                    (stock_isin, category, source_url, page_url, link_text,
-                     file_path, file_hash, file_size, fiscal_year)
-                VALUES (:stock_isin, :category, :source_url, :page_url, :link_text,
-                        :file_path, :file_hash, :file_size, :fiscal_year)
-                ON CONFLICT (stock_isin, source_url) DO UPDATE SET
-                    category = EXCLUDED.category, page_url = EXCLUDED.page_url,
-                    link_text = EXCLUDED.link_text, file_path = EXCLUDED.file_path,
-                    file_hash = EXCLUDED.file_hash, file_size = EXCLUDED.file_size,
-                    fiscal_year = EXCLUDED.fiscal_year, downloaded_at = now()
-                """
-            ),
-            row,
-        )
 
 
 def known_datasheets(engine, manufacturer: str) -> tuple[dict, dict]:
@@ -149,35 +67,28 @@ def known_datasheets(engine, manufacturer: str) -> tuple[dict, dict]:
 
 
 def record_datasheet(engine, row: dict) -> None:
+    """row: manufacturer, source_url, file_path, file_hash, file_size."""
     with engine.begin() as conn:
         conn.execute(
             text(
                 """
-                INSERT INTO datasheet_files
-                    (manufacturer, source_url, page_url, link_text, context, trail,
-                     file_path, file_hash, file_size)
-                VALUES (:manufacturer, :source_url, :page_url, :link_text, :context, :trail,
-                        :file_path, :file_hash, :file_size)
+                INSERT INTO datasheet_files (manufacturer, source_url, file_path, file_hash, file_size)
+                VALUES (:manufacturer, :source_url, :file_path, :file_hash, :file_size)
                 ON CONFLICT (manufacturer, source_url) DO UPDATE SET
-                    page_url = EXCLUDED.page_url, link_text = EXCLUDED.link_text,
-                    context = EXCLUDED.context, trail = EXCLUDED.trail,
                     file_path = EXCLUDED.file_path, file_hash = EXCLUDED.file_hash,
                     file_size = EXCLUDED.file_size, downloaded_at = now()
                 """
             ),
-            row,
+            {k: row[k] for k in ("manufacturer", "source_url", "file_path", "file_hash", "file_size")},
         )
 
 
 class ErrorLog:
-    """Writes failures to `download_errors` (or, for the part crawler, `datasheet_errors`).
-    It never raises. With `engine=None` failures are only printed."""
+    """Writes failures to `datasheet_errors`. It never raises. With `engine=None` failures are only printed."""
 
-    def __init__(self, engine, stock_isin=None, table="download_errors", owner_column="stock_isin"):
+    def __init__(self, engine, manufacturer=None):
         self.engine = engine
-        self.stock_isin = stock_isin  # value of owner_column: an ISIN, or a manufacturer
-        self.table = table
-        self.owner_column = owner_column
+        self.manufacturer = manufacturer
         self.count = 0
 
     def __call__(self, stage: str, error, url: str | None = None, http_status: int | None = None) -> None:
@@ -194,10 +105,10 @@ class ErrorLog:
             with self.engine.begin() as conn:
                 conn.execute(
                     text(
-                        f"INSERT INTO {self.table} ({self.owner_column}, url, stage, error, http_status, traceback) "
-                        "VALUES (:c, :u, :s, :e, :h, :t)"
+                        "INSERT INTO datasheet_errors (manufacturer, url, stage, error, http_status, traceback) "
+                        "VALUES (:m, :u, :s, :e, :h, :t)"
                     ),
-                    {"c": self.stock_isin, "u": url, "s": stage, "e": message[:4000],
+                    {"m": self.manufacturer, "u": url, "s": stage, "e": message[:4000],
                      "h": http_status, "t": trace},
                 )
         except Exception as db_exc:  # noqa: BLE001
