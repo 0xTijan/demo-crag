@@ -633,25 +633,55 @@ class PartCrawler:
             pass
         page.wait_for_timeout(300)
 
-    def _wait_stable(self, page, max_ms: int = 12000) -> None:
-        """Wait until no frame changes any more (rows of JavaScript tables arrive late)."""
-        def size():
-            total = []
+    def _new_page(self):
+        """A browser tab that keeps count of its unfinished page/data requests (see _wait_stable)."""
+        page = self.fetcher.browser_context().new_page()
+        pending: dict = {}
+        page._pc_pending = pending
+
+        def started(req):
+            if req.resource_type in ("document", "xhr", "fetch"):
+                pending[req] = time.monotonic()
+
+        def ended(req):
+            pending.pop(req, None)
+        page.on("request", started)
+        page.on("requestfinished", ended)
+        page.on("requestfailed", ended)
+        return page
+
+    @staticmethod
+    def _requests_in_flight(page) -> int:
+        """Unfinished page/data requests, ignoring ones open > 10 s (long polling, analytics)."""
+        now = time.monotonic()
+        return sum(1 for t in getattr(page, "_pc_pending", {}).values() if now - t < 10)
+
+    def _wait_stable(self, page, max_ms: int = 20000) -> None:
+        """Wait until no frame changes any more, no page/data request is in flight, and every
+        embedded frame has content (catalogue tables are often in an iframe that is created
+        and filled seconds after the page has "loaded")."""
+        def measure():
+            sizes, empty = [], 0
             for frame in page.frames:
                 try:
-                    total.append(frame.evaluate(
+                    n, chars = frame.evaluate(
                         "() => document.body ? [document.body.getElementsByTagName('*').length,"
-                        " (document.body.innerText || '').length] : [0, 0]"))
+                        " (document.body.innerText || '').length] : [0, 0]")
                 except Exception:  # noqa: BLE001 - detached frame
                     continue
-            return total
+                sizes.append((n, chars))
+                if frame is not page.main_frame and frame.url.startswith("http") and (n < 10 or chars < 20):
+                    empty += 1  # an embedded frame without text is still loading its content
+            return sizes, empty
         last, stable, waited = None, 0, 0
-        while waited < max_ms and stable < 2:
+        while waited < max_ms:
             page.wait_for_timeout(500)
             waited += 500
-            now = size()
+            now, empty = measure()
             stable = stable + 1 if now == last else 0
             last = now
+            if stable >= 2 and not empty and not self._requests_in_flight(page):
+                break
 
     def _dismiss(self, page) -> list[str]:
         closed = []
@@ -798,7 +828,7 @@ class PartCrawler:
         return self._decide_rendered(node, label, c["label"], c["chrome"])
 
     def _explore_rendered(self, node: Node) -> None:
-        page = self.fetcher.browser_context().new_page()
+        page = self._new_page()
         try:
             self._load(page, node.url)
             if not page.url.startswith("http"):
@@ -861,7 +891,7 @@ class PartCrawler:
         node = Node(page_url, 0, True, tuple(trail)[:-1])
         found_before, on_pdf = set(self.result.pdfs), self.on_pdf
         self.on_pdf = lambda pdf: None  # links merely seen on the page are not part of the retry
-        page = self.fetcher.browser_context().new_page()
+        page = self._new_page()
         try:
             self._load(page, page_url)
             for steps in range(PART_MAX_PAGINATION + 1):

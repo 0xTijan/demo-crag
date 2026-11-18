@@ -322,7 +322,7 @@ Writing an error row never raises; without a database errors are only printed (a
 | `PART_MAX_CLICKS_PER_PAGE` | 400 | `settings.py` | Elements clicked on one rendered page |
 | `PART_MAX_PAGINATION` | 60 | `settings.py` | "next page" clicks in one JavaScript table |
 | `_needs_js` | < 10 links or < 300 text characters | `crawler.py` | Start page looks JavaScript-built → browser |
-| page stable | 2 × 500 ms unchanged, max 12 s | `crawler.py` | Wait after loading / paging |
+| page stable | 3 checks 500 ms apart unchanged, no page/data request in flight (< 10 s old), every iframe with text; max 20 s | `crawler.py` | Wait after loading / paging / going back |
 | click outcome wait | 3 s (then up to 1.5 s idle + 6 s stable if it changed in place) | `crawler.py` | Tab, download or route change |
 | `IDLE_WAIT_MS` | 1.5 s | `crawler.py` | Cap on "network idle" (analytics that poll never go idle) |
 | `CHROME_DEPTH` | 5 levels below `<body>` | `crawler.py` | Where header/footer classes are recognised |
