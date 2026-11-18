@@ -1,56 +1,62 @@
-"""Download one PDF, verify it, and save it under reports/{company}/{category}/."""
+"""Download one datasheet PDF, verify it, and save it under datasheets/{manufacturer}/."""
 import hashlib
 import re
 import unicodedata
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
-from .crawler import PdfLink
+from .crawler import DatasheetLink
 from .fetcher import FetchError, Fetcher
-from .settings import MAX_PDF_BYTES, YEAR_RE
-
-GENERIC_TEXT = {"", "download", "pdf", "here", "click here", "open", "view", "more", "read more",
-                "prenesi", "preuzmi", "datoteka", "file"}
+from .settings import MAX_PDF_BYTES
 
 
 class DownloadError(Exception):
-    def __init__(self, stage: str, message: str, status: int | None = None):
+    def __init__(self, stage: str, message: str, status: int | None = None, retry: bool = False):
         super().__init__(message)
         self.stage = stage
         self.status = status
+        self.retry = retry  # a broken transfer, worth another attempt
 
 
 def slugify(text: str, max_len: int = 80) -> str:
-    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
-    text = re.sub(r"[^a-zA-Z0-9]+", "-", text).strip("-").lower()
+    """File-name-safe text: accents folded (č -> c), CJK kept (规格书), everything else -> '-'."""
+    text = "".join(ch for ch in unicodedata.normalize("NFKD", text) if not unicodedata.combining(ch))
+    text = re.sub(r"[\W_]+", "-", text).strip("-").lower()
     return text[:max_len].rstrip("-") or "document"
 
 
-def guess_year(pdf: PdfLink) -> int | None:
-    for source in (pdf.text, unquote(urlsplit(pdf.url).path), pdf.context):
-        years = YEAR_RE.findall(source or "")
-        if years:
-            return int(years[0])
-    return None
-
-
-def guess_title(pdf: PdfLink, disposition: str) -> str:
-    if pdf.text.strip().lower() not in GENERIC_TEXT:
-        return pdf.text
+def guess_filename(pdf: DatasheetLink, disposition: str) -> str:
+    """The document's own name: Content-Disposition, then the URL's last part, then the link text."""
     match = re.search(r"filename\*?=(?:UTF-8'')?\"?([^\";]+)", disposition or "", re.I)
     if match:
         return Path(unquote(match.group(1))).stem
     name = Path(unquote(urlsplit(pdf.url).path)).stem
-    return name or pdf.context[:80]
+    return name or pdf.text or "document"
 
 
-def download(fetcher: Fetcher, pdf: PdfLink, target_dir: Path, known_hashes: dict, reports_dir: Path) -> dict:
-    """Download `pdf` into `target_dir`.
+DOWNLOAD_ATTEMPTS = 3  # a transfer cut off half-way (timeout, dropped connection) is tried again
 
-    Returns a dict with file_path (relative to reports/), file_hash, file_size,
-    fiscal_year and duplicate_of (set when the same bytes were saved earlier).
-    Raises DownloadError on failure.
+
+def download(fetcher: Fetcher, pdf: DatasheetLink, target_dir: Path, known_hashes: dict, base_dir: Path) -> dict:
+    """Download `pdf` into `target_dir` as {file name from the server or URL}_{hash8}.pdf.
+
+    Returns a dict with file_path (relative to `base_dir`, i.e. datasheets/), file_hash,
+    file_size and duplicate_of (set when the same bytes were saved earlier).
+    Raises DownloadError on failure. Broken transfers (timeouts, dropped connections,
+    a body that is not a PDF although the server said it was) are retried on a fresh
+    connection; HTTP errors and HTML answers are not.
     """
+    for attempt in range(1, DOWNLOAD_ATTEMPTS + 1):
+        try:
+            return _download_once(fetcher, pdf, target_dir, known_hashes, base_dir)
+        except DownloadError as exc:
+            if attempt == DOWNLOAD_ATTEMPTS or not exc.retry:
+                raise
+            fetcher.reconnect()
+
+
+def _download_once(fetcher: Fetcher, pdf: DatasheetLink, target_dir: Path, known_hashes: dict,
+                   base_dir: Path) -> dict:
     target_dir.mkdir(parents=True, exist_ok=True)
     tmp = target_dir / f".{hashlib.sha1(pdf.url.encode()).hexdigest()}.part"
     digest = hashlib.sha256()
@@ -72,36 +78,36 @@ def download(fetcher: Fetcher, pdf: PdfLink, target_dir: Path, known_hashes: dic
                         raise DownloadError("download", f"file larger than {MAX_PDF_BYTES} bytes")
                     digest.update(chunk)
                     fh.write(chunk)
+            expected = resp.headers.get("content-length")
+            if expected and expected.isdigit() and "content-encoding" not in resp.headers and int(expected) != size:
+                raise DownloadError("download", f"transfer cut off: {size} of {expected} bytes", retry=True)
         except DownloadError:
             raise
         except Exception as exc:  # noqa: BLE001 - connection dropped mid-transfer etc.
-            raise DownloadError("download", f"{exc.__class__.__name__}: {exc}") from exc
+            raise DownloadError("download", f"{exc.__class__.__name__}: {exc}", retry=True) from exc
         finally:
             resp.close()
 
         with tmp.open("rb") as fh:
             head = fh.read(1024)
         if b"%PDF-" not in head:
-            raise DownloadError("verify", f"not a PDF (starts with {head[:16]!r})")
+            # the server said PDF but sent something else: usually a broken transfer
+            raise DownloadError("verify", f"not a PDF (starts with {head[:16]!r})", retry="pdf" in ctype)
 
         file_hash = digest.hexdigest()
-        year = guess_year(pdf)
         existing = known_hashes.get(file_hash)
-        if existing and (reports_dir / existing).exists():
+        if existing and (base_dir / existing).exists():
             tmp.unlink()
-            return {"file_path": existing, "file_hash": file_hash, "file_size": size,
-                    "fiscal_year": year, "duplicate_of": existing}
+            return {"file_path": existing, "file_hash": file_hash, "file_size": size, "duplicate_of": existing}
 
-        name = f"{year or 'undated'}_{slugify(guess_title(pdf, disposition))}_{file_hash[:8]}.pdf"
-        final = target_dir / name
+        final = target_dir / f"{slugify(guess_filename(pdf, disposition))}_{file_hash[:8]}.pdf"
         try:
             tmp.replace(final)
         except OSError as exc:
             raise DownloadError("write", f"{exc.__class__.__name__}: {exc}") from exc
-        rel = final.relative_to(reports_dir).as_posix()
+        rel = final.relative_to(base_dir).as_posix()
         known_hashes[file_hash] = rel
-        return {"file_path": rel, "file_hash": file_hash, "file_size": size,
-                "fiscal_year": year, "duplicate_of": None}
+        return {"file_path": rel, "file_hash": file_hash, "file_size": size, "duplicate_of": None}
     finally:
         if tmp.exists():
             tmp.unlink()

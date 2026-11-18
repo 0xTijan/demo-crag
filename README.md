@@ -28,6 +28,8 @@ Everything else — every report, every extracted number, every chunk in the vec
 
 ## Step 1 — From Homepage URL to Candidate Report PDFs
 
+> **Branch `part-crawler`:** the implemented download stage (`dataPipeline/download`) no longer fetches financial reports. It crawls electronic-component manufacturers' product catalogues and downloads every datasheet PDF to `datasheets/`; the database only keeps file hashes and errors (`datasheet_files`, `datasheet_errors`). See [`dataPipeline/download/README.md`](dataPipeline/download/README.md). Steps 1–2 below describe the original report design.
+
 For each company in the seed list:
 
 **1.1 Search** Find the webapge to crawl in the next step. A query like `"<company name>" financial reports`

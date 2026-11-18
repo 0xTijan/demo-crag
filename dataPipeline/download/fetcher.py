@@ -1,7 +1,8 @@
 """HTTP and browser access for the crawler.
 
 Responsibilities: polite rate limiting per host, `robots.txt`, retries with
-backoff, and Playwright rendering for JavaScript-heavy sites.
+backoff, repair of incomplete TLS chains, and the shared Playwright browser that
+crawler.py uses to render and click JavaScript sites.
 """
 import os
 import socket
@@ -13,8 +14,7 @@ from urllib.parse import urlsplit
 import httpx
 
 from .settings import (
-    CHROMIUM_PATH, COOKIE_ACCEPT_RE, LOAD_MORE_RE, MAX_HTML_BYTES, MAX_RETRIES,
-    REQUEST_DELAY, REQUEST_TIMEOUT, USER_AGENT,
+    CHROMIUM_PATH, MAX_HTML_BYTES, MAX_RETRIES, REQUEST_DELAY, REQUEST_TIMEOUT, USER_AGENT,
 )
 
 RETRY_STATUS = {429, 500, 502, 503, 504}
@@ -39,8 +39,9 @@ class Page:
 
 
 class Fetcher:
-    def __init__(self, delay: float = REQUEST_DELAY):
+    def __init__(self, delay: float = REQUEST_DELAY, headless: bool = True):
         self.delay = delay
+        self.headless = headless  # False: a visible browser window (to watch the clicking)
         self._extra_ca_pem: list[str] = []  # intermediates fetched for servers with incomplete chains
         self._chain_repaired: set[str] = set()
         self.client = self._new_client()
@@ -209,77 +210,37 @@ class Fetcher:
             raise FetchError(f"HTTP {resp.status_code}", resp.status_code)
         return resp
 
+    def reconnect(self) -> None:
+        """Drop all pooled connections (after a transfer broke half-way)."""
+        old, self.client = self.client, self._new_client()
+        old.close()
+
+    def wait(self, url: str) -> None:
+        """Public form of the per-host pause, for callers that drive the browser themselves."""
+        self._wait(url)
+
     # ------------------------------------------------------------ browser
+    def browser_context(self):
+        """The shared Playwright context (started on first use)."""
+        return self._browser_context()
+
     def _browser_context(self):
         if self._context is None:
             from playwright.sync_api import sync_playwright
 
             self._pw = sync_playwright().start()
             try:
-                self._browser = self._pw.chromium.launch()
+                self._browser = self._pw.chromium.launch(headless=self.headless)
             except Exception:  # noqa: BLE001 - bundled browser missing, use the system one
                 self._browser = self._pw.chromium.launch(
-                    executable_path=CHROMIUM_PATH, args=["--no-sandbox"], headless=True
+                    executable_path=CHROMIUM_PATH, args=["--no-sandbox"], headless=self.headless
                 )
             self._context = self._browser.new_context(
-                user_agent=USER_AGENT, locale="en-GB", accept_downloads=False,
+                user_agent=USER_AGENT, locale="en-GB", accept_downloads=True,
+                viewport={"width": 1440, "height": 900},
                 extra_http_headers={"Accept-Language": "en-GB,en;q=0.9"},
             )
         return self._context
-
-    def render(self, url: str, scrolls: int = 6, load_more_clicks: int = 8) -> Page:
-        """Render a page in Chromium. Scrolls and presses "load more" buttons first."""
-        self._wait(url)
-        page = self._browser_context().new_page()
-        try:
-            try:
-                resp = page.goto(url, wait_until="domcontentloaded", timeout=REQUEST_TIMEOUT * 1000)
-            except Exception as exc:  # noqa: BLE001
-                raise FetchError(f"render failed: {exc}") from exc
-            status = resp.status if resp else None
-            if status and status >= 400:
-                raise FetchError(f"HTTP {status}", status)
-            ctype = (resp.headers.get("content-type", "") if resp else "").lower()
-            if "pdf" in ctype:
-                return Page(page.url, status, ctype)
-            self._settle(page)
-            self._accept_cookies(page)
-            for _ in range(scrolls):
-                page.mouse.wheel(0, 20000)
-                page.wait_for_timeout(300)
-            start_url = page.url
-            clickable = "button, [role=button], a[href^='#'], a[href^='javascript'], a:not([href])"
-            for _ in range(load_more_clicks):
-                button = page.locator(clickable).filter(has_text=LOAD_MORE_RE).first
-                try:
-                    if button.count() == 0 or not button.is_visible():
-                        break
-                    button.click(timeout=3000)
-                except Exception:  # noqa: BLE001
-                    break
-                self._settle(page)
-                if page.url != start_url:
-                    break
-            return Page(page.url, status, ctype or "text/html", page.content())
-        finally:
-            page.close()
-
-    @staticmethod
-    def _settle(page) -> None:
-        try:
-            page.wait_for_load_state("networkidle", timeout=8000)
-        except Exception:  # noqa: BLE001
-            page.wait_for_timeout(1000)
-
-    @staticmethod
-    def _accept_cookies(page) -> None:
-        try:
-            button = page.locator("button, a, [role=button]").filter(has_text=COOKIE_ACCEPT_RE).first
-            if button.count() and button.is_visible():
-                button.click(timeout=2000)
-                page.wait_for_timeout(500)
-        except Exception:  # noqa: BLE001
-            pass
 
     def close(self) -> None:
         self.client.close()

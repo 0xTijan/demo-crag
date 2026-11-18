@@ -152,33 +152,32 @@ CREATE TABLE IF NOT EXISTS report_file_errors (
 );
 
 -- ==========================
--- 6. Downloaded report / announcement PDFs (dataPipeline/download)
+-- 6. Downloaded datasheets of component manufacturers (dataPipeline/download)
 -- ==========================
--- Companies are the rows of `stocks`; the website to crawl is stocks.website_url.
-CREATE TABLE IF NOT EXISTS downloaded_files (
-    download_id   SERIAL PRIMARY KEY,
-    stock_isin    CHAR(12) NOT NULL REFERENCES stocks(isin) ON DELETE CASCADE,
-    category      TEXT        NOT NULL CHECK (category IN ('reports','announcements','other')),
+-- Manufacturers are given on the command line (product page or homepage URL);
+-- `manufacturer` is a short name such as "goodark" (from the domain, or --name).
+-- Only hashes and errors are stored; where each PDF was found (page, part row,
+-- click trail) is in datasheets/{manufacturer}/manifest.jsonl.
+CREATE TABLE IF NOT EXISTS datasheet_files (
+    datasheet_id  SERIAL PRIMARY KEY,
+    manufacturer  TEXT        NOT NULL,
     source_url    TEXT        NOT NULL,
-    page_url      TEXT,                              -- page the link was found on
-    link_text     TEXT,
-    file_path     TEXT        NOT NULL,              -- relative to reports/
+    file_path     TEXT        NOT NULL,              -- relative to datasheets/
     file_hash     CHAR(64)    NOT NULL,              -- SHA-256 of the PDF bytes
     file_size     BIGINT,
-    fiscal_year   INT,                               -- guessed from link text / URL
     downloaded_at TIMESTAMPTZ DEFAULT now(),
-    UNIQUE (stock_isin, source_url)
+    UNIQUE (manufacturer, source_url)
 );
-CREATE INDEX IF NOT EXISTS downloaded_files_hash_idx ON downloaded_files (stock_isin, file_hash);
+CREATE INDEX IF NOT EXISTS datasheet_files_hash_idx ON datasheet_files (manufacturer, file_hash);
 
-CREATE TABLE IF NOT EXISTS download_errors (
-    error_id    SERIAL PRIMARY KEY,
-    stock_isin  CHAR(12) REFERENCES stocks(isin) ON DELETE CASCADE,
-    url         TEXT,
-    stage       TEXT NOT NULL,  -- website | english_version | robots | crawl | render | head_check | download | verify | write | db | company
-    error       TEXT NOT NULL,
-    http_status INT,
-    traceback   TEXT,
-    occurred_at TIMESTAMPTZ DEFAULT now()
+CREATE TABLE IF NOT EXISTS datasheet_errors (
+    error_id     SERIAL PRIMARY KEY,
+    manufacturer TEXT,
+    url          TEXT,
+    stage        TEXT NOT NULL,  -- website | robots | crawl | render | click | head_check | datasheet_unavailable | download | verify | write | db | manufacturer
+    error        TEXT NOT NULL,
+    http_status  INT,
+    traceback    TEXT,
+    occurred_at  TIMESTAMPTZ DEFAULT now()
 );
-CREATE INDEX IF NOT EXISTS download_errors_company_idx ON download_errors (stock_isin, occurred_at DESC);
+CREATE INDEX IF NOT EXISTS datasheet_errors_manufacturer_idx ON datasheet_errors (manufacturer, occurred_at DESC);
