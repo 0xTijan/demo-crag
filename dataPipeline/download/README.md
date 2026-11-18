@@ -51,7 +51,8 @@ downloader.py : stream → check "%PDF-" → SHA-256
      ▼
 datasheets/{manufacturer}/{pdf-name}_{hash8}.pdf
 ──► line in datasheets/{manufacturer}/manifest.jsonl (page, part row, click trail)
-──► row in datasheet_files (URL, file, SHA-256)
+──► row in datasheet_files (one per unique PDF: file, SHA-256)
+──► row in datasheet_sources (one per URL: page, part row, part number, last seen)
 any failure ──► row in datasheet_errors (the run goes on)
 ```
 
@@ -67,7 +68,7 @@ any failure ──► row in datasheet_errors (the run goes on)
 | `crawler.py` | `PartCrawler`: walks one catalogue (static links, or clicking in a browser) and reports every PDF through a callback. `is_datasheet`. Knows nothing about disks or databases. | `fetcher`, `settings` |
 | `downloader.py` | Streams one PDF to disk, verifies it, removes duplicates, names the file. | `fetcher` |
 | `fetcher.py` | All network access: rate limit per host, `robots.txt`, retries, HEAD checks, repair of incomplete TLS chains, the shared Playwright browser. | `settings` |
-| `db.py` | Creates and writes `datasheet_files` and `datasheet_errors`. | `settings` |
+| `db.py` | Creates and writes `datasheet_files`, `datasheet_sources` and `datasheet_errors`; migrates the older one-row-per-URL table. | `downloader`, `settings` |
 | `settings.py` | Constants, limits and all keyword lists. | none |
 
 The crawler returns data and writes nothing: each PDF goes to `on_pdf` as soon as it is found (so a long crawl saves its results as it goes) and failures go to a `log_error` callback. That is why `--dry-run` works with the same crawler.
@@ -188,13 +189,19 @@ Elements are found again after a reload by frame, text, icon text, table row and
 
 | Table | Columns | Purpose |
 |---|---|---|
-| `datasheet_files` | `manufacturer`, `source_url` (unique per manufacturer), `file_path` (relative to `datasheets/`), `file_hash` (SHA-256), `file_size`, `downloaded_at` | Skip known URLs, store identical bytes once |
+| `datasheet_files` | `datasheet_id`, `manufacturer`, `file_path` (relative to `datasheets/`), `file_hash` (SHA-256, unique per manufacturer), `file_size`, `downloaded_at` | One row per unique PDF: identical bytes are stored once |
+| `datasheet_sources` | `datasheet_id` (→ `datasheet_files`), `manufacturer`, `source_url` (unique per manufacturer), `page_url`, `part_number`, `link_text`, `context`, `trail`, `first_seen_at`, `last_seen_at` | One row per URL where a PDF was found: skip known URLs; part numbers per datasheet; `last_seen_at` shows URLs no longer on the site |
 | `datasheet_errors` | `manufacturer`, `url`, `stage`, `error`, `http_status`, `traceback`, `occurred_at` | Append-only failure log |
 
-Files saved by a `--no-db` run get their `datasheet_files` row on the next run with a database.
+Many URLs often point to the same PDF (one URL per orderable part number, e.g. `.../datasheet/NCA1462-Q1DNR/NCA1462-Q1_Datasheet_1.2_EN.pdf`): that is one `datasheet_files` row with several `datasheet_sources` rows. `part_number` is taken from the URL's folder only when it looks like a part number and also appears in the page URL, link text or table row; otherwise it stays empty.
+
+A known URL found again only updates its `datasheet_sources` row (details and `last_seen_at`). Files saved by a `--no-db` run get their rows on the next run with a database (from `manifest.jsonl`). A database with the older layout (one `datasheet_files` row per URL) is migrated automatically on the next run: the URLs move to `datasheet_sources`, each PDF keeps the lowest of its old `datasheet_id`s, and page, part row and trail are filled in from `manifest.jsonl`.
 
 ```sql
-SELECT manufacturer, count(*), count(DISTINCT file_hash) FROM datasheet_files GROUP BY 1;  -- URLs vs. files
+SELECT f.manufacturer, count(DISTINCT f.datasheet_id) AS files, count(s.source_id) AS urls
+FROM datasheet_files f LEFT JOIN datasheet_sources s USING (datasheet_id) GROUP BY 1;    -- files vs. URLs
+SELECT f.file_path, array_agg(s.part_number ORDER BY s.part_number) AS part_numbers
+FROM datasheet_files f JOIN datasheet_sources s USING (datasheet_id) GROUP BY 1;         -- part numbers per PDF
 SELECT stage, count(*) FROM datasheet_errors GROUP BY 1;                                    -- what is failing
 ```
 

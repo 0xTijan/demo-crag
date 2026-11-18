@@ -11,8 +11,10 @@ Give the product page or the homepage of a manufacturer. The crawler walks every
 product category, family and part page (clicking through JavaScript menus and
 tables when the site needs it) and downloads every datasheet it finds to
 datasheets/{manufacturer}/. Each manufacturer folder has a manifest.jsonl with one
-line per source URL (where it was found, part row, click trail). The database only
-gets the file hashes (`datasheet_files`) and the failures (`datasheet_errors`).
+line per source URL (where it was found, part row, click trail). The database gets one
+row per unique PDF (`datasheet_files`), one row per source URL pointing to it
+(`datasheet_sources`, with the part number when the URL shows it) and the failures
+(`datasheet_errors`).
 """
 from dotenv import load_dotenv
 
@@ -28,7 +30,7 @@ from urllib.parse import urlsplit  # noqa: E402
 
 from . import db  # noqa: E402
 from .crawler import PartCrawler, is_datasheet, site_key  # noqa: E402
-from .downloader import DownloadError, download, slugify  # noqa: E402
+from .downloader import DownloadError, download, part_number_from_url, slugify  # noqa: E402
 from .fetcher import FetchError, Fetcher  # noqa: E402
 from .settings import DATASHEETS_DIR, PART_MAX_DEPTH, PART_MAX_PAGES  # noqa: E402
 from helpers.run_log import start_run_log  # noqa: E402
@@ -65,10 +67,13 @@ class Saver:
         self.manifest = read_manifest(self.folder)
         self.known_urls = {u: r["file_path"] for u, r in self.manifest.items()}
         self.known_hashes = {r["file_hash"]: r["file_path"] for r in self.manifest.values()}
-        self.db_urls = set()
         if engine is not None:
+            # rows saved by a --no-db run (or details lost in a migration) reach the database now
+            try:
+                db.sync_manifest(engine, self.manifest.values())
+            except Exception as exc:  # noqa: BLE001
+                log_error("db", exc)
             urls, hashes = db.known_datasheets(engine, name)
-            self.db_urls = set(urls)
             self.known_urls.update(urls)
             self.known_hashes.update(hashes)
         self.stats = {"pdfs": 0, "datasheets": 0, "downloaded": 0, "skipped": 0, "duplicates": 0,
@@ -85,14 +90,15 @@ class Saver:
         if self.args.dry_run:
             print(f"      [datasheet] {' > '.join(pdf.trail[-3:])!r} {pdf.url}")
             return
+        found = {"manufacturer": self.name, "source_url": pdf.url, "page_url": pdf.page_url,
+                 "link_text": pdf.text[:500], "context": pdf.context[:1000], "trail": " > ".join(pdf.trail)[:2000]}
+        found["part_number"] = part_number_from_url(pdf.url, pdf.page_url, found["link_text"], found["context"])
         existing = self.known_urls.get(pdf.url)
         if existing and (DATASHEETS_DIR / existing).exists() and not self.args.force:
             self.stats["skipped"] += 1
-            if self.engine is not None and pdf.url not in self.db_urls and pdf.url in self.manifest:
-                # saved by a run without the database: add its row now
+            if self.engine is not None:
                 try:
-                    db.record_datasheet(self.engine, self.manifest[pdf.url])
-                    self.db_urls.add(pdf.url)
+                    db.mark_seen(self.engine, found)  # still on the site: update last_seen_at
                 except Exception as exc:  # noqa: BLE001
                     self.log_error("db", exc, url=pdf.url)
             return
@@ -102,9 +108,8 @@ class Saver:
             self.stats["failed"] += 1
             self.log_error(exc.stage, str(exc), url=pdf.url, http_status=exc.status)
             return
-        row = {"manufacturer": self.name, "source_url": pdf.url, "page_url": pdf.page_url,
-               "link_text": pdf.text[:500], "context": pdf.context[:1000], "trail": " > ".join(pdf.trail)[:2000],
-               "file_path": info["file_path"], "file_hash": info["file_hash"], "file_size": info["file_size"]}
+        row = {**found, "file_path": info["file_path"], "file_hash": info["file_hash"],
+               "file_size": info["file_size"]}
         self.folder.mkdir(parents=True, exist_ok=True)
         with (self.folder / MANIFEST).open("a", encoding="utf-8") as fh:
             fh.write(json.dumps({**row, "downloaded_at": datetime.now(timezone.utc).isoformat()},
@@ -114,7 +119,6 @@ class Saver:
         if self.engine is not None:
             try:
                 db.record_datasheet(self.engine, row)
-                self.db_urls.add(pdf.url)
             except Exception as exc:  # noqa: BLE001
                 self.stats["failed"] += 1
                 self.log_error("db", exc, url=pdf.url)
