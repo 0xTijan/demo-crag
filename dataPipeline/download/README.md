@@ -53,7 +53,7 @@ downloader.py : stream → check "%PDF-" → SHA-256
      ▼
 datasheets/{manufacturer}/{pdf-name}_{hash8}.pdf
 ──► line in datasheets/{manufacturer}/manifest.jsonl (page, part row, click trail)
-──► row in datasheet_files (URL, file, SHA-256)
+──► row in datasheet_files (one per PDF: file, SHA-256) + row in datasheet_urls (this URL → that PDF)
 any failure ──► row in datasheet_errors (the run goes on)
 ```
 
@@ -69,7 +69,7 @@ any failure ──► row in datasheet_errors (the run goes on)
 | `crawler.py` | `PartCrawler`: walks one catalogue (static links, or clicking in a browser) and reports every PDF through a callback. `is_datasheet`. Knows nothing about disks or databases. | `fetcher`, `settings` |
 | `downloader.py` | Streams one PDF to disk, verifies it, removes duplicates, names the file. | `fetcher` |
 | `fetcher.py` | All network access: rate limit per host, `robots.txt`, retries, HEAD checks, repair of incomplete TLS chains, the shared Playwright browser. | `settings` |
-| `db.py` | Creates and writes `datasheet_files` and `datasheet_errors`. | `settings` |
+| `db.py` | Creates and writes `datasheet_files`, `datasheet_urls` and `datasheet_errors`. | `settings` |
 | `settings.py` | Constants, limits and all keyword lists. | none |
 
 The crawler returns data and writes nothing: each PDF goes to `on_pdf` as soon as it is found (so a long crawl saves its results as it goes) and failures go to a `log_error` callback. That is why `--dry-run` works with the same crawler.
