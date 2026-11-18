@@ -18,8 +18,9 @@ class DownloadError(Exception):
 
 
 def slugify(text: str, max_len: int = 80) -> str:
-    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode()
-    text = re.sub(r"[^a-zA-Z0-9]+", "-", text).strip("-").lower()
+    """File-name-safe text: accents folded (č -> c), CJK kept (规格书), everything else -> '-'."""
+    text = "".join(ch for ch in unicodedata.normalize("NFKD", text) if not unicodedata.combining(ch))
+    text = re.sub(r"[\W_]+", "-", text).strip("-").lower()
     return text[:max_len].rstrip("-") or "document"
 
 
