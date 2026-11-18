@@ -153,7 +153,8 @@ def is_datasheet(pdf: DatasheetLink) -> bool:
     """Keep datasheets; drop application notes, certificates, brochures, package drawings, ...
 
     The PDF's own URL and link/button text decide first, then its table row or list
-    item, and a PDF without any hint is kept when it was found inside the catalogue."""
+    item, then the sections it was reached through ("Documents > RoHS Report"), and a
+    PDF without any hint is kept when it was found inside the catalogue."""
     own = f"{unquote(pdf.url)} {pdf.text} {pdf.trail[-1] if pdf.trail else ''}"
     positive = keyword_score(own, DATASHEET_KEYWORDS)
     negative = keyword_score(own, OTHER_DOC_KEYWORDS) + bool(APP_NOTE_RE.search(own))
@@ -161,10 +162,11 @@ def is_datasheet(pdf: DatasheetLink) -> bool:
         return True
     if negative:
         return False
-    positive = keyword_score(pdf.context, DATASHEET_KEYWORDS)
-    negative = keyword_score(pdf.context, OTHER_DOC_KEYWORDS)
-    if positive != negative:
-        return positive > negative
+    for around in (pdf.context, " ".join(pdf.trail[:-1])):  # its row, then the sections above it
+        positive = keyword_score(around, DATASHEET_KEYWORDS)
+        negative = keyword_score(around, OTHER_DOC_KEYWORDS) + bool(APP_NOTE_RE.search(around))
+        if positive != negative:
+            return positive > negative
     return pdf.on_product_page
 
 

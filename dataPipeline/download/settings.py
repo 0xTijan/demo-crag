@@ -111,7 +111,8 @@ OTHER_DOC_KEYWORDS = [
     "brochure", "catalog", "catalogue", "selection guide", "presentation", "white paper",
     "whitepaper", "errata", "pcn", "product change", "end of life", "eol", "flyer",
     "outline dimension", "package outline", "package drawing", "tape and reel", "packing",
-    "marking", "soldering", "annual report", "press release", "guide", "solution",
+    "marking", "soldering", "report", "press release", "guide", "solution",
+    "报告", "应用笔记", "手册", "证书", "说明书",
     "design note", "reference design", "evaluation board", "evm", "software", "firmware",
 ]
 # Clickable elements that are never navigation (checked against text, title, aria-label).
@@ -138,6 +139,7 @@ MODAL_DISMISS_RE = re.compile(
 
 _NORMALISE_RE = re.compile(r"[-_/.?=&+%#:,;()\[\]|]+")
 _WORD_RE = re.compile(r"\w+", re.UNICODE)
+_CJK_RE = re.compile(r"[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]")
 
 
 def normalise(text: str) -> str:
@@ -147,7 +149,8 @@ def normalise(text: str) -> str:
 def whole_word_score(text: str, keywords) -> int:
     """Number of distinct keywords found in `text` as whole words or phrases (plural -s/-es allowed)."""
     norm = f" {normalise(text)} "
-    return sum(bool(re.search(rf"(?<!\w){re.escape(normalise(kw))}(e?s)?(?!\w)", norm)) for kw in keywords)
+    return sum(bool(normalise(kw) in norm if _CJK_RE.search(kw) else
+                    re.search(rf"(?<!\w){re.escape(normalise(kw))}(e?s)?(?!\w)", norm)) for kw in keywords)
 
 
 def keyword_score(text: str, keywords) -> int:
@@ -158,7 +161,7 @@ def keyword_score(text: str, keywords) -> int:
     words = _WORD_RE.findall(norm)
     score = 0
     for kw in keywords:
-        if " " in kw:
+        if " " in kw or _CJK_RE.search(kw):  # phrases, and CJK (no spaces between words)
             hit = kw in norm
         elif len(kw) <= 3:
             hit = kw in words

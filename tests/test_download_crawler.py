@@ -108,6 +108,10 @@ def test_is_datasheet_rules():
     assert not is_datasheet(pdf("https://x/docs/AN-13-0012_RS485_Reference.pdf"))
     assert not is_datasheet(pdf("https://x/docs/NSI1150_User_Guide.pdf"))
     assert not is_datasheet(pdf("https://x/docs/quality/ISO9001_certificate.pdf"))
+    # sections it was reached through, and Chinese file names (no spaces between words)
+    assert not is_datasheet(pdf("https://x/pdf/x123.pdf", trail=("Documents", "RoHS Report", "x123.pdf")))
+    assert not is_datasheet(pdf("https://x/pdf/苏州固锝：2023年社会责任报告.pdf", trail=("Documents", "Other", "")))
+    assert is_datasheet(pdf("https://x/pdf/SS34_规格书.pdf"))
 
 
 def test_rendered_click_decisions():
