@@ -26,7 +26,7 @@ are needed (section 10).
 | Unit conversion | done by the LLM, into the spec list's units | done in code, checked against the expected unit type |
 | Component types | you write a spec list per type, starting with ~10 | type tree built automatically for all ~200 types |
 | Families (e.g. MLCC) | one entry per availability row; LLM builds the exact part number | code expands rows and generates part numbers from the decoder |
-| Storage | 3 tables + YAML files | 4 database schemas, ~15 tables, generated per-type views |
+| Storage | 4 tables + YAML files + index cache files (optional generated per-type views) | 4 database schemas, ~15 tables, generated per-type views |
 | Matching | Python filter + % of key specs met | SQL filter + weighted per-spec scoring + LLM review |
 | Labels | set by code from the spec list | set by code from the registry |
 | Proof per value | page + raw-text check + min ≤ max check | page + table + row + raw-text check + validation rules |
@@ -110,10 +110,12 @@ Example: the Viking MLCC datasheet, with 8 sizes × 5 dielectrics × ~15 voltage
 
 ### Simple plan
 ```
-catalog_parts   (supplier, file, type, part_number, family_row, specs jsonb)
+datasheets      (supplier, file, file_hash, type, versions, status)
+catalog_parts   (datasheet, supplier, type, part_number, family_row, specs jsonb)
 external_parts  (manufacturer, part_number, file, type, specs jsonb)
 matches         (external part ↔ catalogue part, label, status, reason, compared specs)
 spec_lists/*.yaml
+index_cache/…/*.json   (master copy of the indexing results; the database can be rebuilt from it)
 ```
 
 ### Full design
@@ -130,7 +132,7 @@ plus separate database users per pipeline.
 | | Simple | Full |
 |---|---|---|
 | Our parts and external parts kept apart | yes: separate tables and folders | yes: separate schemas, folders and database users |
-| SQL reports per type ("all our MOSFETs above 100 V") | possible with JSON queries, but awkward | easy: generated per-type views |
+| SQL reports per type ("all our MOSFETs above 100 V") | easy if the proposed generated views are added (~1 day); otherwise JSON queries | easy: generated per-type views |
 | Corrections by engineers | not stored separately; fixed by fixing the spec list or re-indexing | stored as corrections that survive re-extraction |
 | Effort to set up and maintain | low | higher |
 
@@ -215,7 +217,7 @@ plus separate database users per pipeline.
 
 **Mostly no rewrite.** About half of the simple plan stays as it is when upgrading; the rest is extended or
 replaced piece by piece. The one real replacement is the inside of the extractor. The details are in
-section 13 of [`parts_alternatives_plan.md`](parts_alternatives_plan.md).
+section 16 of [`parts_alternatives_plan.md`](parts_alternatives_plan.md).
 
 ### What happens to each part of the simple plan
 
