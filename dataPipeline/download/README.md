@@ -103,6 +103,8 @@ python -m dataPipeline.download.run https://www.novosns.com/en/ --retry-failed #
 | `--force` | off | Download again even if already saved |
 | `--no-db` | off | No PostgreSQL; hashes only in `manifest.jsonl` |
 | `--fast` | off | JavaScript tables: when a row's datasheet button already gave the PDF (or a "not public" notice), do not also open that row's part page. Part pages found elsewhere (featured-product tiles, …) are visited last, and skipped if a table row already covered that part. Much faster on sites like NOVOSENSE |
+| `--recrawl` | off | Fetch every page again, also part pages visited by earlier runs (see "Reruns" in [7](#7-saving-files-manifest-database)) |
+| `--cache-days N` | 30 | Part pages visited less than N days ago are not fetched again |
 | `--retry-failed` | off | Do not crawl: retry only the datasheets in `datasheet_errors` (all manufacturers, or those of the given URLs / `--name`). See [7.2](#72-retrying-failed-datasheets---retry-failed). Needs the database; with `--dry-run` it only lists them |
 | `-v` | off | Print every page and every click |
 | `--show-browser` | off | Open a visible Chromium window and watch it load pages and click (JavaScript sites; needs a desktop) |
@@ -208,6 +210,8 @@ SELECT f.file_path, count(*) AS urls FROM datasheet_files f JOIN datasheet_urls 
 GROUP BY 1 ORDER BY 2 DESC;                                                                -- most shared datasheets
 SELECT stage, count(*) FROM datasheet_errors GROUP BY 1;                                    -- what is failing
 ```
+
+**Reruns.** `datasheets/{manufacturer}/pages.jsonl` remembers every **leaf page**: a page that gave datasheet links and led nowhere new (in practice: part pages). The next run does not fetch those pages again if they were visited less than `--cache-days` (30) days ago; category pages, family lists and pagination are still read, so new families and parts are found. On Good-Ark this skips almost all of the ~4,000 page visits of a full run. `--recrawl` ignores the file (e.g. to look for new datasheet revisions on known part pages).
 
 ### 7.1 Datasheets that could not be obtained
 

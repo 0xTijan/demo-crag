@@ -85,6 +85,21 @@ def test_static_catalogue_walks_families_pages_and_parts():
     assert len(found) == len(urls)  # every PDF reported once, as soon as found
 
 
+def test_second_run_skips_leaf_pages_but_still_reads_lists():
+    leaves = {}
+    first = FakeFetcher()
+    PartCrawler(first, lambda *a, **k: None, js="never",
+                on_leaf=lambda url, pdfs: leaves.__setitem__(url, pdfs)).crawl("https://en.example-semi.com/product.php")
+    assert "https://en.example-semi.com/proshow.php?id=12" in leaves          # a part page: gave a PDF, no new links
+    assert not any("prolist" in u for u in leaves)                           # list pages lead to parts: never cached
+    second = FakeFetcher()
+    result = PartCrawler(second, lambda *a, **k: None, js="never", page_cache=leaves).crawl(
+        "https://en.example-semi.com/product.php")
+    assert not any("proshow" in u for u in second.requested)                 # part pages not fetched again
+    assert "https://en.example-semi.com/prolist.php?id=1&page=2" in second.requested  # lists still read
+    assert result.cached_pages == len(leaves)
+
+
 def test_header_footer_and_other_languages_are_not_followed():
     _, fetcher, _ = crawl("https://en.example-semi.com/product.php")
     for url in fetcher.requested:

@@ -37,6 +37,23 @@ from helpers.run_log import start_run_log  # noqa: E402
 
 MANIFEST = "manifest.jsonl"
 MISSING = "missing.jsonl"  # datasheets that could not be obtained, with all context
+PAGES = "pages.jsonl"      # leaf pages already visited (skipped by the next runs)
+
+
+def read_page_cache(folder: Path, max_days: float) -> dict:
+    """{page url: [PDF urls]} of leaf pages visited in the last `max_days` days."""
+    path, cache = folder / PAGES, {}
+    if not path.exists() or max_days <= 0:
+        return cache
+    oldest = datetime.now(timezone.utc).timestamp() - max_days * 86400
+    for line in path.read_text(encoding="utf-8").splitlines():
+        try:
+            rec = json.loads(line)
+            if datetime.fromisoformat(rec["visited_at"]).timestamp() >= oldest:
+                cache[rec["url"]] = rec["pdfs"]
+        except (ValueError, KeyError):
+            continue
+    return cache
 
 
 def manufacturer_name(url: str) -> str:
@@ -178,15 +195,30 @@ class Saver:
 def process_manufacturer(engine, fetcher, url: str, name: str, args) -> dict:
     log_error = db.ErrorLog(engine, name)
     saver = Saver(fetcher, engine, name, args, log_error)
+    page_cache = {} if args.recrawl else read_page_cache(saver.folder, args.cache_days)
+    if page_cache:
+        print(f"    {len(page_cache)} pages visited in the last {args.cache_days:g} days are skipped "
+              f"(--recrawl to fetch them again)")
+
+    def on_leaf(url, pdfs):
+        if args.dry_run:
+            return
+        saver.folder.mkdir(parents=True, exist_ok=True)
+        with (saver.folder / PAGES).open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps({"url": url, "pdfs": pdfs, "visited_at": datetime.now(timezone.utc).isoformat()},
+                                ensure_ascii=False) + "\n")
+
     crawler = PartCrawler(fetcher, log_error, on_pdf=saver, max_pages=args.max_pages,
                           max_depth=args.max_depth, js=args.js, verbose=args.verbose, fast=args.fast,
-                          on_missing=lambda stage, message, url, details: saver.missing(stage, message, url, details))
+                          on_missing=lambda stage, message, url, details: saver.missing(stage, message, url, details),
+                          page_cache=page_cache, on_leaf=on_leaf)
     try:
         result = crawler.crawl(url)
     except FetchError as exc:
         log_error("website", exc, url=url, http_status=exc.status)
         return saver.stats
     print(f"    {result.pages_visited} pages{' (browser)' if result.used_js else ''}, "
+          f"{result.cached_pages} cached pages skipped, "
           f"{result.clicks} clicks, {len(result.pdfs)} PDF links, "
           f"{len(result.unavailable)} datasheets not public")
     return saver.stats
@@ -296,6 +328,10 @@ def main() -> int:
     parser.add_argument("--fast", action="store_true",
                         help="JavaScript tables: when a row's datasheet button gives the PDF, do not also open "
                              "that row's part page (much faster; part pages are not all visited)")
+    parser.add_argument("--recrawl", action="store_true",
+                        help="fetch every page again, also the part pages visited by earlier runs")
+    parser.add_argument("--cache-days", type=float, default=30,
+                        help="part pages visited less than N days ago are not fetched again (default 30)")
     parser.add_argument("--retry-failed", action="store_true",
                         help="only retry the datasheets in datasheet_errors (all manufacturers, or those of the "
                              "given URLs / --name); a success is saved and its error rows removed")

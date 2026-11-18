@@ -77,6 +77,7 @@ class PartCrawlResult:
     pages_visited: int = 0
     clicks: int = 0
     skipped_pages: int = 0   # --fast: part pages not visited because a table row covered them
+    cached_pages: int = 0    # leaf pages not fetched again (visited by an earlier run)
     used_js: bool = False
     unavailable: list = field(default_factory=list)  # (page, element text, message shown)
 
@@ -433,7 +434,8 @@ class PartCrawler:
     """Walks one manufacturer's catalogue. See the module docstring."""
 
     def __init__(self, fetcher: Fetcher, log_error, on_pdf=None, max_pages=PART_MAX_PAGES,
-                 max_depth=PART_MAX_DEPTH, js="auto", verbose=False, on_missing=None, fast=False):
+                 max_depth=PART_MAX_DEPTH, js="auto", verbose=False, on_missing=None, fast=False,
+                 page_cache=None, on_leaf=None):
         self.fetcher = fetcher
         self.log_error = log_error
         self.on_pdf = on_pdf or (lambda pdf: None)
@@ -452,6 +454,11 @@ class PartCrawler:
         # fast: once a table row's document button gave a PDF (or a "not available" notice), the
         # row's other items (part number -> part page) are not clicked
         self.fast = fast
+        # Leaf pages from earlier runs (url -> PDF URLs): pages that gave datasheet links and led
+        # nowhere new. They are not fetched again; on_leaf(url, pdf_urls) reports new ones.
+        self.page_cache = page_cache or {}
+        self.on_leaf = on_leaf or (lambda url, pdfs: None)
+        self._page_pdfs: list[str] = []
         self.rows_with_doc: set[str] = set()   # table rows whose document button gave a PDF or a notice
         self.rows_with_pdf: set[str] = set()   # ... that gave a PDF
         self.later: deque[Node] = deque()      # --fast: part pages, visited after everything else
@@ -486,9 +493,15 @@ class PartCrawler:
                     if self.verbose:
                         print(f"      skip part page {node.url}: its table row already gave its datasheet (--fast)")
                     continue
+            if node.depth > 0 and node.url in self.page_cache:
+                self.result.cached_pages += 1  # visited by an earlier run: its datasheets are known
+                if self.verbose:
+                    print(f"      cached {node.url} ({len(self.page_cache[node.url])} PDF links)")
+                continue
             if not self.fetcher.allowed(node.url):
                 self.log_error("robots", "disallowed by robots.txt", url=node.url)
                 continue
+            self._page_pdfs, links_before = [], len(self.seen)
             try:
                 if use_js:
                     self._explore_rendered(node)
@@ -502,11 +515,14 @@ class PartCrawler:
                 self.log_error("render" if use_js else "crawl", exc, url=node.url)
                 continue
             self.result.pages_visited += 1
+            if self._page_pdfs and len(self.seen) == links_before and node.depth > 0:
+                self.on_leaf(node.url, sorted(set(self._page_pdfs)))  # gave PDFs, led nowhere new
             # every page with -v; otherwise every 25 pages, and at least once a minute
             # (a JavaScript catalogue page can take a minute or two)
             if self.verbose or self.result.pages_visited % 25 == 0 or time.monotonic() - last_report >= 60:
                 last_report = time.monotonic()
-                print(f"    .. {self.result.pages_visited} pages, {len(self.queue)} queued, "
+                print(f"    .. {self.result.pages_visited} pages, {self.result.cached_pages} cached, "
+                      f"{len(self.queue)} queued, "
                       f"{len(self.result.pdfs)} PDFs, {self.result.clicks} clicks, "
                       f"{time.monotonic() - started:.0f}s  [{node.url}]")
 
@@ -583,6 +599,7 @@ class PartCrawler:
             return
         label = text or unquote(urlsplit(link).path.rstrip("/").rsplit("/", 1)[-1])  # for the trail
         if path_ext(link) == ".pdf":  # every PDF is collected; is_datasheet() decides later
+            self._page_pdfs.append(link)
             if link not in self.result.pdfs:
                 self._add_pdf(DatasheetLink(link, text, context, page_url, title, node.trail + (label[:60],),
                                             node.product, details=self._link_details(node, label, details)))
@@ -1075,6 +1092,7 @@ class PartCrawler:
             self.click_memo[key] = url
             if self._is_pdf_target(url, c):
                 state["doc_ok"] = True
+                self._page_pdfs.append(url)
                 if self.verbose:
                     print(f"      click {label!r} -> PDF {url}")
                 if c["row"]:
