@@ -1051,7 +1051,9 @@ class PartCrawler:
                     print("      (ignored: this part's datasheet was already obtained from its table row)")
                 closed = []
             if closed and is_doc:
-                if retry:  # a notice can also mean "the document list has not loaded yet": once more
+                if retry and not state.get("doc_ok"):
+                    # a notice can also mean "the document list has not loaded yet": once more (not
+                    # needed once another document button on this page has given a PDF)
                     self._wait_stable(page, 6000)
                     return self._click(node, page, ident, c, key, product, state, retry=False)
                 message = closed[-1][:300]
@@ -1072,6 +1074,7 @@ class PartCrawler:
             url = clean_url(url)
             self.click_memo[key] = url
             if self._is_pdf_target(url, c):
+                state["doc_ok"] = True
                 if self.verbose:
                     print(f"      click {label!r} -> PDF {url}")
                 if c["row"]:
