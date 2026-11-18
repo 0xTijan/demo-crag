@@ -63,6 +63,10 @@ class DatasheetLink:
     trail: tuple = ()    # link/click texts from the start page to this PDF
     on_product_page: bool = True
     page_relevance: int = 1
+    # Everything known about where it was found, kept for datasheets that cannot be
+    # downloaded: page title/headings/text, section, table headers, the part's row as
+    # {header: value}, and the whole table (see page_details / table_details).
+    details: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -138,6 +142,48 @@ def link_context(a) -> str:
     if heading is not None:
         text = heading.get_text(" ", strip=True) + " | " + text
     return " ".join(text.split())[:400]
+
+
+# ------------------------------------------------------------------ context of a link
+MAX_TABLE_ROWS = 300   # rows of a table kept in the context of a missing datasheet
+MAX_CELL_CHARS = 200
+MAX_PAGE_TEXT = 1500
+
+
+def _cells(tr) -> list[str]:
+    return [" ".join(c.get_text(" ", strip=True).split())[:MAX_CELL_CHARS] for c in tr.find_all(["td", "th"], recursive=False)]
+
+
+def static_table_details(tag) -> dict:
+    """Table headers, this row as {header: value}, and the whole table, for a tag in a <tr>."""
+    tr = tag.find_parent("tr")
+    table = tr.find_parent("table") if tr is not None else None
+    if table is None:
+        return {}
+    headers = [" ".join(th.get_text(" ", strip=True).split()) for th in table.select("thead th, thead td")]
+    rows = [r for r in table.find_all("tr") if r.find("td") and r.get_text(strip=True)]
+    if not headers:
+        first = table.find("tr")
+        if first is not None and first.find("th") is not None:
+            headers = _cells(first)
+    cells = _cells(tr)
+    return table_details(headers, cells, [_cells(r) for r in rows])
+
+
+def table_details(headers: list, cells: list, rows: list) -> dict:
+    row = {(headers[i] if i < len(headers) and headers[i] else f"column {i + 1}"): v
+           for i, v in enumerate(cells) if v}
+    return {"table_headers": headers, "row": row, "row_cells": cells, "table": rows[:MAX_TABLE_ROWS],
+            "table_rows_total": len(rows)}
+
+
+def static_page_details(soup, page_url: str) -> dict:
+    title = soup.title.get_text(" ", strip=True) if soup.title else ""
+    heads = [" ".join(h.get_text(" ", strip=True).split()) for h in
+             soup.select("h1, h2, h3, [class*=breadcrumb], [class*=crumb]")[:8]]
+    body = soup.find("body") or soup
+    text = " ".join(body.get_text(" ", strip=True).split())[:MAX_PAGE_TEXT]
+    return {"page_url": page_url, "page_title": title, "headings": [h for h in heads if h], "page_text": text}
 
 
 # ------------------------------------------------------------------ classification
@@ -265,15 +311,44 @@ HARVEST_JS = r"""
                '[role=tab], [role=combobox], [role=listbox], [role=option], [role=slider], [role=dialog], ' +
                '[aria-modal=true], [class*=pagination], [class*=pager], [class*=select-selector], [class*=checkbox]';
 
-  const out = {title: document.title || '', headings: '', anchors: [], frames: [], cands: [], next: false, sig: ''};
+  // Tables: headers (also from a separate fixed-header table), rows, and each element's row
+  const tables = [], tableIndex = new Map();
+  const cellsOf = tr => [...tr.children].map(c => textOf(c).slice(0, 200));
+  const headersOf = table => {
+    let ths = [...table.querySelectorAll('thead th, thead td')];
+    if (!ths.length) {
+      const first = table.querySelector('tr');
+      if (first && first.querySelector('th')) ths = [...first.children];
+    }
+    for (let p = table.parentElement, n = 0; !ths.length && p && n < 5; p = p.parentElement, n++) {
+      ths = [...p.querySelectorAll('thead th')];
+    }
+    return ths.map(textOf);
+  };
+  const tableOf = el => {
+    const tr = el.closest('tr');
+    const table = tr && tr.closest('table');
+    if (!table) return null;
+    if (!tableIndex.has(table)) {
+      const rows = [...table.querySelectorAll('tr')].filter(r => r.querySelector('td') && clean(r.innerText))
+                   .map(cellsOf);
+      tableIndex.set(table, tables.length);
+      tables.push({headers: headersOf(table), rows: rows.slice(0, args.maxRows), total: rows.length});
+    }
+    return {table: tableIndex.get(table), cells: cellsOf(tr)};
+  };
+
+  const out = {title: document.title || '', headings: '', anchors: [], frames: [], cands: [], next: false, sig: '',
+               tables, text: document.body ? clean(document.body.innerText).slice(0, args.maxText) : ''};
   out.headings = clean([...document.querySelectorAll('h1, h2, [class*=breadcrumb], [class*=crumb]')]
                        .slice(0, 6).map(textOf).join(' | ')).slice(0, 400);
   for (const a of document.querySelectorAll('a[href], area[href]')) {
     if (!realHref(a)) continue;
     const own = textOf(a) || hintOf(a);
     const label = labelOf(a);
+    const isPdf = /\.pdf($|[?#])/i.test(a.href);
     out.anchors.push({href: a.href, text: own, label, context: clean(label + ' | ' + (rowOf(a) || groupOf(a, own))),
-                      chrome: inChrome(a)});
+                      chrome: inChrome(a), tbl: isPdf ? tableOf(a) : null});
   }
   for (const f of document.querySelectorAll('iframe[src], frame[src]')) out.frames.push(f.src);
 
@@ -295,7 +370,7 @@ HARVEST_JS = r"""
     if (!text && !hint) continue;
     el.setAttribute('data-pc-i', String(i));
     const label = labelOf(el);
-    out.cands.push({i: i++, text, hint, row: rowOf(el), label,
+    out.cands.push({i: i++, text, hint, row: rowOf(el), label, tbl: tableOf(el),
                     context: clean(label + ' | ' + groupOf(el, text || hint)),
                     chrome: inChrome(el), visible: visible(el)});
   }
@@ -347,10 +422,14 @@ class PartCrawler:
     """Walks one manufacturer's catalogue. See the module docstring."""
 
     def __init__(self, fetcher: Fetcher, log_error, on_pdf=None, max_pages=PART_MAX_PAGES,
-                 max_depth=PART_MAX_DEPTH, js="auto", verbose=False):
+                 max_depth=PART_MAX_DEPTH, js="auto", verbose=False, on_missing=None):
         self.fetcher = fetcher
         self.log_error = log_error
         self.on_pdf = on_pdf or (lambda pdf: None)
+        # on_missing(stage, message, url, details): a datasheet the site shows but does not
+        # give (e.g. "not publicly available"), with everything known about the part.
+        self.on_missing = on_missing or (lambda stage, message, url, details:
+                                         self.log_error(stage, message, url=url))
         self.max_pages = max_pages
         self.max_depth = max_depth
         self.js = js  # auto | always | never
@@ -464,14 +543,17 @@ class PartCrawler:
         self.queue.append(Node(url, node.depth + 1, product, node.trail + (text[:60],)))
 
     def _handle_anchor(self, node: Node, href: str, text: str, context: str, chrome: bool,
-                       page_url: str, title: str, head_candidates: dict | None = None) -> None:
+                       page_url: str, title: str, head_candidates: dict | None = None,
+                       details=None) -> None:
+        """`details`: a function returning the context dict of this link (called only for PDFs)."""
         link = clean_url(href)
         if not link.startswith(("http://", "https://")):
             return
         label = text or unquote(urlsplit(link).path.rstrip("/").rsplit("/", 1)[-1])  # for the trail
         if path_ext(link) == ".pdf":  # every PDF is collected; is_datasheet() decides later
-            self._add_pdf(DatasheetLink(link, text, context, page_url, title,
-                                        node.trail + (label[:60],), node.product))
+            if link not in self.result.pdfs:
+                self._add_pdf(DatasheetLink(link, text, context, page_url, title, node.trail + (label[:60],),
+                                            node.product, details=self._link_details(node, label, details)))
             return
         pagination = node.product and (PAGINATION_RE.search(link) or PAGINATION_TEXT_RE.match(text.strip()))
         follow, product = (True, True) if pagination and not chrome else self._decide(node, text, context, chrome)
@@ -479,8 +561,15 @@ class PartCrawler:
             self._enqueue(node, link, label, product)
         elif head_candidates is not None and node.product and path_ext(link) in ("", ".ashx", ".axd") \
                 and DOWNLOAD_HINT_RE.search(urlsplit(link).path) and link not in head_candidates:
-            head_candidates[link] = DatasheetLink(link, text, context, page_url, title,
-                                                  node.trail + (label[:60],), node.product)
+            head_candidates[link] = DatasheetLink(link, text, context, page_url, title, node.trail + (label[:60],),
+                                                  node.product, details=self._link_details(node, label, details))
+
+    @staticmethod
+    def _link_details(node: Node, label: str, details) -> dict:
+        d = dict(details() if callable(details) else (details or {}))
+        d.setdefault("element", label)
+        d["trail"] = list(node.trail) + [label]
+        return d
 
     def _check_head_candidates(self, head_candidates: dict) -> None:
         """Extension-less download links (e.g. /download?id=5) are PDFs if the server says so."""
@@ -513,10 +602,21 @@ class PartCrawler:
             if src.startswith("http") and (node.product or product_score(src)):
                 self.hosts.add(urlsplit(src).netloc.lower())  # hosted catalogue widgets
                 self._enqueue(node, src, "iframe", node.product)
+        page_info = None
+
+        def details_of(a):
+            def build():
+                nonlocal page_info
+                if page_info is None:
+                    page_info = static_page_details(soup, page.url)
+                return {**page_info, "section": link_context(a), "element": element_text(a),
+                        **static_table_details(a)}
+            return build
+
         for a in soup.find_all(["a", "area"], href=True):
             text = element_text(a)
             self._handle_anchor(node, urljoin(page.url, a["href"]), text, link_context(a),
-                                in_chrome_static(a), page.url, title, head_candidates)
+                                in_chrome_static(a), page.url, title, head_candidates, details=details_of(a))
 
     # ------------------------------------------------------------ rendered pages (clicking)
     def _settle(self, page, idle_ms: int = 8000) -> None:
@@ -562,11 +662,25 @@ class PartCrawler:
         return closed
 
     def _load(self, page, url: str) -> None:
-        self.fetcher.wait(url)
-        resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
-        if resp is not None and resp.status >= 400:
-            raise FetchError(f"HTTP {resp.status}", resp.status)
-        self._settle(page)
+        for attempt in range(1, 4):  # connection resets, timeouts, iframes that failed: wait, try again
+            self.fetcher.wait(url)
+            try:
+                resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            except Exception as exc:  # noqa: BLE001
+                if attempt == 3 or not re.search(r"net::ERR_|Timeout", str(exc)):
+                    raise
+                page.wait_for_timeout(5000 * attempt)
+                continue
+            if resp is not None and resp.status >= 400:
+                raise FetchError(f"HTTP {resp.status}", resp.status)
+            self._settle(page)
+            broken = [f.url for f in page.frames if f.url.startswith("chrome-error://")]
+            if not broken:
+                break
+            if attempt == 3:
+                self.log_error("render", f"{len(broken)} frame(s) failed to load after 3 tries", url=url)
+            else:
+                page.wait_for_timeout(5000 * attempt)
         self._wait_stable(page)
         page.wait_for_timeout(500)  # late pop-ups (language choosers, cookie banners)
         if self._dismiss(page):
@@ -577,7 +691,8 @@ class PartCrawler:
 
     def _harvest(self, page) -> list[tuple[int, object, dict]]:
         snaps = []
-        args = {"chromeRe": CHROME_RE.pattern, "chromeDepth": CHROME_DEPTH}
+        args = {"chromeRe": CHROME_RE.pattern, "chromeDepth": CHROME_DEPTH,
+                "maxRows": MAX_TABLE_ROWS, "maxText": MAX_PAGE_TEXT}
         for idx, frame in enumerate(page.frames):
             try:
                 snaps.append((idx, frame, frame.evaluate(HARVEST_JS, args)))
@@ -607,6 +722,22 @@ class PartCrawler:
                 break
         self._harvest(page)
 
+    @staticmethod
+    def _rendered_details(page_url: str, snaps, snap: dict, item: dict, label: str) -> dict:
+        """Context of a link/element of a rendered page: page, section, table row, whole table."""
+        heads = [h for _, _, s in snaps for h in s["headings"].split(" | ") if h]
+        d = {"page_url": page_url, "page_title": next((s["title"] for _, _, s in snaps if s["title"]), ""),
+             "headings": heads[:12], "page_text": snap["text"] or next((s["text"] for _, _, s in snaps), ""),
+             "section": item.get("label", ""), "element": label}
+        if item.get("row"):
+            d["row_text"] = item["row"]
+        tbl = item.get("tbl")
+        if tbl is not None:
+            t = snap["tables"][tbl["table"]]
+            d.update(table_details(t["headers"], tbl["cells"], t["rows"]))
+            d["table_rows_total"] = t["total"]
+        return d
+
     def _record_snapshot(self, node: Node, page, snaps, cands: dict, steps: int) -> None:
         top_title = ""
         for idx, frame, snap in snaps:
@@ -615,13 +746,17 @@ class PartCrawler:
                 if src.startswith("http") and (node.product or product_score(src)):
                     self.hosts.add(urlsplit(src).netloc.lower())
             for a in snap["anchors"]:
-                self._handle_anchor(node, a["href"], a["text"], a["label"], a["chrome"], page.url, top_title)
+                self._handle_anchor(node, a["href"], a["text"], a["label"], a["chrome"], page.url, top_title,
+                                    details=lambda a=a, snap=snap: self._rendered_details(
+                                        page.url, snaps, snap, a, a["text"]))
             occurrences: dict = {}
             for c in snap["cands"]:
                 base = (frame.url, c["text"], c["hint"], c["row"])
                 occ = occurrences.get(base, 0)
                 occurrences[base] = occ + 1
-                cands.setdefault(base + (occ,), dict(c, steps=steps, frame_idx=idx))
+                if base + (occ,) not in cands:
+                    details = self._rendered_details(page.url, snaps, snap, c, c["text"] or c["hint"])
+                    cands[base + (occ,)] = dict(c, steps=steps, frame_idx=idx, details=details)
 
     def _click_key(self, node: Node, c: dict) -> tuple:
         label = (c["text"] or c["hint"]).lower()
@@ -770,24 +905,32 @@ class PartCrawler:
             state["dirty"] = True
         else:
             closed = self._dismiss(page)
+            if self.verbose:
+                print(f"      click {label!r} -> " + (f"notice: {closed[-1][:100]!r}" if closed else
+                                                       "no new page, tab or download"))
             if closed and DOC_HINT_RE.search(f"{c['text']} {c['hint']}"):
                 if retry:  # a notice can also mean "the document list has not loaded yet": once more
                     self._wait_stable(page, 6000)
                     return self._click(node, page, ident, c, key, product, state, retry=False)
                 message = closed[-1][:300]
                 self.result.unavailable.append((node.url, label, message))
-                self.log_error("datasheet_unavailable", f"{label} ({c['row'][:80]}): {message}", url=node.url)
+                details = dict(c.get("details") or {}, trail=list(node.trail) + [label], message=message)
+                self.on_missing("datasheet_unavailable", f"{label} ({c['row'][:80]}): {message}", node.url, details)
             # content shown by the click (a tab, a dropdown) may hold new links
-            for _, frame_, snap in self._harvest(page):
+            snaps = self._harvest(page)
+            for _, frame_, snap in snaps:
                 for a in snap["anchors"]:
-                    self._handle_anchor(node, a["href"], a["text"], a["label"], a["chrome"], page.url, snap["title"])
+                    self._handle_anchor(node, a["href"], a["text"], a["label"], a["chrome"], page.url, snap["title"],
+                                        details=lambda a=a, snap=snap: self._rendered_details(
+                                            page.url, snaps, snap, a, a["text"]))
 
         for url in targets:
             url = clean_url(url)
             self.click_memo[key] = url
             if self._is_pdf_target(url, c):
-                self._add_pdf(DatasheetLink(url, c["text"] or c["hint"], c["row"],
-                                            node.url, "", trail, node.product))
+                details = dict(c.get("details") or {}, trail=list(trail))
+                self._add_pdf(DatasheetLink(url, c["text"] or c["hint"], c["row"], node.url,
+                                            details.get("page_title", ""), trail, node.product, details=details))
             else:
                 self._enqueue(node, url, label, product)
                 if self.verbose:

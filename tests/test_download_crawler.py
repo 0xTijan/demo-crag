@@ -40,6 +40,11 @@ SITE = {
     "https://en.example-semi.com/proshow.php?id=10": page("<a href='specification/1A1 thru 1A7.pdf'><img src='x.png'></a>"),
     "https://en.example-semi.com/proshow.php?id=11": page("<a href='specification/1A1 thru 1A7.pdf'><img src='x.png'></a>"),
     "https://en.example-semi.com/proshow.php?id=12": page("<a href='specification/1A1 thru 1A7.pdf'><img src='x.png'></a>"),
+    "https://en.example-semi.com/prolist.php?id=3": page(
+        "<h1>Schottky Rectifier</h1><table><thead><tr><th>Part</th><th>VRRM (V)</th><th>Package</th><th>PDF</th></tr></thead>"
+        "<tbody><tr><td>SS34</td><td>40</td><td>SMA</td><td><a href='/specification/SS34.pdf'>Datasheet</a></td></tr>"
+        "<tr><td>SS36</td><td>60</td><td>SMA</td><td><a href='/specification/SS36.pdf'>Datasheet</a></td></tr>"
+        "</tbody></table>", title="Schottky Rectifier - Example Semi"),
     "https://en.example-semi.com/proshow.php?id=20": page(
         "<a href='specification/SMAJ.pdf'>Datasheet</a> <a href='/files/AN-12-0001_TVS_layout.pdf'>Application note</a>"),
 }
@@ -96,6 +101,45 @@ def test_datasheet_filter_drops_catalogues_and_app_notes():
 def test_homepage_reaches_catalogue_through_products_link():
     result, _, _ = crawl("https://en.example-semi.com/")
     assert "https://en.example-semi.com/specification/SMAJ.pdf" in result.pdfs
+
+
+def test_pdf_links_carry_table_and_page_context():
+    result, _, _ = crawl("https://en.example-semi.com/prolist.php?id=3")
+    d = result.pdfs["https://en.example-semi.com/specification/SS36.pdf"].details
+    assert d["table_headers"] == ["Part", "VRRM (V)", "Package", "PDF"]
+    assert d["row"] == {"Part": "SS36", "VRRM (V)": "60", "Package": "SMA", "PDF": "Datasheet"}
+    assert len(d["table"]) == 2 and d["table"][0][0] == "SS34"
+    assert d["page_title"] == "Schottky Rectifier - Example Semi" and "Schottky Rectifier" in d["headings"]
+    assert d["page_url"] == "https://en.example-semi.com/prolist.php?id=3" and d["trail"][-1] == "Datasheet"
+
+
+def test_failed_download_is_recorded_with_context():
+    import json
+    import tempfile
+    from types import SimpleNamespace
+    from dataPipeline.download import run as run_mod
+    from dataPipeline.download.fetcher import FetchError
+
+    class NotFound:
+        def stream(self, url):
+            raise FetchError("HTTP 404", 404)
+
+    logged = []
+    old_dir = run_mod.DATASHEETS_DIR
+    run_mod.DATASHEETS_DIR = Path(tempfile.mkdtemp())
+    try:
+        args = SimpleNamespace(all_pdfs=False, dry_run=False, force=False, verbose=False)
+        saver = run_mod.Saver(NotFound(), None, "examplesemi", args, lambda *a, **k: logged.append((a, k)))
+        result, _, _ = crawl("https://en.example-semi.com/prolist.php?id=3")
+        saver(result.pdfs["https://en.example-semi.com/specification/SS36.pdf"])
+        rows = [json.loads(line) for line in (saver.folder / run_mod.MISSING).read_text().splitlines()]
+    finally:
+        run_mod.DATASHEETS_DIR = old_dir
+    assert saver.stats["missing"] == 1 and saver.stats["failed"] == 1
+    r = rows[0]
+    assert r["stage"] == "download" and r["http_status"] == 404 and r["url"].endswith("SS36.pdf")
+    assert r["row"]["Part"] == "SS36" and r["table_headers"][1] == "VRRM (V)"
+    assert logged[0][1]["context"]["row"]["Package"] == "SMA"  # same record goes to datasheet_errors.context
 
 
 def test_is_datasheet_rules():

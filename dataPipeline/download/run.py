@@ -34,6 +34,7 @@ from .settings import DATASHEETS_DIR, PART_MAX_DEPTH, PART_MAX_PAGES  # noqa: E4
 from helpers.run_log import start_run_log  # noqa: E402
 
 MANIFEST = "manifest.jsonl"
+MISSING = "missing.jsonl"  # datasheets that could not be obtained, with all context
 
 
 def manufacturer_name(url: str) -> str:
@@ -72,7 +73,20 @@ class Saver:
             self.known_urls.update(urls)
             self.known_hashes.update(hashes)
         self.stats = {"pdfs": 0, "datasheets": 0, "downloaded": 0, "skipped": 0, "duplicates": 0,
-                      "failed": 0, "not_datasheet": 0}
+                      "failed": 0, "not_datasheet": 0, "missing": 0}
+
+    def missing(self, stage: str, message: str, url: str | None, details: dict, http_status=None) -> None:
+        """A datasheet the site shows but that could not be obtained: keep everything known about it
+        in missing.jsonl and in datasheet_errors.context."""
+        self.stats["missing"] += 1
+        record = {"manufacturer": self.name, "stage": stage, "error": message, "url": url,
+                  "http_status": http_status, **(details or {}),
+                  "recorded_at": datetime.now(timezone.utc).isoformat()}
+        if not self.args.dry_run:
+            self.folder.mkdir(parents=True, exist_ok=True)
+            with (self.folder / MISSING).open("a", encoding="utf-8") as fh:
+                fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+        self.log_error(stage, message, url=url, http_status=http_status, context=record)
 
     def __call__(self, pdf) -> None:
         self.stats["pdfs"] += 1
@@ -100,7 +114,9 @@ class Saver:
             info = download(self.fetcher, pdf, self.folder, self.known_hashes, DATASHEETS_DIR)
         except DownloadError as exc:
             self.stats["failed"] += 1
-            self.log_error(exc.stage, str(exc), url=pdf.url, http_status=exc.status)
+            details = dict(pdf.details, link_text=pdf.text, context=pdf.context, page_url=pdf.page_url,
+                           trail=list(pdf.trail))
+            self.missing(exc.stage, str(exc), pdf.url, details, http_status=exc.status)
             return
         row = {"manufacturer": self.name, "source_url": pdf.url, "page_url": pdf.page_url,
                "link_text": pdf.text[:500], "context": pdf.context[:1000], "trail": " > ".join(pdf.trail)[:2000],
@@ -129,7 +145,8 @@ def process_manufacturer(engine, fetcher, url: str, name: str, args) -> dict:
     log_error = db.ErrorLog(engine, name)
     saver = Saver(fetcher, engine, name, args, log_error)
     crawler = PartCrawler(fetcher, log_error, on_pdf=saver, max_pages=args.max_pages,
-                          max_depth=args.max_depth, js=args.js, verbose=args.verbose)
+                          max_depth=args.max_depth, js=args.js, verbose=args.verbose,
+                          on_missing=lambda stage, message, url, details: saver.missing(stage, message, url, details))
     try:
         result = crawler.crawl(url)
     except FetchError as exc:

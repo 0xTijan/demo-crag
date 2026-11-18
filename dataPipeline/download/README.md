@@ -11,6 +11,7 @@ Nothing in the code knows a particular website. Two real sites were used as exam
 - [5. Clicking (JavaScript sites)](#5-clicking-javascript-sites)
 - [6. Which PDFs are datasheets](#6-which-pdfs-are-datasheets)
 - [7. Saving: files, manifest, database](#7-saving-files-manifest-database)
+  - [7.1 Datasheets that could not be obtained](#71-datasheets-that-could-not-be-obtained)
 - [8. `fetcher.py`: all network access](#8-fetcherpy-all-network-access)
 - [9. The two example sites](#9-the-two-example-sites)
 - [10. Failure handling](#10-failure-handling)
@@ -125,7 +126,7 @@ A real log (excerpt; also saved in `logs/datasheets_<date>_<time>.log`):
     pdfs: …, datasheets: …, downloaded: …, skipped: …, duplicates: …, failed: …, not_datasheet: …
 ```
 
-`pdfs`: PDFs found. `datasheets`: passed `is_datasheet`. `downloaded`: new files. `skipped`: URL already saved. `duplicates`: the bytes already existed under another URL (many parts of a series share one datasheet). `failed`: download or database write failed. `not_datasheet`: dropped by the filter. Exit code `0` also when some downloads failed (see `datasheet_errors`).
+`pdfs`: PDFs found. `missing`: datasheets that could not be obtained, with their context ([7.1](#71-datasheets-that-could-not-be-obtained)). `datasheets`: passed `is_datasheet`. `downloaded`: new files. `skipped`: URL already saved. `duplicates`: the bytes already existed under another URL (many parts of a series share one datasheet). `failed`: download or database write failed. `not_datasheet`: dropped by the filter. Exit code `0` also when some downloads failed (see `datasheet_errors`).
 
 ---
 
@@ -189,7 +190,7 @@ Elements are found again after a reload by frame, text, icon text, table row and
 | Table | Columns | Purpose |
 |---|---|---|
 | `datasheet_files` | `manufacturer`, `source_url` (unique per manufacturer), `file_path` (relative to `datasheets/`), `file_hash` (SHA-256), `file_size`, `downloaded_at` | Skip known URLs, store identical bytes once |
-| `datasheet_errors` | `manufacturer`, `url`, `stage`, `error`, `http_status`, `traceback`, `occurred_at` | Append-only failure log |
+| `datasheet_errors` | `manufacturer`, `url`, `stage`, `error`, `http_status`, `traceback`, `context` (JSONB), `occurred_at` | Append-only failure log; `context` = everything known about a datasheet that could not be obtained ([7.1](#71-datasheets-that-could-not-be-obtained)) |
 
 Files saved by a `--no-db` run get their `datasheet_files` row on the next run with a database.
 
@@ -197,6 +198,35 @@ Files saved by a `--no-db` run get their `datasheet_files` row on the next run w
 SELECT manufacturer, count(*), count(DISTINCT file_hash) FROM datasheet_files GROUP BY 1;  -- URLs vs. files
 SELECT stage, count(*) FROM datasheet_errors GROUP BY 1;                                    -- what is failing
 ```
+
+### 7.1 Datasheets that could not be obtained
+
+When a datasheet is shown but cannot be had (HTTP 404 or another download error, a response that is not a PDF, or a notice such as "the datasheet is not publicly available"), the crawler keeps **everything it knows about the part**, so the datasheet can be requested or looked up elsewhere later:
+
+| Field | Example (NOVOSENSE) |
+|---|---|
+| `stage`, `error`, `http_status`, `message` | `datasheet_unavailable`, the notice text "Sorry, the datasheet is not publicly available, please contact sales@…" |
+| `url` | the PDF URL (download errors) or the page with the button |
+| `page_url`, `page_title`, `headings` | `…/en/abs-speed-sensor`, "ABS Speed Sensor \| novosns.com", breadcrumb "Home > Products > Sensor > Magnetic Sensor > ABS Speed Sensor" |
+| `page_text` | the first 1500 characters of the page (family description, features) |
+| `trail` | `["Sensor", "Magnetic Sensor", "ABS Speed Sensor", "dataSheet"]` |
+| `section`, `element`, `row_text` | section label, button/link text, the row as text |
+| `table_headers` | `["OPN", "Datasheet", "ECAD Model", "Status", "MSL", "Package", …]` (also from tables whose header is a separate element, as in Ant Design / fixed-header tables) |
+| `row` | `{"OPN": "NSM4101-Q0TOMR", "Status": "Active", "Package": "TO2", "Operating Voltage (V)": "4.4~20", …}` |
+| `row_cells`, `table`, `table_rows_total` | the row's cells, the **whole table** (up to 300 rows), and its real size |
+| `link_text`, `context` | (download errors) the link text and row/section text |
+
+The record goes to two places:
+
+- `datasheets/{manufacturer}/missing.jsonl`: one JSON line per failure (written also with `--no-db`; not with `--dry-run`);
+- `datasheet_errors.context` (JSONB), with the same content.
+
+```sql
+SELECT context->'row'->>'OPN' AS part, context->>'page_title' AS family, error
+FROM datasheet_errors WHERE stage = 'datasheet_unavailable' AND manufacturer = 'novosns';
+```
+
+The run summary counts them as `missing`.
 
 ---
 
@@ -228,11 +258,11 @@ One `Fetcher` per run.
 |---|---|---|
 | Start URL cannot be fetched | `website` | Error row. Next manufacturer. |
 | Page blocked by `robots.txt` | `robots` | Page skipped. |
-| A page cannot be fetched / rendered | `crawl` / `render` | Page skipped, crawl goes on. |
+| A page cannot be fetched / rendered | `crawl` / `render` | Connection resets, timeouts and iframes that failed to load are retried (3 loads, 5/10 s apart); then the page is skipped and the crawl goes on. |
 | A click fails or its element is gone after a reload | `click` | That element is skipped (and may be tried from another page). |
-| Datasheet button shows "not available" twice | `datasheet_unavailable` | Logged; nothing to download. |
+| Datasheet button shows "not available" twice | `datasheet_unavailable` | Recorded with the full context ([7.1](#71-datasheets-that-could-not-be-obtained)); nothing to download. |
 | Extension-less link check fails | `head_check` | Link skipped. |
-| PDF request fails, is cut off, or exceeds 300 MB | `download` | Broken transfers are retried twice at once on a fresh connection; then the error is logged, the temporary file removed, and the URL tried again on the next run. |
+| PDF request fails, is cut off, or exceeds 300 MB | `download` | Broken transfers are retried twice at once on a fresh connection; then it is recorded with the full context of the link ([7.1](#71-datasheets-that-could-not-be-obtained)), the temporary file removed, and the URL tried again on the next run. |
 | Response is not a PDF | `verify` | Retried like a broken transfer if the server said `application/pdf`; temporary file removed. |
 | Moving the file fails | `write` | Error row. |
 | Saving the database row fails | `db` | File and manifest line stay; the row is added on the next run. |

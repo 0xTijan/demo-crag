@@ -4,11 +4,15 @@ Only what the crawler needs to work systematically is stored:
   * `datasheet_files`: one row per downloaded source URL, with the file it was saved
     to and the SHA-256 of its bytes. Reruns skip known URLs, and the same bytes under
     another URL are stored once.
-  * `datasheet_errors`: one row per failure, with the stage it failed at.
+  * `datasheet_errors`: one row per failure, with the stage it failed at. For a
+    datasheet that could not be obtained (404, not a PDF, "not publicly available")
+    `context` holds everything known about the part: page, headings, section, the
+    table headers, its row as {header: value}, and the whole table.
 
 Details of where a PDF was found (page, table row, click trail) are not stored here;
 they are in datasheets/{manufacturer}/manifest.jsonl.
 """
+import json
 import sys
 import traceback as tb
 
@@ -39,9 +43,12 @@ DDL = [
         error        TEXT NOT NULL,
         http_status  INT,
         traceback    TEXT,
+        context      JSONB,
         occurred_at  TIMESTAMPTZ DEFAULT now()
     )
     """,
+    # databases created before the context column existed
+    "ALTER TABLE datasheet_errors ADD COLUMN IF NOT EXISTS context JSONB",
     "CREATE INDEX IF NOT EXISTS datasheet_errors_manufacturer_idx ON datasheet_errors (manufacturer, occurred_at DESC)",
 ]
 
@@ -91,7 +98,8 @@ class ErrorLog:
         self.manufacturer = manufacturer
         self.count = 0
 
-    def __call__(self, stage: str, error, url: str | None = None, http_status: int | None = None) -> None:
+    def __call__(self, stage: str, error, url: str | None = None, http_status: int | None = None,
+                 context: dict | None = None) -> None:
         self.count += 1
         if isinstance(error, BaseException):
             message = f"{error.__class__.__name__}: {error}"
@@ -105,11 +113,12 @@ class ErrorLog:
             with self.engine.begin() as conn:
                 conn.execute(
                     text(
-                        "INSERT INTO datasheet_errors (manufacturer, url, stage, error, http_status, traceback) "
-                        "VALUES (:m, :u, :s, :e, :h, :t)"
+                        "INSERT INTO datasheet_errors (manufacturer, url, stage, error, http_status, traceback, context) "
+                        "VALUES (:m, :u, :s, :e, :h, :t, CAST(:c AS JSONB))"
                     ),
                     {"m": self.manufacturer, "u": url, "s": stage, "e": message[:4000],
-                     "h": http_status, "t": trace},
+                     "h": http_status, "t": trace,
+                     "c": json.dumps(context, ensure_ascii=False) if context else None},
                 )
         except Exception as db_exc:  # noqa: BLE001
             print(f"    could not save error to database: {db_exc}", file=sys.stderr)

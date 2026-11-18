@@ -157,7 +157,9 @@ CREATE TABLE IF NOT EXISTS report_file_errors (
 -- Manufacturers are given on the command line (product page or homepage URL);
 -- `manufacturer` is a short name such as "goodark" (from the domain, or --name).
 -- Only hashes and errors are stored; where each PDF was found (page, part row,
--- click trail) is in datasheets/{manufacturer}/manifest.jsonl.
+-- click trail) is in datasheets/{manufacturer}/manifest.jsonl. Datasheets that
+-- could not be obtained keep their full context in datasheet_errors.context
+-- (and datasheets/{manufacturer}/missing.jsonl).
 CREATE TABLE IF NOT EXISTS datasheet_files (
     datasheet_id  SERIAL PRIMARY KEY,
     manufacturer  TEXT        NOT NULL,
@@ -178,6 +180,7 @@ CREATE TABLE IF NOT EXISTS datasheet_errors (
     error        TEXT NOT NULL,
     http_status  INT,
     traceback    TEXT,
+    context      JSONB,       -- datasheet not obtained: page, headings, section, table headers, row {header: value}, whole table
     occurred_at  TIMESTAMPTZ DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS datasheet_errors_manufacturer_idx ON datasheet_errors (manufacturer, occurred_at DESC);
