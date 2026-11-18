@@ -166,12 +166,20 @@ CREATE TABLE IF NOT EXISTS datasheet_files (       -- one row per distinct PDF
     file_hash     CHAR(64)    NOT NULL,              -- SHA-256 of the PDF bytes
     file_path     TEXT        NOT NULL,              -- relative to datasheets/
     file_size     BIGINT,
-    source_urls   TEXT[]      NOT NULL DEFAULT '{}', -- every URL that delivers this PDF (parts of a series share one)
     downloaded_at TIMESTAMPTZ DEFAULT now(),
-    updated_at    TIMESTAMPTZ DEFAULT now(),
     UNIQUE (manufacturer, file_hash)
 );
-CREATE INDEX IF NOT EXISTS datasheet_files_urls_idx ON datasheet_files USING GIN (source_urls);
+
+CREATE TABLE IF NOT EXISTS datasheet_urls (        -- one row per URL; many URLs can give the same PDF
+    url_id        SERIAL PRIMARY KEY,
+    datasheet_id  INT         NOT NULL REFERENCES datasheet_files(datasheet_id) ON DELETE CASCADE,
+    manufacturer  TEXT        NOT NULL,
+    source_url    TEXT        NOT NULL,
+    first_seen    TIMESTAMPTZ DEFAULT now(),
+    last_seen     TIMESTAMPTZ DEFAULT now(),
+    UNIQUE (manufacturer, source_url)
+);
+CREATE INDEX IF NOT EXISTS datasheet_urls_datasheet_idx ON datasheet_urls (datasheet_id);
 
 CREATE TABLE IF NOT EXISTS datasheet_errors (
     error_id     SERIAL PRIMARY KEY,

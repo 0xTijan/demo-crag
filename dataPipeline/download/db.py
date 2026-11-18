@@ -1,9 +1,10 @@
 """Database access for the datasheet download step.
 
 Only what the crawler needs to work systematically is stored:
-  * `datasheet_files`: one row per distinct PDF (manufacturer + SHA-256 of its bytes),
-    with the file it was saved to and `source_urls`, every URL that delivers it (many
-    parts of a series share one datasheet). Reruns skip known URLs.
+  * `datasheet_files`: one row per distinct PDF (manufacturer + SHA-256 of its bytes)
+    and the file it was saved to.
+  * `datasheet_urls`: one row per source URL, pointing to its PDF in datasheet_files
+    (many parts of a series share one datasheet). Reruns skip known URLs.
   * `datasheet_errors`: one row per failure, with the stage it failed at. For a
     datasheet that could not be obtained (404, not a PDF, "not publicly available")
     `context` holds everything known about the part: page, headings, section, the
@@ -28,13 +29,22 @@ DDL = [
         file_hash     CHAR(64)    NOT NULL,
         file_path     TEXT        NOT NULL,
         file_size     BIGINT,
-        source_urls   TEXT[]      NOT NULL DEFAULT '{}',
         downloaded_at TIMESTAMPTZ DEFAULT now(),
-        updated_at    TIMESTAMPTZ DEFAULT now(),
         UNIQUE (manufacturer, file_hash)
     )
     """,
-    "CREATE INDEX IF NOT EXISTS datasheet_files_urls_idx ON datasheet_files USING GIN (source_urls)",
+    """
+    CREATE TABLE IF NOT EXISTS datasheet_urls (
+        url_id        SERIAL PRIMARY KEY,
+        datasheet_id  INT         NOT NULL REFERENCES datasheet_files(datasheet_id) ON DELETE CASCADE,
+        manufacturer  TEXT        NOT NULL,
+        source_url    TEXT        NOT NULL,
+        first_seen    TIMESTAMPTZ DEFAULT now(),
+        last_seen     TIMESTAMPTZ DEFAULT now(),
+        UNIQUE (manufacturer, source_url)
+    )
+    """,
+    "CREATE INDEX IF NOT EXISTS datasheet_urls_datasheet_idx ON datasheet_urls (datasheet_id)",
     """
     CREATE TABLE IF NOT EXISTS datasheet_errors (
         error_id     SERIAL PRIMARY KEY,
@@ -58,33 +68,43 @@ def get_engine():
     return create_engine(DATABASE_URL, pool_pre_ping=True)
 
 
-# Databases from before the one-row-per-PDF layout had one row per URL (column source_url).
-MIGRATE_PER_URL = [
-    "ALTER TABLE datasheet_files RENAME TO datasheet_files_per_url",
-    "ALTER INDEX IF EXISTS datasheet_files_pkey RENAME TO datasheet_files_per_url_pkey",
-    "ALTER SEQUENCE IF EXISTS datasheet_files_datasheet_id_seq RENAME TO datasheet_files_per_url_id_seq",
-    "DROP INDEX IF EXISTS datasheet_files_hash_idx",
-    DDL[0],
-    DDL[1],
-    """
-    INSERT INTO datasheet_files (manufacturer, file_hash, file_path, file_size, source_urls, downloaded_at, updated_at)
-    SELECT manufacturer, file_hash, min(file_path), max(file_size), array_agg(DISTINCT source_url),
-           min(downloaded_at), max(downloaded_at)
-    FROM datasheet_files_per_url GROUP BY manufacturer, file_hash
-    """,
-    "DROP TABLE datasheet_files_per_url",
-]
+# Earlier layouts of datasheet_files: one row per URL (column source_url), or one row per
+# PDF with a URL list (column source_urls). Both are moved to datasheet_files + datasheet_urls.
+def _migrate(conn, old_column: str) -> None:
+    urls = "source_url" if old_column == "source_url" else "unnest(source_urls)"
+    for stmt in (
+        "ALTER TABLE datasheet_files RENAME TO datasheet_files_old",
+        "ALTER INDEX IF EXISTS datasheet_files_pkey RENAME TO datasheet_files_old_pkey",
+        "ALTER SEQUENCE IF EXISTS datasheet_files_datasheet_id_seq RENAME TO datasheet_files_old_id_seq",
+        "DROP INDEX IF EXISTS datasheet_files_hash_idx",
+        "DROP INDEX IF EXISTS datasheet_files_urls_idx",
+        "ALTER TABLE datasheet_files_old DROP CONSTRAINT IF EXISTS datasheet_files_manufacturer_file_hash_key",
+        DDL[0], DDL[1], DDL[2],
+        """
+        INSERT INTO datasheet_files (manufacturer, file_hash, file_path, file_size, downloaded_at)
+        SELECT manufacturer, file_hash, min(file_path), max(file_size), min(downloaded_at)
+        FROM datasheet_files_old GROUP BY manufacturer, file_hash
+        """,
+        f"""
+        INSERT INTO datasheet_urls (datasheet_id, manufacturer, source_url, first_seen, last_seen)
+        SELECT DISTINCT ON (o.manufacturer, o.url) f.datasheet_id, o.manufacturer, o.url, o.at, o.at
+        FROM (SELECT manufacturer, file_hash, {urls} AS url, downloaded_at AS at FROM datasheet_files_old) o
+        JOIN datasheet_files f USING (manufacturer, file_hash)
+        ORDER BY o.manufacturer, o.url, o.at DESC
+        """,
+        "DROP TABLE datasheet_files_old",
+    ):
+        conn.execute(text(stmt))
 
 
 def ensure_tables(engine) -> None:
     with engine.begin() as conn:
-        old_layout = conn.execute(text(
-            "SELECT 1 FROM information_schema.columns "
-            "WHERE table_name = 'datasheet_files' AND column_name = 'source_url'")).first()
-        if old_layout:
-            for stmt in MIGRATE_PER_URL:
-                conn.execute(text(stmt))
-            print("    datasheet_files migrated to one row per PDF (source_urls)")
+        old = conn.execute(text(
+            "SELECT column_name FROM information_schema.columns "
+            "WHERE table_name = 'datasheet_files' AND column_name IN ('source_url', 'source_urls')")).first()
+        if old:
+            _migrate(conn, old[0])
+            print("    datasheet_files migrated: one row per PDF, URLs in datasheet_urls")
         for stmt in DDL:
             conn.execute(text(stmt))
 
@@ -92,39 +112,39 @@ def ensure_tables(engine) -> None:
 def known_datasheets(engine, manufacturer: str) -> tuple[dict, dict]:
     """Return ({source_url: file_path}, {file_hash: file_path}) for a manufacturer."""
     with engine.connect() as conn:
-        rows = conn.execute(
-            text("SELECT file_hash, file_path, source_urls FROM datasheet_files WHERE manufacturer = :m"),
-            {"m": manufacturer},
-        ).all()
-    urls = {u: r.file_path for r in rows for u in r.source_urls}
-    return urls, {r.file_hash: r.file_path for r in rows}
+        files = conn.execute(
+            text("SELECT file_hash, file_path FROM datasheet_files WHERE manufacturer = :m"), {"m": manufacturer}).all()
+        urls = conn.execute(
+            text("SELECT u.source_url, f.file_path FROM datasheet_urls u JOIN datasheet_files f USING (datasheet_id) "
+                 "WHERE u.manufacturer = :m"), {"m": manufacturer}).all()
+    return {r.source_url: r.file_path for r in urls}, {r.file_hash: r.file_path for r in files}
 
 
 def record_datasheet(engine, row: dict) -> None:
-    """Add `source_url` to the row of its PDF (one row per manufacturer + file_hash).
-
-    row: manufacturer, source_url, file_path, file_hash, file_size. A URL that used to
-    deliver another PDF (e.g. a new datasheet revision) is moved to this one; a PDF left
-    without any URL loses its row (its file stays on disk)."""
+    """Record that `source_url` delivers the PDF `file_hash` (row: manufacturer, source_url,
+    file_path, file_hash, file_size): one datasheet_files row per PDF, one datasheet_urls row
+    per URL. A URL that used to deliver another PDF (a new revision) now points to this one;
+    a PDF left without any URL loses its row (its file stays on disk)."""
     params = {k: row[k] for k in ("manufacturer", "source_url", "file_path", "file_hash", "file_size")}
     with engine.begin() as conn:
+        datasheet_id = conn.execute(text(
+            """
+            INSERT INTO datasheet_files (manufacturer, file_hash, file_path, file_size)
+            VALUES (:manufacturer, :file_hash, :file_path, :file_size)
+            ON CONFLICT (manufacturer, file_hash) DO UPDATE SET file_path = datasheet_files.file_path
+            RETURNING datasheet_id
+            """), params).scalar_one()
         conn.execute(text(
             """
-            UPDATE datasheet_files SET source_urls = array_remove(source_urls, :source_url), updated_at = now()
-            WHERE manufacturer = :manufacturer AND file_hash <> :file_hash AND :source_url = ANY(source_urls)
-            """), params)
-        conn.execute(text(
-            "DELETE FROM datasheet_files WHERE manufacturer = :manufacturer AND cardinality(source_urls) = 0"),
-            params)
+            INSERT INTO datasheet_urls (datasheet_id, manufacturer, source_url)
+            VALUES (:id, :manufacturer, :source_url)
+            ON CONFLICT (manufacturer, source_url) DO UPDATE SET
+                datasheet_id = EXCLUDED.datasheet_id, last_seen = now()
+            """), {**params, "id": datasheet_id})
         conn.execute(text(
             """
-            INSERT INTO datasheet_files (manufacturer, file_hash, file_path, file_size, source_urls)
-            VALUES (:manufacturer, :file_hash, :file_path, :file_size, ARRAY[CAST(:source_url AS TEXT)])
-            ON CONFLICT (manufacturer, file_hash) DO UPDATE SET
-                source_urls = CASE WHEN :source_url = ANY(datasheet_files.source_urls)
-                                   THEN datasheet_files.source_urls
-                                   ELSE array_append(datasheet_files.source_urls, CAST(:source_url AS TEXT)) END,
-                updated_at = now()
+            DELETE FROM datasheet_files f WHERE f.manufacturer = :manufacturer
+              AND NOT EXISTS (SELECT 1 FROM datasheet_urls u WHERE u.datasheet_id = f.datasheet_id)
             """), params)
 
 
