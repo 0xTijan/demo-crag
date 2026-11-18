@@ -168,7 +168,7 @@ Elements are found again after a reload by frame, text, icon text, table row and
 `downloader.download(fetcher, pdf, target_dir, known_hashes, base_dir)`:
 
 1. Stream into a hidden `.{sha1 of url}.part` file while hashing (SHA-256). Abort above 300 MB or if the content-type is HTML.
-2. The first 1024 bytes must contain `%PDF-` (stage `verify` otherwise).
+2. The first 1024 bytes must contain `%PDF-` (stage `verify` otherwise), and the size must match `Content-Length`. A broken transfer (timeout or dropped connection half-way, fewer bytes than announced, or non-PDF bytes although the server said `application/pdf`) is retried on a fresh connection, 3 attempts in all; HTTP errors and HTML answers are not retried.
 3. If the manufacturer already has these bytes **and that file still exists**, the temporary file is deleted and the existing path returned (`duplicate_of`): one file for all parts sharing a datasheet.
 4. Otherwise the file is named after the document itself: `{name from Content-Disposition, else the URL's last part}_{hash8}.pdf`, e.g. `mt6835-rev-1-3_0c2d5a1f.pdf`, and moved into place atomically.
 
@@ -223,8 +223,8 @@ One `Fetcher` per run.
 | A click fails or its element is gone after a reload | `click` | That element is skipped (and may be tried from another page). |
 | Datasheet button shows "not available" twice | `datasheet_unavailable` | Logged; nothing to download. |
 | Extension-less link check fails | `head_check` | Link skipped. |
-| PDF request fails or exceeds 300 MB | `download` | Temporary file removed. Retried on the next run. |
-| Response is not a PDF | `verify` | Temporary file removed. |
+| PDF request fails, is cut off, or exceeds 300 MB | `download` | Broken transfers are retried twice at once on a fresh connection; then the error is logged, the temporary file removed, and the URL tried again on the next run. |
+| Response is not a PDF | `verify` | Retried like a broken transfer if the server said `application/pdf`; temporary file removed. |
 | Moving the file fails | `write` | Error row. |
 | Saving the database row fails | `db` | File and manifest line stay; the row is added on the next run. |
 | Anything unexpected for one manufacturer | `manufacturer` | Error row with traceback. Next manufacturer. |
@@ -252,6 +252,7 @@ Writing an error row never raises; without a database errors are only printed (a
 | click outcome wait | 3 s (then up to 5 s idle + 6 s stable if it changed in place) | `crawler.py` | Tab, download or route change |
 | `CHROME_DEPTH` | 5 levels below `<body>` | `crawler.py` | Where header/footer classes are recognised |
 | PDF signature window | first 1024 bytes | `downloader.py` | Must contain `%PDF-` |
+| `DOWNLOAD_ATTEMPTS` | 3 | `downloader.py` | Tries per PDF for broken transfers |
 | keyword lists | `PRODUCT_`, `PART_NEGATIVE_`, `DATASHEET_`, `OTHER_DOC_KEYWORDS`, `CLICK_SKIP_RE`, `DOC_HINT_RE`, `MODAL_DISMISS_RE` | `settings.py` | What counts as catalogue / datasheet / control |
 
 ---

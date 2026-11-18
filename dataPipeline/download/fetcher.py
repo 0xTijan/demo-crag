@@ -209,6 +209,11 @@ class Fetcher:
             raise FetchError(f"HTTP {resp.status_code}", resp.status_code)
         return resp
 
+    def reconnect(self) -> None:
+        """Drop all pooled connections (after a transfer broke half-way)."""
+        old, self.client = self.client, self._new_client()
+        old.close()
+
     def wait(self, url: str) -> None:
         """Public form of the per-host pause, for callers that drive the browser themselves."""
         self._wait(url)

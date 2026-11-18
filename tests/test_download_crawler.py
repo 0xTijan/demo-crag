@@ -151,6 +151,50 @@ def test_click_memo_keys():
     assert crawler._click_key(node, {"text": "NSM4102-Q0TOMR", "hint": "", "row": "x"}) == ("nsm4102-q0tomr",)
 
 
+def test_download_retries_broken_transfers(tmp_path=None):
+    import tempfile
+    from dataPipeline.download.downloader import DownloadError, download
+    good = b"%PDF-1.7 datasheet body"
+
+    class Resp:
+        def __init__(self, body, length=None):
+            self.body, self.status_code = body, 200
+            self.headers = {"content-type": "application/pdf", "content-length": str(length or len(body))}
+
+        def iter_bytes(self, n):
+            yield self.body
+
+        def close(self):
+            pass
+
+    class Flaky:
+        def __init__(self, answers):
+            self.answers, self.reconnects = list(answers), 0
+
+        def stream(self, url):
+            return self.answers.pop(0)
+
+        def reconnect(self):
+            self.reconnects += 1
+
+    base = Path(tmp_path or tempfile.mkdtemp())
+    pdf = DatasheetLink("https://x/datasheet/A1/A1_Rev2.pdf", "Datasheet", "", "p", "")
+    # garbage from the middle of a file, then a cut-off transfer, then the real file
+    fetcher = Flaky([Resp(b"e\x00\xf0\xd5garbage"), Resp(good[:5], length=len(good)), Resp(good)])
+    info = download(fetcher, pdf, base / "maker", {}, base)
+    assert fetcher.reconnects == 2 and info["file_path"].startswith("maker/a1-rev2_")
+    assert (base / info["file_path"]).read_bytes() == good
+    # an HTML answer is not retried
+    html = Resp(b"<html>login</html>")
+    html.headers["content-type"] = "text/html"
+    fetcher = Flaky([html])
+    try:
+        download(fetcher, DatasheetLink("https://x/b.pdf", "", "", "p", ""), base / "maker", {}, base)
+        raise AssertionError("expected DownloadError")
+    except DownloadError as exc:
+        assert exc.stage == "verify" and fetcher.reconnects == 0
+
+
 def test_same_host():
     assert same_host("www.novosns.com", "novosns.com")
     assert not same_host("en.goodark.com", "www.goodark.com")

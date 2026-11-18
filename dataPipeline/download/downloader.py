@@ -11,10 +11,11 @@ from .settings import MAX_PDF_BYTES
 
 
 class DownloadError(Exception):
-    def __init__(self, stage: str, message: str, status: int | None = None):
+    def __init__(self, stage: str, message: str, status: int | None = None, retry: bool = False):
         super().__init__(message)
         self.stage = stage
         self.status = status
+        self.retry = retry  # a broken transfer, worth another attempt
 
 
 def slugify(text: str, max_len: int = 80) -> str:
@@ -33,13 +34,29 @@ def guess_filename(pdf: DatasheetLink, disposition: str) -> str:
     return name or pdf.text or "document"
 
 
+DOWNLOAD_ATTEMPTS = 3  # a transfer cut off half-way (timeout, dropped connection) is tried again
+
+
 def download(fetcher: Fetcher, pdf: DatasheetLink, target_dir: Path, known_hashes: dict, base_dir: Path) -> dict:
     """Download `pdf` into `target_dir` as {file name from the server or URL}_{hash8}.pdf.
 
     Returns a dict with file_path (relative to `base_dir`, i.e. datasheets/), file_hash,
     file_size and duplicate_of (set when the same bytes were saved earlier).
-    Raises DownloadError on failure.
+    Raises DownloadError on failure. Broken transfers (timeouts, dropped connections,
+    a body that is not a PDF although the server said it was) are retried on a fresh
+    connection; HTTP errors and HTML answers are not.
     """
+    for attempt in range(1, DOWNLOAD_ATTEMPTS + 1):
+        try:
+            return _download_once(fetcher, pdf, target_dir, known_hashes, base_dir)
+        except DownloadError as exc:
+            if attempt == DOWNLOAD_ATTEMPTS or not exc.retry:
+                raise
+            fetcher.reconnect()
+
+
+def _download_once(fetcher: Fetcher, pdf: DatasheetLink, target_dir: Path, known_hashes: dict,
+                   base_dir: Path) -> dict:
     target_dir.mkdir(parents=True, exist_ok=True)
     tmp = target_dir / f".{hashlib.sha1(pdf.url.encode()).hexdigest()}.part"
     digest = hashlib.sha256()
@@ -61,17 +78,21 @@ def download(fetcher: Fetcher, pdf: DatasheetLink, target_dir: Path, known_hashe
                         raise DownloadError("download", f"file larger than {MAX_PDF_BYTES} bytes")
                     digest.update(chunk)
                     fh.write(chunk)
+            expected = resp.headers.get("content-length")
+            if expected and expected.isdigit() and "content-encoding" not in resp.headers and int(expected) != size:
+                raise DownloadError("download", f"transfer cut off: {size} of {expected} bytes", retry=True)
         except DownloadError:
             raise
         except Exception as exc:  # noqa: BLE001 - connection dropped mid-transfer etc.
-            raise DownloadError("download", f"{exc.__class__.__name__}: {exc}") from exc
+            raise DownloadError("download", f"{exc.__class__.__name__}: {exc}", retry=True) from exc
         finally:
             resp.close()
 
         with tmp.open("rb") as fh:
             head = fh.read(1024)
         if b"%PDF-" not in head:
-            raise DownloadError("verify", f"not a PDF (starts with {head[:16]!r})")
+            # the server said PDF but sent something else: usually a broken transfer
+            raise DownloadError("verify", f"not a PDF (starts with {head[:16]!r})", retry="pdf" in ctype)
 
         file_hash = digest.hexdigest()
         existing = known_hashes.get(file_hash)
