@@ -99,6 +99,7 @@ python -m dataPipeline.download.run https://en.goodark.com/product.php --no-db #
 | `--force` | off | Download again even if already saved |
 | `--no-db` | off | No PostgreSQL; hashes only in `manifest.jsonl` |
 | `-v` | off | Print every page and every click |
+| `--show-browser` | off | Open a visible Chromium window and watch it load pages and click (JavaScript sites; needs a desktop) |
 
 Environment variables: `DATABASE_URL` (default `postgresql+psycopg2://username:postgres@localhost:5432/postgres`, can be in `.env`), `CRAWLER_DELAY` (seconds between requests to one host, default `1.0`), `CRAWLER_USER_AGENT`, `PLAYWRIGHT_CHROMIUM_PATH` (default `/opt/pw-browsers/chromium`).
 

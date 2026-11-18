@@ -5,6 +5,7 @@
     python -m dataPipeline.download.run --file manufacturers.txt     # one URL per line
     python -m dataPipeline.download.run URL --dry-run                # list datasheets only
     python -m dataPipeline.download.run URL --no-db                  # no PostgreSQL needed
+    python -m dataPipeline.download.run URL -v --show-browser        # watch it click, in a browser window
 
 Give the product page or the homepage of a manufacturer. The crawler walks every
 product category, family and part page (clicking through JavaScript menus and
@@ -156,6 +157,8 @@ def main() -> int:
     parser.add_argument("--force", action="store_true", help="download again even if already saved")
     parser.add_argument("--no-db", action="store_true", help="do not use PostgreSQL (hashes only in manifest.jsonl)")
     parser.add_argument("-v", "--verbose", action="store_true", help="print every page and click")
+    parser.add_argument("--show-browser", action="store_true",
+                        help="open a visible browser window to watch the clicking (JavaScript sites; needs a display)")
     args = parser.parse_args()
 
     urls = list(args.urls)
@@ -173,7 +176,7 @@ def main() -> int:
         engine = db.get_engine()
         db.ensure_tables(engine)
 
-    fetcher = Fetcher()
+    fetcher = Fetcher(headless=not args.show_browser)
     totals: dict = {}
     started = time.monotonic()
     try:

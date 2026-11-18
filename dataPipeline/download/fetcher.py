@@ -39,8 +39,9 @@ class Page:
 
 
 class Fetcher:
-    def __init__(self, delay: float = REQUEST_DELAY):
+    def __init__(self, delay: float = REQUEST_DELAY, headless: bool = True):
         self.delay = delay
+        self.headless = headless  # False: a visible browser window (to watch the clicking)
         self._extra_ca_pem: list[str] = []  # intermediates fetched for servers with incomplete chains
         self._chain_repaired: set[str] = set()
         self.client = self._new_client()
@@ -229,10 +230,10 @@ class Fetcher:
 
             self._pw = sync_playwright().start()
             try:
-                self._browser = self._pw.chromium.launch()
+                self._browser = self._pw.chromium.launch(headless=self.headless)
             except Exception:  # noqa: BLE001 - bundled browser missing, use the system one
                 self._browser = self._pw.chromium.launch(
-                    executable_path=CHROMIUM_PATH, args=["--no-sandbox"], headless=True
+                    executable_path=CHROMIUM_PATH, args=["--no-sandbox"], headless=self.headless
                 )
             self._context = self._browser.new_context(
                 user_agent=USER_AGENT, locale="en-GB", accept_downloads=True,
