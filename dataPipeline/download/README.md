@@ -211,7 +211,10 @@ GROUP BY 1 ORDER BY 2 DESC;                                                     
 SELECT stage, count(*) FROM datasheet_errors GROUP BY 1;                                    -- what is failing
 ```
 
-**Reruns.** `datasheets/{manufacturer}/pages.jsonl` remembers every **leaf page**: a page that gave datasheet links and led nowhere new (in practice: part pages). The next run does not fetch those pages again if they were visited less than `--cache-days` (30) days ago; category pages, family lists and pagination are still read, so new families and parts are found. On Good-Ark this skips almost all of the ~4,000 page visits of a full run. `--recrawl` ignores the file (e.g. to look for new datasheet revisions on known part pages).
+**Reruns.** Two files make a second run much faster; both are ignored with `--recrawl` and both forget entries older than `--cache-days` (30) days, so new datasheet revisions are picked up eventually:
+
+- `datasheets/{manufacturer}/pages.jsonl` remembers every **leaf page**: a page that gave datasheet links (or only "not available" notices) and led nowhere new, in practice part pages. The next run does not fetch it again. Category pages, family lists and pagination are always read, so new families and parts are found. On Good-Ark this skips almost all of the ~4,000 page visits of a full run.
+- `datasheets/{manufacturer}/clicks.jsonl` (JavaScript sites) remembers what every click led to: `nav` (a page URL), `pdf` (a datasheet URL), `notice` ("not available") or `none`. The next run still loads each list page (new rows and parts are clicked as usual) but **replays** known clicks instead of clicking: the page URL is queued, the datasheet counts as found (downloaded if an earlier run stopped before saving it), the notice is not logged again (it is already in `datasheet_errors`; use `--retry-failed` to try those). Measured on NOVOSENSE: a 2-page crawl with 79 clicks took 527 s the first time and 37 s the second, with the same 62 datasheet links.
 
 ### 7.1 Datasheets that could not be obtained
 

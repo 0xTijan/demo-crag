@@ -100,6 +100,29 @@ def test_second_run_skips_leaf_pages_but_still_reads_lists():
     assert result.cached_pages == len(leaves)
 
 
+def test_cached_clicks_are_replayed_not_clicked():
+    from dataPipeline.download.crawler import PartCrawlResult
+    found = []
+    crawler = PartCrawler(FakeFetcher(), lambda *a, **k: None, on_pdf=found.append, fast=True)
+    crawler.result, crawler.hosts = PartCrawlResult("x"), {"x.com"}
+    node = Node("https://x.com/en/abs-speed-sensor", 2, True)
+
+    def cand(text, row="", hint=""):
+        return {"text": text, "hint": hint, "row": row, "label": "", "context": "", "chrome": False,
+                "visible": True, "details": {}}
+    crawler._replay(node, cand("", "NSM4101 Active", "dataSheet"), ("datasheet", "NSM4101 Active"), True,
+                    "pdf", "https://x.com/en/datasheet/NSM4101/NSM41xx.pdf")
+    crawler._replay(node, cand("", "NSM4102 Active", "dataSheet"), ("datasheet", "NSM4102 Active"), True,
+                    "notice", None)
+    crawler._replay(node, cand("Magnetic Sensor"), ("magnetic sensor",), True, "nav", "https://x.com/en/magnetic-sensor")
+    crawler._replay(node, cand("NSM4103"), ("nsm4103",), True, "nav", "https://x.com/en/product/NSM4103")
+    assert [p.url for p in found] == ["https://x.com/en/datasheet/NSM4101/NSM41xx.pdf"]  # saved if not yet known
+    assert {"NSM4101 Active", "NSM4102 Active"} <= crawler.rows_with_doc            # --fast still knows the rows
+    assert [n.url for n in crawler.queue] == ["https://x.com/en/magnetic-sensor"]   # navigation still followed
+    assert [n.url for n in crawler.later] == ["https://x.com/en/product/NSM4103"]   # part page: later (--fast)
+    assert crawler.result.replayed == 4 and crawler._page_notices == 1
+
+
 def test_header_footer_and_other_languages_are_not_followed():
     _, fetcher, _ = crawl("https://en.example-semi.com/product.php")
     for url in fetcher.requested:

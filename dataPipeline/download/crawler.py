@@ -78,6 +78,7 @@ class PartCrawlResult:
     clicks: int = 0
     skipped_pages: int = 0   # --fast: part pages not visited because a table row covered them
     cached_pages: int = 0    # leaf pages not fetched again (visited by an earlier run)
+    replayed: int = 0        # clicks not made again: an earlier run's result was used
     used_js: bool = False
     unavailable: list = field(default_factory=list)  # (page, element text, message shown)
 
@@ -435,7 +436,7 @@ class PartCrawler:
 
     def __init__(self, fetcher: Fetcher, log_error, on_pdf=None, max_pages=PART_MAX_PAGES,
                  max_depth=PART_MAX_DEPTH, js="auto", verbose=False, on_missing=None, fast=False,
-                 page_cache=None, on_leaf=None):
+                 page_cache=None, on_leaf=None, click_cache=None, on_click=None):
         self.fetcher = fetcher
         self.log_error = log_error
         self.on_pdf = on_pdf or (lambda pdf: None)
@@ -459,6 +460,11 @@ class PartCrawler:
         self.page_cache = page_cache or {}
         self.on_leaf = on_leaf or (lambda url, pdfs: None)
         self._page_pdfs: list[str] = []
+        self._page_notices = 0
+        # Clicks of earlier runs (JavaScript sites): click key -> (kind, url), kind = nav | pdf |
+        # notice | none. A known click is replayed instead of clicked; on_click reports new ones.
+        self.click_cache = click_cache or {}
+        self.on_click = on_click or (lambda key, kind, url: None)
         self.rows_with_doc: set[str] = set()   # table rows whose document button gave a PDF or a notice
         self.rows_with_pdf: set[str] = set()   # ... that gave a PDF
         self.later: deque[Node] = deque()      # --fast: part pages, visited after everything else
@@ -501,7 +507,7 @@ class PartCrawler:
             if not self.fetcher.allowed(node.url):
                 self.log_error("robots", "disallowed by robots.txt", url=node.url)
                 continue
-            self._page_pdfs, links_before = [], len(self.seen)
+            self._page_pdfs, self._page_notices, links_before = [], 0, len(self.seen)
             try:
                 if use_js:
                     self._explore_rendered(node)
@@ -515,14 +521,15 @@ class PartCrawler:
                 self.log_error("render" if use_js else "crawl", exc, url=node.url)
                 continue
             self.result.pages_visited += 1
-            if self._page_pdfs and len(self.seen) == links_before and node.depth > 0:
-                self.on_leaf(node.url, sorted(set(self._page_pdfs)))  # gave PDFs, led nowhere new
+            if (self._page_pdfs or self._page_notices) and len(self.seen) == links_before and node.depth > 0:
+                # gave datasheets (or "not available" notices) and led nowhere new
+                self.on_leaf(node.url, sorted(set(self._page_pdfs)))
             # every page with -v; otherwise every 25 pages, and at least once a minute
             # (a JavaScript catalogue page can take a minute or two)
             if self.verbose or self.result.pages_visited % 25 == 0 or time.monotonic() - last_report >= 60:
                 last_report = time.monotonic()
                 print(f"    .. {self.result.pages_visited} pages, {self.result.cached_pages} cached, "
-                      f"{len(self.queue)} queued, "
+                      f"{len(self.queue)} queued, {self.result.replayed} clicks replayed, "
                       f"{len(self.result.pdfs)} PDFs, {self.result.clicks} clicks, "
                       f"{time.monotonic() - started:.0f}s  [{node.url}]")
 
@@ -922,12 +929,41 @@ class PartCrawler:
                     if self.verbose:
                         print(f"      skip {(c['text'] or c['hint'])[:40]!r}: its row already gave its datasheet (--fast)")
                     continue
+                if key in self.click_cache:  # clicked by an earlier run: use what it led to
+                    self._replay(node, c, key, product, *self.click_cache[key])
+                    continue
                 # A click that leads nowhere blocks the same label everywhere, except when the
                 # element was hidden: then a visible element with that label is still tried.
                 self.click_memo[key if c["visible"] else key + ("hidden",)] = None
                 self._click(node, page, ident, c, key, product, state)
         finally:
             page.close()
+
+    def _replay(self, node: Node, c: dict, key, product: bool, kind: str, url: str | None) -> None:
+        """Do what an earlier run's click of this element did, without clicking."""
+        label = (c["text"] or c["hint"])[:60]
+        self.click_memo[key] = url
+        self.result.replayed += 1
+        if kind == "pdf" and url:
+            self._page_pdfs.append(url)
+            if c["row"]:
+                self.rows_with_doc.add(c["row"])
+                self.rows_with_pdf.add(c["row"])
+            if url not in self.result.pdfs:  # normally known; downloaded if an earlier run was cut short
+                details = dict(c.get("details") or {}, trail=list(node.trail) + [label])
+                self._add_pdf(DatasheetLink(url, c["text"] or c["hint"], c["row"], node.url,
+                                            details.get("page_title", ""), node.trail + (label,), node.product,
+                                            details=details))
+        elif kind == "notice":
+            self._page_notices += 1
+            if c["row"]:
+                self.rows_with_doc.add(c["row"])
+        elif kind == "nav" and url:
+            token = item_token(url)
+            later = self.fast and token and token.lower() in label.lower()
+            self._enqueue(node, url, label, product, later=later)
+        if self.verbose:
+            print(f"      cached click {label!r} -> {kind}{' ' + url if url else ''}")
 
     def retry_click(self, page_url: str, element: str, row_text: str = "", trail=()) -> list:
         """Open `page_url`, find the clickable element with text/icon text `element` (in the table
@@ -1061,6 +1097,7 @@ class PartCrawler:
             is_doc = bool(DOC_HINT_RE.search(f"{c['text']} {c['hint']}"))
             if not targets and not closed and not is_doc:
                 self.dead_labels[label.lower()] += 1  # e.g. "More Products": stop after 3 tries
+                self.on_click(key, "none", None)
             if closed and is_doc and not c["row"] and self._part_covered(node.url, self.rows_with_pdf):
                 # the page's own "Datasheet" button says "not available", but the part's table row
                 # already gave the PDF: not a missing datasheet
@@ -1077,6 +1114,8 @@ class PartCrawler:
                 if c["row"]:
                     self.rows_with_doc.add(c["row"])
                 self.result.unavailable.append((node.url, label, message))
+                self._page_notices += 1
+                self.on_click(key, "notice", None)
                 details = dict(c.get("details") or {}, trail=list(node.trail) + [label], message=message)
                 self.on_missing("datasheet_unavailable", f"{label} ({c['row'][:80]}): {message}", node.url, details)
             # content shown by the click (a tab, a dropdown) may hold new links
@@ -1093,6 +1132,7 @@ class PartCrawler:
             if self._is_pdf_target(url, c):
                 state["doc_ok"] = True
                 self._page_pdfs.append(url)
+                self.on_click(key, "pdf", url)
                 if self.verbose:
                     print(f"      click {label!r} -> PDF {url}")
                 if c["row"]:
@@ -1105,6 +1145,8 @@ class PartCrawler:
                 token = item_token(url)
                 later = self.fast and token and token.lower() in label.lower()  # a part's own page
                 self._enqueue(node, url, label, product, later=later)
+                if url.startswith(("http://", "https://")):
+                    self.on_click(key, "nav", url)
                 if self.verbose:
                     print(f"      click {label!r} -> {url}" + ("  (part page: later, if still needed)" if later else ""))
 

@@ -38,22 +38,31 @@ from helpers.run_log import start_run_log  # noqa: E402
 MANIFEST = "manifest.jsonl"
 MISSING = "missing.jsonl"  # datasheets that could not be obtained, with all context
 PAGES = "pages.jsonl"      # leaf pages already visited (skipped by the next runs)
+CLICKS = "clicks.jsonl"    # what each click led to on JavaScript sites (replayed by the next runs)
 
 
-def read_page_cache(folder: Path, max_days: float) -> dict:
-    """{page url: [PDF urls]} of leaf pages visited in the last `max_days` days."""
-    path, cache = folder / PAGES, {}
+def _fresh_lines(path: Path, max_days: float):
+    """JSON lines of `path` written in the last `max_days` days (later lines win)."""
     if not path.exists() or max_days <= 0:
-        return cache
+        return
     oldest = datetime.now(timezone.utc).timestamp() - max_days * 86400
     for line in path.read_text(encoding="utf-8").splitlines():
         try:
             rec = json.loads(line)
-            if datetime.fromisoformat(rec["visited_at"]).timestamp() >= oldest:
-                cache[rec["url"]] = rec["pdfs"]
+            if datetime.fromisoformat(rec["at"] if "at" in rec else rec["visited_at"]).timestamp() >= oldest:
+                yield rec
         except (ValueError, KeyError):
             continue
-    return cache
+
+
+def read_click_cache(folder: Path, max_days: float) -> dict:
+    """{click key: (kind, url)} of clicks made in the last `max_days` days."""
+    return {tuple(rec["key"]): (rec["kind"], rec.get("url")) for rec in _fresh_lines(folder / CLICKS, max_days)}
+
+
+def read_page_cache(folder: Path, max_days: float) -> dict:
+    """{page url: [PDF urls]} of leaf pages visited in the last `max_days` days."""
+    return {rec["url"]: rec["pdfs"] for rec in _fresh_lines(folder / PAGES, max_days)}
 
 
 def manufacturer_name(url: str) -> str:
@@ -196,9 +205,18 @@ def process_manufacturer(engine, fetcher, url: str, name: str, args) -> dict:
     log_error = db.ErrorLog(engine, name)
     saver = Saver(fetcher, engine, name, args, log_error)
     page_cache = {} if args.recrawl else read_page_cache(saver.folder, args.cache_days)
-    if page_cache:
-        print(f"    {len(page_cache)} pages visited in the last {args.cache_days:g} days are skipped "
-              f"(--recrawl to fetch them again)")
+    click_cache = {} if args.recrawl else read_click_cache(saver.folder, args.cache_days)
+    if page_cache or click_cache:
+        print(f"    from runs in the last {args.cache_days:g} days: {len(page_cache)} pages are skipped and "
+              f"{len(click_cache)} clicks are replayed instead of clicked (--recrawl to do them again)")
+
+    def on_click(key, kind, url):
+        if args.dry_run:
+            return
+        saver.folder.mkdir(parents=True, exist_ok=True)
+        with (saver.folder / CLICKS).open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps({"key": list(key), "kind": kind, "url": url,
+                                 "at": datetime.now(timezone.utc).isoformat()}, ensure_ascii=False) + "\n")
 
     def on_leaf(url, pdfs):
         if args.dry_run:
@@ -211,14 +229,14 @@ def process_manufacturer(engine, fetcher, url: str, name: str, args) -> dict:
     crawler = PartCrawler(fetcher, log_error, on_pdf=saver, max_pages=args.max_pages,
                           max_depth=args.max_depth, js=args.js, verbose=args.verbose, fast=args.fast,
                           on_missing=lambda stage, message, url, details: saver.missing(stage, message, url, details),
-                          page_cache=page_cache, on_leaf=on_leaf)
+                          page_cache=page_cache, on_leaf=on_leaf, click_cache=click_cache, on_click=on_click)
     try:
         result = crawler.crawl(url)
     except FetchError as exc:
         log_error("website", exc, url=url, http_status=exc.status)
         return saver.stats
     print(f"    {result.pages_visited} pages{' (browser)' if result.used_js else ''}, "
-          f"{result.cached_pages} cached pages skipped, "
+          f"{result.cached_pages} cached pages skipped, {result.replayed} clicks replayed, "
           f"{result.clicks} clicks, {len(result.pdfs)} PDF links, "
           f"{len(result.unavailable)} datasheets not public")
     return saver.stats
