@@ -266,6 +266,57 @@ Every extraction result is also saved as a file in the index cache (section 9).
 **Our parts and external parts are never mixed:** separate tables and separate folders
 (`markdowns/suppliers/…`, `markdowns/external/…`). `matches` is the only table that points to both.
 
+### How indexed data is stored and searched
+
+```
+                        INDEXING (offline)
+   2N7000.md ──┐
+   IM_Series.md├──► LLM + checks ──► index_cache/*.json ──load──┐
+   … 10,000    ┘                    (master copy, in git)       │
+                                                                ▼
+┌──────────────────────────── POSTGRES ────────────────────────────────────┐
+│                                                                          │
+│  catalog_parts   (one row per part, or per family availability row)      │
+│  ┌────┬──────────┬──────────┬─────────┬─────────────────┬─────────────┐  │
+│  │ id │ supplier │ type ◄───┼─ INDEX  │ part_number /   │ specs (JSON)│  │
+│  │    │          │          │         │ family_row      │             │  │
+│  ├────┼──────────┼──────────┼─────────┼─────────────────┼─────────────┤  │
+│  │ 1  │ Supp. A  │ mosfet_n │         │ 2N7000          │ {vds_max:60,│  │
+│  │    │          │          │         │                 │  id_max:0.2,│  │
+│  │    │          │          │         │                 │  …, page…}  │  │
+│  │ 2  │ Viking   │ mlcc     │         │ 0603/X7R/50V    │ {cap: 150pF │  │
+│  │    │          │          │         │                 │  –470nF, …} │  │
+│  │ …  │ …        │ …        │         │ …               │ …           │  │
+│  └────┴──────────┴──────────┴─────────┴─────────────────┴─────────────┘  │
+│                                                                          │
+│  external_parts  (requested parts, same layout, never mixed with ours)   │
+│  matches         (external part ↔ our part, label, confirm/reject)       │
+└──────────────────────────────────────────────────────────────────────────┘
+
+                        SEARCH (per request, < 1 s)
+   requested part: type = mosfet_n, vds 60 V, id 0.2 A, TO-92
+        │
+        ▼
+   ① WHERE type = 'mosfet_n'          ← database index on "type":
+        │                                10,000s of rows → a few hundred
+        ▼
+   ② compare JSON specs in Python      ← vds ≥ 60? id ≥ 0.2? same package?
+        │                                fast: only a few hundred rows
+        ▼
+   ③ top 10 + labels ──► spec table
+```
+
+What makes searching fast:
+1. **The specs are already extracted.** At search time nobody reads datasheets; comparing numbers is
+   thousands of times faster than an LLM reading markdowns.
+2. **The same names and units everywhere** (`vds_max` in volts), so comparing is plain arithmetic.
+3. **A database index on `type`** jumps straight to the few hundred parts of one type.
+
+In v1 the database narrows down by type only, and the spec comparison runs in Python on those rows, which
+takes well under a second for a few hundred to a few thousand rows. Only if one type grows to tens of
+thousands of rows would the spec filters move into the SQL query too (the flattened values table or
+generated per-type views from the full design).
+
 ---
 
 ## 7. Time per request
