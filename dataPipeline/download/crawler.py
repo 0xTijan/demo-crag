@@ -826,6 +826,41 @@ class PartCrawler:
         finally:
             page.close()
 
+    def retry_click(self, page_url: str, element: str, row_text: str = "", trail=()) -> list:
+        """Open `page_url`, find the clickable element with text/icon text `element` (in the table
+        row `row_text`, paging through JavaScript tables if needed), click it once more and return
+        the PDFs that click produced. Used by run.py --retry-failed for "not available" notices."""
+        if self.result is None:
+            self.result = PartCrawlResult(start_url=page_url)
+        self.hosts.add(urlsplit(page_url).netloc.lower())
+        node = Node(page_url, 0, True, tuple(trail)[:-1])
+        found_before, on_pdf = set(self.result.pdfs), self.on_pdf
+        self.on_pdf = lambda pdf: None  # links merely seen on the page are not part of the retry
+        page = self.fetcher.browser_context().new_page()
+        try:
+            self._load(page, page_url)
+            for steps in range(PART_MAX_PAGINATION + 1):
+                snaps = self._harvest(page)
+                cands: dict = {}
+                self._record_snapshot(node, page, snaps, cands, steps)
+                match = next(((ident, c) for ident, c in cands.items()
+                              if (c["text"] or c["hint"]) == element and (not row_text or c["row"] == row_text)),
+                             None)
+                if match is not None:
+                    break
+                if not any(s["next"] for _, _, s in snaps) or not self._page_next(page):
+                    self.log_error("click", f"element {element!r} (row {row_text[:60]!r}) not found", url=page_url)
+                    return []
+            else:
+                return []
+            ident, c = match
+            seen_before = set(self.result.pdfs) - found_before  # PDFs on the page itself
+            self._click(node, page, ident, c, self._click_key(node, c), True, {"steps": steps, "dirty": False})
+        finally:
+            page.close()
+            self.on_pdf = on_pdf
+        return [p for u, p in self.result.pdfs.items() if u not in found_before and u not in seen_before]
+
     def _find(self, page, ident) -> tuple[object, int] | None:
         frame_url, text, hint, row, occ = ident
         snaps = self._harvest(page)

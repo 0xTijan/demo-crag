@@ -6,6 +6,8 @@
     python -m dataPipeline.download.run URL --dry-run                # list datasheets only
     python -m dataPipeline.download.run URL --no-db                  # no PostgreSQL needed
     python -m dataPipeline.download.run URL -v --show-browser        # watch it click, in a browser window
+    python -m dataPipeline.download.run --retry-failed               # retry failed datasheets (all makers)
+    python -m dataPipeline.download.run URL --retry-failed           # ... of this manufacturer only
 
 Give the product page or the homepage of a manufacturer. The crawler walks every
 product category, family and part page (clicking through JavaScript menus and
@@ -27,7 +29,7 @@ from pathlib import Path  # noqa: E402
 from urllib.parse import urlsplit  # noqa: E402
 
 from . import db  # noqa: E402
-from .crawler import PartCrawler, is_datasheet, site_key  # noqa: E402
+from .crawler import DatasheetLink, PartCrawler, is_datasheet, site_key  # noqa: E402
 from .downloader import DownloadError, download, slugify  # noqa: E402
 from .fetcher import FetchError, Fetcher  # noqa: E402
 from .settings import DATASHEETS_DIR, PART_MAX_DEPTH, PART_MAX_PAGES  # noqa: E402
@@ -88,17 +90,18 @@ class Saver:
                 fh.write(json.dumps(record, ensure_ascii=False) + "\n")
         self.log_error(stage, message, url=url, http_status=http_status, context=record)
 
-    def __call__(self, pdf) -> None:
+    def __call__(self, pdf) -> str:
+        """Save one PDF. Returns downloaded | duplicate | skipped | failed | not_datasheet | dry_run."""
         self.stats["pdfs"] += 1
         if not self.args.all_pdfs and not is_datasheet(pdf):
             self.stats["not_datasheet"] += 1
             if self.args.verbose:
                 print(f"      - not a datasheet: {pdf.url}")
-            return
+            return "not_datasheet"
         self.stats["datasheets"] += 1
         if self.args.dry_run:
             print(f"      [datasheet] {' > '.join(pdf.trail[-3:])!r} {pdf.url}")
-            return
+            return "dry_run"
         existing = self.known_urls.get(pdf.url)
         if existing and (DATASHEETS_DIR / existing).exists() and not self.args.force:
             self.stats["skipped"] += 1
@@ -109,7 +112,8 @@ class Saver:
                     self.db_urls.add(pdf.url)
                 except Exception as exc:  # noqa: BLE001
                     self.log_error("db", exc, url=pdf.url)
-            return
+                    return "failed"
+            return "skipped"
         try:
             info = download(self.fetcher, pdf, self.folder, self.known_hashes, DATASHEETS_DIR)
         except DownloadError as exc:
@@ -117,7 +121,7 @@ class Saver:
             details = dict(pdf.details, link_text=pdf.text, context=pdf.context, page_url=pdf.page_url,
                            trail=list(pdf.trail))
             self.missing(exc.stage, str(exc), pdf.url, details, http_status=exc.status)
-            return
+            return "failed"
         row = {"manufacturer": self.name, "source_url": pdf.url, "page_url": pdf.page_url,
                "link_text": pdf.text[:500], "context": pdf.context[:1000], "trail": " > ".join(pdf.trail)[:2000],
                "file_path": info["file_path"], "file_hash": info["file_hash"], "file_size": info["file_size"]}
@@ -133,12 +137,15 @@ class Saver:
                 self.db_urls.add(pdf.url)
             except Exception as exc:  # noqa: BLE001
                 self.stats["failed"] += 1
-                self.log_error("db", exc, url=pdf.url)
+                self.log_error("db", exc, url=pdf.url, context={**row, "trail": list(pdf.trail)})
+                return "failed"
         if info["duplicate_of"]:
             self.stats["duplicates"] += 1
+            return "duplicate"
         else:
             self.stats["downloaded"] += 1
             print(f"      + {info['file_path']}")
+            return "downloaded"
 
 
 def process_manufacturer(engine, fetcher, url: str, name: str, args) -> dict:
@@ -158,6 +165,92 @@ def process_manufacturer(engine, fetcher, url: str, name: str, args) -> dict:
     return saver.stats
 
 
+# ------------------------------------------------------------------ --retry-failed
+RETRY_OK = ("downloaded", "duplicate", "skipped")
+
+
+def failure_key(row: dict) -> tuple:
+    """Rows/lines about the same failed datasheet share this key (reruns log them again)."""
+    ctx = row.get("context") or {}
+    if row["stage"] == "datasheet_unavailable":
+        return ("click", row["manufacturer"], ctx.get("page_url") or row.get("url"),
+                ctx.get("element", ""), ctx.get("row_text", ""))
+    return ("download", row["manufacturer"], row.get("url"))
+
+
+def drop_missing_lines(folder: Path, keys: set, before: str) -> None:
+    """Remove lines of missing.jsonl for these failures that were written before `before` (ISO time)."""
+    path = folder / MISSING
+    if not path.exists():
+        return
+    kept = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        try:
+            rec = json.loads(line)
+        except ValueError:
+            kept.append(line)
+            continue
+        old = rec.get("recorded_at", "") < before
+        if not (old and failure_key({**rec, "context": rec}) in keys):
+            kept.append(line)
+    path.write_text("".join(f"{line}\n" for line in kept), encoding="utf-8")
+
+
+def retry_failed(engine, fetcher, names, args) -> dict:
+    """Try every failed datasheet in datasheet_errors once more. A success is saved like any download
+    and its error rows (and missing.jsonl lines) are removed; a failure leaves one fresh row."""
+    groups: dict = {}
+    for row in db.failed_datasheets(engine, names):
+        groups.setdefault(failure_key(row), []).append(row)
+    print(f"{len(groups)} failed datasheet(s) to retry ({sum(map(len, groups.values()))} error rows)")
+    totals = {"retried": 0, "recovered": 0, "still_failing": 0, "cannot_retry": 0}
+    savers, crawlers = {}, {}
+    started = datetime.now(timezone.utc).isoformat()
+    for i, (key, rows) in enumerate(groups.items(), 1):
+        last = rows[-1]
+        name, ctx = last["manufacturer"], last["context"] or {}
+        if name not in savers:
+            log_error = db.ErrorLog(engine, name)
+            savers[name] = Saver(fetcher, engine, name, args, log_error)
+            crawlers[name] = PartCrawler(fetcher, log_error, verbose=args.verbose,
+                                         on_missing=lambda st, m, u, d, s=savers[name]: s.missing(st, m, u, d))
+        saver = savers[name]
+        label = (ctx.get("row_text") or ctx.get("element") or "")[:70]
+        print(f"[{i}/{len(groups)}] {name}: {last['stage']} {label!r} {last['url']}")
+        if args.dry_run:
+            continue
+        missing_before = saver.stats["missing"]
+        totals["retried"] += 1
+        if key[0] == "click":
+            if not ctx.get("element"):
+                totals["cannot_retry"] += 1
+                print("      cannot retry: no element recorded (error from an older version)")
+                continue
+            pdfs = crawlers[name].retry_click(key[2], ctx["element"], ctx.get("row_text", ""), ctx.get("trail", ()))
+            outcomes = [saver(pdf) for pdf in pdfs]
+        else:
+            pdf = DatasheetLink(last["url"], ctx.get("link_text") or ctx.get("element", ""),
+                                ctx.get("context") or ctx.get("row_text", ""), ctx.get("page_url", ""),
+                                ctx.get("page_title", ""), tuple(ctx.get("trail", ())), True,
+                                details={k: v for k, v in ctx.items()
+                                         if k not in ("stage", "error", "http_status", "recorded_at", "manufacturer")})
+            outcomes = [saver(pdf)]
+        ids = [r["error_id"] for r in rows]
+        if outcomes and all(o in RETRY_OK for o in outcomes):
+            totals["recovered"] += 1
+            db.delete_errors(engine, ids)
+            drop_missing_lines(saver.folder, {key}, started)
+            print(f"      recovered ({', '.join(outcomes)}); {len(ids)} error row(s) removed")
+        else:
+            totals["still_failing"] += 1
+            if saver.stats["missing"] > missing_before:  # a fresh row with the new error replaces the old ones
+                db.delete_errors(engine, ids)
+                drop_missing_lines(saver.folder, {key}, started)
+            print(f"      still failing ({', '.join(outcomes) or 'no PDF'})")
+    print("Retry: " + ", ".join(f"{k}: {v}" for k, v in totals.items()))
+    return totals
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("urls", nargs="*", help="manufacturer product page or homepage")
@@ -173,6 +266,9 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="list datasheets without downloading")
     parser.add_argument("--force", action="store_true", help="download again even if already saved")
     parser.add_argument("--no-db", action="store_true", help="do not use PostgreSQL (hashes only in manifest.jsonl)")
+    parser.add_argument("--retry-failed", action="store_true",
+                        help="only retry the datasheets in datasheet_errors (all manufacturers, or those of the "
+                             "given URLs / --name); a success is saved and its error rows removed")
     parser.add_argument("-v", "--verbose", action="store_true", help="print every page and click")
     parser.add_argument("--show-browser", action="store_true",
                         help="open a visible browser window to watch the clicking (JavaScript sites; needs a display)")
@@ -182,20 +278,31 @@ def main() -> int:
     if args.file:
         urls += [line.strip() for line in args.file.read_text(encoding="utf-8").splitlines()
                  if line.strip() and not line.strip().startswith("#")]
-    if not urls:
+    if args.retry_failed and args.no_db:
+        parser.error("--retry-failed reads datasheet_errors: it needs the database")
+    if not urls and not args.retry_failed:
         parser.error("give at least one URL (or --file)")
     if args.name and len(urls) > 1:
         parser.error("--name works with one URL only")
     start_run_log("datasheets")
 
     engine = None
-    if not args.no_db and not args.dry_run:
+    if not args.no_db and (not args.dry_run or args.retry_failed):
         engine = db.get_engine()
         db.ensure_tables(engine)
 
     fetcher = Fetcher(headless=not args.show_browser)
     totals: dict = {}
     started = time.monotonic()
+    if args.retry_failed:
+        args.all_pdfs = True  # these were datasheets already; do not filter them again
+        names = [args.name] if args.name else [manufacturer_name(u) for u in urls] or None
+        try:
+            totals = retry_failed(engine, fetcher, names, args)
+        finally:
+            fetcher.close()
+        print(f"\nDone in {time.monotonic() - started:.0f}s")
+        return 0
     try:
         for i, url in enumerate(urls, 1):
             name = args.name or manufacturer_name(url)

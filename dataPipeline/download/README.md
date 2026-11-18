@@ -12,6 +12,7 @@ Nothing in the code knows a particular website. Two real sites were used as exam
 - [6. Which PDFs are datasheets](#6-which-pdfs-are-datasheets)
 - [7. Saving: files, manifest, database](#7-saving-files-manifest-database)
   - [7.1 Datasheets that could not be obtained](#71-datasheets-that-could-not-be-obtained)
+  - [7.2 Retrying failed datasheets (`--retry-failed`)](#72-retrying-failed-datasheets---retry-failed)
 - [8. `fetcher.py`: all network access](#8-fetcherpy-all-network-access)
 - [9. The two example sites](#9-the-two-example-sites)
 - [10. Failure handling](#10-failure-handling)
@@ -85,6 +86,8 @@ python -m dataPipeline.download.run https://www.novosns.com/en/ https://en.gooda
 python -m dataPipeline.download.run --file manufacturers.txt          # one URL per line, # comments
 python -m dataPipeline.download.run https://www.novosns.com/en/ --dry-run -v   # list, download nothing
 python -m dataPipeline.download.run https://en.goodark.com/product.php --no-db # no PostgreSQL
+python -m dataPipeline.download.run --retry-failed                             # retry failed datasheets (all makers)
+python -m dataPipeline.download.run https://www.novosns.com/en/ --retry-failed # ... of one manufacturer
 ```
 
 | Option | Default | Meaning |
@@ -99,6 +102,7 @@ python -m dataPipeline.download.run https://en.goodark.com/product.php --no-db #
 | `--dry-run` | off | Print the datasheets found; download and write nothing (no database needed) |
 | `--force` | off | Download again even if already saved |
 | `--no-db` | off | No PostgreSQL; hashes only in `manifest.jsonl` |
+| `--retry-failed` | off | Do not crawl: retry only the datasheets in `datasheet_errors` (all manufacturers, or those of the given URLs / `--name`). See [7.2](#72-retrying-failed-datasheets---retry-failed). Needs the database; with `--dry-run` it only lists them |
 | `-v` | off | Print every page and every click |
 | `--show-browser` | off | Open a visible Chromium window and watch it load pages and click (JavaScript sites; needs a desktop) |
 
@@ -227,6 +231,36 @@ FROM datasheet_errors WHERE stage = 'datasheet_unavailable' AND manufacturer = '
 ```
 
 The run summary counts them as `missing`.
+
+### 7.2 Retrying failed datasheets (`--retry-failed`)
+
+`python -m dataPipeline.download.run --retry-failed` crawls nothing. It reads the datasheet failures from `datasheet_errors` (stages `download`, `verify`, `write`, `db`, `datasheet_unavailable`; page errors such as `crawl` are not datasheets and stay) and tries each once more:
+
+- **download / verify / write / db**: the PDF URL is downloaded again (with the usual retries for broken transfers).
+- **datasheet_unavailable**: the page (`context.page_url`) is opened in the browser, the same button (`context.element`) in the same table row (`context.row_text`) is found again, paging through a JavaScript table if needed, and clicked.
+
+Rows about the same datasheet (logged again by every run) are retried once as a group.
+
+| Result | What happens |
+|---|---|
+| Success | Saved exactly like a normal download: file in `datasheets/{manufacturer}/`, line in `manifest.jsonl`, row in `datasheet_files` (or counted as a duplicate / already saved). Then **its rows in `datasheet_errors` are deleted** and its lines in `missing.jsonl` removed. |
+| Still failing | One fresh row (and `missing.jsonl` line) with the new error and full context replaces the old ones, so retries do not pile up duplicates. |
+| Cannot retry | A `datasheet_unavailable` row without context (from an older version): left as it is. |
+
+```
+[1/9] goodark: download 'Pdf file' https://en.goodark.com/specification/BAT42 thru BAT43.pdf
+      + goodark/bat42-thru-bat43_d406f267.pdf
+      recovered (downloaded); 2 error row(s) removed
+[3/9] novosns: datasheet_unavailable 'Datasheet' https://www.novosns.com/en/product/MT6835GT-STD-R
+      + novosns/mt6835-rev-1-3_6134ce06.pdf
+      recovered (downloaded); 1 error row(s) removed
+[4/9] novosns: datasheet_unavailable 'NSM4101-Q0TOMR Active MSL1 TO2 Automotive …' https://www.novosns.com/en/abs-speed-sensor
+    ! [datasheet_unavailable] … Sorry, the datasheet is not publicly available …
+      still failing (no PDF)
+Retry: retried: 9, recovered: 2, still_failing: 7, cannot_retry: 0
+```
+
+Retried datasheets are not filtered by `is_datasheet` again.
 
 ---
 

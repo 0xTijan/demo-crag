@@ -90,6 +90,29 @@ def record_datasheet(engine, row: dict) -> None:
         )
 
 
+# Failures that are about one datasheet (and can be retried with run.py --retry-failed)
+DATASHEET_STAGES = ("download", "verify", "write", "db", "datasheet_unavailable")
+
+
+def failed_datasheets(engine, manufacturers=None) -> list[dict]:
+    """datasheet_errors rows about a datasheet that was not obtained, oldest first."""
+    sql = ("SELECT error_id, manufacturer, url, stage, error, http_status, context FROM datasheet_errors "
+           "WHERE stage = ANY(:stages)")
+    params: dict = {"stages": list(DATASHEET_STAGES)}
+    if manufacturers:
+        sql += " AND manufacturer = ANY(:m)"
+        params["m"] = list(manufacturers)
+    sql += " ORDER BY error_id"
+    with engine.connect() as conn:
+        return [dict(r._mapping) for r in conn.execute(text(sql), params)]
+
+
+def delete_errors(engine, error_ids) -> None:
+    if error_ids:
+        with engine.begin() as conn:
+            conn.execute(text("DELETE FROM datasheet_errors WHERE error_id = ANY(:ids)"), {"ids": list(error_ids)})
+
+
 class ErrorLog:
     """Writes failures to `datasheet_errors`. It never raises. With `engine=None` failures are only printed."""
 

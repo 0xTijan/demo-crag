@@ -142,6 +142,59 @@ def test_failed_download_is_recorded_with_context():
     assert logged[0][1]["context"]["row"]["Package"] == "SMA"  # same record goes to datasheet_errors.context
 
 
+def test_retry_failed_removes_recovered_rows_and_replaces_failing_ones():
+    import tempfile
+    from types import SimpleNamespace
+    from dataPipeline.download import db as db_mod, run as run_mod
+    from dataPipeline.download.fetcher import FetchError
+
+    good = b"%PDF-1.7 recovered"
+
+    class Resp:
+        status_code, headers = 200, {"content-type": "application/pdf", "content-length": str(len(good))}
+
+        def iter_bytes(self, n):
+            yield good
+
+        def close(self):
+            pass
+
+    class Fetcher:
+        def stream(self, url):
+            if "gone" in url:
+                raise FetchError("HTTP 404", 404)
+            return Resp()
+
+    rows = [  # two runs logged the same failure; one URL is really gone
+        {"error_id": 1, "manufacturer": "m", "url": "https://x/ok.pdf", "stage": "download", "error": "HTTP 503",
+         "http_status": 503, "context": {"page_url": "https://x/p", "row": {"Part": "A1"}, "trail": ["A1"]}},
+        {"error_id": 2, "manufacturer": "m", "url": "https://x/ok.pdf", "stage": "download", "error": "HTTP 503",
+         "http_status": 503, "context": {"page_url": "https://x/p", "row": {"Part": "A1"}, "trail": ["A1"]}},
+        {"error_id": 3, "manufacturer": "m", "url": "https://x/gone.pdf", "stage": "download", "error": "HTTP 404",
+         "http_status": 404, "context": {"page_url": "https://x/p", "row": {"Part": "B2"}}},
+    ]
+    deleted, logged = [], []
+    saved = dict(failed=db_mod.failed_datasheets, delete=db_mod.delete_errors, known=db_mod.known_datasheets,
+                 record=db_mod.record_datasheet, log=db_mod.ErrorLog, folder=run_mod.DATASHEETS_DIR)
+    db_mod.failed_datasheets = lambda engine, names: rows
+    db_mod.delete_errors = lambda engine, ids: deleted.extend(ids)
+    db_mod.known_datasheets = lambda engine, name: ({}, {})
+    db_mod.record_datasheet = lambda engine, row: logged.append(("file", row["source_url"]))
+    db_mod.ErrorLog = lambda engine, name: (lambda *a, **k: logged.append(("error", a[0], k.get("url"))))
+    run_mod.DATASHEETS_DIR = Path(tempfile.mkdtemp())
+    try:
+        args = SimpleNamespace(all_pdfs=True, dry_run=False, force=False, verbose=False)
+        totals = run_mod.retry_failed(object(), Fetcher(), None, args)
+    finally:
+        db_mod.failed_datasheets, db_mod.delete_errors = saved["failed"], saved["delete"]
+        db_mod.known_datasheets, db_mod.record_datasheet, db_mod.ErrorLog = saved["known"], saved["record"], saved["log"]
+        run_mod.DATASHEETS_DIR = saved["folder"]
+    assert totals["recovered"] == 1 and totals["still_failing"] == 1
+    assert ("file", "https://x/ok.pdf") in logged                       # saved like any download
+    assert ("error", "download", "https://x/gone.pdf") in logged         # a fresh row for the one still failing ...
+    assert sorted(deleted) == [1, 2, 3]                                  # ... replaces its old row; recovered rows go
+
+
 def test_is_datasheet_rules():
     def pdf(url, text="", context="", trail=("",), product=True):
         return DatasheetLink(url, text, context, "https://x/p", "", trail, product)
