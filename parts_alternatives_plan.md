@@ -145,9 +145,45 @@ Input: the markdown + that type's spec list. Output (JSON, temperature 0):
 Every value uses the same fields as the full design (`value`, `unit`, `stat`, `conditions`, `page`, `raw`),
 even where v1 doesn't use all of them yet. Ranges use `min` / `max` instead of `value`. See section 13.
 
-A family (like the Viking MLCC) gives one entry per availability row, with ranges:
-`0603 (inch) / X7R / 50 V → capacitance 150 pF – 470 nF, page 5`, plus the page of the ordering
-("Part Numbering") table, used later to build an exact part number.
+### How families are stored (one datasheet, many part numbers)
+
+A family is **not** one row, and **not** one row per possible part number. It depends on how the datasheet
+lists its parts:
+
+| Datasheet lists… | Rows in `catalog_parts` |
+|---|---|
+| one part (2N7000) | 1 row |
+| a few part numbers explicitly (e.g. an order table with 5 MOSFETs in different packages) | 1 row per listed part number |
+| a code system + availability table (MLCC, resistors…) | 1 row per **availability row**, with ranges and lists |
+
+**Example: the Viking MLCC.** It never lists part numbers, only a code system (size, tolerance, packaging,
+dielectric, voltage, capacitance) and availability tables. All combinations would be millions of part
+numbers, so each availability row becomes one row, with the capacitance stored as a range:
+
+| part_number | family_row | specs |
+|---|---|---|
+| – | 0603 / X7R / 50 V | size 0603 (inch), X7R, 50 V, capacitance **150 pF – 470 nF** |
+| – | 0603 / X7R / 100 V | size 0603 (inch), X7R, 100 V, capacitance **150 pF – 100 nF** |
+| – | 0805 / NPO / 50 V | size 0805 (inch), NPO, 50 V, capacitance **0.1 pF – 8.2 nF** |
+| … | … | … |
+
+- That datasheet has roughly 250 availability rows (NPO, X7R, X7S, X6S, X5R), so **one datasheet → ~250
+  rows**, not millions.
+- **Options that aren't split into rows** are stored as a list inside the row, e.g.
+  `tolerance: {set: ["±1%", "±2%", "±5%", "±10%", "±20%"]}`. Packaging has only one option (T = reel), so
+  it's just stored.
+- Each row also stores the page of the ordering ("Part Numbering") table.
+
+**Matching a family row:** the rule checks whether the requested value falls inside the range or list.
+Request 0603 / X7R / 50 V / 100 nF / ±10% → row "0603 / X7R / 50 V": 100 nF is inside 150 pF – 470 nF ✓,
+±10% is in the tolerance list ✓.
+
+**The exact part number is built only when the row is shown as a candidate:** a short LLM call reads the
+ordering table: `03` (0603) + `K` (±10%) + `T` (reel) + `B` (X7R) + `500` (50 V) + `104` (100 nF) =
+**`03KTB500104`**.
+
+This keeps the database small: probably tens of thousands to a few hundred thousand rows in total, instead of
+millions, while each row still holds enough to say whether a requested part fits it.
 
 **Two checks in code:** each value's `raw` text must appear on the cited page, and every range must have
 min ≤ max. A value that fails is marked *unverified* and shows a warning. This catches most invented or broken values.
