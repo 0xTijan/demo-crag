@@ -26,7 +26,7 @@ from __future__ import annotations
 
 import re
 import time
-from collections import deque
+from collections import Counter, deque
 from dataclasses import dataclass, field
 from urllib.parse import parse_qsl, unquote, urldefrag, urljoin, urlsplit
 
@@ -76,6 +76,7 @@ class PartCrawlResult:
     pdfs: dict = field(default_factory=dict)      # url -> DatasheetLink (every PDF seen)
     pages_visited: int = 0
     clicks: int = 0
+    skipped_pages: int = 0   # --fast: part pages not visited because a table row covered them
     used_js: bool = False
     unavailable: list = field(default_factory=list)  # (page, element text, message shown)
 
@@ -230,6 +231,15 @@ def is_site_root(url: str) -> bool:
     if parts and re.fullmatch(r"(index|default|home)(\.\w+)?", parts[-1]):
         parts = parts[:-1]
     return not parts or (len(parts) == 1 and (parts[0] in EN_SEGMENTS or parts[0] in OTHER_LANG_SEGMENTS))
+
+
+def item_token(url: str) -> str:
+    """The name a detail page is called after, if it looks like a part number: the last path
+    segment with letters and digits, e.g. NSR33001-QHMSR in /en/product/NSR33001-QHMSR."""
+    parts = [p for p in urlsplit(url).path.split("/") if p]
+    last = unquote(parts[-1]) if parts else ""
+    last = re.sub(r"\.(html?|php|aspx?)$", "", last, flags=re.I)
+    return last if len(last) >= 4 and re.search(r"\d", last) and re.search(r"[A-Za-z]", last) else ""
 
 
 def same_host(a: str, b: str) -> bool:
@@ -442,7 +452,10 @@ class PartCrawler:
         # fast: once a table row's document button gave a PDF (or a "not available" notice), the
         # row's other items (part number -> part page) are not clicked
         self.fast = fast
-        self.rows_with_doc: set[str] = set()
+        self.rows_with_doc: set[str] = set()   # table rows whose document button gave a PDF or a notice
+        self.rows_with_pdf: set[str] = set()   # ... that gave a PDF
+        self.later: deque[Node] = deque()      # --fast: part pages, visited after everything else
+        self.dead_labels: Counter = Counter()  # labels whose clicks did nothing
         self.result: PartCrawlResult | None = None
 
     # ------------------------------------------------------------ entry point
@@ -463,8 +476,16 @@ class PartCrawler:
         self.queue.append(Node(start, 0, not is_site_root(start) or product_score(title) > 0))
         head_candidates: dict[str, DatasheetLink] = {}
         started = last_report = time.monotonic()
-        while self.queue and self.result.pages_visited < self.max_pages:
-            node = self.queue.popleft()
+        while (self.queue or self.later) and self.result.pages_visited < self.max_pages:
+            if self.queue:
+                node = self.queue.popleft()
+            else:  # --fast: part pages last, and only for parts no table row has covered
+                node = self.later.popleft()
+                if self._part_covered(node.url, self.rows_with_doc):
+                    self.result.skipped_pages += 1
+                    if self.verbose:
+                        print(f"      skip part page {node.url}: its table row already gave its datasheet (--fast)")
+                    continue
             if not self.fetcher.allowed(node.url):
                 self.log_error("robots", "disallowed by robots.txt", url=node.url)
                 continue
@@ -534,7 +555,13 @@ class PartCrawler:
         """Like _decide, with the element's section label as its context."""
         return self._decide(node, text, label, chrome)
 
-    def _enqueue(self, node: Node, url: str, text: str, product: bool) -> None:
+    @staticmethod
+    def _part_covered(url: str, rows) -> bool:
+        """True if the part a page is named after (/product/NSR33001-QHMSR) appears in one of `rows`."""
+        token = item_token(url)
+        return bool(token) and any(token.lower() in r.lower() for r in rows)
+
+    def _enqueue(self, node: Node, url: str, text: str, product: bool, later: bool = False) -> None:
         url = clean_url(url)
         if url in self.seen or node.depth + 1 > self.max_depth:
             return
@@ -545,7 +572,7 @@ class PartCrawler:
         if url_negative(url):  # /news-details/..., /newsshow.php, /careers/...
             return
         self.seen.add(url)
-        self.queue.append(Node(url, node.depth + 1, product, node.trail + (text[:60],)))
+        (self.later if later else self.queue).append(Node(url, node.depth + 1, product, node.trail + (text[:60],)))
 
     def _handle_anchor(self, node: Node, href: str, text: str, context: str, chrome: bool,
                        page_url: str, title: str, head_candidates: dict | None = None,
@@ -863,12 +890,16 @@ class PartCrawler:
                 todo.append((ident, c, key, product))
             # document buttons first (they open tabs/downloads and leave the page as it is),
             # visible before hidden (a hidden menu copy of an item often does nothing)
+            # (and a table row's document button before the page's own one)
             todo.sort(key=lambda t: (t[1]["steps"], not DOC_HINT_RE.search(f"{t[1]['text']} {t[1]['hint']}"),
-                                     not t[1]["visible"]))
+                                     not t[1]["row"], not t[1]["visible"]))
             state = {"steps": steps, "dirty": False}
             for ident, c, key, product in todo[:PART_MAX_CLICKS_PER_PAGE]:
                 if key in self.click_memo or (not c["visible"] and key + ("hidden",) in self.click_memo):
                     continue
+                if not DOC_HINT_RE.search(f"{c['text']} {c['hint']}") \
+                        and self.dead_labels[(c["text"] or c["hint"])[:60].lower()] >= 3:
+                    continue  # this label never did anything on this site
                 if self.fast and c["row"] in self.rows_with_doc \
                         and not DOC_HINT_RE.search(f"{c['text']} {c['hint']}"):
                     if self.verbose:
@@ -993,10 +1024,12 @@ class PartCrawler:
             except Exception:  # noqa: BLE001
                 pass
         for p in popups:
-            try:
-                p.wait_for_load_state("domcontentloaded", timeout=15000)
-            except Exception:  # noqa: BLE001 - a PDF tab or a download never "loads"
-                pass
+            # the tab's URL is known as soon as it starts navigating; a tab showing a PDF never
+            # finishes "loading", so waiting for that only costs time
+            for _ in range(20):
+                if p.url and p.url != "about:blank":
+                    break
+                p.wait_for_timeout(250)
             if p.url and p.url != "about:blank":
                 targets.append(p.url)
             p.close()
@@ -1005,10 +1038,19 @@ class PartCrawler:
             state["dirty"] = True
         else:
             closed = self._dismiss(page)
-            if self.verbose:
+            if self.verbose and not targets:
                 print(f"      click {label!r} -> " + (f"notice: {closed[-1][:100]!r}" if closed else
                                                        "no new page, tab or download"))
-            if closed and DOC_HINT_RE.search(f"{c['text']} {c['hint']}"):
+            is_doc = bool(DOC_HINT_RE.search(f"{c['text']} {c['hint']}"))
+            if not targets and not closed and not is_doc:
+                self.dead_labels[label.lower()] += 1  # e.g. "More Products": stop after 3 tries
+            if closed and is_doc and not c["row"] and self._part_covered(node.url, self.rows_with_pdf):
+                # the page's own "Datasheet" button says "not available", but the part's table row
+                # already gave the PDF: not a missing datasheet
+                if self.verbose:
+                    print("      (ignored: this part's datasheet was already obtained from its table row)")
+                closed = []
+            if closed and is_doc:
                 if retry:  # a notice can also mean "the document list has not loaded yet": once more
                     self._wait_stable(page, 6000)
                     return self._click(node, page, ident, c, key, product, state, retry=False)
@@ -1030,15 +1072,20 @@ class PartCrawler:
             url = clean_url(url)
             self.click_memo[key] = url
             if self._is_pdf_target(url, c):
+                if self.verbose:
+                    print(f"      click {label!r} -> PDF {url}")
                 if c["row"]:
                     self.rows_with_doc.add(c["row"])
+                    self.rows_with_pdf.add(c["row"])
                 details = dict(c.get("details") or {}, trail=list(trail))
                 self._add_pdf(DatasheetLink(url, c["text"] or c["hint"], c["row"], node.url,
                                             details.get("page_title", ""), trail, node.product, details=details))
             else:
-                self._enqueue(node, url, label, product)
+                token = item_token(url)
+                later = self.fast and token and token.lower() in label.lower()  # a part's own page
+                self._enqueue(node, url, label, product, later=later)
                 if self.verbose:
-                    print(f"      click {label!r} -> {url}")
+                    print(f"      click {label!r} -> {url}" + ("  (part page: later, if still needed)" if later else ""))
 
     def _is_pdf_target(self, url: str, c: dict) -> bool:
         if path_ext(url) == ".pdf":

@@ -102,7 +102,7 @@ python -m dataPipeline.download.run https://www.novosns.com/en/ --retry-failed #
 | `--dry-run` | off | Print the datasheets found; download and write nothing (no database needed) |
 | `--force` | off | Download again even if already saved |
 | `--no-db` | off | No PostgreSQL; hashes only in `manifest.jsonl` |
-| `--fast` | off | JavaScript tables: when a row's datasheet button already gave the PDF (or a "not public" notice), do not also open that row's part page. Much faster on sites like NOVOSENSE; part pages reached only through those rows are not visited |
+| `--fast` | off | JavaScript tables: when a row's datasheet button already gave the PDF (or a "not public" notice), do not also open that row's part page. Part pages found elsewhere (featured-product tiles, …) are visited last, and skipped if a table row already covered that part. Much faster on sites like NOVOSENSE |
 | `--retry-failed` | off | Do not crawl: retry only the datasheets in `datasheet_errors` (all manufacturers, or those of the given URLs / `--name`). See [7.2](#72-retrying-failed-datasheets---retry-failed). Needs the database; with `--dry-run` it only lists them |
 | `-v` | off | Print every page and every click |
 | `--show-browser` | off | Open a visible Chromium window and watch it load pages and click (JavaScript sites; needs a desktop) |
@@ -184,6 +184,7 @@ Elements are found again after a reload by frame, text, icon text, table row and
 
 1. Stream into a hidden `.{sha1 of url}.part` file while hashing (SHA-256). Abort above 300 MB or if the content-type is HTML.
 2. The first 1024 bytes must contain `%PDF-` (stage `verify` otherwise), and the size must match `Content-Length`. A broken transfer (timeout or dropped connection half-way, fewer bytes than announced, or non-PDF bytes although the server said `application/pdf`) is retried on a fresh connection, 3 attempts in all; HTTP errors and HTML answers are not retried.
+0. If a PDF with the **same file name and the same size** (from a HEAD request) is already saved for this manufacturer, it is not downloaded again: the URL is recorded for that file (`duplicates`). Parts of a series often give one datasheet under many URLs. `--force` turns this off.
 3. If the manufacturer already has these bytes **and that file still exists**, the temporary file is deleted and the existing path returned (`duplicate_of`): one file for all parts sharing a datasheet.
 4. Otherwise the file is named after the document itself: `{name from Content-Disposition, else the URL's last part}_{hash8}.pdf`, e.g. `mt6835-rev-1-3_0c2d5a1f.pdf`, and moved into place atomically.
 

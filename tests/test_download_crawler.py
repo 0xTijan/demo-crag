@@ -295,6 +295,47 @@ def test_download_retries_broken_transfers(tmp_path=None):
         assert exc.stage == "verify" and fetcher.reconnects == 0
 
 
+def test_item_token_and_covered_parts():
+    from dataPipeline.download.crawler import item_token
+    assert item_token("https://x/en/product/NSR33001-QHMSR") == "NSR33001-QHMSR"
+    assert item_token("https://x/en/magnetic-sensor") == "" and item_token("https://x/proshow.php?id=5") == ""
+    rows = {"NSR33001-QHMSR Active MSL3 HMSOP8 Automotive"}
+    assert PartCrawler._part_covered("https://x/en/product/NSR33001-QHMSR", rows)
+    assert not PartCrawler._part_covered("https://x/en/product/NSR33002-QHMSR", rows)
+
+
+def test_same_pdf_under_another_url_is_not_downloaded_again():
+    import json
+    import tempfile
+    from types import SimpleNamespace
+    from dataPipeline.download import run as run_mod
+
+    class Fetcher:
+        downloads = 0
+
+        def head_info(self, url):
+            return {"size": 1234, "content_type": "application/pdf", "disposition": ""}
+
+        def stream(self, url):
+            raise AssertionError("must not download")
+
+    folder = Path(tempfile.mkdtemp())
+    (folder / "m").mkdir()
+    (folder / "m" / "x-datasheet_aaaa.pdf").write_bytes(b"%PDF" + b"0" * 1230)
+    (folder / "m" / "manifest.jsonl").write_text(json.dumps({
+        "source_url": "https://x/datasheet/PART-A/X_Datasheet.pdf", "file_path": "m/x-datasheet_aaaa.pdf",
+        "file_hash": "a" * 64, "file_size": 1234}) + "\n")
+    old = run_mod.DATASHEETS_DIR
+    run_mod.DATASHEETS_DIR = folder
+    try:
+        saver = run_mod.Saver(Fetcher(), None, "m", SimpleNamespace(all_pdfs=True, dry_run=False, force=False,
+                                                                     verbose=False), lambda *a, **k: None)
+        outcome = saver(DatasheetLink("https://x/datasheet/PART-B/X_Datasheet.pdf", "dataSheet", "", "p", ""))
+    finally:
+        run_mod.DATASHEETS_DIR = old
+    assert outcome == "duplicate" and saver.manifest["https://x/datasheet/PART-B/X_Datasheet.pdf"]["file_hash"] == "a" * 64
+
+
 def test_same_host():
     assert same_host("www.novosns.com", "novosns.com")
     assert not same_host("en.goodark.com", "www.goodark.com")

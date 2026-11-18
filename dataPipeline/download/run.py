@@ -26,7 +26,7 @@ import sys  # noqa: E402
 import time  # noqa: E402
 from datetime import datetime, timezone  # noqa: E402
 from pathlib import Path  # noqa: E402
-from urllib.parse import urlsplit  # noqa: E402
+from urllib.parse import unquote, urlsplit  # noqa: E402
 
 from . import db  # noqa: E402
 from .crawler import DatasheetLink, PartCrawler, is_datasheet, site_key  # noqa: E402
@@ -68,6 +68,11 @@ class Saver:
         self.manifest = read_manifest(self.folder)
         self.known_urls = {u: r["file_path"] for u, r in self.manifest.items()}
         self.known_hashes = {r["file_hash"]: r["file_path"] for r in self.manifest.values()}
+        # (file name, size) -> saved file: the same datasheet under another URL is recognised by a
+        # HEAD request instead of being downloaded again (parts of a series share one PDF)
+        self.by_name_size = {}
+        for r in self.manifest.values():
+            self._index(r["source_url"], r.get("file_size"), r["file_path"], r["file_hash"])
         self.db_urls = set()
         if engine is not None:
             urls, hashes = db.known_datasheets(engine, name)
@@ -76,6 +81,22 @@ class Saver:
             self.known_hashes.update(hashes)
         self.stats = {"pdfs": 0, "datasheets": 0, "downloaded": 0, "skipped": 0, "duplicates": 0,
                       "failed": 0, "not_datasheet": 0, "missing": 0}
+
+    def _index(self, url: str, size, file_path: str, file_hash: str) -> None:
+        name = Path(unquote(urlsplit(url).path)).name.lower()
+        if name and size:
+            self.by_name_size[(name, int(size))] = (file_path, file_hash)
+
+    def _known_by_head(self, pdf):
+        """(file_path, file_hash) of an already saved PDF with the same file name and size, or None."""
+        name = Path(unquote(urlsplit(pdf.url).path)).name.lower()
+        if self.args.force or not any(k[0] == name for k in self.by_name_size):
+            return None  # no saved file with this name: nothing to compare, download it
+        head = self.fetcher.head_info(pdf.url)
+        if not head or "html" in head["content_type"]:
+            return None
+        hit = self.by_name_size.get((name, head["size"]))
+        return hit if hit and (DATASHEETS_DIR / hit[0]).exists() else None
 
     def missing(self, stage: str, message: str, url: str | None, details: dict, http_status=None) -> None:
         """A datasheet the site shows but that could not be obtained: keep everything known about it
@@ -114,8 +135,13 @@ class Saver:
                     self.log_error("db", exc, url=pdf.url)
                     return "failed"
             return "skipped"
+        same = self._known_by_head(pdf)
         try:
-            info = download(self.fetcher, pdf, self.folder, self.known_hashes, DATASHEETS_DIR)
+            if same:
+                info = {"file_path": same[0], "file_hash": same[1], "duplicate_of": same[0],
+                        "file_size": int((DATASHEETS_DIR / same[0]).stat().st_size)}
+            else:
+                info = download(self.fetcher, pdf, self.folder, self.known_hashes, DATASHEETS_DIR)
         except DownloadError as exc:
             self.stats["failed"] += 1
             details = dict(pdf.details, link_text=pdf.text, context=pdf.context, page_url=pdf.page_url,
@@ -131,6 +157,7 @@ class Saver:
                                 ensure_ascii=False) + "\n")
         self.known_urls[pdf.url] = info["file_path"]
         self.manifest[pdf.url] = row
+        self._index(pdf.url, info["file_size"], info["file_path"], info["file_hash"])
         if self.engine is not None:
             try:
                 db.record_datasheet(self.engine, row)
