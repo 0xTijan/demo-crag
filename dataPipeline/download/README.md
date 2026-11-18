@@ -118,7 +118,7 @@ A real log (excerpt; also saved in `logs/datasheets_<date>_<time>.log`):
     ! [crawl] https://en.goodark.com/ESGP SKY汽车中文SHAEC25019833626(SUP25-002863)-Final FetchError: HTTP 404
 ```
 
-`.. N pages` is printed every 25 pages (every page with `-v`): pages done, pages queued, PDFs seen, clicks, seconds. `+` is a new file. `!` is a failure (also a `datasheet_errors` row). At the end of each manufacturer:
+`.. N pages` is printed every 25 pages and at least once a minute (every page with `-v`): pages done, pages queued, PDFs seen, clicks, seconds. `+` is a new file. `!` is a failure (also a `datasheet_errors` row). At the end of each manufacturer:
 
 ```
     pdfs: …, datasheets: …, downloaded: …, skipped: …, duplicates: …, failed: …, not_datasheet: …

@@ -378,7 +378,7 @@ class PartCrawler:
         # A start URL inside the site is taken as the catalogue; the homepage is only a way in.
         self.queue.append(Node(start, 0, not is_site_root(start) or product_score(title) > 0))
         head_candidates: dict[str, DatasheetLink] = {}
-        started = time.monotonic()
+        started = last_report = time.monotonic()
         while self.queue and self.result.pages_visited < self.max_pages:
             node = self.queue.popleft()
             if not self.fetcher.allowed(node.url):
@@ -397,7 +397,10 @@ class PartCrawler:
                 self.log_error("render" if use_js else "crawl", exc, url=node.url)
                 continue
             self.result.pages_visited += 1
-            if self.verbose or self.result.pages_visited % 25 == 0:
+            # every page with -v; otherwise every 25 pages, and at least once a minute
+            # (a JavaScript catalogue page can take a minute or two)
+            if self.verbose or self.result.pages_visited % 25 == 0 or time.monotonic() - last_report >= 60:
+                last_report = time.monotonic()
                 print(f"    .. {self.result.pages_visited} pages, {len(self.queue)} queued, "
                       f"{len(self.result.pdfs)} PDFs, {self.result.clicks} clicks, "
                       f"{time.monotonic() - started:.0f}s  [{node.url}]")
