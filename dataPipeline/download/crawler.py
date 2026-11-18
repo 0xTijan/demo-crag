@@ -48,6 +48,7 @@ MULTI_PART_SUFFIXES = {"co", "com", "org", "net", "gov", "ac", "edu"}
 # the first few levels below <body>, so "card-header" inside content is not chrome).
 CHROME_RE = re.compile(r"(^|[-_\s])(header|footer|foot|navbar|nav|topbar|top-bar)(?=$|[-_\s\d])", re.I)
 CHROME_DEPTH = 5
+IDLE_WAIT_MS = 1500  # cap for "network idle"; see _settle
 # Application-note numbering: "AN-12-0029", "AN_1234", "AN 15"
 APP_NOTE_RE = re.compile(r"(?<![a-z0-9])an[-_ ]?\d", re.I)
 
@@ -422,7 +423,7 @@ class PartCrawler:
     """Walks one manufacturer's catalogue. See the module docstring."""
 
     def __init__(self, fetcher: Fetcher, log_error, on_pdf=None, max_pages=PART_MAX_PAGES,
-                 max_depth=PART_MAX_DEPTH, js="auto", verbose=False, on_missing=None):
+                 max_depth=PART_MAX_DEPTH, js="auto", verbose=False, on_missing=None, fast=False):
         self.fetcher = fetcher
         self.log_error = log_error
         self.on_pdf = on_pdf or (lambda pdf: None)
@@ -438,6 +439,10 @@ class PartCrawler:
         self.seen: set[str] = set()
         self.queue: deque[Node] = deque()
         self.click_memo: dict = {}
+        # fast: once a table row's document button gave a PDF (or a "not available" notice), the
+        # row's other items (part number -> part page) are not clicked
+        self.fast = fast
+        self.rows_with_doc: set[str] = set()
         self.result: PartCrawlResult | None = None
 
     # ------------------------------------------------------------ entry point
@@ -619,12 +624,14 @@ class PartCrawler:
                                 in_chrome_static(a), page.url, title, head_candidates, details=details_of(a))
 
     # ------------------------------------------------------------ rendered pages (clicking)
-    def _settle(self, page, idle_ms: int = 8000) -> None:
+    def _settle(self, page, idle_ms: int = IDLE_WAIT_MS) -> None:
+        """A short wait for the network to go quiet. Sites with analytics that poll never go idle,
+        so this is capped low; _wait_stable (no frame changes any more) does the real waiting."""
         try:
             page.wait_for_load_state("networkidle", timeout=idle_ms)
         except Exception:  # noqa: BLE001 - pages with endless polling never go idle
             pass
-        page.wait_for_timeout(700)
+        page.wait_for_timeout(300)
 
     def _wait_stable(self, page, max_ms: int = 12000) -> None:
         """Wait until no frame changes any more (rows of JavaScript tables arrive late)."""
@@ -706,12 +713,25 @@ class PartCrawler:
                 el = frame.locator("[data-pc-next]").first
                 if el.count():
                     el.evaluate("e => e.click()")
-                    self._settle(page, 5000)
+                    self._settle(page)
                     self._wait_stable(page)
                     return True
             except Exception:  # noqa: BLE001
                 continue
         return False
+
+    def _go_back(self, page, url: str) -> bool:
+        """Return to `url` with the browser's Back button; False if that did not get there."""
+        try:
+            page.go_back(wait_until="commit", timeout=15000)
+        except Exception:  # noqa: BLE001
+            return False
+        if page.url.split("#")[0] != url.split("#")[0]:
+            return False
+        self._settle(page)
+        self._wait_stable(page)
+        self._dismiss(page)
+        return True
 
     def _goto_state(self, page, url: str, steps: int) -> None:
         """Reload the page and press "next page" `steps` times."""
@@ -819,6 +839,11 @@ class PartCrawler:
             for ident, c, key, product in todo[:PART_MAX_CLICKS_PER_PAGE]:
                 if key in self.click_memo or (not c["visible"] and key + ("hidden",) in self.click_memo):
                     continue
+                if self.fast and c["row"] in self.rows_with_doc \
+                        and not DOC_HINT_RE.search(f"{c['text']} {c['hint']}"):
+                    if self.verbose:
+                        print(f"      skip {(c['text'] or c['hint'])[:40]!r}: its row already gave its datasheet (--fast)")
+                    continue
                 # A click that leads nowhere blocks the same label everywhere, except when the
                 # element was hidden: then a visible element with that label is still tried.
                 self.click_memo[key if c["visible"] else key + ("hidden",)] = None
@@ -877,10 +902,20 @@ class PartCrawler:
 
     def _click(self, node: Node, page, ident, c: dict, key, product: bool, state: dict, retry: bool = True) -> None:
         label = (c["text"] or c["hint"])[:60]
+        went_back = False
+        if state["dirty"] and c["steps"] == 0 and state.get("back_ok", True):
+            went_back = self._go_back(page, node.url)  # much faster than a reload in single-page apps
+            if went_back:
+                state.update(steps=0, dirty=False)
         if state["dirty"] or state["steps"] != c["steps"]:
             self._goto_state(page, node.url, c["steps"])
             state.update(steps=c["steps"], dirty=False)
         target = self._find(page, ident)
+        if target is None and went_back:  # "back" did not restore the page: reload, and stop using it here
+            state["back_ok"] = False
+            self._goto_state(page, node.url, c["steps"])
+            state.update(steps=c["steps"], dirty=False)
+            target = self._find(page, ident)
         if target is None:  # not rendered this time: let a later page try the same item
             self.click_memo.pop(key if c["visible"] else key + ("hidden",), None)
             self.log_error("click", f"element {label!r} not found after reload", url=node.url)
@@ -910,7 +945,7 @@ class PartCrawler:
                     break
                 page.wait_for_timeout(250)
             if not (popups or downloads or page.url != before):
-                self._settle(page, 5000)  # changed in place: let it finish before looking
+                self._settle(page)  # changed in place: let it finish before looking
                 self._wait_stable(page, 6000)
         except Exception as exc:  # noqa: BLE001 - element vanished, navigation raced, ...
             self.log_error("click", exc, url=node.url)
@@ -948,6 +983,8 @@ class PartCrawler:
                     self._wait_stable(page, 6000)
                     return self._click(node, page, ident, c, key, product, state, retry=False)
                 message = closed[-1][:300]
+                if c["row"]:
+                    self.rows_with_doc.add(c["row"])
                 self.result.unavailable.append((node.url, label, message))
                 details = dict(c.get("details") or {}, trail=list(node.trail) + [label], message=message)
                 self.on_missing("datasheet_unavailable", f"{label} ({c['row'][:80]}): {message}", node.url, details)
@@ -963,6 +1000,8 @@ class PartCrawler:
             url = clean_url(url)
             self.click_memo[key] = url
             if self._is_pdf_target(url, c):
+                if c["row"]:
+                    self.rows_with_doc.add(c["row"])
                 details = dict(c.get("details") or {}, trail=list(trail))
                 self._add_pdf(DatasheetLink(url, c["text"] or c["hint"], c["row"], node.url,
                                             details.get("page_title", ""), trail, node.product, details=details))

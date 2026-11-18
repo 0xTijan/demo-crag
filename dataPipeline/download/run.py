@@ -152,7 +152,7 @@ def process_manufacturer(engine, fetcher, url: str, name: str, args) -> dict:
     log_error = db.ErrorLog(engine, name)
     saver = Saver(fetcher, engine, name, args, log_error)
     crawler = PartCrawler(fetcher, log_error, on_pdf=saver, max_pages=args.max_pages,
-                          max_depth=args.max_depth, js=args.js, verbose=args.verbose,
+                          max_depth=args.max_depth, js=args.js, verbose=args.verbose, fast=args.fast,
                           on_missing=lambda stage, message, url, details: saver.missing(stage, message, url, details))
     try:
         result = crawler.crawl(url)
@@ -266,6 +266,9 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="list datasheets without downloading")
     parser.add_argument("--force", action="store_true", help="download again even if already saved")
     parser.add_argument("--no-db", action="store_true", help="do not use PostgreSQL (hashes only in manifest.jsonl)")
+    parser.add_argument("--fast", action="store_true",
+                        help="JavaScript tables: when a row's datasheet button gives the PDF, do not also open "
+                             "that row's part page (much faster; part pages are not all visited)")
     parser.add_argument("--retry-failed", action="store_true",
                         help="only retry the datasheets in datasheet_errors (all manufacturers, or those of the "
                              "given URLs / --name); a success is saved and its error rows removed")

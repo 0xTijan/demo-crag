@@ -102,6 +102,7 @@ python -m dataPipeline.download.run https://www.novosns.com/en/ --retry-failed #
 | `--dry-run` | off | Print the datasheets found; download and write nothing (no database needed) |
 | `--force` | off | Download again even if already saved |
 | `--no-db` | off | No PostgreSQL; hashes only in `manifest.jsonl` |
+| `--fast` | off | JavaScript tables: when a row's datasheet button already gave the PDF (or a "not public" notice), do not also open that row's part page. Much faster on sites like NOVOSENSE; part pages reached only through those rows are not visited |
 | `--retry-failed` | off | Do not crawl: retry only the datasheets in `datasheet_errors` (all manufacturers, or those of the given URLs / `--name`). See [7.2](#72-retrying-failed-datasheets---retry-failed). Needs the database; with `--dry-run` it only lists them |
 | `-v` | off | Print every page and every click |
 | `--show-browser` | off | Open a visible Chromium window and watch it load pages and click (JavaScript sites; needs a desktop) |
@@ -322,7 +323,8 @@ Writing an error row never raises; without a database errors are only printed (a
 | `PART_MAX_PAGINATION` | 60 | `settings.py` | "next page" clicks in one JavaScript table |
 | `_needs_js` | < 10 links or < 300 text characters | `crawler.py` | Start page looks JavaScript-built → browser |
 | page stable | 2 × 500 ms unchanged, max 12 s | `crawler.py` | Wait after loading / paging |
-| click outcome wait | 3 s (then up to 5 s idle + 6 s stable if it changed in place) | `crawler.py` | Tab, download or route change |
+| click outcome wait | 3 s (then up to 1.5 s idle + 6 s stable if it changed in place) | `crawler.py` | Tab, download or route change |
+| `IDLE_WAIT_MS` | 1.5 s | `crawler.py` | Cap on "network idle" (analytics that poll never go idle) |
 | `CHROME_DEPTH` | 5 levels below `<body>` | `crawler.py` | Where header/footer classes are recognised |
 | PDF signature window | first 1024 bytes | `downloader.py` | Must contain `%PDF-` |
 | `DOWNLOAD_ATTEMPTS` | 3 | `downloader.py` | Tries per PDF for broken transfers |
@@ -342,7 +344,7 @@ When a datasheet is missed, `-v` shows why: the page was never queued (an item j
 
 ## 13. Known limits
 
-- **Slow on JavaScript sites**: every click that changes the URL means reloading the page before the next click, about 5–10 s, plus the 1 s per-host pause. A large catalogue takes hours. Static sites run at about one page per 1–2 s.
+- **Slow on JavaScript sites**: every click that changes the URL means going back to the page before the next click (browser Back, ~2–4 s; a full reload, ~5–10 s, when Back does not restore it), plus the 1 s per-host pause. `--fast` skips the part pages whose datasheet the table row already gave. A large catalogue takes hours. Static sites run at about one page per 1–2 s.
 - Filters and search boxes are not used; the crawl relies on the category tree and pagination reaching every part. Parts reachable only through a search are missed.
 - Clicks whose only effect is not a URL, a tab, a download or new links (e.g. content drawn on a canvas) are not explored further.
 - `is_datasheet` uses words, not the PDF content: a brochure without any keyword found on a catalogue page is kept; a datasheet named only by a number outside the catalogue is dropped.
