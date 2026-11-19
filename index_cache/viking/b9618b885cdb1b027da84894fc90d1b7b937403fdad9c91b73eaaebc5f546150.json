@@ -1,0 +1,20 @@
+{
+ "file": "viking/mcf-series_4382d12a.md",
+ "supplier": "viking",
+ "file_hash": "b9618b885cdb1b027da84894fc90d1b7b937403fdad9c91b73eaaebc5f546150",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:06+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ceramic capacitor",
+  "family": true,
+  "part_numbers": [],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.62,
+  "tokens_in": 2423,
+  "tokens_out": 34
+ },
+ "type": "multilayer_ceramic_capacitor"
+}

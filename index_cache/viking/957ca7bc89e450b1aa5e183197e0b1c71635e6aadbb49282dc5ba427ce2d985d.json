@@ -1,0 +1,22 @@
+{
+ "file": "viking/op-series-data-sheet-edition-rev-a1_5811d324.md",
+ "supplier": "viking",
+ "file_hash": "957ca7bc89e450b1aa5e183197e0b1c71635e6aadbb49282dc5ba427ce2d985d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:39+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ceramic capacitor",
+  "family": true,
+  "part_numbers": [
+   "OP Series"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.64,
+  "tokens_in": 2090,
+  "tokens_out": 37
+ },
+ "type": "multilayer_ceramic_capacitor"
+}

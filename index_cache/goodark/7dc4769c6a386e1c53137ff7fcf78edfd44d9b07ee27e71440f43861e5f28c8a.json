@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:56:13+00:00",
+  "at": "2026-11-19T18:57:06+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "bridge rectifier",
   "family": true,
   "part_numbers": [
    "KBF201U",
@@ -17,8 +17,10 @@
    "KBF208U"
   ],
   "confidence": "high",
-  "seconds": 7.75,
-  "tokens_in": 1861,
+  "asked_again": false,
+  "seconds": 1.99,
+  "tokens_in": 1930,
   "tokens_out": 79
- }
+ },
+ "type": "bridge_rectifier"
 }

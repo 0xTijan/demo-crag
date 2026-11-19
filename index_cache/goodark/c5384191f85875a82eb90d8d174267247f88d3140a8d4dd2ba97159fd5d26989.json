@@ -1,0 +1,20 @@
+{
+ "file": "goodark/abas21-a-c-s_a6623e6f.md",
+ "supplier": "goodark",
+ "file_hash": "c5384191f85875a82eb90d8d174267247f88d3140a8d4dd2ba97159fd5d26989",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T18:42:11+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery diode",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.16,
+  "tokens_in": 1342,
+  "tokens_out": 33
+ },
+ "type": "fast_recovery_diode"
+}

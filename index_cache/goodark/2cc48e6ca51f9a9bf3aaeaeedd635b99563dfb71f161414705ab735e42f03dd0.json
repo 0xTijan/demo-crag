@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:48:36+00:00",
+  "at": "2026-11-19T18:49:25+00:00",
   "is_datasheet": true,
-  "label": "rectifier diode",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "GBJ15A",
@@ -17,8 +17,10 @@
    "GBJ15J"
   ],
   "confidence": "high",
-  "seconds": 7.17,
-  "tokens_in": 2109,
+  "asked_again": false,
+  "seconds": 2.26,
+  "tokens_in": 2178,
   "tokens_out": 81
- }
+ },
+ "type": "fast_recovery_rectifier"
 }

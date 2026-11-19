@@ -1,0 +1,26 @@
+{
+ "file": "viking/cmx-series-data-sheet-edition-rev-a3_73c0cc36.md",
+ "supplier": "viking",
+ "file_hash": "65797c083a4f1bb0daf752f8d30558f96a23667b1a1cf5f55623a8c14c7a2ced",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:58+00:00",
+  "is_datasheet": true,
+  "label": "multilayer chip common mode filter",
+  "family": true,
+  "part_numbers": [
+   "CMX04G",
+   "CMX05G",
+   "CMX04B",
+   "CMX05B",
+   "CMX06B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.76,
+  "tokens_in": 1606,
+  "tokens_out": 70
+ },
+ "type": "multilayer_chip_common_mode_filter"
+}

@@ -1,0 +1,25 @@
+{
+ "file": "viking/artp-a-series-data-sheet-edition-rev-a2_5f935e0b.md",
+ "supplier": "viking",
+ "file_hash": "0139333ebe20bd26d0a22fa460e16ef53edb86dd39cbcfbbfe4d12c11496c295",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:07+00:00",
+  "is_datasheet": true,
+  "label": "Automotive Grade High Power Thin Film Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "ARTP..A Series",
+   "ARTP02",
+   "ARTP03",
+   "ARTP05"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.7,
+  "tokens_in": 1664,
+  "tokens_out": 63
+ },
+ "type": "automotive_grade_high_power_thin_film_ch"
+}

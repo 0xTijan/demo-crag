@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:48:11+00:00",
+  "at": "2026-11-19T18:49:00+00:00",
   "is_datasheet": true,
   "label": "fast recovery rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "FR605G"
   ],
   "confidence": "high",
-  "seconds": 7.28,
-  "tokens_in": 1547,
+  "asked_again": false,
+  "seconds": 1.93,
+  "tokens_in": 1616,
   "tokens_out": 81
- }
+ },
+ "type": "fast_recovery_rectifier"
 }

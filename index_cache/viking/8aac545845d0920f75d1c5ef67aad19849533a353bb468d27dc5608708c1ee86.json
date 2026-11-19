@@ -1,0 +1,24 @@
+{
+ "file": "viking/csra-series-data-sheet-edition-rev-b4_46ccef10.md",
+ "supplier": "viking",
+ "file_hash": "8aac545845d0920f75d1c5ef67aad19849533a353bb468d27dc5608708c1ee86",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:52+00:00",
+  "is_datasheet": true,
+  "label": "metal film resistor",
+  "family": true,
+  "part_numbers": [
+   "CSRA0102",
+   "CSRA0204",
+   "CSRA0207"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.91,
+  "tokens_in": 2314,
+  "tokens_out": 55
+ },
+ "type": "metal_film_resistor"
+}

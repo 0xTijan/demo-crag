@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:39:21+00:00",
+  "at": "2026-11-19T18:40:20+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "10A05",
@@ -17,8 +17,10 @@
    "10A6"
   ],
   "confidence": "high",
-  "seconds": 1.79,
-  "tokens_in": 1578,
-  "tokens_out": 61
- }
+  "asked_again": false,
+  "seconds": 1.74,
+  "tokens_in": 1647,
+  "tokens_out": 62
+ },
+ "type": "standard_rectifier"
 }

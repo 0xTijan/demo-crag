@@ -1,0 +1,22 @@
+{
+ "file": "viking/lrp12h-series-data-sheet-edition-rev-a_5dc59775.md",
+ "supplier": "viking",
+ "file_hash": "15284821ff46a1d909131ed1c590a1ef7662f7da57dd04229758a2912e826bcc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:54+00:00",
+  "is_datasheet": true,
+  "label": "low ohm metal strip chip resistor",
+  "family": true,
+  "part_numbers": [
+   "LRP12H"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.41,
+  "tokens_in": 1505,
+  "tokens_out": 42
+ },
+ "type": "low_ohm_metal_strip_chip_resistor"
+}

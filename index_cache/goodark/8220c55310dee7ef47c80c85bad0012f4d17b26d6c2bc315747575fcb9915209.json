@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:08:09+00:00",
+  "at": "2026-11-19T19:09:26+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "SK56A"
   ],
   "confidence": "high",
-  "seconds": 5.48,
-  "tokens_in": 1559,
+  "asked_again": false,
+  "seconds": 1.76,
+  "tokens_in": 1628,
   "tokens_out": 64
- }
+ },
+ "type": "schottky_diode"
 }

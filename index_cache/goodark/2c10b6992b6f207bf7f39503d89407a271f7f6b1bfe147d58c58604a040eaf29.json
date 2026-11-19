@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:41:22+00:00",
+  "at": "2026-11-19T18:42:19+00:00",
   "is_datasheet": true,
   "label": "Silicon Epitaxial Planar Switching Diode",
   "family": false,
@@ -13,8 +13,10 @@
    "ABAW56"
   ],
   "confidence": "high",
-  "seconds": 6.41,
-  "tokens_in": 1398,
+  "asked_again": false,
+  "seconds": 1.41,
+  "tokens_in": 1467,
   "tokens_out": 46
- }
+ },
+ "type": "silicon_epitaxial_planar_switching_diode"
 }

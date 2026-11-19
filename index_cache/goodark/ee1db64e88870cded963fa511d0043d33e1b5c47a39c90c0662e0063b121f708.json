@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:43:34+00:00",
+  "at": "2026-11-19T18:44:27+00:00",
   "is_datasheet": true,
-  "label": "Transient Voltage Suppressor",
+  "label": "transient voltage suppressor",
   "family": true,
   "part_numbers": [
    "AP4SMA8.2A",
@@ -17,8 +17,10 @@
    "AP4SMA12A"
   ],
   "confidence": "high",
-  "seconds": 7.73,
-  "tokens_in": 1867,
-  "tokens_out": 79
- }
+  "asked_again": false,
+  "seconds": 1.96,
+  "tokens_in": 1936,
+  "tokens_out": 80
+ },
+ "type": "tvs_diode"
 }

@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:48:47+00:00",
+  "at": "2026-11-19T18:49:36+00:00",
   "is_datasheet": true,
-  "label": "rectifier diode",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "GBJ35A",
@@ -17,8 +17,10 @@
    "GBJ35J"
   ],
   "confidence": "high",
-  "seconds": 8.22,
-  "tokens_in": 2045,
-  "tokens_out": 81
- }
+  "asked_again": false,
+  "seconds": 2.22,
+  "tokens_in": 2114,
+  "tokens_out": 80
+ },
+ "type": "standard_rectifier"
 }

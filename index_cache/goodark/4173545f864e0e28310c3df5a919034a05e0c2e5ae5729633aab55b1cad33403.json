@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:49:55+00:00",
+  "at": "2026-11-19T18:50:50+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "bridge rectifier",
   "family": true,
   "part_numbers": [
    "GBU6A",
@@ -17,8 +17,10 @@
    "GBU6J"
   ],
   "confidence": "high",
-  "seconds": 8.32,
-  "tokens_in": 1867,
+  "asked_again": false,
+  "seconds": 1.93,
+  "tokens_in": 1936,
   "tokens_out": 73
- }
+ },
+ "type": "bridge_rectifier"
 }

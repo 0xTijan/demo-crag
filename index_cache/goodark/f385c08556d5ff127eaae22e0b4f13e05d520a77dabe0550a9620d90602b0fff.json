@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:42:27+00:00",
+  "at": "2026-11-19T18:43:23+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "AGMN19010LD"
   ],
   "confidence": "high",
-  "seconds": 6.04,
-  "tokens_in": 1807,
+  "asked_again": false,
+  "seconds": 1.44,
+  "tokens_in": 1876,
   "tokens_out": 43
- }
+ },
+ "type": "mosfet_n"
 }

@@ -1,0 +1,24 @@
+{
+ "file": "viking/drgr-series_fb16cbe7.md",
+ "supplier": "viking",
+ "file_hash": "7f0866e3be5bb152ce94d29186104163b923adfce6d697ffa9951329dc6e93ac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:12+00:00",
+  "is_datasheet": true,
+  "label": "DIP power inductor",
+  "family": true,
+  "part_numbers": [
+   "DRGR664",
+   "DRGR875",
+   "DRGR110"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.57,
+  "tokens_in": 1666,
+  "tokens_out": 54
+ },
+ "type": "dip_power_inductor"
+}

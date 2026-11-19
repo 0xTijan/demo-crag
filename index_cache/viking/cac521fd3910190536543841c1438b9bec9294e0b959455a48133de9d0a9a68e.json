@@ -1,0 +1,22 @@
+{
+ "file": "viking/im-series-data-sheet-edition-rev-a_f651e91d.md",
+ "supplier": "viking",
+ "file_hash": "cac521fd3910190536543841c1438b9bec9294e0b959455a48133de9d0a9a68e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:33+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ceramic capacitor",
+  "family": true,
+  "part_numbers": [
+   "IM Series"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.7,
+  "tokens_in": 2238,
+  "tokens_out": 37
+ },
+ "type": "multilayer_ceramic_capacitor"
+}

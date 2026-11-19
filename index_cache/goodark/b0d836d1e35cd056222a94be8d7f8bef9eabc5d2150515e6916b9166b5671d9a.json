@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:48:34+00:00",
+  "at": "2026-11-19T18:49:22+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "Schottky barrier rectifier",
   "family": true,
   "part_numbers": [
    "GBJ10A",
@@ -17,8 +17,10 @@
    "GBJ10J"
   ],
   "confidence": "high",
-  "seconds": 6.39,
-  "tokens_in": 2142,
-  "tokens_out": 79
- }
+  "asked_again": false,
+  "seconds": 2.25,
+  "tokens_in": 2211,
+  "tokens_out": 83
+ },
+ "type": "schottky_diode"
 }

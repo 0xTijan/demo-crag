@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:44:59+00:00",
+  "at": "2026-11-19T18:45:50+00:00",
   "is_datasheet": true,
-  "label": "switching diode",
+  "label": "fast recovery switching diode",
   "family": false,
   "part_numbers": [
    "200mWSOD-323"
   ],
   "confidence": "high",
-  "seconds": 5.5,
-  "tokens_in": 1270,
-  "tokens_out": 44
- }
+  "asked_again": false,
+  "seconds": 1.24,
+  "tokens_in": 1339,
+  "tokens_out": 45
+ },
+ "type": "fast_recovery_switching_diode"
 }

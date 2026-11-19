@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:52:33+00:00",
+  "at": "2026-11-19T18:53:26+00:00",
   "is_datasheet": true,
   "label": "N-channel SiC MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "GMS045065W7"
   ],
   "confidence": "high",
-  "seconds": 6.16,
-  "tokens_in": 1874,
+  "asked_again": false,
+  "seconds": 1.54,
+  "tokens_in": 1943,
   "tokens_out": 47
- }
+ },
+ "type": "silicon_carbide_mosfet_n"
 }

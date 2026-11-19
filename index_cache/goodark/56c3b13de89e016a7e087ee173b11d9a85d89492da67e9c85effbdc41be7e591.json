@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:04:39+00:00",
+  "at": "2026-11-19T19:05:51+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "RMB2S",
@@ -17,8 +17,10 @@
    "RMB10S"
   ],
   "confidence": "high",
-  "seconds": 6.94,
-  "tokens_in": 1910,
-  "tokens_out": 61
- }
+  "asked_again": false,
+  "seconds": 1.99,
+  "tokens_in": 1979,
+  "tokens_out": 63
+ },
+ "type": "fast_recovery_rectifier"
 }

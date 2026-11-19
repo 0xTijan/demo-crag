@@ -1,0 +1,26 @@
+{
+ "file": "viking/arha-series-data-sheet-edition-rev-a1_2ec2a9ef.md",
+ "supplier": "viking",
+ "file_hash": "857cd32e86a6994860504eea8bf6da7569e821eb984c2a561f1eba573a3d1867",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:46+00:00",
+  "is_datasheet": true,
+  "label": "conductive polymer aluminum solid electrolytic capacitor",
+  "family": true,
+  "part_numbers": [
+   "ARHA0605",
+   "ARHA0608",
+   "ARHA0808",
+   "ARHA0812",
+   "ARHA0816"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.2,
+  "tokens_in": 1727,
+  "tokens_out": 108
+ },
+ "type": "conductive_polymer_aluminum_solid_electr"
+}

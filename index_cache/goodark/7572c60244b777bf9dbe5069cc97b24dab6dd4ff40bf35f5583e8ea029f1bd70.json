@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:51:18+00:00",
+  "at": "2026-11-19T18:52:14+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "GMN04504LM"
   ],
   "confidence": "high",
-  "seconds": 6.07,
-  "tokens_in": 1769,
+  "asked_again": false,
+  "seconds": 1.43,
+  "tokens_in": 1838,
   "tokens_out": 43
- }
+ },
+ "type": "mosfet_n"
 }

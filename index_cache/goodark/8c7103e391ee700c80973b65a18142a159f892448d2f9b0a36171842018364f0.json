@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:43:25+00:00",
+  "at": "2026-11-19T18:44:20+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "AMBRP10H100"
   ],
   "confidence": "high",
-  "seconds": 4.86,
-  "tokens_in": 1244,
+  "asked_again": false,
+  "seconds": 1.22,
+  "tokens_in": 1313,
   "tokens_out": 45
- }
+ },
+ "type": "schottky_diode"
 }

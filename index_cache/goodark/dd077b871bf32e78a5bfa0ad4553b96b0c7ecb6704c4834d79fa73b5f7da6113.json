@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:58:09+00:00",
+  "at": "2026-11-19T18:59:10+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -14,8 +14,10 @@
    "LSL53"
   ],
   "confidence": "high",
-  "seconds": 5.21,
-  "tokens_in": 1367,
+  "asked_again": false,
+  "seconds": 1.34,
+  "tokens_in": 1436,
   "tokens_out": 46
- }
+ },
+ "type": "schottky_diode"
 }

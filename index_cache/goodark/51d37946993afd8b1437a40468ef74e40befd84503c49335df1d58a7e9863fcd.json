@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:50:00+00:00",
+  "at": "2026-11-19T18:50:54+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "glass passivated bridge rectifier",
   "family": true,
   "part_numbers": [
    "GBU8A",
@@ -17,8 +17,10 @@
    "GBU8J"
   ],
   "confidence": "high",
-  "seconds": 8.54,
-  "tokens_in": 1934,
-  "tokens_out": 73
- }
+  "asked_again": false,
+  "seconds": 2.14,
+  "tokens_in": 2003,
+  "tokens_out": 76
+ },
+ "type": "glass_passivated_bridge_rectifier"
 }

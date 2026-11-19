@@ -1,0 +1,26 @@
+{
+ "file": "viking/crtc-a-series-data-sheet-edition-rev-a2_4f9f2b71.md",
+ "supplier": "viking",
+ "file_hash": "16decee6f8001f9e6fb32ff9d71144f44cbfddffe9c40eb0f97b67defb44134a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:30+00:00",
+  "is_datasheet": true,
+  "label": "thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CRTC..A Series",
+   "CRTC02",
+   "CRTC03",
+   "CRTC05",
+   "CRTC06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.76,
+  "tokens_in": 1814,
+  "tokens_out": 64
+ },
+ "type": "thick_film_chip_resistor"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodark/gmn08503lk_4643d254.md",
+ "supplier": "goodark",
+ "file_hash": "ae6381644c02d8db90da2b0ba8a87eb42c2936315cd1d50ba34bdee31453481d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T18:52:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN08503LK"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.49,
+  "tokens_in": 1855,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

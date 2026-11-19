@@ -1,0 +1,23 @@
+{
+ "file": "viking/lrs-series-data-sheet-edition-rev-b4_358242ef.md",
+ "supplier": "viking",
+ "file_hash": "32f39d43d77db4aa7604cd2eeca8b8b9ffbbc16b1aea28bb450f60a2ca4b10f3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:56+00:00",
+  "is_datasheet": true,
+  "label": "chip shunt resistor",
+  "family": true,
+  "part_numbers": [
+   "LRS1050",
+   "LRS1575"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.97,
+  "tokens_in": 2486,
+  "tokens_out": 48
+ },
+ "type": "chip_shunt_resistor"
+}

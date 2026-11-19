@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:42:45+00:00",
+  "at": "2026-11-19T18:43:41+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "AGN8DW",
@@ -17,8 +17,10 @@
    "AGN8MW"
   ],
   "confidence": "high",
-  "seconds": 6.34,
-  "tokens_in": 1569,
-  "tokens_out": 65
- }
+  "asked_again": false,
+  "seconds": 1.42,
+  "tokens_in": 1638,
+  "tokens_out": 62
+ },
+ "type": "standard_rectifier"
 }

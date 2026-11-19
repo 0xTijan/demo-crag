@@ -1,0 +1,22 @@
+{
+ "file": "viking/wmp17-series-data-sheet-edition-rev-a5_a6bceb8c.md",
+ "supplier": "viking",
+ "file_hash": "ce1221701d86fa977da4dfcbb0e83cbee2fccac2beec584faeadcefa5eefe55e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:56+00:00",
+  "is_datasheet": true,
+  "label": "molding E-beam welded metal strip resistor",
+  "family": true,
+  "part_numbers": [
+   "WMP17"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.4,
+  "tokens_in": 1496,
+  "tokens_out": 43
+ },
+ "type": "molding_e_beam_welded_metal_strip_resist"
+}

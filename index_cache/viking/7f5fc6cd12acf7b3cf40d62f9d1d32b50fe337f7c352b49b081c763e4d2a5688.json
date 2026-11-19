@@ -1,0 +1,25 @@
+{
+ "file": "viking/cl-s-series_033595a0.md",
+ "supplier": "viking",
+ "file_hash": "7f5fc6cd12acf7b3cf40d62f9d1d32b50fe337f7c352b49b081c763e4d2a5688",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:47+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ceramic inductor",
+  "family": true,
+  "part_numbers": [
+   "CL-S Series",
+   "CL02-S",
+   "CL03-S",
+   "CL01-S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.7,
+  "tokens_in": 1895,
+  "tokens_out": 57
+ },
+ "type": "multilayer_ceramic_inductor"
+}

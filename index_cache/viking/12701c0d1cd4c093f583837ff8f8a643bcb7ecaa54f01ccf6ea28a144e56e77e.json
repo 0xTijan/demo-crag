@@ -1,0 +1,25 @@
+{
+ "file": "viking/arm-a-series-data-sheet-edition-rev-a8_4d11c900.md",
+ "supplier": "viking",
+ "file_hash": "12701c0d1cd4c093f583837ff8f8a643bcb7ecaa54f01ccf6ea28a144e56e77e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:54+00:00",
+  "is_datasheet": true,
+  "label": "metal thin film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "ARM02",
+   "ARM03",
+   "ARM05",
+   "ARM06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.6,
+  "tokens_in": 1755,
+  "tokens_out": 53
+ },
+ "type": "metal_thin_film_chip_resistor"
+}

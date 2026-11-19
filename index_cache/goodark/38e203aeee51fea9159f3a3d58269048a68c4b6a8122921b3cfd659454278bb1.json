@@ -1,0 +1,22 @@
+{
+ "file": "goodark/mbrp5100_40d167b2.md",
+ "supplier": "goodark",
+ "file_hash": "38e203aeee51fea9159f3a3d58269048a68c4b6a8122921b3cfd659454278bb1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:01:27+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRP5100"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.19,
+  "tokens_in": 1319,
+  "tokens_out": 42
+ },
+ "type": "schottky_diode"
+}

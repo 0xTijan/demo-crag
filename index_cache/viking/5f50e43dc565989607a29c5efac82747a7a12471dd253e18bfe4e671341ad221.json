@@ -1,0 +1,24 @@
+{
+ "file": "viking/cl-ga-series-data-sheet-edition-rev-a2_64210a9f.md",
+ "supplier": "viking",
+ "file_hash": "5f50e43dc565989607a29c5efac82747a7a12471dd253e18bfe4e671341ad221",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:43+00:00",
+  "is_datasheet": true,
+  "label": "multilayer chip inductor",
+  "family": true,
+  "part_numbers": [
+   "CL-GA",
+   "CL02-GA",
+   "CL03-GA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.49,
+  "tokens_in": 1481,
+  "tokens_out": 53
+ },
+ "type": "multilayer_chip_inductor"
+}

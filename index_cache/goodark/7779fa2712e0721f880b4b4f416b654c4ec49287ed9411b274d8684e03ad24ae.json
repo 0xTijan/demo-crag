@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:03:31+00:00",
+  "at": "2026-11-19T19:04:42+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "P21A",
@@ -17,8 +17,10 @@
    "P25A"
   ],
   "confidence": "high",
-  "seconds": 6.1,
-  "tokens_in": 1556,
-  "tokens_out": 72
- }
+  "asked_again": false,
+  "seconds": 1.56,
+  "tokens_in": 1625,
+  "tokens_out": 73
+ },
+ "type": "standard_rectifier"
 }

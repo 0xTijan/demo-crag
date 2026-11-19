@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:42:02+00:00",
+  "at": "2026-11-19T18:42:58+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -14,8 +14,10 @@
    "AFSL16"
   ],
   "confidence": "high",
-  "seconds": 4.65,
-  "tokens_in": 1322,
+  "asked_again": false,
+  "seconds": 1.25,
+  "tokens_in": 1391,
   "tokens_out": 46
- }
+ },
+ "type": "schottky_diode"
 }

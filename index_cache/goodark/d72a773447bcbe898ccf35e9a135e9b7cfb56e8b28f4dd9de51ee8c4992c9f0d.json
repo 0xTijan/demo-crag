@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:58:20+00:00",
+  "at": "2026-11-19T18:59:21+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "MB12S",
@@ -17,8 +17,10 @@
    "MB110S"
   ],
   "confidence": "high",
-  "seconds": 5.75,
-  "tokens_in": 1688,
-  "tokens_out": 65
- }
+  "asked_again": false,
+  "seconds": 1.77,
+  "tokens_in": 1757,
+  "tokens_out": 63
+ },
+ "type": "fast_recovery_rectifier"
 }

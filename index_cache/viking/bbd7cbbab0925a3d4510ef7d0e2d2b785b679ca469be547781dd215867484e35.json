@@ -1,0 +1,25 @@
+{
+ "file": "viking/pcds-series-data-sheet-edition-rev-b5_668f52f6.md",
+ "supplier": "viking",
+ "file_hash": "bbd7cbbab0925a3d4510ef7d0e2d2b785b679ca469be547781dd215867484e35",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:54+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "PCDS63B",
+   "PCDS74B",
+   "PCDS105B",
+   "PCDS125B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.8,
+  "tokens_in": 1840,
+  "tokens_out": 63
+ },
+ "type": "smd_power_inductor"
+}

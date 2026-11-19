@@ -1,0 +1,26 @@
+{
+ "file": "viking/pcs-series-data-sheet-edition-rev-c1_11b761bb.md",
+ "supplier": "viking",
+ "file_hash": "93cab1f98b079b5ce648fe409720dbd5342aad173658d83fec16850753891f42",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:58+00:00",
+  "is_datasheet": true,
+  "label": "shielded SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "PCS62B",
+   "PCS64B",
+   "PCS73",
+   "PCS74",
+   "PCS124"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.73,
+  "tokens_in": 1839,
+  "tokens_out": 63
+ },
+ "type": "shielded_smd_power_inductor"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "viking/ar-series-data-sheet-edition-rev-g1_c298c217.md",
+ "supplier": "viking",
+ "file_hash": "4670f60645ad804ee11d4e685396ced9fe766872fc6225b05735f96449b73837",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:33+00:00",
+  "is_datasheet": true,
+  "label": "thin film precision chip resistor",
+  "family": true,
+  "part_numbers": [
+   "AR01",
+   "AR02",
+   "AR03",
+   "AR05",
+   "AR06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.9,
+  "tokens_in": 2192,
+  "tokens_out": 58
+ },
+ "type": "thin_film_precision_chip_resistor"
+}

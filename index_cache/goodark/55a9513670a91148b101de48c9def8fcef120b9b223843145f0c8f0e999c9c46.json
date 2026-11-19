@@ -5,17 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:50:01+00:00",
+  "at": "2026-11-19T18:50:56+00:00",
   "is_datasheet": true,
   "label": "TVS diode",
-  "family": true,
+  "family": false,
   "part_numbers": [
-   "GFC2200DRV",
-   "ABZX84Bxxx"
+   "GFC2200DRV"
   ],
   "confidence": "high",
-  "seconds": 7.93,
-  "tokens_in": 1726,
-  "tokens_out": 49
- }
+  "asked_again": false,
+  "seconds": 1.54,
+  "tokens_in": 1795,
+  "tokens_out": 41
+ },
+ "type": "tvs_diode"
 }

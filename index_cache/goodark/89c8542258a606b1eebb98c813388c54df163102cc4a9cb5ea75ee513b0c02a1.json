@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:44:54+00:00",
+  "at": "2026-11-19T18:45:46+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier diode",
+  "label": "Silicon Schottky barrier diode",
   "family": false,
   "part_numbers": [
    "SKY"
   ],
   "confidence": "high",
-  "seconds": 7.4,
-  "tokens_in": 1221,
-  "tokens_out": 38
- }
+  "asked_again": false,
+  "seconds": 1.18,
+  "tokens_in": 1290,
+  "tokens_out": 40
+ },
+ "type": "silicon_schottky_barrier_diode"
 }

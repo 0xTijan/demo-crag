@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:53+00:00",
+  "at": "2026-11-19T19:11:13+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -15,8 +15,10 @@
    "TP0240S"
   ],
   "confidence": "high",
-  "seconds": 5.45,
-  "tokens_in": 1353,
+  "asked_again": false,
+  "seconds": 1.42,
+  "tokens_in": 1422,
   "tokens_out": 58
- }
+ },
+ "type": "schottky_diode"
 }

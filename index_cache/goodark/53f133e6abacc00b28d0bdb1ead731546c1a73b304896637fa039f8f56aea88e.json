@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:55:35+00:00",
+  "at": "2026-11-19T18:56:28+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "HER151G",
@@ -17,8 +17,10 @@
    "HER155G"
   ],
   "confidence": "high",
-  "seconds": 7.74,
-  "tokens_in": 1622,
-  "tokens_out": 86
- }
+  "asked_again": false,
+  "seconds": 2.01,
+  "tokens_in": 1691,
+  "tokens_out": 88
+ },
+ "type": "fast_recovery_rectifier"
 }

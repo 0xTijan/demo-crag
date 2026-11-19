@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:01:42+00:00",
+  "at": "2026-11-19T19:02:49+00:00",
   "is_datasheet": true,
   "label": "ultrafast recovery rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "MUR2040BFCT"
   ],
   "confidence": "high",
-  "seconds": 5.56,
-  "tokens_in": 1408,
+  "asked_again": false,
+  "seconds": 1.43,
+  "tokens_in": 1477,
   "tokens_out": 44
- }
+ },
+ "type": "ultrafast_recovery_rectifier"
 }

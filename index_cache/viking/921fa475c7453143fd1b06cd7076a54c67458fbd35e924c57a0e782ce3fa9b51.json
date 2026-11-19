@@ -1,0 +1,22 @@
+{
+ "file": "viking/cmc-series-data-sheet-edition-rev-a4_cdfaec7f.md",
+ "supplier": "viking",
+ "file_hash": "921fa475c7453143fd1b06cd7076a54c67458fbd35e924c57a0e782ce3fa9b51",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:54+00:00",
+  "is_datasheet": false,
+  "label": "common mode filter",
+  "family": true,
+  "part_numbers": [
+   "CMC0502"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.16,
+  "tokens_in": 1330,
+  "tokens_out": 39
+ },
+ "type": "_not_a_datasheet"
+}

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:39:35+00:00",
+  "at": "2026-11-19T18:40:34+00:00",
   "is_datasheet": true,
   "label": "TVS diode",
   "family": true,
@@ -17,8 +17,10 @@
    "1KSMBJ14A"
   ],
   "confidence": "high",
-  "seconds": 7.53,
-  "tokens_in": 1851,
+  "asked_again": false,
+  "seconds": 1.87,
+  "tokens_in": 1920,
   "tokens_out": 77
- }
+ },
+ "type": "tvs_diode"
 }

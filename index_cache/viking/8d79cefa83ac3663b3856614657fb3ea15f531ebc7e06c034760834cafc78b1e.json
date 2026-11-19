@@ -1,0 +1,26 @@
+{
+ "file": "viking/pwr-series_7aa631ba.md",
+ "supplier": "viking",
+ "file_hash": "8d79cefa83ac3663b3856614657fb3ea15f531ebc7e06c034760834cafc78b1e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:20+00:00",
+  "is_datasheet": true,
+  "label": "pulse withstanding chip resistor",
+  "family": true,
+  "part_numbers": [
+   "PWR02",
+   "PWR03",
+   "PWR05",
+   "PWR05 (1/2W)",
+   "PWR06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.93,
+  "tokens_in": 2041,
+  "tokens_out": 68
+ },
+ "type": "pulse_withstanding_chip_resistor"
+}

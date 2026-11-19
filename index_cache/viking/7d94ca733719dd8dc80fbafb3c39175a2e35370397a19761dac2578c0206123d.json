@@ -1,0 +1,26 @@
+{
+ "file": "viking/cr-ac-series_f7a90299.md",
+ "supplier": "viking",
+ "file_hash": "7d94ca733719dd8dc80fbafb3c39175a2e35370397a19761dac2578c0206123d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:16+00:00",
+  "is_datasheet": true,
+  "label": "thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CR..AC Series",
+   "CR-01",
+   "CR-02",
+   "CR-03",
+   "CR-05"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.73,
+  "tokens_in": 1896,
+  "tokens_out": 63
+ },
+ "type": "thick_film_chip_resistor"
+}

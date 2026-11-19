@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:53:44+00:00",
+  "at": "2026-11-19T18:54:36+00:00",
   "is_datasheet": true,
   "label": "Silicon Carbide Schottky Diode",
   "family": false,
@@ -13,8 +13,10 @@
    "GS04D065SF"
   ],
   "confidence": "high",
-  "seconds": 5.79,
-  "tokens_in": 1615,
+  "asked_again": false,
+  "seconds": 1.47,
+  "tokens_in": 1684,
   "tokens_out": 47
- }
+ },
+ "type": "silicon_carbide_schottky_diode"
 }

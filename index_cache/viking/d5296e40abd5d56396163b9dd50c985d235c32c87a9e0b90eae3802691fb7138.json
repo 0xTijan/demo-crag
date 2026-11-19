@@ -1,0 +1,26 @@
+{
+ "file": "viking/sdia-g-series-data-sheet-edition-rev-a5_d2a11543.md",
+ "supplier": "viking",
+ "file_hash": "d5296e40abd5d56396163b9dd50c985d235c32c87a9e0b90eae3802691fb7138",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:55+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SDIA02512-G",
+   "SDIA0315-G",
+   "SDIA0418-G",
+   "SDIA0420-G",
+   "SDIA0430-G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 3.05,
+  "tokens_in": 2605,
+  "tokens_out": 133
+ },
+ "type": "smd_power_inductor"
+}

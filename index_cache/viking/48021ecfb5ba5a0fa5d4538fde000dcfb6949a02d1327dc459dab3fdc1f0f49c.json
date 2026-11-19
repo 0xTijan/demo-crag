@@ -1,0 +1,26 @@
+{
+ "file": "viking/mfr-series-data-sheet-edition-rev-c_148ec9a9.md",
+ "supplier": "viking",
+ "file_hash": "48021ecfb5ba5a0fa5d4538fde000dcfb6949a02d1327dc459dab3fdc1f0f49c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:15+00:00",
+  "is_datasheet": true,
+  "label": "metal film leaded precision resistor",
+  "family": true,
+  "part_numbers": [
+   "MFR0318",
+   "MFR0623",
+   "MFR0932",
+   "MFR1145",
+   "MFR1550"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.69,
+  "tokens_in": 1459,
+  "tokens_out": 74
+ },
+ "type": "metal_film_precision_melf_resistor"
+}

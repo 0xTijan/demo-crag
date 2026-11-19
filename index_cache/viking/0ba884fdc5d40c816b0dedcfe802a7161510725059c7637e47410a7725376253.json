@@ -1,0 +1,26 @@
+{
+ "file": "viking/ram-series-data-sheet-edition-rev-a6_7b2f31d1.md",
+ "supplier": "viking",
+ "file_hash": "0ba884fdc5d40c816b0dedcfe802a7161510725059c7637e47410a7725376253",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:22+00:00",
+  "is_datasheet": true,
+  "label": "thin film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "RAM02",
+   "RAM03",
+   "RAM05",
+   "RAM06",
+   "RAM13"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.67,
+  "tokens_in": 1868,
+  "tokens_out": 57
+ },
+ "type": "thin_film_chip_resistor"
+}

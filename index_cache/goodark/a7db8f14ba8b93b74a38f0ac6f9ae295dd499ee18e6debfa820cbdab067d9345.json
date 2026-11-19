@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:03:35+00:00",
+  "at": "2026-11-19T19:04:45+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "P600A",
@@ -17,8 +17,10 @@
    "P600J"
   ],
   "confidence": "high",
-  "seconds": 6.59,
-  "tokens_in": 1553,
-  "tokens_out": 79
- }
+  "asked_again": false,
+  "seconds": 1.65,
+  "tokens_in": 1622,
+  "tokens_out": 80
+ },
+ "type": "standard_rectifier"
 }

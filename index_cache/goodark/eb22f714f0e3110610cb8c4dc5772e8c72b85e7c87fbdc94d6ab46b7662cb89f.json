@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:25+00:00",
+  "at": "2026-11-19T18:46:16+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier diode",
   "family": true,
@@ -16,8 +16,10 @@
    "BAT54S"
   ],
   "confidence": "high",
-  "seconds": 4.77,
-  "tokens_in": 1118,
+  "asked_again": false,
+  "seconds": 1.32,
+  "tokens_in": 1187,
   "tokens_out": 57
- }
+ },
+ "type": "schottky_diode"
 }

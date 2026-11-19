@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:11+00:00",
+  "at": "2026-11-19T18:46:02+00:00",
   "is_datasheet": true,
   "label": "switching diode",
   "family": true,
@@ -16,8 +16,10 @@
    "BAS70-06"
   ],
   "confidence": "high",
-  "seconds": 5.22,
-  "tokens_in": 1141,
+  "asked_again": false,
+  "seconds": 1.41,
+  "tokens_in": 1210,
   "tokens_out": 65
- }
+ },
+ "type": "switching_diode"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "viking/sdb-series-data-sheet-edition-rev-c1_6f9ed528.md",
+ "supplier": "viking",
+ "file_hash": "bd40d73e90229f2c29f85f2c37ae6b675747592ee7a5d1c7df7d6e142ab0fd5f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:45+00:00",
+  "is_datasheet": true,
+  "label": "shielded SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SDB0420",
+   "SDB0520",
+   "SDB0530",
+   "SDB0620",
+   "SDB0625"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.23,
+  "tokens_in": 2421,
+  "tokens_out": 75
+ },
+ "type": "shielded_smd_power_inductor"
+}

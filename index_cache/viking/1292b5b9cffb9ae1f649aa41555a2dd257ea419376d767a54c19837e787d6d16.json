@@ -1,0 +1,24 @@
+{
+ "file": "viking/scdb-series-data-sheet-edition-rev-b_c43c6cfb.md",
+ "supplier": "viking",
+ "file_hash": "1292b5b9cffb9ae1f649aa41555a2dd257ea419376d767a54c19837e787d6d16",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:31+00:00",
+  "is_datasheet": true,
+  "label": "shielded SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SCDB2D12",
+   "SCDB2D15",
+   "SCDB2D18"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.65,
+  "tokens_in": 1719,
+  "tokens_out": 59
+ },
+ "type": "shielded_smd_power_inductor"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "viking/vlh-series_6bbc6b93.md",
+ "supplier": "viking",
+ "file_hash": "78498bbfa0de60180bbd7cf8b7830523b357f5d18ea70c67c2e4badc8c890772",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:45+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "VLH252010E",
+   "VLH252012E",
+   "VLH252510",
+   "VLH322515",
+   "VLH322520"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.33,
+  "tokens_in": 2414,
+  "tokens_out": 85
+ },
+ "type": "smd_power_inductor"
+}

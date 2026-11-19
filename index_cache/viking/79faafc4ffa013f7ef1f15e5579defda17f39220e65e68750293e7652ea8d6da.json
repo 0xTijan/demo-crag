@@ -1,0 +1,26 @@
+{
+ "file": "viking/mcf-a-a-series-data-sheet-edition-rev-a6_c2837bdd.md",
+ "supplier": "viking",
+ "file_hash": "79faafc4ffa013f7ef1f15e5579defda17f39220e65e68750293e7652ea8d6da",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:03+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ceramic capacitor",
+  "family": true,
+  "part_numbers": [
+   "0201",
+   "0402",
+   "0603",
+   "0805",
+   "1206"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.99,
+  "tokens_in": 1730,
+  "tokens_out": 87
+ },
+ "type": "multilayer_ceramic_capacitor"
+}

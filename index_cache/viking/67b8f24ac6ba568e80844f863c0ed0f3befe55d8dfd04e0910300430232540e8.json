@@ -1,0 +1,26 @@
+{
+ "file": "viking/asg-series-data-sheet-edition-rev-a_bcd2803f.md",
+ "supplier": "viking",
+ "file_hash": "67b8f24ac6ba568e80844f863c0ed0f3befe55d8dfd04e0910300430232540e8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:28+00:00",
+  "is_datasheet": true,
+  "label": "Green Anti-Sulfurated Thick Film Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "ASG02",
+   "ASG03",
+   "ASG05",
+   "ASG06",
+   "ASG10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.8,
+  "tokens_in": 1762,
+  "tokens_out": 69
+ },
+ "type": "green_anti_sulfurated_thick_film_chip_re"
+}

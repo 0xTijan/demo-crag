@@ -5,17 +5,19 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:02:07+00:00",
+  "at": "2026-11-19T19:03:14+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "superfast rectifier",
   "family": true,
   "part_numbers": [
    "MUR440",
    "MUR460"
   ],
   "confidence": "high",
-  "seconds": 4.74,
-  "tokens_in": 1403,
-  "tokens_out": 48
- }
+  "asked_again": false,
+  "seconds": 1.27,
+  "tokens_in": 1472,
+  "tokens_out": 46
+ },
+ "type": "superfast_rectifier"
 }

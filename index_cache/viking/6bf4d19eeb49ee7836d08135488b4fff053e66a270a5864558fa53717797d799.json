@@ -1,0 +1,26 @@
+{
+ "file": "viking/sda-series-data-sheet-edition-rev-a1_6013041c.md",
+ "supplier": "viking",
+ "file_hash": "6bf4d19eeb49ee7836d08135488b4fff053e66a270a5864558fa53717797d799",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:41+00:00",
+  "is_datasheet": true,
+  "label": "shielded SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SDA0420LR",
+   "SDA0430LR",
+   "SDA0530A",
+   "SDA0630A",
+   "SDA0660LR"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 3.7,
+  "tokens_in": 3370,
+  "tokens_out": 152
+ },
+ "type": "shielded_smd_power_inductor"
+}

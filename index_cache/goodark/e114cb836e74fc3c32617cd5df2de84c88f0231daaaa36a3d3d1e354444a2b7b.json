@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:03:26+00:00",
+  "at": "2026-11-19T19:04:37+00:00",
   "is_datasheet": true,
   "label": "push-pull transformer driver",
   "family": false,
@@ -13,8 +13,10 @@
    "MX6501T"
   ],
   "confidence": "high",
-  "seconds": 5.34,
-  "tokens_in": 1104,
+  "asked_again": false,
+  "seconds": 1.16,
+  "tokens_in": 1173,
   "tokens_out": 41
- }
+ },
+ "type": "push_pull_transformer_driver"
 }

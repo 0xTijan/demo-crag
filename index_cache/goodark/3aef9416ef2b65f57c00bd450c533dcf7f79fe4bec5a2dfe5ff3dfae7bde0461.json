@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:42:30+00:00",
+  "at": "2026-11-19T18:43:26+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "AGMN29006LDR"
   ],
   "confidence": "high",
-  "seconds": 6.05,
-  "tokens_in": 1779,
+  "asked_again": false,
+  "seconds": 1.53,
+  "tokens_in": 1848,
   "tokens_out": 44
- }
+ },
+ "type": "mosfet_n"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "viking/hvc-series-data-sheet-edition-rev-a1_5e56661c.md",
+ "supplier": "viking",
+ "file_hash": "65de5e21bcfb4c6593c56b710d9e5dd6d1f60da4d7cf7daa791dcf358c055751",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:18+00:00",
+  "is_datasheet": true,
+  "label": "high voltage thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "HVC02",
+   "HVC03",
+   "HVC05",
+   "HVC06",
+   "HVC0A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.74,
+  "tokens_in": 1666,
+  "tokens_out": 70
+ },
+ "type": "high_voltage_thick_film_chip_resistor"
+}

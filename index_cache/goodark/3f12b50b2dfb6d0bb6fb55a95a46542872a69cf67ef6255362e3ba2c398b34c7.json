@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:55:42+00:00",
+  "at": "2026-11-19T18:56:35+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "HER201 G",
@@ -17,8 +17,10 @@
    "HER205 G"
   ],
   "confidence": "high",
-  "seconds": 7.18,
-  "tokens_in": 1593,
-  "tokens_out": 86
- }
+  "asked_again": false,
+  "seconds": 1.71,
+  "tokens_in": 1662,
+  "tokens_out": 88
+ },
+ "type": "fast_recovery_rectifier"
 }

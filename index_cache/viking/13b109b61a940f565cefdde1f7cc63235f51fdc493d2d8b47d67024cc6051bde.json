@@ -1,0 +1,26 @@
+{
+ "file": "viking/cn-series_df7b9752.md",
+ "supplier": "viking",
+ "file_hash": "13b109b61a940f565cefdde1f7cc63235f51fdc493d2d8b47d67024cc6051bde",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:04+00:00",
+  "is_datasheet": true,
+  "label": "thick film array chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CN-21",
+   "CN-41",
+   "CN-42",
+   "CN-43",
+   "CNA42"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.8,
+  "tokens_in": 1933,
+  "tokens_out": 70
+ },
+ "type": "thick_film_array_chip_resistor"
+}

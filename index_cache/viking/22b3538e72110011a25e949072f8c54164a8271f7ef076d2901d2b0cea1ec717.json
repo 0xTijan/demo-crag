@@ -1,0 +1,26 @@
+{
+ "file": "viking/rs-series-data-sheet-edition-rev-b7_11f27b06.md",
+ "supplier": "viking",
+ "file_hash": "22b3538e72110011a25e949072f8c54164a8271f7ef076d2901d2b0cea1ec717",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:24+00:00",
+  "is_datasheet": true,
+  "label": "current sensing thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "RS-02",
+   "RS-03",
+   "RS-05",
+   "RS-06",
+   "RS-10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.73,
+  "tokens_in": 1838,
+  "tokens_out": 64
+ },
+ "type": "current_sensing_thick_film_chip_resistor"
+}

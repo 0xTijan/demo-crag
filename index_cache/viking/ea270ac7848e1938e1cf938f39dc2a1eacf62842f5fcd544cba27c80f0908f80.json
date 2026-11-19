@@ -1,0 +1,26 @@
+{
+ "file": "viking/knp-series-data-sheet-edition-rev-a9_3bdc8852.md",
+ "supplier": "viking",
+ "file_hash": "ea270ac7848e1938e1cf938f39dc2a1eacf62842f5fcd544cba27c80f0908f80",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:35+00:00",
+  "is_datasheet": true,
+  "label": "wire wound resistor",
+  "family": true,
+  "part_numbers": [
+   "KNP Series",
+   "0932",
+   "1145",
+   "1550",
+   "1760"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.66,
+  "tokens_in": 1590,
+  "tokens_out": 60
+ },
+ "type": "wire_wound_resistor"
+}

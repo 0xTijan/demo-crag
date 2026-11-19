@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:05:54+00:00",
+  "at": "2026-11-19T19:07:09+00:00",
   "is_datasheet": true,
   "label": "Schottky diode",
   "family": true,
@@ -15,8 +15,10 @@
    "SD101C"
   ],
   "confidence": "high",
-  "seconds": 5.11,
-  "tokens_in": 1627,
+  "asked_again": false,
+  "seconds": 1.62,
+  "tokens_in": 1696,
   "tokens_out": 54
- }
+ },
+ "type": "schottky_diode"
 }

@@ -1,0 +1,25 @@
+{
+ "file": "viking/art-a-series-data-sheet-edition-rev-a7_fbbfdedd.md",
+ "supplier": "viking",
+ "file_hash": "7b908932a8c63e8be1e6e2df444b289a30fb348fd20e2d14325b7623c62dba82",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:03+00:00",
+  "is_datasheet": true,
+  "label": "Automotive Grade Professional Thin Film Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "ART02",
+   "ART03",
+   "ART05",
+   "ART06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.66,
+  "tokens_in": 1773,
+  "tokens_out": 57
+ },
+ "type": "automotive_grade_professional_thin_film_"
+}

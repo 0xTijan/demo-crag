@@ -1,0 +1,25 @@
+{
+ "file": "viking/as-array-series-data-sheet-edition-rev-a5_6d144f2a.md",
+ "supplier": "viking",
+ "file_hash": "71299409f9549f25053bda54fe30d1642fd213192c383327571232814a48df81",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:17+00:00",
+  "is_datasheet": true,
+  "label": "thick film chip resistor array",
+  "family": true,
+  "part_numbers": [
+   "AS21",
+   "AS41",
+   "AS42",
+   "AS43"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.59,
+  "tokens_in": 1795,
+  "tokens_out": 54
+ },
+ "type": "thick_film_chip_resistor_array"
+}

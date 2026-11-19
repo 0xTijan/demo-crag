@@ -1,0 +1,24 @@
+{
+ "file": "viking/mlh-a-series-data-sheet-edition-rev-a1_328b2ae3.md",
+ "supplier": "viking",
+ "file_hash": "fdfc3dde651b20c2fda1512d1470f745646838bdf7d7e596475eac74e38e58fd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:21+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ferrite chip inductor",
+  "family": true,
+  "part_numbers": [
+   "MLH05",
+   "MLH06",
+   "MLH08"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.35,
+  "tokens_in": 1417,
+  "tokens_out": 54
+ },
+ "type": "multilayer_ferrite_chip_inductor"
+}

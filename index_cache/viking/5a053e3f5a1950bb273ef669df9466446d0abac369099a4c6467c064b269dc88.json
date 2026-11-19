@@ -1,0 +1,25 @@
+{
+ "file": "viking/psdb-series_500edc6d.md",
+ "supplier": "viking",
+ "file_hash": "5a053e3f5a1950bb273ef669df9466446d0abac369099a4c6467c064b269dc88",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:12+00:00",
+  "is_datasheet": true,
+  "label": "shielded SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "PSDB5D28",
+   "PSDB1003",
+   "PSDB1004",
+   "PSDB1005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.82,
+  "tokens_in": 1836,
+  "tokens_out": 67
+ },
+ "type": "shielded_smd_power_inductor"
+}

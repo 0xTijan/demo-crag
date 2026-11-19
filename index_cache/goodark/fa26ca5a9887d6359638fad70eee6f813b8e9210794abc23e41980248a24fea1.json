@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:46:34+00:00",
+  "at": "2026-11-19T18:47:23+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "glass passivated bridge rectifier",
   "family": true,
   "part_numbers": [
    "DB153",
@@ -17,8 +17,10 @@
    "DB157"
   ],
   "confidence": "high",
-  "seconds": 7.27,
-  "tokens_in": 1832,
-  "tokens_out": 61
- }
+  "asked_again": false,
+  "seconds": 1.8,
+  "tokens_in": 1901,
+  "tokens_out": 64
+ },
+ "type": "glass_passivated_bridge_rectifier"
 }

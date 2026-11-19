@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:39:48+00:00",
+  "at": "2026-11-19T18:40:47+00:00",
   "is_datasheet": true,
   "label": "Zener diode",
   "family": true,
@@ -17,8 +17,10 @@
    "1N4732A"
   ],
   "confidence": "high",
-  "seconds": 5.61,
-  "tokens_in": 1652,
+  "asked_again": false,
+  "seconds": 1.83,
+  "tokens_in": 1721,
   "tokens_out": 77
- }
+ },
+ "type": "zener_diode"
 }

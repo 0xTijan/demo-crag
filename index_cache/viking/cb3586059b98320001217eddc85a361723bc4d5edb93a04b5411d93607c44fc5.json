@@ -1,0 +1,23 @@
+{
+ "file": "viking/hmr-series-data-sheet-edition-rev-a8_a5a80b16.md",
+ "supplier": "viking",
+ "file_hash": "cb3586059b98320001217eddc85a361723bc4d5edb93a04b5411d93607c44fc5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:15+00:00",
+  "is_datasheet": true,
+  "label": "high ohmic chip resistor",
+  "family": true,
+  "part_numbers": [
+   "HMR05",
+   "HMR06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.43,
+  "tokens_in": 1560,
+  "tokens_out": 45
+ },
+ "type": "high_ohmic_chip_resistor"
+}

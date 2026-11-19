@@ -1,0 +1,22 @@
+{
+ "file": "viking/arp-series_f63d5ea4.md",
+ "supplier": "viking",
+ "file_hash": "972212c000ce5d2225e99f6e21c8c605099ac9d70c41aa3599a2faa70c8fcaeb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:00+00:00",
+  "is_datasheet": true,
+  "label": "high power thin film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "ARP06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.29,
+  "tokens_in": 1466,
+  "tokens_out": 39
+ },
+ "type": "high_power_thin_film_chip_resistor"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "viking/tr50-h-series_33ba7af5.md",
+ "supplier": "viking",
+ "file_hash": "022b58c4b9b7c5b21958843e0a371f592024faa6678d4cb3b3289d2f456aa1db",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:38+00:00",
+  "is_datasheet": true,
+  "label": "TO-220 power resistor",
+  "family": true,
+  "part_numbers": [
+   "TR50-H Series"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.13,
+  "tokens_in": 1180,
+  "tokens_out": 42
+ },
+ "type": "to_220_power_resistor"
+}

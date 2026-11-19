@@ -1,0 +1,25 @@
+{
+ "file": "viking/art-a-series-data-sheet-edition-rev-a3_525473a8.md",
+ "supplier": "viking",
+ "file_hash": "d5a4e13b56ab5e75fd8b05eadda40e425ba93ba28f956ea39c3f0b5676812b38",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:02+00:00",
+  "is_datasheet": true,
+  "label": "thin film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "ART02",
+   "ART03",
+   "ART05",
+   "ART06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.58,
+  "tokens_in": 1759,
+  "tokens_out": 52
+ },
+ "type": "thin_film_chip_resistor"
+}

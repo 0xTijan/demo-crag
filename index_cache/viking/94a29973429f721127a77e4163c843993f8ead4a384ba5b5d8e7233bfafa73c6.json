@@ -1,0 +1,25 @@
+{
+ "file": "viking/csw-a-series-data-sheet-edition-rev-a_97040a64.md",
+ "supplier": "viking",
+ "file_hash": "94a29973429f721127a77e4163c843993f8ead4a384ba5b5d8e7233bfafa73c6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:04+00:00",
+  "is_datasheet": true,
+  "label": "Automotive Grade Current Sensing Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "CSW08",
+   "CSW62",
+   "CSW20",
+   "CSW25"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.6,
+  "tokens_in": 1612,
+  "tokens_out": 61
+ },
+ "type": "automotive_grade_current_sensing_chip_re"
+}

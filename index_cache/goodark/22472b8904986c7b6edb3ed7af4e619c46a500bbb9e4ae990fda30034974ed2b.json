@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:55:54+00:00",
+  "at": "2026-11-19T18:56:47+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "HER601G",
@@ -17,8 +17,10 @@
    "HER605G"
   ],
   "confidence": "high",
-  "seconds": 7.2,
-  "tokens_in": 1612,
-  "tokens_out": 90
- }
+  "asked_again": false,
+  "seconds": 2.01,
+  "tokens_in": 1681,
+  "tokens_out": 88
+ },
+ "type": "fast_recovery_rectifier"
 }

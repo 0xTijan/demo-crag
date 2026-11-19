@@ -1,0 +1,26 @@
+{
+ "file": "viking/crw-a-series_c802685d.md",
+ "supplier": "viking",
+ "file_hash": "3c4f551819c87930a64a4479868fa926175dc90fb3e0157a71264076eb746dc0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:33+00:00",
+  "is_datasheet": true,
+  "label": "automotive grade chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CRW08",
+   "CRW08(Jumper)",
+   "CRW62",
+   "CRW62(Jumper)",
+   "CRW20"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.75,
+  "tokens_in": 1776,
+  "tokens_out": 67
+ },
+ "type": "automotive_grade_chip_resistor"
+}

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:58:45+00:00",
+  "at": "2026-11-19T18:59:47+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "MBR2045CT"
   ],
   "confidence": "high",
-  "seconds": 4.79,
-  "tokens_in": 1320,
+  "asked_again": false,
+  "seconds": 1.23,
+  "tokens_in": 1389,
   "tokens_out": 43
- }
+ },
+ "type": "schottky_diode"
 }

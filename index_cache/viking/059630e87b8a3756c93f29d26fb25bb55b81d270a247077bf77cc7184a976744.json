@@ -1,0 +1,26 @@
+{
+ "file": "viking/csmw-series-data-sheet-edition-rev-a4_3a5af727.md",
+ "supplier": "viking",
+ "file_hash": "059630e87b8a3756c93f29d26fb25bb55b81d270a247077bf77cc7184a976744",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:48+00:00",
+  "is_datasheet": true,
+  "label": "metal chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CSMW36",
+   "CSMW08",
+   "CSMW62",
+   "CSMW20",
+   "CSMW25"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.97,
+  "tokens_in": 2235,
+  "tokens_out": 61
+ },
+ "type": "metal_chip_resistor"
+}

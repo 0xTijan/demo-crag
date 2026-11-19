@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:54:37+00:00",
+  "at": "2026-11-19T18:55:29+00:00",
   "is_datasheet": true,
   "label": "Silicon Carbide Schottky Diode",
   "family": false,
@@ -13,8 +13,10 @@
    "GS15D120SP"
   ],
   "confidence": "high",
-  "seconds": 6.02,
-  "tokens_in": 1625,
+  "asked_again": false,
+  "seconds": 1.52,
+  "tokens_in": 1694,
   "tokens_out": 47
- }
+ },
+ "type": "silicon_carbide_schottky_diode"
 }

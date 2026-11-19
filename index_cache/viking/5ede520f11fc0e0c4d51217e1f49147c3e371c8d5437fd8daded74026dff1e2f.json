@@ -1,0 +1,25 @@
+{
+ "file": "viking/tar-series-data-sheet-edition-rev-a6_d53900d6.md",
+ "supplier": "viking",
+ "file_hash": "5ede520f11fc0e0c4d51217e1f49147c3e371c8d5437fd8daded74026dff1e2f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:23+00:00",
+  "is_datasheet": true,
+  "label": "tantalum nitride thin film precision chip resistor",
+  "family": true,
+  "part_numbers": [
+   "TAR02",
+   "TAR03",
+   "TAR05",
+   "TAR06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.72,
+  "tokens_in": 1835,
+  "tokens_out": 62
+ },
+ "type": "aluminum_nitride_thin_film_precision_chi"
+}

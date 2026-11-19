@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:56:36+00:00",
+  "at": "2026-11-19T18:57:33+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "KBJ4AV",
@@ -17,8 +17,10 @@
    "KBJ4JV"
   ],
   "confidence": "high",
-  "seconds": 8.62,
-  "tokens_in": 1991,
-  "tokens_out": 76
- }
+  "asked_again": false,
+  "seconds": 2.11,
+  "tokens_in": 2060,
+  "tokens_out": 74
+ },
+ "type": "fast_recovery_rectifier"
 }

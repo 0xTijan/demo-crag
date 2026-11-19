@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:48:42+00:00",
+  "at": "2026-11-19T18:49:32+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": false,
   "part_numbers": [
    "GBJ20M-1200V"
   ],
   "confidence": "high",
-  "seconds": 8.29,
-  "tokens_in": 1453,
-  "tokens_out": 43
- }
+  "asked_again": false,
+  "seconds": 1.5,
+  "tokens_in": 1522,
+  "tokens_out": 45
+ },
+ "type": "fast_recovery_rectifier"
 }

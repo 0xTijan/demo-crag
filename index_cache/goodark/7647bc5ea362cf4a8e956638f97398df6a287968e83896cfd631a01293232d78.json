@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:41:27+00:00",
+  "at": "2026-11-19T18:42:24+00:00",
   "is_datasheet": true,
   "label": "NPN transistor",
   "family": true,
@@ -17,8 +17,10 @@
    "ABC850"
   ],
   "confidence": "high",
-  "seconds": 5.97,
-  "tokens_in": 1654,
+  "asked_again": false,
+  "seconds": 1.66,
+  "tokens_in": 1723,
   "tokens_out": 61
- }
+ },
+ "type": "npn_transistor"
 }

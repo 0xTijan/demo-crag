@@ -1,0 +1,23 @@
+{
+ "file": "viking/nl-series_e90f4779.md",
+ "supplier": "viking",
+ "file_hash": "80aa49ee2ba8ff1a0370fae0dc02eec74dd7a8a3a7d5e3bb0432af8ca54dc333",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:31+00:00",
+  "is_datasheet": true,
+  "label": "wire wound chip inductor",
+  "family": true,
+  "part_numbers": [
+   "NL10(C)",
+   "NL12(C)"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.38,
+  "tokens_in": 1468,
+  "tokens_out": 46
+ },
+ "type": "wire_wound_chip_inductor"
+}

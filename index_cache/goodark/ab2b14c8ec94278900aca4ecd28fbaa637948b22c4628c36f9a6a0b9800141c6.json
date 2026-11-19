@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:01:05+00:00",
+  "at": "2026-11-19T19:02:11+00:00",
   "is_datasheet": true,
   "label": "fast recovery rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "MR856"
   ],
   "confidence": "high",
-  "seconds": 6.92,
-  "tokens_in": 1548,
+  "asked_again": false,
+  "seconds": 1.81,
+  "tokens_in": 1617,
   "tokens_out": 68
- }
+ },
+ "type": "fast_recovery_rectifier"
 }

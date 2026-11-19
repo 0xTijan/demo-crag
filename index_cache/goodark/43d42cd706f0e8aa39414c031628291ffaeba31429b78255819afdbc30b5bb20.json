@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:03:11+00:00",
+  "at": "2026-11-19T19:04:21+00:00",
   "is_datasheet": true,
   "label": "ultrafast recovery rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "MURD560S"
   ],
   "confidence": "high",
-  "seconds": 4.77,
-  "tokens_in": 1324,
+  "asked_again": false,
+  "seconds": 1.22,
+  "tokens_in": 1393,
   "tokens_out": 43
- }
+ },
+ "type": "ultrafast_recovery_rectifier"
 }

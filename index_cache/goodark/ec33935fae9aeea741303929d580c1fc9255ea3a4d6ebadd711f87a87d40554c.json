@@ -5,14 +5,16 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:41+00:00",
+  "at": "2026-11-19T19:01:46+00:00",
   "is_datasheet": true,
-  "label": "NPN transistor",
+  "label": "NPN switching transistor",
   "family": false,
   "part_numbers": [],
   "confidence": "high",
-  "seconds": 5.45,
-  "tokens_in": 1621,
-  "tokens_out": 32
- }
+  "asked_again": false,
+  "seconds": 1.35,
+  "tokens_in": 1690,
+  "tokens_out": 33
+ },
+ "type": "npn_switching_transistor"
 }

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:04:48+00:00",
+  "at": "2026-11-19T19:06:00+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "SB160"
   ],
   "confidence": "high",
-  "seconds": 6.51,
-  "tokens_in": 1459,
+  "asked_again": false,
+  "seconds": 2.0,
+  "tokens_in": 1528,
   "tokens_out": 88
- }
+ },
+ "type": "schottky_diode"
 }

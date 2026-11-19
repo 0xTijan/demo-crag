@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:55+00:00",
+  "at": "2026-11-19T19:02:01+00:00",
   "is_datasheet": true,
   "label": "Zener diode",
   "family": true,
@@ -17,8 +17,10 @@
    "MMBZ5225B"
   ],
   "confidence": "high",
-  "seconds": 5.5,
-  "tokens_in": 1726,
+  "asked_again": false,
+  "seconds": 1.93,
+  "tokens_in": 1795,
   "tokens_out": 82
- }
+ },
+ "type": "zener_diode"
 }

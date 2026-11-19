@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:43+00:00",
+  "at": "2026-11-19T18:46:33+00:00",
   "is_datasheet": true,
-  "label": "switching diode array",
+  "label": "fast switching diode array",
   "family": false,
   "part_numbers": [
    "KJG"
   ],
   "confidence": "high",
-  "seconds": 4.88,
-  "tokens_in": 1261,
+  "asked_again": false,
+  "seconds": 1.13,
+  "tokens_in": 1330,
   "tokens_out": 38
- }
+ },
+ "type": "fast_switching_diode_array"
 }

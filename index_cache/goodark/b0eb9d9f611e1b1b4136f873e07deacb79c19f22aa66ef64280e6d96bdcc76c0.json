@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:56:00+00:00",
+  "at": "2026-11-19T18:56:53+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "fast recovery rectifier",
   "family": false,
   "part_numbers": [
    "HS312"
   ],
   "confidence": "high",
-  "seconds": 6.75,
-  "tokens_in": 1229,
-  "tokens_out": 40
- }
+  "asked_again": false,
+  "seconds": 1.16,
+  "tokens_in": 1298,
+  "tokens_out": 38
+ },
+ "type": "fast_recovery_rectifier"
 }

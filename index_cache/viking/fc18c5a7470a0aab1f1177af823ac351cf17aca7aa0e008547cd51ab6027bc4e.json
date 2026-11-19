@@ -1,0 +1,24 @@
+{
+ "file": "viking/csrv-series-data-sheet-edition-rev-c5_7151d887.md",
+ "supplier": "viking",
+ "file_hash": "fc18c5a7470a0aab1f1177af823ac351cf17aca7aa0e008547cd51ab6027bc4e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:59+00:00",
+  "is_datasheet": true,
+  "label": "metal film precision MELF resistor",
+  "family": true,
+  "part_numbers": [
+   "CSRV0102",
+   "CSRV0204",
+   "CSRV0207"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.05,
+  "tokens_in": 2455,
+  "tokens_out": 59
+ },
+ "type": "metal_film_precision_melf_resistor"
+}

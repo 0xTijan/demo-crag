@@ -1,0 +1,22 @@
+{
+ "file": "viking/tr100-series-data-sheet-edition-rev-b4_92753b8c.md",
+ "supplier": "viking",
+ "file_hash": "96f19d59fd02223786a68f2183e2b8d90608536e221fb87026bda6902df5dd9b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:28+00:00",
+  "is_datasheet": true,
+  "label": "power resistor",
+  "family": true,
+  "part_numbers": [
+   "TR100"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.07,
+  "tokens_in": 1245,
+  "tokens_out": 36
+ },
+ "type": "power_resistor"
+}

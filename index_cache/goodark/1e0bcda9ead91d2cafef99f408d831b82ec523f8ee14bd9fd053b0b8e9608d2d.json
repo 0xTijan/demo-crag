@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:41:05+00:00",
+  "at": "2026-11-19T18:42:03+00:00",
   "is_datasheet": true,
   "label": "Transient voltage suppressor",
   "family": true,
@@ -17,8 +17,10 @@
    "A3.0SMCJ14A"
   ],
   "confidence": "high",
-  "seconds": 8.6,
-  "tokens_in": 1920,
+  "asked_again": false,
+  "seconds": 2.31,
+  "tokens_in": 1989,
   "tokens_out": 92
- }
+ },
+ "type": "tvs_diode"
 }

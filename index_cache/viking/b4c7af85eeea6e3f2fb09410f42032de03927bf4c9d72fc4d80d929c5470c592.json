@@ -1,0 +1,24 @@
+{
+ "file": "viking/sdrh-series_1b4b5678.md",
+ "supplier": "viking",
+ "file_hash": "b4c7af85eeea6e3f2fb09410f42032de03927bf4c9d72fc4d80d929c5470c592",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:08+00:00",
+  "is_datasheet": true,
+  "label": "shielded SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SDRH0830",
+   "SDRH0840",
+   "SDRH0845"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.61,
+  "tokens_in": 1611,
+  "tokens_out": 59
+ },
+ "type": "shielded_smd_power_inductor"
+}

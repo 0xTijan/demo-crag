@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:37+00:00",
+  "at": "2026-11-19T19:01:42+00:00",
   "is_datasheet": true,
   "label": "NPN transistor",
   "family": false,
@@ -13,8 +13,10 @@
    "MMBT2907A"
   ],
   "confidence": "high",
-  "seconds": 4.96,
-  "tokens_in": 1622,
+  "asked_again": false,
+  "seconds": 1.43,
+  "tokens_in": 1691,
   "tokens_out": 40
- }
+ },
+ "type": "npn_transistor"
 }

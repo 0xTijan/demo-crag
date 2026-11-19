@@ -1,0 +1,23 @@
+{
+ "file": "viking/asf-a-series-data-sheet-edition-rev-a1_c5d65c5a.md",
+ "supplier": "viking",
+ "file_hash": "5599f507754f61adc6b61b1a6a9d46df5e63e76ceff9ece96bd2fd5275159806",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:23+00:00",
+  "is_datasheet": true,
+  "label": "thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "ASF42",
+   "ASF43"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.42,
+  "tokens_in": 1528,
+  "tokens_out": 43
+ },
+ "type": "thick_film_chip_resistor"
+}

@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:56:15+00:00",
+  "at": "2026-11-19T18:57:08+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "glass passivated bridge rectifier",
   "family": true,
   "part_numbers": [
    "KBF201V",
@@ -17,8 +17,10 @@
    "KBF208V"
   ],
   "confidence": "high",
-  "seconds": 7.92,
-  "tokens_in": 1901,
-  "tokens_out": 79
- }
+  "asked_again": false,
+  "seconds": 1.98,
+  "tokens_in": 1970,
+  "tokens_out": 82
+ },
+ "type": "glass_passivated_bridge_rectifier"
 }

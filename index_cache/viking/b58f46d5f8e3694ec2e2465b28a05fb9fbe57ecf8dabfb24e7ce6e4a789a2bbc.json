@@ -1,0 +1,24 @@
+{
+ "file": "viking/hvrc-series_61338954.md",
+ "supplier": "viking",
+ "file_hash": "b58f46d5f8e3694ec2e2465b28a05fb9fbe57ecf8dabfb24e7ce6e4a789a2bbc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:29+00:00",
+  "is_datasheet": true,
+  "label": "thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "HVRC06",
+   "HVRC0A",
+   "HVRC12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.56,
+  "tokens_in": 1716,
+  "tokens_out": 51
+ },
+ "type": "thick_film_chip_resistor"
+}

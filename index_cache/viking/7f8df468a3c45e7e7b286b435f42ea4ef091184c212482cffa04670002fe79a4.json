@@ -1,0 +1,26 @@
+{
+ "file": "viking/avea-series-data-sheet-edition-rev-a3_005b7031.md",
+ "supplier": "viking",
+ "file_hash": "7f8df468a3c45e7e7b286b435f42ea4ef091184c212482cffa04670002fe79a4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:35+00:00",
+  "is_datasheet": false,
+  "label": "catalogue",
+  "family": true,
+  "part_numbers": [
+   "AVEA0506",
+   "AVEA0645",
+   "AVEA0606",
+   "AVEA0610",
+   "AVEA0807"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.14,
+  "tokens_in": 1937,
+  "tokens_out": 94
+ },
+ "type": "_not_a_datasheet"
+}

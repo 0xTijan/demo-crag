@@ -1,0 +1,25 @@
+{
+ "file": "viking/cl-sa-series-data-sheet-edition-rev-a3_9f1205be.md",
+ "supplier": "viking",
+ "file_hash": "ca7b52d96f1c740ed2c70a4d9f8518c2e30a89e07ce86c83c744516b558b0ca4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:49+00:00",
+  "is_datasheet": true,
+  "label": "multilayer chip inductor",
+  "family": true,
+  "part_numbers": [
+   "CL-SA",
+   "CL01-SA",
+   "CL02-SA",
+   "CL03-SA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.56,
+  "tokens_in": 1561,
+  "tokens_out": 56
+ },
+ "type": "multilayer_chip_inductor"
+}

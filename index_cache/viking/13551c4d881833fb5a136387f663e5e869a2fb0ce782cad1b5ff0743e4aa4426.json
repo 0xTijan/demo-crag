@@ -1,0 +1,26 @@
+{
+ "file": "viking/cr-a-series-data-sheet-edition-rev-c7_4ac67f4b.md",
+ "supplier": "viking",
+ "file_hash": "13551c4d881833fb5a136387f663e5e869a2fb0ce782cad1b5ff0743e4aa4426",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:12+00:00",
+  "is_datasheet": true,
+  "label": "chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CR-01",
+   "CR-02",
+   "CR-03",
+   "CR-05",
+   "CR-06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.88,
+  "tokens_in": 2108,
+  "tokens_out": 60
+ },
+ "type": "chip_resistor"
+}

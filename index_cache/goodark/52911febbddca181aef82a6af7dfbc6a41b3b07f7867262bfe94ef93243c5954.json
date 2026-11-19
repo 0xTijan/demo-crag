@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:03:24+00:00",
+  "at": "2026-11-19T19:04:34+00:00",
   "is_datasheet": true,
   "label": "ultrafast rectifier",
   "family": true,
@@ -15,8 +15,10 @@
    "MURS460"
   ],
   "confidence": "high",
-  "seconds": 5.37,
-  "tokens_in": 1513,
+  "asked_again": false,
+  "seconds": 1.69,
+  "tokens_in": 1582,
   "tokens_out": 57
- }
+ },
+ "type": "ultrafast_rectifier"
 }

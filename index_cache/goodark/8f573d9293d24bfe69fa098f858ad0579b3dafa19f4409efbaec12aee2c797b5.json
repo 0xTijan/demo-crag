@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:44:38+00:00",
+  "at": "2026-11-19T18:45:30+00:00",
   "is_datasheet": true,
   "label": "TVS diode",
   "family": true,
@@ -17,8 +17,10 @@
    "ASMBJ9.0A"
   ],
   "confidence": "high",
-  "seconds": 7.7,
-  "tokens_in": 1830,
+  "asked_again": false,
+  "seconds": 1.9,
+  "tokens_in": 1899,
   "tokens_out": 77
- }
+ },
+ "type": "tvs_diode"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "viking/avha-series-data-sheet-edition-rev-a1_3a123cc8.md",
+ "supplier": "viking",
+ "file_hash": "96b63d9dd6c6f5c995fb5e72a1144821e10ae31119d4b74c70b76f3aac2df53d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:37+00:00",
+  "is_datasheet": true,
+  "label": "conductive polymer aluminum solid electrolytic capacitor",
+  "family": true,
+  "part_numbers": [
+   "AVHA0606",
+   "AVHA0608",
+   "AVHA0807",
+   "AVHA0810",
+   "AVHA0812"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.14,
+  "tokens_in": 1980,
+  "tokens_out": 84
+ },
+ "type": "conductive_polymer_aluminum_solid_electr"
+}

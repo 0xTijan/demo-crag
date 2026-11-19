@@ -1,0 +1,24 @@
+{
+ "file": "viking/csra-series_fd8dac94.md",
+ "supplier": "viking",
+ "file_hash": "b09fe1d86fe9835012b750f918c7cb66803f960abe421e4fa5a134891c0c930c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:54+00:00",
+  "is_datasheet": true,
+  "label": "automotive grade metal film MELF resistor",
+  "family": true,
+  "part_numbers": [
+   "CSRA0102",
+   "CSRA0204",
+   "CSRA0207"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.01,
+  "tokens_in": 2292,
+  "tokens_out": 61
+ },
+ "type": "automotive_grade_metal_film_melf_resisto"
+}

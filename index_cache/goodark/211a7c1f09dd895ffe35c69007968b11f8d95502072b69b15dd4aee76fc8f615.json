@@ -1,0 +1,22 @@
+{
+ "file": "goodark/es2hdb_ea825723.md",
+ "supplier": "goodark",
+ "file_hash": "211a7c1f09dd895ffe35c69007968b11f8d95502072b69b15dd4aee76fc8f615",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T18:48:02+00:00",
+  "is_datasheet": true,
+  "label": "superfast rectifier",
+  "family": false,
+  "part_numbers": [
+   "ES2HDB"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.08,
+  "tokens_in": 1220,
+  "tokens_out": 38
+ },
+ "type": "superfast_rectifier"
+}

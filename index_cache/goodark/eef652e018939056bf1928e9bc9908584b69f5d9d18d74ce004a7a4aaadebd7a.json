@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:01:38+00:00",
+  "at": "2026-11-19T19:02:45+00:00",
   "is_datasheet": true,
   "label": "ultrafast recovery rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "MUR1660FCT"
   ],
   "confidence": "high",
-  "seconds": 5.31,
-  "tokens_in": 1406,
+  "asked_again": false,
+  "seconds": 1.44,
+  "tokens_in": 1475,
   "tokens_out": 44
- }
+ },
+ "type": "ultrafast_recovery_rectifier"
 }

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:02+00:00",
+  "at": "2026-11-19T19:10:20+00:00",
   "is_datasheet": true,
   "label": "ultrafast recovery rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "SMUR40120P"
   ],
   "confidence": "high",
-  "seconds": 4.74,
-  "tokens_in": 1332,
+  "asked_again": false,
+  "seconds": 1.25,
+  "tokens_in": 1401,
   "tokens_out": 44
- }
+ },
+ "type": "ultrafast_recovery_rectifier"
 }

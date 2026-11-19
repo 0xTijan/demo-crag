@@ -1,0 +1,23 @@
+{
+ "file": "viking/mc-series_0d6aa1e1.md",
+ "supplier": "viking",
+ "file_hash": "5c041703b7cea78e3fda494c8d1ee3efbd064bb9fbcdc2f43a05dd7257540cc2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:00+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ceramic capacitor",
+  "family": true,
+  "part_numbers": [
+   "MC Series",
+   "MCRF"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.52,
+  "tokens_in": 3932,
+  "tokens_out": 42
+ },
+ "type": "multilayer_ceramic_capacitor"
+}

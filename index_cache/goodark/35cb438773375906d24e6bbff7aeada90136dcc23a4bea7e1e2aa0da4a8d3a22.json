@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:10+00:00",
+  "at": "2026-11-19T18:46:01+00:00",
   "is_datasheet": true,
-  "label": "small-signal diode",
+  "label": "small-signal fast switching diode",
   "family": false,
   "part_numbers": [
-   "KT643933"
+   "643933"
   ],
   "confidence": "high",
-  "seconds": 5.11,
-  "tokens_in": 1130,
-  "tokens_out": 42
- }
+  "asked_again": false,
+  "seconds": 1.17,
+  "tokens_in": 1199,
+  "tokens_out": 43
+ },
+ "type": "small_signal_fast_switching_diode"
 }

@@ -1,0 +1,22 @@
+{
+ "file": "viking/lra0766-a-series-data-sheet-edition-rev-a2_9848a4c1.md",
+ "supplier": "viking",
+ "file_hash": "235297eeb39103b6ddd7df1e37eba33ebaf7455d42167c9923687ff05baf2683",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:42+00:00",
+  "is_datasheet": true,
+  "label": "alloy chip shunt resistor",
+  "family": true,
+  "part_numbers": [
+   "LRA0766"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.01,
+  "tokens_in": 2534,
+  "tokens_out": 42
+ },
+ "type": "alloy_chip_shunt_resistor"
+}

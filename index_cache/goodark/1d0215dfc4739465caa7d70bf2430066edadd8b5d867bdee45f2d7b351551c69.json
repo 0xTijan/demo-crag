@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:07:23+00:00",
+  "at": "2026-11-19T19:08:38+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -16,8 +16,10 @@
    "SGP0160SD"
   ],
   "confidence": "high",
-  "seconds": 5.64,
-  "tokens_in": 1590,
+  "asked_again": false,
+  "seconds": 1.81,
+  "tokens_in": 1659,
   "tokens_out": 70
- }
+ },
+ "type": "schottky_diode"
 }

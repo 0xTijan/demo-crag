@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:48:55+00:00",
+  "at": "2026-11-19T18:49:47+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "GBJ6AU",
@@ -17,8 +17,10 @@
    "GBJ6JU"
   ],
   "confidence": "high",
-  "seconds": 8.72,
-  "tokens_in": 2086,
-  "tokens_out": 78
- }
+  "asked_again": true,
+  "seconds": 3.29,
+  "tokens_in": 4353,
+  "tokens_out": 150
+ },
+ "type": "fast_recovery_rectifier"
 }

@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:03:33+00:00",
+  "at": "2026-11-19T19:04:44+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "P300A",
@@ -17,8 +17,10 @@
    "P300J"
   ],
   "confidence": "high",
-  "seconds": 6.77,
-  "tokens_in": 1560,
-  "tokens_out": 79
- }
+  "asked_again": false,
+  "seconds": 1.85,
+  "tokens_in": 1629,
+  "tokens_out": 80
+ },
+ "type": "standard_rectifier"
 }

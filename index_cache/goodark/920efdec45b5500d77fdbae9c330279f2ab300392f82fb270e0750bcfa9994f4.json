@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:32+00:00",
+  "at": "2026-11-19T19:01:37+00:00",
   "is_datasheet": true,
-  "label": "switching diode",
+  "label": "fast recovery switching diode",
   "family": true,
   "part_numbers": [
    "MMBD4148A",
@@ -16,8 +16,10 @@
    "MMBD4148SE"
   ],
   "confidence": "high",
-  "seconds": 6.01,
-  "tokens_in": 1280,
-  "tokens_out": 68
- }
+  "asked_again": false,
+  "seconds": 1.55,
+  "tokens_in": 1349,
+  "tokens_out": 69
+ },
+ "type": "fast_recovery_switching_diode"
 }

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:58:04+00:00",
+  "at": "2026-11-19T18:59:05+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "LSL16"
   ],
   "confidence": "high",
-  "seconds": 5.54,
-  "tokens_in": 1542,
+  "asked_again": false,
+  "seconds": 1.84,
+  "tokens_in": 1611,
   "tokens_out": 76
- }
+ },
+ "type": "schottky_diode"
 }

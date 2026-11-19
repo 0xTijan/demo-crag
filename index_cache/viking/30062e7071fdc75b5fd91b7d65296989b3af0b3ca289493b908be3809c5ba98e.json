@@ -1,0 +1,23 @@
+{
+ "file": "viking/mfd-series-data-sheet-edition-rev-a6_a257a655.md",
+ "supplier": "viking",
+ "file_hash": "30062e7071fdc75b5fd91b7d65296989b3af0b3ca289493b908be3809c5ba98e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:13+00:00",
+  "is_datasheet": true,
+  "label": "high precision metal film resistor",
+  "family": true,
+  "part_numbers": [
+   "MFD0727",
+   "MFD1040"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.29,
+  "tokens_in": 1252,
+  "tokens_out": 49
+ },
+ "type": "high_precision_metal_film_resistor"
+}

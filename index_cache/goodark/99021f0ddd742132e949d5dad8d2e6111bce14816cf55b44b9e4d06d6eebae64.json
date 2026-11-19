@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:06:21+00:00",
+  "at": "2026-11-19T19:07:37+00:00",
   "is_datasheet": true,
-  "label": "ESD protection diode",
+  "label": "low capacitance ESD protection diode",
   "family": true,
   "part_numbers": [
    "SESLC3V3D323S-2B",
@@ -17,8 +17,10 @@
    "SESLC15VD323S-2B"
   ],
   "confidence": "high",
-  "seconds": 6.23,
-  "tokens_in": 1650,
-  "tokens_out": 122
- }
+  "asked_again": false,
+  "seconds": 2.49,
+  "tokens_in": 1719,
+  "tokens_out": 125
+ },
+ "type": "low_capacitance_esd_protection_diode"
 }

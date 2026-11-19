@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:52:58+00:00",
+  "at": "2026-11-19T18:53:49+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "GN3A",
@@ -17,8 +17,10 @@
    "GN3J"
   ],
   "confidence": "high",
-  "seconds": 6.3,
-  "tokens_in": 1551,
-  "tokens_out": 65
- }
+  "asked_again": false,
+  "seconds": 1.49,
+  "tokens_in": 1620,
+  "tokens_out": 66
+ },
+ "type": "standard_rectifier"
 }

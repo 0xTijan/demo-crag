@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:58:00+00:00",
+  "at": "2026-11-19T18:59:01+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -15,8 +15,10 @@
    "LS565"
   ],
   "confidence": "high",
-  "seconds": 5.27,
-  "tokens_in": 1427,
+  "asked_again": false,
+  "seconds": 1.5,
+  "tokens_in": 1496,
   "tokens_out": 50
- }
+ },
+ "type": "schottky_diode"
 }

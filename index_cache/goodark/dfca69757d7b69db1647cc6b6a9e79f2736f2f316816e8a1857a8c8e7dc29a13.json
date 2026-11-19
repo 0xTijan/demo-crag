@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:51:53+00:00",
+  "at": "2026-11-19T18:52:46+00:00",
   "is_datasheet": true,
   "label": "P-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "GMP00403D"
   ],
   "confidence": "high",
-  "seconds": 6.18,
-  "tokens_in": 1773,
+  "asked_again": false,
+  "seconds": 1.5,
+  "tokens_in": 1842,
   "tokens_out": 43
- }
+ },
+ "type": "mosfet_p"
 }

@@ -1,0 +1,24 @@
+{
+ "file": "viking/ntgh-a-series-data-sheet-edition-rev-a1_7cf3045c.md",
+ "supplier": "viking",
+ "file_hash": "835830649501937eed5c70a79d56e49530db021439336139b45ffa52b39f8d57",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:36+00:00",
+  "is_datasheet": true,
+  "label": "NTC thermistor",
+  "family": true,
+  "part_numbers": [
+   "NTGH02",
+   "NTGH03",
+   "NTGH05"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.51,
+  "tokens_in": 1589,
+  "tokens_out": 50
+ },
+ "type": "ntc_thermistor"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "viking/rt-series-data-sheet-edition-rev-b5_08d6e2ce.md",
+ "supplier": "viking",
+ "file_hash": "c67b1dacd6ebb669bfc658257fec3875107fa9aaf77c5fdff78cc47859b1271d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:27+00:00",
+  "is_datasheet": true,
+  "label": "trimmable thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "RT-02",
+   "RT-03",
+   "RT-05",
+   "RT-06",
+   "RT-10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.71,
+  "tokens_in": 1765,
+  "tokens_out": 65
+ },
+ "type": "thick_film_chip_resistor"
+}
