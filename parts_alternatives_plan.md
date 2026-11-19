@@ -195,6 +195,10 @@ millions, while each row still holds enough to say whether a requested part fits
 **Two checks in code:** each value's `raw` text must appear on the cited page, and every range must have
 min ≤ max. A value that fails is marked *unverified* and shows a warning. This catches most invented or broken values.
 
+**Implemented** in `dataPipeline/index/extract.py` (the LLM call, with the compact line output of section 8),
+`values.py` (full value format, unit conversion, the two checks) and `load_cache.py` (index cache → Postgres
+`catalog_parts`). Commands: see `dataPipeline/index/README.md`.
+
 - Supplier = folder name. Only new or changed files are indexed (file hash), like the report pipeline.
 - Datasheets of types without a spec list are stored with their type only; requests for those types
   answer "type not supported yet" until a spec list is added.

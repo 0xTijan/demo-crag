@@ -5,7 +5,7 @@
   (the supplier is the first folder name, plan decision 12).
 * Output: one index-cache file per datasheet, ``index_cache/<supplier>/<file_hash>.json``
   (plan section 9). Step 0 (classification) writes its result into it; Step 1 (spec
-  extraction) will add the parts to the same file.
+  extraction, extract.py) adds the parts to the same file.
 * LLM: a local model through Ollama, configured in config.json like the rest of the repo.
 """
 from __future__ import annotations

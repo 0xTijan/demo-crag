@@ -1,4 +1,4 @@
-# Indexing: classify datasheets by type (Step 0) and draft spec lists per type
+# Indexing: classify datasheets by type (Step 0), spec lists per type, extract specs (Step 1)
 
 Plan v1 ([`parts_alternatives_plan.md`](../../parts_alternatives_plan.md), section 2, "Step 0") needs, before
 any spec lists are written, **which component types exist and how many datasheets each has**. This step
@@ -26,6 +26,10 @@ and `-h` / `--help` shows its options.
 | `python -m dataPipeline.index.spec_lists list` | Types, datasheet counts and spec-list status | none |
 | `python -m dataPipeline.index.spec_lists draft …` | Drafts spec lists → `spec_lists/<type>.yaml` | ~10 per type + 1 merge |
 | `python -m dataPipeline.index.spec_lists check …` | Validates spec lists after editing | none |
+| `python -m dataPipeline.index.extract run …` | Step 1: specs of every datasheet whose type has a spec list → `extraction` in its cache file | 1 call per datasheet |
+| `python -m dataPipeline.index.extract show FILE` | Prints what was extracted from one datasheet (spot-check) | none |
+| `python -m dataPipeline.index.extract report` | Extraction state and quality per type, `extract_report.csv` | none |
+| `python -m dataPipeline.index.load_cache` | Syncs Postgres `catalog_parts` with the index cache | none |
 
 ### `classify run`
 
@@ -103,13 +107,64 @@ reviewed, empty `specs`, keys not in snake_case (with at most one `@condition`),
 `critical` not true/false, `must_match` keys that are not in `specs`, file name not matching `type`.
 Notes (no error): numeric rule without a unit, no critical spec, every spec `info`, type not in `type_list.yaml`.
 
+### `extract run [TYPE …]`
+
+| Option | Default | Meaning |
+|---|---|---|
+| `TYPE …` | every spec list | Only these types (keys of `spec_lists/<type>.yaml`) |
+| `--drafts` | off | Also use spec lists with `status: draft` (for a pilot before review); otherwise only `reviewed` lists |
+| `--limit N` | all | Extract at most N datasheets (pilot) |
+| `--workers N` | 1 | Parallel requests (also set `OLLAMA_NUM_PARALLEL` on the Ollama server) |
+| `--max-chars N` | 48000 | Characters of spec pages sent per datasheet |
+| `--force` | off | Extract again, also datasheets already extracted |
+| `--input DIR`, `--supplier A B …` | `markdowns/`, all | As for `classify run` |
+| `-v`, `--verbose` | off | Print every datasheet: parts, values, unverified, coverage, seconds, dropped keys |
+
+Skips a datasheet whose cache already has an extraction with the same `EXTRACTOR_VERSION`, type and spec-list
+`version`, so a rerun resumes, and raising a spec list's `version` re-extracts only that type. Spec lists with
+errors (see `spec_lists check`) are skipped. Exit code 1 if any datasheet failed (it is retried by the next run;
+the error is kept in its cache file under `extraction_error`).
+
+### `extract show FILE`
+
+| Option | Default | Meaning |
+|---|---|---|
+| `FILE` | – | Markdown path (relative to `--input` or absolute) or a file-hash prefix of the cache file |
+| `--limit N` | 20 | Parts to print; 0 = all |
+| `--input DIR` | `markdowns/` | |
+
+Prints every part / family row with each value, its page, the raw text and, for unverified values, why.
+
+### `extract report`
+
+| Option | Default | Meaning |
+|---|---|---|
+| `--input DIR`, `--supplier A B …` | `markdowns/`, all | |
+
+Per type with a spec list: datasheets, extracted, outdated (older spec-list version), failed, parts, values,
+share unverified, coverage (share of the spec list found per part). Per datasheet: `index_cache/extract_report.csv`.
+
+### `load_cache`
+
+| Option | Default | Meaning |
+|---|---|---|
+| `--cache DIR` | `index_cache/` | The index cache |
+| `--supplier A B …` | all | Only these supplier folders (rows of other suppliers are left alone) |
+| `--dry-run` | off | Print what would change, write nothing |
+| `--database-url URL` | `DATABASE_URL` from the environment / `.env` | SQLAlchemy URL, same as the converter and `db_gui.py` |
+
+Creates `catalog_parts` if missing. A datasheet whose rows came from the same extraction is skipped; a
+re-extracted one gets its rows replaced; rows of datasheets no longer in the cache are removed. Exit code 2 if
+the database is not reachable.
+
 ### Settings outside the command line
 
 | Setting | Where | Default |
 |---|---|---|
-| Models and their options (temperature, `num_ctx`) | `config.json`: `datasheetClassifierModel`, `typeGroupingModel`, `specInventoryModel`, `specListModel` | `qwen3:30b-a3b` |
+| Models and their options (temperature, `num_ctx`) | `config.json`: `datasheetClassifierModel`, `typeGroupingModel`, `specInventoryModel`, `specListModel`, `specExtractionModel` | `qwen3:30b-a3b` |
 | Parallel requests on the server | `OLLAMA_NUM_PARALLEL` environment variable of the Ollama server | 1 |
-| Re-run every classification / inventory after a prompt change | `CLASSIFIER_VERSION` in `classify.py`, `INVENTORY_VERSION` in `spec_lists.py` | `"1"` |
+| Re-run every classification / inventory / extraction after a prompt or code change | `CLASSIFIER_VERSION` in `classify.py`, `INVENTORY_VERSION` in `spec_lists.py`, `EXTRACTOR_VERSION` in `extract.py` | `"1"` |
+| Database | `DATABASE_URL` (environment or `.env`) | `postgresql+psycopg2://username:postgres@localhost:5432/postgres` |
 | Index cache and spec-list folders | `CACHE_DIR` in `common.py`, `SPEC_LIST_DIR` in `spec_lists.py` | `index_cache/`, `spec_lists/` |
 
 ## Running it
@@ -245,6 +300,55 @@ What to check when reviewing a draft:
 Models (config.json): `specInventoryModel` (num_ctx 16384) and `specListModel` (num_ctx 32768, the merge
 sees all samples at once). Tests: `python tests/test_index_spec_lists.py` (fake LLMs, no Ollama).
 
+## Step 1: extract the specs (`extract.py`, `values.py`, `load_cache.py`)
+
+```bash
+python -m dataPipeline.index.extract run mosfet_n --limit 20 --drafts -v   # pilot on one type
+python -m dataPipeline.index.extract show goodark/2n7000.md                # spot-check one datasheet
+python -m dataPipeline.index.extract run --workers 4                       # every reviewed spec list
+python -m dataPipeline.index.extract report                                # quality per type
+python -m dataPipeline.index.load_cache                                    # -> Postgres catalog_parts
+```
+
+**One LLM call per datasheet.** The model gets the datasheet's spec pages (page 1 and pages with tables;
+tape-and-reel, soldering and curve pages dropped, like the spec-list inventory) and the type's spec list
+(`key | label | unit | stat | conditions | also printed as`). It answers short lines instead of nested JSON,
+because output is the slow part (plan section 8):
+
+```json
+{"common": ["operating_temp_range | -55..150 | °C | 1 | -55 to +150 |"],
+ "parts": [{"part_number": "2N7000", "family_row": "", "ordering_page": 0,
+            "values": ["vds_max | 60 | V | 1 | 60 |", "id_max | 200 | mA | 1 | 200 | TA=25C"]}]}
+```
+
+`key | value | unit | page | raw | conditions`; `common` holds the values shared by every part, written once.
+A family with a code system and availability tables (MLCC) gives one entry per availability row,
+`part_number: ""` and `family_row: "0603 / X7R / 50 V"`, with ranges (`150..470000`) and option lists
+(`1; 2; 5; 10`).
+
+**Code then** (`values.py`) turns every line into the full value format
+(`value` or `min`/`max` or `set`, `unit`, `stat`, `conditions`, `page`, `raw`), converts the unit to the spec
+list's unit (200 mA → 0.2 A, nF → pF, Ω → ohm, °C → degC), drops keys that are not in the spec list
+(counted under `unknown_keys`), and runs the two checks of the plan:
+
+1. **raw text on the cited page**: numbers must be whole numbers on the page ("5" is not found in "-55"),
+   short text a whole word, other text anywhere (case, spaces and table bars ignored). If the text is on
+   another page, the page is corrected (`page_given` keeps the model's page).
+2. **min ≤ max** for ranges (catches the `225~1.6` typo in the MLCC table).
+
+A value that fails keeps `verified: false` and its `issues`; it is still stored and shown with a warning.
+
+**Stored** in the cache file under `extraction`: version, type, spec-list version and status, model, time,
+`parts` (`part_number`, `family_row`, `ordering_page`, `specs`) and `stats` (parts, values, unverified,
+coverage, unknown keys, seconds, tokens). `load_cache` writes one `catalog_parts` row per part or family
+row: supplier, file, file hash, versions, type, part number, family row, ordering page, `specs` (JSONB),
+number of unverified values. Indexes on `type` and `upper(part_number)` for Step 2 (shortlist).
+
+Our suppliers' parts only; external parts will get their own cache folder and table (`external_parts`).
+
+Tests: `python -m pytest tests/test_index_extract.py` (fake LLM). The database test runs when
+`TEST_DATABASE_URL` points to an empty Postgres database.
+
 ## Files
 
 | File | Role |
@@ -253,6 +357,10 @@ sees all samples at once). Tests: `python tests/test_index_spec_lists.py` (fake 
 | `common.py` | Finding the markdowns, file hashes, first pages, the index cache, the Ollama JSON call |
 | `spec_lists.py` | Spec lists per type: `inventory(markdown, llm)`, `merge_specs(...)`, `validate(spec_list)` and the `list` / `draft` / `check` commands |
 | `prompts/spec_inventory.txt`, `prompts/spec_merge.txt` | The two spec-list prompts; editing `spec_inventory.txt` in a way that needs a re-run → bump `INVENTORY_VERSION` |
+| `extract.py` | Step 1: `extract(markdown, spec_list, llm)` and the `run` / `show` / `report` commands |
+| `values.py` | The full value format: `parse_line`, `parse_value`, unit conversion, the raw-text and min ≤ max checks |
+| `load_cache.py` | `catalog_parts` table and the sync from the index cache (no LLM) |
+| `prompts/extract.txt` | The extraction prompt; a change that needs a re-run → bump `EXTRACTOR_VERSION` |
 | `prompts/classify.txt`, `prompts/group.txt` | The two prompts; editing `classify.txt` in a way that needs a re-run → bump `CLASSIFIER_VERSION` |
 
 ## Notes

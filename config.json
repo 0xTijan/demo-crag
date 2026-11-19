@@ -35,5 +35,10 @@
         "model": "qwen3:30b-a3b",
         "temperature": 0,
         "num_ctx": 32768
+    },
+    "specExtractionModel": {
+        "model": "qwen3:30b-a3b",
+        "temperature": 0,
+        "num_ctx": 32768
     }
 }
