@@ -322,7 +322,7 @@ def main(argv=None) -> int:
     for name in ("run", "group", "report"):
         p = sub.add_parser(name)
         p.add_argument("--input", default=str(MARKDOWN_DIR),
-                       help="folder with <supplier>/**/*.md (default markdowns/suppliers)")
+                       help="folder with <supplier>/**/*.md (default markdowns/)")
         p.add_argument("--supplier", nargs="+", help="only these supplier folders")
         if name == "run":
             p.add_argument("--workers", type=int, default=1,

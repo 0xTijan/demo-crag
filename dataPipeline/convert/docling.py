@@ -139,4 +139,5 @@ def convert(pdf: Path) -> Conversion:
 
 if __name__ == "__main__":
     run_pipeline(CONVERTER, pkg_version("docling"), OUTPUT_DIR, convert,
-                 "Convert new/changed PDFs in reports/ to Markdown with Docling.")
+                 "Convert new/changed PDFs in datasheets/ to Markdown with Docling. "
+                 "datasheets/<supplier>/x.pdf -> markdowns/<supplier>/x.md.")

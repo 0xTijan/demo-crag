@@ -1,6 +1,7 @@
 """Shared pieces of the indexing steps (plan v1, parts_alternatives_plan.md, Step 1).
 
-* Input: the markdown datasheets of our suppliers, ``markdowns/suppliers/<supplier>/**/*.md``
+* Input: the markdown datasheets of our suppliers, ``markdowns/<supplier>/**/*.md`` (written by
+  dataPipeline/convert from ``datasheets/<supplier>/**/*.pdf``)
   (the supplier is the first folder name, plan decision 12).
 * Output: one index-cache file per datasheet, ``index_cache/<supplier>/<file_hash>.json``
   (plan section 9). Step 0 (classification) writes its result into it; Step 1 (spec
@@ -18,7 +19,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-MARKDOWN_DIR = ROOT / "markdowns" / "suppliers"
+MARKDOWN_DIR = ROOT / "markdowns"   # the converter mirrors datasheets/<supplier>/ here
 CACHE_DIR = ROOT / "index_cache"
 
 PAGE_MARKER_RE = re.compile(r"<!--\s*page:\s*(\d+)\s*-->")

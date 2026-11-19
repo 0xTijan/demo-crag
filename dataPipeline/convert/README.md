@@ -1,6 +1,6 @@
 # PDF → Markdown conversion pipeline
 
-`python dataPipeline/convert/docling.py` turns every new or changed PDF in `reports/` into a Markdown file in `markdowns/`, with exact tables, and records everything in PostgreSQL.
+`python dataPipeline/convert/docling.py` turns every new or changed PDF in `datasheets/` (the datasheet downloader's folder) into a Markdown file in `markdowns/`, in the same subfolder (`datasheets/goodark/x.pdf` → `markdowns/goodark/x.md`), with exact tables, and records everything in PostgreSQL.
 
 This document explains the pipeline from the first line to the last, so that an engineer who has never seen it can understand what each part does and how the parts connect.
 
@@ -23,7 +23,7 @@ This document explains the pipeline from the first line to the last, so that an 
 ## 1. What it does, in one picture
 
 ```
-reports/*.pdf
+datasheets/<supplier>/**/*.pdf
      │
      ▼
 ┌─────────────────────────── common.py ─────────────────────────────┐
@@ -76,13 +76,25 @@ The key design point: **`common.py` calls `docling.convert` as a callback.** `ru
 ## 3. Running it
 
 ```bash
-python dataPipeline/convert/docling.py            # convert new/changed PDFs
-python dataPipeline/convert/docling.py --force    # reconvert everything
+python dataPipeline/convert/docling.py                         # convert new/changed PDFs in datasheets/
+python dataPipeline/convert/docling.py datasheets/goodark      # only one supplier (still -> markdowns/goodark/)
+python dataPipeline/convert/docling.py datasheets/goodark/x.pdf  # only one file
+python dataPipeline/convert/docling.py --force                 # reconvert everything
+python dataPipeline/convert/docling.py --input reports         # another input folder (e.g. the old reports/)
 ```
+
+| Option | Default | Meaning |
+|---|---|---|
+| `paths` | everything | PDFs or folders **inside the input folder** to convert. Only a filter: the Markdown path is always taken relative to the input folder, so the supplier folder is kept |
+| `--input DIR` | `datasheets/` | Input root. Every Markdown mirrors the PDF's path relative to it |
+| `--output DIR` | `markdowns/` | Output root |
+| `--force` | off | Reconvert every PDF, ignoring the hash table |
+
+PDFs are found with any case of the extension (`.pdf`, `.PDF`).
 
 Requirements:
 
-- `reports/` exists at the repo root (gitignored; you put PDFs there, subfolders allowed).
+- The input folder exists: `datasheets/<supplier>/…` at the repo root by default (gitignored; written by `python -m dataPipeline.download.run`).
 - PostgreSQL reachable through `DATABASE_URL` (environment variable or `.env`). Default: `postgresql+psycopg2://username:postgres@localhost:5432/postgres`.
 - Python packages: `pip install -r requirements.txt` (repo root). The converter uses `docling`, `pdfplumber`, `SQLAlchemy`, `psycopg2-binary`, `python-dotenv`; `ollama` and `pypdfium2` only matter for the vision fallback.
 - Ollama running with `qwen2.5vl:7b` pulled, only if some page triggers the fallback. The model is configured in `config.json`:
@@ -93,7 +105,7 @@ Requirements:
 
 Output:
 
-- `markdowns/<same path as the PDF>.md`. `markdowns/` is gitignored. `reports/a/b.pdf` becomes `markdowns/a/b.md`.
+- `markdowns/<same path as the PDF, relative to the input folder>.md`. `markdowns/` is gitignored. `datasheets/goodark/x.pdf` becomes `markdowns/goodark/x.md`; these are the input of `python -m dataPipeline.index.classify` (supplier = first folder).
 - Rows in `report_files` and `report_file_errors`.
 - A copy of everything printed, in `logs/convert_docling_<date>_<time>.log` at the repo root (one file per run, gitignored; written by `helpers/run_log.py`).
 - Exit code `0` if nothing failed, `1` if any PDF failed.
@@ -130,7 +142,7 @@ Both tables are created (and old databases upgraded) every time `run_pipeline` s
 
 | Column | Meaning |
 |---|---|
-| `pdf_path` | Path relative to `reports/`, always with `/` separators. |
+| `pdf_path` | Path relative to the input folder (`datasheets/`), always with `/` separators. |
 | `file_hash` | SHA-256 of the PDF's bytes (64 hex chars). |
 | `converter` | `'docling'` (leaves room for other pipelines). |
 | `status` | `'converted'` or `'failed'`. |
@@ -266,7 +278,7 @@ for stage, exc in result.warnings:
 ### 5.6 `run_pipeline`: the command-line loop
 
 1. Parses `--force`.
-2. `sys.exit` if `reports/` is missing.
+2. `sys.exit` if the input folder is missing, or a given path is not inside it.
 3. Opens the engine and executes every `DDL` statement in one transaction. On failure it exits and prints only `DATABASE_URL.split('@')[-1]` (host and database), so the password is never shown.
 4. `pdfs = sorted(INPUT_DIR.rglob("*.pdf"))`: recursive, deterministic order.
 5. For each PDF, calls `process_pdf`. On `StageError` it counts a failure, logs it, re-hashes the file for the error row (skipped if hashing was what failed) and **continues with the next PDF**. One bad PDF never stops the batch.
@@ -687,4 +699,4 @@ It then gets hashing, skipping, atomic writes, database tracking and error loggi
 - The vision fallback is triggered by *page text length* only. A page that is mostly text but has one badly read table is not detected.
 - Every PDF is re-hashed on each run (cheap compared with conversion).
 - No locking: two simultaneous runs could convert the same file twice. The unique index keeps the table consistent; the output file is last-writer-wins.
-- PDFs deleted from `reports/` keep their rows and Markdown.
+- PDFs deleted from the input folder keep their rows and Markdown.

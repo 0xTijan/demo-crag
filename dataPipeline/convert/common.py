@@ -4,8 +4,8 @@ Every pipeline (currently docling.py)
 does the same bookkeeping and only differs in how a PDF becomes Markdown:
 
 1. Connect to PostgreSQL and create/upgrade the tracking tables.
-2. For every reports/**/*.pdf compute its SHA-256. A PDF is identified by
-   (path relative to reports/, hash, converter), so each pipeline tracks its own
+2. For every datasheets/**/*.pdf (or --input) compute its SHA-256. A PDF is identified by
+   (path relative to the input folder, hash, converter), so each pipeline tracks its own
    conversions and the same name with new content counts as a new version.
 3. Skip it if that exact version was already converted by this pipeline and its
    Markdown still exists; otherwise call the pipeline's ``convert`` function.
@@ -34,7 +34,9 @@ from helpers.run_log import start_run_log
 load_dotenv()  # read DATABASE_URL etc. from a local .env file, if present
 
 ROOT = Path(__file__).resolve().parents[2]  # repository root
-INPUT_DIR = ROOT / "reports"
+# Default input root: the datasheet downloader's folder (datasheets/<supplier>/...). Every Markdown mirrors
+# the PDF's path relative to the input root: datasheets/goodark/x.pdf -> markdowns/goodark/x.md.
+INPUT_DIR = ROOT / "datasheets"
 
 # SQLAlchemy connection URL; same variable and default as db_gui.py / rag/sql.py.
 DATABASE_URL = os.getenv(
@@ -273,7 +275,27 @@ class Tracker:
             print(f"  could not save failed status to database: {db_exc}", file=sys.stderr)
 
 
-def process_pdf(tracker: Tracker, pdf: Path, output_dir: Path, convert, force: bool) -> str:
+def find_pdfs(input_dir: Path, only: list[Path] | None = None) -> list[Path]:
+    """PDFs under input_dir (any case of .pdf), sorted. `only`: files or folders inside input_dir to limit to."""
+    roots = only or [input_dir]
+    pdfs = set()
+    for root in roots:
+        if root.is_file():
+            pdfs.add(root.resolve())
+        else:
+            pdfs.update(p.resolve() for p in root.rglob("*") if p.is_file() and p.suffix.lower() == ".pdf")
+    return sorted(pdfs)
+
+
+def markdown_path(pdf: Path, input_dir: Path, output_dir: Path) -> tuple[str, Path]:
+    """(PDF path relative to the input root, Markdown path): the Markdown mirrors the PDF's subfolders,
+    datasheets/goodark/x.pdf -> markdowns/goodark/x.md."""
+    rel = pdf.resolve().relative_to(input_dir.resolve())
+    return rel.as_posix(), output_dir / rel.with_suffix(".md")
+
+
+def process_pdf(tracker: Tracker, pdf: Path, output_dir: Path, convert, force: bool,
+                input_dir: Path = INPUT_DIR) -> str:
     """Process one PDF end to end. Returns 'converted' or 'skipped'.
 
     Stages: hash -> skip check -> convert -> write -> db. Raises
@@ -281,9 +303,8 @@ def process_pdf(tracker: Tracker, pdf: Path, output_dir: Path, convert, force: b
     The Markdown is written BEFORE the success row, so a DB failure only causes a
     reconversion next run and never a success row for a missing file.
     """
-    rel = pdf.relative_to(INPUT_DIR).as_posix()          # identity (with hash + converter)
-    md_path = output_dir / Path(rel).with_suffix(".md")  # mirrors reports/ layout
-    md_rel = md_path.relative_to(ROOT).as_posix()
+    rel, md_path = markdown_path(pdf, input_dir, output_dir)  # rel = identity (with hash + converter)
+    md_rel = md_path.relative_to(ROOT).as_posix() if md_path.is_relative_to(ROOT) else md_path.as_posix()
 
     started = time.time()
     try:  # stage "hash": no hash means no row can be keyed -> error log only
@@ -338,12 +359,24 @@ def run_pipeline(converter: str, version: str, output_dir: Path,
     Exits with status 1 if any PDF failed, so cron/CI can detect a partial run.
     """
     parser = argparse.ArgumentParser(description=description)
+    parser.add_argument("paths", nargs="*", type=Path,
+                        help="only these PDFs or folders inside the input folder, e.g. datasheets/goodark "
+                             "(default: everything); the Markdown still keeps the subfolders")
+    parser.add_argument("--input", type=Path, default=INPUT_DIR,
+                        help="input root; Markdown mirrors paths relative to it (default datasheets/)")
+    parser.add_argument("--output", type=Path, default=output_dir, help="output root (default markdowns/)")
     parser.add_argument("--force", action="store_true", help="reconvert every PDF, ignoring the hash table")
     args = parser.parse_args()
     start_run_log(f"convert_{converter}")  # copy everything printed below to logs/convert_<converter>_<time>.log
 
-    if not INPUT_DIR.exists():
-        sys.exit(f"Input folder not found: {INPUT_DIR}")
+    input_dir, output_dir = args.input.resolve(), args.output.resolve()
+    if not input_dir.exists():
+        sys.exit(f"Input folder not found: {input_dir}")
+    for path in args.paths:
+        if not path.exists():
+            sys.exit(f"Not found: {path}")
+        if not path.resolve().is_relative_to(input_dir):
+            sys.exit(f"{path} is not inside the input folder {input_dir} (use --input)")
     # Connect and create/upgrade the tables in one transaction. On failure print
     # only the host part of the URL (after "@") so the password is never shown.
     log(f"[{converter}] connecting to db")
@@ -358,13 +391,14 @@ def run_pipeline(converter: str, version: str, output_dir: Path,
 
     tracker = Tracker(engine, converter, version)
     counts = {"converted": 0, "skipped": 0, "failed": 0}
-    pdfs = sorted(INPUT_DIR.rglob("*.pdf"))  # recursive and sorted: deterministic order
-    log(f"Found {len(pdfs)} PDF(s) in {INPUT_DIR}{' (--force)' if args.force else ''}")
+    pdfs = find_pdfs(input_dir, args.paths)  # recursive and sorted: deterministic order
+    where = ", ".join(str(p) for p in args.paths) if args.paths else str(input_dir)
+    log(f"Found {len(pdfs)} PDF(s) in {where}{' (--force)' if args.force else ''} -> {output_dir}")
     for idx, pdf in enumerate(pdfs, 1):
-        rel = pdf.relative_to(INPUT_DIR).as_posix()
+        rel = markdown_path(pdf, input_dir, output_dir)[0]
         log(f"[{idx}/{len(pdfs)}] {rel}")
         try:
-            outcome = process_pdf(tracker, pdf, output_dir, convert, args.force)
+            outcome = process_pdf(tracker, pdf, output_dir, convert, args.force, input_dir)
         except StageError as err:
             # One bad PDF must not stop the batch: count it, store the error, go on.
             counts["failed"] += 1

@@ -5,7 +5,7 @@ any spec lists are written, **which component types exist and how many datasheet
 does that with a local LLM:
 
 ```
-markdowns/suppliers/<supplier>/**/*.md
+datasheets/<supplier>/**/*.pdf ──convert──► markdowns/<supplier>/**/*.md
         │  first 1–2 pages
         ▼
 1. run     LLM → free-text type label      ──► index_cache/<supplier>/<file_hash>.json  (classification)
@@ -34,7 +34,7 @@ python -m dataPipeline.index.classify report              # counts per type -> p
 
 | Option | Command | Default | Meaning |
 |---|---|---|---|
-| `--input DIR` | all | `markdowns/suppliers` | Folder with `<supplier>/**/*.md`; the supplier is the first folder name |
+| `--input DIR` | all | `markdowns/` | Folder with `<supplier>/**/*.md`; the supplier is the first folder name |
 | `--supplier A B` | all | all | Only these supplier folders |
 | `--workers N` | run | 1 | Parallel requests. Ollama serves them in parallel only with `OLLAMA_NUM_PARALLEL=N` set on the server |
 | `--limit N` | run | — | Classify at most N datasheets (the speed pilot) |
