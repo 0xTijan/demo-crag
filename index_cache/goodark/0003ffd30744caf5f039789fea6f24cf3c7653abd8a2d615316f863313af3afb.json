@@ -1,0 +1,24 @@
+{
+ "file": "goodark/l3u1-thru-l3u3_7e53da81.md",
+ "supplier": "goodark",
+ "file_hash": "0003ffd30744caf5f039789fea6f24cf3c7653abd8a2d615316f863313af3afb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:23+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "L2U1",
+   "L2U2",
+   "L2U3",
+   "L3U1",
+   "L3U3"
+  ],
+  "confidence": "high",
+  "seconds": 7.46,
+  "tokens_in": 1450,
+  "tokens_out": 64
+ }
+}

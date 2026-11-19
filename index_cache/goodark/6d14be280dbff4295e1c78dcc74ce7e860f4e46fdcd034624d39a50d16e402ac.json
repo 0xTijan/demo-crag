@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her601-thru-her608_eb78ff6c.md",
+ "supplier": "goodark",
+ "file_hash": "6d14be280dbff4295e1c78dcc74ce7e860f4e46fdcd034624d39a50d16e402ac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:52+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER601",
+   "HER602",
+   "HER603",
+   "HER604",
+   "HER605"
+  ],
+  "confidence": "high",
+  "seconds": 7.14,
+  "tokens_in": 1576,
+  "tokens_out": 78
+ }
+}

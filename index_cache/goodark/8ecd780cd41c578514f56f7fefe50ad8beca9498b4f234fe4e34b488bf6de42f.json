@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rl101g-thru-rl107g_965d1622.md",
+ "supplier": "goodark",
+ "file_hash": "8ecd780cd41c578514f56f7fefe50ad8beca9498b4f234fe4e34b488bf6de42f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:30+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "RL101G",
+   "RL102G",
+   "RL103G",
+   "RL104G",
+   "RL105G"
+  ],
+  "confidence": "high",
+  "seconds": 7.56,
+  "tokens_in": 1559,
+  "tokens_out": 79
+ }
+}

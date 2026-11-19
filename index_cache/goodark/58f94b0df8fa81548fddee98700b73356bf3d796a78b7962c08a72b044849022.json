@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gr3a-thru-gr3m_722af677.md",
+ "supplier": "goodark",
+ "file_hash": "58f94b0df8fa81548fddee98700b73356bf3d796a78b7962c08a72b044849022",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:22+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GR3A",
+   "GR3B",
+   "GR3D",
+   "GR3G",
+   "GR3J"
+  ],
+  "confidence": "high",
+  "seconds": 6.63,
+  "tokens_in": 1554,
+  "tokens_out": 67
+ }
+}

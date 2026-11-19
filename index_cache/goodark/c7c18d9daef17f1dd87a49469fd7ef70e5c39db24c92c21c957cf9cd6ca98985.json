@@ -1,0 +1,22 @@
+{
+ "file": "goodark/sl22a-thru-sl24a_54faf68c.md",
+ "supplier": "goodark",
+ "file_hash": "c7c18d9daef17f1dd87a49469fd7ef70e5c39db24c92c21c957cf9cd6ca98985",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:30+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL22A",
+   "SL23A",
+   "SL24A"
+  ],
+  "confidence": "high",
+  "seconds": 6.38,
+  "tokens_in": 1412,
+  "tokens_out": 52
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/ap6smb11a-thru-ap6smb250ca_bd9b9e29.md",
+ "supplier": "goodark",
+ "file_hash": "6e1da5497785733d537670bb79202bcc3263ccfcf68315d500f558401e3e2d68",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:36+00:00",
+  "is_datasheet": true,
+  "label": "Transient Voltage Suppressor",
+  "family": true,
+  "part_numbers": [
+   "AP6SMB11A",
+   "AP6SMB12A",
+   "AP6SMB13A",
+   "AP6SMB15A",
+   "AP6SMB16A"
+  ],
+  "confidence": "high",
+  "seconds": 8.04,
+  "tokens_in": 1908,
+  "tokens_out": 77
+ }
+}

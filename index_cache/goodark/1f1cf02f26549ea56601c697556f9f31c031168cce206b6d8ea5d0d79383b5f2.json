@@ -1,0 +1,24 @@
+{
+ "file": "goodark/mmsz4xxx_1fe5fe53.md",
+ "supplier": "goodark",
+ "file_hash": "1f1cf02f26549ea56601c697556f9f31c031168cce206b6d8ea5d0d79383b5f2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:01+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "MMSZ4678",
+   "MMSZ4679",
+   "MMSZ4680",
+   "MMSZ4681",
+   "MMSZ4682"
+  ],
+  "confidence": "high",
+  "seconds": 5.93,
+  "tokens_in": 1583,
+  "tokens_out": 77
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmp01104d_7d02e7f4.md",
+ "supplier": "goodark",
+ "file_hash": "bc38bcb16c068f20821b255ccbaf3cab4079c5229006697c7d62a94834698721",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:51:58+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMP01104D"
+  ],
+  "confidence": "high",
+  "seconds": 6.28,
+  "tokens_in": 1772,
+  "tokens_out": 43
+ }
+}

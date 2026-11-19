@@ -1,0 +1,22 @@
+{
+ "file": "goodark/sgc0350s-thru-sgc0365s_e460da1e.md",
+ "supplier": "goodark",
+ "file_hash": "179cde208e45722ba7ffdfa11a10ff120b32b5577abff7913abd8ca397bad30b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:37+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGC0350S",
+   "SGC0360S",
+   "SGC0365S"
+  ],
+  "confidence": "high",
+  "seconds": 7.36,
+  "tokens_in": 1441,
+  "tokens_out": 61
+ }
+}

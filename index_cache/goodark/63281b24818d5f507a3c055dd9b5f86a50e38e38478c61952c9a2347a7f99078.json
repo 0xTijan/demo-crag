@@ -1,0 +1,21 @@
+{
+ "file": "goodark/bas19-20_0e442ca3.md",
+ "supplier": "goodark",
+ "file_hash": "63281b24818d5f507a3c055dd9b5f86a50e38e38478c61952c9a2347a7f99078",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:04+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": true,
+  "part_numbers": [
+   "BAS19",
+   "BAS20"
+  ],
+  "confidence": "high",
+  "seconds": 4.79,
+  "tokens_in": 1422,
+  "tokens_out": 44
+ }
+}

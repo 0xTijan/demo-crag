@@ -1,0 +1,20 @@
+{
+ "file": "goodark/es4ujc_4fd6a87c.md",
+ "supplier": "goodark",
+ "file_hash": "8b04d1859a2f6bdd8356e07cabbb8bd24fdc9ea9ef7c23813172d417a28be821",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:35+00:00",
+  "is_datasheet": true,
+  "label": "superfast rectifier",
+  "family": false,
+  "part_numbers": [
+   "ES4UJC"
+  ],
+  "confidence": "high",
+  "seconds": 4.33,
+  "tokens_in": 1149,
+  "tokens_out": 38
+ }
+}

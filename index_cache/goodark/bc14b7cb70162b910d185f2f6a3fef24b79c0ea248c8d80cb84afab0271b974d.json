@@ -1,0 +1,20 @@
+{
+ "file": "goodark/smur7560p_f0a295af.md",
+ "supplier": "goodark",
+ "file_hash": "bc14b7cb70162b910d185f2f6a3fef24b79c0ea248c8d80cb84afab0271b974d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:03+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMUR7560P"
+  ],
+  "confidence": "high",
+  "seconds": 4.8,
+  "tokens_in": 1335,
+  "tokens_out": 43
+ }
+}

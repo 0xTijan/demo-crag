@@ -1,0 +1,21 @@
+{
+ "file": "goodark/gr90160sp_d35f3a63.md",
+ "supplier": "goodark",
+ "file_hash": "39e2b0e608b312db663d2802ea0d441f38b6e0b2456965a5c1b2dd0aee5f657d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:29+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": false,
+  "part_numbers": [
+   "GR60160SP",
+   "GR90160SP"
+  ],
+  "confidence": "high",
+  "seconds": 4.8,
+  "tokens_in": 1359,
+  "tokens_out": 48
+ }
+}

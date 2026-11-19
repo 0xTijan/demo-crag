@@ -1,0 +1,24 @@
+{
+ "file": "goodark/hs1a-thru-hs1r_3f71f1b2.md",
+ "supplier": "goodark",
+ "file_hash": "74bc1af8b7a5425b7a68edc157adb566e70adf5bf6deced5c8b66fa02e259564",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "HS1A",
+   "HS1B",
+   "HS1D",
+   "HS1F",
+   "HS1G"
+  ],
+  "confidence": "high",
+  "seconds": 7.5,
+  "tokens_in": 1473,
+  "tokens_out": 84
+ }
+}

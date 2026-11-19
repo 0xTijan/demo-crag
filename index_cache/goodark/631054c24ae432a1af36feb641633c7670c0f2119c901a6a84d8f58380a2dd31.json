@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murs120a_f6fb1f63.md",
+ "supplier": "goodark",
+ "file_hash": "631054c24ae432a1af36feb641633c7670c0f2119c901a6a84d8f58380a2dd31",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:20+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURS120A"
+  ],
+  "confidence": "high",
+  "seconds": 5.12,
+  "tokens_in": 1234,
+  "tokens_out": 42
+ }
+}

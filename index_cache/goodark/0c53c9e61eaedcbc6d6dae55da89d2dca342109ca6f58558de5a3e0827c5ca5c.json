@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her1001g-thru-her1007g_ad1221a1.md",
+ "supplier": "goodark",
+ "file_hash": "0c53c9e61eaedcbc6d6dae55da89d2dca342109ca6f58558de5a3e0827c5ca5c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:28+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER1001G",
+   "HER1002G",
+   "HER1003G",
+   "HER1004G",
+   "HER1005G"
+  ],
+  "confidence": "high",
+  "seconds": 6.95,
+  "tokens_in": 1577,
+  "tokens_out": 86
+ }
+}

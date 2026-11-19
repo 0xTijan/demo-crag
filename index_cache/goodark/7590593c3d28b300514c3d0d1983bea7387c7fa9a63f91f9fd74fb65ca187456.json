@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n5400-thru-1n5408_bf0198ba.md",
+ "supplier": "goodark",
+ "file_hash": "7590593c3d28b300514c3d0d1983bea7387c7fa9a63f91f9fd74fb65ca187456",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:01+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "1N5400",
+   "1N5401",
+   "1N5402",
+   "1N5403",
+   "1N5404"
+  ],
+  "confidence": "high",
+  "seconds": 7.4,
+  "tokens_in": 1536,
+  "tokens_out": 104
+ }
+}

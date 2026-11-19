@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gn5a-thru-gn5m_ce12729c.md",
+ "supplier": "goodark",
+ "file_hash": "d1d0ea1d62a0bdb2e3b3bd4c714c9af547ceab4a2f9e844ef58b39196beb524b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:02+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN5A",
+   "GN5B",
+   "GN5D",
+   "GN5G",
+   "GN5J"
+  ],
+  "confidence": "high",
+  "seconds": 6.29,
+  "tokens_in": 1553,
+  "tokens_out": 65
+ }
+}

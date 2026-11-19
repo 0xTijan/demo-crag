@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms040120ll_8d74544c.md",
+ "supplier": "goodark",
+ "file_hash": "286054225ae4855bf76b89b22048d3d08d9c8ceceb7ce32edec146a0922f0bca",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:23+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SiC MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS040120LL"
+  ],
+  "confidence": "high",
+  "seconds": 6.2,
+  "tokens_in": 1859,
+  "tokens_out": 46
+ }
+}

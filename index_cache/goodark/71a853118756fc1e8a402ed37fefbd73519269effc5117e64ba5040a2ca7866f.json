@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs30d065cp_9ea08936.md",
+ "supplier": "goodark",
+ "file_hash": "71a853118756fc1e8a402ed37fefbd73519269effc5117e64ba5040a2ca7866f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:02+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS30D065CP"
+  ],
+  "confidence": "high",
+  "seconds": 5.51,
+  "tokens_in": 1666,
+  "tokens_out": 47
+ }
+}

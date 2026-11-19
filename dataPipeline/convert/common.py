@@ -34,7 +34,7 @@ from helpers.run_log import start_run_log
 load_dotenv()  # read DATABASE_URL etc. from a local .env file, if present
 
 ROOT = Path(__file__).resolve().parents[2]  # repository root
-INPUT_DIR = ROOT / "reports"
+INPUT_DIR = ROOT / "datasheets/goodark"
 
 # SQLAlchemy connection URL; same variable and default as db_gui.py / rag/sql.py.
 DATABASE_URL = os.getenv(

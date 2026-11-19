@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sgp0260sd_68e8ed29.md",
+ "supplier": "goodark",
+ "file_hash": "be270d42867e4be817c17c7fd757a9099a61f6605829b72efd704944a3ca574f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:29+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SGP0260SD"
+  ],
+  "confidence": "high",
+  "seconds": 4.99,
+  "tokens_in": 1155,
+  "tokens_out": 43
+ }
+}

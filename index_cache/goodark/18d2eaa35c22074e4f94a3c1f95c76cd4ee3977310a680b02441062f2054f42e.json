@@ -1,0 +1,22 @@
+{
+ "file": "goodark/hs5j-thru-hs5m_01085fed.md",
+ "supplier": "goodark",
+ "file_hash": "18d2eaa35c22074e4f94a3c1f95c76cd4ee3977310a680b02441062f2054f42e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:05+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "HS5J",
+   "HS5K",
+   "HS5M"
+  ],
+  "confidence": "high",
+  "seconds": 6.27,
+  "tokens_in": 1491,
+  "tokens_out": 49
+ }
+}

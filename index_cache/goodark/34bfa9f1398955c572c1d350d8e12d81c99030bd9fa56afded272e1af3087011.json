@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur2080fct_fce170ec.md",
+ "supplier": "goodark",
+ "file_hash": "34bfa9f1398955c572c1d350d8e12d81c99030bd9fa56afded272e1af3087011",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:51+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR2080FCT"
+  ],
+  "confidence": "high",
+  "seconds": 5.21,
+  "tokens_in": 1321,
+  "tokens_out": 44
+ }
+}

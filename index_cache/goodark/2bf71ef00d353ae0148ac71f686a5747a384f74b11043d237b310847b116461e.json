@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n4001g-thru-1n4007g_52794672.md",
+ "supplier": "goodark",
+ "file_hash": "2bf71ef00d353ae0148ac71f686a5747a384f74b11043d237b310847b116461e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:39+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "1N4001G",
+   "1N4002G",
+   "1N4003G",
+   "1N4004G",
+   "1N4005G"
+  ],
+  "confidence": "high",
+  "seconds": 7.71,
+  "tokens_in": 1591,
+  "tokens_out": 95
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ses5vt236h-6u_d67b7cde.md",
+ "supplier": "goodark",
+ "file_hash": "7845f8b0f7cf1530f8deb7364569fa2e71068de1c5d9df5e48c97ab2cf954830",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:16+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "5UB"
+  ],
+  "confidence": "high",
+  "seconds": 4.43,
+  "tokens_in": 1298,
+  "tokens_out": 37
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rl201g-thru-rl207g_22ab947f.md",
+ "supplier": "goodark",
+ "file_hash": "eab9a8907d16e410991313ebe47db07709b687c778d494008fbe67e6349cc91f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:33+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "RL201G",
+   "RL202G",
+   "RL203G",
+   "RL204G",
+   "RL205G"
+  ],
+  "confidence": "high",
+  "seconds": 6.93,
+  "tokens_in": 1558,
+  "tokens_out": 79
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "file": "goodark/abav70_40e6a34d.md",
+ "supplier": "goodark",
+ "file_hash": "34b319855d3818dcd2b7a5bb9e20aee987ca42139218b34718af29c5b2a56db9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:21+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Epitaxial Planar Switching Diode",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "seconds": 6.08,
+  "tokens_in": 1350,
+  "tokens_out": 41
+ }
+}

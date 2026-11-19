@@ -1,0 +1,24 @@
+{
+ "file": "goodark/zm4728a-thru-zm4764a_6174e33d.md",
+ "supplier": "goodark",
+ "file_hash": "f2ce1d3085818f9853ab218dac384699258b5056a5cb9d5f2ca02188d70eb884",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:10:01+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "ZM4728A",
+   "ZM4729A",
+   "ZM4730A",
+   "ZM4731A",
+   "ZM4732A"
+  ],
+  "confidence": "high",
+  "seconds": 6.49,
+  "tokens_in": 1627,
+  "tokens_out": 77
+ }
+}

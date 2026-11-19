@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbr20300s_8c89f232.md",
+ "supplier": "goodark",
+ "file_hash": "8bd098554bf50a0b463f1f843a322e95e55614b53ff3a4d3a4964477f0cc8bb0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:44+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBR20300S"
+  ],
+  "confidence": "high",
+  "seconds": 4.81,
+  "tokens_in": 1336,
+  "tokens_out": 44
+ }
+}

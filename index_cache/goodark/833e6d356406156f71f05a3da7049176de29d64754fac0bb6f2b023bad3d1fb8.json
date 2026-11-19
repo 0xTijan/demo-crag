@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmp00703k_55ce6d5c.md",
+ "supplier": "goodark",
+ "file_hash": "833e6d356406156f71f05a3da7049176de29d64754fac0bb6f2b023bad3d1fb8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:51:56+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMP00703K"
+  ],
+  "confidence": "high",
+  "seconds": 6.29,
+  "tokens_in": 1776,
+  "tokens_out": 43
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/baw567dw_e07cca13.md",
+ "supplier": "goodark",
+ "file_hash": "ade8a5ac25d829f37ffffbfde21c604822ddde4e22dfc19794ad8bb16d8aad53",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:45+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "BAW567DW"
+  ],
+  "confidence": "high",
+  "seconds": 4.51,
+  "tokens_in": 1270,
+  "tokens_out": 40
+ }
+}

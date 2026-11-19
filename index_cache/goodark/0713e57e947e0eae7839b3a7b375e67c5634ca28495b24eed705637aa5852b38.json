@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murd1020s_89d56d83.md",
+ "supplier": "goodark",
+ "file_hash": "0713e57e947e0eae7839b3a7b375e67c5634ca28495b24eed705637aa5852b38",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:00+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURD1020S"
+  ],
+  "confidence": "high",
+  "seconds": 4.83,
+  "tokens_in": 1407,
+  "tokens_out": 44
+ }
+}

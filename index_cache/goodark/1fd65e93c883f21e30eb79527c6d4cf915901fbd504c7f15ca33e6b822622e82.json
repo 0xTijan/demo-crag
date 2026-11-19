@@ -1,0 +1,24 @@
+{
+ "file": "goodark/asmcj7-0a-thru-asmcj220ca_9098e3c8.md",
+ "supplier": "goodark",
+ "file_hash": "1fd65e93c883f21e30eb79527c6d4cf915901fbd504c7f15ca33e6b822622e82",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:40+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "ASMCJ7.0A",
+   "ASMCJ7.5A",
+   "ASMCJ8.0A",
+   "ASMCJ8.5A",
+   "ASMCJ9.0A"
+  ],
+  "confidence": "high",
+  "seconds": 7.75,
+  "tokens_in": 1820,
+  "tokens_out": 77
+ }
+}

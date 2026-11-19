@@ -1,0 +1,24 @@
+{
+ "file": "goodark/ff1s-thru-ff7s_b96e466d.md",
+ "supplier": "goodark",
+ "file_hash": "7cb3662529774142824f70085326f688f62e3b3dc235672c783b41880364a7c1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:48+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "FF1S",
+   "FF2S",
+   "FF3S",
+   "FF4S",
+   "FF5S"
+  ],
+  "confidence": "high",
+  "seconds": 6.86,
+  "tokens_in": 1548,
+  "tokens_out": 67
+ }
+}

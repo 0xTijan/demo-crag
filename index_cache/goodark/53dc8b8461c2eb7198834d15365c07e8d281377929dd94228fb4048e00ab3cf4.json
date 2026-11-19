@@ -1,0 +1,24 @@
+{
+ "file": "goodark/5kp5-0-thru-5kp250ca_c106c1fa.md",
+ "supplier": "goodark",
+ "file_hash": "53dc8b8461c2eb7198834d15365c07e8d281377929dd94228fb4048e00ab3cf4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:43+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "5KP5.0",
+   "5KP5.0A",
+   "5KP6.0",
+   "5KP6.0A",
+   "5KP6.5"
+  ],
+  "confidence": "high",
+  "seconds": 7.84,
+  "tokens_in": 1802,
+  "tokens_out": 69
+ }
+}

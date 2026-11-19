@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf2810eh2_71f9ea1e.md",
+ "supplier": "goodark",
+ "file_hash": "df9053286358ce2a0872fd85cccae9698f8e7c2b23d445baf9e486a4b84c64ea",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:27+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2810EH2"
+  ],
+  "confidence": "high",
+  "seconds": 5.97,
+  "tokens_in": 2013,
+  "tokens_out": 42
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodark/gbjl30j-thru-gbjl30m_df383e37.md",
+ "supplier": "goodark",
+ "file_hash": "82b944fc7752606b31648faf0f7787ae581a210dc29ce2e614138e2b0ffb2281",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:13+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJL30J",
+   "GBJL30K",
+   "GBJL30M"
+  ],
+  "confidence": "high",
+  "seconds": 6.79,
+  "tokens_in": 1691,
+  "tokens_out": 54
+ }
+}

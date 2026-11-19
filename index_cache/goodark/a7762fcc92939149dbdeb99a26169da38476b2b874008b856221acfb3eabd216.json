@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms020120q_1b912382.md",
+ "supplier": "goodark",
+ "file_hash": "a7762fcc92939149dbdeb99a26169da38476b2b874008b856221acfb3eabd216",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:12+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SiC MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS020120Q"
+  ],
+  "confidence": "high",
+  "seconds": 6.34,
+  "tokens_in": 1878,
+  "tokens_out": 46
+ }
+}

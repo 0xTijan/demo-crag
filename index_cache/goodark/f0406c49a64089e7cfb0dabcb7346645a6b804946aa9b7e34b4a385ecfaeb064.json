@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ses3v3t236-6u_2f99d029.md",
+ "supplier": "goodark",
+ "file_hash": "f0406c49a64089e7cfb0dabcb7346645a6b804946aa9b7e34b4a385ecfaeb064",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:06+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection array",
+  "family": false,
+  "part_numbers": [
+   "LV"
+  ],
+  "confidence": "high",
+  "seconds": 4.96,
+  "tokens_in": 1385,
+  "tokens_out": 35
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbrf20200ct_48122970.md",
+ "supplier": "goodark",
+ "file_hash": "486f19514bffa1464a4850e922cac78b81901ae5ce9dd17d88e9935481e93dc0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:06+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRF20200CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.66,
+  "tokens_in": 1326,
+  "tokens_out": 44
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sgc101bs_8dd0bc1f.md",
+ "supplier": "goodark",
+ "file_hash": "862b85940d915576e5d0dac55285d76037b8ed16e895a31a0febce187a8df834",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:54+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SGC101BS"
+  ],
+  "confidence": "high",
+  "seconds": 5.26,
+  "tokens_in": 1540,
+  "tokens_out": 42
+ }
+}

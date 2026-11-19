@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbu6005-thru-gbu610_c79ac31a.md",
+ "supplier": "goodark",
+ "file_hash": "077bd8491a465e65dbcabbc2326e49a8b9ee8c283493e3c7ef58138f52e92834",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:53+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU 6005",
+   "GBU 601",
+   "GBU 602",
+   "GBU 604",
+   "GBU 606"
+  ],
+  "confidence": "high",
+  "seconds": 8.65,
+  "tokens_in": 1903,
+  "tokens_out": 88
+ }
+}

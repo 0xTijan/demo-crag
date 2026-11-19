@@ -1,0 +1,20 @@
+{
+ "file": "goodark/git065n75e1c2_f6b4d291.md",
+ "supplier": "goodark",
+ "file_hash": "fcb5691e8f7543dde397817845e5d332d4a80adbe4a3d8caa728b5d3cd28c9b9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:09+00:00",
+  "is_datasheet": true,
+  "label": "IGBT",
+  "family": false,
+  "part_numbers": [
+   "GIT065N75E1C2"
+  ],
+  "confidence": "high",
+  "seconds": 5.29,
+  "tokens_in": 1749,
+  "tokens_out": 43
+ }
+}

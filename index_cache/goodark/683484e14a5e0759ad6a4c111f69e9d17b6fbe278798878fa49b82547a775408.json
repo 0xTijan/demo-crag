@@ -1,0 +1,23 @@
+{
+ "file": "goodark/ps17-thru-ps1100_39963de4.md",
+ "supplier": "goodark",
+ "file_hash": "683484e14a5e0759ad6a4c111f69e9d17b6fbe278798878fa49b82547a775408",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:48+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PS17",
+   "PS18",
+   "PS19",
+   "PS1100"
+  ],
+  "confidence": "high",
+  "seconds": 5.57,
+  "tokens_in": 1548,
+  "tokens_out": 56
+ }
+}

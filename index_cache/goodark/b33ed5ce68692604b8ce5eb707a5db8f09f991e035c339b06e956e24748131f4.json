@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bas16_b8130201.md",
+ "supplier": "goodark",
+ "file_hash": "b33ed5ce68692604b8ce5eb707a5db8f09f991e035c339b06e956e24748131f4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:00+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "A6"
+  ],
+  "confidence": "high",
+  "seconds": 5.45,
+  "tokens_in": 1191,
+  "tokens_out": 36
+ }
+}

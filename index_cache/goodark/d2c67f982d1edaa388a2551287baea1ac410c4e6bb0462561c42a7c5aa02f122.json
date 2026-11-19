@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur1540f_46c72988.md",
+ "supplier": "goodark",
+ "file_hash": "d2c67f982d1edaa388a2551287baea1ac410c4e6bb0462561c42a7c5aa02f122",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:26+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR1540F"
+  ],
+  "confidence": "high",
+  "seconds": 4.7,
+  "tokens_in": 1301,
+  "tokens_out": 43
+ }
+}

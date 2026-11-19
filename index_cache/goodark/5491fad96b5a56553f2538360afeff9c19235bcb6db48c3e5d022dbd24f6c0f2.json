@@ -1,0 +1,23 @@
+{
+ "file": "goodark/sk87-thru-sk8b_bf6b0d1e.md",
+ "supplier": "goodark",
+ "file_hash": "5491fad96b5a56553f2538360afeff9c19235bcb6db48c3e5d022dbd24f6c0f2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK87",
+   "SK88",
+   "SK89",
+   "SK8B"
+  ],
+  "confidence": "high",
+  "seconds": 5.34,
+  "tokens_in": 1500,
+  "tokens_out": 54
+ }
+}

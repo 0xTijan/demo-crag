@@ -1,0 +1,20 @@
+{
+ "file": "goodark/smurp860_a7421165.md",
+ "supplier": "goodark",
+ "file_hash": "524b3df177f7e4435ddc9cd075564c4a0eb61c3b621241fba1bbdbbe573ed81a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:09+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMURP860"
+  ],
+  "confidence": "high",
+  "seconds": 4.75,
+  "tokens_in": 1316,
+  "tokens_out": 42
+ }
+}

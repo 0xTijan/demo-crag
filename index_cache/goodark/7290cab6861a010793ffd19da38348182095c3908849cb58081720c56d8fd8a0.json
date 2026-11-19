@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sbrb2045ct_3b6185a1.md",
+ "supplier": "goodark",
+ "file_hash": "7290cab6861a010793ffd19da38348182095c3908849cb58081720c56d8fd8a0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:05:23+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SBRB2045CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.72,
+  "tokens_in": 1338,
+  "tokens_out": 44
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ses5vd523h-2b_200469e4.md",
+ "supplier": "goodark",
+ "file_hash": "9d739e7348cf004ae247ba30c5f7374362a1601073740e2bfe485ff752218ec8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:12+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "C5"
+  ],
+  "confidence": "high",
+  "seconds": 4.37,
+  "tokens_in": 1210,
+  "tokens_out": 37
+ }
+}

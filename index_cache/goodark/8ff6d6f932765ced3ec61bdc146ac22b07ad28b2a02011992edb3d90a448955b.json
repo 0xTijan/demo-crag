@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbj20a-thru-gbj20m_5cc476ff.md",
+ "supplier": "goodark",
+ "file_hash": "8ff6d6f932765ced3ec61bdc146ac22b07ad28b2a02011992edb3d90a448955b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:41+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJ20A",
+   "GBJ20B",
+   "GBJ20D",
+   "GBJ20G",
+   "GBJ20J"
+  ],
+  "confidence": "high",
+  "seconds": 9.01,
+  "tokens_in": 2100,
+  "tokens_out": 79
+ }
+}

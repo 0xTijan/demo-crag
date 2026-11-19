@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n5221b-thru-1n5281b_9d0fb760.md",
+ "supplier": "goodark",
+ "file_hash": "5798d82ae6452a30132d6147337d0f98d465f942eb565f24c88e4afde8e2c629",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:57+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "1N5221B",
+   "1N5222B",
+   "1N5223B",
+   "1N5224B",
+   "1N5225B"
+  ],
+  "confidence": "high",
+  "seconds": 7.02,
+  "tokens_in": 1694,
+  "tokens_out": 77
+ }
+}

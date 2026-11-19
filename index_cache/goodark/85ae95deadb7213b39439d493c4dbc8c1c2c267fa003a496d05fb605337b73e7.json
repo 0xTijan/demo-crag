@@ -1,0 +1,24 @@
+{
+ "file": "goodark/hs2aa-thru-hs2ma_0921fa79.md",
+ "supplier": "goodark",
+ "file_hash": "85ae95deadb7213b39439d493c4dbc8c1c2c267fa003a496d05fb605337b73e7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:59+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "HS2AA",
+   "HS2BA",
+   "HS2DA",
+   "HS2FA",
+   "HS2GA"
+  ],
+  "confidence": "high",
+  "seconds": 7.61,
+  "tokens_in": 1589,
+  "tokens_out": 74
+ }
+}

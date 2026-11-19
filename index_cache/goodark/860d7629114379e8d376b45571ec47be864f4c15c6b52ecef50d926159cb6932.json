@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sbrb1545s_d2f6c519.md",
+ "supplier": "goodark",
+ "file_hash": "860d7629114379e8d376b45571ec47be864f4c15c6b52ecef50d926159cb6932",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:05:17+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SBRB1545S"
+  ],
+  "confidence": "high",
+  "seconds": 4.78,
+  "tokens_in": 1336,
+  "tokens_out": 44
+ }
+}

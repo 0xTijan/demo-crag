@@ -1,0 +1,22 @@
+{
+ "file": "goodark/bas21-a-c-s_d757c603.md",
+ "supplier": "goodark",
+ "file_hash": "85b1dbec6fc2fbf24f19f27a56fb109505d62cbd66d37ac827c8e4f5045e659a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:06+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": true,
+  "part_numbers": [
+   "BAS21A",
+   "BAS21C",
+   "BAS21S"
+  ],
+  "confidence": "high",
+  "seconds": 5.22,
+  "tokens_in": 1275,
+  "tokens_out": 53
+ }
+}

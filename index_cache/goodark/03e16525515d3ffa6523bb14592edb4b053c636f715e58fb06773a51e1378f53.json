@@ -1,0 +1,20 @@
+{
+ "file": "goodark/fsl14_f8b80e18.md",
+ "supplier": "goodark",
+ "file_hash": "03e16525515d3ffa6523bb14592edb4b053c636f715e58fb06773a51e1378f53",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:26+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "FSL14"
+  ],
+  "confidence": "high",
+  "seconds": 4.98,
+  "tokens_in": 1202,
+  "tokens_out": 40
+ }
+}

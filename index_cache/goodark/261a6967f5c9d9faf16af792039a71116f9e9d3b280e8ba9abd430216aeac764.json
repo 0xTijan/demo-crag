@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sd103ax_98bd5b39.md",
+ "supplier": "goodark",
+ "file_hash": "261a6967f5c9d9faf16af792039a71116f9e9d3b280e8ba9abd430216aeac764",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:00+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "S4"
+  ],
+  "confidence": "high",
+  "seconds": 5.57,
+  "tokens_in": 1335,
+  "tokens_out": 38
+ }
+}

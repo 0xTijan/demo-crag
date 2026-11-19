@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs02d065sm_6823e16b.md",
+ "supplier": "goodark",
+ "file_hash": "7b9caadf9c79672eb2591091939c3f373b747b4a496cdf42182f7523e963e4df",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:37+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS02D065SM"
+  ],
+  "confidence": "high",
+  "seconds": 5.46,
+  "tokens_in": 1607,
+  "tokens_out": 47
+ }
+}

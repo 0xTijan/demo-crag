@@ -1,0 +1,24 @@
+{
+ "file": "goodark/db153-thru-db157_de55876a.md",
+ "supplier": "goodark",
+ "file_hash": "fa26ca5a9887d6359638fad70eee6f813b8e9210794abc23e41980248a24fea1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:34+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DB153",
+   "DB154",
+   "DB155",
+   "DB156",
+   "DB157"
+  ],
+  "confidence": "high",
+  "seconds": 7.27,
+  "tokens_in": 1832,
+  "tokens_out": 61
+ }
+}

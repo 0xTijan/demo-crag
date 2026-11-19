@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ps3100_29ed9ba0.md",
+ "supplier": "goodark",
+ "file_hash": "570b5f0a4bea7e7a36875380c3db417b58c961b3e209091ceb0be903031630f8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:53+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "PS3100"
+  ],
+  "confidence": "high",
+  "seconds": 4.89,
+  "tokens_in": 1254,
+  "tokens_out": 41
+ }
+}

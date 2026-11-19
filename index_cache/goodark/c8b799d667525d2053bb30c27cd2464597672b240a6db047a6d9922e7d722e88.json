@@ -1,0 +1,20 @@
+{
+ "file": "goodark/afs26_22ab7617.md",
+ "supplier": "goodark",
+ "file_hash": "c8b799d667525d2053bb30c27cd2464597672b240a6db047a6d9922e7d722e88",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:58+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "AFS26"
+  ],
+  "confidence": "high",
+  "seconds": 5.65,
+  "tokens_in": 1156,
+  "tokens_out": 40
+ }
+}

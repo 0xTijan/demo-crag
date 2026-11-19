@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gft3050sm_121b5e66.md",
+ "supplier": "goodark",
+ "file_hash": "08567ac2af4461b6daca10976c1e2715b5e38f4b9ae50c826ff6e3ea618231da",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:03+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GFT3050SM"
+  ],
+  "confidence": "high",
+  "seconds": 7.37,
+  "tokens_in": 1384,
+  "tokens_out": 43
+ }
+}

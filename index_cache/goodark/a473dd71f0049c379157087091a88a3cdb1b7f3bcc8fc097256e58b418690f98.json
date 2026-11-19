@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms01k170w7_a5a30019.md",
+ "supplier": "goodark",
+ "file_hash": "a473dd71f0049c379157087091a88a3cdb1b7f3bcc8fc097256e58b418690f98",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:10+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SiC MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS01K170W7"
+  ],
+  "confidence": "high",
+  "seconds": 6.36,
+  "tokens_in": 1905,
+  "tokens_out": 47
+ }
+}

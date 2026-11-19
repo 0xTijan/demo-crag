@@ -1,0 +1,20 @@
+{
+ "file": "goodark/es2hjf_30794761.md",
+ "supplier": "goodark",
+ "file_hash": "a4e4c3132eb1b27b15934dd2ac6785d970c3b452ed0bd8dc60302cf4b8a0166e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:18+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "ES2HJF"
+  ],
+  "confidence": "high",
+  "seconds": 4.38,
+  "tokens_in": 1154,
+  "tokens_out": 41
+ }
+}

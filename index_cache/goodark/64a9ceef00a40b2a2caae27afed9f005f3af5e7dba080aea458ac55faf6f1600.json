@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbl2a-thru-gbl2m_7193088d.md",
+ "supplier": "goodark",
+ "file_hash": "64a9ceef00a40b2a2caae27afed9f005f3af5e7dba080aea458ac55faf6f1600",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:25+00:00",
+  "is_datasheet": true,
+  "label": "Bridge Rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBL2A",
+   "GBL2B",
+   "GBL2D",
+   "GBL2G",
+   "GBL2J"
+  ],
+  "confidence": "high",
+  "seconds": 7.82,
+  "tokens_in": 1968,
+  "tokens_out": 73
+ }
+}

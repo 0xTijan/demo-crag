@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sb220-thru-sb2b0_90b49f14.md",
+ "supplier": "goodark",
+ "file_hash": "bb95c86cf0c1f8e9fce35d5db2850fc1eede5cfc0f8714a87444a0511e80c00e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:50+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SB220",
+   "SB230",
+   "SB240",
+   "SB250",
+   "SB260"
+  ],
+  "confidence": "high",
+  "seconds": 7.16,
+  "tokens_in": 1459,
+  "tokens_out": 88
+ }
+}

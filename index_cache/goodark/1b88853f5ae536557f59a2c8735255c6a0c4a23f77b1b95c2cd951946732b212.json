@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bav35w_b13ee31e.md",
+ "supplier": "goodark",
+ "file_hash": "1b88853f5ae536557f59a2c8735255c6a0c4a23f77b1b95c2cd951946732b212",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:41+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "35"
+  ],
+  "confidence": "high",
+  "seconds": 5.16,
+  "tokens_in": 1304,
+  "tokens_out": 36
+ }
+}

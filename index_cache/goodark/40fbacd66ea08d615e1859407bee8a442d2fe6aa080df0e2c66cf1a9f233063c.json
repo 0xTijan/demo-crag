@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1f1-thru-1f7_6bef1edc.md",
+ "supplier": "goodark",
+ "file_hash": "40fbacd66ea08d615e1859407bee8a442d2fe6aa080df0e2c66cf1a9f233063c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:22+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "1F1",
+   "1F2",
+   "1F3",
+   "1F4",
+   "1F5"
+  ],
+  "confidence": "high",
+  "seconds": 3.57,
+  "tokens_in": 1543,
+  "tokens_out": 67
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/agmn13008lm_f9548fe3.md",
+ "supplier": "goodark",
+ "file_hash": "6e1be2c2e267247ef7f318104a82dde8cee522e8e4b8bec66f2a1e9f10d76fa0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:21+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "AGMN13008LM"
+  ],
+  "confidence": "high",
+  "seconds": 6.14,
+  "tokens_in": 1782,
+  "tokens_out": 43
+ }
+}

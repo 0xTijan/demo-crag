@@ -1,0 +1,20 @@
+{
+ "file": "goodark/1n914ws_8dbeb4ea.md",
+ "supplier": "goodark",
+ "file_hash": "5d2849b561942d8c1740670a293d9acb28cf94b1f0c2735d6bd038d55d8d42af",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:11+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "WQ"
+  ],
+  "confidence": "high",
+  "seconds": 6.87,
+  "tokens_in": 1205,
+  "tokens_out": 36
+ }
+}

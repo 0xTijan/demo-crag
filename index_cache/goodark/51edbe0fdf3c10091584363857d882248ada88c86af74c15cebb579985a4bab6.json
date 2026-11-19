@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf13r6_782855f7.md",
+ "supplier": "goodark",
+ "file_hash": "51edbe0fdf3c10091584363857d882248ada88c86af74c15cebb579985a4bab6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:13+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF13R6"
+  ],
+  "confidence": "high",
+  "seconds": 5.24,
+  "tokens_in": 1776,
+  "tokens_out": 40
+ }
+}

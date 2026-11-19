@@ -1,0 +1,21 @@
+{
+ "file": "goodark/gl2506-t2-thru-gl2508-t2_e04e152c.md",
+ "supplier": "goodark",
+ "file_hash": "9de24830f03efcd4825f93935cdb664f6687455a29c75fc1bbb9a1d9ad49e476",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:14+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "GL2506-T2",
+   "GL2508-T2"
+  ],
+  "confidence": "high",
+  "seconds": 6.27,
+  "tokens_in": 1690,
+  "tokens_out": 50
+ }
+}

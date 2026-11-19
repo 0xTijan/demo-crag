@@ -1,0 +1,20 @@
+{
+ "file": "goodark/agmn01404r_c43fdd93.md",
+ "supplier": "goodark",
+ "file_hash": "5a3ba8dcea8960cec211e5c44dfc61d53d96a13a6328f2ee81a04e51d0de4917",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:09+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "AGMN01404R"
+  ],
+  "confidence": "high",
+  "seconds": 6.22,
+  "tokens_in": 1777,
+  "tokens_out": 43
+ }
+}

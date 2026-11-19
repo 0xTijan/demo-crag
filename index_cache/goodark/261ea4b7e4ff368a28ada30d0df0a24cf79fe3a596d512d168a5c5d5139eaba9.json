@@ -1,0 +1,24 @@
+{
+ "file": "goodark/bzx55-series_1ba5ee38.md",
+ "supplier": "goodark",
+ "file_hash": "261ea4b7e4ff368a28ada30d0df0a24cf79fe3a596d512d168a5c5d5139eaba9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:21+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "BZX55-Y0V8",
+   "BZX55-Y2V4",
+   "BZX55-Y2V7",
+   "BZX55-Y3V0",
+   "BZX55-Y3V3"
+  ],
+  "confidence": "high",
+  "seconds": 8.07,
+  "tokens_in": 1760,
+  "tokens_out": 82
+ }
+}

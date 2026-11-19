@@ -1,0 +1,24 @@
+{
+ "file": "goodark/fr151-thru-fr157_33bca073.md",
+ "supplier": "goodark",
+ "file_hash": "615758841fd7ba0a9bacde239682028d309053d08e7440bad23dd7fbe90376a7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:56+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "FR151",
+   "FR152",
+   "FR153",
+   "FR154",
+   "FR155"
+  ],
+  "confidence": "high",
+  "seconds": 7.27,
+  "tokens_in": 1562,
+  "tokens_out": 74
+ }
+}

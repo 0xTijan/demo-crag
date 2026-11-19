@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murd1040ct_8b0ff493.md",
+ "supplier": "goodark",
+ "file_hash": "cbcf259099978c225f50a001eef6223832fc7e15bb463c901949b450993a0b1f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:01+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURD1040CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.84,
+  "tokens_in": 1410,
+  "tokens_out": 44
+ }
+}

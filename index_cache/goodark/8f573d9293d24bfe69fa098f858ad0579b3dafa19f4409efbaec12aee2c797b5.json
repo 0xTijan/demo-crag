@@ -1,0 +1,24 @@
+{
+ "file": "goodark/asmbj7-0a-thru-asmbj220ca_be62b644.md",
+ "supplier": "goodark",
+ "file_hash": "8f573d9293d24bfe69fa098f858ad0579b3dafa19f4409efbaec12aee2c797b5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:38+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "ASMBJ7.0A",
+   "ASMBJ7.5A",
+   "ASMBJ8.0A",
+   "ASMBJ8.5A",
+   "ASMBJ9.0A"
+  ],
+  "confidence": "high",
+  "seconds": 7.7,
+  "tokens_in": 1830,
+  "tokens_out": 77
+ }
+}

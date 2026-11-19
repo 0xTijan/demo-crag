@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bav99dw_90f892eb.md",
+ "supplier": "goodark",
+ "file_hash": "56aabd8d621c0f2c675d911544254ca01d045584a78da2a5aaff7e5230523966",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:43+00:00",
+  "is_datasheet": true,
+  "label": "switching diode array",
+  "family": false,
+  "part_numbers": [
+   "KJG"
+  ],
+  "confidence": "high",
+  "seconds": 4.88,
+  "tokens_in": 1261,
+  "tokens_out": 38
+ }
+}

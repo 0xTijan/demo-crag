@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n4728-thru-1n4764_5af2b873.md",
+ "supplier": "goodark",
+ "file_hash": "7f7c9cffd0521a6b8c41d4595daa354b9fb76fa13bad219aa1751bf040dfbee5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:48+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "1N4728A",
+   "1N4729A",
+   "1N4730A",
+   "1N4731A",
+   "1N4732A"
+  ],
+  "confidence": "high",
+  "seconds": 5.61,
+  "tokens_in": 1652,
+  "tokens_out": 77
+ }
+}

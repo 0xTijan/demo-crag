@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sb020-thru-sb0b0_8c5dd21e.md",
+ "supplier": "goodark",
+ "file_hash": "1c21a0d9ec07404e234f4c87d96679410409b63c44966502dc96c8b12b0ed78e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:46+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SB020",
+   "SB030",
+   "SB040",
+   "SB050",
+   "SB060"
+  ],
+  "confidence": "high",
+  "seconds": 5.8,
+  "tokens_in": 1477,
+  "tokens_out": 88
+ }
+}

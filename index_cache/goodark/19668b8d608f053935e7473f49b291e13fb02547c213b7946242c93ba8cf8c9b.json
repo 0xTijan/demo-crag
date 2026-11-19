@@ -1,0 +1,21 @@
+{
+ "file": "goodark/bat42-thru-bat43_d406f267.md",
+ "supplier": "goodark",
+ "file_hash": "19668b8d608f053935e7473f49b291e13fb02547c213b7946242c93ba8cf8c9b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:18+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": true,
+  "part_numbers": [
+   "BAT42",
+   "BAT43"
+  ],
+  "confidence": "high",
+  "seconds": 4.81,
+  "tokens_in": 1447,
+  "tokens_out": 43
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/al6tvs10a-thru-al6tvs180a_5090e823.md",
+ "supplier": "goodark",
+ "file_hash": "464b3788fefadf64bbf1b23902b9ae61ef1e2d68ecb7b75ea8c0e90b0ee1ddc6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:59+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "AL6TVS10A",
+   "AL6TVS11A",
+   "AL6TVS12A",
+   "AL6TVS13A",
+   "AL6TVS14A"
+  ],
+  "confidence": "high",
+  "seconds": 7.84,
+  "tokens_in": 1820,
+  "tokens_out": 77
+ }
+}

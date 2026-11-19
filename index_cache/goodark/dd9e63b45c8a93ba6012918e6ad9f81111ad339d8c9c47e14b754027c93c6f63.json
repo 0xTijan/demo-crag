@@ -1,0 +1,20 @@
+{
+ "file": "goodark/m8550_fdc4155e.md",
+ "supplier": "goodark",
+ "file_hash": "dd9e63b45c8a93ba6012918e6ad9f81111ad339d8c9c47e14b754027c93c6f63",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:18+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "Y21"
+  ],
+  "confidence": "high",
+  "seconds": 5.29,
+  "tokens_in": 1403,
+  "tokens_out": 36
+ }
+}

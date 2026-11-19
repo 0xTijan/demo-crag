@@ -1,0 +1,20 @@
+{
+ "file": "goodark/agmp00504m_7c257241.md",
+ "supplier": "goodark",
+ "file_hash": "d07d222432fd79fb458f884d0fd507492059ed35e65714f69189ca976830bc14",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:32+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "AGMP00504M"
+  ],
+  "confidence": "high",
+  "seconds": 6.09,
+  "tokens_in": 1774,
+  "tokens_out": 43
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn01210ll_4470b6f9.md",
+ "supplier": "goodark",
+ "file_hash": "809c09b206117d9a86beeaeb4145ec9d3e4bfdfb1f53a9b2422f8300502f22f6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:29+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN01210LL"
+  ],
+  "confidence": "high",
+  "seconds": 5.98,
+  "tokens_in": 1761,
+  "tokens_out": 43
+ }
+}

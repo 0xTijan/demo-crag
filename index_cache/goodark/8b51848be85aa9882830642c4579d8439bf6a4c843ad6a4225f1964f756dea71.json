@@ -1,0 +1,20 @@
+{
+ "file": "goodark/asgp0140sl_d20ed5d1.md",
+ "supplier": "goodark",
+ "file_hash": "8b51848be85aa9882830642c4579d8439bf6a4c843ad6a4225f1964f756dea71",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "ASGP0140SL"
+  ],
+  "confidence": "high",
+  "seconds": 5.38,
+  "tokens_in": 1178,
+  "tokens_out": 43
+ }
+}

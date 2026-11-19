@@ -1,0 +1,20 @@
+{
+ "file": "goodark/2sc3356_dff11266.md",
+ "supplier": "goodark",
+ "file_hash": "19f57ff00a5167b6488d8568d0209f5e67d94d69bacb23fcdc9bc6630752cac0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:30+00:00",
+  "is_datasheet": true,
+  "label": "transistor",
+  "family": true,
+  "part_numbers": [
+   "SOT-23"
+  ],
+  "confidence": "high",
+  "seconds": 5.27,
+  "tokens_in": 1539,
+  "tokens_out": 37
+ }
+}

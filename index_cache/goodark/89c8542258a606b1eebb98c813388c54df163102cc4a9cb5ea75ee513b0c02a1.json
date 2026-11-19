@@ -1,0 +1,20 @@
+{
+ "file": "goodark/b5819wt_0aed3e61.md",
+ "supplier": "goodark",
+ "file_hash": "89c8542258a606b1eebb98c813388c54df163102cc4a9cb5ea75ee513b0c02a1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:54+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "SKY"
+  ],
+  "confidence": "high",
+  "seconds": 7.4,
+  "tokens_in": 1221,
+  "tokens_out": 38
+ }
+}

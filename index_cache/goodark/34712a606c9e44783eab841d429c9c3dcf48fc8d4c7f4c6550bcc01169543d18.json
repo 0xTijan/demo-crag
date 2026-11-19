@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ass34c_7621055b.md",
+ "supplier": "goodark",
+ "file_hash": "34712a606c9e44783eab841d429c9c3dcf48fc8d4c7f4c6550bcc01169543d18",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:41+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "ASS34C"
+  ],
+  "confidence": "high",
+  "seconds": 6.96,
+  "tokens_in": 1214,
+  "tokens_out": 40
+ }
+}

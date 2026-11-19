@@ -1,0 +1,22 @@
+{
+ "file": "goodark/gbjl15ja-thru-gbjl15ma_533e2b75.md",
+ "supplier": "goodark",
+ "file_hash": "b2a8a4e0d64c0a3300b238fcd2063de4d04c0392edd28bf9c80de84888204b07",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:04+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "GBJL15JA",
+   "GBJL15KA",
+   "GBJL15MA"
+  ],
+  "confidence": "high",
+  "seconds": 6.67,
+  "tokens_in": 1697,
+  "tokens_out": 56
+ }
+}

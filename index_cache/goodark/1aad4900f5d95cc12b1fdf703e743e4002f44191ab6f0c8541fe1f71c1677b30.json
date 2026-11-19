@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gn3a-thru-gn3m_53c9bbe0.md",
+ "supplier": "goodark",
+ "file_hash": "1aad4900f5d95cc12b1fdf703e743e4002f44191ab6f0c8541fe1f71c1677b30",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:58+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN3A",
+   "GN3B",
+   "GN3D",
+   "GN3G",
+   "GN3J"
+  ],
+  "confidence": "high",
+  "seconds": 6.3,
+  "tokens_in": 1551,
+  "tokens_out": 65
+ }
+}

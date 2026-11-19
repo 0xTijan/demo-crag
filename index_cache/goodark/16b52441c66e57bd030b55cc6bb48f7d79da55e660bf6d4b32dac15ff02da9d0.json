@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf8205va_04742d40.md",
+ "supplier": "goodark",
+ "file_hash": "16b52441c66e57bd030b55cc6bb48f7d79da55e660bf6d4b32dac15ff02da9d0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:43+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF8205VA"
+  ],
+  "confidence": "high",
+  "seconds": 6.04,
+  "tokens_in": 1778,
+  "tokens_out": 41
+ }
+}

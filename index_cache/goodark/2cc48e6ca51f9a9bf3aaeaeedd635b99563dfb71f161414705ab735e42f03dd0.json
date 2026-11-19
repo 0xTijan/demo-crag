@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbj15a-thru-gbj15m_55f2bbeb.md",
+ "supplier": "goodark",
+ "file_hash": "2cc48e6ca51f9a9bf3aaeaeedd635b99563dfb71f161414705ab735e42f03dd0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:36+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "GBJ15A",
+   "GBJ15B",
+   "GBJ15D",
+   "GBJ15G",
+   "GBJ15J"
+  ],
+  "confidence": "high",
+  "seconds": 7.17,
+  "tokens_in": 2109,
+  "tokens_out": 81
+ }
+}

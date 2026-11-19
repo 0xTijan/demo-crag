@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmbta56_d39e63d1.md",
+ "supplier": "goodark",
+ "file_hash": "1b0a984b72aa3504a77ed4af250af379eb96b55d55208c625c249d9d80021df0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:52+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "2GM"
+  ],
+  "confidence": "high",
+  "seconds": 5.02,
+  "tokens_in": 1336,
+  "tokens_out": 35
+ }
+}

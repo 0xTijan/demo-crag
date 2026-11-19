@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sesuc5vd882-2b_377811ed.md",
+ "supplier": "goodark",
+ "file_hash": "348cf479218d65c3357857f533fdb9e70d8593de29ff2fb57ee5f590dd3e24df",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:28+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GOOD-ARK"
+  ],
+  "confidence": "high",
+  "seconds": 5.82,
+  "tokens_in": 1542,
+  "tokens_out": 38
+ }
+}

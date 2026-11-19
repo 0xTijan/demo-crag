@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn16506ld_21742622.md",
+ "supplier": "goodark",
+ "file_hash": "712fa791c4d2351f26838824b77cf8988afd7650bdfc4e75931a19b9ca76eeba",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:51:48+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN16506LD"
+  ],
+  "confidence": "high",
+  "seconds": 6.12,
+  "tokens_in": 1782,
+  "tokens_out": 43
+ }
+}

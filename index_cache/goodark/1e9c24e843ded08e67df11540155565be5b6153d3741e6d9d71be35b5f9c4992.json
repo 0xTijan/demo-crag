@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn07515w_d6aad261.md",
+ "supplier": "goodark",
+ "file_hash": "1e9c24e843ded08e67df11540155565be5b6153d3741e6d9d71be35b5f9c4992",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:51:34+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN07515W"
+  ],
+  "confidence": "high",
+  "seconds": 6.23,
+  "tokens_in": 1781,
+  "tokens_out": 43
+ }
+}

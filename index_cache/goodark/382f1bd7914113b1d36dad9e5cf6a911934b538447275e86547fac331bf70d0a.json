@@ -1,0 +1,21 @@
+{
+ "file": "goodark/mur140-thru-mur160_9ee84ec7.md",
+ "supplier": "goodark",
+ "file_hash": "382f1bd7914113b1d36dad9e5cf6a911934b538447275e86547fac331bf70d0a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:21+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "MUR140",
+   "MUR160"
+  ],
+  "confidence": "high",
+  "seconds": 4.67,
+  "tokens_in": 1362,
+  "tokens_out": 44
+ }
+}

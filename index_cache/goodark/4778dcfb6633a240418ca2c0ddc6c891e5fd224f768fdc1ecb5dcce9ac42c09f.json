@@ -1,0 +1,24 @@
+{
+ "file": "goodark/lb1sbl-thru-lb10sbl_efcad02f.md",
+ "supplier": "goodark",
+ "file_hash": "4778dcfb6633a240418ca2c0ddc6c891e5fd224f768fdc1ecb5dcce9ac42c09f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:31+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "LB1SBL",
+   "LB2SBL",
+   "LB4SBL",
+   "LB6SBL",
+   "LB8SBL"
+  ],
+  "confidence": "high",
+  "seconds": 8.38,
+  "tokens_in": 2005,
+  "tokens_out": 68
+ }
+}

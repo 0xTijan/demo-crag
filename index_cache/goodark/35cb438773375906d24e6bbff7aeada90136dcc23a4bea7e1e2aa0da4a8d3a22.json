@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bas416_9c571c0f.md",
+ "supplier": "goodark",
+ "file_hash": "35cb438773375906d24e6bbff7aeada90136dcc23a4bea7e1e2aa0da4a8d3a22",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:10+00:00",
+  "is_datasheet": true,
+  "label": "small-signal diode",
+  "family": false,
+  "part_numbers": [
+   "KT643933"
+  ],
+  "confidence": "high",
+  "seconds": 5.11,
+  "tokens_in": 1130,
+  "tokens_out": 42
+ }
+}

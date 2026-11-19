@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sgc1560sa_2b57a787.md",
+ "supplier": "goodark",
+ "file_hash": "21baaa576bb4347e0f8815cb0b8d769b2aed94f4df8934303941f8e6bae70f51",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:13+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SGC1560SA"
+  ],
+  "confidence": "high",
+  "seconds": 6.8,
+  "tokens_in": 1552,
+  "tokens_out": 43
+ }
+}

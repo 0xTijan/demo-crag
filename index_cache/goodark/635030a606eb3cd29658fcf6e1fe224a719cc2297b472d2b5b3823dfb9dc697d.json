@@ -1,0 +1,22 @@
+{
+ "file": "goodark/afs22-thru-afs24_b02626bc.md",
+ "supplier": "goodark",
+ "file_hash": "635030a606eb3cd29658fcf6e1fe224a719cc2297b472d2b5b3823dfb9dc697d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:57+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "AFS22",
+   "AFS23",
+   "AFS24"
+  ],
+  "confidence": "high",
+  "seconds": 6.32,
+  "tokens_in": 1445,
+  "tokens_out": 52
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbu8005-thru-gbu810_75c339a5.md",
+ "supplier": "goodark",
+ "file_hash": "0c6cd50bf2a6f325f72daff1d735651d175ad51c85b9a90f2021347df067cfe7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:58+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU 8005",
+   "GBU 801",
+   "GBU 802",
+   "GBU 804",
+   "GBU 806"
+  ],
+  "confidence": "high",
+  "seconds": 8.33,
+  "tokens_in": 1908,
+  "tokens_out": 88
+ }
+}

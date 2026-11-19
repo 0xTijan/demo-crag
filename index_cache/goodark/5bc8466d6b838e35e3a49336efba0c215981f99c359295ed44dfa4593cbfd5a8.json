@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rmb2m-thru-rmb10m_8bebd7e6.md",
+ "supplier": "goodark",
+ "file_hash": "5bc8466d6b838e35e3a49336efba0c215981f99c359295ed44dfa4593cbfd5a8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:37+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "RMB2M",
+   "RMB4M",
+   "RMB6M",
+   "RMB8M",
+   "RMB10M"
+  ],
+  "confidence": "high",
+  "seconds": 6.59,
+  "tokens_in": 1897,
+  "tokens_out": 63
+ }
+}

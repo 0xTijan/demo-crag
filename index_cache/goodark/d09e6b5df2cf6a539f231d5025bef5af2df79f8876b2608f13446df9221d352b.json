@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sl35b-thru-sl310b_01fb00a6.md",
+ "supplier": "goodark",
+ "file_hash": "d09e6b5df2cf6a539f231d5025bef5af2df79f8876b2608f13446df9221d352b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:42+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL35B",
+   "SL36B",
+   "SL37B",
+   "SL38B",
+   "SL39B"
+  ],
+  "confidence": "high",
+  "seconds": 5.88,
+  "tokens_in": 1549,
+  "tokens_out": 71
+ }
+}

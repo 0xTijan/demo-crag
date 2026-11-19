@@ -1,0 +1,24 @@
+{
+ "file": "goodark/br50005-w-thru-br5010-w_857ba3cc.md",
+ "supplier": "goodark",
+ "file_hash": "a08eb3fff9865d94b99c909b2dd9983af3b513f338b1e98ff17f9d992268a2e6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:00+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "BR50 005",
+   "BR50 01",
+   "BR50 02",
+   "BR50 04",
+   "BR50 06"
+  ],
+  "confidence": "high",
+  "seconds": 7.71,
+  "tokens_in": 1855,
+  "tokens_out": 72
+ }
+}

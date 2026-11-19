@@ -1,0 +1,22 @@
+{
+ "file": "goodark/mmdt3946_1cd695b5.md",
+ "supplier": "goodark",
+ "file_hash": "b22a41fcbbae8b694c93c47aef33d7877ba80fca28f9a94e8ccd62085375ecb3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:59+00:00",
+  "is_datasheet": true,
+  "label": "transistor",
+  "family": true,
+  "part_numbers": [
+   "3904",
+   "3906",
+   "MMDT3946"
+  ],
+  "confidence": "high",
+  "seconds": 5.98,
+  "tokens_in": 1493,
+  "tokens_out": 51
+ }
+}

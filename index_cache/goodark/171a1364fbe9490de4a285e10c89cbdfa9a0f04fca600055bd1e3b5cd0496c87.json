@@ -1,0 +1,24 @@
+{
+ "file": "goodark/pf21-thru-pf27_895cf0f9.md",
+ "supplier": "goodark",
+ "file_hash": "171a1364fbe9490de4a285e10c89cbdfa9a0f04fca600055bd1e3b5cd0496c87",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:42+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "PF21",
+   "PF22",
+   "PF23",
+   "PF24",
+   "PF25"
+  ],
+  "confidence": "high",
+  "seconds": 7.34,
+  "tokens_in": 1547,
+  "tokens_out": 67
+ }
+}

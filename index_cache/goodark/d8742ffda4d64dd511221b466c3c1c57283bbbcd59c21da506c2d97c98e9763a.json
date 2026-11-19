@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gnoaa-thru-gnoma_61d0b5ea.md",
+ "supplier": "goodark",
+ "file_hash": "d8742ffda4d64dd511221b466c3c1c57283bbbcd59c21da506c2d97c98e9763a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:08+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GNOAA",
+   "GNOBA",
+   "GNODA",
+   "GNOGA",
+   "GNOJA"
+  ],
+  "confidence": "high",
+  "seconds": 6.0,
+  "tokens_in": 1565,
+  "tokens_out": 65
+ }
+}

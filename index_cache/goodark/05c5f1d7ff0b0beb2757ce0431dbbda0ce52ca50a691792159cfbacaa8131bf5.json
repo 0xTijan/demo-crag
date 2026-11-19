@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sl55b-thru-sl515b_a1a66458.md",
+ "supplier": "goodark",
+ "file_hash": "05c5f1d7ff0b0beb2757ce0431dbbda0ce52ca50a691792159cfbacaa8131bf5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:50+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL55B",
+   "SL56B",
+   "SL57B",
+   "SL58B",
+   "SL59B"
+  ],
+  "confidence": "high",
+  "seconds": 5.94,
+  "tokens_in": 1557,
+  "tokens_out": 78
+ }
+}

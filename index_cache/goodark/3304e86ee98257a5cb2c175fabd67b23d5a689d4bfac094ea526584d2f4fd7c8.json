@@ -1,0 +1,21 @@
+{
+ "file": "goodark/asgc0850s-thru-asgc0860s_b0c5cc3e.md",
+ "supplier": "goodark",
+ "file_hash": "3304e86ee98257a5cb2c175fabd67b23d5a689d4bfac094ea526584d2f4fd7c8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:47+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ASGC0850S",
+   "ASGC0860S"
+  ],
+  "confidence": "high",
+  "seconds": 5.64,
+  "tokens_in": 1328,
+  "tokens_out": 52
+ }
+}

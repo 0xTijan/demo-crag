@@ -1,0 +1,20 @@
+{
+ "file": "goodark/agmn19010lm_ac0166fe.md",
+ "supplier": "goodark",
+ "file_hash": "9d0204fc554d9e359444faef3d556edd3a9b2890a173004c10c465cc1774a57f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:29+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "AGMN19010LM"
+  ],
+  "confidence": "high",
+  "seconds": 6.03,
+  "tokens_in": 1791,
+  "tokens_out": 43
+ }
+}

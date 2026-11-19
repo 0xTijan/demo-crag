@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbl6a-thru-gbl6m_6351d4fe.md",
+ "supplier": "goodark",
+ "file_hash": "a53000a5e1b33b30072e8b8c2d517f33784411470cc92834943b0667eea73f82",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:32+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBL6A",
+   "GBL6B",
+   "GBL6D",
+   "GBL6G",
+   "GBL6J"
+  ],
+  "confidence": "high",
+  "seconds": 8.41,
+  "tokens_in": 1943,
+  "tokens_out": 73
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs16d065cp_fa4b4902.md",
+ "supplier": "goodark",
+ "file_hash": "08d2978508ecd16a337eabee2e665dbd071da3fcdc118abc459a5c1b695ef861",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:54:38+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS16D065CP"
+  ],
+  "confidence": "high",
+  "seconds": 6.04,
+  "tokens_in": 1662,
+  "tokens_out": 47
+ }
+}

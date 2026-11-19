@@ -1,0 +1,20 @@
+{
+ "file": "goodark/1n4448ws_d3c15782.md",
+ "supplier": "goodark",
+ "file_hash": "17bb0fc52f68f596beb6e02254259af54584676eb3ddd3faeb845d93effe8682",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:45+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "T5"
+  ],
+  "confidence": "high",
+  "seconds": 5.0,
+  "tokens_in": 1325,
+  "tokens_out": 36
+ }
+}

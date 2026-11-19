@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmbt4403_142389de.md",
+ "supplier": "goodark",
+ "file_hash": "ba7612406974962a16bd1ee64413c44db299738610842a2b2635d9c2d86b8dbf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:42+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT4403"
+  ],
+  "confidence": "high",
+  "seconds": 5.43,
+  "tokens_in": 1554,
+  "tokens_out": 39
+ }
+}

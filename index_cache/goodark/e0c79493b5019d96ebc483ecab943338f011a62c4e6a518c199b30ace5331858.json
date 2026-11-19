@@ -1,0 +1,21 @@
+{
+ "file": "goodark/lsl34-thru-lsl345_81aad2a9.md",
+ "supplier": "goodark",
+ "file_hash": "e0c79493b5019d96ebc483ecab943338f011a62c4e6a518c199b30ace5331858",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:07+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LSL34",
+   "LSL345"
+  ],
+  "confidence": "high",
+  "seconds": 5.67,
+  "tokens_in": 1305,
+  "tokens_out": 47
+ }
+}

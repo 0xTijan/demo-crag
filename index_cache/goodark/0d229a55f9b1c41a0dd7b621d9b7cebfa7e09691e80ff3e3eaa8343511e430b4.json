@@ -1,0 +1,20 @@
+{
+ "file": "goodark/1ss355_3adaf514.md",
+ "supplier": "goodark",
+ "file_hash": "0d229a55f9b1c41a0dd7b621d9b7cebfa7e09691e80ff3e3eaa8343511e430b4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:24+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "1SS355"
+  ],
+  "confidence": "high",
+  "seconds": 5.46,
+  "tokens_in": 1290,
+  "tokens_out": 39
+ }
+}

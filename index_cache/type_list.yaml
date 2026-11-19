@@ -1,0 +1,176 @@
+# Step 0 type list (plan v1). Check it once and edit freely: rename keys and names, move labels
+# between types, merge types. `classify report` applies it; `classify group` only adds labels that
+# are not in it yet. `datasheets` is a count, written by the tools.
+types:
+  schottky_diode:
+    name: Schottky barrier rectifier
+    datasheets: 517
+    labels:
+    - Schottky barrier diode
+    - Schottky barrier rectifier
+    - Schottky diode
+  ultrafast_rectifier:
+    name: Ultrafast Rectifier
+    datasheets: 122
+    labels:
+    - ultrafast recovery rectifier
+    - ultrafast rectifier
+  mosfet_n:
+    name: N-channel MOSFET
+    datasheets: 98
+    labels:
+    - N-channel MOSFET
+  rectifier:
+    name: rectifier
+    datasheets: 81
+    labels:
+    - rectifier
+  sic_schottky_diode:
+    name: Silicon Carbide Schottky Diode
+    datasheets: 79
+    labels:
+    - Silicon Carbide Schottky Diode
+  bridge_rectifier:
+    name: Bridge Rectifier
+    datasheets: 55
+    labels:
+    - Bridge rectifier
+  fast_recovery_rectifier:
+    name: Fast Recovery Rectifier
+    datasheets: 45
+    labels:
+    - fast recovery rectifier
+  zener_diode:
+    name: Zener diode
+    datasheets: 42
+    labels:
+    - Zener diode
+  rectifier_diode:
+    name: Rectifier Diode
+    datasheets: 34
+    labels:
+    - rectifier diode
+  sic_mosfet_n:
+    name: N-channel SiC MOSFET
+    datasheets: 28
+    labels:
+    - N-channel SiC MOSFET
+  npn_transistor:
+    name: NPN transistor
+    datasheets: 26
+    labels:
+    - NPN transistor
+  tvs_diode:
+    name: TVS diode
+    datasheets: 26
+    labels:
+    - TVS diode
+    - Transient voltage suppressor
+  switching_diode:
+    name: switching diode
+    datasheets: 19
+    labels:
+    - Silicon Epitaxial Planar Switching Diode
+    - switching diode
+  mosfet_p:
+    name: P-channel MOSFET
+    datasheets: 17
+    labels:
+    - P-channel MOSFET
+  esd_diode:
+    name: ESD Protection Diode
+    datasheets: 15
+    labels:
+    - ESD protection diode
+  fast_switching_diode:
+    name: Fast Switching Diode
+    datasheets: 11
+    labels:
+    - fast switching diode
+  transistor:
+    name: transistor
+    datasheets: 11
+    labels:
+    - transistor
+  superfast_rectifier:
+    name: Superfast Rectifier
+    datasheets: 6
+    labels:
+    - superfast rectifier
+  high_voltage_rectifier:
+    name: High Voltage Rectifier
+    datasheets: 4
+    labels:
+    - high voltage rectifier
+  igbt:
+    name: Insulated Gate Bipolar Transistor
+    datasheets: 3
+    labels:
+    - IGBT
+    - Insulated Gate Bipolar Transistor
+  tvs_array:
+    name: TVS Array
+    datasheets: 3
+    labels:
+    - ESD TVS array
+    - TVS diode array
+  esd_array:
+    name: ESD Protection Array
+    datasheets: 2
+    labels:
+    - ESD protection array
+  mosfet:
+    name: MOSFET
+    datasheets: 2
+    labels:
+    - MOSFET
+  pnp_transistor:
+    name: PNP Transistor
+    datasheets: 2
+    labels:
+    - PNP transistor
+  dual_transistor:
+    name: Dual Transistor
+    datasheets: 1
+    labels:
+    - dual transistor
+  esd_surge_array:
+    name: ESD/Surge Protection Diode Array
+    datasheets: 1
+    labels:
+    - ESD/Surge Protection Diode Array
+  low_side_gate_driver:
+    name: Low Side Gate Driver
+    datasheets: 1
+    labels:
+    - low side gate driver
+  push_pull_transformer_driver:
+    name: Push-Pull Transformer Driver
+    datasheets: 1
+    labels:
+    - push-pull transformer driver
+  silicon_diode:
+    name: Silicon Diode
+    datasheets: 1
+    labels:
+    - Silicon diode
+  small_signal_diode:
+    name: Small-Signal Diode
+    datasheets: 1
+    labels:
+    - small-signal diode
+  switching_diode_array:
+    name: Switching Diode Array
+    datasheets: 1
+    labels:
+    - switching diode array
+  three_phase_bridge_rectifier:
+    name: Three-Phase Bridge Rectifier
+    datasheets: 1
+    labels:
+    - three-phase rectifier bridge
+  three_phase_rectifier:
+    name: Three-Phase Rectifier
+    datasheets: 1
+    labels:
+    - three-phase rectifier

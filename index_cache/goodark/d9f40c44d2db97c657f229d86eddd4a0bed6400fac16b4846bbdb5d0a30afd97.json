@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sk12-thru-sk16_4d6ecbc9.md",
+ "supplier": "goodark",
+ "file_hash": "d9f40c44d2db97c657f229d86eddd4a0bed6400fac16b4846bbdb5d0a30afd97",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:36+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK12",
+   "SK13",
+   "SK14",
+   "SK15",
+   "SK16"
+  ],
+  "confidence": "high",
+  "seconds": 6.65,
+  "tokens_in": 1532,
+  "tokens_out": 59
+ }
+}

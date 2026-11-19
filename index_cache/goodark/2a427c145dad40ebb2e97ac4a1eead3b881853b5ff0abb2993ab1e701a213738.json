@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbj6a-thru-kbj6m_3d56cc6d.md",
+ "supplier": "goodark",
+ "file_hash": "2a427c145dad40ebb2e97ac4a1eead3b881853b5ff0abb2993ab1e701a213738",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:38+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "KBJ6A",
+   "KBJ6B",
+   "KBJ6D",
+   "KBJ6G",
+   "KBJ6J"
+  ],
+  "confidence": "high",
+  "seconds": 8.48,
+  "tokens_in": 1939,
+  "tokens_out": 74
+ }
+}

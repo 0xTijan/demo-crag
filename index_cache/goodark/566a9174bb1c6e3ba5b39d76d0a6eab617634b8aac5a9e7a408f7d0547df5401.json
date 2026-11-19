@@ -1,0 +1,24 @@
+{
+ "file": "goodark/lu1-thru-lu5_8b5ab025.md",
+ "supplier": "goodark",
+ "file_hash": "566a9174bb1c6e3ba5b39d76d0a6eab617634b8aac5a9e7a408f7d0547df5401",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:14+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LU1",
+   "LU2",
+   "LU3",
+   "LU4",
+   "LU5"
+  ],
+  "confidence": "high",
+  "seconds": 4.97,
+  "tokens_in": 1505,
+  "tokens_out": 54
+ }
+}

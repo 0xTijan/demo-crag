@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs20d120sw1_75c2d37c.md",
+ "supplier": "goodark",
+ "file_hash": "1e187adc91986ee20f75cb2f00706e939392810ebeebf446570cda8aee846fc3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:54:57+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS20D120SW1"
+  ],
+  "confidence": "high",
+  "seconds": 5.99,
+  "tokens_in": 1621,
+  "tokens_out": 48
+ }
+}

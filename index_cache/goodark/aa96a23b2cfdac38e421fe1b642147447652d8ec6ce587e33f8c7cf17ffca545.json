@@ -1,0 +1,20 @@
+{
+ "file": "goodark/2sc945_6ed11bb4.md",
+ "supplier": "goodark",
+ "file_hash": "aa96a23b2cfdac38e421fe1b642147447652d8ec6ce587e33f8c7cf17ffca545",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:31+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "CR"
+  ],
+  "confidence": "high",
+  "seconds": 5.46,
+  "tokens_in": 1497,
+  "tokens_out": 34
+ }
+}

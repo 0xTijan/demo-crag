@@ -1,0 +1,20 @@
+{
+ "file": "goodark/s8550_d4cb7539.md",
+ "supplier": "goodark",
+ "file_hash": "930c4904ea17b819819fbb86851fe97ba13f89f376d631c7530e940952d10d84",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:41+00:00",
+  "is_datasheet": true,
+  "label": "transistor",
+  "family": false,
+  "part_numbers": [
+   "2TY"
+  ],
+  "confidence": "high",
+  "seconds": 6.4,
+  "tokens_in": 1443,
+  "tokens_out": 34
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/agmn16006lm_98429b14.md",
+ "supplier": "goodark",
+ "file_hash": "216653b1caa118bc645e524006e85918ea7d357aad07154f96dfde04ec655d72",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:26+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "AGMN16006LM"
+  ],
+  "confidence": "high",
+  "seconds": 6.12,
+  "tokens_in": 1787,
+  "tokens_out": 43
+ }
+}

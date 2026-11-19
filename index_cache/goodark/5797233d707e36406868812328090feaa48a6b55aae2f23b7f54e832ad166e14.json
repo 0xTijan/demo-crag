@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssfd6046x_1278884d.md",
+ "supplier": "goodark",
+ "file_hash": "5797233d707e36406868812328090feaa48a6b55aae2f23b7f54e832ad166e14",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:48+00:00",
+  "is_datasheet": true,
+  "label": "MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFD6046X"
+  ],
+  "confidence": "high",
+  "seconds": 6.36,
+  "tokens_in": 1908,
+  "tokens_out": 41
+ }
+}

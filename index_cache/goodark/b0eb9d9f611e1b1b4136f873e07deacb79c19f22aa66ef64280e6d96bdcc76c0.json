@@ -1,0 +1,20 @@
+{
+ "file": "goodark/hs312_41137ccb.md",
+ "supplier": "goodark",
+ "file_hash": "b0eb9d9f611e1b1b4136f873e07deacb79c19f22aa66ef64280e6d96bdcc76c0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:00+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "HS312"
+  ],
+  "confidence": "high",
+  "seconds": 6.75,
+  "tokens_in": 1229,
+  "tokens_out": 40
+ }
+}

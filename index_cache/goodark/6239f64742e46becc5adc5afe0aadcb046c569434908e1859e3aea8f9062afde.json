@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murb820s_76cb49c4.md",
+ "supplier": "goodark",
+ "file_hash": "6239f64742e46becc5adc5afe0aadcb046c569434908e1859e3aea8f9062afde",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:57+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURB820S"
+  ],
+  "confidence": "high",
+  "seconds": 4.85,
+  "tokens_in": 1338,
+  "tokens_out": 43
+ }
+}

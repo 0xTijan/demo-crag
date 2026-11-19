@@ -1,0 +1,22 @@
+{
+ "file": "goodark/bat81s-thru-bat83s_4c1a5bc3.md",
+ "supplier": "goodark",
+ "file_hash": "695d3211fe1bd64a76d5a1af9067f593f606dcfd3544fb5378cc9c2b49dabeef",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:31+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": true,
+  "part_numbers": [
+   "BAT81S",
+   "BAT82S",
+   "BAT83S"
+  ],
+  "confidence": "high",
+  "seconds": 4.92,
+  "tokens_in": 1389,
+  "tokens_out": 51
+ }
+}

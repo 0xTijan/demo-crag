@@ -1,0 +1,20 @@
+{
+ "file": "goodark/fr15_d5883df8.md",
+ "supplier": "goodark",
+ "file_hash": "2f0f44025cc2e404711c0376f39ae22e08d967304c743aee684bc083b49dc3e2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:58+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": false,
+  "part_numbers": [
+   "FR15"
+  ],
+  "confidence": "high",
+  "seconds": 6.53,
+  "tokens_in": 1149,
+  "tokens_out": 37
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/aga2k2n03s4_58e69bf3.md",
+ "supplier": "goodark",
+ "file_hash": "b6a4c0fbc017f81e8b2bc181d17f42db11a7f0081477465b41f547878cd0b427",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:06+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "AGA2K2N03S4"
+  ],
+  "confidence": "high",
+  "seconds": 5.6,
+  "tokens_in": 1735,
+  "tokens_out": 45
+ }
+}

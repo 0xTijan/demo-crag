@@ -1,0 +1,24 @@
+{
+ "file": "goodark/fr101-thru-fr107_a3928fb1.md",
+ "supplier": "goodark",
+ "file_hash": "f734b5db2546f7154bba86b331d80b83c4122abaee324d7b2638175cec17b1b9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:52+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "FR101",
+   "FR102",
+   "FR103",
+   "FR104",
+   "FR105"
+  ],
+  "confidence": "high",
+  "seconds": 6.66,
+  "tokens_in": 1522,
+  "tokens_out": 74
+ }
+}

@@ -18,7 +18,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-MARKDOWN_DIR = ROOT / "markdowns" / "suppliers"
+MARKDOWN_DIR = ROOT / "markdowns"
 CACHE_DIR = ROOT / "index_cache"
 
 PAGE_MARKER_RE = re.compile(r"<!--\s*page:\s*(\d+)\s*-->")

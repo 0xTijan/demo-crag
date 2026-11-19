@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms020150p_8d6fdca7.md",
+ "supplier": "goodark",
+ "file_hash": "9563d7978aeb1c33158751c48b4d8dd1fa680222256721ca6e8f741b9618c5a3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SiC MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS020150P"
+  ],
+  "confidence": "high",
+  "seconds": 6.28,
+  "tokens_in": 1880,
+  "tokens_out": 46
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gft4050sm_3e68b25d.md",
+ "supplier": "goodark",
+ "file_hash": "02110027ca207f6636bfbaa7f5dc3e8647939c8aaeb5ecec7a12f52e8a7efe83",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:04+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GFT4050SM"
+  ],
+  "confidence": "high",
+  "seconds": 6.33,
+  "tokens_in": 1379,
+  "tokens_out": 43
+ }
+}

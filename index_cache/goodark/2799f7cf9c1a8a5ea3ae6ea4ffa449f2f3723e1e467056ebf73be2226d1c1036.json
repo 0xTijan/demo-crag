@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bat46w_2140e9b4.md",
+ "supplier": "goodark",
+ "file_hash": "2799f7cf9c1a8a5ea3ae6ea4ffa449f2f3723e1e467056ebf73be2226d1c1036",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:22+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "S9"
+  ],
+  "confidence": "high",
+  "seconds": 5.08,
+  "tokens_in": 1241,
+  "tokens_out": 38
+ }
+}

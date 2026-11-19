@@ -1,0 +1,22 @@
+{
+ "file": "goodark/fs12ns-thru-fs14ns_df61aa78.md",
+ "supplier": "goodark",
+ "file_hash": "019d0037893b3306af67efae031b6db73e52bde88b91779a7875b70e22491f4d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:14+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FS12NS",
+   "FS13NS",
+   "FS14NS"
+  ],
+  "confidence": "high",
+  "seconds": 6.99,
+  "tokens_in": 1376,
+  "tokens_out": 52
+ }
+}

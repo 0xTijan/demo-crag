@@ -1,0 +1,20 @@
+{
+ "file": "goodark/afs2bh_ac4e9b61.md",
+ "supplier": "goodark",
+ "file_hash": "af348060909543056519c02b8607d4214f04b7d829221333979ce659213745a6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:00+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "AFS2BH"
+  ],
+  "confidence": "high",
+  "seconds": 4.95,
+  "tokens_in": 1163,
+  "tokens_out": 40
+ }
+}

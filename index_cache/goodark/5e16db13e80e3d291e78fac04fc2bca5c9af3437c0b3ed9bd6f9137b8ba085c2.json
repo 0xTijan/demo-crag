@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murb1080s_78c9fe58.md",
+ "supplier": "goodark",
+ "file_hash": "5e16db13e80e3d291e78fac04fc2bca5c9af3437c0b3ed9bd6f9137b8ba085c2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:43+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURB1080S"
+  ],
+  "confidence": "high",
+  "seconds": 5.09,
+  "tokens_in": 1348,
+  "tokens_out": 44
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/ask22a-thru-ask26a_59bed885.md",
+ "supplier": "goodark",
+ "file_hash": "39e27b34b0b49587fa6de7695bc4f3036b9bac4122cbbad3db8c576e7ee7c8e4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:04+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ASK22A",
+   "ASK23A",
+   "ASK24A",
+   "ASK25A",
+   "ASK26A"
+  ],
+  "confidence": "high",
+  "seconds": 6.74,
+  "tokens_in": 1564,
+  "tokens_out": 64
+ }
+}

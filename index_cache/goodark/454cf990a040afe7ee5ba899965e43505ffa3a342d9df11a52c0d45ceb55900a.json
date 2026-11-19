@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gft5050ct_44e91c61.md",
+ "supplier": "goodark",
+ "file_hash": "454cf990a040afe7ee5ba899965e43505ffa3a342d9df11a52c0d45ceb55900a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:05+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GFT5050CT"
+  ],
+  "confidence": "high",
+  "seconds": 5.41,
+  "tokens_in": 1387,
+  "tokens_out": 43
+ }
+}

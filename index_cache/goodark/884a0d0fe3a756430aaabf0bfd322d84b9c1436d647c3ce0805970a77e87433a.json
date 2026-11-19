@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn01712ll_8f7ee2c5.md",
+ "supplier": "goodark",
+ "file_hash": "884a0d0fe3a756430aaabf0bfd322d84b9c1436d647c3ce0805970a77e87433a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN01712LL"
+  ],
+  "confidence": "high",
+  "seconds": 5.93,
+  "tokens_in": 1761,
+  "tokens_out": 43
+ }
+}

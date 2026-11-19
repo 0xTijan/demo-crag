@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmbt2907a_42a706bb.md",
+ "supplier": "goodark",
+ "file_hash": "ead56d8fa1a108ac1b3f7812d2c2f397ea608a0274af7d8780e8dcc53d33b95c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:37+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT2907A"
+  ],
+  "confidence": "high",
+  "seconds": 4.96,
+  "tokens_in": 1622,
+  "tokens_out": 40
+ }
+}

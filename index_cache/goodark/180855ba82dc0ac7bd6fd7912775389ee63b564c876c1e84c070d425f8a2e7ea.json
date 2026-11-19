@@ -1,0 +1,18 @@
+{
+ "file": "goodark/ssf6007_27fe3228.md",
+ "supplier": "goodark",
+ "file_hash": "180855ba82dc0ac7bd6fd7912775389ee63b564c876c1e84c070d425f8a2e7ea",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:35+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "seconds": 5.74,
+  "tokens_in": 1724,
+  "tokens_out": 34
+ }
+}

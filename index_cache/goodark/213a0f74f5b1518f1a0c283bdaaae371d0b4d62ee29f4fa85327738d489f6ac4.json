@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmbt5401_6e5dc4e6.md",
+ "supplier": "goodark",
+ "file_hash": "213a0f74f5b1518f1a0c283bdaaae371d0b4d62ee29f4fa85327738d489f6ac4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:43+00:00",
+  "is_datasheet": true,
+  "label": "transistor",
+  "family": false,
+  "part_numbers": [
+   "GOOD-ARK"
+  ],
+  "confidence": "high",
+  "seconds": 5.39,
+  "tokens_in": 1550,
+  "tokens_out": 35
+ }
+}

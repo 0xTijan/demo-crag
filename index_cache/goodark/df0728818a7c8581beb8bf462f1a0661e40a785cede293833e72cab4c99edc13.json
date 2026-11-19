@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur860_136e00d0.md",
+ "supplier": "goodark",
+ "file_hash": "df0728818a7c8581beb8bf462f1a0661e40a785cede293833e72cab4c99edc13",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:32+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR860"
+  ],
+  "confidence": "high",
+  "seconds": 4.6,
+  "tokens_in": 1305,
+  "tokens_out": 41
+ }
+}

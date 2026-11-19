@@ -1,0 +1,20 @@
+{
+ "file": "goodark/asgc101bsa_c31c85bb.md",
+ "supplier": "goodark",
+ "file_hash": "5c8b55cb64bc807ee2ebe9584f55a242909c609a077dcc9364ed860035fa5191",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:48+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "ASGC101BSA"
+  ],
+  "confidence": "high",
+  "seconds": 5.3,
+  "tokens_in": 970,
+  "tokens_out": 43
+ }
+}

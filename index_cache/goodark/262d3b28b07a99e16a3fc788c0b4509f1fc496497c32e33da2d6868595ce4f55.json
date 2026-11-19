@@ -1,0 +1,24 @@
+{
+ "file": "goodark/aes1a-thru-aes1j_9847e1af.md",
+ "supplier": "goodark",
+ "file_hash": "262d3b28b07a99e16a3fc788c0b4509f1fc496497c32e33da2d6868595ce4f55",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:37+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "AES1A",
+   "AES1B",
+   "AES1C",
+   "AES1D",
+   "AES1F"
+  ],
+  "confidence": "high",
+  "seconds": 7.1,
+  "tokens_in": 1565,
+  "tokens_out": 69
+ }
+}

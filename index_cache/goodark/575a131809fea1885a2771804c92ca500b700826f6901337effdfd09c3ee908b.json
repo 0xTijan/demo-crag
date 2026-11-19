@@ -1,0 +1,20 @@
+{
+ "file": "goodark/1ss181_aafd1611.md",
+ "supplier": "goodark",
+ "file_hash": "575a131809fea1885a2771804c92ca500b700826f6901337effdfd09c3ee908b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:21+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "A3"
+  ],
+  "confidence": "high",
+  "seconds": 6.81,
+  "tokens_in": 1292,
+  "tokens_out": 36
+ }
+}

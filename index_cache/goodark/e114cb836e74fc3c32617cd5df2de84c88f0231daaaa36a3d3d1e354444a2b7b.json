@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mx6501t_98574081.md",
+ "supplier": "goodark",
+ "file_hash": "e114cb836e74fc3c32617cd5df2de84c88f0231daaaa36a3d3d1e354444a2b7b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:26+00:00",
+  "is_datasheet": true,
+  "label": "push-pull transformer driver",
+  "family": false,
+  "part_numbers": [
+   "MX6501T"
+  ],
+  "confidence": "high",
+  "seconds": 5.34,
+  "tokens_in": 1104,
+  "tokens_out": 41
+ }
+}

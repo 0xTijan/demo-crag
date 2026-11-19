@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ambr20200ct_906ff19e.md",
+ "supplier": "goodark",
+ "file_hash": "9c8c0301fae4b6c269e678b8aaffc4adeae7ed207b3024c4c58056bc43360a16",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:04+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "AMBR20200CT"
+  ],
+  "confidence": "high",
+  "seconds": 5.12,
+  "tokens_in": 1328,
+  "tokens_out": 44
+ }
+}

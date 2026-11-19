@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gp10a-thru-gp10m_1eeae951.md",
+ "supplier": "goodark",
+ "file_hash": "f51710f7f9dbbba09cf07afc4c101afed7e2ffd6c65792b0ee42a0dd5e0d871e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:10+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GP10A",
+   "GP10B",
+   "GP10D",
+   "GP10G",
+   "GP10J"
+  ],
+  "confidence": "high",
+  "seconds": 6.31,
+  "tokens_in": 1547,
+  "tokens_out": 72
+ }
+}

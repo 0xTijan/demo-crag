@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf6808a3x_591192ed.md",
+ "supplier": "goodark",
+ "file_hash": "e8e2a9f859df09321aac2ad2fbce4b72440547d3cf01643a2bc831512d77b5a7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:37+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6808A3X"
+  ],
+  "confidence": "high",
+  "seconds": 5.89,
+  "tokens_in": 1886,
+  "tokens_out": 43
+ }
+}

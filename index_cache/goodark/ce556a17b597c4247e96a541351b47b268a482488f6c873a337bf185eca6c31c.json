@@ -1,0 +1,20 @@
+{
+ "file": "goodark/rb520-40hp-haf_f5e94663.md",
+ "supplier": "goodark",
+ "file_hash": "ce556a17b597c4247e96a541351b47b268a482488f6c873a337bf185eca6c31c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:13+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "DFN1006-2H"
+  ],
+  "confidence": "high",
+  "seconds": 5.21,
+  "tokens_in": 1005,
+  "tokens_out": 45
+ }
+}

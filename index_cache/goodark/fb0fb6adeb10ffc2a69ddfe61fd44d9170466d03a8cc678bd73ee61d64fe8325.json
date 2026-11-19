@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs08d065sn_f1279adb.md",
+ "supplier": "goodark",
+ "file_hash": "fb0fb6adeb10ffc2a69ddfe61fd44d9170466d03a8cc678bd73ee61d64fe8325",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:54:10+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS08D065SN"
+  ],
+  "confidence": "high",
+  "seconds": 5.84,
+  "tokens_in": 1600,
+  "tokens_out": 47
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n5400g-thru-1n5408g_4886ae64.md",
+ "supplier": "goodark",
+ "file_hash": "9113ddcb9c8e14310bacd96837b3225f9a5e3cf1bffb3d9688f0d02237093cb8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:03+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "1N5400G",
+   "1N5401G",
+   "1N5402G",
+   "1N5403G",
+   "1N5404G"
+  ],
+  "confidence": "high",
+  "seconds": 7.81,
+  "tokens_in": 1547,
+  "tokens_out": 111
+ }
+}

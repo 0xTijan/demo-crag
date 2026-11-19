@@ -1,0 +1,22 @@
+{
+ "file": "goodark/sl32c-thru-sl34c_3c3c9cda.md",
+ "supplier": "goodark",
+ "file_hash": "f2595d514062f6f310997b03d5f6617b4e410f93b24a4820e8c8085077b326b6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:39+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL32C",
+   "SL33C",
+   "SL34C"
+  ],
+  "confidence": "high",
+  "seconds": 5.93,
+  "tokens_in": 1389,
+  "tokens_out": 52
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murb1020ct_7ada35e2.md",
+ "supplier": "goodark",
+ "file_hash": "8ee6c909d8044e1ddc1ca26b5e84dd57db938a73e0363feebb038cad6b6d5fa1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:37+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURB1020CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.88,
+  "tokens_in": 1421,
+  "tokens_out": 44
+ }
+}

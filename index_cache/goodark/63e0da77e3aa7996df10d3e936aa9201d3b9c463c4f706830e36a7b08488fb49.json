@@ -1,0 +1,24 @@
+{
+ "file": "goodark/l1a-thru-l7a_f44d462b.md",
+ "supplier": "goodark",
+ "file_hash": "63e0da77e3aa7996df10d3e936aa9201d3b9c463c4f706830e36a7b08488fb49",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:01+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "L1A",
+   "L2A",
+   "L3A",
+   "L4A",
+   "L5A"
+  ],
+  "confidence": "high",
+  "seconds": 6.57,
+  "tokens_in": 1550,
+  "tokens_out": 65
+ }
+}

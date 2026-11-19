@@ -1,0 +1,21 @@
+{
+ "file": "goodark/sgc1050s-thru-sgc1060s_a62ddc02.md",
+ "supplier": "goodark",
+ "file_hash": "1e19a3f6240d683824d3dc89c34153e41744532d9f8dc7610c2a9c60b9e79181",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:02+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGC1050S",
+   "SGC1060S"
+  ],
+  "confidence": "high",
+  "seconds": 5.52,
+  "tokens_in": 1539,
+  "tokens_out": 52
+ }
+}

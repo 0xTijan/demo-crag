@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bas21h_bcbdf079.md",
+ "supplier": "goodark",
+ "file_hash": "386e22a322845e3c85f6ef13335b9f5d7faeabe7db924717db3132b0626d9d57",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:07+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "JS"
+  ],
+  "confidence": "high",
+  "seconds": 5.2,
+  "tokens_in": 1146,
+  "tokens_out": 35
+ }
+}

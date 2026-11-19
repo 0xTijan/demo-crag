@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn05304ldm_d69c0476.md",
+ "supplier": "goodark",
+ "file_hash": "192a95067e299df147116053dd94c67fe16cb04f4df8b9afcec4299bb10fa8f1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:51:23+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN05304LDM"
+  ],
+  "confidence": "high",
+  "seconds": 6.29,
+  "tokens_in": 1756,
+  "tokens_out": 44
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur75120sp_f1be28cb.md",
+ "supplier": "goodark",
+ "file_hash": "abb5da1c2250739840c63faf22bbea1febfbca3bedd0c04f3a24730e48ed2a55",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:24+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR75120SP"
+  ],
+  "confidence": "high",
+  "seconds": 5.05,
+  "tokens_in": 1361,
+  "tokens_out": 44
+ }
+}

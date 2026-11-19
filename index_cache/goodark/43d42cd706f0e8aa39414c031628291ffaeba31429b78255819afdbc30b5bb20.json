@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murd560s_921907ba.md",
+ "supplier": "goodark",
+ "file_hash": "43d42cd706f0e8aa39414c031628291ffaeba31429b78255819afdbc30b5bb20",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:11+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURD560S"
+  ],
+  "confidence": "high",
+  "seconds": 4.77,
+  "tokens_in": 1324,
+  "tokens_out": 43
+ }
+}

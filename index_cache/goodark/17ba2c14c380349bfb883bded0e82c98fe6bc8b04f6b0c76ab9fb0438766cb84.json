@@ -1,0 +1,24 @@
+{
+ "file": "goodark/af4tvs10a-thru-af4tvs58a_eb26b07f.md",
+ "supplier": "goodark",
+ "file_hash": "17ba2c14c380349bfb883bded0e82c98fe6bc8b04f6b0c76ab9fb0438766cb84",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:49+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "AF4TVS10A",
+   "AF4TVS11A",
+   "AF4TVS12A",
+   "AF4TVS13A",
+   "AF4TVS14A"
+  ],
+  "confidence": "high",
+  "seconds": 7.47,
+  "tokens_in": 1790,
+  "tokens_out": 77
+ }
+}
