@@ -103,7 +103,7 @@ def setup_dirs():
 
 
 def draft_args(md, types, **kw):
-    base = dict(types=types, top=None, samples=10, min_share=0.5, max_chars=24000, workers=2, input=str(md),
+    base = dict(types=types, top=None, all=False, min_datasheets=1, samples=10, min_share=0.5, max_chars=24000, workers=2, input=str(md),
                 supplier=None, force=False, force_inventory=False, verbose=False)
     base.update(kw)
     return SimpleNamespace(**base)
@@ -199,6 +199,19 @@ def test_validate_and_check_catch_mistakes():
     sl.save_spec_list(bad, sl.spec_list_path("mosfet_n"))
     assert sl.cmd_check(SimpleNamespace(types=["mosfet_n"], verbose=False)) == 1
     assert sl.cmd_list(SimpleNamespace()) == 0
+
+
+def test_all_drafts_every_type_and_resumes():
+    md = setup_dirs()
+    inv = FakeInventory()
+    # mlcc has 1 datasheet: skipped by --min-datasheets 2; mosfet_n drafted
+    assert sl.cmd_draft(draft_args(md, [], all=True, min_datasheets=2), inv, FakeMerge()) == 0
+    assert sl.spec_list_path("mosfet_n").exists() and not sl.spec_list_path("mlcc").exists()
+    # rerun (e.g. after Ctrl+C): types with a list are skipped, no LLM call, no .draft.yaml copies
+    inv2, merge2 = FakeInventory(), FakeMerge()
+    assert sl.cmd_draft(draft_args(md, [], all=True, min_datasheets=2), inv2, merge2) == 0
+    assert inv2.calls == [] and merge2.calls == []
+    assert not list(sl.SPEC_LIST_DIR.glob("*.draft.yaml"))
 
 
 if __name__ == "__main__":

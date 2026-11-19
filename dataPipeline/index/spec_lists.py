@@ -3,6 +3,7 @@
     python -m dataPipeline.index.spec_lists list                    # types, datasheet counts, spec-list status
     python -m dataPipeline.index.spec_lists draft mosfet_n mlcc     # draft spec lists for these types
     python -m dataPipeline.index.spec_lists draft --top 10          # ... for the 10 types with most datasheets
+    python -m dataPipeline.index.spec_lists draft --all             # ... for every type (rerun to resume)
     python -m dataPipeline.index.spec_lists check                   # validate every spec list (after editing)
 
 Needs Step 0 first (`classify run`, `group`, `report`), because the samples are picked by the `type` that
@@ -415,12 +416,22 @@ def draft_type(type_key: str, args, inventory_llm, merge_llm, types: dict) -> in
 def cmd_draft(args, inventory_llm=None, merge_llm=None) -> int:
     types = known_types()
     keys = list(args.types or [])
-    if args.top:
-        ranked = sorted((k for k in types if not k.startswith("_")),
-                        key=lambda k: -(types[k].get("datasheets") or 0))
-        keys += [k for k in ranked[:args.top] if k not in keys]
+    ranked = sorted((k for k in types if not k.startswith("_")),
+                    key=lambda k: (-(types[k].get("datasheets") or 0), k))
+    picked = ranked if getattr(args, "all", False) else ranked[:args.top] if args.top else []
+    if picked:
+        # --all / --top: every type with enough datasheets that has no spec list yet (resumable: a rerun
+        # after Ctrl+C or a crash continues with the types still missing; --force also redoes drafts)
+        min_ds = getattr(args, "min_datasheets", 3)
+        few = [k for k in picked if (types[k].get("datasheets") or 0) < min_ds]
+        done = [k for k in picked if k not in few and spec_list_path(k).exists() and not args.force]
+        keys += [k for k in picked if k not in keys and k not in few and k not in done]
+        print(f"{len(picked)} types: {len(keys)} to draft, {len(done)} already have a spec list, "
+              f"{len(few)} with fewer than {min_ds} datasheets skipped (--min-datasheets)")
     if not keys:
-        print("Name the types (e.g. `draft mosfet_n mlcc`) or use --top N. See: spec_lists list")
+        if picked:
+            return 0
+        print("Name the types (e.g. `draft mosfet_n mlcc`), or use --top N or --all. See: spec_lists list")
         return 1
     if inventory_llm is None:
         inventory_llm = OllamaJSON("specInventoryModel", DEFAULT_MODEL)
@@ -429,12 +440,21 @@ def cmd_draft(args, inventory_llm=None, merge_llm=None) -> int:
         merge_llm = OllamaJSON("specListModel", DEFAULT_MODEL)
         merge_llm.check_model()
     failed = 0
-    for key in keys:
-        try:
-            failed += draft_type(key, args, inventory_llm, merge_llm, types)
-        except LLMError as exc:
-            print(f"  ! {key}: {exc}", file=sys.stderr)
-            failed += 1
+    try:
+        for i, key in enumerate(keys, 1):
+            if len(keys) > 1:
+                print(f"\n[{i}/{len(keys)}] ", end="")
+            try:
+                failed += draft_type(key, args, inventory_llm, merge_llm, types)
+            except LLMError as exc:
+                print(f"  ! {key}: {exc}", file=sys.stderr)
+                failed += 1
+    except KeyboardInterrupt:
+        print("\nStopped. Finished spec lists and sample inventories are kept; run the same command again "
+              "to continue.")
+        return 1
+    if failed:
+        print(f"\n{failed} type(s) without a new draft (see the messages above)")
     print("\nNext: review the files in spec_lists/ (rules, critical, must_match, missing specs), set "
           "status: reviewed, then run: python -m dataPipeline.index.spec_lists check")
     return 1 if failed else 0
@@ -487,7 +507,11 @@ def main(argv=None) -> int:
     sub.add_parser("list", help="types with datasheet counts and spec-list status")
     p = sub.add_parser("draft", help="draft spec lists with the LLM")
     p.add_argument("types", nargs="*", help="type keys from index_cache/type_list.yaml")
-    p.add_argument("--top", type=int, help="also the N types with the most datasheets")
+    p.add_argument("--top", type=int, help="also the N types with the most datasheets (only those without a list)")
+    p.add_argument("--all", action="store_true",
+                   help="every type without a spec list yet (rerun to resume; with --force also redo drafts)")
+    p.add_argument("--min-datasheets", type=int, default=3,
+                   help="with --top/--all: skip types with fewer datasheets (default 3)")
     p.add_argument("--samples", type=int, default=10, help="sample datasheets per type (default 10)")
     p.add_argument("--min-share", type=float, default=0.5,
                    help="keep specs found in at least this share of the samples (default 0.5)")

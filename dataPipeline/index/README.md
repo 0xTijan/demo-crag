@@ -115,6 +115,7 @@ have in common, with a comparison rule for each (plan v1, "Spec lists").
 ```bash
 python -m dataPipeline.index.spec_lists list                  # types, datasheet counts, spec-list status
 python -m dataPipeline.index.spec_lists draft mosfet_n mlcc   # draft these types (or: draft --top 10)
+python -m dataPipeline.index.spec_lists draft --all -v         # every type without a spec list (rerun to resume)
 # open spec_lists/<type>.yaml, review it, set status: reviewed
 python -m dataPipeline.index.spec_lists check                 # validate every spec list (-v: every spec)
 ```
@@ -133,7 +134,8 @@ spec_lists/<type>.yaml  (status: draft)  ← you review it, set status: reviewed
 
 | Option (`draft`) | Default | Meaning |
 |---|---|---|
-| `types` / `--top N` | – | Type keys from `type_list.yaml`, and/or the N types with the most datasheets |
+| `types` / `--top N` / `--all` | – | Type keys from `type_list.yaml`; and/or the N types with the most datasheets; or every type. `--top` and `--all` skip types that already have a spec list, so a rerun after Ctrl+C or a crash continues where it stopped |
+| `--min-datasheets N` | 3 | With `--top` / `--all`: skip types with fewer datasheets (too few samples for a useful list) |
 | `--samples N` | 10 | Sample datasheets per type |
 | `--min-share X` | 0.5 | Keep specs found in at least this share of the samples ("in common"); lower it for more specs |
 | `--max-chars N` | 24000 | Characters of spec pages sent per sample (page 1 + pages with tables, without tape/reel, soldering, curves) |
