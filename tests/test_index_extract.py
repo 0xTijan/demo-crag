@@ -216,6 +216,12 @@ def test_run_resumes_skips_drafts_and_reextracts_on_new_spec_list_version():
     assert (root / "index_cache" / "extract_report.csv").read_text().count("\n") == 3
     assert ex.cmd_show(SimpleNamespace(target="goodark/2n7000.md", input=str(md), limit=20)) == 0
     assert ex.cmd_show(SimpleNamespace(target="nothing.md", input=str(md), limit=20)) == 1
+    hit = ex.find_cache("goodark/2n7000.md", md)
+    for form in ("/goodark/2n7000.md", "markdowns/goodark/2n7000.md", str(md / "goodark/2n7000.md"),
+                 hit.stem[:8]):
+        assert ex.find_cache(form, md) == hit, form
+    (md / "goodark/2n7000.md").write_text(MOSFET_MD + "changed", encoding="utf-8")  # new hash, not re-run yet
+    assert ex.find_cache("goodark/2n7000.md", md) == hit                         # found by the stored file name
 
 
 # ------------------------------------------------------------------ load_cache (Postgres)

@@ -259,25 +259,40 @@ def _now() -> str:
 
 # ------------------------------------------------------------------ show
 def find_cache(target: str, input_dir: Path) -> Path | None:
-    """A markdown path (absolute, or relative to the input folder) or a file-hash prefix -> its cache file."""
-    for p in (Path(target), input_dir / target):
+    """A markdown path or a file-hash prefix -> its cache file. The path may be absolute, relative to the
+    current folder (markdowns/goodark/x.md) or to the input folder (goodark/x.md, also /goodark/x.md)."""
+    rel_target = target.replace("\\", "/").lstrip("/")
+    if rel_target.startswith(input_dir.name + "/"):
+        rel_target = rel_target[len(input_dir.name) + 1:]
+    for p in (Path(target), input_dir / rel_target):
         if p.is_file() and p.suffix == ".md":
             rel = p.resolve().relative_to(input_dir.resolve()) if p.resolve().is_relative_to(input_dir.resolve()) \
                 else None
             supplier = rel.parts[0] if rel and len(rel.parts) > 1 else p.parent.name
-            return CACHE_DIR / supplier / f"{file_sha256(p)}.json"
+            path = CACHE_DIR / supplier / f"{file_sha256(p)}.json"
+            if path.exists():
+                return path
+            break  # markdown changed since it was classified: look the cache up by its file name below
     if re.fullmatch(r"[0-9a-f]{6,64}", target):
         hits = sorted(CACHE_DIR.glob(f"*/{target}*.json"))
         if len(hits) == 1:
             return hits[0]
-    return None
+    # by the `file` stored in the cache files (also finds the cache when the markdown is not on this PC)
+    name = rel_target.lower()
+    supplier = name.split("/", 1)[0] if "/" in name else "*"
+    hits = [c for c in sorted(CACHE_DIR.glob(f"{supplier}/*.json"))
+            if str(read_cache(c).get("file", "")).lower() in (name, name + ".md")]
+    hits.sort(key=lambda c: c.stat().st_mtime)
+    return hits[-1] if hits else None
 
 
 def cmd_show(args) -> int:
     path = find_cache(args.target, Path(args.input))
     cache = read_cache(path) if path else {}
     if not cache:
-        print(f"No index-cache file for {args.target!r} (a markdown path or a file-hash prefix)")
+        print(f"No index-cache file for {args.target!r}. Give the markdown path relative to {args.input} "
+              f"(e.g. goodark/x.md), a path to the .md file, or a file-hash prefix; the datasheet must be "
+              f"classified first (classify run).")
         return 1
     ex = cache.get("extraction")
     print(f"{cache.get('file')}  type {cache.get('type')}  ({path.relative_to(ROOT) if path.is_relative_to(ROOT) else path})")
