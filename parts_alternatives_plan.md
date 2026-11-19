@@ -54,8 +54,10 @@ Every datasheet is stored with its type. New datasheets in the two-weekly run ar
 
 ### A spec list per component type
 
-One small file per type, e.g. `spec_lists/mosfet_n.yaml`. It names only the **5–10 specs that decide a
-replacement**. How it's created is described below.
+One file per type, e.g. `spec_lists/mosfet_n.yaml`. It names **every spec that most datasheets of the type
+have in common** (found in at least half of the samples), not only a few; the ones that decide a replacement
+are marked `critical`. Specs found in too few datasheets are kept apart under `rare_specs` and not used.
+How it's created is described below; it is implemented in `dataPipeline/index/spec_lists.py`.
 
 ```yaml
 type: mosfet_n
@@ -72,21 +74,22 @@ specs:
 ```
 
 Rules: `=` must be equal, `>=` / `<=` equal or better, `≈` close to (with a tolerance), `contains`
-the candidate's range must cover the requested one (e.g. temperature range).
+the candidate's range must cover the requested one (e.g. temperature range), `info` shown in the table but not
+compared (e.g. marking, moisture sensitivity level).
 
 ### How a spec list is created (~45–60 min per type)
 
-**1. Draft (LLM, ~5 min).** Pick ~10 sample datasheets of the type: different suppliers, single parts and
-families, small and large parts. Give the LLM their spec tables, the YAML format and the MOSFET example,
-with an instruction like:
+**1. Draft (LLM, ~5–15 min, `python -m dataPipeline.index.spec_lists draft <type>`).** Pick ~10 sample
+datasheets of the type: different suppliers, single parts and families. Then two LLM steps:
+- **Inventory:** for each sample, the LLM lists every specification the datasheet gives (name, symbol, unit,
+  min/typ/max, conditions). Cached in the datasheet's index-cache file.
+- **Merge:** the LLM groups the items of all samples into specifications (synonyms such as "Drain-Source
+  Voltage" / "V(BR)DSS" / "VDS" merged), each with a key (condition after `@`, e.g. `rds_on_max@vgs_10v`),
+  label, unit, rule (`=`, `>=`, `<=`, `≈`, `contains`, `info`), critical yes/no, and must_match keys.
 
-> "List the 5–10 specs that decide whether one part can replace another. Use specs that most of these
-> datasheets give. For each: a key with its condition and min/max (e.g. `rds_on_max@vgs_10v`), label, unit,
-> rule (`=`, `>=`, `<=`, `≈`, `contains`), critical yes/no. Name what must match for a drop-in (package…),
-> and anything that can only be checked on a drawing."
-
-**2. Check the draft against the samples (automatic).** Run the normal index call (below) with the draft
-on the same 10 datasheets, and count how often each spec was found:
+**2. Count how often each spec was found (automatic, part of the draft).** Code counts in how many samples
+each specification appears (`found_in`), keeps those found in at least half (`--min-share 0.5`) and moves the
+rest to `rare_specs`:
 
 ```
 mosfet_n draft — found in 10 sample datasheets
@@ -98,7 +101,8 @@ mosfet_n draft — found in 10 sample datasheets
   qg_total_max        3/10   ← drop: too rarely given to shortlist with
 ```
 
-Specs that are rarely given can't help find candidates: drop them, or use the version most datasheets give.
+Specs that are rarely given can't help find candidates, which is why they go to `rare_specs`. A reviewer
+can move one back, or use the version most datasheets give.
 
 **3. Review by a person (~10–20 min).** An engineer, or you with an engineer for the important types,
 checks what the LLM most often gets wrong:
