@@ -117,8 +117,9 @@ mlcc                             Multilayer ceramic capacitor         388      3
 
 ## Notes
 
-- `index_cache/` is gitignored here. The plan keeps it in git, but **in the company's own repository**:
-  supplier specs are company data (plan section 9).
+- `index_cache/` is kept in git (plan section 9): small JSON files, so a new installation loads them
+  without an LLM run, and a two-weekly run only changes the files of datasheets that changed. Commit it after a
+  run: `git add index_cache && git commit -m "Index cache: ..."`.
 - Thinking models (Qwen3…) are called with thinking switched off: classification needs a short answer, not
   reasoning, and the output length decides the speed.
 - Tests: `python tests/test_index_classify.py` (fake LLM, no Ollama).
