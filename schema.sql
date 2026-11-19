@@ -156,36 +156,30 @@ CREATE TABLE IF NOT EXISTS report_file_errors (
 -- ==========================
 -- Manufacturers are given on the command line (product page or homepage URL);
 -- `manufacturer` is a short name such as "goodark" (from the domain, or --name).
--- One row per unique PDF in datasheet_files (the same bytes found under several URLs,
--- e.g. one URL per orderable part number, are one row and one file), and one row per
--- URL in datasheet_sources. The same details are also in datasheets/{manufacturer}/manifest.jsonl.
--- run.py migrates an older datasheet_files table (one row per URL) automatically.
-CREATE TABLE IF NOT EXISTS datasheet_files (
+-- Only hashes and errors are stored; where each PDF was found (page, part row,
+-- click trail) is in datasheets/{manufacturer}/manifest.jsonl. Datasheets that
+-- could not be obtained keep their full context in datasheet_errors.context
+-- (and datasheets/{manufacturer}/missing.jsonl).
+CREATE TABLE IF NOT EXISTS datasheet_files (       -- one row per distinct PDF
     datasheet_id  SERIAL PRIMARY KEY,
     manufacturer  TEXT        NOT NULL,
-    file_path     TEXT        NOT NULL,              -- relative to datasheets/
     file_hash     CHAR(64)    NOT NULL,              -- SHA-256 of the PDF bytes
+    file_path     TEXT        NOT NULL,              -- relative to datasheets/
     file_size     BIGINT,
-    downloaded_at TIMESTAMPTZ DEFAULT now(),         -- first download of these bytes
+    downloaded_at TIMESTAMPTZ DEFAULT now(),
     UNIQUE (manufacturer, file_hash)
 );
 
-CREATE TABLE IF NOT EXISTS datasheet_sources (
-    source_id     SERIAL PRIMARY KEY,
-    datasheet_id  INT         NOT NULL REFERENCES datasheet_files (datasheet_id) ON DELETE CASCADE,
+CREATE TABLE IF NOT EXISTS datasheet_urls (        -- one row per URL; many URLs can give the same PDF
+    url_id        SERIAL PRIMARY KEY,
+    datasheet_id  INT         NOT NULL REFERENCES datasheet_files(datasheet_id) ON DELETE CASCADE,
     manufacturer  TEXT        NOT NULL,
     source_url    TEXT        NOT NULL,
-    page_url      TEXT,                              -- page where the link was found
-    part_number   TEXT,                              -- from the URL folder, only when safe (else NULL)
-    link_text     TEXT,
-    context       TEXT,                              -- table row around the link
-    trail         TEXT,                              -- clicks from the start page
-    first_seen_at TIMESTAMPTZ DEFAULT now(),
-    last_seen_at  TIMESTAMPTZ DEFAULT now(),         -- old = no longer on the site
+    first_seen    TIMESTAMPTZ DEFAULT now(),
+    last_seen     TIMESTAMPTZ DEFAULT now(),
     UNIQUE (manufacturer, source_url)
 );
-CREATE INDEX IF NOT EXISTS datasheet_sources_datasheet_idx ON datasheet_sources (datasheet_id);
-CREATE INDEX IF NOT EXISTS datasheet_sources_part_idx ON datasheet_sources (manufacturer, part_number);
+CREATE INDEX IF NOT EXISTS datasheet_urls_datasheet_idx ON datasheet_urls (datasheet_id);
 
 CREATE TABLE IF NOT EXISTS datasheet_errors (
     error_id     SERIAL PRIMARY KEY,
@@ -195,6 +189,7 @@ CREATE TABLE IF NOT EXISTS datasheet_errors (
     error        TEXT NOT NULL,
     http_status  INT,
     traceback    TEXT,
+    context      JSONB,       -- datasheet not obtained: page, headings, section, table headers, row {header: value}, whole table
     occurred_at  TIMESTAMPTZ DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS datasheet_errors_manufacturer_idx ON datasheet_errors (manufacturer, occurred_at DESC);

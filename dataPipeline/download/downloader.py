@@ -34,30 +34,6 @@ def guess_filename(pdf: DatasheetLink, disposition: str) -> str:
     return name or pdf.text or "document"
 
 
-_PART_NUMBER = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._+-]{2,39}$")
-
-
-def part_number_from_url(source_url: str, page_url: str | None = None, link_text: str | None = None,
-                         context: str | None = None) -> str | None:
-    """The part number in a datasheet URL, when it can be read safely; otherwise None.
-
-    Many sites put the orderable part number in the folder of the PDF, e.g.
-    .../datasheet/NCA1462-Q1DNR/NCA1462-Q1_Datasheet_1.2_EN.pdf -> NCA1462-Q1DNR.
-    The folder name is used only if it looks like a part number (letters and digits,
-    no spaces) and also appears in the page URL, the link text or the table row where
-    the link was found, so folders such as /specification/ or /2024/ are never used.
-    """
-    parts = [unquote(p) for p in urlsplit(source_url).path.split("/") if p]
-    if len(parts) < 2:
-        return None
-    candidate = parts[-2].strip()
-    if not _PART_NUMBER.match(candidate) or not re.search(r"[A-Za-z]", candidate) \
-            or not re.search(r"\d", candidate):
-        return None
-    seen_in = " ".join(unquote(x) for x in (page_url, link_text, context) if x).lower()
-    return candidate if candidate.lower() in seen_in else None
-
-
 DOWNLOAD_ATTEMPTS = 3  # a transfer cut off half-way (timeout, dropped connection) is tried again
 
 

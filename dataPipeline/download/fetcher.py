@@ -203,6 +203,18 @@ class Fetcher:
         disposition = resp.headers.get("content-disposition", "").lower()
         return resp.status_code < 400 and ("pdf" in ctype or ".pdf" in disposition)
 
+    def head_info(self, url: str) -> dict | None:
+        """Size and file name of a document without downloading it (None if the server will not say)."""
+        try:
+            resp = self._request("HEAD", url)
+        except FetchError:
+            return None
+        length = resp.headers.get("content-length", "")
+        if resp.status_code >= 400 or not length.isdigit():
+            return None
+        return {"size": int(length), "content_type": resp.headers.get("content-type", "").lower(),
+                "disposition": resp.headers.get("content-disposition", "")}
+
     def stream(self, url: str):
         resp = self._request("GET", url, stream=True)
         if resp.status_code >= 400:

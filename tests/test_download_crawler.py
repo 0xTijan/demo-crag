@@ -40,6 +40,11 @@ SITE = {
     "https://en.example-semi.com/proshow.php?id=10": page("<a href='specification/1A1 thru 1A7.pdf'><img src='x.png'></a>"),
     "https://en.example-semi.com/proshow.php?id=11": page("<a href='specification/1A1 thru 1A7.pdf'><img src='x.png'></a>"),
     "https://en.example-semi.com/proshow.php?id=12": page("<a href='specification/1A1 thru 1A7.pdf'><img src='x.png'></a>"),
+    "https://en.example-semi.com/prolist.php?id=3": page(
+        "<h1>Schottky Rectifier</h1><table><thead><tr><th>Part</th><th>VRRM (V)</th><th>Package</th><th>PDF</th></tr></thead>"
+        "<tbody><tr><td>SS34</td><td>40</td><td>SMA</td><td><a href='/specification/SS34.pdf'>Datasheet</a></td></tr>"
+        "<tr><td>SS36</td><td>60</td><td>SMA</td><td><a href='/specification/SS36.pdf'>Datasheet</a></td></tr>"
+        "</tbody></table>", title="Schottky Rectifier - Example Semi"),
     "https://en.example-semi.com/proshow.php?id=20": page(
         "<a href='specification/SMAJ.pdf'>Datasheet</a> <a href='/files/AN-12-0001_TVS_layout.pdf'>Application note</a>"),
 }
@@ -80,6 +85,44 @@ def test_static_catalogue_walks_families_pages_and_parts():
     assert len(found) == len(urls)  # every PDF reported once, as soon as found
 
 
+def test_second_run_skips_leaf_pages_but_still_reads_lists():
+    leaves = {}
+    first = FakeFetcher()
+    PartCrawler(first, lambda *a, **k: None, js="never",
+                on_leaf=lambda url, pdfs: leaves.__setitem__(url, pdfs)).crawl("https://en.example-semi.com/product.php")
+    assert "https://en.example-semi.com/proshow.php?id=12" in leaves          # a part page: gave a PDF, no new links
+    assert not any("prolist" in u for u in leaves)                           # list pages lead to parts: never cached
+    second = FakeFetcher()
+    result = PartCrawler(second, lambda *a, **k: None, js="never", page_cache=leaves).crawl(
+        "https://en.example-semi.com/product.php")
+    assert not any("proshow" in u for u in second.requested)                 # part pages not fetched again
+    assert "https://en.example-semi.com/prolist.php?id=1&page=2" in second.requested  # lists still read
+    assert result.cached_pages == len(leaves)
+
+
+def test_cached_clicks_are_replayed_not_clicked():
+    from dataPipeline.download.crawler import PartCrawlResult
+    found = []
+    crawler = PartCrawler(FakeFetcher(), lambda *a, **k: None, on_pdf=found.append, fast=True)
+    crawler.result, crawler.hosts = PartCrawlResult("x"), {"x.com"}
+    node = Node("https://x.com/en/abs-speed-sensor", 2, True)
+
+    def cand(text, row="", hint=""):
+        return {"text": text, "hint": hint, "row": row, "label": "", "context": "", "chrome": False,
+                "visible": True, "details": {}}
+    crawler._replay(node, cand("", "NSM4101 Active", "dataSheet"), ("datasheet", "NSM4101 Active"), True,
+                    "pdf", "https://x.com/en/datasheet/NSM4101/NSM41xx.pdf")
+    crawler._replay(node, cand("", "NSM4102 Active", "dataSheet"), ("datasheet", "NSM4102 Active"), True,
+                    "notice", None)
+    crawler._replay(node, cand("Magnetic Sensor"), ("magnetic sensor",), True, "nav", "https://x.com/en/magnetic-sensor")
+    crawler._replay(node, cand("NSM4103"), ("nsm4103",), True, "nav", "https://x.com/en/product/NSM4103")
+    assert [p.url for p in found] == ["https://x.com/en/datasheet/NSM4101/NSM41xx.pdf"]  # saved if not yet known
+    assert {"NSM4101 Active", "NSM4102 Active"} <= crawler.rows_with_doc            # --fast still knows the rows
+    assert [n.url for n in crawler.queue] == ["https://x.com/en/magnetic-sensor"]   # navigation still followed
+    assert [n.url for n in crawler.later] == ["https://x.com/en/product/NSM4103"]   # part page: later (--fast)
+    assert crawler.result.replayed == 4 and crawler._page_notices == 1
+
+
 def test_header_footer_and_other_languages_are_not_followed():
     _, fetcher, _ = crawl("https://en.example-semi.com/product.php")
     for url in fetcher.requested:
@@ -96,6 +139,98 @@ def test_datasheet_filter_drops_catalogues_and_app_notes():
 def test_homepage_reaches_catalogue_through_products_link():
     result, _, _ = crawl("https://en.example-semi.com/")
     assert "https://en.example-semi.com/specification/SMAJ.pdf" in result.pdfs
+
+
+def test_pdf_links_carry_table_and_page_context():
+    result, _, _ = crawl("https://en.example-semi.com/prolist.php?id=3")
+    d = result.pdfs["https://en.example-semi.com/specification/SS36.pdf"].details
+    assert d["table_headers"] == ["Part", "VRRM (V)", "Package", "PDF"]
+    assert d["row"] == {"Part": "SS36", "VRRM (V)": "60", "Package": "SMA", "PDF": "Datasheet"}
+    assert len(d["table"]) == 2 and d["table"][0][0] == "SS34"
+    assert d["page_title"] == "Schottky Rectifier - Example Semi" and "Schottky Rectifier" in d["headings"]
+    assert d["page_url"] == "https://en.example-semi.com/prolist.php?id=3" and d["trail"][-1] == "Datasheet"
+
+
+def test_failed_download_is_recorded_with_context():
+    import json
+    import tempfile
+    from types import SimpleNamespace
+    from dataPipeline.download import run as run_mod
+    from dataPipeline.download.fetcher import FetchError
+
+    class NotFound:
+        def stream(self, url):
+            raise FetchError("HTTP 404", 404)
+
+    logged = []
+    old_dir = run_mod.DATASHEETS_DIR
+    run_mod.DATASHEETS_DIR = Path(tempfile.mkdtemp())
+    try:
+        args = SimpleNamespace(all_pdfs=False, dry_run=False, force=False, verbose=False)
+        saver = run_mod.Saver(NotFound(), None, "examplesemi", args, lambda *a, **k: logged.append((a, k)))
+        result, _, _ = crawl("https://en.example-semi.com/prolist.php?id=3")
+        saver(result.pdfs["https://en.example-semi.com/specification/SS36.pdf"])
+        rows = [json.loads(line) for line in (saver.folder / run_mod.MISSING).read_text().splitlines()]
+    finally:
+        run_mod.DATASHEETS_DIR = old_dir
+    assert saver.stats["missing"] == 1 and saver.stats["failed"] == 1
+    r = rows[0]
+    assert r["stage"] == "download" and r["http_status"] == 404 and r["url"].endswith("SS36.pdf")
+    assert r["row"]["Part"] == "SS36" and r["table_headers"][1] == "VRRM (V)"
+    assert logged[0][1]["context"]["row"]["Package"] == "SMA"  # same record goes to datasheet_errors.context
+
+
+def test_retry_failed_removes_recovered_rows_and_replaces_failing_ones():
+    import tempfile
+    from types import SimpleNamespace
+    from dataPipeline.download import db as db_mod, run as run_mod
+    from dataPipeline.download.fetcher import FetchError
+
+    good = b"%PDF-1.7 recovered"
+
+    class Resp:
+        status_code, headers = 200, {"content-type": "application/pdf", "content-length": str(len(good))}
+
+        def iter_bytes(self, n):
+            yield good
+
+        def close(self):
+            pass
+
+    class Fetcher:
+        def stream(self, url):
+            if "gone" in url:
+                raise FetchError("HTTP 404", 404)
+            return Resp()
+
+    rows = [  # two runs logged the same failure; one URL is really gone
+        {"error_id": 1, "manufacturer": "m", "url": "https://x/ok.pdf", "stage": "download", "error": "HTTP 503",
+         "http_status": 503, "context": {"page_url": "https://x/p", "row": {"Part": "A1"}, "trail": ["A1"]}},
+        {"error_id": 2, "manufacturer": "m", "url": "https://x/ok.pdf", "stage": "download", "error": "HTTP 503",
+         "http_status": 503, "context": {"page_url": "https://x/p", "row": {"Part": "A1"}, "trail": ["A1"]}},
+        {"error_id": 3, "manufacturer": "m", "url": "https://x/gone.pdf", "stage": "download", "error": "HTTP 404",
+         "http_status": 404, "context": {"page_url": "https://x/p", "row": {"Part": "B2"}}},
+    ]
+    deleted, logged = [], []
+    saved = dict(failed=db_mod.failed_datasheets, delete=db_mod.delete_errors, known=db_mod.known_datasheets,
+                 record=db_mod.record_datasheet, log=db_mod.ErrorLog, folder=run_mod.DATASHEETS_DIR)
+    db_mod.failed_datasheets = lambda engine, names: rows
+    db_mod.delete_errors = lambda engine, ids: deleted.extend(ids)
+    db_mod.known_datasheets = lambda engine, name: ({}, {})
+    db_mod.record_datasheet = lambda engine, row: logged.append(("file", row["source_url"]))
+    db_mod.ErrorLog = lambda engine, name: (lambda *a, **k: logged.append(("error", a[0], k.get("url"))))
+    run_mod.DATASHEETS_DIR = Path(tempfile.mkdtemp())
+    try:
+        args = SimpleNamespace(all_pdfs=True, dry_run=False, force=False, verbose=False)
+        totals = run_mod.retry_failed(object(), Fetcher(), None, args)
+    finally:
+        db_mod.failed_datasheets, db_mod.delete_errors = saved["failed"], saved["delete"]
+        db_mod.known_datasheets, db_mod.record_datasheet, db_mod.ErrorLog = saved["known"], saved["record"], saved["log"]
+        run_mod.DATASHEETS_DIR = saved["folder"]
+    assert totals["recovered"] == 1 and totals["still_failing"] == 1
+    assert ("file", "https://x/ok.pdf") in logged                       # saved like any download
+    assert ("error", "download", "https://x/gone.pdf") in logged         # a fresh row for the one still failing ...
+    assert sorted(deleted) == [1, 2, 3]                                  # ... replaces its old row; recovered rows go
 
 
 def test_is_datasheet_rules():
@@ -143,6 +278,21 @@ def test_negative_keywords_are_whole_words():
     from dataPipeline.download.crawler import url_negative
     assert url_negative("https://x.com/newsshow.php?id=7") and url_negative("https://x.com/en/news-details/1")
     assert not url_negative("https://x.com/en/pressure-sensor") and not url_negative("https://x.com/sampling-adc")
+
+
+def test_investor_relations_is_excluded():
+    from dataPipeline.download.crawler import negative_score, url_negative
+    for nav in ("Shareholders Meeting", "Corporate Governance", "Monthly Revenue", "股東會", "Annual Report"):
+        assert negative_score(nav) > 0, nav
+    assert url_negative("https://x.com/en/ir/index.html") and url_negative("https://x.com/en/shareholders/")
+    assert negative_score("IR LED") == 0 and not url_negative("https://x.com/en/product/ir-led.html")
+
+    def pdf(url):
+        return DatasheetLink(url, "", "", "https://x/p", "", ("x",), True)
+    for name in ("2024 AGM handbook.pdf", "2024股東會議事錄.pdf", "112年報.pdf", "Q3_2024_Financial_Statements.pdf",
+                 "Minutes_of_2024_Shareholders_Meeting.pdf"):
+        assert not is_datasheet(pdf("https://x/upload/" + name)), name
+    assert is_datasheet(pdf("https://x/upload/AR05.pdf"))
 
 
 def test_click_memo_keys():
@@ -196,6 +346,47 @@ def test_download_retries_broken_transfers(tmp_path=None):
         raise AssertionError("expected DownloadError")
     except DownloadError as exc:
         assert exc.stage == "verify" and fetcher.reconnects == 0
+
+
+def test_item_token_and_covered_parts():
+    from dataPipeline.download.crawler import item_token
+    assert item_token("https://x/en/product/NSR33001-QHMSR") == "NSR33001-QHMSR"
+    assert item_token("https://x/en/magnetic-sensor") == "" and item_token("https://x/proshow.php?id=5") == ""
+    rows = {"NSR33001-QHMSR Active MSL3 HMSOP8 Automotive"}
+    assert PartCrawler._part_covered("https://x/en/product/NSR33001-QHMSR", rows)
+    assert not PartCrawler._part_covered("https://x/en/product/NSR33002-QHMSR", rows)
+
+
+def test_same_pdf_under_another_url_is_not_downloaded_again():
+    import json
+    import tempfile
+    from types import SimpleNamespace
+    from dataPipeline.download import run as run_mod
+
+    class Fetcher:
+        downloads = 0
+
+        def head_info(self, url):
+            return {"size": 1234, "content_type": "application/pdf", "disposition": ""}
+
+        def stream(self, url):
+            raise AssertionError("must not download")
+
+    folder = Path(tempfile.mkdtemp())
+    (folder / "m").mkdir()
+    (folder / "m" / "x-datasheet_aaaa.pdf").write_bytes(b"%PDF" + b"0" * 1230)
+    (folder / "m" / "manifest.jsonl").write_text(json.dumps({
+        "source_url": "https://x/datasheet/PART-A/X_Datasheet.pdf", "file_path": "m/x-datasheet_aaaa.pdf",
+        "file_hash": "a" * 64, "file_size": 1234}) + "\n")
+    old = run_mod.DATASHEETS_DIR
+    run_mod.DATASHEETS_DIR = folder
+    try:
+        saver = run_mod.Saver(Fetcher(), None, "m", SimpleNamespace(all_pdfs=True, dry_run=False, force=False,
+                                                                     verbose=False), lambda *a, **k: None)
+        outcome = saver(DatasheetLink("https://x/datasheet/PART-B/X_Datasheet.pdf", "dataSheet", "", "p", ""))
+    finally:
+        run_mod.DATASHEETS_DIR = old
+    assert outcome == "duplicate" and saver.manifest["https://x/datasheet/PART-B/X_Datasheet.pdf"]["file_hash"] == "a" * 64
 
 
 def test_same_host():

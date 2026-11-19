@@ -89,6 +89,13 @@ PRODUCT_KEYWORDS = [
 PART_NEGATIVE_KEYWORDS = [
     "news", "newsroom", "career", "job", "about", "about us", "company profile", "contact",
     "contact us", "investor", "investor relations", "login", "log in", "sign in", "sign up",
+    # investor relations of listed companies (often a whole section of a manufacturer's site)
+    "shareholder", "shareholders meeting", "stockholder", "stakeholder", "general meeting", "agm",
+    "egm", "annual report", "financial report", "financial statement", "financial information",
+    "monthly revenue", "revenue", "dividend", "corporate governance", "governance",
+    "board of directors", "material information", "major announcement", "stock information",
+    "投資人", "投资者", "股東", "股东", "股東會", "股东会", "年報", "年报", "財務", "财务", "營收", "营收",
+    "公司治理", "股利", "重大訊息", "利害關係人",
     "register", "privacy", "privacy policy", "cookie", "terms", "terms of use", "legal",
     "imprint", "sitemap", "event", "press release", "press room", "media center", "blog",
     "webinar", "training", "online training", "sustainability", "esg", "culture", "history",
@@ -102,7 +109,11 @@ PART_NEGATIVE_KEYWORDS = [
 ]
 # URL path words that start with these are never followed ("newsshow.php", "joblist",
 # "/careers-at-x/"). Only stems that cannot start a product name.
-URL_NEGATIVE_PREFIXES = ("news", "career", "job", "blog", "investor", "webinar")
+URL_NEGATIVE_PREFIXES = ("news", "career", "job", "blog", "investor", "webinar", "shareholder", "stakeholder",
+                         "governance", "dividend")
+# URL path segments that are never followed when they are a whole segment ("/en/ir/", "/esg/"):
+# too short to be matched in link text, where "IR" can be an infrared product.
+URL_NEGATIVE_SEGMENTS = {"ir", "esg", "csr", "agm", "egm", "finance", "financial", "investors", "stockholders"}
 # Datasheet vs. other technical documents (decides which PDFs are kept).
 DATASHEET_KEYWORDS = [
     "datasheet", "data sheet", "specification", "spec sheet",
@@ -116,6 +127,12 @@ OTHER_DOC_KEYWORDS = [
     "outline dimension", "package outline", "package drawing", "tape and reel", "packing",
     "marking", "soldering", "report", "press release", "guide", "solution",
     "报告", "应用笔记", "手册", "证书", "说明书",
+    # investor-relations documents (shareholder meetings, annual/financial reports, ...)
+    "shareholder", "stockholder", "meeting", "minutes", "agm", "egm", "handbook", "dividend",
+    "financial", "revenue", "governance", "proxy", "annual", "quarterly", "prospectus", "audit",
+    "board of directors", "esg", "csr", "sustainability", "investor",
+    "股東", "股东", "年報", "年报", "財務", "财务", "營收", "营收", "議事錄", "议事录", "公司治理",
+    "報告書", "股利", "董事會", "董事会",
     "design note", "reference design", "evaluation board", "evm", "software", "firmware",
 ]
 # Clickable elements that are never navigation (checked against text, title, aria-label).

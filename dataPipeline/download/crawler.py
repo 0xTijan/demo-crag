@@ -26,7 +26,7 @@ from __future__ import annotations
 
 import re
 import time
-from collections import deque
+from collections import Counter, deque
 from dataclasses import dataclass, field
 from urllib.parse import parse_qsl, unquote, urldefrag, urljoin, urlsplit
 
@@ -38,6 +38,7 @@ from .settings import (
     MAX_HEAD_CHECKS, MODAL_DISMISS_RE, NON_PAGE_EXT, OTHER_DOC_KEYWORDS,
     PAGINATION_RE, PAGINATION_TEXT_RE, PART_MAX_CLICKS_PER_PAGE, PART_MAX_DEPTH,
     PART_MAX_PAGES, PART_MAX_PAGINATION, PART_NEGATIVE_KEYWORDS, PRODUCT_KEYWORDS, URL_NEGATIVE_PREFIXES,
+    URL_NEGATIVE_SEGMENTS,
     keyword_score, whole_word_score,
 )
 
@@ -48,6 +49,7 @@ MULTI_PART_SUFFIXES = {"co", "com", "org", "net", "gov", "ac", "edu"}
 # the first few levels below <body>, so "card-header" inside content is not chrome).
 CHROME_RE = re.compile(r"(^|[-_\s])(header|footer|foot|navbar|nav|topbar|top-bar)(?=$|[-_\s\d])", re.I)
 CHROME_DEPTH = 5
+IDLE_WAIT_MS = 1500  # cap for "network idle"; see _settle
 # Application-note numbering: "AN-12-0029", "AN_1234", "AN 15"
 APP_NOTE_RE = re.compile(r"(?<![a-z0-9])an[-_ ]?\d", re.I)
 
@@ -63,6 +65,10 @@ class DatasheetLink:
     trail: tuple = ()    # link/click texts from the start page to this PDF
     on_product_page: bool = True
     page_relevance: int = 1
+    # Everything known about where it was found, kept for datasheets that cannot be
+    # downloaded: page title/headings/text, section, table headers, the part's row as
+    # {header: value}, and the whole table (see page_details / table_details).
+    details: dict = field(default_factory=dict)
 
 
 @dataclass
@@ -71,6 +77,9 @@ class PartCrawlResult:
     pdfs: dict = field(default_factory=dict)      # url -> DatasheetLink (every PDF seen)
     pages_visited: int = 0
     clicks: int = 0
+    skipped_pages: int = 0   # --fast: part pages not visited because a table row covered them
+    cached_pages: int = 0    # leaf pages not fetched again (visited by an earlier run)
+    replayed: int = 0        # clicks not made again: an earlier run's result was used
     used_js: bool = False
     unavailable: list = field(default_factory=list)  # (page, element text, message shown)
 
@@ -140,6 +149,48 @@ def link_context(a) -> str:
     return " ".join(text.split())[:400]
 
 
+# ------------------------------------------------------------------ context of a link
+MAX_TABLE_ROWS = 300   # rows of a table kept in the context of a missing datasheet
+MAX_CELL_CHARS = 200
+MAX_PAGE_TEXT = 1500
+
+
+def _cells(tr) -> list[str]:
+    return [" ".join(c.get_text(" ", strip=True).split())[:MAX_CELL_CHARS] for c in tr.find_all(["td", "th"], recursive=False)]
+
+
+def static_table_details(tag) -> dict:
+    """Table headers, this row as {header: value}, and the whole table, for a tag in a <tr>."""
+    tr = tag.find_parent("tr")
+    table = tr.find_parent("table") if tr is not None else None
+    if table is None:
+        return {}
+    headers = [" ".join(th.get_text(" ", strip=True).split()) for th in table.select("thead th, thead td")]
+    rows = [r for r in table.find_all("tr") if r.find("td") and r.get_text(strip=True)]
+    if not headers:
+        first = table.find("tr")
+        if first is not None and first.find("th") is not None:
+            headers = _cells(first)
+    cells = _cells(tr)
+    return table_details(headers, cells, [_cells(r) for r in rows])
+
+
+def table_details(headers: list, cells: list, rows: list) -> dict:
+    row = {(headers[i] if i < len(headers) and headers[i] else f"column {i + 1}"): v
+           for i, v in enumerate(cells) if v}
+    return {"table_headers": headers, "row": row, "row_cells": cells, "table": rows[:MAX_TABLE_ROWS],
+            "table_rows_total": len(rows)}
+
+
+def static_page_details(soup, page_url: str) -> dict:
+    title = soup.title.get_text(" ", strip=True) if soup.title else ""
+    heads = [" ".join(h.get_text(" ", strip=True).split()) for h in
+             soup.select("h1, h2, h3, [class*=breadcrumb], [class*=crumb]")[:8]]
+    body = soup.find("body") or soup
+    text = " ".join(body.get_text(" ", strip=True).split())[:MAX_PAGE_TEXT]
+    return {"page_url": page_url, "page_title": title, "headings": [h for h in heads if h], "page_text": text}
+
+
 # ------------------------------------------------------------------ classification
 def product_score(text: str) -> int:
     return keyword_score(text, PRODUCT_KEYWORDS)
@@ -152,6 +203,8 @@ def negative_score(text: str) -> int:
 def url_negative(url: str) -> bool:
     path = unquote(urlsplit(url).path)
     if negative_score(path) > 0:
+        return True
+    if any(seg.lower() in URL_NEGATIVE_SEGMENTS for seg in path.split("/")):
         return True
     return any(word.startswith(URL_NEGATIVE_PREFIXES) for word in re.findall(r"[a-z]+", path.lower()))
 
@@ -183,6 +236,15 @@ def is_site_root(url: str) -> bool:
     if parts and re.fullmatch(r"(index|default|home)(\.\w+)?", parts[-1]):
         parts = parts[:-1]
     return not parts or (len(parts) == 1 and (parts[0] in EN_SEGMENTS or parts[0] in OTHER_LANG_SEGMENTS))
+
+
+def item_token(url: str) -> str:
+    """The name a detail page is called after, if it looks like a part number: the last path
+    segment with letters and digits, e.g. NSR33001-QHMSR in /en/product/NSR33001-QHMSR."""
+    parts = [p for p in urlsplit(url).path.split("/") if p]
+    last = unquote(parts[-1]) if parts else ""
+    last = re.sub(r"\.(html?|php|aspx?)$", "", last, flags=re.I)
+    return last if len(last) >= 4 and re.search(r"\d", last) and re.search(r"[A-Za-z]", last) else ""
 
 
 def same_host(a: str, b: str) -> bool:
@@ -265,15 +327,44 @@ HARVEST_JS = r"""
                '[role=tab], [role=combobox], [role=listbox], [role=option], [role=slider], [role=dialog], ' +
                '[aria-modal=true], [class*=pagination], [class*=pager], [class*=select-selector], [class*=checkbox]';
 
-  const out = {title: document.title || '', headings: '', anchors: [], frames: [], cands: [], next: false, sig: ''};
+  // Tables: headers (also from a separate fixed-header table), rows, and each element's row
+  const tables = [], tableIndex = new Map();
+  const cellsOf = tr => [...tr.children].map(c => textOf(c).slice(0, 200));
+  const headersOf = table => {
+    let ths = [...table.querySelectorAll('thead th, thead td')];
+    if (!ths.length) {
+      const first = table.querySelector('tr');
+      if (first && first.querySelector('th')) ths = [...first.children];
+    }
+    for (let p = table.parentElement, n = 0; !ths.length && p && n < 5; p = p.parentElement, n++) {
+      ths = [...p.querySelectorAll('thead th')];
+    }
+    return ths.map(textOf);
+  };
+  const tableOf = el => {
+    const tr = el.closest('tr');
+    const table = tr && tr.closest('table');
+    if (!table) return null;
+    if (!tableIndex.has(table)) {
+      const rows = [...table.querySelectorAll('tr')].filter(r => r.querySelector('td') && clean(r.innerText))
+                   .map(cellsOf);
+      tableIndex.set(table, tables.length);
+      tables.push({headers: headersOf(table), rows: rows.slice(0, args.maxRows), total: rows.length});
+    }
+    return {table: tableIndex.get(table), cells: cellsOf(tr)};
+  };
+
+  const out = {title: document.title || '', headings: '', anchors: [], frames: [], cands: [], next: false, sig: '',
+               tables, text: document.body ? clean(document.body.innerText).slice(0, args.maxText) : ''};
   out.headings = clean([...document.querySelectorAll('h1, h2, [class*=breadcrumb], [class*=crumb]')]
                        .slice(0, 6).map(textOf).join(' | ')).slice(0, 400);
   for (const a of document.querySelectorAll('a[href], area[href]')) {
     if (!realHref(a)) continue;
     const own = textOf(a) || hintOf(a);
     const label = labelOf(a);
+    const isPdf = /\.pdf($|[?#])/i.test(a.href);
     out.anchors.push({href: a.href, text: own, label, context: clean(label + ' | ' + (rowOf(a) || groupOf(a, own))),
-                      chrome: inChrome(a)});
+                      chrome: inChrome(a), tbl: isPdf ? tableOf(a) : null});
   }
   for (const f of document.querySelectorAll('iframe[src], frame[src]')) out.frames.push(f.src);
 
@@ -295,7 +386,7 @@ HARVEST_JS = r"""
     if (!text && !hint) continue;
     el.setAttribute('data-pc-i', String(i));
     const label = labelOf(el);
-    out.cands.push({i: i++, text, hint, row: rowOf(el), label,
+    out.cands.push({i: i++, text, hint, row: rowOf(el), label, tbl: tableOf(el),
                     context: clean(label + ' | ' + groupOf(el, text || hint)),
                     chrome: inChrome(el), visible: visible(el)});
   }
@@ -347,10 +438,15 @@ class PartCrawler:
     """Walks one manufacturer's catalogue. See the module docstring."""
 
     def __init__(self, fetcher: Fetcher, log_error, on_pdf=None, max_pages=PART_MAX_PAGES,
-                 max_depth=PART_MAX_DEPTH, js="auto", verbose=False):
+                 max_depth=PART_MAX_DEPTH, js="auto", verbose=False, on_missing=None, fast=False,
+                 page_cache=None, on_leaf=None, click_cache=None, on_click=None):
         self.fetcher = fetcher
         self.log_error = log_error
         self.on_pdf = on_pdf or (lambda pdf: None)
+        # on_missing(stage, message, url, details): a datasheet the site shows but does not
+        # give (e.g. "not publicly available"), with everything known about the part.
+        self.on_missing = on_missing or (lambda stage, message, url, details:
+                                         self.log_error(stage, message, url=url))
         self.max_pages = max_pages
         self.max_depth = max_depth
         self.js = js  # auto | always | never
@@ -359,6 +455,23 @@ class PartCrawler:
         self.seen: set[str] = set()
         self.queue: deque[Node] = deque()
         self.click_memo: dict = {}
+        # fast: once a table row's document button gave a PDF (or a "not available" notice), the
+        # row's other items (part number -> part page) are not clicked
+        self.fast = fast
+        # Leaf pages from earlier runs (url -> PDF URLs): pages that gave datasheet links and led
+        # nowhere new. They are not fetched again; on_leaf(url, pdf_urls) reports new ones.
+        self.page_cache = page_cache or {}
+        self.on_leaf = on_leaf or (lambda url, pdfs: None)
+        self._page_pdfs: list[str] = []
+        self._page_notices = 0
+        # Clicks of earlier runs (JavaScript sites): click key -> (kind, url), kind = nav | pdf |
+        # notice | none. A known click is replayed instead of clicked; on_click reports new ones.
+        self.click_cache = click_cache or {}
+        self.on_click = on_click or (lambda key, kind, url: None)
+        self.rows_with_doc: set[str] = set()   # table rows whose document button gave a PDF or a notice
+        self.rows_with_pdf: set[str] = set()   # ... that gave a PDF
+        self.later: deque[Node] = deque()      # --fast: part pages, visited after everything else
+        self.dead_labels: Counter = Counter()  # labels whose clicks did nothing
         self.result: PartCrawlResult | None = None
 
     # ------------------------------------------------------------ entry point
@@ -379,11 +492,25 @@ class PartCrawler:
         self.queue.append(Node(start, 0, not is_site_root(start) or product_score(title) > 0))
         head_candidates: dict[str, DatasheetLink] = {}
         started = last_report = time.monotonic()
-        while self.queue and self.result.pages_visited < self.max_pages:
-            node = self.queue.popleft()
+        while (self.queue or self.later) and self.result.pages_visited < self.max_pages:
+            if self.queue:
+                node = self.queue.popleft()
+            else:  # --fast: part pages last, and only for parts no table row has covered
+                node = self.later.popleft()
+                if self._part_covered(node.url, self.rows_with_doc):
+                    self.result.skipped_pages += 1
+                    if self.verbose:
+                        print(f"      skip part page {node.url}: its table row already gave its datasheet (--fast)")
+                    continue
+            if node.depth > 0 and node.url in self.page_cache:
+                self.result.cached_pages += 1  # visited by an earlier run: its datasheets are known
+                if self.verbose:
+                    print(f"      cached {node.url} ({len(self.page_cache[node.url])} PDF links)")
+                continue
             if not self.fetcher.allowed(node.url):
                 self.log_error("robots", "disallowed by robots.txt", url=node.url)
                 continue
+            self._page_pdfs, self._page_notices, links_before = [], 0, len(self.seen)
             try:
                 if use_js:
                     self._explore_rendered(node)
@@ -397,11 +524,15 @@ class PartCrawler:
                 self.log_error("render" if use_js else "crawl", exc, url=node.url)
                 continue
             self.result.pages_visited += 1
+            if (self._page_pdfs or self._page_notices) and len(self.seen) == links_before and node.depth > 0:
+                # gave datasheets (or "not available" notices) and led nowhere new
+                self.on_leaf(node.url, sorted(set(self._page_pdfs)))
             # every page with -v; otherwise every 25 pages, and at least once a minute
             # (a JavaScript catalogue page can take a minute or two)
             if self.verbose or self.result.pages_visited % 25 == 0 or time.monotonic() - last_report >= 60:
                 last_report = time.monotonic()
-                print(f"    .. {self.result.pages_visited} pages, {len(self.queue)} queued, "
+                print(f"    .. {self.result.pages_visited} pages, {self.result.cached_pages} cached, "
+                      f"{len(self.queue)} queued, {self.result.replayed} clicks replayed, "
                       f"{len(self.result.pdfs)} PDFs, {self.result.clicks} clicks, "
                       f"{time.monotonic() - started:.0f}s  [{node.url}]")
 
@@ -450,7 +581,13 @@ class PartCrawler:
         """Like _decide, with the element's section label as its context."""
         return self._decide(node, text, label, chrome)
 
-    def _enqueue(self, node: Node, url: str, text: str, product: bool) -> None:
+    @staticmethod
+    def _part_covered(url: str, rows) -> bool:
+        """True if the part a page is named after (/product/NSR33001-QHMSR) appears in one of `rows`."""
+        token = item_token(url)
+        return bool(token) and any(token.lower() in r.lower() for r in rows)
+
+    def _enqueue(self, node: Node, url: str, text: str, product: bool, later: bool = False) -> None:
         url = clean_url(url)
         if url in self.seen or node.depth + 1 > self.max_depth:
             return
@@ -461,17 +598,21 @@ class PartCrawler:
         if url_negative(url):  # /news-details/..., /newsshow.php, /careers/...
             return
         self.seen.add(url)
-        self.queue.append(Node(url, node.depth + 1, product, node.trail + (text[:60],)))
+        (self.later if later else self.queue).append(Node(url, node.depth + 1, product, node.trail + (text[:60],)))
 
     def _handle_anchor(self, node: Node, href: str, text: str, context: str, chrome: bool,
-                       page_url: str, title: str, head_candidates: dict | None = None) -> None:
+                       page_url: str, title: str, head_candidates: dict | None = None,
+                       details=None) -> None:
+        """`details`: a function returning the context dict of this link (called only for PDFs)."""
         link = clean_url(href)
         if not link.startswith(("http://", "https://")):
             return
         label = text or unquote(urlsplit(link).path.rstrip("/").rsplit("/", 1)[-1])  # for the trail
         if path_ext(link) == ".pdf":  # every PDF is collected; is_datasheet() decides later
-            self._add_pdf(DatasheetLink(link, text, context, page_url, title,
-                                        node.trail + (label[:60],), node.product))
+            self._page_pdfs.append(link)
+            if link not in self.result.pdfs:
+                self._add_pdf(DatasheetLink(link, text, context, page_url, title, node.trail + (label[:60],),
+                                            node.product, details=self._link_details(node, label, details)))
             return
         pagination = node.product and (PAGINATION_RE.search(link) or PAGINATION_TEXT_RE.match(text.strip()))
         follow, product = (True, True) if pagination and not chrome else self._decide(node, text, context, chrome)
@@ -479,8 +620,15 @@ class PartCrawler:
             self._enqueue(node, link, label, product)
         elif head_candidates is not None and node.product and path_ext(link) in ("", ".ashx", ".axd") \
                 and DOWNLOAD_HINT_RE.search(urlsplit(link).path) and link not in head_candidates:
-            head_candidates[link] = DatasheetLink(link, text, context, page_url, title,
-                                                  node.trail + (label[:60],), node.product)
+            head_candidates[link] = DatasheetLink(link, text, context, page_url, title, node.trail + (label[:60],),
+                                                  node.product, details=self._link_details(node, label, details))
+
+    @staticmethod
+    def _link_details(node: Node, label: str, details) -> dict:
+        d = dict(details() if callable(details) else (details or {}))
+        d.setdefault("element", label)
+        d["trail"] = list(node.trail) + [label]
+        return d
 
     def _check_head_candidates(self, head_candidates: dict) -> None:
         """Extension-less download links (e.g. /download?id=5) are PDFs if the server says so."""
@@ -513,38 +661,81 @@ class PartCrawler:
             if src.startswith("http") and (node.product or product_score(src)):
                 self.hosts.add(urlsplit(src).netloc.lower())  # hosted catalogue widgets
                 self._enqueue(node, src, "iframe", node.product)
+        page_info = None
+
+        def details_of(a):
+            def build():
+                nonlocal page_info
+                if page_info is None:
+                    page_info = static_page_details(soup, page.url)
+                return {**page_info, "section": link_context(a), "element": element_text(a),
+                        **static_table_details(a)}
+            return build
+
         for a in soup.find_all(["a", "area"], href=True):
             text = element_text(a)
             self._handle_anchor(node, urljoin(page.url, a["href"]), text, link_context(a),
-                                in_chrome_static(a), page.url, title, head_candidates)
+                                in_chrome_static(a), page.url, title, head_candidates, details=details_of(a))
 
     # ------------------------------------------------------------ rendered pages (clicking)
-    def _settle(self, page, idle_ms: int = 8000) -> None:
+    def _settle(self, page, idle_ms: int = IDLE_WAIT_MS) -> None:
+        """A short wait for the network to go quiet. Sites with analytics that poll never go idle,
+        so this is capped low; _wait_stable (no frame changes any more) does the real waiting."""
         try:
             page.wait_for_load_state("networkidle", timeout=idle_ms)
         except Exception:  # noqa: BLE001 - pages with endless polling never go idle
             pass
-        page.wait_for_timeout(700)
+        page.wait_for_timeout(300)
 
-    def _wait_stable(self, page, max_ms: int = 12000) -> None:
-        """Wait until no frame changes any more (rows of JavaScript tables arrive late)."""
-        def size():
-            total = []
+    def _new_page(self):
+        """A browser tab that keeps count of its unfinished page/data requests (see _wait_stable)."""
+        page = self.fetcher.browser_context().new_page()
+        pending: dict = {}
+        page._pc_pending = pending
+
+        def started(req):
+            if req.resource_type in ("document", "xhr", "fetch"):
+                pending[req] = time.monotonic()
+
+        def ended(req):
+            pending.pop(req, None)
+        page.on("request", started)
+        page.on("requestfinished", ended)
+        page.on("requestfailed", ended)
+        return page
+
+    @staticmethod
+    def _requests_in_flight(page) -> int:
+        """Unfinished page/data requests, ignoring ones open > 10 s (long polling, analytics)."""
+        now = time.monotonic()
+        return sum(1 for t in getattr(page, "_pc_pending", {}).values() if now - t < 10)
+
+    def _wait_stable(self, page, max_ms: int = 20000) -> None:
+        """Wait until no frame changes any more, no page/data request is in flight, and every
+        embedded frame has content (catalogue tables are often in an iframe that is created
+        and filled seconds after the page has "loaded")."""
+        def measure():
+            sizes, empty = [], 0
             for frame in page.frames:
                 try:
-                    total.append(frame.evaluate(
+                    n, chars = frame.evaluate(
                         "() => document.body ? [document.body.getElementsByTagName('*').length,"
-                        " (document.body.innerText || '').length] : [0, 0]"))
+                        " (document.body.innerText || '').length] : [0, 0]")
                 except Exception:  # noqa: BLE001 - detached frame
                     continue
-            return total
+                sizes.append((n, chars))
+                if frame is not page.main_frame and frame.url.startswith("http") and (n < 10 or chars < 20):
+                    empty += 1  # an embedded frame without text is still loading its content
+            return sizes, empty
         last, stable, waited = None, 0, 0
-        while waited < max_ms and stable < 2:
+        while waited < max_ms:
             page.wait_for_timeout(500)
             waited += 500
-            now = size()
+            now, empty = measure()
             stable = stable + 1 if now == last else 0
             last = now
+            if stable >= 2 and not empty and not self._requests_in_flight(page):
+                break
 
     def _dismiss(self, page) -> list[str]:
         closed = []
@@ -562,11 +753,25 @@ class PartCrawler:
         return closed
 
     def _load(self, page, url: str) -> None:
-        self.fetcher.wait(url)
-        resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
-        if resp is not None and resp.status >= 400:
-            raise FetchError(f"HTTP {resp.status}", resp.status)
-        self._settle(page)
+        for attempt in range(1, 4):  # connection resets, timeouts, iframes that failed: wait, try again
+            self.fetcher.wait(url)
+            try:
+                resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            except Exception as exc:  # noqa: BLE001
+                if attempt == 3 or not re.search(r"net::ERR_|Timeout", str(exc)):
+                    raise
+                page.wait_for_timeout(5000 * attempt)
+                continue
+            if resp is not None and resp.status >= 400:
+                raise FetchError(f"HTTP {resp.status}", resp.status)
+            self._settle(page)
+            broken = [f.url for f in page.frames if f.url.startswith("chrome-error://")]
+            if not broken:
+                break
+            if attempt == 3:
+                self.log_error("render", f"{len(broken)} frame(s) failed to load after 3 tries", url=url)
+            else:
+                page.wait_for_timeout(5000 * attempt)
         self._wait_stable(page)
         page.wait_for_timeout(500)  # late pop-ups (language choosers, cookie banners)
         if self._dismiss(page):
@@ -577,7 +782,8 @@ class PartCrawler:
 
     def _harvest(self, page) -> list[tuple[int, object, dict]]:
         snaps = []
-        args = {"chromeRe": CHROME_RE.pattern, "chromeDepth": CHROME_DEPTH}
+        args = {"chromeRe": CHROME_RE.pattern, "chromeDepth": CHROME_DEPTH,
+                "maxRows": MAX_TABLE_ROWS, "maxText": MAX_PAGE_TEXT}
         for idx, frame in enumerate(page.frames):
             try:
                 snaps.append((idx, frame, frame.evaluate(HARVEST_JS, args)))
@@ -591,12 +797,25 @@ class PartCrawler:
                 el = frame.locator("[data-pc-next]").first
                 if el.count():
                     el.evaluate("e => e.click()")
-                    self._settle(page, 5000)
+                    self._settle(page)
                     self._wait_stable(page)
                     return True
             except Exception:  # noqa: BLE001
                 continue
         return False
+
+    def _go_back(self, page, url: str) -> bool:
+        """Return to `url` with the browser's Back button; False if that did not get there."""
+        try:
+            page.go_back(wait_until="commit", timeout=15000)
+        except Exception:  # noqa: BLE001
+            return False
+        if page.url.split("#")[0] != url.split("#")[0]:
+            return False
+        self._settle(page)
+        self._wait_stable(page)
+        self._dismiss(page)
+        return True
 
     def _goto_state(self, page, url: str, steps: int) -> None:
         """Reload the page and press "next page" `steps` times."""
@@ -607,6 +826,22 @@ class PartCrawler:
                 break
         self._harvest(page)
 
+    @staticmethod
+    def _rendered_details(page_url: str, snaps, snap: dict, item: dict, label: str) -> dict:
+        """Context of a link/element of a rendered page: page, section, table row, whole table."""
+        heads = [h for _, _, s in snaps for h in s["headings"].split(" | ") if h]
+        d = {"page_url": page_url, "page_title": next((s["title"] for _, _, s in snaps if s["title"]), ""),
+             "headings": heads[:12], "page_text": snap["text"] or next((s["text"] for _, _, s in snaps), ""),
+             "section": item.get("label", ""), "element": label}
+        if item.get("row"):
+            d["row_text"] = item["row"]
+        tbl = item.get("tbl")
+        if tbl is not None:
+            t = snap["tables"][tbl["table"]]
+            d.update(table_details(t["headers"], tbl["cells"], t["rows"]))
+            d["table_rows_total"] = t["total"]
+        return d
+
     def _record_snapshot(self, node: Node, page, snaps, cands: dict, steps: int) -> None:
         top_title = ""
         for idx, frame, snap in snaps:
@@ -615,13 +850,17 @@ class PartCrawler:
                 if src.startswith("http") and (node.product or product_score(src)):
                     self.hosts.add(urlsplit(src).netloc.lower())
             for a in snap["anchors"]:
-                self._handle_anchor(node, a["href"], a["text"], a["label"], a["chrome"], page.url, top_title)
+                self._handle_anchor(node, a["href"], a["text"], a["label"], a["chrome"], page.url, top_title,
+                                    details=lambda a=a, snap=snap: self._rendered_details(
+                                        page.url, snaps, snap, a, a["text"]))
             occurrences: dict = {}
             for c in snap["cands"]:
                 base = (frame.url, c["text"], c["hint"], c["row"])
                 occ = occurrences.get(base, 0)
                 occurrences[base] = occ + 1
-                cands.setdefault(base + (occ,), dict(c, steps=steps, frame_idx=idx))
+                if base + (occ,) not in cands:
+                    details = self._rendered_details(page.url, snaps, snap, c, c["text"] or c["hint"])
+                    cands[base + (occ,)] = dict(c, steps=steps, frame_idx=idx, details=details)
 
     def _click_key(self, node: Node, c: dict) -> tuple:
         label = (c["text"] or c["hint"]).lower()
@@ -643,7 +882,7 @@ class PartCrawler:
         return self._decide_rendered(node, label, c["label"], c["chrome"])
 
     def _explore_rendered(self, node: Node) -> None:
-        page = self.fetcher.browser_context().new_page()
+        page = self._new_page()
         try:
             self._load(page, node.url)
             if not page.url.startswith("http"):
@@ -678,11 +917,23 @@ class PartCrawler:
                 todo.append((ident, c, key, product))
             # document buttons first (they open tabs/downloads and leave the page as it is),
             # visible before hidden (a hidden menu copy of an item often does nothing)
+            # (and a table row's document button before the page's own one)
             todo.sort(key=lambda t: (t[1]["steps"], not DOC_HINT_RE.search(f"{t[1]['text']} {t[1]['hint']}"),
-                                     not t[1]["visible"]))
+                                     not t[1]["row"], not t[1]["visible"]))
             state = {"steps": steps, "dirty": False}
             for ident, c, key, product in todo[:PART_MAX_CLICKS_PER_PAGE]:
                 if key in self.click_memo or (not c["visible"] and key + ("hidden",) in self.click_memo):
+                    continue
+                if not DOC_HINT_RE.search(f"{c['text']} {c['hint']}") \
+                        and self.dead_labels[(c["text"] or c["hint"])[:60].lower()] >= 3:
+                    continue  # this label never did anything on this site
+                if self.fast and c["row"] in self.rows_with_doc \
+                        and not DOC_HINT_RE.search(f"{c['text']} {c['hint']}"):
+                    if self.verbose:
+                        print(f"      skip {(c['text'] or c['hint'])[:40]!r}: its row already gave its datasheet (--fast)")
+                    continue
+                if key in self.click_cache:  # clicked by an earlier run: use what it led to
+                    self._replay(node, c, key, product, *self.click_cache[key])
                     continue
                 # A click that leads nowhere blocks the same label everywhere, except when the
                 # element was hidden: then a visible element with that label is still tried.
@@ -690,6 +941,67 @@ class PartCrawler:
                 self._click(node, page, ident, c, key, product, state)
         finally:
             page.close()
+
+    def _replay(self, node: Node, c: dict, key, product: bool, kind: str, url: str | None) -> None:
+        """Do what an earlier run's click of this element did, without clicking."""
+        label = (c["text"] or c["hint"])[:60]
+        self.click_memo[key] = url
+        self.result.replayed += 1
+        if kind == "pdf" and url:
+            self._page_pdfs.append(url)
+            if c["row"]:
+                self.rows_with_doc.add(c["row"])
+                self.rows_with_pdf.add(c["row"])
+            if url not in self.result.pdfs:  # normally known; downloaded if an earlier run was cut short
+                details = dict(c.get("details") or {}, trail=list(node.trail) + [label])
+                self._add_pdf(DatasheetLink(url, c["text"] or c["hint"], c["row"], node.url,
+                                            details.get("page_title", ""), node.trail + (label,), node.product,
+                                            details=details))
+        elif kind == "notice":
+            self._page_notices += 1
+            if c["row"]:
+                self.rows_with_doc.add(c["row"])
+        elif kind == "nav" and url:
+            token = item_token(url)
+            later = self.fast and token and token.lower() in label.lower()
+            self._enqueue(node, url, label, product, later=later)
+        if self.verbose:
+            print(f"      cached click {label!r} -> {kind}{' ' + url if url else ''}")
+
+    def retry_click(self, page_url: str, element: str, row_text: str = "", trail=()) -> list:
+        """Open `page_url`, find the clickable element with text/icon text `element` (in the table
+        row `row_text`, paging through JavaScript tables if needed), click it once more and return
+        the PDFs that click produced. Used by run.py --retry-failed for "not available" notices."""
+        if self.result is None:
+            self.result = PartCrawlResult(start_url=page_url)
+        self.hosts.add(urlsplit(page_url).netloc.lower())
+        node = Node(page_url, 0, True, tuple(trail)[:-1])
+        found_before, on_pdf = set(self.result.pdfs), self.on_pdf
+        self.on_pdf = lambda pdf: None  # links merely seen on the page are not part of the retry
+        page = self._new_page()
+        try:
+            self._load(page, page_url)
+            for steps in range(PART_MAX_PAGINATION + 1):
+                snaps = self._harvest(page)
+                cands: dict = {}
+                self._record_snapshot(node, page, snaps, cands, steps)
+                match = next(((ident, c) for ident, c in cands.items()
+                              if (c["text"] or c["hint"]) == element and (not row_text or c["row"] == row_text)),
+                             None)
+                if match is not None:
+                    break
+                if not any(s["next"] for _, _, s in snaps) or not self._page_next(page):
+                    self.log_error("click", f"element {element!r} (row {row_text[:60]!r}) not found", url=page_url)
+                    return []
+            else:
+                return []
+            ident, c = match
+            seen_before = set(self.result.pdfs) - found_before  # PDFs on the page itself
+            self._click(node, page, ident, c, self._click_key(node, c), True, {"steps": steps, "dirty": False})
+        finally:
+            page.close()
+            self.on_pdf = on_pdf
+        return [p for u, p in self.result.pdfs.items() if u not in found_before and u not in seen_before]
 
     def _find(self, page, ident) -> tuple[object, int] | None:
         frame_url, text, hint, row, occ = ident
@@ -707,10 +1019,20 @@ class PartCrawler:
 
     def _click(self, node: Node, page, ident, c: dict, key, product: bool, state: dict, retry: bool = True) -> None:
         label = (c["text"] or c["hint"])[:60]
+        went_back = False
+        if state["dirty"] and c["steps"] == 0 and state.get("back_ok", True):
+            went_back = self._go_back(page, node.url)  # much faster than a reload in single-page apps
+            if went_back:
+                state.update(steps=0, dirty=False)
         if state["dirty"] or state["steps"] != c["steps"]:
             self._goto_state(page, node.url, c["steps"])
             state.update(steps=c["steps"], dirty=False)
         target = self._find(page, ident)
+        if target is None and went_back:  # "back" did not restore the page: reload, and stop using it here
+            state["back_ok"] = False
+            self._goto_state(page, node.url, c["steps"])
+            state.update(steps=c["steps"], dirty=False)
+            target = self._find(page, ident)
         if target is None:  # not rendered this time: let a later page try the same item
             self.click_memo.pop(key if c["visible"] else key + ("hidden",), None)
             self.log_error("click", f"element {label!r} not found after reload", url=node.url)
@@ -740,7 +1062,7 @@ class PartCrawler:
                     break
                 page.wait_for_timeout(250)
             if not (popups or downloads or page.url != before):
-                self._settle(page, 5000)  # changed in place: let it finish before looking
+                self._settle(page)  # changed in place: let it finish before looking
                 self._wait_stable(page, 6000)
         except Exception as exc:  # noqa: BLE001 - element vanished, navigation raced, ...
             self.log_error("click", exc, url=node.url)
@@ -758,10 +1080,12 @@ class PartCrawler:
             except Exception:  # noqa: BLE001
                 pass
         for p in popups:
-            try:
-                p.wait_for_load_state("domcontentloaded", timeout=15000)
-            except Exception:  # noqa: BLE001 - a PDF tab or a download never "loads"
-                pass
+            # the tab's URL is known as soon as it starts navigating; a tab showing a PDF never
+            # finishes "loading", so waiting for that only costs time
+            for _ in range(20):
+                if p.url and p.url != "about:blank":
+                    break
+                p.wait_for_timeout(250)
             if p.url and p.url != "about:blank":
                 targets.append(p.url)
             p.close()
@@ -770,28 +1094,64 @@ class PartCrawler:
             state["dirty"] = True
         else:
             closed = self._dismiss(page)
-            if closed and DOC_HINT_RE.search(f"{c['text']} {c['hint']}"):
-                if retry:  # a notice can also mean "the document list has not loaded yet": once more
+            if self.verbose and not targets:
+                print(f"      click {label!r} -> " + (f"notice: {closed[-1][:100]!r}" if closed else
+                                                       "no new page, tab or download"))
+            is_doc = bool(DOC_HINT_RE.search(f"{c['text']} {c['hint']}"))
+            if not targets and not closed and not is_doc:
+                self.dead_labels[label.lower()] += 1  # e.g. "More Products": stop after 3 tries
+                self.on_click(key, "none", None)
+            if closed and is_doc and not c["row"] and self._part_covered(node.url, self.rows_with_pdf):
+                # the page's own "Datasheet" button says "not available", but the part's table row
+                # already gave the PDF: not a missing datasheet
+                if self.verbose:
+                    print("      (ignored: this part's datasheet was already obtained from its table row)")
+                closed = []
+            if closed and is_doc:
+                if retry and not state.get("doc_ok"):
+                    # a notice can also mean "the document list has not loaded yet": once more (not
+                    # needed once another document button on this page has given a PDF)
                     self._wait_stable(page, 6000)
                     return self._click(node, page, ident, c, key, product, state, retry=False)
                 message = closed[-1][:300]
+                if c["row"]:
+                    self.rows_with_doc.add(c["row"])
                 self.result.unavailable.append((node.url, label, message))
-                self.log_error("datasheet_unavailable", f"{label} ({c['row'][:80]}): {message}", url=node.url)
+                self._page_notices += 1
+                self.on_click(key, "notice", None)
+                details = dict(c.get("details") or {}, trail=list(node.trail) + [label], message=message)
+                self.on_missing("datasheet_unavailable", f"{label} ({c['row'][:80]}): {message}", node.url, details)
             # content shown by the click (a tab, a dropdown) may hold new links
-            for _, frame_, snap in self._harvest(page):
+            snaps = self._harvest(page)
+            for _, frame_, snap in snaps:
                 for a in snap["anchors"]:
-                    self._handle_anchor(node, a["href"], a["text"], a["label"], a["chrome"], page.url, snap["title"])
+                    self._handle_anchor(node, a["href"], a["text"], a["label"], a["chrome"], page.url, snap["title"],
+                                        details=lambda a=a, snap=snap: self._rendered_details(
+                                            page.url, snaps, snap, a, a["text"]))
 
         for url in targets:
             url = clean_url(url)
             self.click_memo[key] = url
             if self._is_pdf_target(url, c):
-                self._add_pdf(DatasheetLink(url, c["text"] or c["hint"], c["row"],
-                                            node.url, "", trail, node.product))
-            else:
-                self._enqueue(node, url, label, product)
+                state["doc_ok"] = True
+                self._page_pdfs.append(url)
+                self.on_click(key, "pdf", url)
                 if self.verbose:
-                    print(f"      click {label!r} -> {url}")
+                    print(f"      click {label!r} -> PDF {url}")
+                if c["row"]:
+                    self.rows_with_doc.add(c["row"])
+                    self.rows_with_pdf.add(c["row"])
+                details = dict(c.get("details") or {}, trail=list(trail))
+                self._add_pdf(DatasheetLink(url, c["text"] or c["hint"], c["row"], node.url,
+                                            details.get("page_title", ""), trail, node.product, details=details))
+            else:
+                token = item_token(url)
+                later = self.fast and token and token.lower() in label.lower()  # a part's own page
+                self._enqueue(node, url, label, product, later=later)
+                if url.startswith(("http://", "https://")):
+                    self.on_click(key, "nav", url)
+                if self.verbose:
+                    print(f"      click {label!r} -> {url}" + ("  (part page: later, if still needed)" if later else ""))
 
     def _is_pdf_target(self, url: str, c: dict) -> bool:
         if path_ext(url) == ".pdf":
