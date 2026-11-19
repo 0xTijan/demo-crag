@@ -1,0 +1,24 @@
+{
+ "file": "goodark/lb201s-thru-lb2010s_079d907e.md",
+ "supplier": "goodark",
+ "file_hash": "2621d947626ede883b5a1d5c5aaf2071571297a38e2574df247085ac921f17eb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:35+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "LB201S",
+   "LB202S",
+   "LB204S",
+   "LB206S",
+   "LB208S"
+  ],
+  "confidence": "high",
+  "seconds": 8.29,
+  "tokens_in": 1989,
+  "tokens_out": 74
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bat86_e0af8d7d.md",
+ "supplier": "goodark",
+ "file_hash": "775dc7cdb532d8dfe0aa2b5ad67c70c5b2d26cd0117431c30d1fc216a4ea45b7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:34+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "BAT86"
+  ],
+  "confidence": "high",
+  "seconds": 4.69,
+  "tokens_in": 1341,
+  "tokens_out": 38
+ }
+}

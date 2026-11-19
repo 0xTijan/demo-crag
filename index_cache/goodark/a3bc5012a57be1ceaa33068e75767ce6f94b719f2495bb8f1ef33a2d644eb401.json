@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mk5045_0635190f.md",
+ "supplier": "goodark",
+ "file_hash": "a3bc5012a57be1ceaa33068e75767ce6f94b719f2495bb8f1ef33a2d644eb401",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:28+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MK5045"
+  ],
+  "confidence": "high",
+  "seconds": 6.15,
+  "tokens_in": 1428,
+  "tokens_out": 41
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur520f_f1397c46.md",
+ "supplier": "goodark",
+ "file_hash": "a055f16aafce2f1f6d9237a36cb32b832c898735873374de57d452cb480593dd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:09+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR520F"
+  ],
+  "confidence": "high",
+  "seconds": 4.67,
+  "tokens_in": 1305,
+  "tokens_out": 42
+ }
+}

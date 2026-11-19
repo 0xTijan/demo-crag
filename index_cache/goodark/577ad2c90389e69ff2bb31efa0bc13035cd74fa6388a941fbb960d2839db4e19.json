@@ -1,0 +1,20 @@
+{
+ "file": "goodark/seslc5vt236l-6u_4815a96e.md",
+ "supplier": "goodark",
+ "file_hash": "577ad2c90389e69ff2bb31efa0bc13035cd74fa6388a941fbb960d2839db4e19",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:19+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection array",
+  "family": false,
+  "part_numbers": [
+   ".05L"
+  ],
+  "confidence": "high",
+  "seconds": 4.98,
+  "tokens_in": 1555,
+  "tokens_out": 38
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/tp1a-thru-tp7a_f5164831.md",
+ "supplier": "goodark",
+ "file_hash": "b6fdc058f41ed2a6607e827bd2a145d535fe31448ee0774967601c2892f2bdac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:56+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "TP1A",
+   "TP2A",
+   "TP3A",
+   "TP4A",
+   "TP5A"
+  ],
+  "confidence": "high",
+  "seconds": 5.45,
+  "tokens_in": 1543,
+  "tokens_out": 67
+ }
+}

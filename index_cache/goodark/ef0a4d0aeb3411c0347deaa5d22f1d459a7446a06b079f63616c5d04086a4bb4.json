@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbj8a-thru-kbj8m_9ca3147b.md",
+ "supplier": "goodark",
+ "file_hash": "ef0a4d0aeb3411c0347deaa5d22f1d459a7446a06b079f63616c5d04086a4bb4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:42+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBJ8A",
+   "KBJ8B",
+   "KBJ8D",
+   "KBJ8G",
+   "KBJ8J"
+  ],
+  "confidence": "high",
+  "seconds": 8.52,
+  "tokens_in": 1952,
+  "tokens_out": 76
+ }
+}

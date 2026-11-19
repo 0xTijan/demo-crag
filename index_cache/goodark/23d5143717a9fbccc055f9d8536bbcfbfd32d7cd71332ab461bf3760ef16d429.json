@@ -1,0 +1,24 @@
+{
+ "file": "goodark/db203s-thru-db207s_4ab3b3b8.md",
+ "supplier": "goodark",
+ "file_hash": "23d5143717a9fbccc055f9d8536bbcfbfd32d7cd71332ab461bf3760ef16d429",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:39+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DB203S",
+   "DB204S",
+   "DB205S",
+   "DB206S",
+   "DB207S"
+  ],
+  "confidence": "high",
+  "seconds": 7.16,
+  "tokens_in": 1782,
+  "tokens_out": 66
+ }
+}

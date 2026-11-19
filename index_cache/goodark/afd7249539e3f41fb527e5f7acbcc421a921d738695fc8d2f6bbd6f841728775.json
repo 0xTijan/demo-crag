@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbj4av-thru-kbj4mv_d28aa945.md",
+ "supplier": "goodark",
+ "file_hash": "afd7249539e3f41fb527e5f7acbcc421a921d738695fc8d2f6bbd6f841728775",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:36+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBJ4AV",
+   "KBJ4BV",
+   "KBJ4DV",
+   "KBJ4GV",
+   "KBJ4JV"
+  ],
+  "confidence": "high",
+  "seconds": 8.62,
+  "tokens_in": 1991,
+  "tokens_out": 76
+ }
+}

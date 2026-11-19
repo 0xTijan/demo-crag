@@ -1,0 +1,24 @@
+{
+ "file": "goodark/l3n5924b-thru-l3n5956b_a007f7fb.md",
+ "supplier": "goodark",
+ "file_hash": "0f8f5d17091444c1ce83d37078c9b0671e17de137fe6d121626ae837f5e990d4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:21+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "L3N5924B",
+   "L3N5925B",
+   "L3N5926B",
+   "L3N5927B",
+   "L3N5928B"
+  ],
+  "confidence": "high",
+  "seconds": 7.71,
+  "tokens_in": 1769,
+  "tokens_out": 102
+ }
+}

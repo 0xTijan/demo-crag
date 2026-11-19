@@ -1,0 +1,24 @@
+{
+ "file": "goodark/pu1-thru-pu5_64279088.md",
+ "supplier": "goodark",
+ "file_hash": "5b3d3dafc9012ce8db7a72a19ea1253bbcc269ec0d00816be61d74d846e6240c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:04+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PU1",
+   "PU2",
+   "PU3",
+   "PU4",
+   "PU5"
+  ],
+  "confidence": "high",
+  "seconds": 5.02,
+  "tokens_in": 1514,
+  "tokens_out": 54
+ }
+}

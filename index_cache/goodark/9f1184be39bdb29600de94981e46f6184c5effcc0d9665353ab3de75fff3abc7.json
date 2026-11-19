@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbpc35005-w-thru-gbpc3510-w_37eca407.md",
+ "supplier": "goodark",
+ "file_hash": "9f1184be39bdb29600de94981e46f6184c5effcc0d9665353ab3de75fff3abc7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:38+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBPC35005(W)",
+   "GBPC3501",
+   "GBPC3502",
+   "GBPC3504",
+   "GBPC3506"
+  ],
+  "confidence": "high",
+  "seconds": 8.43,
+  "tokens_in": 2055,
+  "tokens_out": 89
+ }
+}

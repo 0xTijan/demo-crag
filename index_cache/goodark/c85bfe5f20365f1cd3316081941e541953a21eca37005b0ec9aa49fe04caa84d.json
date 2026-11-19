@@ -1,0 +1,24 @@
+{
+ "file": "goodark/6a05g-thru-6a10g_9fe9e8ed.md",
+ "supplier": "goodark",
+ "file_hash": "c85bfe5f20365f1cd3316081941e541953a21eca37005b0ec9aa49fe04caa84d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:46+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "6A05G",
+   "6A1G",
+   "6A2G",
+   "6A4G",
+   "6A6G"
+  ],
+  "confidence": "high",
+  "seconds": 7.01,
+  "tokens_in": 1570,
+  "tokens_out": 74
+ }
+}

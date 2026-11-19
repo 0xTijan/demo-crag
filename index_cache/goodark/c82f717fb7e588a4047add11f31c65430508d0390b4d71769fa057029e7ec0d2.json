@@ -1,0 +1,22 @@
+{
+ "file": "goodark/sd103aws-sd103cws_2670003f.md",
+ "supplier": "goodark",
+ "file_hash": "c82f717fb7e588a4047add11f31c65430508d0390b4d71769fa057029e7ec0d2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:05:59+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": true,
+  "part_numbers": [
+   "SD103AWS",
+   "SD103BWS",
+   "SD103CWS"
+  ],
+  "confidence": "high",
+  "seconds": 6.01,
+  "tokens_in": 1406,
+  "tokens_out": 57
+ }
+}

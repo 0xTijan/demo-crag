@@ -1,0 +1,21 @@
+{
+ "file": "goodark/mx27524_9dcfcb67.md",
+ "supplier": "goodark",
+ "file_hash": "038968daa0b56ef105f16666ed43730a3f6517b1ae963f9bae0adb9d66195386",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:25+00:00",
+  "is_datasheet": true,
+  "label": "low side gate driver",
+  "family": false,
+  "part_numbers": [
+   "MX27524ES",
+   "MX27524S"
+  ],
+  "confidence": "high",
+  "seconds": 5.5,
+  "tokens_in": 1201,
+  "tokens_out": 50
+ }
+}

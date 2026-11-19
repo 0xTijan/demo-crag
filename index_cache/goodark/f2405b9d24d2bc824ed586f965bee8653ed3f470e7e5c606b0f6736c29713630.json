@@ -1,0 +1,24 @@
+{
+ "file": "goodark/fr601-thru-fr607_c749a9f0.md",
+ "supplier": "goodark",
+ "file_hash": "f2405b9d24d2bc824ed586f965bee8653ed3f470e7e5c606b0f6736c29713630",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:09+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "FR601",
+   "FR602",
+   "FR603",
+   "FR604",
+   "FR605"
+  ],
+  "confidence": "high",
+  "seconds": 7.41,
+  "tokens_in": 1549,
+  "tokens_out": 74
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rgp25a-thru-rgp25m_440a1c9a.md",
+ "supplier": "goodark",
+ "file_hash": "3624c64f7313ea0361defa1fc8906dd9bffd23753ccf1a06255101e6d233222f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:24+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "RGP25A",
+   "RGP25B",
+   "RGP25D",
+   "RGP25G",
+   "RGP25J"
+  ],
+  "confidence": "high",
+  "seconds": 7.58,
+  "tokens_in": 1564,
+  "tokens_out": 81
+ }
+}

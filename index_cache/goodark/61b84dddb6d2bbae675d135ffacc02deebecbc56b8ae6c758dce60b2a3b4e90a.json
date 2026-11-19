@@ -1,0 +1,24 @@
+{
+ "file": "goodark/agr1a-thru-agr1m_d7dc3578.md",
+ "supplier": "goodark",
+ "file_hash": "61b84dddb6d2bbae675d135ffacc02deebecbc56b8ae6c758dce60b2a3b4e90a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:47+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "AGR1A",
+   "AGR1B",
+   "AGR1D",
+   "AGR1G",
+   "AGR1J"
+  ],
+  "confidence": "high",
+  "seconds": 6.56,
+  "tokens_in": 1578,
+  "tokens_out": 67
+ }
+}

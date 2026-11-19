@@ -1,0 +1,22 @@
+{
+ "file": "goodark/bav19ws-21ws_94291c19.md",
+ "supplier": "goodark",
+ "file_hash": "e72d52c50e7a143e6b64e26c294fbdd5aeddf1e09017b0fb473a83b50aa67d2a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:39+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "BAV19WS",
+   "BAV20WS",
+   "BAV21WS"
+  ],
+  "confidence": "high",
+  "seconds": 5.61,
+  "tokens_in": 1426,
+  "tokens_out": 55
+ }
+}

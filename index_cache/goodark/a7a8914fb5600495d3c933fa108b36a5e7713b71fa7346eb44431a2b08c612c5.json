@@ -1,0 +1,24 @@
+{
+ "file": "goodark/3-0smaz10a-thru-3-0smaz200a_d150843e.md",
+ "supplier": "goodark",
+ "file_hash": "a7a8914fb5600495d3c933fa108b36a5e7713b71fa7346eb44431a2b08c612c5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:34+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "3.0SMAZ10A",
+   "3.0SMAZ11A",
+   "3.0SMAZ12A",
+   "3.0SMAZ13A",
+   "3.0SMAZ15A"
+  ],
+  "confidence": "high",
+  "seconds": 6.35,
+  "tokens_in": 1809,
+  "tokens_out": 109
+ }
+}

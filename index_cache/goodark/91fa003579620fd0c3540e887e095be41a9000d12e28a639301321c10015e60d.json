@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbr60250pt_e241d8b1.md",
+ "supplier": "goodark",
+ "file_hash": "91fa003579620fd0c3540e887e095be41a9000d12e28a639301321c10015e60d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:59:11+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBR60250PT"
+  ],
+  "confidence": "high",
+  "seconds": 4.89,
+  "tokens_in": 1317,
+  "tokens_out": 44
+ }
+}

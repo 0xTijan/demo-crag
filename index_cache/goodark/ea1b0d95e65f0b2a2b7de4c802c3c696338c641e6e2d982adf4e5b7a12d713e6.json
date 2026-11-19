@@ -1,0 +1,21 @@
+{
+ "file": "goodark/bat42w-bat43w_2b76e850.md",
+ "supplier": "goodark",
+ "file_hash": "ea1b0d95e65f0b2a2b7de4c802c3c696338c641e6e2d982adf4e5b7a12d713e6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:19+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": true,
+  "part_numbers": [
+   "BAT42W",
+   "BAT43W"
+  ],
+  "confidence": "high",
+  "seconds": 4.88,
+  "tokens_in": 1296,
+  "tokens_out": 46
+ }
+}

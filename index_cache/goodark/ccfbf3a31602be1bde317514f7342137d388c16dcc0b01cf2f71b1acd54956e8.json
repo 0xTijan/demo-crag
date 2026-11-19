@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmbta28_aa87d7cf.md",
+ "supplier": "goodark",
+ "file_hash": "ccfbf3a31602be1bde317514f7342137d388c16dcc0b01cf2f71b1acd54956e8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:47+00:00",
+  "is_datasheet": true,
+  "label": "transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBTA28"
+  ],
+  "confidence": "high",
+  "seconds": 5.16,
+  "tokens_in": 1459,
+  "tokens_out": 37
+ }
+}

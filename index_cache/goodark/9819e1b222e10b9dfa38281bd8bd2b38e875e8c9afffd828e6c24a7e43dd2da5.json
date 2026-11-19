@@ -1,0 +1,18 @@
+{
+ "file": "goodark/abas70-04-05-06_a7b869e3.md",
+ "supplier": "goodark",
+ "file_hash": "9819e1b222e10b9dfa38281bd8bd2b38e875e8c9afffd828e6c24a7e43dd2da5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:16+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "seconds": 5.19,
+  "tokens_in": 1158,
+  "tokens_out": 35
+ }
+}

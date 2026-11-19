@@ -1,0 +1,20 @@
+{
+ "file": "goodark/smur1060_1e394fa3.md",
+ "supplier": "goodark",
+ "file_hash": "a5286017a83f5bbf64771af1938f3a6fbb01f5841fc0a772fb25ab755ca03f34",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:55+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMUR1060"
+  ],
+  "confidence": "high",
+  "seconds": 5.34,
+  "tokens_in": 1323,
+  "tokens_out": 42
+ }
+}

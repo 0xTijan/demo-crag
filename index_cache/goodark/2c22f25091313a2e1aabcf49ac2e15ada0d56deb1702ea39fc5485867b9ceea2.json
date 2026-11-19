@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sbrf20300s_e00e1088.md",
+ "supplier": "goodark",
+ "file_hash": "2c22f25091313a2e1aabcf49ac2e15ada0d56deb1702ea39fc5485867b9ceea2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:05:42+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SBRF20300S"
+  ],
+  "confidence": "high",
+  "seconds": 4.71,
+  "tokens_in": 1332,
+  "tokens_out": 45
+ }
+}

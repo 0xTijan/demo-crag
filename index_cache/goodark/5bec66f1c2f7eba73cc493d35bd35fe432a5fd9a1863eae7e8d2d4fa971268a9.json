@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ammbt3904_99fa00fa.md",
+ "supplier": "goodark",
+ "file_hash": "5bec66f1c2f7eba73cc493d35bd35fe432a5fd9a1863eae7e8d2d4fa971268a9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:29+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "AMMBT3904"
+  ],
+  "confidence": "high",
+  "seconds": 5.69,
+  "tokens_in": 1631,
+  "tokens_out": 40
+ }
+}

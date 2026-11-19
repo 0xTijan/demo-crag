@@ -1,0 +1,24 @@
+{
+ "file": "goodark/lh1-thru-lh7_4beb1e64.md",
+ "supplier": "goodark",
+ "file_hash": "e56d3437eb2fef2f84ef2d4653c64f8a4bcdb8c3e7d745a8e41427316ddebbe9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:45+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LH1",
+   "LH2",
+   "LH3",
+   "LH4",
+   "LH5"
+  ],
+  "confidence": "high",
+  "seconds": 7.83,
+  "tokens_in": 1537,
+  "tokens_out": 69
+ }
+}

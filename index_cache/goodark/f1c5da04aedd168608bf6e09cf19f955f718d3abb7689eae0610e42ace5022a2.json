@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur8120_da18f7ba.md",
+ "supplier": "goodark",
+ "file_hash": "f1c5da04aedd168608bf6e09cf19f955f718d3abb7689eae0610e42ace5022a2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:25+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR8120"
+  ],
+  "confidence": "high",
+  "seconds": 5.04,
+  "tokens_in": 1310,
+  "tokens_out": 42
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodark/fsl23-thru-fsl26_6904ebda.md",
+ "supplier": "goodark",
+ "file_hash": "1b076ad03515454f6d0086412aa32c6922efc445918f085d24b82b812e2d1cb2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:29+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FSL23",
+   "FSL24",
+   "FSL26"
+  ],
+  "confidence": "high",
+  "seconds": 5.05,
+  "tokens_in": 1393,
+  "tokens_out": 52
+ }
+}

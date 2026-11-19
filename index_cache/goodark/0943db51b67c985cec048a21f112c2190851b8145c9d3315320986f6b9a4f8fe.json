@@ -1,0 +1,22 @@
+{
+ "file": "goodark/psl32-thru-psl34_71d53b6f.md",
+ "supplier": "goodark",
+ "file_hash": "0943db51b67c985cec048a21f112c2190851b8145c9d3315320986f6b9a4f8fe",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:02+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PSL32",
+   "PSL33",
+   "PSL34"
+  ],
+  "confidence": "high",
+  "seconds": 4.58,
+  "tokens_in": 1516,
+  "tokens_out": 52
+ }
+}

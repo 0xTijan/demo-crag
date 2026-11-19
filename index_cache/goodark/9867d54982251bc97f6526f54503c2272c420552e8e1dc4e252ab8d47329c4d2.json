@@ -1,0 +1,24 @@
+{
+ "file": "goodark/zmy1-thru-zmy100_5320e67b.md",
+ "supplier": "goodark",
+ "file_hash": "9867d54982251bc97f6526f54503c2272c420552e8e1dc4e252ab8d47329c4d2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:10:02+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "ZMY1",
+   "ZMY3.9",
+   "ZMY4.3",
+   "ZMY4,7",
+   "ZMY5.1"
+  ],
+  "confidence": "high",
+  "seconds": 6.44,
+  "tokens_in": 1575,
+  "tokens_out": 65
+ }
+}

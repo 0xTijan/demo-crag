@@ -1,0 +1,22 @@
+{
+ "file": "goodark/gbjl25j-thru-gbjl25m_390984bb.md",
+ "supplier": "goodark",
+ "file_hash": "fd7c9c0419c43ad15e726533cc0bf51ef9468f834ae7e1bd34cd0d6c943c6ddb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:11+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJL25J",
+   "GBJL25K",
+   "GBJL25M"
+  ],
+  "confidence": "high",
+  "seconds": 6.79,
+  "tokens_in": 1688,
+  "tokens_out": 54
+ }
+}

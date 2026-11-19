@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur3020f_670c4bdb.md",
+ "supplier": "goodark",
+ "file_hash": "f9d9c1b11ab5616b77fbbce7c561dfc85a65782ebfb6df3e393936b6a16d0383",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:52+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR3020F"
+  ],
+  "confidence": "high",
+  "seconds": 5.04,
+  "tokens_in": 1324,
+  "tokens_out": 43
+ }
+}

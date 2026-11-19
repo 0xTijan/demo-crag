@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sl35a-thru-sl310a_7b2cf798.md",
+ "supplier": "goodark",
+ "file_hash": "a5d2d916bc923ba84ca5b98c52a10f50152d878ff0af05e62921d22c6fbd53de",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:41+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL35A",
+   "SL36A",
+   "SL37A",
+   "SL38A",
+   "SL39A"
+  ],
+  "confidence": "high",
+  "seconds": 5.89,
+  "tokens_in": 1562,
+  "tokens_out": 71
+ }
+}

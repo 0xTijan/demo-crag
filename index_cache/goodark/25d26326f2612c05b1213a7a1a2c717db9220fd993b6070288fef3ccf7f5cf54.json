@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms110090f_80fd67a2.md",
+ "supplier": "goodark",
+ "file_hash": "25d26326f2612c05b1213a7a1a2c717db9220fd993b6070288fef3ccf7f5cf54",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:45+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS110090F"
+  ],
+  "confidence": "high",
+  "seconds": 5.49,
+  "tokens_in": 1860,
+  "tokens_out": 44
+ }
+}

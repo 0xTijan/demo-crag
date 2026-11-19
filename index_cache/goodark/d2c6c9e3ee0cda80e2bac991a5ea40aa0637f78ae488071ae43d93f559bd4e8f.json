@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gn3ab-thru-gn3mb_c1456ef7.md",
+ "supplier": "goodark",
+ "file_hash": "d2c6c9e3ee0cda80e2bac991a5ea40aa0637f78ae488071ae43d93f559bd4e8f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:59+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN3AB",
+   "GN3BB",
+   "GN3DB",
+   "GN3GB",
+   "GN3JB"
+  ],
+  "confidence": "high",
+  "seconds": 6.53,
+  "tokens_in": 1593,
+  "tokens_out": 69
+ }
+}

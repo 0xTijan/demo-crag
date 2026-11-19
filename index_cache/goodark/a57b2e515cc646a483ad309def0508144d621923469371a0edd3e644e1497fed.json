@@ -1,0 +1,23 @@
+{
+ "file": "goodark/sb370-thru-sb3b0_18e0b902.md",
+ "supplier": "goodark",
+ "file_hash": "a57b2e515cc646a483ad309def0508144d621923469371a0edd3e644e1497fed",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:53+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SB370",
+   "SB380",
+   "SB390",
+   "SB3B0"
+  ],
+  "confidence": "high",
+  "seconds": 7.26,
+  "tokens_in": 1559,
+  "tokens_out": 58
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "file": "goodark/ls54-thru-ls545_f2bd1754.md",
+ "supplier": "goodark",
+ "file_hash": "ab39560e7fb0df11143c37c9a4f9764d1a6f320acb3b78579872be32c35dc092",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:59+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LS54",
+   "LS545"
+  ],
+  "confidence": "high",
+  "seconds": 5.43,
+  "tokens_in": 1337,
+  "tokens_out": 45
+ }
+}

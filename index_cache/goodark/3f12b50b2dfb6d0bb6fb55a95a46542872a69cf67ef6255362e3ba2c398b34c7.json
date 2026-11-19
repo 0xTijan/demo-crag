@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her201g-thru-her208g_6f321014.md",
+ "supplier": "goodark",
+ "file_hash": "3f12b50b2dfb6d0bb6fb55a95a46542872a69cf67ef6255362e3ba2c398b34c7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:42+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER201 G",
+   "HER202 G",
+   "HER203 G",
+   "HER204 G",
+   "HER205 G"
+  ],
+  "confidence": "high",
+  "seconds": 7.18,
+  "tokens_in": 1593,
+  "tokens_out": 86
+ }
+}

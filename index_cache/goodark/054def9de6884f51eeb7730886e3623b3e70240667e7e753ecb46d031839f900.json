@@ -1,0 +1,23 @@
+{
+ "file": "goodark/ba157-thru-ba159_f1b35fc4.md",
+ "supplier": "goodark",
+ "file_hash": "054def9de6884f51eeb7730886e3623b3e70240667e7e753ecb46d031839f900",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:56+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "BA157",
+   "BA158",
+   "BA159D",
+   "BA159"
+  ],
+  "confidence": "high",
+  "seconds": 5.82,
+  "tokens_in": 1563,
+  "tokens_out": 57
+ }
+}

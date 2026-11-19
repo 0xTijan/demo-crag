@@ -1,0 +1,24 @@
+{
+ "file": "goodark/a1-thru-a7_07a202b6.md",
+ "supplier": "goodark",
+ "file_hash": "b9871d0e70687d01171422f9f64158713b2f10947fb3840c09b1634e877dae10",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:53+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "A1",
+   "A2",
+   "A3",
+   "A4",
+   "A5"
+  ],
+  "confidence": "high",
+  "seconds": 7.66,
+  "tokens_in": 1537,
+  "tokens_out": 58
+ }
+}

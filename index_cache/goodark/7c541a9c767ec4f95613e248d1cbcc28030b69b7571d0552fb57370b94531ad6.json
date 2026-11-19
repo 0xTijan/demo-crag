@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs20d065sw_6a4be12b.md",
+ "supplier": "goodark",
+ "file_hash": "7c541a9c767ec4f95613e248d1cbcc28030b69b7571d0552fb57370b94531ad6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:54:51+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS20D065SW"
+  ],
+  "confidence": "high",
+  "seconds": 5.23,
+  "tokens_in": 1614,
+  "tokens_out": 47
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "file": "goodark/bav23a-c-s_e271ea9d.md",
+ "supplier": "goodark",
+ "file_hash": "a6b09cfbfc4ce7881b5d59091cfdef5f6b94db4fa9baff5f142c754e340b494d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:40+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "seconds": 5.44,
+  "tokens_in": 1146,
+  "tokens_out": 33
+ }
+}

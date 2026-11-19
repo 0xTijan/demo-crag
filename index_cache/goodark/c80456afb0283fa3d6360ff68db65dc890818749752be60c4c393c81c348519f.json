@@ -1,0 +1,24 @@
+{
+ "file": "goodark/af2tvs10a-thru-af2tvs190a_9e5ef317.md",
+ "supplier": "goodark",
+ "file_hash": "c80456afb0283fa3d6360ff68db65dc890818749752be60c4c393c81c348519f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:47+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "AF2TVS10A",
+   "AF2TVS11A",
+   "AF2TVS12A",
+   "AF2TVS13A",
+   "AF2TVS14A"
+  ],
+  "confidence": "high",
+  "seconds": 7.1,
+  "tokens_in": 1812,
+  "tokens_out": 77
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur1660fct_64485738.md",
+ "supplier": "goodark",
+ "file_hash": "eef652e018939056bf1928e9bc9908584b69f5d9d18d74ce004a7a4aaadebd7a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:38+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR1660FCT"
+  ],
+  "confidence": "high",
+  "seconds": 5.31,
+  "tokens_in": 1406,
+  "tokens_out": 44
+ }
+}

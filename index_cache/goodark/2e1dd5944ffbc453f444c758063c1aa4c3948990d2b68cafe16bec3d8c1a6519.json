@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur2040bfct_7690d395.md",
+ "supplier": "goodark",
+ "file_hash": "2e1dd5944ffbc453f444c758063c1aa4c3948990d2b68cafe16bec3d8c1a6519",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:42+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR2040BFCT"
+  ],
+  "confidence": "high",
+  "seconds": 5.56,
+  "tokens_in": 1408,
+  "tokens_out": 44
+ }
+}

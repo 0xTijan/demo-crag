@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gp30a-thru-gp30m_0a301de3.md",
+ "supplier": "goodark",
+ "file_hash": "175b2c449217ef64eecda829c7407d6d7a3312208ad2f7b7b0ca1f8b773451dd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:13+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GP30A",
+   "GP30B",
+   "GP30D",
+   "GP30G",
+   "GP30J"
+  ],
+  "confidence": "high",
+  "seconds": 6.36,
+  "tokens_in": 1554,
+  "tokens_out": 72
+ }
+}

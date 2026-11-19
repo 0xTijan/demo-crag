@@ -1,0 +1,23 @@
+{
+ "file": "goodark/asgp0120sd-thru-asgp0160sd_eeaa0c26.md",
+ "supplier": "goodark",
+ "file_hash": "26b963b585c42cb1bed587680a70d625500ead51cc94aead3d0a7be2c1d7beac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:53+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ASGP0120SD",
+   "ASGP0130SD",
+   "ASGP0140SD",
+   "ASGP0160SD"
+  ],
+  "confidence": "high",
+  "seconds": 5.79,
+  "tokens_in": 1592,
+  "tokens_out": 70
+ }
+}

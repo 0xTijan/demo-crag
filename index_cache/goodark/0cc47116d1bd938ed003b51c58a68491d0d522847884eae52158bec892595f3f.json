@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gn6a-thru-gn6m_c3bd77ee.md",
+ "supplier": "goodark",
+ "file_hash": "0cc47116d1bd938ed003b51c58a68491d0d522847884eae52158bec892595f3f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:04+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN6A",
+   "GN6B",
+   "GN6D",
+   "GN6G",
+   "GN6J"
+  ],
+  "confidence": "high",
+  "seconds": 6.32,
+  "tokens_in": 1553,
+  "tokens_out": 69
+ }
+}

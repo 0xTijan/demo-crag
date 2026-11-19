@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ls24_79ec0d9f.md",
+ "supplier": "goodark",
+ "file_hash": "28a1f2abe08a8a7c4f32a98c1ee727f0906f21f26201c3185c08cc6bc62f9582",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:50+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "LS24"
+  ],
+  "confidence": "high",
+  "seconds": 6.12,
+  "tokens_in": 1160,
+  "tokens_out": 39
+ }
+}

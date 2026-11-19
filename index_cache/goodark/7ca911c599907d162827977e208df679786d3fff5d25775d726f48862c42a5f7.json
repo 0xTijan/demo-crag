@@ -1,0 +1,24 @@
+{
+ "file": "goodark/afh1-thru-afh8_d6247684.md",
+ "supplier": "goodark",
+ "file_hash": "7ca911c599907d162827977e208df679786d3fff5d25775d726f48862c42a5f7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:53+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "AFH1",
+   "AFH2",
+   "AFH3",
+   "AFH4",
+   "AFH5"
+  ],
+  "confidence": "high",
+  "seconds": 7.37,
+  "tokens_in": 1602,
+  "tokens_out": 74
+ }
+}

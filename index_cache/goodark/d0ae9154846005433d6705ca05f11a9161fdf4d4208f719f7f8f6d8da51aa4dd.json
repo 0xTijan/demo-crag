@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs02d120sd_1130be97.md",
+ "supplier": "goodark",
+ "file_hash": "d0ae9154846005433d6705ca05f11a9161fdf4d4208f719f7f8f6d8da51aa4dd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:40+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS02D120SD"
+  ],
+  "confidence": "high",
+  "seconds": 5.63,
+  "tokens_in": 1618,
+  "tokens_out": 47
+ }
+}

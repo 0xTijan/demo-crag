@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbf201-thru-kbf210_d5077b04.md",
+ "supplier": "goodark",
+ "file_hash": "25ae19031d45145dadc40d5b41f3ae4a659cb6ad3fa4152837b7ef115931be11",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:11+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBF201",
+   "KBF202",
+   "KBF204",
+   "KBF206",
+   "KBF208"
+  ],
+  "confidence": "high",
+  "seconds": 7.31,
+  "tokens_in": 1877,
+  "tokens_out": 73
+ }
+}

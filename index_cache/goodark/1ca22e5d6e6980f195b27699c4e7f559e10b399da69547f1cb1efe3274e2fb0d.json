@@ -1,0 +1,22 @@
+{
+ "file": "goodark/bc817-16-25-40_cb698ff0.md",
+ "supplier": "goodark",
+ "file_hash": "1ca22e5d6e6980f195b27699c4e7f559e10b399da69547f1cb1efe3274e2fb0d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:48+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "BC817-16",
+   "BC817-25",
+   "BC817-40"
+  ],
+  "confidence": "high",
+  "seconds": 5.43,
+  "tokens_in": 1509,
+  "tokens_out": 58
+ }
+}

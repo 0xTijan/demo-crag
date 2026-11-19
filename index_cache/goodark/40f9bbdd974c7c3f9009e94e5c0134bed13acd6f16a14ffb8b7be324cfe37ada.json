@@ -1,0 +1,20 @@
+{
+ "file": "goodark/rb751s-40_5c35f605.md",
+ "supplier": "goodark",
+ "file_hash": "40f9bbdd974c7c3f9009e94e5c0134bed13acd6f16a14ffb8b7be324cfe37ada",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:16+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "5"
+  ],
+  "confidence": "high",
+  "seconds": 4.4,
+  "tokens_in": 1118,
+  "tokens_out": 37
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodark/tp0220s-thru-tp0240s_f2a9ab6e.md",
+ "supplier": "goodark",
+ "file_hash": "da7e8362ffe7b6171c9639d1476e41539e44c49388631b8c971550f09da4cf8f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:53+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "TP0220S",
+   "TP0230S",
+   "TP0240S"
+  ],
+  "confidence": "high",
+  "seconds": 5.45,
+  "tokens_in": 1353,
+  "tokens_out": 58
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n746a-thru-1n759a_6fa76878.md",
+ "supplier": "goodark",
+ "file_hash": "c87c445bd3e6637aaeb7d7498abfe761f2bd62ea0bcc5764dddb30289a3bcdd9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:10+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "1N746A",
+   "1N747A",
+   "1N748A",
+   "1N749A",
+   "1N750A"
+  ],
+  "confidence": "high",
+  "seconds": 7.09,
+  "tokens_in": 1668,
+  "tokens_out": 128
+ }
+}

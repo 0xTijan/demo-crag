@@ -1,0 +1,20 @@
+{
+ "file": "goodark/abat54-a-c-s_64bae6dc.md",
+ "supplier": "goodark",
+ "file_hash": "376a425c8bafe44a476b7b7945eb8bf9da7e1313b1006cf5266ab7dd95224a0b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:17+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "ABAT54-A-C-S"
+  ],
+  "confidence": "high",
+  "seconds": 4.82,
+  "tokens_in": 1219,
+  "tokens_out": 43
+ }
+}

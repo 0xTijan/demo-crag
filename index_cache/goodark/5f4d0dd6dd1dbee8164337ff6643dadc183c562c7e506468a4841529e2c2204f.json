@@ -1,0 +1,20 @@
+{
+ "file": "goodark/abas21-a-c-s_a6623e6f.md",
+ "supplier": "goodark",
+ "file_hash": "5f4d0dd6dd1dbee8164337ff6643dadc183c562c7e506468a4841529e2c2204f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:13+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "ABAS21A-C-S"
+  ],
+  "confidence": "high",
+  "seconds": 5.96,
+  "tokens_in": 1474,
+  "tokens_out": 41
+ }
+}

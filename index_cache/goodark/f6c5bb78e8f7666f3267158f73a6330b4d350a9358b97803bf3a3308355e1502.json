@@ -1,0 +1,22 @@
+{
+ "file": "goodark/gn1p16-thru-gn1p20_b66f9f0c.md",
+ "supplier": "goodark",
+ "file_hash": "f6c5bb78e8f7666f3267158f73a6330b4d350a9358b97803bf3a3308355e1502",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:53+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN1P16",
+   "GN1P18",
+   "GN1P20"
+  ],
+  "confidence": "high",
+  "seconds": 6.44,
+  "tokens_in": 1400,
+  "tokens_out": 51
+ }
+}

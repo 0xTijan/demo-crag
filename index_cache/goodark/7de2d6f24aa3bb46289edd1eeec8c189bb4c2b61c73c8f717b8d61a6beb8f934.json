@@ -1,0 +1,24 @@
+{
+ "file": "goodark/pb50005-thru-pb5010_fef8cac9.md",
+ "supplier": "goodark",
+ "file_hash": "7de2d6f24aa3bb46289edd1eeec8c189bb4c2b61c73c8f717b8d61a6beb8f934",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:37+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "PB50005",
+   "PB5001",
+   "PB5002",
+   "PB5004",
+   "PB5006"
+  ],
+  "confidence": "high",
+  "seconds": 7.01,
+  "tokens_in": 2062,
+  "tokens_out": 66
+ }
+}

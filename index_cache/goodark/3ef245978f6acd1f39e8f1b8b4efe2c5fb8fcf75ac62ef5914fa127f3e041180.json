@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her101-thru-her108_9f40f246.md",
+ "supplier": "goodark",
+ "file_hash": "3ef245978f6acd1f39e8f1b8b4efe2c5fb8fcf75ac62ef5914fa127f3e041180",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:29+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER101",
+   "HER102",
+   "HER103",
+   "HER104",
+   "HER105"
+  ],
+  "confidence": "high",
+  "seconds": 7.33,
+  "tokens_in": 1563,
+  "tokens_out": 78
+ }
+}

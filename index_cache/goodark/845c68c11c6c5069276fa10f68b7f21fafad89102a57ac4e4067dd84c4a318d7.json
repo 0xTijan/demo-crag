@@ -1,0 +1,24 @@
+{
+ "file": "goodark/mb2m-thru-mb10m_9d6b5695.md",
+ "supplier": "goodark",
+ "file_hash": "845c68c11c6c5069276fa10f68b7f21fafad89102a57ac4e4067dd84c4a318d7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:24+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "MB2M",
+   "MB4M",
+   "MB6M",
+   "MB8M",
+   "MB10M"
+  ],
+  "confidence": "high",
+  "seconds": 6.55,
+  "tokens_in": 1859,
+  "tokens_out": 58
+ }
+}

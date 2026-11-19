@@ -1,0 +1,20 @@
+{
+ "file": "goodark/agmn29006ldr_7143c2fa.md",
+ "supplier": "goodark",
+ "file_hash": "3aef9416ef2b65f57c00bd450c533dcf7f79fe4bec5a2dfe5ff3dfae7bde0461",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:30+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "AGMN29006LDR"
+  ],
+  "confidence": "high",
+  "seconds": 6.05,
+  "tokens_in": 1779,
+  "tokens_out": 44
+ }
+}

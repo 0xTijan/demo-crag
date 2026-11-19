@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs05d120sd_9bcf18b3.md",
+ "supplier": "goodark",
+ "file_hash": "e7aff4ab44f7c35ee9d14d122c46f17072ca65e8ed912994fba0613795e3677c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:51+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS05D120SD"
+  ],
+  "confidence": "high",
+  "seconds": 5.96,
+  "tokens_in": 1611,
+  "tokens_out": 47
+ }
+}

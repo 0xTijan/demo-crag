@@ -1,0 +1,22 @@
+{
+ "file": "goodark/bc807-16-25-40_0acbcdbf.md",
+ "supplier": "goodark",
+ "file_hash": "48c41819aa2450386804835785e49e395e840f95280ef903999495808fa6eaae",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:46+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "BC807-16",
+   "BC807-25",
+   "BC807-40"
+  ],
+  "confidence": "high",
+  "seconds": 4.97,
+  "tokens_in": 1452,
+  "tokens_out": 58
+ }
+}

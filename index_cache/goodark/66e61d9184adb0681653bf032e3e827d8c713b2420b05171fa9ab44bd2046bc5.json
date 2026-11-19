@@ -1,0 +1,24 @@
+{
+ "file": "goodark/pu21-thru-pu25_a0b8676d.md",
+ "supplier": "goodark",
+ "file_hash": "66e61d9184adb0681653bf032e3e827d8c713b2420b05171fa9ab44bd2046bc5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:05+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PU21",
+   "PU22",
+   "PU23",
+   "PU24",
+   "PU25"
+  ],
+  "confidence": "high",
+  "seconds": 5.31,
+  "tokens_in": 1526,
+  "tokens_out": 59
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn02204m_c6d05039.md",
+ "supplier": "goodark",
+ "file_hash": "5a5ff9d3a9a8dfef2bbdc35c6c8623a81bc74b4def503fbf8fbbf99c6125593c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:58+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN02204M"
+  ],
+  "confidence": "high",
+  "seconds": 5.95,
+  "tokens_in": 1874,
+  "tokens_out": 43
+ }
+}

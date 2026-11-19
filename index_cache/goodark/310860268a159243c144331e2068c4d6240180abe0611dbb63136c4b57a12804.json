@@ -1,0 +1,24 @@
+{
+ "file": "goodark/bzx584bxx_b03f573c.md",
+ "supplier": "goodark",
+ "file_hash": "310860268a159243c144331e2068c4d6240180abe0611dbb63136c4b57a12804",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:23+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "BZX584B5V1",
+   "BZX584B5V6",
+   "BZX584B6V2",
+   "BZX584B6V8",
+   "BZX584B7V5"
+  ],
+  "confidence": "high",
+  "seconds": 8.08,
+  "tokens_in": 1675,
+  "tokens_out": 87
+ }
+}

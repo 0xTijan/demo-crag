@@ -1,0 +1,24 @@
+{
+ "file": "goodark/lf1-thru-lf7_e5091d1c.md",
+ "supplier": "goodark",
+ "file_hash": "366ab300c4ea03455c88b7da56cd1bef36c86500bbf934ea65012df84954c8bb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:43+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "LF1",
+   "LF2",
+   "LF3",
+   "LF4",
+   "LF5"
+  ],
+  "confidence": "high",
+  "seconds": 8.19,
+  "tokens_in": 1537,
+  "tokens_out": 60
+ }
+}

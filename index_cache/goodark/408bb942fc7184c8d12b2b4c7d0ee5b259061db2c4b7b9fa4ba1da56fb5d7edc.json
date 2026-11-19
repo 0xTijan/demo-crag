@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssfd6035_9e3b1ade.md",
+ "supplier": "goodark",
+ "file_hash": "408bb942fc7184c8d12b2b4c7d0ee5b259061db2c4b7b9fa4ba1da56fb5d7edc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFD6035"
+  ],
+  "confidence": "high",
+  "seconds": 6.44,
+  "tokens_in": 1875,
+  "tokens_out": 41
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sl15a-thru-sl110a_ec8573a3.md",
+ "supplier": "goodark",
+ "file_hash": "1ad69d0e29276baaa5531e047985df343af9d5ae564cb7fed6b932468a0e77b7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:28+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL15A",
+   "SL16A",
+   "SL17A",
+   "SL18A",
+   "SL19A"
+  ],
+  "confidence": "high",
+  "seconds": 6.48,
+  "tokens_in": 1562,
+  "tokens_out": 71
+ }
+}

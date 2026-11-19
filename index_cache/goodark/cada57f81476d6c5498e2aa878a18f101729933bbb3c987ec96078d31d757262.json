@@ -1,0 +1,22 @@
+{
+ "file": "goodark/fs22-thru-fs24_008229fb.md",
+ "supplier": "goodark",
+ "file_hash": "cada57f81476d6c5498e2aa878a18f101729933bbb3c987ec96078d31d757262",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:16+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FS22",
+   "FS23",
+   "FS24"
+  ],
+  "confidence": "high",
+  "seconds": 6.67,
+  "tokens_in": 1428,
+  "tokens_out": 49
+ }
+}

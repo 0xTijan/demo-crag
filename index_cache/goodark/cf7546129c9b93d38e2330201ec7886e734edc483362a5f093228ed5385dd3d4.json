@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ss8050_497cdd96.md",
+ "supplier": "goodark",
+ "file_hash": "cf7546129c9b93d38e2330201ec7886e734edc483362a5f093228ed5385dd3d4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:11+00:00",
+  "is_datasheet": true,
+  "label": "transistor",
+  "family": false,
+  "part_numbers": [
+   "Y1"
+  ],
+  "confidence": "high",
+  "seconds": 4.9,
+  "tokens_in": 1475,
+  "tokens_out": 34
+ }
+}

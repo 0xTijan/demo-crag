@@ -1,0 +1,20 @@
+{
+ "file": "goodark/smur1560f_52d1b7be.md",
+ "supplier": "goodark",
+ "file_hash": "4db9ae2545cba383d6e48639c6cd9f1446ae34d4480a4c6e33f52fcbf5ca8b7e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:59+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMUR1560F"
+  ],
+  "confidence": "high",
+  "seconds": 4.72,
+  "tokens_in": 1307,
+  "tokens_out": 43
+ }
+}

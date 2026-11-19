@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur3065_5c26a2c2.md",
+ "supplier": "goodark",
+ "file_hash": "ece12a94530a3781dde8440bb03f36a7629a444359d3513a782e7e83d2654d39",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:03+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR3065"
+  ],
+  "confidence": "high",
+  "seconds": 5.02,
+  "tokens_in": 1308,
+  "tokens_out": 42
+ }
+}

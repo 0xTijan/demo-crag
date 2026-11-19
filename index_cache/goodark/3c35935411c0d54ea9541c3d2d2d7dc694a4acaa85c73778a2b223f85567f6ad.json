@@ -1,0 +1,20 @@
+{
+ "file": "goodark/es3hgc_b772eba2.md",
+ "supplier": "goodark",
+ "file_hash": "3c35935411c0d54ea9541c3d2d2d7dc694a4acaa85c73778a2b223f85567f6ad",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "ES3HGC"
+  ],
+  "confidence": "high",
+  "seconds": 5.01,
+  "tokens_in": 1151,
+  "tokens_out": 40
+ }
+}

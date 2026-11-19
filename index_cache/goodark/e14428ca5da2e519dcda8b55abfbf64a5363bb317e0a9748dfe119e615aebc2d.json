@@ -1,0 +1,24 @@
+{
+ "file": "goodark/agn2dl-thru-agn2ml_a9b856e9.md",
+ "supplier": "goodark",
+ "file_hash": "e14428ca5da2e519dcda8b55abfbf64a5363bb317e0a9748dfe119e615aebc2d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:39+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "AGN2DL",
+   "AGN2GL",
+   "AGN2JL",
+   "AGN2KL",
+   "AGN2ML"
+  ],
+  "confidence": "high",
+  "seconds": 7.19,
+  "tokens_in": 1562,
+  "tokens_out": 65
+ }
+}

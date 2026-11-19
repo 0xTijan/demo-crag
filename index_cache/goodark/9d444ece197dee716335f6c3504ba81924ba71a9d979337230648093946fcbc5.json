@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbr10100_97bcbc32.md",
+ "supplier": "goodark",
+ "file_hash": "9d444ece197dee716335f6c3504ba81924ba71a9d979337230648093946fcbc5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:28+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBR10100"
+  ],
+  "confidence": "high",
+  "seconds": 6.38,
+  "tokens_in": 1243,
+  "tokens_out": 43
+ }
+}

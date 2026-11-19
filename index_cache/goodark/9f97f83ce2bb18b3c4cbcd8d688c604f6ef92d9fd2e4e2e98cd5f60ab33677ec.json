@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur880_d0a8dd5f.md",
+ "supplier": "goodark",
+ "file_hash": "9f97f83ce2bb18b3c4cbcd8d688c604f6ef92d9fd2e4e2e98cd5f60ab33677ec",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:34+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR880"
+  ],
+  "confidence": "high",
+  "seconds": 4.62,
+  "tokens_in": 1301,
+  "tokens_out": 41
+ }
+}

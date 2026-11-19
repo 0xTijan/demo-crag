@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmp03904d_7097ca93.md",
+ "supplier": "goodark",
+ "file_hash": "751ac31f35a26b30e006379205ee418c8a23a22d21633e89bd9e611e35856154",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:02+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMP03904D"
+  ],
+  "confidence": "high",
+  "seconds": 6.29,
+  "tokens_in": 1761,
+  "tokens_out": 43
+ }
+}

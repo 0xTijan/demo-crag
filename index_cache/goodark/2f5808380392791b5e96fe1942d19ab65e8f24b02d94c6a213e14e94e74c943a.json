@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs40d065sp_b292a199.md",
+ "supplier": "goodark",
+ "file_hash": "2f5808380392791b5e96fe1942d19ab65e8f24b02d94c6a213e14e94e74c943a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:15+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS40D065SP"
+  ],
+  "confidence": "high",
+  "seconds": 5.46,
+  "tokens_in": 1619,
+  "tokens_out": 47
+ }
+}

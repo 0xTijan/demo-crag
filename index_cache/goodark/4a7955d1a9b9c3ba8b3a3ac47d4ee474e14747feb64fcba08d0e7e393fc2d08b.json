@@ -1,0 +1,22 @@
+{
+ "file": "goodark/ps22-thru-ps24_97c9fee6.md",
+ "supplier": "goodark",
+ "file_hash": "4a7955d1a9b9c3ba8b3a3ac47d4ee474e14747feb64fcba08d0e7e393fc2d08b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:50+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PS22",
+   "PS23",
+   "PS24"
+  ],
+  "confidence": "high",
+  "seconds": 5.49,
+  "tokens_in": 1454,
+  "tokens_out": 49
+ }
+}

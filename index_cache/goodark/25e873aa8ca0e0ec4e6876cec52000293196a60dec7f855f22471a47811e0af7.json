@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbu4a-thru-gbu4m_0d5c07c1.md",
+ "supplier": "goodark",
+ "file_hash": "25e873aa8ca0e0ec4e6876cec52000293196a60dec7f855f22471a47811e0af7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:51+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU4A",
+   "GBU4B",
+   "GBU4D",
+   "GBU4G",
+   "GBU4J"
+  ],
+  "confidence": "high",
+  "seconds": 8.66,
+  "tokens_in": 1893,
+  "tokens_out": 73
+ }
+}

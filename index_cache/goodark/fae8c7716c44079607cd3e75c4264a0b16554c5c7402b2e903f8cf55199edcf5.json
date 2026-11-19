@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ls2b_9f07155f.md",
+ "supplier": "goodark",
+ "file_hash": "fae8c7716c44079607cd3e75c4264a0b16554c5c7402b2e903f8cf55199edcf5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:52+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "LS2B"
+  ],
+  "confidence": "high",
+  "seconds": 4.88,
+  "tokens_in": 1138,
+  "tokens_out": 39
+ }
+}

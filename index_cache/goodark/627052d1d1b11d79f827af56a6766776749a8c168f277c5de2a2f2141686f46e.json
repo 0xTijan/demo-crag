@@ -1,0 +1,24 @@
+{
+ "file": "goodark/af1n4740-thru-af1n4754_fdab8144.md",
+ "supplier": "goodark",
+ "file_hash": "627052d1d1b11d79f827af56a6766776749a8c168f277c5de2a2f2141686f46e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:45+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "AF1N4740",
+   "AF1N4741",
+   "AF1N4742",
+   "AF1N4743",
+   "AF1N4744"
+  ],
+  "confidence": "high",
+  "seconds": 6.81,
+  "tokens_in": 1729,
+  "tokens_out": 77
+ }
+}

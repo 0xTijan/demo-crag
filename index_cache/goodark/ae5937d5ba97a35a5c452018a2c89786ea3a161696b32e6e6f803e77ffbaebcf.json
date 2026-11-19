@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sesuc5vd2510-10u_664a4678.md",
+ "supplier": "goodark",
+ "file_hash": "ae5937d5ba97a35a5c452018a2c89786ea3a161696b32e6e6f803e77ffbaebcf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:27+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": true,
+  "part_numbers": [
+   "SESUC5VD2510-10U"
+  ],
+  "confidence": "high",
+  "seconds": 5.98,
+  "tokens_in": 1547,
+  "tokens_out": 47
+ }
+}

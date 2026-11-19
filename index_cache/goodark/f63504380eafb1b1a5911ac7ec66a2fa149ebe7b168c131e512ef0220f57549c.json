@@ -1,0 +1,24 @@
+{
+ "file": "goodark/p300a-thru-p300m_3e711bb2.md",
+ "supplier": "goodark",
+ "file_hash": "f63504380eafb1b1a5911ac7ec66a2fa149ebe7b168c131e512ef0220f57549c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:33+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "P300A",
+   "P300B",
+   "P300D",
+   "P300G",
+   "P300J"
+  ],
+  "confidence": "high",
+  "seconds": 6.77,
+  "tokens_in": 1560,
+  "tokens_out": 79
+ }
+}

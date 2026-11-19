@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbj4a-thru-kbj4m_f16d3f5a.md",
+ "supplier": "goodark",
+ "file_hash": "7c10021de19bf91a061ad86532fe9d14a79e58b8d23581116d8d6d3fc19a81be",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:32+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "KBJ4A",
+   "KBJ4B",
+   "KBJ4D",
+   "KBJ4G",
+   "KBJ4J"
+  ],
+  "confidence": "high",
+  "seconds": 8.52,
+  "tokens_in": 2000,
+  "tokens_out": 74
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn04504lm_19b8ee15.md",
+ "supplier": "goodark",
+ "file_hash": "7572c60244b777bf9dbe5069cc97b24dab6dd4ff40bf35f5583e8ea029f1bd70",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:51:18+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN04504LM"
+  ],
+  "confidence": "high",
+  "seconds": 6.07,
+  "tokens_in": 1769,
+  "tokens_out": 43
+ }
+}

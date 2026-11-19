@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rgp10a-thru-rgp10m_751e9311.md",
+ "supplier": "goodark",
+ "file_hash": "af0a5d9cbb415b9f6f5cde18c7660f715daf361da3e0842920fa328540bfdd69",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:19+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "RGP10A",
+   "RGP10B",
+   "RGP10D",
+   "RGP10G",
+   "RGP10J"
+  ],
+  "confidence": "high",
+  "seconds": 5.17,
+  "tokens_in": 1553,
+  "tokens_out": 81
+ }
+}

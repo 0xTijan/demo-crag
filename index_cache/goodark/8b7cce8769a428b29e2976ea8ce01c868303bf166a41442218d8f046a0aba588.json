@@ -1,0 +1,21 @@
+{
+ "file": "goodark/gmn01003m_25aaaf8a.md",
+ "supplier": "goodark",
+ "file_hash": "8b7cce8769a428b29e2976ea8ce01c868303bf166a41442218d8f046a0aba588",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:22+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "3FD100N30",
+   "3FD100N30"
+  ],
+  "confidence": "high",
+  "seconds": 6.69,
+  "tokens_in": 2549,
+  "tokens_out": 53
+ }
+}

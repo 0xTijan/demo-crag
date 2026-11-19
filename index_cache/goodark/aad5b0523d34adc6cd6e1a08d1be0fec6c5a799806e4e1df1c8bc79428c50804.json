@@ -1,0 +1,22 @@
+{
+ "file": "goodark/sd103a-thru-sd103c_f34b51ff.md",
+ "supplier": "goodark",
+ "file_hash": "aad5b0523d34adc6cd6e1a08d1be0fec6c5a799806e4e1df1c8bc79428c50804",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:05:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": true,
+  "part_numbers": [
+   "SD103A",
+   "SD103B",
+   "SD103C"
+  ],
+  "confidence": "high",
+  "seconds": 5.26,
+  "tokens_in": 1437,
+  "tokens_out": 54
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murb15120s_a375ffdd.md",
+ "supplier": "goodark",
+ "file_hash": "6a5af3ec93daf05b0144fa939fe8274431ae2511b2c013b872777b30e75746ee",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:44+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURB15120S"
+  ],
+  "confidence": "high",
+  "seconds": 5.12,
+  "tokens_in": 1355,
+  "tokens_out": 45
+ }
+}

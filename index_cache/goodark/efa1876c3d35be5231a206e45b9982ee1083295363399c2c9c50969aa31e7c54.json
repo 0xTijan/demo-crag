@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bc856s_caaee138.md",
+ "supplier": "goodark",
+ "file_hash": "efa1876c3d35be5231a206e45b9982ee1083295363399c2c9c50969aa31e7c54",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:52+00:00",
+  "is_datasheet": true,
+  "label": "dual transistor",
+  "family": false,
+  "part_numbers": [
+   "5Ft"
+  ],
+  "confidence": "high",
+  "seconds": 6.07,
+  "tokens_in": 1468,
+  "tokens_out": 36
+ }
+}

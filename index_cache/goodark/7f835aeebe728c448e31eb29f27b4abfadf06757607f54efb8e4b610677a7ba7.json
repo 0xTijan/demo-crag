@@ -1,0 +1,21 @@
+{
+ "file": "goodark/murs140a-thru-murs160a_2a5f12c6.md",
+ "supplier": "goodark",
+ "file_hash": "7f835aeebe728c448e31eb29f27b4abfadf06757607f54efb8e4b610677a7ba7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:21+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast rectifier",
+  "family": true,
+  "part_numbers": [
+   "MURS140A",
+   "MURS160A"
+  ],
+  "confidence": "high",
+  "seconds": 5.2,
+  "tokens_in": 1436,
+  "tokens_out": 51
+ }
+}

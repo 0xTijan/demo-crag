@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gn8a-thru-gn8m_6b1a6400.md",
+ "supplier": "goodark",
+ "file_hash": "1f2cb3eed9ad38b905d0b7d3f8bdf2d9e97f57a7e2b9334887840ac27203ba21",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:05+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN8A",
+   "GN8B",
+   "GN8D",
+   "GN8G",
+   "GN8J"
+  ],
+  "confidence": "high",
+  "seconds": 5.97,
+  "tokens_in": 1557,
+  "tokens_out": 65
+ }
+}

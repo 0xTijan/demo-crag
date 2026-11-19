@@ -1,0 +1,22 @@
+{
+ "file": "goodark/b5817w-b5819w_020024b6.md",
+ "supplier": "goodark",
+ "file_hash": "b179d29c1d2db7947c872033f72423b07dbdbf7de65c69971555fdfedf6b9976",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:52+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": true,
+  "part_numbers": [
+   "B5817W",
+   "B5818W",
+   "B5819W"
+  ],
+  "confidence": "high",
+  "seconds": 7.01,
+  "tokens_in": 1325,
+  "tokens_out": 58
+ }
+}

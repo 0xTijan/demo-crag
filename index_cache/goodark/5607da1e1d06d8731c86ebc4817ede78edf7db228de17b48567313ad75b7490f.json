@@ -1,0 +1,24 @@
+{
+ "file": "goodark/f1ds-thru-f7ds_47bde2c4.md",
+ "supplier": "goodark",
+ "file_hash": "5607da1e1d06d8731c86ebc4817ede78edf7db228de17b48567313ad75b7490f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:42+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "F1DS",
+   "F2DS",
+   "F3DS",
+   "F4DS",
+   "F5DS"
+  ],
+  "confidence": "high",
+  "seconds": 5.9,
+  "tokens_in": 1537,
+  "tokens_out": 69
+ }
+}

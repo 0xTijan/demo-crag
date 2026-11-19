@@ -1,0 +1,24 @@
+{
+ "file": "goodark/agn8dw-thru-agn8mw_ddd89165.md",
+ "supplier": "goodark",
+ "file_hash": "390e3e3dd08ef04445b3875bf8fee913acd23318207e9723db509b23ba64636b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:45+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "AGN8DW",
+   "AGN8GW",
+   "AGN8JW",
+   "AGN8KW",
+   "AGN8MW"
+  ],
+  "confidence": "high",
+  "seconds": 6.34,
+  "tokens_in": 1569,
+  "tokens_out": 65
+ }
+}

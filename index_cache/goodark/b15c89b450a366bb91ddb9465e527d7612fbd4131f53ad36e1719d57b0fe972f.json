@@ -1,0 +1,22 @@
+{
+ "file": "goodark/abas19-thru-abas21_f4a5faf8.md",
+ "supplier": "goodark",
+ "file_hash": "b15c89b450a366bb91ddb9465e527d7612fbd4131f53ad36e1719d57b0fe972f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:12+00:00",
+  "is_datasheet": true,
+  "label": "Silicon diode",
+  "family": true,
+  "part_numbers": [
+   "ABAS19",
+   "ABAS20",
+   "ABAS21"
+  ],
+  "confidence": "high",
+  "seconds": 6.78,
+  "tokens_in": 1580,
+  "tokens_out": 50
+ }
+}

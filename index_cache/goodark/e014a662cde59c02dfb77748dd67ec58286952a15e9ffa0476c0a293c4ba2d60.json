@@ -1,0 +1,24 @@
+{
+ "file": "goodark/asgp1a-thru-asgp7a_5a850469.md",
+ "supplier": "goodark",
+ "file_hash": "e014a662cde59c02dfb77748dd67ec58286952a15e9ffa0476c0a293c4ba2d60",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:58+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ASGP1A",
+   "ASGP2A",
+   "ASGP3A",
+   "ASGP4A",
+   "ASGP5A"
+  ],
+  "confidence": "high",
+  "seconds": 5.92,
+  "tokens_in": 1568,
+  "tokens_out": 76
+ }
+}

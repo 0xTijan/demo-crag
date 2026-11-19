@@ -1,0 +1,24 @@
+{
+ "file": "goodark/pf151-thru-pf157_9cfd6245.md",
+ "supplier": "goodark",
+ "file_hash": "d04b36de5a215bf905e9d2564246f3691dd51f208c2f5dc4d95fae509cab2976",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:40+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "PF151",
+   "PF152",
+   "PF153",
+   "PF154",
+   "PF155"
+  ],
+  "confidence": "high",
+  "seconds": 7.19,
+  "tokens_in": 1573,
+  "tokens_out": 74
+ }
+}

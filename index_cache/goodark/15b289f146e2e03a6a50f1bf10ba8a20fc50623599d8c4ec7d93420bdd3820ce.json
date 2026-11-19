@@ -1,0 +1,24 @@
+{
+ "file": "goodark/br25005-w-thru-br2510-w_a97e5456.md",
+ "supplier": "goodark",
+ "file_hash": "15b289f146e2e03a6a50f1bf10ba8a20fc50623599d8c4ec7d93420bdd3820ce",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:56+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "BR25 005",
+   "BR25 01",
+   "BR25 02",
+   "BR25 04",
+   "BR25 06"
+  ],
+  "confidence": "high",
+  "seconds": 6.78,
+  "tokens_in": 1852,
+  "tokens_out": 88
+ }
+}

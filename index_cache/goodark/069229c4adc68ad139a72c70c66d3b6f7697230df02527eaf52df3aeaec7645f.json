@@ -1,0 +1,24 @@
+{
+ "file": "goodark/ls32-thru-ls35_38b93a09.md",
+ "supplier": "goodark",
+ "file_hash": "069229c4adc68ad139a72c70c66d3b6f7697230df02527eaf52df3aeaec7645f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LS32",
+   "LS33",
+   "LS34",
+   "LS345",
+   "LS35"
+  ],
+  "confidence": "high",
+  "seconds": 5.35,
+  "tokens_in": 1542,
+  "tokens_out": 60
+ }
+}

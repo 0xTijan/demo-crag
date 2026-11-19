@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs50d120sp_49d9d4cf.md",
+ "supplier": "goodark",
+ "file_hash": "bc1edf2f3995ff46f502fa7d3484961c7d976779270522c33d43e83b418db068",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:21+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS50D120SP"
+  ],
+  "confidence": "high",
+  "seconds": 6.07,
+  "tokens_in": 1626,
+  "tokens_out": 47
+ }
+}

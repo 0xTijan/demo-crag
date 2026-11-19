@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bat41_e04508a5.md",
+ "supplier": "goodark",
+ "file_hash": "f0030732914c83658d983ba8623bc300b1d906f9b3ce6df5e5b38071117bb7d1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:17+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "BAT41"
+  ],
+  "confidence": "high",
+  "seconds": 5.2,
+  "tokens_in": 1239,
+  "tokens_out": 38
+ }
+}

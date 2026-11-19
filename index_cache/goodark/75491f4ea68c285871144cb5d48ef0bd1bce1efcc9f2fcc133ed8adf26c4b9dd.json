@@ -1,0 +1,24 @@
+{
+ "file": "goodark/l21a-thru-l27a_5f54502e.md",
+ "supplier": "goodark",
+ "file_hash": "75491f4ea68c285871144cb5d48ef0bd1bce1efcc9f2fcc133ed8adf26c4b9dd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:06+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "L21A",
+   "L22A",
+   "L23A",
+   "L24A",
+   "L25A"
+  ],
+  "confidence": "high",
+  "seconds": 7.21,
+  "tokens_in": 1545,
+  "tokens_out": 76
+ }
+}

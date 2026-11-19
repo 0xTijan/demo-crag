@@ -1,0 +1,21 @@
+{
+ "file": "goodark/gfc2200drv_612cdd60.md",
+ "supplier": "goodark",
+ "file_hash": "55a9513670a91148b101de48c9def8fcef120b9b223843145f0c8f0e999c9c46",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:01+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GFC2200DRV",
+   "ABZX84Bxxx"
+  ],
+  "confidence": "high",
+  "seconds": 7.93,
+  "tokens_in": 1726,
+  "tokens_out": 49
+ }
+}

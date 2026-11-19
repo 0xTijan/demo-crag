@@ -1,0 +1,23 @@
+{
+ "file": "goodark/sgbj25a08-thru-sgbj25a16_aacb3ad1.md",
+ "supplier": "goodark",
+ "file_hash": "45f3257900fedc3820e2a1b49f0e79a930720ddb4f28c5c9b304cfb6097966a0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:30+00:00",
+  "is_datasheet": true,
+  "label": "three-phase rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGBJ25A08",
+   "SGBJ25A10",
+   "SGBJ25A12",
+   "SGBJ25A16"
+  ],
+  "confidence": "high",
+  "seconds": 6.18,
+  "tokens_in": 1556,
+  "tokens_out": 72
+ }
+}

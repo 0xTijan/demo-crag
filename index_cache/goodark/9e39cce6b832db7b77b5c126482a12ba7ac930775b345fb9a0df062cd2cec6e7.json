@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n4942g-thru-1n4948g_f464d509.md",
+ "supplier": "goodark",
+ "file_hash": "9e39cce6b832db7b77b5c126482a12ba7ac930775b345fb9a0df062cd2cec6e7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:55+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "1N4942G",
+   "1N4944G",
+   "1N4946G",
+   "1N4947G",
+   "1N4948G"
+  ],
+  "confidence": "high",
+  "seconds": 6.95,
+  "tokens_in": 1586,
+  "tokens_out": 77
+ }
+}

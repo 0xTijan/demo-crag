@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bat48_9874b8e3.md",
+ "supplier": "goodark",
+ "file_hash": "c8ba43bec714ed539256e7c6e2027c8ac579b261731554579284a3886d753a4f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:24+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "BAT48"
+  ],
+  "confidence": "high",
+  "seconds": 4.9,
+  "tokens_in": 1554,
+  "tokens_out": 38
+ }
+}

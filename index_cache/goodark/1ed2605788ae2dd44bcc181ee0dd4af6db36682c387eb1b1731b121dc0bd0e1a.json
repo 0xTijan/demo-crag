@@ -1,0 +1,21 @@
+{
+ "file": "goodark/abc817-thru-abc818_4927709c.md",
+ "supplier": "goodark",
+ "file_hash": "1ed2605788ae2dd44bcc181ee0dd4af6db36682c387eb1b1731b121dc0bd0e1a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:25+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "ABC817",
+   "ABC818"
+  ],
+  "confidence": "high",
+  "seconds": 6.81,
+  "tokens_in": 1459,
+  "tokens_out": 43
+ }
+}

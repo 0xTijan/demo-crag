@@ -1,0 +1,20 @@
+{
+ "file": "goodark/psl14_ed3d3989.md",
+ "supplier": "goodark",
+ "file_hash": "86b2186eacf222798aac6f6eb9e784662987df25f45d25c76220c757d72956c9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:58+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "PSL14"
+  ],
+  "confidence": "high",
+  "seconds": 5.11,
+  "tokens_in": 1242,
+  "tokens_out": 40
+ }
+}

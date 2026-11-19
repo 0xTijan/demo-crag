@@ -1,0 +1,20 @@
+{
+ "file": "goodark/agmn15006m_33b03107.md",
+ "supplier": "goodark",
+ "file_hash": "d30a2cd719bec3449bfd44e9490e3854bd7e99d23b80c6d12940847059aad9ec",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:23+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "AGMN15006M"
+  ],
+  "confidence": "high",
+  "seconds": 6.14,
+  "tokens_in": 1790,
+  "tokens_out": 43
+ }
+}

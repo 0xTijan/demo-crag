@@ -1,0 +1,23 @@
+{
+ "file": "goodark/ask27a-thru-ask2ba_c969bdba.md",
+ "supplier": "goodark",
+ "file_hash": "c885dc9cce22134e29368befea31ce803e72ab27a8065bfb513fae4371acb0a7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:08+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ASK27A",
+   "ASK28A",
+   "ASK29A",
+   "ASK2BA"
+  ],
+  "confidence": "high",
+  "seconds": 6.71,
+  "tokens_in": 1550,
+  "tokens_out": 57
+ }
+}

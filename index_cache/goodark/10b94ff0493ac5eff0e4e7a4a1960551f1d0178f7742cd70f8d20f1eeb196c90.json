@@ -1,0 +1,20 @@
+{
+ "file": "goodark/s9012_e5bfbef1.md",
+ "supplier": "goodark",
+ "file_hash": "10b94ff0493ac5eff0e4e7a4a1960551f1d0178f7742cd70f8d20f1eeb196c90",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:42+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "2T1"
+  ],
+  "confidence": "high",
+  "seconds": 5.78,
+  "tokens_in": 1446,
+  "tokens_out": 36
+ }
+}

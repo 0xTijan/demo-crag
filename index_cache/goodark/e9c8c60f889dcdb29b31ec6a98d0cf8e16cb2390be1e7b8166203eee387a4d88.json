@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmbta42_7e5634fe.md",
+ "supplier": "goodark",
+ "file_hash": "e9c8c60f889dcdb29b31ec6a98d0cf8e16cb2390be1e7b8166203eee387a4d88",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:48+00:00",
+  "is_datasheet": true,
+  "label": "transistor",
+  "family": false,
+  "part_numbers": [
+   "GOOD-ARK"
+  ],
+  "confidence": "high",
+  "seconds": 5.08,
+  "tokens_in": 1392,
+  "tokens_out": 35
+ }
+}

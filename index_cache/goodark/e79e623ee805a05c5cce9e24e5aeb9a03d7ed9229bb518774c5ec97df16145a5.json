@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbrf10200ct_f0e0b669.md",
+ "supplier": "goodark",
+ "file_hash": "e79e623ee805a05c5cce9e24e5aeb9a03d7ed9229bb518774c5ec97df16145a5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:59:59+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRF10200CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.7,
+  "tokens_in": 1243,
+  "tokens_out": 44
+ }
+}

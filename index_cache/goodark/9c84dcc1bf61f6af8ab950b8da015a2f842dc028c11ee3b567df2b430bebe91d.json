@@ -1,0 +1,24 @@
+{
+ "file": "goodark/mmbz52xxb_4d603dda.md",
+ "supplier": "goodark",
+ "file_hash": "9c84dcc1bf61f6af8ab950b8da015a2f842dc028c11ee3b567df2b430bebe91d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:55+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "MMBZ5221B",
+   "MMBZ5222B",
+   "MMBZ5223B",
+   "MMBZ5224B",
+   "MMBZ5225B"
+  ],
+  "confidence": "high",
+  "seconds": 5.5,
+  "tokens_in": 1726,
+  "tokens_out": 82
+ }
+}

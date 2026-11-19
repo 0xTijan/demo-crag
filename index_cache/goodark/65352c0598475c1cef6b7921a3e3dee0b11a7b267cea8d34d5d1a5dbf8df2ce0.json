@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sgp011bsl_0bec2e1a.md",
+ "supplier": "goodark",
+ "file_hash": "65352c0598475c1cef6b7921a3e3dee0b11a7b267cea8d34d5d1a5dbf8df2ce0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:21+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SGP011BSL"
+  ],
+  "confidence": "high",
+  "seconds": 5.1,
+  "tokens_in": 1141,
+  "tokens_out": 43
+ }
+}

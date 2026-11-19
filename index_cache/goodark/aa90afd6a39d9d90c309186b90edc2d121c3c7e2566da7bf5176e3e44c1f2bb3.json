@@ -1,0 +1,24 @@
+{
+ "file": "goodark/abc856-thru-abc860_1bc98c4b.md",
+ "supplier": "goodark",
+ "file_hash": "aa90afd6a39d9d90c309186b90edc2d121c3c7e2566da7bf5176e3e44c1f2bb3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:28+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": true,
+  "part_numbers": [
+   "ABC856",
+   "ABC857",
+   "ABC860",
+   "ABC858",
+   "ABC859"
+  ],
+  "confidence": "high",
+  "seconds": 6.2,
+  "tokens_in": 1519,
+  "tokens_out": 61
+ }
+}

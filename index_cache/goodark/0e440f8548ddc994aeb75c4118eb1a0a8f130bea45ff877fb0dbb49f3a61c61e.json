@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sb520-thru-sb560_4ef2e245.md",
+ "supplier": "goodark",
+ "file_hash": "0e440f8548ddc994aeb75c4118eb1a0a8f130bea45ff877fb0dbb49f3a61c61e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SB520",
+   "SB530",
+   "SB540",
+   "SB550",
+   "SB560"
+  ],
+  "confidence": "high",
+  "seconds": 6.98,
+  "tokens_in": 1530,
+  "tokens_out": 64
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ambrb40200ct_0096f526.md",
+ "supplier": "goodark",
+ "file_hash": "6c42b2fa7801c9b885b3cd049680d55b333f0d7f741abf5d7733b1430021b385",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:14+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "AMBRB40200CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.92,
+  "tokens_in": 1351,
+  "tokens_out": 45
+ }
+}

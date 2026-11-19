@@ -1,0 +1,24 @@
+{
+ "file": "goodark/fr301-thru-fr307_86964656.md",
+ "supplier": "goodark",
+ "file_hash": "ebec0ef7a44346f599ad4192c855ae0ecf571a1784afafb22e03ccffadedebfc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:06+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "FR301",
+   "FR302",
+   "FR303",
+   "FR304",
+   "FR305"
+  ],
+  "confidence": "high",
+  "seconds": 7.39,
+  "tokens_in": 1550,
+  "tokens_out": 74
+ }
+}

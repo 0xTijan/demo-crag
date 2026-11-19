@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bas20h_e833e9fc.md",
+ "supplier": "goodark",
+ "file_hash": "ae2836e81068320c6e45f9c0bc3a38e85b701e21920fce3e7f191cbfd9f0142d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:05+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "200mW SOD-323 Fast Switching Diode"
+  ],
+  "confidence": "high",
+  "seconds": 5.02,
+  "tokens_in": 1342,
+  "tokens_out": 52
+ }
+}

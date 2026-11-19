@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1smaz5913-thru-1smaz5956_b7b680b9.md",
+ "supplier": "goodark",
+ "file_hash": "67578273bb57e99a497024a6e90dcf3494e873c4ee91436fe4a6f896200123c7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:20+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "1SMAZ5913",
+   "1SMAZ5914",
+   "1SMAZ5915",
+   "1SMAZ5916",
+   "1SMAZ5917"
+  ],
+  "confidence": "high",
+  "seconds": 7.31,
+  "tokens_in": 1774,
+  "tokens_out": 82
+ }
+}

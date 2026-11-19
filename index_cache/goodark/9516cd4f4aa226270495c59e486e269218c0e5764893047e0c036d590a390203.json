@@ -1,0 +1,24 @@
+{
+ "file": "goodark/a1-5smc11a-thru-a1-5smc39ca_2f7ebe5d.md",
+ "supplier": "goodark",
+ "file_hash": "9516cd4f4aa226270495c59e486e269218c0e5764893047e0c036d590a390203",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:51+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "A1.5SMC11A",
+   "A1.5SMC12A",
+   "A1.5SMC13A",
+   "A1.5SMC15A",
+   "A1.5SMC16A"
+  ],
+  "confidence": "high",
+  "seconds": 7.51,
+  "tokens_in": 1895,
+  "tokens_out": 87
+ }
+}

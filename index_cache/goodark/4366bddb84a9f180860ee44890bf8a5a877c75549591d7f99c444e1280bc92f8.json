@@ -1,0 +1,24 @@
+{
+ "file": "goodark/a1sma4738a-thru-a1sma4771a_d080caa7.md",
+ "supplier": "goodark",
+ "file_hash": "4366bddb84a9f180860ee44890bf8a5a877c75549591d7f99c444e1280bc92f8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:57+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "A1SMA4738A",
+   "A1SMA4739A",
+   "A1SMA4740A",
+   "A1SMA4741A",
+   "A1SMA4742A"
+  ],
+  "confidence": "high",
+  "seconds": 7.84,
+  "tokens_in": 1770,
+  "tokens_out": 87
+ }
+}

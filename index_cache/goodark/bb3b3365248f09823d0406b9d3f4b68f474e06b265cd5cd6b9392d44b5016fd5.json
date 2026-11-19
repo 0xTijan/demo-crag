@@ -1,0 +1,24 @@
+{
+ "file": "goodark/asma6j10a-thru-asma6j28ca_f9a0e245.md",
+ "supplier": "goodark",
+ "file_hash": "bb3b3365248f09823d0406b9d3f4b68f474e06b265cd5cd6b9392d44b5016fd5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:32+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "ASMA6J10A",
+   "ASMA6J11A",
+   "ASMA6J12A",
+   "ASMA6J13A",
+   "ASMA6J14A"
+  ],
+  "confidence": "high",
+  "seconds": 6.43,
+  "tokens_in": 1828,
+  "tokens_out": 77
+ }
+}

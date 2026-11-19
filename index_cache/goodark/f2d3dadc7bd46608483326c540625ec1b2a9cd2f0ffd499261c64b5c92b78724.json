@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmbd7000_d10743b9.md",
+ "supplier": "goodark",
+ "file_hash": "f2d3dadc7bd46608483326c540625ec1b2a9cd2f0ffd499261c64b5c92b78724",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:33+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "M5C"
+  ],
+  "confidence": "high",
+  "seconds": 5.73,
+  "tokens_in": 1277,
+  "tokens_out": 37
+ }
+}

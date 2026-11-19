@@ -1,0 +1,24 @@
+{
+ "file": "goodark/dr200g-thru-dr210g_ec97faf1.md",
+ "supplier": "goodark",
+ "file_hash": "8d1dad797667a00096e7fdf45be14ee2910714f29103698019214cdb01e4c274",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:52+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "DR200 G",
+   "DR201 G",
+   "DR202 G",
+   "DR204 G",
+   "DR206 G"
+  ],
+  "confidence": "high",
+  "seconds": 7.17,
+  "tokens_in": 1558,
+  "tokens_out": 79
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn02304d_dfb1059c.md",
+ "supplier": "goodark",
+ "file_hash": "a99dc92abd7862f4e4c52541b906dd246b735ea7504a22860888a0ca1fe0e116",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:59+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN02304D"
+  ],
+  "confidence": "high",
+  "seconds": 5.95,
+  "tokens_in": 1764,
+  "tokens_out": 43
+ }
+}

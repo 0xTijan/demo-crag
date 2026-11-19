@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf4013h1_d4dfc988.md",
+ "supplier": "goodark",
+ "file_hash": "aba5b993df0c91af27379761c6026bb13a07e5c1fb42b32f58fa26aec97ca9a7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:34+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF4013H1"
+  ],
+  "confidence": "high",
+  "seconds": 5.73,
+  "tokens_in": 1788,
+  "tokens_out": 42
+ }
+}

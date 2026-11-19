@@ -1,0 +1,24 @@
+{
+ "file": "goodark/mf2m-thru-mf10m_9b16748e.md",
+ "supplier": "goodark",
+ "file_hash": "c2a53a7e605e4fe1dca0d10f4f78bf54641a37965fa9f17bb2bb74c8b88347e6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:24+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "MF2M",
+   "MF4M",
+   "MF6M",
+   "MF8M",
+   "MF10M"
+  ],
+  "confidence": "high",
+  "seconds": 5.35,
+  "tokens_in": 1829,
+  "tokens_out": 58
+ }
+}

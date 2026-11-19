@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbf301-thru-kbf310_f32d3c36.md",
+ "supplier": "goodark",
+ "file_hash": "2c2e82dc92f76e06dfdd0e09cc96a9ab4d4de2b6fc939ddf6b30c3c26fcc50f7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:17+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBF301",
+   "KBF302",
+   "KBF304",
+   "KBF306",
+   "KBF308"
+  ],
+  "confidence": "high",
+  "seconds": 7.81,
+  "tokens_in": 1884,
+  "tokens_out": 73
+ }
+}

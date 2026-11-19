@@ -1,0 +1,22 @@
+{
+ "file": "goodark/gbjl6j-thru-gbjl6m_00a960e6.md",
+ "supplier": "goodark",
+ "file_hash": "3d4e985277dbd3f0ba1fb295eb2d5c97e77286129e54d7adafa8df45b91137cd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:16+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJL6J",
+   "GBJL6K",
+   "GBJL6M"
+  ],
+  "confidence": "high",
+  "seconds": 6.66,
+  "tokens_in": 1657,
+  "tokens_out": 51
+ }
+}

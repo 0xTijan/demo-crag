@@ -1,0 +1,23 @@
+{
+ "file": "goodark/bas70-04-05-06_ad022b8b.md",
+ "supplier": "goodark",
+ "file_hash": "df881258cafe4ae07bfc24d09ad9363ebaa1ed733aa67cc4ec89d57f788621c1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:11+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": true,
+  "part_numbers": [
+   "BAS70",
+   "BAS70-04",
+   "BAS70-05",
+   "BAS70-06"
+  ],
+  "confidence": "high",
+  "seconds": 5.22,
+  "tokens_in": 1141,
+  "tokens_out": 65
+ }
+}

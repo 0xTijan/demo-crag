@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbu8a-thru-gbu8m_19169d9b.md",
+ "supplier": "goodark",
+ "file_hash": "51d37946993afd8b1437a40468ef74e40befd84503c49335df1d58a7e9863fcd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:00+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU8A",
+   "GBU8B",
+   "GBU8D",
+   "GBU8G",
+   "GBU8J"
+  ],
+  "confidence": "high",
+  "seconds": 8.54,
+  "tokens_in": 1934,
+  "tokens_out": 73
+ }
+}

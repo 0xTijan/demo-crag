@@ -1,0 +1,22 @@
+{
+ "file": "goodark/bas81-thru-bas83_a422dbc0.md",
+ "supplier": "goodark",
+ "file_hash": "3cb27f8d88c0506ed7e6f5d667de4bfb00578c1cf08b1677c27832ddc8f89a97",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:13+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": true,
+  "part_numbers": [
+   "BAS81",
+   "BAS82",
+   "BAS83"
+  ],
+  "confidence": "high",
+  "seconds": 5.71,
+  "tokens_in": 1469,
+  "tokens_out": 51
+ }
+}

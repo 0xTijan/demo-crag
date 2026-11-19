@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gnoa-thru-gnom_86870c7a.md",
+ "supplier": "goodark",
+ "file_hash": "3d79aa996e15dc950b39eedb3dd6f22cb712bb75b5e310f475678da404b82df8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:07+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GNOA",
+   "GNOB",
+   "GNOD",
+   "GNOG",
+   "GNOJ"
+  ],
+  "confidence": "high",
+  "seconds": 5.98,
+  "tokens_in": 1571,
+  "tokens_out": 62
+ }
+}

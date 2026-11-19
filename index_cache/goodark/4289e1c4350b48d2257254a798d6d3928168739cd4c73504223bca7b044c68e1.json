@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her301g-thru-her308g_ec72df52.md",
+ "supplier": "goodark",
+ "file_hash": "4289e1c4350b48d2257254a798d6d3928168739cd4c73504223bca7b044c68e1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:50+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER301 G",
+   "HER302 G",
+   "HER303 G",
+   "HER304 G",
+   "HER305 G"
+  ],
+  "confidence": "high",
+  "seconds": 7.15,
+  "tokens_in": 1601,
+  "tokens_out": 86
+ }
+}

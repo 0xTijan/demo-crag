@@ -1,0 +1,24 @@
+{
+ "file": "goodark/groaa-thru-groma_4b7f62b2.md",
+ "supplier": "goodark",
+ "file_hash": "8cbf435d9db8d725e2751e848f35c528fcb625150403563aeef3078ae84b56ba",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:31+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GROAA",
+   "GROBA",
+   "GRODA",
+   "GROGA",
+   "GROJA"
+  ],
+  "confidence": "high",
+  "seconds": 5.4,
+  "tokens_in": 1576,
+  "tokens_out": 67
+ }
+}

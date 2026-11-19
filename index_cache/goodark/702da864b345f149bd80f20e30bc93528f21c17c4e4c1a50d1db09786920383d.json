@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf2418e_e5b938ad.md",
+ "supplier": "goodark",
+ "file_hash": "702da864b345f149bd80f20e30bc93528f21c17c4e4c1a50d1db09786920383d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:23+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2418E"
+  ],
+  "confidence": "high",
+  "seconds": 5.76,
+  "tokens_in": 1741,
+  "tokens_out": 41
+ }
+}

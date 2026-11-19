@@ -1,0 +1,21 @@
+{
+ "file": "goodark/ps15-thru-ps16_771eab27.md",
+ "supplier": "goodark",
+ "file_hash": "97641528d0b7826ef2a478cda0f2e3e01aec1806248efc9ad24427665c08fabb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:46+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PS15",
+   "PS16"
+  ],
+  "confidence": "high",
+  "seconds": 5.71,
+  "tokens_in": 1331,
+  "tokens_out": 44
+ }
+}

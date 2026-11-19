@@ -1,0 +1,24 @@
+{
+ "file": "goodark/a3-0smcj10a-thru-a3-0smcj170ca_065d5281.md",
+ "supplier": "goodark",
+ "file_hash": "1e0bcda9ead91d2cafef99f408d831b82ec523f8ee14bd9fd053b0b8e9608d2d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:05+00:00",
+  "is_datasheet": true,
+  "label": "Transient voltage suppressor",
+  "family": true,
+  "part_numbers": [
+   "A3.0SMCJ10A",
+   "A3.0SMCJ11A",
+   "A3.0SMCJ12A",
+   "A3.0SMCJ13A",
+   "A3.0SMCJ14A"
+  ],
+  "confidence": "high",
+  "seconds": 8.6,
+  "tokens_in": 1920,
+  "tokens_out": 92
+ }
+}

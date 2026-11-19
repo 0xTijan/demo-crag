@@ -1,0 +1,24 @@
+{
+ "file": "goodark/al1n5924-thru-al1n5949_a499d5b1.md",
+ "supplier": "goodark",
+ "file_hash": "448f2eb0ec5481fff62501aea679e7c63ff5f8b4d2e0d83c95d466e16b019368",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:55+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "AL1N5924",
+   "AL1N5925",
+   "AL1N5926",
+   "AL1N5927",
+   "AL1N5928"
+  ],
+  "confidence": "high",
+  "seconds": 7.87,
+  "tokens_in": 1770,
+  "tokens_out": 86
+ }
+}

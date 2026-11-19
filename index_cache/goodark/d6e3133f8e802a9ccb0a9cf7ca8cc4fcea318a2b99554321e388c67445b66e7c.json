@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sbrb10100ct_5ae924f5.md",
+ "supplier": "goodark",
+ "file_hash": "d6e3133f8e802a9ccb0a9cf7ca8cc4fcea318a2b99554321e388c67445b66e7c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:05:15+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SBRB10100CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.74,
+  "tokens_in": 1341,
+  "tokens_out": 45
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur120_e702143d.md",
+ "supplier": "goodark",
+ "file_hash": "4e9b696f6e7dc5cced236879a703fa7e41a55b9379d6c4fe6fa391096800d407",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:20+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR120"
+  ],
+  "confidence": "high",
+  "seconds": 4.65,
+  "tokens_in": 1209,
+  "tokens_out": 41
+ }
+}

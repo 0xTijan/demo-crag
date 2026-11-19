@@ -1,0 +1,24 @@
+{
+ "file": "goodark/al1n4739-thru-al1n4764_6bde4393.md",
+ "supplier": "goodark",
+ "file_hash": "ffb56171256613791073000f22742ac3cbc292ede1ab3f366b3e66b400e6bcf4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:53+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "AL1N4739",
+   "AL1N4740",
+   "AL1N4741",
+   "AL1N4742",
+   "AL1N4743"
+  ],
+  "confidence": "high",
+  "seconds": 7.67,
+  "tokens_in": 1748,
+  "tokens_out": 86
+ }
+}

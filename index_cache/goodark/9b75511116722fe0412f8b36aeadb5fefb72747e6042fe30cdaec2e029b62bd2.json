@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her3001g-thru-her3007g_8e35d506.md",
+ "supplier": "goodark",
+ "file_hash": "9b75511116722fe0412f8b36aeadb5fefb72747e6042fe30cdaec2e029b62bd2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:46+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER3001G",
+   "HER3002G",
+   "HER3003G",
+   "HER3004G",
+   "HER3005G"
+  ],
+  "confidence": "high",
+  "seconds": 7.14,
+  "tokens_in": 1584,
+  "tokens_out": 86
+ }
+}

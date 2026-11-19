@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sk82-thru-sk86_0b936699.md",
+ "supplier": "goodark",
+ "file_hash": "11f91893395aa15e83b03efab8bd8514ca7523dab0c12ab2d525ab3cf115c54c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:23+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK82",
+   "SK83",
+   "SK84",
+   "SK85",
+   "SK86"
+  ],
+  "confidence": "high",
+  "seconds": 4.86,
+  "tokens_in": 1529,
+  "tokens_out": 59
+ }
+}

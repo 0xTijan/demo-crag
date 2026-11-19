@@ -1,0 +1,20 @@
+{
+ "file": "goodark/awss10h6_f59b1ebf.md",
+ "supplier": "goodark",
+ "file_hash": "ff56129c41450386f945a19c2b3ef4969de59b469891f793104463926529d5d2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:46+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "AWSS10H6"
+  ],
+  "confidence": "high",
+  "seconds": 5.16,
+  "tokens_in": 1246,
+  "tokens_out": 42
+ }
+}

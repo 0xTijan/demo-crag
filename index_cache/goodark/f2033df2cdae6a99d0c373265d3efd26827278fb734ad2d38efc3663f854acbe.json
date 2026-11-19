@@ -1,0 +1,20 @@
+{
+ "file": "goodark/s8050_55adfbeb.md",
+ "supplier": "goodark",
+ "file_hash": "f2033df2cdae6a99d0c373265d3efd26827278fb734ad2d38efc3663f854acbe",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:40+00:00",
+  "is_datasheet": true,
+  "label": "transistor",
+  "family": false,
+  "part_numbers": [
+   "J3Y"
+  ],
+  "confidence": "high",
+  "seconds": 6.66,
+  "tokens_in": 1434,
+  "tokens_out": 35
+ }
+}

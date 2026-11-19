@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ambr40250s_ac007996.md",
+ "supplier": "goodark",
+ "file_hash": "f51f9879f9d1c1aa17d3e501dfd1df3d80c3be0b5d76df8a8d006efc77e73c5e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:09+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "AMBR40250S"
+  ],
+  "confidence": "high",
+  "seconds": 4.82,
+  "tokens_in": 1387,
+  "tokens_out": 44
+ }
+}

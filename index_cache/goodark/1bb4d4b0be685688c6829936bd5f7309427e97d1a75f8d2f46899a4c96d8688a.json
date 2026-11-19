@@ -1,0 +1,24 @@
+{
+ "file": "goodark/lb151s-thru-lb1510s_a1468c8c.md",
+ "supplier": "goodark",
+ "file_hash": "1bb4d4b0be685688c6829936bd5f7309427e97d1a75f8d2f46899a4c96d8688a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:27+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "LB151S",
+   "LB152S",
+   "LB154S",
+   "LB156S",
+   "LB158S"
+  ],
+  "confidence": "high",
+  "seconds": 7.8,
+  "tokens_in": 1950,
+  "tokens_out": 74
+ }
+}

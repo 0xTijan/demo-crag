@@ -1,0 +1,22 @@
+{
+ "file": "goodark/ls2bh-thru-ls2ch_3d9896d8.md",
+ "supplier": "goodark",
+ "file_hash": "90a3d37fa6c173032ca01aa3d5b8e5668db2ddb4a3c40fc51c7845108c5e1de5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:53+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LS2BH",
+   "LS2B5H",
+   "LS2CH"
+  ],
+  "confidence": "high",
+  "seconds": 4.85,
+  "tokens_in": 1415,
+  "tokens_out": 51
+ }
+}

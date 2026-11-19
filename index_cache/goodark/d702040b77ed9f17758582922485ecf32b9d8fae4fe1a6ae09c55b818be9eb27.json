@@ -1,0 +1,24 @@
+{
+ "file": "goodark/hsoaa-thru-hsoma_ca59a1f4.md",
+ "supplier": "goodark",
+ "file_hash": "d702040b77ed9f17758582922485ecf32b9d8fae4fe1a6ae09c55b818be9eb27",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:07+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HSOAA",
+   "HSOBA",
+   "HSODA",
+   "HSOFA",
+   "HSOGA"
+  ],
+  "confidence": "high",
+  "seconds": 6.87,
+  "tokens_in": 1608,
+  "tokens_out": 70
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gbj20m-1200v_f4c79e92.md",
+ "supplier": "goodark",
+ "file_hash": "35a3426a7557c870eff604075fbe3a45cc5255932c9bf8800a6b336f15334653",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:42+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": false,
+  "part_numbers": [
+   "GBJ20M-1200V"
+  ],
+  "confidence": "high",
+  "seconds": 8.29,
+  "tokens_in": 1453,
+  "tokens_out": 43
+ }
+}

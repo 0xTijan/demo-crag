@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murp1560_453bf187.md",
+ "supplier": "goodark",
+ "file_hash": "91cab9e5061d3dd2af0cffdc9e0b8f86defd729f96e045c5a996242ee3312217",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:16+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURP1560"
+  ],
+  "confidence": "high",
+  "seconds": 4.84,
+  "tokens_in": 1339,
+  "tokens_out": 43
+ }
+}

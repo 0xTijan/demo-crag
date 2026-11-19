@@ -1,0 +1,21 @@
+{
+ "file": "goodark/mur440-thru-mur460_00d01155.md",
+ "supplier": "goodark",
+ "file_hash": "fe6b87b41340a0098271c20194b348c72b2076da9ed3cee6d60ce5bb459398d6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:07+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "MUR440",
+   "MUR460"
+  ],
+  "confidence": "high",
+  "seconds": 4.74,
+  "tokens_in": 1403,
+  "tokens_out": 48
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rl201-thru-rl207_60d5ee0d.md",
+ "supplier": "goodark",
+ "file_hash": "d547a753f4dfb2531a6c43c43fe0845f2c798db8a63523c15e5da67d1a6c896e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:32+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "RL201",
+   "RL202",
+   "RL203",
+   "RL204",
+   "RL205"
+  ],
+  "confidence": "high",
+  "seconds": 7.22,
+  "tokens_in": 1542,
+  "tokens_out": 74
+ }
+}

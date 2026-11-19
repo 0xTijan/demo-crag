@@ -1,0 +1,24 @@
+{
+ "file": "goodark/f1n5919-thru-f1n5956_4a664333.md",
+ "supplier": "goodark",
+ "file_hash": "654825a9af6334515468a5e59aeec7b47435a91b9cd72c400674a9354c7dbb83",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:45+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "F1N5919",
+   "F1N5920",
+   "F1N5921",
+   "F1N5922",
+   "F1N5923"
+  ],
+  "confidence": "high",
+  "seconds": 6.98,
+  "tokens_in": 1720,
+  "tokens_out": 77
+ }
+}

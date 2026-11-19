@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ambrp5100_6713f32f.md",
+ "supplier": "goodark",
+ "file_hash": "2b6f538107729276db6dc39939cc901a6409af4d0848670274afe50db2812d1e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:26+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "AMBRP5100"
+  ],
+  "confidence": "high",
+  "seconds": 4.87,
+  "tokens_in": 1258,
+  "tokens_out": 43
+ }
+}

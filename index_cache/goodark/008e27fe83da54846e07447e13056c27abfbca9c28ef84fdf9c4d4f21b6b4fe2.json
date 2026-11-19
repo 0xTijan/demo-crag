@@ -1,0 +1,22 @@
+{
+ "file": "goodark/fs32a-thru-fs34a_6e7c58c4.md",
+ "supplier": "goodark",
+ "file_hash": "008e27fe83da54846e07447e13056c27abfbca9c28ef84fdf9c4d4f21b6b4fe2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:23+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FS32A",
+   "FS33A",
+   "FS34A"
+  ],
+  "confidence": "high",
+  "seconds": 5.49,
+  "tokens_in": 1405,
+  "tokens_out": 52
+ }
+}

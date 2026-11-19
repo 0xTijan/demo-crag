@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her601g-thru-her608g_da2e615d.md",
+ "supplier": "goodark",
+ "file_hash": "22472b8904986c7b6edb3ed7af4e619c46a500bbb9e4ae990fda30034974ed2b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:54+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER601G",
+   "HER602G",
+   "HER603G",
+   "HER604G",
+   "HER605G"
+  ],
+  "confidence": "high",
+  "seconds": 7.2,
+  "tokens_in": 1612,
+  "tokens_out": 90
+ }
+}

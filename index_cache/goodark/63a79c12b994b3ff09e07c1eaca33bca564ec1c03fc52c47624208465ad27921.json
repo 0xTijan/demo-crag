@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbrd1545ct_bbfa557b.md",
+ "supplier": "goodark",
+ "file_hash": "63a79c12b994b3ff09e07c1eaca33bca564ec1c03fc52c47624208465ad27921",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:59:41+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRD1545CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.72,
+  "tokens_in": 1322,
+  "tokens_out": 43
+ }
+}

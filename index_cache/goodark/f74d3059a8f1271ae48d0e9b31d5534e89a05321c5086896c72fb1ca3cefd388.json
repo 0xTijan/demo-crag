@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ab0520w_c4daf5a1.md",
+ "supplier": "goodark",
+ "file_hash": "f74d3059a8f1271ae48d0e9b31d5534e89a05321c5086896c72fb1ca3cefd388",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:10+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "AB0520W"
+  ],
+  "confidence": "high",
+  "seconds": 7.5,
+  "tokens_in": 1264,
+  "tokens_out": 42
+ }
+}

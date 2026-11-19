@@ -1,0 +1,20 @@
+{
+ "file": "goodark/amur3065_70abffba.md",
+ "supplier": "goodark",
+ "file_hash": "6d866ee39e676fb392f22c26b5afd19846b2ce757522dd2340b24fa4f12d32b3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:31+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "AMUR3065"
+  ],
+  "confidence": "high",
+  "seconds": 5.67,
+  "tokens_in": 1327,
+  "tokens_out": 42
+ }
+}

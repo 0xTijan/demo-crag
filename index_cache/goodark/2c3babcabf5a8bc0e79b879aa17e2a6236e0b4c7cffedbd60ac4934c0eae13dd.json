@@ -1,0 +1,21 @@
+{
+ "file": "goodark/by127-thru-by133_386c5dcd.md",
+ "supplier": "goodark",
+ "file_hash": "2c3babcabf5a8bc0e79b879aa17e2a6236e0b4c7cffedbd60ac4934c0eae13dd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:03+00:00",
+  "is_datasheet": true,
+  "label": "high voltage rectifier",
+  "family": true,
+  "part_numbers": [
+   "BY127",
+   "BY133"
+  ],
+  "confidence": "high",
+  "seconds": 6.5,
+  "tokens_in": 1268,
+  "tokens_out": 44
+ }
+}

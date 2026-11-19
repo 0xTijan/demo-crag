@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf3108h1x_628cf972.md",
+ "supplier": "goodark",
+ "file_hash": "b3414a1771ef35f75e18b4c8f41cc95f15b821f86446f8793e866cd6befe93bc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:28+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF3108H1X"
+  ],
+  "confidence": "high",
+  "seconds": 6.09,
+  "tokens_in": 1837,
+  "tokens_out": 43
+ }
+}

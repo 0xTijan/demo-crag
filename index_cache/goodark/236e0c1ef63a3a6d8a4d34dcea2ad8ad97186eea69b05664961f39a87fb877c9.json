@@ -1,0 +1,22 @@
+{
+ "file": "goodark/kbjl8j-thru-kbjl8m_ba6e9162.md",
+ "supplier": "goodark",
+ "file_hash": "236e0c1ef63a3a6d8a4d34dcea2ad8ad97186eea69b05664961f39a87fb877c9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:59+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBJL8J",
+   "KBJL8K",
+   "KBJL8M"
+  ],
+  "confidence": "high",
+  "seconds": 6.47,
+  "tokens_in": 1740,
+  "tokens_out": 51
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n4933g-thru-1n4937g_62325c3d.md",
+ "supplier": "goodark",
+ "file_hash": "9c99b60e789ee07d527341386bf2d8397aad9c3e7040dbf9ef2fc0d7348834c2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:52+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "1N4933G",
+   "1N4934G",
+   "1N4935G",
+   "1N4936G",
+   "1N4937G"
+  ],
+  "confidence": "high",
+  "seconds": 6.49,
+  "tokens_in": 1578,
+  "tokens_out": 75
+ }
+}

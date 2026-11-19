@@ -1,0 +1,24 @@
+{
+ "file": "goodark/l1n4739-thru-lz1300_80e01d0a.md",
+ "supplier": "goodark",
+ "file_hash": "70398e3d67a3389a7c6767286ed76dd1f32520f56bf5801956af5d8e0cbcaaae",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:02+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "L1N4739",
+   "L1N4740",
+   "L1N4741",
+   "L1N4742",
+   "L1N4743"
+  ],
+  "confidence": "high",
+  "seconds": 6.83,
+  "tokens_in": 1712,
+  "tokens_out": 77
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/es4hdc_015e32b8.md",
+ "supplier": "goodark",
+ "file_hash": "94581584055b17217cfea7679f551e3a2653016cfab2deeecccdaa9db313a3be",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:30+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "ES4HDC"
+  ],
+  "confidence": "high",
+  "seconds": 4.39,
+  "tokens_in": 1152,
+  "tokens_out": 40
+ }
+}

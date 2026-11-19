@@ -1,0 +1,24 @@
+{
+ "file": "goodark/by251-thru-by255_47b1c8af.md",
+ "supplier": "goodark",
+ "file_hash": "943e632d5b80f804bdf56ce0652cf40afd00ba840345c08f6c0c44d9676f80d0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:05+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "BY251",
+   "BY252",
+   "BY253",
+   "BY254",
+   "BY255"
+  ],
+  "confidence": "high",
+  "seconds": 6.18,
+  "tokens_in": 1542,
+  "tokens_out": 62
+ }
+}

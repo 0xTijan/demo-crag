@@ -1,0 +1,20 @@
+{
+ "file": "goodark/asbrb3045ct_27a440ed.md",
+ "supplier": "goodark",
+ "file_hash": "c28816226eb2cab914debd912eeb94ea230823def844d1769068d3bdbd167a0e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:39+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "ASBRB3045CT"
+  ],
+  "confidence": "high",
+  "seconds": 8.71,
+  "tokens_in": 1338,
+  "tokens_out": 44
+ }
+}

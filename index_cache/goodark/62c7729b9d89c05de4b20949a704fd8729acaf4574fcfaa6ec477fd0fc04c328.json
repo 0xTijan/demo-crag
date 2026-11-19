@@ -1,0 +1,24 @@
+{
+ "file": "goodark/abzx84bxxx_f4834875.md",
+ "supplier": "goodark",
+ "file_hash": "62c7729b9d89c05de4b20949a704fd8729acaf4574fcfaa6ec477fd0fc04c328",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:33+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "ABZX84B2V4",
+   "ABZX84B2V7",
+   "ABZX84B3V0",
+   "ABZX84B3V3",
+   "ABZX84B3V6"
+  ],
+  "confidence": "high",
+  "seconds": 6.63,
+  "tokens_in": 1546,
+  "tokens_out": 82
+ }
+}

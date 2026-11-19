@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sesuc3v3d0603psn-2b_eaec3a14.md",
+ "supplier": "goodark",
+ "file_hash": "d750a00332ea1b88e400e685a2225bf8b9e4e0338126ed9722946d4e91a6b7de",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:22+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": false,
+  "part_numbers": [
+   "SESUC3V3D0603PSN-2B"
+  ],
+  "confidence": "high",
+  "seconds": 6.66,
+  "tokens_in": 1529,
+  "tokens_out": 49
+ }
+}

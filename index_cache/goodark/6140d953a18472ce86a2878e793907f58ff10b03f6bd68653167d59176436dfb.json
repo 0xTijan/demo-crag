@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bat85_e7100d40.md",
+ "supplier": "goodark",
+ "file_hash": "6140d953a18472ce86a2878e793907f58ff10b03f6bd68653167d59176436dfb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:33+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "BAT85"
+  ],
+  "confidence": "high",
+  "seconds": 4.93,
+  "tokens_in": 1309,
+  "tokens_out": 38
+ }
+}

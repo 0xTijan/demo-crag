@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ses24vt23-3b_d7b2d519.md",
+ "supplier": "goodark",
+ "file_hash": "804dc8fe913c470dc7f04ba6238ebb25a8ae47a50c18d7ec05b69be22f6be390",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:03+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "CB2"
+  ],
+  "confidence": "high",
+  "seconds": 4.88,
+  "tokens_in": 1226,
+  "tokens_out": 37
+ }
+}

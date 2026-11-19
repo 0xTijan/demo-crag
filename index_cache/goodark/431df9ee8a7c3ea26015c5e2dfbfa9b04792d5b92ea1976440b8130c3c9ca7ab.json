@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmbta43_4b60f438.md",
+ "supplier": "goodark",
+ "file_hash": "431df9ee8a7c3ea26015c5e2dfbfa9b04792d5b92ea1976440b8130c3c9ca7ab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:50+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBTA43"
+  ],
+  "confidence": "high",
+  "seconds": 5.07,
+  "tokens_in": 1467,
+  "tokens_out": 38
+ }
+}

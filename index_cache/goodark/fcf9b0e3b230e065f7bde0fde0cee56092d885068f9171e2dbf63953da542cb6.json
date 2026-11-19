@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf2301p_df4ba3f0.md",
+ "supplier": "goodark",
+ "file_hash": "fcf9b0e3b230e065f7bde0fde0cee56092d885068f9171e2dbf63953da542cb6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:18+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2301P"
+  ],
+  "confidence": "high",
+  "seconds": 5.71,
+  "tokens_in": 1780,
+  "tokens_out": 41
+ }
+}

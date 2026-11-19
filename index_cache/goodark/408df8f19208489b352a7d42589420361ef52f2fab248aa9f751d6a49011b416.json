@@ -1,0 +1,23 @@
+{
+ "file": "goodark/sgpd520s-thru-sgpd560s_72b23fa8.md",
+ "supplier": "goodark",
+ "file_hash": "408df8f19208489b352a7d42589420361ef52f2fab248aa9f751d6a49011b416",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:34+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGPD520S",
+   "SGPD530S",
+   "SGPD540S",
+   "SGPD560S"
+  ],
+  "confidence": "high",
+  "seconds": 6.18,
+  "tokens_in": 1593,
+  "tokens_out": 66
+ }
+}

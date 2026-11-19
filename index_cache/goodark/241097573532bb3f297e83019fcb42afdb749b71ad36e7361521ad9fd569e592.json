@@ -1,0 +1,24 @@
+{
+ "file": "goodark/a1-5smbz9-1a-thru-a1-5smbz100a_332c0661.md",
+ "supplier": "goodark",
+ "file_hash": "241097573532bb3f297e83019fcb42afdb749b71ad36e7361521ad9fd569e592",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:49+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "A1.5SMBZ9.1A",
+   "A1.5SMBZ10A",
+   "A1.5SMBZ11A",
+   "A1.5SMBZ12A",
+   "A1.5SMBZ13A"
+  ],
+  "confidence": "high",
+  "seconds": 7.14,
+  "tokens_in": 1794,
+  "tokens_out": 105
+ }
+}

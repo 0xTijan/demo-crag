@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf3400k_f2c3ba44.md",
+ "supplier": "goodark",
+ "file_hash": "f60cc31d5724fea4110babe69525109f11ebca3d8e61e11eb752e054c028a501",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GOOD-ARK"
+  ],
+  "confidence": "high",
+  "seconds": 5.74,
+  "tokens_in": 1707,
+  "tokens_out": 38
+ }
+}

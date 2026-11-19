@@ -1,0 +1,22 @@
+{
+ "file": "goodark/sl52a-thru-sl54a_bb64f0d3.md",
+ "supplier": "goodark",
+ "file_hash": "078c8690720f7ce4eec61924b077ac409c01822993d0bffbc58e0dcdad15af63",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:45+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL52A",
+   "SL53A",
+   "SL54A"
+  ],
+  "confidence": "high",
+  "seconds": 6.64,
+  "tokens_in": 1415,
+  "tokens_out": 52
+ }
+}

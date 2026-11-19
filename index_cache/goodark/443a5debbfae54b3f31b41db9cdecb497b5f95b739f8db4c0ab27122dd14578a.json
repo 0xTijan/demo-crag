@@ -1,0 +1,24 @@
+{
+ "file": "goodark/p1a-thru-p7a_6b340b7d.md",
+ "supplier": "goodark",
+ "file_hash": "443a5debbfae54b3f31b41db9cdecb497b5f95b739f8db4c0ab27122dd14578a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:30+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "P1A",
+   "P2A",
+   "P3A",
+   "P4A",
+   "P5A"
+  ],
+  "confidence": "high",
+  "seconds": 5.82,
+  "tokens_in": 1545,
+  "tokens_out": 65
+ }
+}

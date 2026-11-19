@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ambrd1045ct_f70759cc.md",
+ "supplier": "goodark",
+ "file_hash": "69a457679f9a6a8333b75acee44112aab5d74a7a3e0eb2b4a42dc977d7a9dab0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:16+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "AMBRD1045CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.9,
+  "tokens_in": 1322,
+  "tokens_out": 44
+ }
+}

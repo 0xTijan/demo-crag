@@ -1,0 +1,24 @@
+{
+ "file": "goodark/mb22s-thru-mb210s_3ba02d60.md",
+ "supplier": "goodark",
+ "file_hash": "5f244002f47cb71d0eb18c0c7fbb76c026eb6e141efbc34d1f195560be53cd54",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:22+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "MB22S",
+   "MB24S",
+   "MB26S",
+   "MB28S",
+   "MB210S"
+  ],
+  "confidence": "high",
+  "seconds": 6.11,
+  "tokens_in": 1703,
+  "tokens_out": 63
+ }
+}

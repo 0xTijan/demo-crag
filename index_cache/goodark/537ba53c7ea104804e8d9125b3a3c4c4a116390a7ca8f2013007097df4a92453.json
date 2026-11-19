@@ -1,0 +1,24 @@
+{
+ "file": "goodark/db103-thru-db107_64ed28b9.md",
+ "supplier": "goodark",
+ "file_hash": "537ba53c7ea104804e8d9125b3a3c4c4a116390a7ca8f2013007097df4a92453",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:30+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DB103",
+   "DB104",
+   "DB105",
+   "DB106",
+   "DB107"
+  ],
+  "confidence": "high",
+  "seconds": 7.52,
+  "tokens_in": 1825,
+  "tokens_out": 61
+ }
+}

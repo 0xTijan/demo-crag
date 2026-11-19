@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbj50a-thru-gbj50m_2334bea3.md",
+ "supplier": "goodark",
+ "file_hash": "c22e97ce7fd9a78af7b9be1659893cd4532c1fa1ce1df6490d7845ced427921e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:51+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJ50A",
+   "GBJ50B",
+   "GBJ50D",
+   "GBJ50G",
+   "GBJ50J"
+  ],
+  "confidence": "high",
+  "seconds": 8.97,
+  "tokens_in": 2081,
+  "tokens_out": 79
+ }
+}

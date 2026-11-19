@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her151-thru-her158_fcfecd0a.md",
+ "supplier": "goodark",
+ "file_hash": "69587f309dce2354b4b0198bf5598bc8f7974ce6b3284cb5e02a4233d20c66bd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:33+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER151",
+   "HER152",
+   "HER153",
+   "HER154",
+   "HER155"
+  ],
+  "confidence": "high",
+  "seconds": 7.73,
+  "tokens_in": 1596,
+  "tokens_out": 78
+ }
+}

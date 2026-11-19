@@ -1,0 +1,20 @@
+{
+ "file": "goodark/rb411d_67489cc1.md",
+ "supplier": "goodark",
+ "file_hash": "859bf15938cc144ff683aa1b811a748b03ca51a3e23d82770f7f906a6ecdda5d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:11+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "D3E"
+  ],
+  "confidence": "high",
+  "seconds": 6.11,
+  "tokens_in": 1168,
+  "tokens_out": 39
+ }
+}

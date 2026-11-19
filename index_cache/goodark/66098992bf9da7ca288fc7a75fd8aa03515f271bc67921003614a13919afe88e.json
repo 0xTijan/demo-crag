@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbrf40250s_2cbe98a5.md",
+ "supplier": "goodark",
+ "file_hash": "66098992bf9da7ca288fc7a75fd8aa03515f271bc67921003614a13919afe88e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:17+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRF40250S"
+  ],
+  "confidence": "high",
+  "seconds": 4.69,
+  "tokens_in": 1343,
+  "tokens_out": 44
+ }
+}

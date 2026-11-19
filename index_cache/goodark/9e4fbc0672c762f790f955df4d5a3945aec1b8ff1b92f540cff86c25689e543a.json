@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murd520_c144f196.md",
+ "supplier": "goodark",
+ "file_hash": "9e4fbc0672c762f790f955df4d5a3945aec1b8ff1b92f540cff86c25689e543a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:07+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURD520"
+  ],
+  "confidence": "high",
+  "seconds": 5.07,
+  "tokens_in": 1327,
+  "tokens_out": 42
+ }
+}

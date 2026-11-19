@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur2040st_a5823563.md",
+ "supplier": "goodark",
+ "file_hash": "ca70b92a87e2048aa6ec2d78202af30398b02ffa914d16dd81aaf44df6bb27a0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:46+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR2040ST"
+  ],
+  "confidence": "high",
+  "seconds": 5.12,
+  "tokens_in": 1326,
+  "tokens_out": 43
+ }
+}
