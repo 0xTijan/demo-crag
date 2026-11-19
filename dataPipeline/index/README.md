@@ -1,4 +1,4 @@
-# Indexing step 0: classify every datasheet by component type
+# Indexing: classify datasheets by type (Step 0) and draft spec lists per type
 
 Plan v1 ([`parts_alternatives_plan.md`](../../parts_alternatives_plan.md), section 2, "Step 0") needs, before
 any spec lists are written, **which component types exist and how many datasheets each has**. This step
@@ -12,6 +12,103 @@ datasheets/<supplier>/**/*.pdf ──convert──► markdowns/<supplier>/**/*.
 2. group   LLM → labels merged into types  ──► index_cache/type_list.yaml   ← you check and edit this once
 3. report  type list applied                ──► `type` in every cache file, counts per type, type_report.csv
 ```
+
+## Command reference
+
+All commands run from the repository root. Every command copies its output to `logs/index_<command>_<time>.log`,
+and `-h` / `--help` shows its options.
+
+| Command | What it does | LLM |
+|---|---|---|
+| `python -m dataPipeline.index.classify run` | Type label for every datasheet not classified yet → `index_cache/<supplier>/<hash>.json` | 1 call per datasheet |
+| `python -m dataPipeline.index.classify group` | Merges new labels into types → `index_cache/type_list.yaml` | 1 call per 120 new labels |
+| `python -m dataPipeline.index.classify report` | Applies `type_list.yaml`: `type` in every cache file, counts per type, `type_report.csv` | none |
+| `python -m dataPipeline.index.spec_lists list` | Types, datasheet counts and spec-list status | none |
+| `python -m dataPipeline.index.spec_lists draft …` | Drafts spec lists → `spec_lists/<type>.yaml` | ~10 per type + 1 merge |
+| `python -m dataPipeline.index.spec_lists check …` | Validates spec lists after editing | none |
+
+### `classify run`
+
+| Option | Default | Meaning |
+|---|---|---|
+| `--input DIR` | `markdowns/` | Folder with `<supplier>/**/*.md`; the supplier is the first folder name |
+| `--supplier A B …` | all | Only these supplier folders |
+| `--workers N` | 1 | Parallel requests. Ollama serves them in parallel only with `OLLAMA_NUM_PARALLEL=N` set on the server |
+| `--limit N` | – | Classify at most N datasheets (the speed pilot) |
+| `--pages N` | 2 | Pages read per datasheet (by the converter's `<!-- page: N -->` markers) |
+| `--max-chars N` | 12000 | Characters sent per datasheet (about 3k tokens) |
+| `--force` | off | Classify again, also datasheets already classified |
+| `-v`, `--verbose` | off | Print every result |
+
+Already classified datasheets (same file hash, same `CLASSIFIER_VERSION`) are skipped, so a rerun resumes.
+Exit code 1 if any datasheet failed (it is retried by the next run).
+
+### `classify group`
+
+| Option | Default | Meaning |
+|---|---|---|
+| `--input DIR` | `markdowns/` | As for `run` |
+| `--supplier A B …` | all | Only labels of these supplier folders |
+| `--chunk N` | 120 | Labels per LLM call |
+
+Only labels not yet in `type_list.yaml` go to the LLM; your edits are kept.
+
+### `classify report`
+
+| Option | Default | Meaning |
+|---|---|---|
+| `--input DIR` | `markdowns/` | As for `run` |
+| `--supplier A B …` | all | Only these supplier folders |
+
+Run it after every edit of `type_list.yaml`. It recounts and rewrites the `datasheets` numbers, so you never
+edit those by hand. When `group` or `report` rewrite `type_list.yaml`, they keep only `name`, `datasheets`
+and `labels` of each type: your own comments, extra fields and ordering are not kept (types are sorted by count).
+
+### `spec_lists list`
+
+No options. Prints every type of `type_list.yaml` (except `_…` keys) with its datasheet count and its spec list:
+`-`, or `draft v1, 41 specs`, `reviewed v3, …`, and `(+ new draft)` when a `<type>.draft.yaml` exists.
+
+### `spec_lists draft [TYPE …]`
+
+| Option | Default | Meaning |
+|---|---|---|
+| `TYPE …` | – | Type keys from `type_list.yaml` to draft |
+| `--top N` | – | Also the N types with the most datasheets that have no spec list yet |
+| `--all` | off | Every type that has no spec list yet. Rerun the same command to resume after Ctrl+C or a crash |
+| `--min-datasheets N` | 3 | With `--top` / `--all`: skip types with fewer datasheets (too few samples) |
+| `--samples N` | 10 | Sample datasheets per type (spread over suppliers, families and single parts) |
+| `--min-share X` | 0.5 | Keep specs found in at least this share of the samples ("in common"); lower it for more specs. The rest go to `rare_specs` |
+| `--max-chars N` | 24000 | Characters of spec pages sent per sample (page 1 + pages with tables, without tape/reel, soldering, curves) |
+| `--workers N` | 1 | Parallel inventory requests (`OLLAMA_NUM_PARALLEL=N` on the server) |
+| `--input DIR` | `markdowns/` | Folder with `<supplier>/**/*.md` |
+| `--supplier A B …` | all | Only take samples from these supplier folders |
+| `--force` | off | Replace an existing **draft** (and with `--top` / `--all`, redo types that have one). A reviewed list is never replaced: a new draft goes to `<type>.draft.yaml` |
+| `--force-inventory` | off | List the samples' specs again instead of using the inventory cached in the index cache |
+| `-v`, `--verbose` | off | Print every sample (number of specs listed, seconds, or "cached") |
+
+Exit code 1 if any type got no draft.
+
+### `spec_lists check [TYPE …]`
+
+| Option | Default | Meaning |
+|---|---|---|
+| `TYPE …` | all | Only `spec_lists/<type>.yaml` of these types. Without types: every `spec_lists/*.yaml` except `*.draft.yaml` |
+| `-v`, `--verbose` | off | Print every spec: key, rule, unit, critical, found_in |
+
+Errors (exit code 1): missing `type` / `name`, `version` not a whole number ≥ 1, `status` not draft or
+reviewed, empty `specs`, keys not in snake_case (with at most one `@condition`), unknown `rule` or `stat`,
+`critical` not true/false, `must_match` keys that are not in `specs`, file name not matching `type`.
+Notes (no error): numeric rule without a unit, no critical spec, every spec `info`, type not in `type_list.yaml`.
+
+### Settings outside the command line
+
+| Setting | Where | Default |
+|---|---|---|
+| Models and their options (temperature, `num_ctx`) | `config.json`: `datasheetClassifierModel`, `typeGroupingModel`, `specInventoryModel`, `specListModel` | `qwen3:30b-a3b` |
+| Parallel requests on the server | `OLLAMA_NUM_PARALLEL` environment variable of the Ollama server | 1 |
+| Re-run every classification / inventory after a prompt change | `CLASSIFIER_VERSION` in `classify.py`, `INVENTORY_VERSION` in `spec_lists.py` | `"1"` |
+| Index cache and spec-list folders | `CACHE_DIR` in `common.py`, `SPEC_LIST_DIR` in `spec_lists.py` | `index_cache/`, `spec_lists/` |
 
 ## Running it
 
@@ -32,17 +129,7 @@ python -m dataPipeline.index.classify group               # merge labels into ty
 python -m dataPipeline.index.classify report              # counts per type -> pick the first ~10 types
 ```
 
-| Option | Command | Default | Meaning |
-|---|---|---|---|
-| `--input DIR` | all | `markdowns/` | Folder with `<supplier>/**/*.md`; the supplier is the first folder name |
-| `--supplier A B` | all | all | Only these supplier folders |
-| `--workers N` | run | 1 | Parallel requests. Ollama serves them in parallel only with `OLLAMA_NUM_PARALLEL=N` set on the server |
-| `--limit N` | run | — | Classify at most N datasheets (the speed pilot) |
-| `--pages N` | run | 2 | Pages read per datasheet (by the converter's `<!-- page: N -->` markers) |
-| `--max-chars N` | run | 12000 | Characters sent per datasheet (about 3k tokens) |
-| `--force` | run | off | Classify again, also files already classified |
-| `-v` | run | off | Print every result |
-| `--chunk N` | group | 120 | Labels per grouping call |
+All options: [Command reference](#command-reference).
 
 ## What each step does
 
@@ -132,16 +219,7 @@ index_cache (type from `report`)
 spec_lists/<type>.yaml  (status: draft)  ← you review it, set status: reviewed, run `check`
 ```
 
-| Option (`draft`) | Default | Meaning |
-|---|---|---|
-| `types` / `--top N` / `--all` | – | Type keys from `type_list.yaml`; and/or the N types with the most datasheets; or every type. `--top` and `--all` skip types that already have a spec list, so a rerun after Ctrl+C or a crash continues where it stopped |
-| `--min-datasheets N` | 3 | With `--top` / `--all`: skip types with fewer datasheets (too few samples for a useful list) |
-| `--samples N` | 10 | Sample datasheets per type |
-| `--min-share X` | 0.5 | Keep specs found in at least this share of the samples ("in common"); lower it for more specs |
-| `--max-chars N` | 24000 | Characters of spec pages sent per sample (page 1 + pages with tables, without tape/reel, soldering, curves) |
-| `--workers N` | 1 | Parallel inventory requests (`OLLAMA_NUM_PARALLEL` on the server) |
-| `--force` | off | Replace an existing **draft**. A reviewed list is never replaced: a new draft goes to `<type>.draft.yaml` |
-| `--force-inventory` | off | List the samples' specs again instead of using the cached inventory |
+All options: [`spec_lists draft`](#spec_lists-draft-type-).
 
 What to check when reviewing a draft:
 - **rule** of each spec: `>=` for ratings, `<=` for on-resistance/leakage/tolerance, `≈` for nominal values
