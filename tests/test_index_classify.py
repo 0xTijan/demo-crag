@@ -148,6 +148,47 @@ def test_group_and_report_build_a_type_list_and_counts():
     assert any(common.read_cache(p)["type"] == "interface_ic" for p in common.CACHE_DIR.rglob("*.json"))
 
 
+class FakeShortClassifier:
+    """Answers "rectifier" (one word) first; "standard rectifier" when told the type is one word."""
+    model = "fake"
+
+    def __init__(self, stubborn=False):
+        self.calls, self.stubborn = [], stubborn
+
+    def __call__(self, system, user):
+        self.calls.append(user)
+        two = "only one word" in user and not self.stubborn
+        return LLMAnswer({"type": "standard rectifier" if two else "Rectifier"}, 0.5, 1000, 40)
+
+
+def test_one_word_type_is_asked_again_once():
+    r = cl.classify("<!-- page: 1 -->\n1N4007 rectifier", llm := FakeShortClassifier())
+    assert r["label"] == "standard rectifier" and r["asked_again"] and len(llm.calls) == 2
+    assert r["tokens_in"] == 2000                                # both requests counted
+    r = cl.classify("<!-- page: 1 -->\n1N4007 rectifier", llm := FakeShortClassifier(stubborn=True))
+    assert r["label"] == "Rectifier" and r["asked_again"] and len(llm.calls) == 2
+    assert cl.classify(DOCS["goodark/2n7000.md"], FakeClassifier())["asked_again"] is False
+
+    # a cache entry from before the rule (one-word label, never asked again) is classified again, once
+    old = {"version": cl.CLASSIFIER_VERSION, "is_datasheet": True, "label": "rectifier"}
+    assert cl.needs_classification(old)
+    assert not cl.needs_classification(dict(old, asked_again=True))
+    assert not cl.needs_classification(dict(old, label="standard rectifier"))
+    assert not cl.needs_classification(dict(old, is_datasheet=False))
+
+    md = setup_dirs()
+    (md / "goodark" / "1n4007.md").write_text("<!-- page: 1 -->\n1N4007 rectifier", encoding="utf-8")
+    cl.cmd_run(run_args(md), FakeShortClassifier(stubborn=True))
+    llm = FakeShortClassifier(stubborn=True)
+    assert cl.cmd_run(run_args(md), llm) == 0 and llm.calls == []  # asked again already: not repeated
+
+
+def test_one_word_types_are_reported():
+    types = {"rectifier": {"name": "rectifier"}, "mosfet_n": {"name": "N-channel MOSFET"},
+             "fuse_type": {"name": "Fuse"}, cl.NOT_DATASHEET: {"name": "x"}}
+    assert cl.one_word_types(types) == ["rectifier", "fuse_type"]
+
+
 def test_normalise_label_merges_spelling_variants():
     assert cl.normalise_label(" N-Channel  MOSFETs ") == cl.normalise_label("n-channel mosfet")
     assert cl.normalise_label("Schottky diodes") == "schottky diode"

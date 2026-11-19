@@ -44,9 +44,12 @@ The first types to support can only be chosen once it's known which types exist 
 each has.
 
 1. **Quick classification of all ~10k datasheets:** the LLM reads only the first 1–2 pages and returns a
-   free-text type ("N-channel MOSFET", "MLCC", "Schottky diode"). Short calls; runs overnight.
+   free-text type ("N-channel MOSFET", "multilayer ceramic capacitor", "Schottky diode"). Short calls; runs
+   overnight. A type always has **at least two words**, the kind and what sets it apart: "standard rectifier",
+   not "rectifier"; "N-channel MOSFET", not "MOSFET". A one-word answer is asked again once.
 2. **Group the labels:** the LLM merges synonyms ("MLCC", "multilayer ceramic capacitor", "SMD ceramic cap"
-   → `mlcc`) into one type list. You check the list once.
+   → `ceramic_capacitor_mlcc`) into one type list. Keys and names have at least two words too (`standard_rectifier`); the
+   tools list any one-word type so it can be renamed. You check the list once.
 3. **Count datasheets per type** and pick the first ~10. Later the choice is made by request volume,
    once that data exists.
 

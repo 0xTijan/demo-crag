@@ -36,6 +36,8 @@ CLASSIFIER_VERSION = "1"   # bump when the prompt or the input changes in a way 
 CLASSIFY_PROMPT = (Path(__file__).parent / "prompts" / "classify.txt").read_text(encoding="utf-8")
 GROUP_PROMPT = (Path(__file__).parent / "prompts" / "group.txt").read_text(encoding="utf-8")
 TYPE_LIST = CACHE_DIR / "type_list.yaml"
+ONE_WORD_HINT = ("\n\nNote: \"{label}\" is only one word. The type must have at least two words: the kind "
+                 "and what sets it apart, e.g. \"standard rectifier\" instead of \"rectifier\".")
 NOT_DATASHEET = "_not_a_datasheet"   # type key for documents the classifier says are not datasheets
 UNCLASSIFIED = "_unclassified"       # labels not (yet) in the type list
 DEFAULT_MODEL = "qwen3:30b-a3b"
@@ -47,9 +49,21 @@ def classify(markdown: str, llm, pages: int = 2, max_chars: int = 12000) -> dict
     """classify(markdown) -> {is_datasheet, label, family, part_numbers, confidence, ...} (plan rule 3).
 
     `llm(system, user)` returns an LLMAnswer; Ollama in production, a fake in tests."""
-    answer = llm(CLASSIFY_PROMPT, first_pages(markdown, pages, max_chars))
+    text = first_pages(markdown, pages, max_chars)
+    answer = llm(CLASSIFY_PROMPT, text)
     d = answer.data
     label = " ".join(str(d.get("type") or "").split())[:120]
+    seconds, tokens_in, tokens_out = answer.seconds, answer.tokens_in, answer.tokens_out
+    asked_again = False
+    if d.get("is_datasheet") is not False and label and one_word(label):
+        # the type must name the kind and what sets it apart ("standard rectifier", not "rectifier")
+        asked_again = True
+        again = llm(CLASSIFY_PROMPT, text + ONE_WORD_HINT.format(label=label))
+        seconds, tokens_in, tokens_out = (seconds + again.seconds, tokens_in + again.tokens_in,
+                                          tokens_out + again.tokens_out)
+        label2 = " ".join(str(again.data.get("type") or "").split())[:120]
+        if label2 and not one_word(label2):
+            d, label = again.data, label2
     confidence = str(d.get("confidence") or "").lower()
     parts = d.get("part_numbers") or []
     return {
@@ -58,10 +72,38 @@ def classify(markdown: str, llm, pages: int = 2, max_chars: int = 12000) -> dict
         "family": bool(d.get("family")),
         "part_numbers": [str(p)[:60] for p in parts[:5]] if isinstance(parts, list) else [],
         "confidence": confidence if confidence in CONFIDENCE else "low",
-        "seconds": round(answer.seconds, 2),
-        "tokens_in": answer.tokens_in,
-        "tokens_out": answer.tokens_out,
+        "asked_again": asked_again,
+        "seconds": round(seconds, 2),
+        "tokens_in": tokens_in,
+        "tokens_out": tokens_out,
     }
+
+
+def one_word(text: str) -> bool:
+    """A type label, name or key with fewer than two words ("rectifier", "MOSFET", "varistor")."""
+    return len([w for w in re.split(r"[\s_]+", text) if w]) < 2
+
+
+def needs_classification(c: dict) -> bool:
+    """Not classified yet, classified by an older classifier version, or with a one-word type
+    that was not yet asked again (classifications made before the two-word rule)."""
+    if c.get("version") != CLASSIFIER_VERSION:
+        return True
+    return bool(c.get("is_datasheet", True) and c.get("label") and one_word(c["label"])
+                and not c.get("asked_again"))
+
+
+def one_word_types(types: dict) -> list[str]:
+    """Type keys whose key or name is a single word; they should be renamed (see type_list.yaml)."""
+    return [k for k, t in types.items()
+            if not k.startswith("_") and (one_word(k) or one_word(str(t.get("name") or k)))]
+
+
+def warn_one_word_types(types: dict) -> None:
+    short = one_word_types(types)
+    if short:
+        print(f"\n{len(short)} type(s) have a one-word key or name; a type needs at least two words "
+              f"(standard_rectifier, not rectifier). Rename them in {TYPE_LIST.name}: " + ", ".join(short))
 
 
 def normalise_label(label: str) -> str:
@@ -77,7 +119,7 @@ def cmd_run(args, llm=None) -> int:
         print(f"No markdown datasheets in {args.input}/<supplier>/... (use --input)")
         return 1
     todo = [d for d in datasheets
-            if args.force or read_cache(d.cache_path).get("classification", {}).get("version") != CLASSIFIER_VERSION]
+            if args.force or needs_classification(read_cache(d.cache_path).get("classification", {}))]
     already = len(datasheets) - len(todo)
     if args.limit:
         todo = todo[:args.limit]
@@ -253,6 +295,7 @@ def cmd_group(args, llm=None) -> int:
     if NOT_DATASHEET in counts:
         types.setdefault(NOT_DATASHEET, {"name": "Not a datasheet (application note, brochure, ...)", "labels": []})
     save_type_list(types, type_counts(counts, label_index(types)))
+    warn_one_word_types(types)
     print(f"Wrote {TYPE_LIST} with {len(types)} types. Check and edit it, then run: "
           f"python -m dataPipeline.index.classify report")
     return 0
@@ -312,6 +355,7 @@ def cmd_report(args) -> int:
         w.writerows(sorted(rows))
     print(f"\nPer datasheet: {out}")
     save_type_list(types, per_type)  # refresh the counts in the YAML
+    warn_one_word_types(types)
     return 0
 
 

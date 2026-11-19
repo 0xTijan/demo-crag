@@ -41,6 +41,8 @@ and `-h` / `--help` shows its options.
 | `-v`, `--verbose` | off | Print every result |
 
 Already classified datasheets (same file hash, same `CLASSIFIER_VERSION`) are skipped, so a rerun resumes.
+Exception: a datasheet whose saved type is one word ("rectifier") and was never asked again is classified
+again (see "Types have at least two words" below).
 Exit code 1 if any datasheet failed (it is retried by the next run).
 
 ### `classify group`
@@ -148,6 +150,12 @@ All options: [Command reference](#command-reference).
   A changed markdown has a new file hash, so it is classified again. So the run can be stopped at any
   time and resumed, and the two-weekly run only classifies new or changed datasheets.
 - A failed call (model error, invalid JSON) is printed and skipped; the next run tries it again.
+- **Types have at least two words**: the kind and what sets it apart, "standard rectifier" or "fast recovery
+  rectifier", not "rectifier"; "N-channel MOSFET", not "MOSFET". The prompt says so; if the model still
+  answers one word, it is asked once more with a note (2 calls for that datasheet, both counted in the
+  tokens). If the second answer is again one word, the first one is kept with `asked_again: true` and the
+  datasheet is not asked again on later runs. Datasheets classified before this rule with a one-word type
+  are classified again by the next `run`, once.
 - At the end it prints the measured speed: seconds per datasheet with the chosen workers, seconds, input
   and output tokens per request, and an estimate for all datasheets at that speed (the plan's pilot, section 8).
 
@@ -158,7 +166,8 @@ All options: [Command reference](#command-reference).
 - Labels already in `type_list.yaml` are kept as they are; **only new labels go to the LLM**, 120 per call,
   together with the existing types, so keys stay consistent across calls and later runs. The prompt is
   [`prompts/group.txt`](prompts/group.txt): merge synonyms, keep apart what engineers would not swap
-  (N- vs P-channel MOSFET, Schottky vs TVS…), snake_case keys like `mosfet_n`, `mlcc`.
+  (N- vs P-channel MOSFET, Schottky vs TVS…), snake_case keys like `mosfet_n`, `schottky_diode`.
+  Keys and names have at least two words (`standard_rectifier`, not `rectifier`).
 - Labels the LLM leaves out are asked again once; still missing ones get a type of their own (to merge by hand).
 - Documents marked "not a datasheet" go to `_not_a_datasheet`, without an LLM call.
 
@@ -185,6 +194,8 @@ only a count. Rerunning `group` never changes what you edited; it only adds new 
   list to use.
 - Prints datasheets, families and suppliers per type, sorted by count, and lists labels that are not in the
   type list yet (`_unclassified`). Per-datasheet results: `index_cache/type_report.csv`.
+- `group` and `report` list the types whose key or name is a single word; rename those in
+  `type_list.yaml` (e.g. `rectifier` → `standard_rectifier`, name "standard rectifier").
 - Use the counts to pick the first ~10 types for spec lists (plan decision 9: the types with the most datasheets).
 
 ```
