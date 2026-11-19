@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbr40250ct_cde6be56.md",
+ "supplier": "goodark",
+ "file_hash": "23e08fd08dfed162e665d6fc9776677d56593a4a5dd172693179314a39144687",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:59:03+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBR40250CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.96,
+  "tokens_in": 1324,
+  "tokens_out": 44
+ }
+}

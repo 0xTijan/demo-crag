@@ -1,0 +1,23 @@
+{
+ "file": "goodark/sk17-thru-sk1b_525d8f84.md",
+ "supplier": "goodark",
+ "file_hash": "6b5a3c1a1d2329f1b15fcfc755a373969b172b81fb1e940135ad8e3f0e1072f6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:38+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK17",
+   "SK18",
+   "SK19",
+   "SK1B"
+  ],
+  "confidence": "high",
+  "seconds": 6.68,
+  "tokens_in": 1515,
+  "tokens_out": 54
+ }
+}

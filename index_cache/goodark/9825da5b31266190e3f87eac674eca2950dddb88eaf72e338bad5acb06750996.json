@@ -1,0 +1,23 @@
+{
+ "file": "goodark/ps32-thru-ps345_4f019189.md",
+ "supplier": "goodark",
+ "file_hash": "9825da5b31266190e3f87eac674eca2950dddb88eaf72e338bad5acb06750996",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:54+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PS32",
+   "PS33",
+   "PS34",
+   "PS345"
+  ],
+  "confidence": "high",
+  "seconds": 5.3,
+  "tokens_in": 1552,
+  "tokens_out": 55
+ }
+}

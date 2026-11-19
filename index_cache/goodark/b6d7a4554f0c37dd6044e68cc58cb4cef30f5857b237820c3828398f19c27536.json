@@ -1,0 +1,20 @@
+{
+ "file": "goodark/m8050_a3807516.md",
+ "supplier": "goodark",
+ "file_hash": "b6d7a4554f0c37dd6044e68cc58cb4cef30f5857b237820c3828398f19c27536",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:17+00:00",
+  "is_datasheet": true,
+  "label": "transistor",
+  "family": false,
+  "part_numbers": [
+   "Y11"
+  ],
+  "confidence": "high",
+  "seconds": 5.1,
+  "tokens_in": 1410,
+  "tokens_out": 35
+ }
+}

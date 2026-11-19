@@ -1,0 +1,24 @@
+{
+ "file": "goodark/agn1aq-thru-agn1mq_2428b8ff.md",
+ "supplier": "goodark",
+ "file_hash": "863077cae04039fec6e698f9a22e0959f35733305074c29dc1de15c5a6f2e2fd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:36+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "AGN1AQ",
+   "AGN1BQ",
+   "AGN1DQ",
+   "AGN1GQ",
+   "AGN1JQ"
+  ],
+  "confidence": "high",
+  "seconds": 6.92,
+  "tokens_in": 1567,
+  "tokens_out": 81
+ }
+}

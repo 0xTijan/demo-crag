@@ -1,0 +1,21 @@
+{
+ "file": "goodark/als36-thru-als3b_4b64f1b4.md",
+ "supplier": "goodark",
+ "file_hash": "4ceb35345e2d06d97936e2b8f5f66b80e262d469ce26e5981414d67702285ebc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:01+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ALS36",
+   "ALS3B"
+  ],
+  "confidence": "high",
+  "seconds": 7.35,
+  "tokens_in": 1495,
+  "tokens_out": 44
+ }
+}

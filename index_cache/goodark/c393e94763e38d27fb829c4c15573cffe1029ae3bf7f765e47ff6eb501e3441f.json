@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sbr30150ct_879e48a5.md",
+ "supplier": "goodark",
+ "file_hash": "c393e94763e38d27fb829c4c15573cffe1029ae3bf7f765e47ff6eb501e3441f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:05:08+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SBR30150CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.74,
+  "tokens_in": 1326,
+  "tokens_out": 44
+ }
+}

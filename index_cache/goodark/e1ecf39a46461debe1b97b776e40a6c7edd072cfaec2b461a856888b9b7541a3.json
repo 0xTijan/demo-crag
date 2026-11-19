@@ -1,0 +1,20 @@
+{
+ "file": "goodark/als54_8db37ccb.md",
+ "supplier": "goodark",
+ "file_hash": "e1ecf39a46461debe1b97b776e40a6c7edd072cfaec2b461a856888b9b7541a3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:02+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "ALS54"
+  ],
+  "confidence": "high",
+  "seconds": 6.52,
+  "tokens_in": 1201,
+  "tokens_out": 39
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murd540s_ee4d8ed7.md",
+ "supplier": "goodark",
+ "file_hash": "560f5033e56d6b54eb6653257479f19e34958fae1af462ff3aae2b67bdee0c6a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:10+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURD540S"
+  ],
+  "confidence": "high",
+  "seconds": 5.0,
+  "tokens_in": 1325,
+  "tokens_out": 43
+ }
+}

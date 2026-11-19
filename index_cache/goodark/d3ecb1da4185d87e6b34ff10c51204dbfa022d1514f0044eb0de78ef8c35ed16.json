@@ -1,0 +1,23 @@
+{
+ "file": "goodark/fs32-thru-fs345_2bcc9731.md",
+ "supplier": "goodark",
+ "file_hash": "d3ecb1da4185d87e6b34ff10c51204dbfa022d1514f0044eb0de78ef8c35ed16",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:21+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FS32",
+   "FS33",
+   "FS34",
+   "FS345"
+  ],
+  "confidence": "high",
+  "seconds": 5.13,
+  "tokens_in": 1511,
+  "tokens_out": 55
+ }
+}

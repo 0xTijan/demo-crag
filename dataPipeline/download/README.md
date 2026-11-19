@@ -11,6 +11,8 @@ Nothing in the code knows a particular website. Two real sites were used as exam
 - [5. Clicking (JavaScript sites)](#5-clicking-javascript-sites)
 - [6. Which PDFs are datasheets](#6-which-pdfs-are-datasheets)
 - [7. Saving: files, manifest, database](#7-saving-files-manifest-database)
+  - [7.1 Datasheets that could not be obtained](#71-datasheets-that-could-not-be-obtained)
+  - [7.2 Retrying failed datasheets (`--retry-failed`)](#72-retrying-failed-datasheets---retry-failed)
 - [8. `fetcher.py`: all network access](#8-fetcherpy-all-network-access)
 - [9. The two example sites](#9-the-two-example-sites)
 - [10. Failure handling](#10-failure-handling)
@@ -51,8 +53,7 @@ downloader.py : stream → check "%PDF-" → SHA-256
      ▼
 datasheets/{manufacturer}/{pdf-name}_{hash8}.pdf
 ──► line in datasheets/{manufacturer}/manifest.jsonl (page, part row, click trail)
-──► row in datasheet_files (one per unique PDF: file, SHA-256)
-──► row in datasheet_sources (one per URL: page, part row, part number, last seen)
+──► row in datasheet_files (one per PDF: file, SHA-256) + row in datasheet_urls (this URL → that PDF)
 any failure ──► row in datasheet_errors (the run goes on)
 ```
 
@@ -68,7 +69,7 @@ any failure ──► row in datasheet_errors (the run goes on)
 | `crawler.py` | `PartCrawler`: walks one catalogue (static links, or clicking in a browser) and reports every PDF through a callback. `is_datasheet`. Knows nothing about disks or databases. | `fetcher`, `settings` |
 | `downloader.py` | Streams one PDF to disk, verifies it, removes duplicates, names the file. | `fetcher` |
 | `fetcher.py` | All network access: rate limit per host, `robots.txt`, retries, HEAD checks, repair of incomplete TLS chains, the shared Playwright browser. | `settings` |
-| `db.py` | Creates and writes `datasheet_files`, `datasheet_sources` and `datasheet_errors`; migrates the older one-row-per-URL table. | `downloader`, `settings` |
+| `db.py` | Creates and writes `datasheet_files`, `datasheet_urls` and `datasheet_errors`. | `settings` |
 | `settings.py` | Constants, limits and all keyword lists. | none |
 
 The crawler returns data and writes nothing: each PDF goes to `on_pdf` as soon as it is found (so a long crawl saves its results as it goes) and failures go to a `log_error` callback. That is why `--dry-run` works with the same crawler.
@@ -85,6 +86,8 @@ python -m dataPipeline.download.run https://www.novosns.com/en/ https://en.gooda
 python -m dataPipeline.download.run --file manufacturers.txt          # one URL per line, # comments
 python -m dataPipeline.download.run https://www.novosns.com/en/ --dry-run -v   # list, download nothing
 python -m dataPipeline.download.run https://en.goodark.com/product.php --no-db # no PostgreSQL
+python -m dataPipeline.download.run --retry-failed                             # retry failed datasheets (all makers)
+python -m dataPipeline.download.run https://www.novosns.com/en/ --retry-failed # ... of one manufacturer
 ```
 
 | Option | Default | Meaning |
@@ -99,6 +102,10 @@ python -m dataPipeline.download.run https://en.goodark.com/product.php --no-db #
 | `--dry-run` | off | Print the datasheets found; download and write nothing (no database needed) |
 | `--force` | off | Download again even if already saved |
 | `--no-db` | off | No PostgreSQL; hashes only in `manifest.jsonl` |
+| `--fast` | off | JavaScript tables: when a row's datasheet button already gave the PDF (or a "not public" notice), do not also open that row's part page. Part pages found elsewhere (featured-product tiles, …) are visited last, and skipped if a table row already covered that part. Much faster on sites like NOVOSENSE |
+| `--recrawl` | off | Fetch every page again, also part pages visited by earlier runs (see "Reruns" in [7](#7-saving-files-manifest-database)) |
+| `--cache-days N` | 30 | Part pages visited less than N days ago are not fetched again |
+| `--retry-failed` | off | Do not crawl: retry only the datasheets in `datasheet_errors` (all manufacturers, or those of the given URLs / `--name`). See [7.2](#72-retrying-failed-datasheets---retry-failed). Needs the database; with `--dry-run` it only lists them |
 | `-v` | off | Print every page and every click |
 | `--show-browser` | off | Open a visible Chromium window and watch it load pages and click (JavaScript sites; needs a desktop) |
 
@@ -126,7 +133,7 @@ A real log (excerpt; also saved in `logs/datasheets_<date>_<time>.log`):
     pdfs: …, datasheets: …, downloaded: …, skipped: …, duplicates: …, failed: …, not_datasheet: …
 ```
 
-`pdfs`: PDFs found. `datasheets`: passed `is_datasheet`. `downloaded`: new files. `skipped`: URL already saved. `duplicates`: the bytes already existed under another URL (many parts of a series share one datasheet). `failed`: download or database write failed. `not_datasheet`: dropped by the filter. Exit code `0` also when some downloads failed (see `datasheet_errors`).
+`pdfs`: PDFs found. `missing`: datasheets that could not be obtained, with their context ([7.1](#71-datasheets-that-could-not-be-obtained)). `datasheets`: passed `is_datasheet`. `downloaded`: new files. `skipped`: URL already saved. `duplicates`: the bytes already existed under another URL (many parts of a series share one datasheet). `failed`: download or database write failed. `not_datasheet`: dropped by the filter. Exit code `0` also when some downloads failed (see `datasheet_errors`).
 
 ---
 
@@ -179,6 +186,7 @@ Elements are found again after a reload by frame, text, icon text, table row and
 
 1. Stream into a hidden `.{sha1 of url}.part` file while hashing (SHA-256). Abort above 300 MB or if the content-type is HTML.
 2. The first 1024 bytes must contain `%PDF-` (stage `verify` otherwise), and the size must match `Content-Length`. A broken transfer (timeout or dropped connection half-way, fewer bytes than announced, or non-PDF bytes although the server said `application/pdf`) is retried on a fresh connection, 3 attempts in all; HTTP errors and HTML answers are not retried.
+0. If a PDF with the **same file name and the same size** (from a HEAD request) is already saved for this manufacturer, it is not downloaded again: the URL is recorded for that file (`duplicates`). Parts of a series often give one datasheet under many URLs. `--force` turns this off.
 3. If the manufacturer already has these bytes **and that file still exists**, the temporary file is deleted and the existing path returned (`duplicate_of`): one file for all parts sharing a datasheet.
 4. Otherwise the file is named after the document itself: `{name from Content-Disposition, else the URL's last part}_{hash8}.pdf`, e.g. `mt6835-rev-1-3_0c2d5a1f.pdf`, and moved into place atomically.
 
@@ -189,21 +197,83 @@ Elements are found again after a reload by frame, text, icon text, table row and
 
 | Table | Columns | Purpose |
 |---|---|---|
-| `datasheet_files` | `datasheet_id`, `manufacturer`, `file_path` (relative to `datasheets/`), `file_hash` (SHA-256, unique per manufacturer), `file_size`, `downloaded_at` | One row per unique PDF: identical bytes are stored once |
-| `datasheet_sources` | `datasheet_id` (→ `datasheet_files`), `manufacturer`, `source_url` (unique per manufacturer), `page_url`, `part_number`, `link_text`, `context`, `trail`, `first_seen_at`, `last_seen_at` | One row per URL where a PDF was found: skip known URLs; part numbers per datasheet; `last_seen_at` shows URLs no longer on the site |
-| `datasheet_errors` | `manufacturer`, `url`, `stage`, `error`, `http_status`, `traceback`, `occurred_at` | Append-only failure log |
+| `datasheet_files` | **one row per distinct PDF**: `datasheet_id`, `manufacturer`, `file_hash` (SHA-256; unique per manufacturer), `file_path` (relative to `datasheets/`), `file_size`, `downloaded_at` | A datasheet shared by many parts is one file and one row |
+| `datasheet_urls` | **one row per URL**: `url_id`, `datasheet_id` (→ `datasheet_files`), `manufacturer`, `source_url` (unique per manufacturer), `first_seen`, `last_seen` | Which URLs give which PDF; reruns skip known URLs |
+| `datasheet_errors` | `manufacturer`, `url`, `stage`, `error`, `http_status`, `traceback`, `context` (JSONB), `occurred_at` | Append-only failure log; `context` = everything known about a datasheet that could not be obtained ([7.1](#71-datasheets-that-could-not-be-obtained)) |
 
-Many URLs often point to the same PDF (one URL per orderable part number, e.g. `.../datasheet/NCA1462-Q1DNR/NCA1462-Q1_Datasheet_1.2_EN.pdf`): that is one `datasheet_files` row with several `datasheet_sources` rows. `part_number` is taken from the URL's folder only when it looks like a part number and also appears in the page URL, link text or table row; otherwise it stays empty.
-
-A known URL found again only updates its `datasheet_sources` row (details and `last_seen_at`). Files saved by a `--no-db` run get their rows on the next run with a database (from `manifest.jsonl`). A database with the older layout (one `datasheet_files` row per URL) is migrated automatically on the next run: the URLs move to `datasheet_sources`, each PDF keeps the lowest of its old `datasheet_id`s, and page, part row and trail are filled in from `manifest.jsonl`.
+Files saved by a `--no-db` run get their `datasheet_files` row on the next run with a database. If a URL later delivers a different PDF (a new revision), its `datasheet_urls` row points to the new PDF; a PDF left without URLs loses its `datasheet_files` row (the file stays on disk). Databases with an earlier layout (one `datasheet_files` row per URL, or a `source_urls` list column) are migrated automatically.
 
 ```sql
-SELECT f.manufacturer, count(DISTINCT f.datasheet_id) AS files, count(s.source_id) AS urls
-FROM datasheet_files f LEFT JOIN datasheet_sources s USING (datasheet_id) GROUP BY 1;    -- files vs. URLs
-SELECT f.file_path, array_agg(s.part_number ORDER BY s.part_number) AS part_numbers
-FROM datasheet_files f JOIN datasheet_sources s USING (datasheet_id) GROUP BY 1;         -- part numbers per PDF
+SELECT f.manufacturer, count(DISTINCT f.datasheet_id) AS pdfs, count(*) AS urls
+FROM datasheet_files f JOIN datasheet_urls u USING (datasheet_id) GROUP BY 1;            -- PDFs vs. URLs
+SELECT f.file_path, count(*) AS urls FROM datasheet_files f JOIN datasheet_urls u USING (datasheet_id)
+GROUP BY 1 ORDER BY 2 DESC;                                                                -- most shared datasheets
 SELECT stage, count(*) FROM datasheet_errors GROUP BY 1;                                    -- what is failing
 ```
+
+**Reruns.** Two files make a second run much faster; both are ignored with `--recrawl` and both forget entries older than `--cache-days` (30) days, so new datasheet revisions are picked up eventually:
+
+- `datasheets/{manufacturer}/pages.jsonl` remembers every **leaf page**: a page that gave datasheet links (or only "not available" notices) and led nowhere new, in practice part pages. The next run does not fetch it again. Category pages, family lists and pagination are always read, so new families and parts are found. On Good-Ark this skips almost all of the ~4,000 page visits of a full run.
+- `datasheets/{manufacturer}/clicks.jsonl` (JavaScript sites) remembers what every click led to: `nav` (a page URL), `pdf` (a datasheet URL), `notice` ("not available") or `none`. The next run still loads each list page (new rows and parts are clicked as usual) but **replays** known clicks instead of clicking: the page URL is queued, the datasheet counts as found (downloaded if an earlier run stopped before saving it), the notice is not logged again (it is already in `datasheet_errors`; use `--retry-failed` to try those). Measured on NOVOSENSE: a 2-page crawl with 79 clicks took 527 s the first time and 37 s the second, with the same 62 datasheet links.
+
+### 7.1 Datasheets that could not be obtained
+
+When a datasheet is shown but cannot be had (HTTP 404 or another download error, a response that is not a PDF, or a notice such as "the datasheet is not publicly available"), the crawler keeps **everything it knows about the part**, so the datasheet can be requested or looked up elsewhere later:
+
+| Field | Example (NOVOSENSE) |
+|---|---|
+| `stage`, `error`, `http_status`, `message` | `datasheet_unavailable`, the notice text "Sorry, the datasheet is not publicly available, please contact sales@…" |
+| `url` | the PDF URL (download errors) or the page with the button |
+| `page_url`, `page_title`, `headings` | `…/en/abs-speed-sensor`, "ABS Speed Sensor \| novosns.com", breadcrumb "Home > Products > Sensor > Magnetic Sensor > ABS Speed Sensor" |
+| `page_text` | the first 1500 characters of the page (family description, features) |
+| `trail` | `["Sensor", "Magnetic Sensor", "ABS Speed Sensor", "dataSheet"]` |
+| `section`, `element`, `row_text` | section label, button/link text, the row as text |
+| `table_headers` | `["OPN", "Datasheet", "ECAD Model", "Status", "MSL", "Package", …]` (also from tables whose header is a separate element, as in Ant Design / fixed-header tables) |
+| `row` | `{"OPN": "NSM4101-Q0TOMR", "Status": "Active", "Package": "TO2", "Operating Voltage (V)": "4.4~20", …}` |
+| `row_cells`, `table`, `table_rows_total` | the row's cells, the **whole table** (up to 300 rows), and its real size |
+| `link_text`, `context` | (download errors) the link text and row/section text |
+
+The record goes to two places:
+
+- `datasheets/{manufacturer}/missing.jsonl`: one JSON line per failure (written also with `--no-db`; not with `--dry-run`);
+- `datasheet_errors.context` (JSONB), with the same content.
+
+```sql
+SELECT context->'row'->>'OPN' AS part, context->>'page_title' AS family, error
+FROM datasheet_errors WHERE stage = 'datasheet_unavailable' AND manufacturer = 'novosns';
+```
+
+The run summary counts them as `missing`.
+
+### 7.2 Retrying failed datasheets (`--retry-failed`)
+
+`python -m dataPipeline.download.run --retry-failed` crawls nothing. It reads the datasheet failures from `datasheet_errors` (stages `download`, `verify`, `write`, `db`, `datasheet_unavailable`; page errors such as `crawl` are not datasheets and stay) and tries each once more:
+
+- **download / verify / write / db**: the PDF URL is downloaded again (with the usual retries for broken transfers).
+- **datasheet_unavailable**: the page (`context.page_url`) is opened in the browser, the same button (`context.element`) in the same table row (`context.row_text`) is found again, paging through a JavaScript table if needed, and clicked.
+
+Rows about the same datasheet (logged again by every run) are retried once as a group.
+
+| Result | What happens |
+|---|---|
+| Success | Saved exactly like a normal download: file in `datasheets/{manufacturer}/`, line in `manifest.jsonl`, row in `datasheet_files` (or counted as a duplicate / already saved). Then **its rows in `datasheet_errors` are deleted** and its lines in `missing.jsonl` removed. |
+| Still failing | One fresh row (and `missing.jsonl` line) with the new error and full context replaces the old ones, so retries do not pile up duplicates. |
+| Cannot retry | A `datasheet_unavailable` row without context (from an older version): left as it is. |
+
+```
+[1/9] goodark: download 'Pdf file' https://en.goodark.com/specification/BAT42 thru BAT43.pdf
+      + goodark/bat42-thru-bat43_d406f267.pdf
+      recovered (downloaded); 2 error row(s) removed
+[3/9] novosns: datasheet_unavailable 'Datasheet' https://www.novosns.com/en/product/MT6835GT-STD-R
+      + novosns/mt6835-rev-1-3_6134ce06.pdf
+      recovered (downloaded); 1 error row(s) removed
+[4/9] novosns: datasheet_unavailable 'NSM4101-Q0TOMR Active MSL1 TO2 Automotive …' https://www.novosns.com/en/abs-speed-sensor
+    ! [datasheet_unavailable] … Sorry, the datasheet is not publicly available …
+      still failing (no PDF)
+Retry: retried: 9, recovered: 2, still_failing: 7, cannot_retry: 0
+```
+
+Retried datasheets are not filtered by `is_datasheet` again.
 
 ---
 
@@ -235,11 +305,11 @@ One `Fetcher` per run.
 |---|---|---|
 | Start URL cannot be fetched | `website` | Error row. Next manufacturer. |
 | Page blocked by `robots.txt` | `robots` | Page skipped. |
-| A page cannot be fetched / rendered | `crawl` / `render` | Page skipped, crawl goes on. |
+| A page cannot be fetched / rendered | `crawl` / `render` | Connection resets, timeouts and iframes that failed to load are retried (3 loads, 5/10 s apart); then the page is skipped and the crawl goes on. |
 | A click fails or its element is gone after a reload | `click` | That element is skipped (and may be tried from another page). |
-| Datasheet button shows "not available" twice | `datasheet_unavailable` | Logged; nothing to download. |
+| Datasheet button shows "not available" twice | `datasheet_unavailable` | Recorded with the full context ([7.1](#71-datasheets-that-could-not-be-obtained)); nothing to download. |
 | Extension-less link check fails | `head_check` | Link skipped. |
-| PDF request fails, is cut off, or exceeds 300 MB | `download` | Broken transfers are retried twice at once on a fresh connection; then the error is logged, the temporary file removed, and the URL tried again on the next run. |
+| PDF request fails, is cut off, or exceeds 300 MB | `download` | Broken transfers are retried twice at once on a fresh connection; then it is recorded with the full context of the link ([7.1](#71-datasheets-that-could-not-be-obtained)), the temporary file removed, and the URL tried again on the next run. |
 | Response is not a PDF | `verify` | Retried like a broken transfer if the server said `application/pdf`; temporary file removed. |
 | Moving the file fails | `write` | Error row. |
 | Saving the database row fails | `db` | File and manifest line stay; the row is added on the next run. |
@@ -264,8 +334,9 @@ Writing an error row never raises; without a database errors are only printed (a
 | `PART_MAX_CLICKS_PER_PAGE` | 400 | `settings.py` | Elements clicked on one rendered page |
 | `PART_MAX_PAGINATION` | 60 | `settings.py` | "next page" clicks in one JavaScript table |
 | `_needs_js` | < 10 links or < 300 text characters | `crawler.py` | Start page looks JavaScript-built → browser |
-| page stable | 2 × 500 ms unchanged, max 12 s | `crawler.py` | Wait after loading / paging |
-| click outcome wait | 3 s (then up to 5 s idle + 6 s stable if it changed in place) | `crawler.py` | Tab, download or route change |
+| page stable | 3 checks 500 ms apart unchanged, no page/data request in flight (< 10 s old), every iframe with text; max 20 s | `crawler.py` | Wait after loading / paging / going back |
+| click outcome wait | 3 s (then up to 1.5 s idle + 6 s stable if it changed in place) | `crawler.py` | Tab, download or route change |
+| `IDLE_WAIT_MS` | 1.5 s | `crawler.py` | Cap on "network idle" (analytics that poll never go idle) |
 | `CHROME_DEPTH` | 5 levels below `<body>` | `crawler.py` | Where header/footer classes are recognised |
 | PDF signature window | first 1024 bytes | `downloader.py` | Must contain `%PDF-` |
 | `DOWNLOAD_ATTEMPTS` | 3 | `downloader.py` | Tries per PDF for broken transfers |
@@ -285,7 +356,7 @@ When a datasheet is missed, `-v` shows why: the page was never queued (an item j
 
 ## 13. Known limits
 
-- **Slow on JavaScript sites**: every click that changes the URL means reloading the page before the next click, about 5–10 s, plus the 1 s per-host pause. A large catalogue takes hours. Static sites run at about one page per 1–2 s.
+- **Slow on JavaScript sites**: every click that changes the URL means going back to the page before the next click (browser Back, ~2–4 s; a full reload, ~5–10 s, when Back does not restore it), plus the 1 s per-host pause. `--fast` skips the part pages whose datasheet the table row already gave. A large catalogue takes hours. Static sites run at about one page per 1–2 s.
 - Filters and search boxes are not used; the crawl relies on the category tree and pagination reaching every part. Parts reachable only through a search are missed.
 - Clicks whose only effect is not a URL, a tab, a download or new links (e.g. content drawn on a canvas) are not explored further.
 - `is_datasheet` uses words, not the PDF content: a brochure without any keyword found on a catalogue page is kept; a datasheet named only by a number outside the catalogue is dropped.

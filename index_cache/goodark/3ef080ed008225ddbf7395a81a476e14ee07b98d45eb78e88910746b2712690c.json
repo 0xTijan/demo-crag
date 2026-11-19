@@ -1,0 +1,24 @@
+{
+ "file": "goodark/f1n4740-thru-fz1200_20a26ea2.md",
+ "supplier": "goodark",
+ "file_hash": "3ef080ed008225ddbf7395a81a476e14ee07b98d45eb78e88910746b2712690c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:43+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "F1N4740",
+   "F1N4741",
+   "F1N4742",
+   "F1N4743",
+   "F1N4744"
+  ],
+  "confidence": "high",
+  "seconds": 6.22,
+  "tokens_in": 1715,
+  "tokens_out": 77
+ }
+}

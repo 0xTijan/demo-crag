@@ -1,0 +1,22 @@
+{
+ "file": "goodark/kbjl4ju-thru-kbjl4mu_0a7b2bb9.md",
+ "supplier": "goodark",
+ "file_hash": "444c4262ea4c86772ee66c2cbd3e8c63ec37412580807a1338531ae45d2b49e6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:51+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBJL4JU",
+   "KBJL4KU",
+   "KBJL4MU"
+  ],
+  "confidence": "high",
+  "seconds": 6.58,
+  "tokens_in": 1741,
+  "tokens_out": 53
+ }
+}

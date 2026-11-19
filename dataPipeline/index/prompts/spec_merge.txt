@@ -1,0 +1,40 @@
+You build the list of specifications of one electronic component type. The list is used to compare parts of
+different manufacturers and to find replacement parts.
+
+You get the specifications found in several sample datasheets of this type, one numbered item per line:
+id | name | symbol | unit | stat | conditions | example
+
+Group the items that are the same specification across datasheets: different names or symbols for the same
+parameter ("Drain-Source Voltage", "V(BR)DSS", "VDS") are one specification. Keep as many distinct
+specifications as possible. The same parameter at a clearly different defining condition (RDS(on) at VGS=10 V
+and at VGS=4.5 V) or with a different statistic (a max value and a typical value) are different specifications.
+
+Answer with JSON only:
+{
+  "specs": [
+    {"key": "...", "label": "...", "unit": "...", "stat": "...", "conditions": "...", "rule": "...",
+     "critical": true or false, "members": ["D1.3", "D2.7", ...]},
+    ...
+  ],
+  "must_match": ["...", ...],
+  "visual_check": "..."
+}
+
+- "key": lower case snake_case; a defining condition goes after "@". Examples: vds_max, id_max,
+  rds_on_max@vgs_10v, vgs_th_range, package, operating_temp_range, capacitance, tolerance, aec_q.
+- "label": short and readable, with the symbol, e.g. "R(DS)on max @ VGS=10 V".
+- "unit": one canonical unit (V, A, ohm, F, H, Hz, W, degC, s, m, %, ...), or "" for text values.
+- "stat": "min", "typ", "max", "range" or "value".
+- "conditions": the defining test condition, or "".
+- "rule", how a replacement part compares:
+  "="        must be equal (package, channel type, polarity, pin count, dielectric)
+  ">="       equal or higher is fine (voltage and current ratings, power, maximum temperature)
+  "<="       equal or lower is fine (on-resistance, leakage, tolerance, noise, delays)
+  "≈"        about equal (capacitance, resistance, inductance, frequency, threshold voltage)
+  "contains" the replacement's range must cover the requested range (operating temperature, supply voltage)
+  "info"     shown, but not compared (marking, moisture sensitivity level, packing quantity)
+- "critical": true only for the few specifications that make a part unusable when they are worse.
+- "members": the ids of all items that are this specification. Each id in at most one specification.
+  Put every item into a specification if one fits.
+- "must_match": keys that must be equal for a drop-in replacement (package / footprint, pin count, polarity).
+- "visual_check": what an engineer must still check on a drawing (e.g. "pinout (G/D/S order)"), or "".

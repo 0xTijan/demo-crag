@@ -1,0 +1,24 @@
+{
+ "file": "goodark/mm3zxx_a9eb6523.md",
+ "supplier": "goodark",
+ "file_hash": "3607422680ecb9b7421d6004771e81a49f622d3e598b97ccdbef75d2d6481152",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:30+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "MM3Z2V0",
+   "MM3Z2V4",
+   "MM3Z2V7",
+   "MM3Z3V0",
+   "MM3Z3V3"
+  ],
+  "confidence": "high",
+  "seconds": 6.22,
+  "tokens_in": 1665,
+  "tokens_out": 72
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/es3ab-thru-es3jb_9bf8bb38.md",
+ "supplier": "goodark",
+ "file_hash": "8bae2e935dd8959f0ddc3ec18e29993abfbf99499eefbe027162a0e964bad963",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:47:21+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ES3AB",
+   "ES3BB",
+   "ES3CB",
+   "ES3DB",
+   "ES3FB"
+  ],
+  "confidence": "high",
+  "seconds": 5.61,
+  "tokens_in": 1545,
+  "tokens_out": 69
+ }
+}

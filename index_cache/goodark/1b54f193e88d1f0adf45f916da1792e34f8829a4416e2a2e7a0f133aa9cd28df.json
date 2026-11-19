@@ -1,0 +1,23 @@
+{
+ "file": "goodark/sgbj35a08-thru-sgbj35a16_42fc4639.md",
+ "supplier": "goodark",
+ "file_hash": "1b54f193e88d1f0adf45f916da1792e34f8829a4416e2a2e7a0f133aa9cd28df",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:32+00:00",
+  "is_datasheet": true,
+  "label": "three-phase rectifier bridge",
+  "family": true,
+  "part_numbers": [
+   "SGBJ35A08",
+   "SGBJ35A10",
+   "SGBJ35A12",
+   "SGBJ35A16"
+  ],
+  "confidence": "high",
+  "seconds": 6.54,
+  "tokens_in": 1558,
+  "tokens_out": 73
+ }
+}

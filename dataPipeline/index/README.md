@@ -107,12 +107,63 @@ mlcc                             Multilayer ceramic capacitor         388      3
 ...
 ```
 
+## Next: spec lists per type (`spec_lists.py`)
+
+After `report`, draft one spec list per component type: every specification that most datasheets of the type
+have in common, with a comparison rule for each (plan v1, "Spec lists").
+
+```bash
+python -m dataPipeline.index.spec_lists list                  # types, datasheet counts, spec-list status
+python -m dataPipeline.index.spec_lists draft mosfet_n mlcc   # draft these types (or: draft --top 10)
+python -m dataPipeline.index.spec_lists draft --all -v         # every type without a spec list (rerun to resume)
+# open spec_lists/<type>.yaml, review it, set status: reviewed
+python -m dataPipeline.index.spec_lists check                 # validate every spec list (-v: every spec)
+```
+
+```
+index_cache (type from `report`)
+        │  ~10 sample datasheets per type: different suppliers, families and single parts
+        ▼
+1. inventory  LLM per sample → every spec it gives (name, symbol, unit, min/typ/max, conditions)
+              cached as `spec_inventory` in the datasheet's index-cache file
+2. merge      LLM → items of all samples grouped into specs (synonyms merged): key, unit, rule, critical
+              code → found_in per spec; ≥ half of the samples → `specs`, the rest → `rare_specs`
+        ▼
+spec_lists/<type>.yaml  (status: draft)  ← you review it, set status: reviewed, run `check`
+```
+
+| Option (`draft`) | Default | Meaning |
+|---|---|---|
+| `types` / `--top N` / `--all` | – | Type keys from `type_list.yaml`; and/or the N types with the most datasheets; or every type. `--top` and `--all` skip types that already have a spec list, so a rerun after Ctrl+C or a crash continues where it stopped |
+| `--min-datasheets N` | 3 | With `--top` / `--all`: skip types with fewer datasheets (too few samples for a useful list) |
+| `--samples N` | 10 | Sample datasheets per type |
+| `--min-share X` | 0.5 | Keep specs found in at least this share of the samples ("in common"); lower it for more specs |
+| `--max-chars N` | 24000 | Characters of spec pages sent per sample (page 1 + pages with tables, without tape/reel, soldering, curves) |
+| `--workers N` | 1 | Parallel inventory requests (`OLLAMA_NUM_PARALLEL` on the server) |
+| `--force` | off | Replace an existing **draft**. A reviewed list is never replaced: a new draft goes to `<type>.draft.yaml` |
+| `--force-inventory` | off | List the samples' specs again instead of using the cached inventory |
+
+What to check when reviewing a draft:
+- **rule** of each spec: `>=` for ratings, `<=` for on-resistance/leakage/tolerance, `≈` for nominal values
+  (capacitance, resistance), `=` for package / channel type / dielectric, `contains` for ranges, `info` for
+  marking, MSL, packing.
+- **critical**: only the few specs that make a part unusable when worse.
+- **must_match**: what must be equal for a drop-in (package, pin count…).
+- **keys** with conditions: `rds_on_max@vgs_10v` and `rds_on_max@vgs_4v5` are different specs.
+- **rare_specs**: move one up to `specs` if engineers always look at it.
+- After review: `status: reviewed`; raise `version` on every later change (Step 1 re-indexes that type).
+
+Models (config.json): `specInventoryModel` (num_ctx 16384) and `specListModel` (num_ctx 32768, the merge
+sees all samples at once). Tests: `python tests/test_index_spec_lists.py` (fake LLMs, no Ollama).
+
 ## Files
 
 | File | Role |
 |---|---|
 | `classify.py` | `classify(markdown, llm)` (plan rule 3: a module with a fixed input and output) and the `run` / `group` / `report` commands |
 | `common.py` | Finding the markdowns, file hashes, first pages, the index cache, the Ollama JSON call |
+| `spec_lists.py` | Spec lists per type: `inventory(markdown, llm)`, `merge_specs(...)`, `validate(spec_list)` and the `list` / `draft` / `check` commands |
+| `prompts/spec_inventory.txt`, `prompts/spec_merge.txt` | The two spec-list prompts; editing `spec_inventory.txt` in a way that needs a re-run → bump `INVENTORY_VERSION` |
 | `prompts/classify.txt`, `prompts/group.txt` | The two prompts; editing `classify.txt` in a way that needs a re-run → bump `CLASSIFIER_VERSION` |
 
 ## Notes

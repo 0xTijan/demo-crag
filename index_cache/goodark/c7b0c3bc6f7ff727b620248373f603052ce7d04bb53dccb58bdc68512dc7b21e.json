@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sk22-thru-sk26_f4fab6e4.md",
+ "supplier": "goodark",
+ "file_hash": "c7b0c3bc6f7ff727b620248373f603052ce7d04bb53dccb58bdc68512dc7b21e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:41+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK22",
+   "SK23",
+   "SK24",
+   "SK25",
+   "SK26"
+  ],
+  "confidence": "high",
+  "seconds": 5.45,
+  "tokens_in": 1529,
+  "tokens_out": 59
+ }
+}

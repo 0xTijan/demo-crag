@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbj10au-thru-kbj10mu_85b3dbb1.md",
+ "supplier": "goodark",
+ "file_hash": "5ee557712bc2fef719d7b30c9620258cc38ddb9a166fd2688726801c3f431277",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:30+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "KBJ10AU",
+   "KBJ10BU",
+   "KBJ10DU",
+   "KBJ10GU",
+   "KBJ10JU"
+  ],
+  "confidence": "high",
+  "seconds": 8.47,
+  "tokens_in": 2018,
+  "tokens_out": 83
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "file": "goodark/bss138_99e76efd.md",
+ "supplier": "goodark",
+ "file_hash": "2da264848af38a695c9eb95dbb78a45fdb3a33ea1d055add239f5228198d8d71",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:02+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "seconds": 7.25,
+  "tokens_in": 1820,
+  "tokens_out": 34
+ }
+}

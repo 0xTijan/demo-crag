@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sgc0301a-thru-sgc0307a_312155c6.md",
+ "supplier": "goodark",
+ "file_hash": "227602d4948b69c0d641ae5d8d73694aef37d6fb108bb1919f7332a5cdf1c5d8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:34+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGC0301A",
+   "SGC0302A",
+   "SGC0303A",
+   "SGC0304A",
+   "SGC0305A"
+  ],
+  "confidence": "high",
+  "seconds": 7.1,
+  "tokens_in": 1584,
+  "tokens_out": 93
+ }
+}

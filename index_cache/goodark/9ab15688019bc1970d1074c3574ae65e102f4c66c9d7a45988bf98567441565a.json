@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn021h13ll_52d48295.md",
+ "supplier": "goodark",
+ "file_hash": "9ab15688019bc1970d1074c3574ae65e102f4c66c9d7a45988bf98567441565a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:56+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN021H13LL"
+  ],
+  "confidence": "high",
+  "seconds": 5.96,
+  "tokens_in": 1762,
+  "tokens_out": 44
+ }
+}

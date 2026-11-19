@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1-5ke6-8-thru-1-5ke550ca_384b0309.md",
+ "supplier": "goodark",
+ "file_hash": "4866b192fbd569f768d68771e24b5af64a9d8ff7223134a28749b88540516eba",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:37:24+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "1.5KE6.8",
+   "1.5KE6.8A",
+   "1.5KE7.5",
+   "1.5KE7.5A",
+   "1.5KE8.2"
+  ],
+  "confidence": "high",
+  "seconds": 11.55,
+  "tokens_in": 1860,
+  "tokens_out": 79
+ }
+}

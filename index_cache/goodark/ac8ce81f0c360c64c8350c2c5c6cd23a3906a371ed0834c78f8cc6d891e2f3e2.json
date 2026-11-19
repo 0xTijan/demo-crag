@@ -1,0 +1,20 @@
+{
+ "file": "goodark/1n4148ws_d1670b44.md",
+ "supplier": "goodark",
+ "file_hash": "ac8ce81f0c360c64c8350c2c5c6cd23a3906a371ed0834c78f8cc6d891e2f3e2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:41+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "200mWSOD-323"
+  ],
+  "confidence": "high",
+  "seconds": 6.53,
+  "tokens_in": 1289,
+  "tokens_out": 44
+ }
+}

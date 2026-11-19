@@ -1,0 +1,24 @@
+{
+ "file": "goodark/lb1201s-thru-lb1210s_c383f3c1.md",
+ "supplier": "goodark",
+ "file_hash": "3c5f3b86e9b4bafae191c98da80e4cf169243a9014d31103a04bb8fb32318110",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:25+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "LB1201S",
+   "LB1202S",
+   "LB1204S",
+   "LB1206S",
+   "LB1210S"
+  ],
+  "confidence": "high",
+  "seconds": 7.55,
+  "tokens_in": 2054,
+  "tokens_out": 71
+ }
+}

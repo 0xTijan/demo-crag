@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rgp20a-thru-rgp20m_27f0b381.md",
+ "supplier": "goodark",
+ "file_hash": "8bf118940dbb42121f167b956122ad04841a9345cb42eb4914d4c9c757e1fef5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:22+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "RGP20A",
+   "RGP20B",
+   "RGP20D",
+   "RGP20G",
+   "RGP20J"
+  ],
+  "confidence": "high",
+  "seconds": 6.82,
+  "tokens_in": 1542,
+  "tokens_out": 81
+ }
+}

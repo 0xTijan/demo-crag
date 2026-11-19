@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbr1045ct_33a1054c.md",
+ "supplier": "goodark",
+ "file_hash": "6ea471cfdc27fd25adc8fd134ae5dd4cb99adaa890b1f041e4926e3db24ea6a7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:37+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBR1045CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.77,
+  "tokens_in": 1324,
+  "tokens_out": 43
+ }
+}

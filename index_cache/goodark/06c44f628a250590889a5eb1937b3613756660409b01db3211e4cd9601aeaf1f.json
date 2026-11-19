@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gn2a-thru-gn2m_7312b0c5.md",
+ "supplier": "goodark",
+ "file_hash": "06c44f628a250590889a5eb1937b3613756660409b01db3211e4cd9601aeaf1f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN2A",
+   "GN2B",
+   "GN2D",
+   "GN2G",
+   "GN2J"
+  ],
+  "confidence": "high",
+  "seconds": 6.65,
+  "tokens_in": 1547,
+  "tokens_out": 69
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodark/gbjl15j-thru-gbjl15m_3fb90889.md",
+ "supplier": "goodark",
+ "file_hash": "908d4f3aece02449922bf8e6296aad1e224f1414551c71d6b5a82c6daaa5a505",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:02+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJL15J",
+   "GBJL15K",
+   "GBJL15M"
+  ],
+  "confidence": "high",
+  "seconds": 7.2,
+  "tokens_in": 1687,
+  "tokens_out": 54
+ }
+}

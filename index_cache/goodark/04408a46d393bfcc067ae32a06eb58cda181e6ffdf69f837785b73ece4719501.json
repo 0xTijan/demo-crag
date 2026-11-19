@@ -1,0 +1,23 @@
+{
+ "file": "goodark/sk27-thru-sk2b_ed199ed5.md",
+ "supplier": "goodark",
+ "file_hash": "04408a46d393bfcc067ae32a06eb58cda181e6ffdf69f837785b73ece4719501",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:45+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK27",
+   "SK28",
+   "SK29",
+   "SK2B"
+  ],
+  "confidence": "high",
+  "seconds": 6.03,
+  "tokens_in": 1512,
+  "tokens_out": 54
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ssf2429up_aedb120f.md",
+ "supplier": "goodark",
+ "file_hash": "a21ca2af4fb38efd2ae375274dacf58dc947a1ece29ab3a3c2110da7bc07af09",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:25+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2429UP"
+  ],
+  "confidence": "high",
+  "seconds": 5.76,
+  "tokens_in": 1724,
+  "tokens_out": 41
+ }
+}

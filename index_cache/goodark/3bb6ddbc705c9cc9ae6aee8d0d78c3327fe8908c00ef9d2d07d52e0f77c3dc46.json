@@ -1,0 +1,22 @@
+{
+ "file": "goodark/abcp56_44967985.md",
+ "supplier": "goodark",
+ "file_hash": "3bb6ddbc705c9cc9ae6aee8d0d78c3327fe8908c00ef9d2d07d52e0f77c3dc46",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:30+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "ABCP56",
+   "ABCP56-10Q",
+   "ABCP56-16Q"
+  ],
+  "confidence": "high",
+  "seconds": 6.32,
+  "tokens_in": 1405,
+  "tokens_out": 57
+ }
+}

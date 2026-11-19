@@ -1,0 +1,24 @@
+{
+ "file": "goodark/fr251-thru-fr257_047084df.md",
+ "supplier": "goodark",
+ "file_hash": "84f5ac609fadf4dada61ffc32db26bf975593c26003b6c18b26866b0d229de93",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:04+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "FR251",
+   "FR252",
+   "FR253",
+   "FR254",
+   "FR255"
+  ],
+  "confidence": "high",
+  "seconds": 6.67,
+  "tokens_in": 1517,
+  "tokens_out": 90
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gr1a-thru-gr1m_01a3befa.md",
+ "supplier": "goodark",
+ "file_hash": "2a8687deec32c3d7ec6271d032ed401d26d841957bab4175adf7510b5bbc5094",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:15+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GR1A",
+   "GR1B",
+   "GR1D",
+   "GR1G",
+   "GR1J"
+  ],
+  "confidence": "high",
+  "seconds": 6.61,
+  "tokens_in": 1557,
+  "tokens_out": 67
+ }
+}

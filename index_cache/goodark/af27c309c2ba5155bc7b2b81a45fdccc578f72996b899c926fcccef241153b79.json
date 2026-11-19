@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbj40a-thru-gbj40m_9c0cc1c0.md",
+ "supplier": "goodark",
+ "file_hash": "af27c309c2ba5155bc7b2b81a45fdccc578f72996b899c926fcccef241153b79",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:49+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "GBJ40A",
+   "GBJ40B",
+   "GBJ40D",
+   "GBJ40G",
+   "GBJ40J"
+  ],
+  "confidence": "high",
+  "seconds": 8.22,
+  "tokens_in": 2039,
+  "tokens_out": 81
+ }
+}

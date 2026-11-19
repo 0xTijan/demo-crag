@@ -1,0 +1,24 @@
+{
+ "file": "goodark/a1ksmbj10a-thru-a1ksmbj33ca_44619891.md",
+ "supplier": "goodark",
+ "file_hash": "21d9201238aa7a62295e9d885e26665815d0acd3db3780a7f09d246f5268477d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:55+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "A1KSMBJ10A",
+   "A1KSMBJ11A",
+   "A1KSMBJ12A",
+   "A1KSMBJ13A",
+   "A1KSMBJ14A"
+  ],
+  "confidence": "high",
+  "seconds": 8.07,
+  "tokens_in": 1858,
+  "tokens_out": 82
+ }
+}

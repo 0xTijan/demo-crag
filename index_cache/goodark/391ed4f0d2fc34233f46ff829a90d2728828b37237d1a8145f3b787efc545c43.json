@@ -1,0 +1,22 @@
+{
+ "file": "goodark/05-b-g-j-4b48_9940aaf9.md",
+ "supplier": "goodark",
+ "file_hash": "391ed4f0d2fc34233f46ff829a90d2728828b37237d1a8145f3b787efc545c43",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:37:19+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "05B4B48",
+   "05G4B48",
+   "05J4B48"
+  ],
+  "confidence": "high",
+  "seconds": 6.26,
+  "tokens_in": 1815,
+  "tokens_out": 59
+ }
+}

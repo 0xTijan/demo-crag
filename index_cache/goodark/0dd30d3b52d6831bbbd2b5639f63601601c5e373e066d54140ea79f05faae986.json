@@ -1,0 +1,24 @@
+{
+ "file": "goodark/aff1-thru-aff7_15fd9ad4.md",
+ "supplier": "goodark",
+ "file_hash": "0dd30d3b52d6831bbbd2b5639f63601601c5e373e066d54140ea79f05faae986",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:51+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "AFF1",
+   "AFF2",
+   "AFF3",
+   "AFF4",
+   "AFF5"
+  ],
+  "confidence": "high",
+  "seconds": 7.4,
+  "tokens_in": 1547,
+  "tokens_out": 60
+ }
+}

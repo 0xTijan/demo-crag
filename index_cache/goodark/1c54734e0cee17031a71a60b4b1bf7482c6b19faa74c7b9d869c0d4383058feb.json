@@ -1,0 +1,20 @@
+{
+ "file": "goodark/baw56-bav70-bav99_1b7cec28.md",
+ "supplier": "goodark",
+ "file_hash": "1c54734e0cee17031a71a60b4b1bf7482c6b19faa74c7b9d869c0d4383058feb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:44+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "GOOD-ARK"
+  ],
+  "confidence": "high",
+  "seconds": 4.41,
+  "tokens_in": 1204,
+  "tokens_out": 37
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodark/gbjl10j-thru-gbjl10m_607e7db9.md",
+ "supplier": "goodark",
+ "file_hash": "5be5ff2fe9f48cb6f75bfcbcb1412406c763155e5ca523c25ad8731b2548cd4d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:59+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJL10J",
+   "GBJL10K",
+   "GBJL10M"
+  ],
+  "confidence": "high",
+  "seconds": 8.1,
+  "tokens_in": 1741,
+  "tokens_out": 54
+ }
+}

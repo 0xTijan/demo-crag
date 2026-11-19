@@ -1,0 +1,20 @@
+{
+ "file": "goodark/smurb1560_ef9fa9ac.md",
+ "supplier": "goodark",
+ "file_hash": "26f91f8f6d1baef4ec343166394c4f1ef3dc055d4b1d020d3855f959f3fbb08d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:07+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMURB1560"
+  ],
+  "confidence": "high",
+  "seconds": 4.78,
+  "tokens_in": 1349,
+  "tokens_out": 43
+ }
+}

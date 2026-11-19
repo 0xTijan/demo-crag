@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sgc0501a-thru-sgc0507a_d1a32d48.md",
+ "supplier": "goodark",
+ "file_hash": "22b52870e30313352f6de6f52c6dd79fb688bdc08931f8eb8894c89901b03dbd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:42+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGC0501A",
+   "SGC0502A",
+   "SGC0503A",
+   "SGC0504A",
+   "SGC0505A"
+  ],
+  "confidence": "high",
+  "seconds": 6.45,
+  "tokens_in": 1591,
+  "tokens_out": 97
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/abc846-thru-abc850_e1b9304f.md",
+ "supplier": "goodark",
+ "file_hash": "7647bc5ea362cf4a8e956638f97398df6a287968e83896cfd631a01293232d78",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:27+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "ABC846",
+   "ABC847",
+   "ABC848",
+   "ABC849",
+   "ABC850"
+  ],
+  "confidence": "high",
+  "seconds": 5.97,
+  "tokens_in": 1654,
+  "tokens_out": 61
+ }
+}

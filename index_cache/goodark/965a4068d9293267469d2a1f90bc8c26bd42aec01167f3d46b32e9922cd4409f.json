@@ -1,0 +1,22 @@
+{
+ "file": "goodark/kbjl10ja-thru-kbjl10ma_913ea5cf.md",
+ "supplier": "goodark",
+ "file_hash": "965a4068d9293267469d2a1f90bc8c26bd42aec01167f3d46b32e9922cd4409f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:46+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBJL10JA",
+   "KBJL10KA",
+   "KBJL10MA"
+  ],
+  "confidence": "high",
+  "seconds": 7.61,
+  "tokens_in": 1746,
+  "tokens_out": 54
+ }
+}

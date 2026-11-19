@@ -1,0 +1,21 @@
+{
+ "file": "goodark/ps1150-thru-ps1200_f9e54865.md",
+ "supplier": "goodark",
+ "file_hash": "fad0962f53ee0ba6c9335c6833efcd6a6460f075cb49c1e02f0348e5384d6666",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:43+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PS1150",
+   "PS1200"
+  ],
+  "confidence": "high",
+  "seconds": 6.54,
+  "tokens_in": 1312,
+  "tokens_out": 48
+ }
+}

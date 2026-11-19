@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sk3c0c_f667db3b.md",
+ "supplier": "goodark",
+ "file_hash": "69cb6b60ff366a575717c9a59485099462d284ab5a7a490a863a52445f20a87b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:06+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SK3C0C"
+  ],
+  "confidence": "high",
+  "seconds": 4.34,
+  "tokens_in": 1147,
+  "tokens_out": 41
+ }
+}

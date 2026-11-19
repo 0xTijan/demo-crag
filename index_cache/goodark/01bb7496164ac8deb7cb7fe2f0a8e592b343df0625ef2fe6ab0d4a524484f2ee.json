@@ -1,0 +1,22 @@
+{
+ "file": "goodark/ls55-thru-ls565_f1f9cf45.md",
+ "supplier": "goodark",
+ "file_hash": "01bb7496164ac8deb7cb7fe2f0a8e592b343df0625ef2fe6ab0d4a524484f2ee",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:00+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LS55",
+   "LS56",
+   "LS565"
+  ],
+  "confidence": "high",
+  "seconds": 5.27,
+  "tokens_in": 1427,
+  "tokens_out": 50
+ }
+}

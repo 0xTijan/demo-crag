@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sesuc3v3d1610sn-6b_d6aad4ca.md",
+ "supplier": "goodark",
+ "file_hash": "240958772643b51070ab0545ed695cdecaf59a3cbda40d8ce45c4bf884b1ab9c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:24+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode array",
+  "family": false,
+  "part_numbers": [
+   "SESUC3V3D1610SN-6B"
+  ],
+  "confidence": "high",
+  "seconds": 6.78,
+  "tokens_in": 1407,
+  "tokens_out": 49
+ }
+}

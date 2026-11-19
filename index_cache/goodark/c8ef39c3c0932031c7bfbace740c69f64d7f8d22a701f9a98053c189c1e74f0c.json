@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbrd5200s_5f07cc0b.md",
+ "supplier": "goodark",
+ "file_hash": "c8ef39c3c0932031c7bfbace740c69f64d7f8d22a701f9a98053c189c1e74f0c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:59:48+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRD5200S"
+  ],
+  "confidence": "high",
+  "seconds": 4.72,
+  "tokens_in": 1286,
+  "tokens_out": 43
+ }
+}

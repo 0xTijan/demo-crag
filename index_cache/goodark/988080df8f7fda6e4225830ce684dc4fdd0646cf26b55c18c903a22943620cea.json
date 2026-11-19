@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ses5vd1006m-2b_76096d68.md",
+ "supplier": "goodark",
+ "file_hash": "988080df8f7fda6e4225830ce684dc4fdd0646cf26b55c18c903a22943620cea",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:07+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "M5"
+  ],
+  "confidence": "high",
+  "seconds": 4.56,
+  "tokens_in": 1241,
+  "tokens_out": 37
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn30010ld_ed3dacdf.md",
+ "supplier": "goodark",
+ "file_hash": "50de170df66f1a3f0eec9e5cf3ed737a885db74afb7f88547411cf085b1e1389",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:51:51+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN30010LD"
+  ],
+  "confidence": "high",
+  "seconds": 6.17,
+  "tokens_in": 1778,
+  "tokens_out": 43
+ }
+}

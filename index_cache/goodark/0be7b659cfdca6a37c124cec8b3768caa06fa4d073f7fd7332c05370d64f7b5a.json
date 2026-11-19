@@ -1,0 +1,20 @@
+{
+ "file": "goodark/agmn05804dr_955d3e87.md",
+ "supplier": "goodark",
+ "file_hash": "0be7b659cfdca6a37c124cec8b3768caa06fa4d073f7fd7332c05370d64f7b5a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:12+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "AGMN05804DR"
+  ],
+  "confidence": "high",
+  "seconds": 6.16,
+  "tokens_in": 1792,
+  "tokens_out": 43
+ }
+}

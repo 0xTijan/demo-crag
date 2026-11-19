@@ -1,0 +1,24 @@
+{
+ "file": "goodark/l2f1-sl-thru-l2f7-sl_3f66cd4d.md",
+ "supplier": "goodark",
+ "file_hash": "9f1952d7affd2a32db43187210419aca559b78a533fe55316811029a420065ba",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:08+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "L2F1-SL",
+   "L2F2-SL",
+   "L2F3-SL",
+   "L2F4-SL",
+   "L2F5-SL"
+  ],
+  "confidence": "high",
+  "seconds": 7.45,
+  "tokens_in": 1582,
+  "tokens_out": 88
+ }
+}

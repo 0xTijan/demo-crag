@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms045065q1_0007c820.md",
+ "supplier": "goodark",
+ "file_hash": "6f721050daa255a0e7c1cad6680cb93a11e58e1ff1003a8caa4a00a45871a19a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SiC MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS045065Q1"
+  ],
+  "confidence": "high",
+  "seconds": 6.11,
+  "tokens_in": 1889,
+  "tokens_out": 47
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmdl914_0f0158d2.md",
+ "supplier": "goodark",
+ "file_hash": "e068bd2340ac64a37925decaaa25ee60e2272c036bc2c225f18f09066df064be",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:56+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "5D"
+  ],
+  "confidence": "high",
+  "seconds": 5.26,
+  "tokens_in": 1219,
+  "tokens_out": 36
+ }
+}

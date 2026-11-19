@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sbr20150ct_29199665.md",
+ "supplier": "goodark",
+ "file_hash": "a8b88c436f98b37f046af1d63e242c634adf0d86c4e062426bb17335c4879422",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:05:01+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SBR20150CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.72,
+  "tokens_in": 1317,
+  "tokens_out": 44
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbl005-thru-gbl10_ee26ba57.md",
+ "supplier": "goodark",
+ "file_hash": "f14c742fdad07b814e6edc5d1318d87e789ee84108c9de797b52453190510fa0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:23+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBL005",
+   "GBL01",
+   "GBL02",
+   "GBL04",
+   "GBL06"
+  ],
+  "confidence": "high",
+  "seconds": 7.41,
+  "tokens_in": 1970,
+  "tokens_out": 74
+ }
+}

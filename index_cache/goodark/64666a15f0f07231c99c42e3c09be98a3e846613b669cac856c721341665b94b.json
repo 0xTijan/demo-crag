@@ -1,0 +1,24 @@
+{
+ "file": "goodark/bzx79-series_8b7c4b8e.md",
+ "supplier": "goodark",
+ "file_hash": "64666a15f0f07231c99c42e3c09be98a3e846613b669cac856c721341665b94b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:25+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "BZX79-Y2V4",
+   "BZX79-Y2V7",
+   "BZX79-Y3V0",
+   "BZX79-Y3V3",
+   "BZX79-Y3V6"
+  ],
+  "confidence": "high",
+  "seconds": 7.83,
+  "tokens_in": 1787,
+  "tokens_out": 82
+ }
+}

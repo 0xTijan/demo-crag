@@ -1,0 +1,23 @@
+{
+ "file": "goodark/r1200-thru-r2000_ca4bcaac.md",
+ "supplier": "goodark",
+ "file_hash": "b4b7e57cbd3106ee20360d416ba485c4312b0bd0218edec8adc27490e1362b79",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:07+00:00",
+  "is_datasheet": true,
+  "label": "high voltage rectifier",
+  "family": true,
+  "part_numbers": [
+   "R1200",
+   "R1500",
+   "R1800",
+   "R2000"
+  ],
+  "confidence": "high",
+  "seconds": 5.92,
+  "tokens_in": 1525,
+  "tokens_out": 60
+ }
+}

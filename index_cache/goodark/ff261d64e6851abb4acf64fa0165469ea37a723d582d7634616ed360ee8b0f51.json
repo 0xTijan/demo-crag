@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gp20a-thru-gp20m_9c078b04.md",
+ "supplier": "goodark",
+ "file_hash": "ff261d64e6851abb4acf64fa0165469ea37a723d582d7634616ed360ee8b0f51",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:12+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GP20A",
+   "GP20B",
+   "GP20D",
+   "GP20G",
+   "GP20J"
+  ],
+  "confidence": "high",
+  "seconds": 6.37,
+  "tokens_in": 1547,
+  "tokens_out": 72
+ }
+}

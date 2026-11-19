@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sl25b-thru-sl210b_0fecf9d4.md",
+ "supplier": "goodark",
+ "file_hash": "bed99e49f514830d99a5b6ceea570c9971ede028327bfc0f139104bde558afa4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:35+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL25B",
+   "SL26B",
+   "SL27B",
+   "SL28B",
+   "SL29B"
+  ],
+  "confidence": "high",
+  "seconds": 6.42,
+  "tokens_in": 1547,
+  "tokens_out": 71
+ }
+}

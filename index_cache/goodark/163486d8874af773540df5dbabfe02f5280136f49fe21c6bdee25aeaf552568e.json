@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n5391-thru-1n5399_115c2f1d.md",
+ "supplier": "goodark",
+ "file_hash": "163486d8874af773540df5dbabfe02f5280136f49fe21c6bdee25aeaf552568e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:59+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "1N5391",
+   "1N5392",
+   "1N5393",
+   "1N5394",
+   "1N5395"
+  ],
+  "confidence": "high",
+  "seconds": 7.33,
+  "tokens_in": 1559,
+  "tokens_out": 104
+ }
+}

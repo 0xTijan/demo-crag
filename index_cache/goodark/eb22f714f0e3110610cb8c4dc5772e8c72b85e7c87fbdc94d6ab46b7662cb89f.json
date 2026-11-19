@@ -1,0 +1,23 @@
+{
+ "file": "goodark/bat54-a-c-s_770e5442.md",
+ "supplier": "goodark",
+ "file_hash": "eb22f714f0e3110610cb8c4dc5772e8c72b85e7c87fbdc94d6ab46b7662cb89f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": true,
+  "part_numbers": [
+   "BAT54",
+   "BAT54A",
+   "BAT54C",
+   "BAT54S"
+  ],
+  "confidence": "high",
+  "seconds": 4.77,
+  "tokens_in": 1118,
+  "tokens_out": 57
+ }
+}

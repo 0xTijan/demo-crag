@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bav199_84cf9589.md",
+ "supplier": "goodark",
+ "file_hash": "7c4aa0670a0258e590998dad709a6fc05867bf73cbb80a915eeccbf009fa06c3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:38+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "K52"
+  ],
+  "confidence": "high",
+  "seconds": 5.16,
+  "tokens_in": 1538,
+  "tokens_out": 37
+ }
+}

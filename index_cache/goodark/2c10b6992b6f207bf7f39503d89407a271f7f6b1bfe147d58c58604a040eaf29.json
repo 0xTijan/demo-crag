@@ -1,0 +1,20 @@
+{
+ "file": "goodark/abaw56_4a09c346.md",
+ "supplier": "goodark",
+ "file_hash": "2c10b6992b6f207bf7f39503d89407a271f7f6b1bfe147d58c58604a040eaf29",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:41:22+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Epitaxial Planar Switching Diode",
+  "family": false,
+  "part_numbers": [
+   "ABAW56"
+  ],
+  "confidence": "high",
+  "seconds": 6.41,
+  "tokens_in": 1398,
+  "tokens_out": 46
+ }
+}

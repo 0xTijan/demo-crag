@@ -1,0 +1,23 @@
+{
+ "file": "goodark/ask17-thru-ask1b_6e7e7494.md",
+ "supplier": "goodark",
+ "file_hash": "cc25c53710883718e846e456f397f3d66d733d46e7d620e68600660259c7f423",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:01+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ASK17",
+   "ASK18",
+   "ASK19",
+   "ASK1B"
+  ],
+  "confidence": "high",
+  "seconds": 6.29,
+  "tokens_in": 1539,
+  "tokens_out": 54
+ }
+}

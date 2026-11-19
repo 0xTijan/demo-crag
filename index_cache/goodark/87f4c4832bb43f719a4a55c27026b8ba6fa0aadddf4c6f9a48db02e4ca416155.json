@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1n957b-thru-1n984b_056d055f.md",
+ "supplier": "goodark",
+ "file_hash": "87f4c4832bb43f719a4a55c27026b8ba6fa0aadddf4c6f9a48db02e4ca416155",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:13+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "1N957B",
+   "1N958B",
+   "1N959B",
+   "1N960B",
+   "1N961B"
+  ],
+  "confidence": "high",
+  "seconds": 6.9,
+  "tokens_in": 1715,
+  "tokens_out": 72
+ }
+}

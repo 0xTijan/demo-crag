@@ -1,0 +1,22 @@
+{
+ "file": "goodark/lsl22-thru-lsl24_3515d68a.md",
+ "supplier": "goodark",
+ "file_hash": "d0bb41622bf7c31c349fa90a081f8449ff44eb789e52ea502c1361088c70cb0f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:06+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LSL22",
+   "LSL23",
+   "LSL24"
+  ],
+  "confidence": "high",
+  "seconds": 5.55,
+  "tokens_in": 1410,
+  "tokens_out": 52
+ }
+}

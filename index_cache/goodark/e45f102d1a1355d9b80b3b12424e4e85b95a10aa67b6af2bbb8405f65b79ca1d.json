@@ -1,0 +1,20 @@
+{
+ "file": "goodark/lsl36_379d4072.md",
+ "supplier": "goodark",
+ "file_hash": "e45f102d1a1355d9b80b3b12424e4e85b95a10aa67b6af2bbb8405f65b79ca1d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:08+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "L36"
+  ],
+  "confidence": "high",
+  "seconds": 5.71,
+  "tokens_in": 1317,
+  "tokens_out": 39
+ }
+}

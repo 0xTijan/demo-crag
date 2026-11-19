@@ -1,0 +1,22 @@
+{
+ "file": "goodark/kbjl6ja-thru-kbjl6ma_a1b038fe.md",
+ "supplier": "goodark",
+ "file_hash": "4584c5f7892e6e7ad3f6b0c43ce3ebc25318cf6a36ff6a4df4e0caeb6ea5dc84",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:56+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBJL6JA",
+   "KBJL6KA",
+   "KBJL6MA"
+  ],
+  "confidence": "high",
+  "seconds": 6.46,
+  "tokens_in": 1714,
+  "tokens_out": 51
+ }
+}

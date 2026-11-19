@@ -1,0 +1,24 @@
+{
+ "file": "goodark/3kp5-0-thru-3kp220ca_d3c18cec.md",
+ "supplier": "goodark",
+ "file_hash": "91366f9e6f4c75984736ec5f7e64883090610966b6242988f2d5f1e0c678afd0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:39+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "3KP5.0",
+   "3KP5.0A",
+   "3KP6.0",
+   "3KP6.0A",
+   "3KP6.5"
+  ],
+  "confidence": "high",
+  "seconds": 8.24,
+  "tokens_in": 1860,
+  "tokens_out": 69
+ }
+}

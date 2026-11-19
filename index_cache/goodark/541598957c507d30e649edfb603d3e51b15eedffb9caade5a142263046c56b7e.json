@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbrf1045_b09d89bf.md",
+ "supplier": "goodark",
+ "file_hash": "541598957c507d30e649edfb603d3e51b15eedffb9caade5a142263046c56b7e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:00+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRF1045"
+  ],
+  "confidence": "high",
+  "seconds": 4.63,
+  "tokens_in": 1225,
+  "tokens_out": 42
+ }
+}

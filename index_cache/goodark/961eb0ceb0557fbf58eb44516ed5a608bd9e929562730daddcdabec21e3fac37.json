@@ -1,0 +1,23 @@
+{
+ "file": "goodark/by296-thru-by299_b717b916.md",
+ "supplier": "goodark",
+ "file_hash": "961eb0ceb0557fbf58eb44516ed5a608bd9e929562730daddcdabec21e3fac37",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:06+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "BY296",
+   "BY297",
+   "BY298",
+   "BY299"
+  ],
+  "confidence": "high",
+  "seconds": 6.0,
+  "tokens_in": 1560,
+  "tokens_out": 56
+ }
+}

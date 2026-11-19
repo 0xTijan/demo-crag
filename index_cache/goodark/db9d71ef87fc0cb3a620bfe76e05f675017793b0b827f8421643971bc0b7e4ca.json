@@ -1,0 +1,24 @@
+{
+ "file": "goodark/amm1zb-series_f1bf1212.md",
+ "supplier": "goodark",
+ "file_hash": "db9d71ef87fc0cb3a620bfe76e05f675017793b0b827f8421643971bc0b7e4ca",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:28+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "AMM1ZB4",
+   "AMM1ZB7",
+   "AMM1Z30",
+   "AMM1Z33",
+   "AMM1Z36"
+  ],
+  "confidence": "high",
+  "seconds": 5.45,
+  "tokens_in": 1611,
+  "tokens_out": 72
+ }
+}

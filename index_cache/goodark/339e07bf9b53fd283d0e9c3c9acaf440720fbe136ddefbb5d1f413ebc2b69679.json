@@ -1,0 +1,24 @@
+{
+ "file": "goodark/10a05-thru-10a10_955190a7.md",
+ "supplier": "goodark",
+ "file_hash": "339e07bf9b53fd283d0e9c3c9acaf440720fbe136ddefbb5d1f413ebc2b69679",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:21+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "10A05",
+   "10A1",
+   "10A2",
+   "10A4",
+   "10A6"
+  ],
+  "confidence": "high",
+  "seconds": 1.79,
+  "tokens_in": 1578,
+  "tokens_out": 61
+ }
+}

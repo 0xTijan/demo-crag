@@ -1,0 +1,22 @@
+{
+ "file": "goodark/murs420-thru-murs460_973fca0c.md",
+ "supplier": "goodark",
+ "file_hash": "52911febbddca181aef82a6af7dfbc6a41b3b07f7867262bfe94ef93243c5954",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:24+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast rectifier",
+  "family": true,
+  "part_numbers": [
+   "MURS420",
+   "MURS440",
+   "MURS460"
+  ],
+  "confidence": "high",
+  "seconds": 5.37,
+  "tokens_in": 1513,
+  "tokens_out": 57
+ }
+}

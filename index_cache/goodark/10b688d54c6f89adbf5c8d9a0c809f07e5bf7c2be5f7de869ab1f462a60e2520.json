@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gs60d120cp_05bfd8ef.md",
+ "supplier": "goodark",
+ "file_hash": "10b688d54c6f89adbf5c8d9a0c809f07e5bf7c2be5f7de869ab1f462a60e2520",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:24+00:00",
+  "is_datasheet": true,
+  "label": "Silicon Carbide Schottky Diode",
+  "family": false,
+  "part_numbers": [
+   "GS60D120CP"
+  ],
+  "confidence": "high",
+  "seconds": 6.1,
+  "tokens_in": 1672,
+  "tokens_out": 47
+ }
+}

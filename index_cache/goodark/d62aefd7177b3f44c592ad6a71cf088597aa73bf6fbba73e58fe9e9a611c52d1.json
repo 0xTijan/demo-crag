@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rgp30a-thru-rgp30m_82bfb6b6.md",
+ "supplier": "goodark",
+ "file_hash": "d62aefd7177b3f44c592ad6a71cf088597aa73bf6fbba73e58fe9e9a611c52d1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:26+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "RGP30A",
+   "RGP30B",
+   "RGP30D",
+   "RGP30G",
+   "RGP30J"
+  ],
+  "confidence": "high",
+  "seconds": 7.6,
+  "tokens_in": 1549,
+  "tokens_out": 81
+ }
+}

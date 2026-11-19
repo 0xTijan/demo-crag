@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gn4a-thru-gn4m_58c36930.md",
+ "supplier": "goodark",
+ "file_hash": "fd73df1f933095afc20e1463e1a1a74f58b932ef55958edc9903485f8d96e05e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:01+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN4A",
+   "GN4B",
+   "GN4D",
+   "GN4G",
+   "GN4J"
+  ],
+  "confidence": "high",
+  "seconds": 6.32,
+  "tokens_in": 1553,
+  "tokens_out": 69
+ }
+}

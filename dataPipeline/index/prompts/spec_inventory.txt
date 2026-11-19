@@ -1,0 +1,25 @@
+You list the specifications that an electronic component datasheet gives. You get the specification pages of
+one datasheet, converted to Markdown (tables are preserved).
+
+Answer with JSON only:
+{
+  "specs": [
+    {"name": "...", "symbol": "...", "unit": "...", "stat": "...", "conditions": "...", "example": "..."},
+    ...
+  ]
+}
+
+- One entry per distinct specification. The same parameter at test conditions that change its value
+  meaningfully is a separate entry (e.g. RDS(on) at VGS=10 V and RDS(on) at VGS=4.5 V).
+- Include: absolute maximum ratings, electrical characteristics, thermal data, mechanical data (package /
+  case, size, pin count, mounting type), environmental data (operating temperature range, qualifications such
+  as AEC-Q101, RoHS) and the options of the part number (package, tolerance, voltage, dielectric, ...).
+- Leave out: test circuits, curves and figures, tape and reel, soldering profiles, package drawing dimensions
+  (A, A1, b, e, ...), company information, revision history.
+- "name": as printed, without footnote numbers. "symbol": as printed, or "".
+- "unit": as printed, or "" for text values.
+- "stat": "min", "typ" or "max" when only that one is given; "range" when both a min and a max are given;
+  "value" for a single rated or nominal value, or a text value.
+- "conditions": short, as printed, or "" (e.g. "VGS=10V, ID=500mA, TA=25°C").
+- "example": one value as printed, for one part (e.g. "60", "-55 to 150", "TO-92", "X7R").
+- At most 100 entries. If there are more, keep the ones engineers use to choose or replace a part.

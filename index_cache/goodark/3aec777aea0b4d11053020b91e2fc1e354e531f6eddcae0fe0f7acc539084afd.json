@@ -1,0 +1,24 @@
+{
+ "file": "goodark/r12a-thru-r12m_1ebdd0fc.md",
+ "supplier": "goodark",
+ "file_hash": "3aec777aea0b4d11053020b91e2fc1e354e531f6eddcae0fe0f7acc539084afd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:10+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "R12A",
+   "R12B",
+   "R12D",
+   "R12G",
+   "R12J"
+  ],
+  "confidence": "high",
+  "seconds": 6.35,
+  "tokens_in": 1574,
+  "tokens_out": 74
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "file": "goodark/sgpd220s-thru-sgpd2bs_7ebb161b.md",
+ "supplier": "goodark",
+ "file_hash": "e825d89ed3b3c94fc4a32acf375af1e694eb9ceb416da79e16719016066af922",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:33+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGPD220S",
+   "SGPD240S",
+   "SGPD260S",
+   "SGPD2BS"
+  ],
+  "confidence": "high",
+  "seconds": 5.79,
+  "tokens_in": 1555,
+  "tokens_out": 64
+ }
+}

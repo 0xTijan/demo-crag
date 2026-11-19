@@ -1,0 +1,24 @@
+{
+ "file": "goodark/df1502s-thru-df1510s_7e4549e7.md",
+ "supplier": "goodark",
+ "file_hash": "3100d00ebf6202fbbe34330a330b41cbe9528b4ec69211054d98018b7a3716a8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:46+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DF1502S",
+   "DF1504S",
+   "DF1506S",
+   "DF1508S",
+   "DF1510S"
+  ],
+  "confidence": "high",
+  "seconds": 7.21,
+  "tokens_in": 1848,
+  "tokens_out": 71
+ }
+}

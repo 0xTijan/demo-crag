@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her2001-thru-her2007_33ff54ca.md",
+ "supplier": "goodark",
+ "file_hash": "0592be471841d78d62f0fa9b8434fa0e37b4a8ae559d9aa284842425e45a629d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:37+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER2001",
+   "HER2002",
+   "HER2003",
+   "HER2004",
+   "HER2005"
+  ],
+  "confidence": "high",
+  "seconds": 7.7,
+  "tokens_in": 1559,
+  "tokens_out": 79
+ }
+}

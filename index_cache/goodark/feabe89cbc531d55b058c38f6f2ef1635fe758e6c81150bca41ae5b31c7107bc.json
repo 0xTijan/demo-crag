@@ -1,0 +1,20 @@
+{
+ "file": "goodark/lsl56_a42a96ed.md",
+ "supplier": "goodark",
+ "file_hash": "feabe89cbc531d55b058c38f6f2ef1635fe758e6c81150bca41ae5b31c7107bc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:12+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "L56"
+  ],
+  "confidence": "high",
+  "seconds": 4.99,
+  "tokens_in": 1243,
+  "tokens_out": 39
+ }
+}

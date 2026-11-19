@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbrd10150ct_74c016c3.md",
+ "supplier": "goodark",
+ "file_hash": "2136cea56627638bdcabf9dce582520fa962ccf0389829a9984d4fc60546dafc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:59:37+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRD10150CT"
+  ],
+  "confidence": "high",
+  "seconds": 4.71,
+  "tokens_in": 1320,
+  "tokens_out": 44
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/mr850-thru-mr858_13f95eea.md",
+ "supplier": "goodark",
+ "file_hash": "ab2b14c8ec94278900aca4ecd28fbaa637948b22c4628c36f9a6a0b9800141c6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:01:05+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "MR850",
+   "MR851",
+   "MR852",
+   "MR854",
+   "MR856"
+  ],
+  "confidence": "high",
+  "seconds": 6.92,
+  "tokens_in": 1548,
+  "tokens_out": 68
+ }
+}

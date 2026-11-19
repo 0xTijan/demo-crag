@@ -1,0 +1,24 @@
+{
+ "file": "goodark/bzt52bxx_19e54aa0.md",
+ "supplier": "goodark",
+ "file_hash": "46753da59330f17ea050fdc15dffe5d9809c879147ba415a9ac4a3f426a48c8f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:10+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "BZT52B2V4",
+   "BZT52B2V7",
+   "BZT52B3V0",
+   "BZT52B3V3",
+   "BZT52B3V6"
+  ],
+  "confidence": "high",
+  "seconds": 7.52,
+  "tokens_in": 1653,
+  "tokens_out": 87
+ }
+}

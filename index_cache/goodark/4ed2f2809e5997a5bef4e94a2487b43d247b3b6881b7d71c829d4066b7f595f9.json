@@ -1,0 +1,20 @@
+{
+ "file": "goodark/1ss226_69d640db.md",
+ "supplier": "goodark",
+ "file_hash": "4ed2f2809e5997a5bef4e94a2487b43d247b3b6881b7d71c829d4066b7f595f9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:22+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "C3"
+  ],
+  "confidence": "high",
+  "seconds": 6.23,
+  "tokens_in": 1200,
+  "tokens_out": 36
+ }
+}

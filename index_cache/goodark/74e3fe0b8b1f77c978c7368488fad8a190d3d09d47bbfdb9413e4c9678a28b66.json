@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bas85_5e688963.md",
+ "supplier": "goodark",
+ "file_hash": "74e3fe0b8b1f77c978c7368488fad8a190d3d09d47bbfdb9413e4c9678a28b66",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:14+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "BAS85"
+  ],
+  "confidence": "high",
+  "seconds": 5.44,
+  "tokens_in": 1320,
+  "tokens_out": 39
+ }
+}

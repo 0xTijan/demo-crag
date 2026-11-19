@@ -1,0 +1,22 @@
+{
+ "file": "goodark/sl12a-thru-sl14a_e0a74af4.md",
+ "supplier": "goodark",
+ "file_hash": "fa758cc50251e149723a44aeb5ac2d3c46c96853b028587c91c86aa185c2fccf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:26+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL12A",
+   "SL13A",
+   "SL14A"
+  ],
+  "confidence": "high",
+  "seconds": 5.77,
+  "tokens_in": 1409,
+  "tokens_out": 52
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ask3b5a_b8111d80.md",
+ "supplier": "goodark",
+ "file_hash": "da07162058f4655eb5bb8d59d9e7e95122a1fcf67e65adf0c3d96318f84eafb1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:18+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "ASK3B5A"
+  ],
+  "confidence": "high",
+  "seconds": 5.92,
+  "tokens_in": 1193,
+  "tokens_out": 41
+ }
+}

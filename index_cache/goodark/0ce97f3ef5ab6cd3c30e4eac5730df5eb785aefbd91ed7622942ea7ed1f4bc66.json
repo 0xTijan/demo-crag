@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbj10a-thru-kbj10m_4a22a4af.md",
+ "supplier": "goodark",
+ "file_hash": "0ce97f3ef5ab6cd3c30e4eac5730df5eb785aefbd91ed7622942ea7ed1f4bc66",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:27+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "KBJ10A",
+   "KBJ10B",
+   "KBJ10D",
+   "KBJ10G",
+   "KBJ10J"
+  ],
+  "confidence": "high",
+  "seconds": 8.27,
+  "tokens_in": 2043,
+  "tokens_out": 81
+ }
+}

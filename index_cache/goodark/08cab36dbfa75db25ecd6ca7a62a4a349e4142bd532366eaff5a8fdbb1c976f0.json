@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her1001-thru-her1007_25231e97.md",
+ "supplier": "goodark",
+ "file_hash": "08cab36dbfa75db25ecd6ca7a62a4a349e4142bd532366eaff5a8fdbb1c976f0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:26+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER1001",
+   "HER1002",
+   "HER1003",
+   "HER1004",
+   "HER1005"
+  ],
+  "confidence": "high",
+  "seconds": 6.5,
+  "tokens_in": 1559,
+  "tokens_out": 83
+ }
+}

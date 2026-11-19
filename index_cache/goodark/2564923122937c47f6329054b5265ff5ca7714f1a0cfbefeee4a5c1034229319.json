@@ -1,0 +1,20 @@
+{
+ "file": "goodark/murd880s_6c9279a5.md",
+ "supplier": "goodark",
+ "file_hash": "2564923122937c47f6329054b5265ff5ca7714f1a0cfbefeee4a5c1034229319",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:15+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURD880S"
+  ],
+  "confidence": "high",
+  "seconds": 4.83,
+  "tokens_in": 1334,
+  "tokens_out": 43
+ }
+}

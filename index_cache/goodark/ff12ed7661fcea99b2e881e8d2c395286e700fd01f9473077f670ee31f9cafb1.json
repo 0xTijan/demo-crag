@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms023075q_41299895.md",
+ "supplier": "goodark",
+ "file_hash": "ff12ed7661fcea99b2e881e8d2c395286e700fd01f9473077f670ee31f9cafb1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:18+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SiC MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS023075Q"
+  ],
+  "confidence": "high",
+  "seconds": 6.28,
+  "tokens_in": 1869,
+  "tokens_out": 46
+ }
+}

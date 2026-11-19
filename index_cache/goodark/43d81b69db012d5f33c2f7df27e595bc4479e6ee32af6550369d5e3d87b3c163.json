@@ -1,0 +1,20 @@
+{
+ "file": "goodark/s9013_f23ad6dd.md",
+ "supplier": "goodark",
+ "file_hash": "43d81b69db012d5f33c2f7df27e595bc4479e6ee32af6550369d5e3d87b3c163",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:44+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "J3"
+  ],
+  "confidence": "high",
+  "seconds": 5.17,
+  "tokens_in": 1508,
+  "tokens_out": 35
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/lb201su-thru-lb2010su_f6b2af0a.md",
+ "supplier": "goodark",
+ "file_hash": "74a7deb46314d36c3954006d25e08069a387812ca33aea5fdd985847e7626dc9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:37+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "LB201SU",
+   "LB202SU",
+   "LB204SU",
+   "LB206SU",
+   "LB208SU"
+  ],
+  "confidence": "high",
+  "seconds": 8.28,
+  "tokens_in": 2038,
+  "tokens_out": 74
+ }
+}

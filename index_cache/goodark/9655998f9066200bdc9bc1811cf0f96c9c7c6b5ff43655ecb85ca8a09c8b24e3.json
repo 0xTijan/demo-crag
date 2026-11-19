@@ -1,0 +1,24 @@
+{
+ "file": "goodark/hs3a-thru-hs3m_778ed647.md",
+ "supplier": "goodark",
+ "file_hash": "9655998f9066200bdc9bc1811cf0f96c9c7c6b5ff43655ecb85ca8a09c8b24e3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:02+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "HS3A",
+   "HS3B",
+   "HS3D",
+   "HS3G",
+   "HS3J"
+  ],
+  "confidence": "high",
+  "seconds": 6.59,
+  "tokens_in": 1554,
+  "tokens_out": 69
+ }
+}

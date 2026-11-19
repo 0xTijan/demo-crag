@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her151g-thru-her158g_306cb3cf.md",
+ "supplier": "goodark",
+ "file_hash": "53f133e6abacc00b28d0bdb1ead731546c1a73b304896637fa039f8f56aea88e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:35+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER151G",
+   "HER152G",
+   "HER153G",
+   "HER154G",
+   "HER155G"
+  ],
+  "confidence": "high",
+  "seconds": 7.74,
+  "tokens_in": 1622,
+  "tokens_out": 86
+ }
+}

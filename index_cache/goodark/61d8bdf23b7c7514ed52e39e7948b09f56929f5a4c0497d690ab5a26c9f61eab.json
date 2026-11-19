@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rl251-thru-rl257_974bc897.md",
+ "supplier": "goodark",
+ "file_hash": "61d8bdf23b7c7514ed52e39e7948b09f56929f5a4c0497d690ab5a26c9f61eab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:35+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "RL251",
+   "RL252",
+   "RL253",
+   "RL254",
+   "RL255"
+  ],
+  "confidence": "high",
+  "seconds": 6.54,
+  "tokens_in": 1565,
+  "tokens_out": 72
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodark/mmdt3904_85964f53.md",
+ "supplier": "goodark",
+ "file_hash": "b136f8ed020dcf6bca778fc82b3b108e169eaabe18081d9b6cc44cb82bd4e75c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:58+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "MMDT3904",
+   "MMDT3906",
+   "K6N"
+  ],
+  "confidence": "high",
+  "seconds": 5.68,
+  "tokens_in": 1537,
+  "tokens_out": 54
+ }
+}

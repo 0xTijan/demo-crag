@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms230080d_a99436e8.md",
+ "supplier": "goodark",
+ "file_hash": "5e3da97bd2b8827bf9798f09ca3946c1b32bd09f577770ef2c77f58c1c2c579d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SiC MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS230080D"
+  ],
+  "confidence": "high",
+  "seconds": 5.76,
+  "tokens_in": 1874,
+  "tokens_out": 46
+ }
+}

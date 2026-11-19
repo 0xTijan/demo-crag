@@ -1,0 +1,22 @@
+{
+ "file": "goodark/fsl32-thru-fsl34_960b39c7.md",
+ "supplier": "goodark",
+ "file_hash": "7dbbe73df0ca3d96ee45f2d06169c8703b9fa6a84e25d26844b46480d96944dc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:30+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FSL32",
+   "FSL33",
+   "FSL34"
+  ],
+  "confidence": "high",
+  "seconds": 5.18,
+  "tokens_in": 1396,
+  "tokens_out": 52
+ }
+}

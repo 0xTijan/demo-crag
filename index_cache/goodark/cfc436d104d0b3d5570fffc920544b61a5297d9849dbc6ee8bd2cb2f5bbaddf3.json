@@ -1,0 +1,21 @@
+{
+ "file": "goodark/gl2506-thru-gl2508_1be20f2e.md",
+ "supplier": "goodark",
+ "file_hash": "cfc436d104d0b3d5570fffc920544b61a5297d9849dbc6ee8bd2cb2f5bbaddf3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:15+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "GL2506",
+   "GL2508"
+  ],
+  "confidence": "high",
+  "seconds": 5.98,
+  "tokens_in": 1644,
+  "tokens_out": 44
+ }
+}

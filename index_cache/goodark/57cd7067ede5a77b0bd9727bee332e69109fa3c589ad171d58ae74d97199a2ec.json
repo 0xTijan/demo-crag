@@ -1,0 +1,22 @@
+{
+ "file": "goodark/ps12-thru-ps14_61ff93a2.md",
+ "supplier": "goodark",
+ "file_hash": "57cd7067ede5a77b0bd9727bee332e69109fa3c589ad171d58ae74d97199a2ec",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:45+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PS12",
+   "PS13",
+   "PS14"
+  ],
+  "confidence": "high",
+  "seconds": 6.33,
+  "tokens_in": 1412,
+  "tokens_out": 49
+ }
+}

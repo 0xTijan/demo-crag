@@ -1,0 +1,20 @@
+{
+ "file": "goodark/bav16w_ff7ed226.md",
+ "supplier": "goodark",
+ "file_hash": "1fd67b36e356fa84db30d1d472479b8d101de4f9eb116fbc6ef2ad3bb2504091",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:35+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "T6"
+  ],
+  "confidence": "high",
+  "seconds": 4.77,
+  "tokens_in": 1375,
+  "tokens_out": 36
+ }
+}

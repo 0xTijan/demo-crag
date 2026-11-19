@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ses5vd1006sh-2b_d9c7cf6f.md",
+ "supplier": "goodark",
+ "file_hash": "40d9d73de6af6c3b30da544c28ce9d350ef371dff13d89031b1c5e2a5b01fe13",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:08+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "SES5VD1006SH-2B"
+  ],
+  "confidence": "high",
+  "seconds": 4.63,
+  "tokens_in": 1253,
+  "tokens_out": 46
+ }
+}

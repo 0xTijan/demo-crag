@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbj15au-thru-gbj15mu_80b0be39.md",
+ "supplier": "goodark",
+ "file_hash": "da69486f85fe460209802c099be62a0334bd5557014d5b876db6245832bf71ab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:38+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJ15AU",
+   "GBJ15BU",
+   "GBJ15DU",
+   "GBJ15GU",
+   "GBJ15JU"
+  ],
+  "confidence": "high",
+  "seconds": 8.15,
+  "tokens_in": 2079,
+  "tokens_out": 85
+ }
+}

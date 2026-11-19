@@ -1,0 +1,24 @@
+{
+ "file": "goodark/e92203a-thru-e92207a_b9e125d8.md",
+ "supplier": "goodark",
+ "file_hash": "110742fdecf060c3b191acd1d60ca4f6039985585e0cc70c5ceedfb9e654519a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:54+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "E92203A",
+   "E92204A",
+   "E92205A",
+   "E92206A",
+   "E92207A"
+  ],
+  "confidence": "high",
+  "seconds": 7.38,
+  "tokens_in": 1920,
+  "tokens_out": 76
+ }
+}

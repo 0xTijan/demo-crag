@@ -1,0 +1,20 @@
+{
+ "file": "goodark/sgc201bsd_4270b1d1.md",
+ "supplier": "goodark",
+ "file_hash": "24e35ee59bfdd12c9e88d007485e99d5ef8c76a95f27640d1b1e742d5633931a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:16+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SGC201BSD"
+  ],
+  "confidence": "high",
+  "seconds": 6.72,
+  "tokens_in": 1527,
+  "tokens_out": 42
+ }
+}

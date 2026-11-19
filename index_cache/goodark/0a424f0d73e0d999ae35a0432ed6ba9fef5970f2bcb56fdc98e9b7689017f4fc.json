@@ -1,0 +1,24 @@
+{
+ "file": "goodark/1k2-thru-1k6_0dc18d9a.md",
+ "supplier": "goodark",
+ "file_hash": "0a424f0d73e0d999ae35a0432ed6ba9fef5970f2bcb56fdc98e9b7689017f4fc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:39:33+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "1K2",
+   "1K3",
+   "1K4",
+   "1K5",
+   "1K6"
+  ],
+  "confidence": "high",
+  "seconds": 7.15,
+  "tokens_in": 1520,
+  "tokens_out": 59
+ }
+}

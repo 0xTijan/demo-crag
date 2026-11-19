@@ -1,0 +1,21 @@
+{
+ "file": "goodark/gl1506a-thru-gl1508a_b57b4abf.md",
+ "supplier": "goodark",
+ "file_hash": "f59bae332795448f2456ddd7ab60cc37966633d945a097c046b3236ebba81e7c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:11+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "GL1506A",
+   "GL1508A"
+  ],
+  "confidence": "high",
+  "seconds": 5.69,
+  "tokens_in": 1632,
+  "tokens_out": 48
+ }
+}

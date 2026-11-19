@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mmbd914_9df6aae4.md",
+ "supplier": "goodark",
+ "file_hash": "13c52c3832748c0cba2ba29ff9aac01fef88db60bf9688d2631a81bbb1ed0b56",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:00:34+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "5D"
+  ],
+  "confidence": "high",
+  "seconds": 5.46,
+  "tokens_in": 1229,
+  "tokens_out": 36
+ }
+}

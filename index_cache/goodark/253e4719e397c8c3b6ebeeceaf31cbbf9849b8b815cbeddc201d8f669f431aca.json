@@ -1,0 +1,24 @@
+{
+ "file": "goodark/her2001g-thru-her2007g_00ccec6c.md",
+ "supplier": "goodark",
+ "file_hash": "253e4719e397c8c3b6ebeeceaf31cbbf9849b8b815cbeddc201d8f669f431aca",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:55:39+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER2001G",
+   "HER2002G",
+   "HER2003G",
+   "HER2004G",
+   "HER2005G"
+  ],
+  "confidence": "high",
+  "seconds": 7.75,
+  "tokens_in": 1564,
+  "tokens_out": 90
+ }
+}

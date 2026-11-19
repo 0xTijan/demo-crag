@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ses17vt23-3b_8efc87e0.md",
+ "supplier": "goodark",
+ "file_hash": "5c7caa629be6f03f0e81e8daf63505b2ced959c61d559db3d2a6f887b855dc1d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:02+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": false,
+  "part_numbers": [
+   "SES17VT23-3B"
+  ],
+  "confidence": "high",
+  "seconds": 5.3,
+  "tokens_in": 1791,
+  "tokens_out": 43
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/fr201g-thru-fr207g_2ef09fd8.md",
+ "supplier": "goodark",
+ "file_hash": "b45eec2bea4ae5e36d601b975d763bd87082e908a8c4a773246354fc4f98ffbd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:02+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "FR201G",
+   "FR202G",
+   "FR203G",
+   "FR204G",
+   "FR205G"
+  ],
+  "confidence": "high",
+  "seconds": 6.25,
+  "tokens_in": 1540,
+  "tokens_out": 81
+ }
+}

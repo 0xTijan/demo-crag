@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn01203lk_5f6816f8.md",
+ "supplier": "goodark",
+ "file_hash": "e95fa585d616ea12b3415e35fc1fefcb67930f5042f2b513f47e7a0381f8b342",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:50:26+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN01203LK"
+  ],
+  "confidence": "high",
+  "seconds": 6.51,
+  "tokens_in": 1845,
+  "tokens_out": 43
+ }
+}

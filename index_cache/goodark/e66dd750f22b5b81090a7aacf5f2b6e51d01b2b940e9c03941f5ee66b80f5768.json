@@ -1,0 +1,24 @@
+{
+ "file": "goodark/mb2s-thru-mb10s_5a4f212c.md",
+ "supplier": "goodark",
+ "file_hash": "e66dd750f22b5b81090a7aacf5f2b6e51d01b2b940e9c03941f5ee66b80f5768",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "MB2S",
+   "MB4S",
+   "MB6S",
+   "MB8S",
+   "MB10S"
+  ],
+  "confidence": "high",
+  "seconds": 6.99,
+  "tokens_in": 1864,
+  "tokens_out": 60
+ }
+}

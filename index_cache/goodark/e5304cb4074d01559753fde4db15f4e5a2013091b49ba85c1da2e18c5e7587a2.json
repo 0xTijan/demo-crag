@@ -1,0 +1,20 @@
+{
+ "file": "goodark/rb551v-30_fe0fa20f.md",
+ "supplier": "goodark",
+ "file_hash": "e5304cb4074d01559753fde4db15f4e5a2013091b49ba85c1da2e18c5e7587a2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:15+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "SOD-323"
+  ],
+  "confidence": "high",
+  "seconds": 4.48,
+  "tokens_in": 1043,
+  "tokens_out": 42
+ }
+}

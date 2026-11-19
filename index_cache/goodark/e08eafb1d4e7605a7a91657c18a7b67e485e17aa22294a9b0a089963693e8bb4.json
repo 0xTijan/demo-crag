@@ -1,0 +1,24 @@
+{
+ "file": "goodark/l3f1-thru-l3f7_8ff4d1a9.md",
+ "supplier": "goodark",
+ "file_hash": "e08eafb1d4e7605a7a91657c18a7b67e485e17aa22294a9b0a089963693e8bb4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:57:19+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "L3F1",
+   "L3F2",
+   "L3F3",
+   "L3F4",
+   "L3F5"
+  ],
+  "confidence": "high",
+  "seconds": 7.46,
+  "tokens_in": 1557,
+  "tokens_out": 74
+ }
+}

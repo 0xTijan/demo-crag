@@ -1,0 +1,24 @@
+{
+ "file": "goodark/by500-50-thru-by500-1000_ad32c543.md",
+ "supplier": "goodark",
+ "file_hash": "97c6be55767f8a1e955656bfbcb2b392f8712b20f55f0635ae0866739af557fe",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:08+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "BY500-50",
+   "BY500-100",
+   "BY500-200",
+   "BY500-400",
+   "BY500-600"
+  ],
+  "confidence": "high",
+  "seconds": 6.78,
+  "tokens_in": 1599,
+  "tokens_out": 102
+ }
+}

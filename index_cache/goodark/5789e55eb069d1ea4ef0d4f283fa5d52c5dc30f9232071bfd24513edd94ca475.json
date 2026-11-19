@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbpc50005-w-thru-gbpc5010-w_4b394790.md",
+ "supplier": "goodark",
+ "file_hash": "5789e55eb069d1ea4ef0d4f283fa5d52c5dc30f9232071bfd24513edd94ca475",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:40+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBPC50005",
+   "GBPC5001",
+   "GBPC5002",
+   "GBPC5004",
+   "GBPC5006"
+  ],
+  "confidence": "high",
+  "seconds": 8.46,
+  "tokens_in": 2056,
+  "tokens_out": 72
+ }
+}

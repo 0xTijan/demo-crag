@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ps26_09ac8277.md",
+ "supplier": "goodark",
+ "file_hash": "9dcc809404cbbf9d513744bfa88577e946834c15d2b83dacbde777c1b971bb8f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:51+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "PS26"
+  ],
+  "confidence": "high",
+  "seconds": 5.39,
+  "tokens_in": 1193,
+  "tokens_out": 39
+ }
+}

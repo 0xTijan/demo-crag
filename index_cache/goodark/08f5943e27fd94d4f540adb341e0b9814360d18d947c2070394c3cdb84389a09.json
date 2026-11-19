@@ -1,0 +1,24 @@
+{
+ "file": "goodark/mb2st-thru-mb10st_a6b2f44c.md",
+ "supplier": "goodark",
+ "file_hash": "08f5943e27fd94d4f540adb341e0b9814360d18d947c2070394c3cdb84389a09",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:27+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "MB2ST",
+   "MB4ST",
+   "MB6ST",
+   "MB8ST",
+   "MB10ST"
+  ],
+  "confidence": "high",
+  "seconds": 6.91,
+  "tokens_in": 1849,
+  "tokens_out": 58
+ }
+}

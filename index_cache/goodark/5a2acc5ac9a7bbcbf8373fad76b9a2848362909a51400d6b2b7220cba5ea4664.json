@@ -1,0 +1,24 @@
+{
+ "file": "goodark/gbu25a-thru-gbu25m_5d8d266c.md",
+ "supplier": "goodark",
+ "file_hash": "5a2acc5ac9a7bbcbf8373fad76b9a2848362909a51400d6b2b7220cba5ea4664",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:47+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU 25A",
+   "GBU 25B",
+   "GBU 25D",
+   "GBU 25G",
+   "GBU 25J"
+  ],
+  "confidence": "high",
+  "seconds": 8.98,
+  "tokens_in": 1962,
+  "tokens_out": 87
+ }
+}

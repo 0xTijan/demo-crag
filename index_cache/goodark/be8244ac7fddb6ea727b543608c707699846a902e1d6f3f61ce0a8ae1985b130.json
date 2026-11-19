@@ -1,0 +1,23 @@
+{
+ "file": "goodark/sk57b-thru-sk5bb_c9d90dc5.md",
+ "supplier": "goodark",
+ "file_hash": "be8244ac7fddb6ea727b543608c707699846a902e1d6f3f61ce0a8ae1985b130",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:08:15+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK57B",
+   "SK58B",
+   "SK59B",
+   "SK5BB"
+  ],
+  "confidence": "high",
+  "seconds": 5.77,
+  "tokens_in": 1532,
+  "tokens_out": 57
+ }
+}

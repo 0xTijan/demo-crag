@@ -1,0 +1,22 @@
+{
+ "file": "goodark/bc856-bc857-bc858_948e6ab4.md",
+ "supplier": "goodark",
+ "file_hash": "a7d1d6e3b23e13e8528c31b861157c140bcfde77eee35747ae46f61b52721f60",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:45:51+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "BC856",
+   "BC857",
+   "BC858"
+  ],
+  "confidence": "high",
+  "seconds": 6.31,
+  "tokens_in": 1701,
+  "tokens_out": 49
+ }
+}

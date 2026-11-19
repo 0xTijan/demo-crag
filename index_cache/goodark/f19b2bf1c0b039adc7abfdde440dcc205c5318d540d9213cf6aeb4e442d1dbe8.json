@@ -1,0 +1,24 @@
+{
+ "file": "goodark/df02-thru-df10_06d6285d.md",
+ "supplier": "goodark",
+ "file_hash": "f19b2bf1c0b039adc7abfdde440dcc205c5318d540d9213cf6aeb4e442d1dbe8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:41+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DF02",
+   "DF04",
+   "DF06",
+   "DF08",
+   "DF10"
+  ],
+  "confidence": "high",
+  "seconds": 7.12,
+  "tokens_in": 1806,
+  "tokens_out": 56
+ }
+}

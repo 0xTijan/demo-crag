@@ -1,0 +1,20 @@
+{
+ "file": "goodark/ses5vt23-3u_cdcaebe8.md",
+ "supplier": "goodark",
+ "file_hash": "1b26324d0038cc3b9f0b88858ed2aeb22b87e3b9e99b461895f14d4ab5dd546b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:06:15+00:00",
+  "is_datasheet": true,
+  "label": "ESD/Surge Protection Diode Array",
+  "family": false,
+  "part_numbers": [
+   "5M2"
+  ],
+  "confidence": "high",
+  "seconds": 4.4,
+  "tokens_in": 1275,
+  "tokens_out": 41
+ }
+}

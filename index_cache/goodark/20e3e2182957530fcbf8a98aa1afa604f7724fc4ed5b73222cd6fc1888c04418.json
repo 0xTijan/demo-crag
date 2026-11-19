@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sgp1a-thru-sgp7a_7665e555.md",
+ "supplier": "goodark",
+ "file_hash": "20e3e2182957530fcbf8a98aa1afa604f7724fc4ed5b73222cd6fc1888c04418",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:31+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGP1A",
+   "SGP2A",
+   "SGP3A",
+   "SGP4A",
+   "SGP5A"
+  ],
+  "confidence": "high",
+  "seconds": 5.37,
+  "tokens_in": 1559,
+  "tokens_out": 76
+ }
+}

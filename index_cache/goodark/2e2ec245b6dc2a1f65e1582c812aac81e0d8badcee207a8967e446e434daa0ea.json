@@ -1,0 +1,21 @@
+{
+ "file": "goodark/sgc1550s-thru-sgc1560s_643abf2b.md",
+ "supplier": "goodark",
+ "file_hash": "2e2ec245b6dc2a1f65e1582c812aac81e0d8badcee207a8967e446e434daa0ea",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:07:11+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGC1550S",
+   "SGC1560S"
+  ],
+  "confidence": "high",
+  "seconds": 5.17,
+  "tokens_in": 1555,
+  "tokens_out": 52
+ }
+}

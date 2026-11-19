@@ -1,0 +1,21 @@
+{
+ "file": "goodark/ps35-thru-ps36_98b1f481.md",
+ "supplier": "goodark",
+ "file_hash": "454aadf67c62f00998e319cf01ddd69e1df9ed9968f590708abfb406639d085c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "PS35",
+   "PS36"
+  ],
+  "confidence": "high",
+  "seconds": 5.04,
+  "tokens_in": 1333,
+  "tokens_out": 44
+ }
+}

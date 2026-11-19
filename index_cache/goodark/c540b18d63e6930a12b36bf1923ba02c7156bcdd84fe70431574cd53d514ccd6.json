@@ -1,0 +1,24 @@
+{
+ "file": "goodark/fu1-thru-fu5_f4be4b78.md",
+ "supplier": "goodark",
+ "file_hash": "c540b18d63e6930a12b36bf1923ba02c7156bcdd84fe70431574cd53d514ccd6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:48:32+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FU1",
+   "FU2",
+   "FU3",
+   "FU4",
+   "FU5"
+  ],
+  "confidence": "high",
+  "seconds": 5.44,
+  "tokens_in": 1515,
+  "tokens_out": 54
+ }
+}

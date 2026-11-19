@@ -1,0 +1,24 @@
+{
+ "file": "goodark/p600a-thru-p600m_b9599591.md",
+ "supplier": "goodark",
+ "file_hash": "a7db8f14ba8b93b74a38f0ac6f9ae295dd499ee18e6debfa820cbdab067d9345",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:35+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "P600A",
+   "P600B",
+   "P600C",
+   "P600D",
+   "P600J"
+  ],
+  "confidence": "high",
+  "seconds": 6.59,
+  "tokens_in": 1553,
+  "tokens_out": 79
+ }
+}

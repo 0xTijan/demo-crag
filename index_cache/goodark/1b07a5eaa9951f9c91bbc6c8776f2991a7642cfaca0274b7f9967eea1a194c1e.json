@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mur6060pt_d1649dde.md",
+ "supplier": "goodark",
+ "file_hash": "1b07a5eaa9951f9c91bbc6c8776f2991a7642cfaca0274b7f9967eea1a194c1e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:02:20+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR6060PT"
+  ],
+  "confidence": "high",
+  "seconds": 4.97,
+  "tokens_in": 1393,
+  "tokens_out": 43
+ }
+}

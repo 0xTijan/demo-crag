@@ -1,0 +1,22 @@
+{
+ "file": "goodark/murs320-thru-murs360_9e1e7559.md",
+ "supplier": "goodark",
+ "file_hash": "c499ffa40a0e6c8567c07607ad5b1166d69e989df76b1e40789411e443e0a9e1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:03:22+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast rectifier",
+  "family": true,
+  "part_numbers": [
+   "MURS320",
+   "MURS340",
+   "MURS360"
+  ],
+  "confidence": "high",
+  "seconds": 5.37,
+  "tokens_in": 1475,
+  "tokens_out": 57
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodark/ap4sma8-2a-thru-ap4sma250ca_58cba1b0.md",
+ "supplier": "goodark",
+ "file_hash": "ee1db64e88870cded963fa511d0043d33e1b5c47a39c90c0662e0063b121f708",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:34+00:00",
+  "is_datasheet": true,
+  "label": "Transient Voltage Suppressor",
+  "family": true,
+  "part_numbers": [
+   "AP4SMA8.2A",
+   "AP4SMA9.1A",
+   "AP4SMA10A",
+   "AP4SMA11A",
+   "AP4SMA12A"
+  ],
+  "confidence": "high",
+  "seconds": 7.73,
+  "tokens_in": 1867,
+  "tokens_out": 79
+ }
+}

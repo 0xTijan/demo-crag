@@ -1,0 +1,24 @@
+{
+ "file": "goodark/ask32b-thru-ask36b_12420c4f.md",
+ "supplier": "goodark",
+ "file_hash": "77dcf8ea420f85021d122e4d8acc8775e7bd68b2a583a987249ad35080761fb8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:44:14+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ASK32B",
+   "ASK33B",
+   "ASK34B",
+   "ASK35B",
+   "ASK36B"
+  ],
+  "confidence": "high",
+  "seconds": 6.09,
+  "tokens_in": 1567,
+  "tokens_out": 64
+ }
+}

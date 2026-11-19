@@ -1,0 +1,24 @@
+{
+ "file": "goodark/rgp15a-thru-rgp15m_09621336.md",
+ "supplier": "goodark",
+ "file_hash": "93731c685d41862c4e22682ccae4f48c64a81f4b837040792646a1d31db4bbe2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:21+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "RGP15A",
+   "RGP15B",
+   "RGP15D",
+   "RGP15G",
+   "RGP15J"
+  ],
+  "confidence": "high",
+  "seconds": 5.98,
+  "tokens_in": 1557,
+  "tokens_out": 81
+ }
+}

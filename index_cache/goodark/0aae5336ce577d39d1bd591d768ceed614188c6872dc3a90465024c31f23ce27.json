@@ -1,0 +1,22 @@
+{
+ "file": "goodark/em513-thru-em518_7285b618.md",
+ "supplier": "goodark",
+ "file_hash": "0aae5336ce577d39d1bd591d768ceed614188c6872dc3a90465024c31f23ce27",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:57+00:00",
+  "is_datasheet": true,
+  "label": "high voltage rectifier",
+  "family": true,
+  "part_numbers": [
+   "EM513",
+   "EM516",
+   "EM518"
+  ],
+  "confidence": "high",
+  "seconds": 7.26,
+  "tokens_in": 1391,
+  "tokens_out": 50
+ }
+}

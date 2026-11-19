@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gmn095a060ll_972fde57.md",
+ "supplier": "goodark",
+ "file_hash": "93c9bb650b51217cbb3e37ec34582d05f49034bdbe465bd8945e9a5cb440be00",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:51:39+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMN095A060LL"
+  ],
+  "confidence": "high",
+  "seconds": 6.19,
+  "tokens_in": 1747,
+  "tokens_out": 45
+ }
+}

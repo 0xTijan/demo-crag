@@ -1,0 +1,22 @@
+{
+ "file": "goodark/gbjl25j-t1-thru-gbjl25m-t1_8d0bf959.md",
+ "supplier": "goodark",
+ "file_hash": "8e2647deb2e1e6537f7779231e03eb81c17f1b59b23f8cbfae4d5afee5f7b3d9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:49:09+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "GBJL25J-T1",
+   "GBJL25K-T1",
+   "GBJL25M-T1"
+  ],
+  "confidence": "high",
+  "seconds": 6.77,
+  "tokens_in": 1816,
+  "tokens_out": 62
+ }
+}

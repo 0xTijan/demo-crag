@@ -1,0 +1,20 @@
+{
+ "file": "goodark/tpesd1can_7c752bd9.md",
+ "supplier": "goodark",
+ "file_hash": "f582718a36d074a485e1ad85caf4ece8dc4ae8e58fbb099695a0d9524c862d86",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:57+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "TPESD1CAN"
+  ],
+  "confidence": "high",
+  "seconds": 5.44,
+  "tokens_in": 1304,
+  "tokens_out": 40
+ }
+}

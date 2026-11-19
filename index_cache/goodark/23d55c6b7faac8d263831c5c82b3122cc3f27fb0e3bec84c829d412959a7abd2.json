@@ -1,0 +1,20 @@
+{
+ "file": "goodark/mbr30200pt_3222ffb9.md",
+ "supplier": "goodark",
+ "file_hash": "23d55c6b7faac8d263831c5c82b3122cc3f27fb0e3bec84c829d412959a7abd2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:58:52+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBR30200PT"
+  ],
+  "confidence": "high",
+  "seconds": 4.8,
+  "tokens_in": 1314,
+  "tokens_out": 44
+ }
+}

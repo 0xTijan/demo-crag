@@ -1,0 +1,21 @@
+{
+ "file": "goodark/asgp0230sd-thru-asgp0240sd_fda1508e.md",
+ "supplier": "goodark",
+ "file_hash": "3f63140dcc75b6dba0693cbe154f62695a991886d28e95a4f53c062c8b6c22f6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:56+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ASGP0230SD",
+   "ASGP0240SD"
+  ],
+  "confidence": "high",
+  "seconds": 5.5,
+  "tokens_in": 1312,
+  "tokens_out": 52
+ }
+}

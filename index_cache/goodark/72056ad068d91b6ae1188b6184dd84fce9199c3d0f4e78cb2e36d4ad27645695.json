@@ -1,0 +1,24 @@
+{
+ "file": "goodark/5-0smcj10a-thru-5-0smcj200ca_5ef2ccde.md",
+ "supplier": "goodark",
+ "file_hash": "72056ad068d91b6ae1188b6184dd84fce9199c3d0f4e78cb2e36d4ad27645695",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:42+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "5.0SMCJ10A",
+   "5.0SMCJ11A",
+   "5.0SMCJ12A",
+   "5.0SMCJ13A",
+   "5.0SMCJ14A"
+  ],
+  "confidence": "high",
+  "seconds": 8.06,
+  "tokens_in": 1885,
+  "tokens_out": 87
+ }
+}

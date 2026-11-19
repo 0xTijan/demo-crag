@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sb320-thru-sb360_743e4fbe.md",
+ "supplier": "goodark",
+ "file_hash": "d21d67c33dbaf635beb0e36e75d43274bcc5f0ab3310cdccd7d43d0e61af5567",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:51+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SB320",
+   "SB330",
+   "SB340",
+   "SB350",
+   "SB360"
+  ],
+  "confidence": "high",
+  "seconds": 7.54,
+  "tokens_in": 1516,
+  "tokens_out": 64
+ }
+}

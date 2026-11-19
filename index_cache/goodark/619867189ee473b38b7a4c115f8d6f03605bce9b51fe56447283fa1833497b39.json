@@ -1,0 +1,22 @@
+{
+ "file": "goodark/kbjl6ju-thru-kbjl6mu_76d3b9d0.md",
+ "supplier": "goodark",
+ "file_hash": "619867189ee473b38b7a4c115f8d6f03605bce9b51fe56447283fa1833497b39",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:57+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBJL6JU",
+   "KBJL6KU",
+   "KBJL6MU"
+  ],
+  "confidence": "high",
+  "seconds": 6.47,
+  "tokens_in": 1771,
+  "tokens_out": 53
+ }
+}

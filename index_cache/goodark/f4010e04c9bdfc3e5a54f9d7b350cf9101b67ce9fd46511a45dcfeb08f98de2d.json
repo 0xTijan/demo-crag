@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbf401-thru-kbf410-切脚_a3f04cba.md",
+ "supplier": "goodark",
+ "file_hash": "f4010e04c9bdfc3e5a54f9d7b350cf9101b67ce9fd46511a45dcfeb08f98de2d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:23+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBF401",
+   "KBF402",
+   "KBF404",
+   "KBF406",
+   "KBF408"
+  ],
+  "confidence": "high",
+  "seconds": 8.22,
+  "tokens_in": 1916,
+  "tokens_out": 73
+ }
+}

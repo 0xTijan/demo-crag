@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms011075q_7d278f37.md",
+ "supplier": "goodark",
+ "file_hash": "dd65a25c69b86bcc1cbc1c09b21ae47a74b795c52499bd57287df0397c9e28c6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:07+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SiC MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS011075Q"
+  ],
+  "confidence": "high",
+  "seconds": 6.37,
+  "tokens_in": 1860,
+  "tokens_out": 46
+ }
+}

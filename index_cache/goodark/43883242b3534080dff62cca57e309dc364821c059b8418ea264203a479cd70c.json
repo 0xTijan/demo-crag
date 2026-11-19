@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gms040150q_23f08093.md",
+ "supplier": "goodark",
+ "file_hash": "43883242b3534080dff62cca57e309dc364821c059b8418ea264203a479cd70c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:52:29+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SiC MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GMS040150Q"
+  ],
+  "confidence": "high",
+  "seconds": 5.9,
+  "tokens_in": 1876,
+  "tokens_out": 46
+ }
+}

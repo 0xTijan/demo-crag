@@ -1,0 +1,24 @@
+{
+ "file": "goodark/ask12-thru-ask16_c3aa842e.md",
+ "supplier": "goodark",
+ "file_hash": "d8700a0369a3fc4f46f37168cd4c6f50e8d75df4e0100c7282875ae977e0f8a3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:43:59+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "ASK12",
+   "ASK13",
+   "ASK14",
+   "ASK15",
+   "ASK16"
+  ],
+  "confidence": "high",
+  "seconds": 5.84,
+  "tokens_in": 1605,
+  "tokens_out": 59
+ }
+}

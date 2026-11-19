@@ -1,0 +1,24 @@
+{
+ "file": "goodark/df2002s-thru-df2010s_75262c34.md",
+ "supplier": "goodark",
+ "file_hash": "ddc21b66287a93ce0b285926fa34395c1d95f0f3e1a35eacb785e83c43e6b84d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:46:50+00:00",
+  "is_datasheet": true,
+  "label": "Bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DF2002S",
+   "DF2004S",
+   "DF2006S",
+   "DF2008S",
+   "DF2010S"
+  ],
+  "confidence": "high",
+  "seconds": 7.33,
+  "tokens_in": 1794,
+  "tokens_out": 71
+ }
+}

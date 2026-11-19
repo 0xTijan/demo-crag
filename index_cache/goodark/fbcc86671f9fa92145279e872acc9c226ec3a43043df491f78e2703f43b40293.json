@@ -1,0 +1,20 @@
+{
+ "file": "goodark/gr30120sp_dde6656d.md",
+ "supplier": "goodark",
+ "file_hash": "fbcc86671f9fa92145279e872acc9c226ec3a43043df491f78e2703f43b40293",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:53:20+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": false,
+  "part_numbers": [
+   "GR30120SP"
+  ],
+  "confidence": "high",
+  "seconds": 6.55,
+  "tokens_in": 1271,
+  "tokens_out": 39
+ }
+}

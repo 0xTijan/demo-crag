@@ -1,0 +1,20 @@
+{
+ "file": "goodark/2sc1623_a75f282b.md",
+ "supplier": "goodark",
+ "file_hash": "37f6d15f69bcc0b47c1f2e4e390d09c608f2c675472e68ddbe45090edb01bd3c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:40:29+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GOOD-ARK"
+  ],
+  "confidence": "high",
+  "seconds": 5.01,
+  "tokens_in": 1497,
+  "tokens_out": 36
+ }
+}

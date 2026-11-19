@@ -1,0 +1,24 @@
+{
+ "file": "goodark/agn3ab-thru-agn3mb_ec031017.md",
+ "supplier": "goodark",
+ "file_hash": "1c4003865868ff90a423bc96afd288d67843da3b1c867c2b7e46d4e3843f7cce",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:43+00:00",
+  "is_datasheet": true,
+  "label": "rectifier",
+  "family": true,
+  "part_numbers": [
+   "AGN3AB",
+   "AGN3BB",
+   "AGN3DB",
+   "AGN3GB",
+   "AGN3JB"
+  ],
+  "confidence": "high",
+  "seconds": 6.74,
+  "tokens_in": 1656,
+  "tokens_out": 72
+ }
+}

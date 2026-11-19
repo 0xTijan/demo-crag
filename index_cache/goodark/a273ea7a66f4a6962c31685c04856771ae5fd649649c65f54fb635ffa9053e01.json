@@ -1,0 +1,24 @@
+{
+ "file": "goodark/kbj4au-thru-kbj4mu_52173653.md",
+ "supplier": "goodark",
+ "file_hash": "a273ea7a66f4a6962c31685c04856771ae5fd649649c65f54fb635ffa9053e01",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:56:34+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "KBJ4AU",
+   "KBJ4BU",
+   "KBJ4DU",
+   "KBJ4GU",
+   "KBJ4JU"
+  ],
+  "confidence": "high",
+  "seconds": 8.7,
+  "tokens_in": 2007,
+  "tokens_out": 76
+ }
+}

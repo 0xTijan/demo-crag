@@ -1,0 +1,20 @@
+{
+ "file": "goodark/smur40120p_22c230f6.md",
+ "supplier": "goodark",
+ "file_hash": "01a8f5579477d2326270b2ace7ff9d6e383f3dc3d43f37e9b431d5d4ed2c02f0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:09:02+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMUR40120P"
+  ],
+  "confidence": "high",
+  "seconds": 4.74,
+  "tokens_in": 1332,
+  "tokens_out": 44
+ }
+}

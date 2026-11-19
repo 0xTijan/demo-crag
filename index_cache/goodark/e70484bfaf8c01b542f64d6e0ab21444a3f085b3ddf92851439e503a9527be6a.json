@@ -1,0 +1,24 @@
+{
+ "file": "goodark/agn2aa-thru-agn2ma_defc03a2.md",
+ "supplier": "goodark",
+ "file_hash": "e70484bfaf8c01b542f64d6e0ab21444a3f085b3ddf92851439e503a9527be6a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T14:42:37+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "AGN2AA",
+   "AGN2BA",
+   "AGN2DA",
+   "AGN2GA",
+   "AGN2JA"
+  ],
+  "confidence": "high",
+  "seconds": 7.0,
+  "tokens_in": 1553,
+  "tokens_out": 76
+ }
+}

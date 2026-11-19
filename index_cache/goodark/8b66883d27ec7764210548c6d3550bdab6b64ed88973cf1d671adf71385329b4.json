@@ -1,0 +1,24 @@
+{
+ "file": "goodark/sb120-thru-sb1b0_91714bea.md",
+ "supplier": "goodark",
+ "file_hash": "8b66883d27ec7764210548c6d3550bdab6b64ed88973cf1d671adf71385329b4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T15:04:48+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SB120",
+   "SB130",
+   "SB140",
+   "SB150",
+   "SB160"
+  ],
+  "confidence": "high",
+  "seconds": 6.51,
+  "tokens_in": 1459,
+  "tokens_out": 88
+ }
+}
