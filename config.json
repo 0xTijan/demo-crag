@@ -15,5 +15,15 @@
         "model": "qwen3-vl:8b",
         "temperature": 0,
         "num_ctx": 16384
+    },
+    "datasheetClassifierModel": {
+        "model": "qwen3:30b-a3b",
+        "temperature": 0,
+        "num_ctx": 8192
+    },
+    "typeGroupingModel": {
+        "model": "qwen3:30b-a3b",
+        "temperature": 0,
+        "num_ctx": 16384
     }
 }

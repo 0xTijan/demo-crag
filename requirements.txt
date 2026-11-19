@@ -18,7 +18,8 @@ pypdfium2==5.13.0              # vision-OCR fallback
 SQLAlchemy==2.1.8
 psycopg2-binary==2.9.13
 python-dotenv==1.2.3
-ollama                         # rag/ and the vision-OCR fallback
+ollama                         # rag/, the vision-OCR fallback and dataPipeline/index
+pyyaml                         # dataPipeline/index: type list and spec lists (YAML)
 
 # --- db_gui.py ---
 streamlit>=1.64  # db_gui.py: widget bind="query-params", tabs key/on_change

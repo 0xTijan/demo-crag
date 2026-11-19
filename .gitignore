@@ -5,3 +5,5 @@ __pycache__/
 markdowns/
 logs/
 datasheets/
+# extraction results are company data: keep them in the company's own repository (plan v1, section 9)
+index_cache/

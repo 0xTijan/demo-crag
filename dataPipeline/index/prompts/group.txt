@@ -1,0 +1,19 @@
+You build a list of electronic component types. You get free-text type labels that were given to datasheets,
+and the types that exist so far.
+
+Assign every label to one type. Labels that mean the same kind of component go to the same type
+(e.g. "MLCC", "multilayer ceramic capacitor" and "SMD ceramic chip capacitor" are one type).
+Keep types that engineers would not swap for each other apart: N-channel and P-channel MOSFETs are different
+types, Schottky diodes and TVS diodes are different types, thick film and thin film resistors are different types.
+Use an existing type when one fits; create a new type only when none does.
+
+Answer with JSON only:
+{
+  "assign": [{"label": "<label exactly as given>", "type": "<type key>"}, ...],
+  "new_types": [{"key": "<type key>", "name": "<readable name>"}, ...]
+}
+
+- Every label given must appear exactly once in "assign", spelled exactly as given.
+- A type key is short, lower case, snake_case, e.g. mosfet_n, mlcc, schottky_diode, tvs_diode,
+  chip_resistor_thick_film, can_transceiver_isolated.
+- List in "new_types" only keys that are not in the existing types.
