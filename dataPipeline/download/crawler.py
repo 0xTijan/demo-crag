@@ -257,6 +257,8 @@ def in_chrome_static(tag) -> bool:
     ancestors = [p for p in tag.parents if p.name not in (None, "[document]")]
     ancestors.reverse()  # html, body, ...
     for depth, node in enumerate(ancestors):
+        if node.name in ("html", "body"):
+            continue  # themes put classes like "et-tb-has-header" on <body>: that says nothing about the link
         if node.name in ("header", "footer", "nav"):
             return True
         if depth - 1 <= CHROME_DEPTH:  # depth 1 == body
@@ -264,6 +266,30 @@ def in_chrome_static(tag) -> bool:
             if CHROME_RE.search(ident):
                 return True
     return False
+
+
+def slash_variant(url: str) -> str:
+    """The same URL with/without a final slash on its path ("…/tvs" <-> "…/tvs/")."""
+    parts = urlsplit(url)
+    if not parts.path or parts.path == "/":
+        return url
+    path = parts.path[:-1] if parts.path.endswith("/") else parts.path + "/"
+    return parts._replace(path=path).geturl()
+
+
+def menu_path(tag) -> str:
+    """The menu items a link sits under, e.g. "Products > Diodes" for the "Schottky Diodes" entry of a
+    drop-down menu (li > a "Products" > ul > li > a "Diodes" > ul > li > a "Schottky Diodes")."""
+    names = []
+    own = tag.find_parent("li")
+    li = own.find_parent("li") if own is not None else None
+    while li is not None and len(names) < 4:
+        head = li.find(["a", "span", "button", "div"], recursive=False)
+        text = " ".join(head.get_text(" ", strip=True).split())[:60] if head is not None else ""
+        if text:
+            names.append(text)
+        li = li.find_parent("li")
+    return " > ".join(reversed(names))
 
 
 # ------------------------------------------------------------------ browser scripts
@@ -306,6 +332,19 @@ HARVEST_JS = r"""
       }
     }
     return '';
+  };
+  // Menu items a link sits under ("Products > Diodes" for a drop-down entry)
+  const menuPathOf = el => {
+    const names = [];
+    let li = el.closest('li');
+    li = li && li.parentElement ? li.parentElement.closest('li') : null;
+    while (li && names.length < 4) {
+      const head = [...li.children].find(c => ['A', 'SPAN', 'BUTTON', 'DIV'].includes(c.tagName));
+      const t = head ? textOf(head).slice(0, 60) : '';
+      if (t) names.unshift(t);
+      li = li.parentElement ? li.parentElement.closest('li') : null;
+    }
+    return names.join(' > ');
   };
   const groupOf = (el, own) => {
     let p = el.parentElement;
@@ -361,7 +400,7 @@ HARVEST_JS = r"""
   for (const a of document.querySelectorAll('a[href], area[href]')) {
     if (!realHref(a)) continue;
     const own = textOf(a) || hintOf(a);
-    const label = labelOf(a);
+    const label = [menuPathOf(a), labelOf(a)].filter(Boolean).join(' | ');
     const isPdf = /\.pdf($|[?#])/i.test(a.href);
     out.anchors.push({href: a.href, text: own, label, context: clean(label + ' | ' + (rowOf(a) || groupOf(a, own))),
                       chrome: inChrome(a), tbl: isPdf ? tableOf(a) : null});
@@ -589,8 +628,8 @@ class PartCrawler:
 
     def _enqueue(self, node: Node, url: str, text: str, product: bool, later: bool = False) -> None:
         url = clean_url(url)
-        if url in self.seen or node.depth + 1 > self.max_depth:
-            return
+        if url in self.seen or slash_variant(url) in self.seen or node.depth + 1 > self.max_depth:
+            return  # "/tvs" and "/tvs/" are the same page on practically every site
         if not url.startswith(("http://", "https://")) or not self._allowed_host(url):
             return
         if path_ext(url) in NON_PAGE_EXT or is_other_language(url):
@@ -674,7 +713,9 @@ class PartCrawler:
 
         for a in soup.find_all(["a", "area"], href=True):
             text = element_text(a)
-            self._handle_anchor(node, urljoin(page.url, a["href"]), text, link_context(a),
+            menu = menu_path(a)  # "Products > Diodes" for a drop-down menu entry
+            context = f"{menu} | {link_context(a)}" if menu else link_context(a)
+            self._handle_anchor(node, urljoin(page.url, a["href"]), text, context,
                                 in_chrome_static(a), page.url, title, head_candidates, details=details_of(a))
 
     # ------------------------------------------------------------ rendered pages (clicking)

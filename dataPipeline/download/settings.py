@@ -113,7 +113,8 @@ URL_NEGATIVE_PREFIXES = ("news", "career", "job", "blog", "investor", "webinar",
                          "governance", "dividend")
 # URL path segments that are never followed when they are a whole segment ("/en/ir/", "/esg/"):
 # too short to be matched in link text, where "IR" can be an infrared product.
-URL_NEGATIVE_SEGMENTS = {"ir", "esg", "csr", "agm", "egm", "finance", "financial", "investors", "stockholders"}
+URL_NEGATIVE_SEGMENTS = {"ir", "esg", "csr", "agm", "egm", "finance", "financial", "investors", "stockholders",
+                         "cdn-cgi"}  # cdn-cgi: Cloudflare internals (e-mail protection), never a page
 # Datasheet vs. other technical documents (decides which PDFs are kept).
 DATASHEET_KEYWORDS = [
     "datasheet", "data sheet", "specification", "spec sheet",

@@ -123,6 +123,28 @@ def test_cached_clicks_are_replayed_not_clicked():
     assert crawler.result.replayed == 4 and crawler._page_notices == 1
 
 
+def test_dropdown_menu_under_products_and_body_classes():
+    """A WordPress/Divi site: theme classes on <body> ("et-tb-has-header") and a drop-down menu
+    Products > Diodes > Schottky Diodes whose entries do not say "product" themselves."""
+    from bs4 import BeautifulSoup
+    from dataPipeline.download.crawler import in_chrome_static, menu_path, slash_variant
+    html = """<html><body class="et-tb-has-header et-tb-has-footer"><div id="page-container">
+      <header class="et-l--header"><ul class="menu"><li><a href="/">Products</a><ul>
+        <li><a href="#">Diodes</a><ul><li><a href="/schottky-diodes/">Schottky Diodes</a></li></ul></li>
+      </ul></li><li><a href="/news/">News</a></li></ul></header>
+      <div id="et-main-area"><a href="/mosfets">Small Signal and Power MOSFETs</a></div></div></body></html>"""
+    soup = BeautifulSoup(html, "html.parser")
+    menu_link = soup.find("a", string="Schottky Diodes")
+    content_link = soup.find("a", string="Small Signal and Power MOSFETs")
+    assert menu_path(menu_link) == "Products > Diodes"
+    assert in_chrome_static(menu_link) and not in_chrome_static(content_link)   # <body> classes ignored
+    crawler = PartCrawler(FakeFetcher(), lambda *a, **k: None)
+    home = Node("https://x.com/", 0, False)
+    assert crawler._decide(home, "Schottky Diodes", "Products > Diodes | Schottky Diodes", True) == (True, True)
+    assert crawler._decide(home, "News", "News", True)[0] is False
+    assert slash_variant("https://x.com/tvs") == "https://x.com/tvs/" and slash_variant("https://x.com/") == "https://x.com/"
+
+
 def test_header_footer_and_other_languages_are_not_followed():
     _, fetcher, _ = crawl("https://en.example-semi.com/product.php")
     for url in fetcher.requested:
