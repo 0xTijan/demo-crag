@@ -156,7 +156,13 @@ def is_current(extraction: dict, spec_list: dict) -> bool:
 def cmd_run(args, llm=None) -> int:
     spec_lists = load_spec_lists(args.types, args.drafts)
     if not spec_lists:
-        print("No spec list to extract with. Draft and review them first: python -m dataPipeline.index.spec_lists")
+        drafts = sorted(SPEC_LIST_DIR.glob("*.draft.yaml"))
+        print(f"No spec list to extract with in {SPEC_LIST_DIR}. Create them first:\n"
+              f"  python -m dataPipeline.index.spec_lists draft --all -v   (or: draft --top 10, draft <type>)\n"
+              f"  python -m dataPipeline.index.spec_lists list             (which types have a spec list)")
+        if drafts:
+            print(f"Only new drafts next to an existing list were found ({', '.join(d.name for d in drafts[:5])}): "
+                  f"compare them by hand and rename the one to keep to <type>.yaml.")
         return 1
     datasheets = find_datasheets(Path(args.input), args.supplier)
     per_type, todo = Counter(), []
