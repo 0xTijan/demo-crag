@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:06:17+00:00",
+  "at": "2026-11-19T19:07:33+00:00",
   "is_datasheet": true,
   "label": "ESD protection diode",
   "family": false,
@@ -13,8 +13,10 @@
    "5"
   ],
   "confidence": "high",
-  "seconds": 4.66,
-  "tokens_in": 1550,
+  "asked_again": false,
+  "seconds": 1.39,
+  "tokens_in": 1619,
   "tokens_out": 36
- }
+ },
+ "type": "esd_protection_diode"
 }

@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:06:24+00:00",
+  "at": "2026-11-19T19:07:40+00:00",
   "is_datasheet": true,
-  "label": "TVS diode array",
+  "label": "ultra low capacitance TVS diode array",
   "family": false,
   "part_numbers": [
    "SESUC3V3D1610SN-6B"
   ],
   "confidence": "high",
-  "seconds": 6.78,
-  "tokens_in": 1407,
-  "tokens_out": 49
- }
+  "asked_again": false,
+  "seconds": 1.57,
+  "tokens_in": 1476,
+  "tokens_out": 54
+ },
+ "type": "ultra_low_capacitance_tvs_diode_array"
 }

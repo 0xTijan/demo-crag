@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:04:22+00:00",
+  "at": "2026-11-19T19:05:34+00:00",
   "is_datasheet": true,
   "label": "fast recovery rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "RGP20J"
   ],
   "confidence": "high",
-  "seconds": 6.82,
-  "tokens_in": 1542,
-  "tokens_out": 81
- }
+  "asked_again": false,
+  "seconds": 1.78,
+  "tokens_in": 1611,
+  "tokens_out": 67
+ },
+ "type": "fast_recovery_rectifier"
 }

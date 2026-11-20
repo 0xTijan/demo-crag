@@ -5,16 +5,16 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:32+00:00",
+  "at": "2026-11-19T19:10:52+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
-  "part_numbers": [
-   "GOOD-ARK"
-  ],
+  "part_numbers": [],
   "confidence": "high",
-  "seconds": 5.74,
-  "tokens_in": 1707,
-  "tokens_out": 38
- }
+  "asked_again": false,
+  "seconds": 1.38,
+  "tokens_in": 1776,
+  "tokens_out": 34
+ },
+ "type": "mosfet_n"
 }

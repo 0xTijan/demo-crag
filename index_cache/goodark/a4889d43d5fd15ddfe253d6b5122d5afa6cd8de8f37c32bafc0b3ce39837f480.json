@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:56:52+00:00",
+  "at": "2026-11-19T18:57:52+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "KBJL4JV",
@@ -15,8 +15,10 @@
    "KBJL4MV"
   ],
   "confidence": "high",
-  "seconds": 6.55,
-  "tokens_in": 1743,
-  "tokens_out": 51
- }
+  "asked_again": false,
+  "seconds": 1.66,
+  "tokens_in": 1812,
+  "tokens_out": 53
+ },
+ "type": "fast_recovery_rectifier"
 }

@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:49:27+00:00",
+  "at": "2026-11-19T18:50:22+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "bridge rectifier",
   "family": true,
   "part_numbers": [
    "GBL2AU",
@@ -17,8 +17,10 @@
    "GBL2JU"
   ],
   "confidence": "high",
-  "seconds": 8.25,
-  "tokens_in": 1941,
+  "asked_again": false,
+  "seconds": 2.03,
+  "tokens_in": 2010,
   "tokens_out": 75
- }
+ },
+ "type": "bridge_rectifier"
 }

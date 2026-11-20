@@ -1,0 +1,26 @@
+{
+ "file": "viking/lra0340-a-series-data-sheet-edition-rev-a2_024a0667.md",
+ "supplier": "viking",
+ "file_hash": "1c1c3eb9c76defc6fc5716d53dbbef8b2ce398ec8e49841444b4697b04c0eea8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:40+00:00",
+  "is_datasheet": true,
+  "label": "alloy chip shunt resistor",
+  "family": true,
+  "part_numbers": [
+   "LRA0340",
+   "LRA0340",
+   "LRA0340",
+   "LRA0340",
+   "LRA0340"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.24,
+  "tokens_in": 2013,
+  "tokens_out": 74
+ },
+ "type": "alloy_chip_shunt_resistor"
+}

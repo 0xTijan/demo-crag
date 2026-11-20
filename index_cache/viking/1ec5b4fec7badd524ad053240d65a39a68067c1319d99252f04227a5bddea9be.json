@@ -1,0 +1,22 @@
+{
+ "file": "viking/str35-series_70f075b7.md",
+ "supplier": "viking",
+ "file_hash": "1ec5b4fec7badd524ad053240d65a39a68067c1319d99252f04227a5bddea9be",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:11+00:00",
+  "is_datasheet": true,
+  "label": "power resistor",
+  "family": true,
+  "part_numbers": [
+   "STR35 Series"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.03,
+  "tokens_in": 1070,
+  "tokens_out": 36
+ },
+ "type": "power_resistor"
+}

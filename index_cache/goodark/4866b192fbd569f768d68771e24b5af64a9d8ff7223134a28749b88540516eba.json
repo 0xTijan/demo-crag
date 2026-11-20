@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:37:24+00:00",
+  "at": "2026-11-19T18:40:14+00:00",
   "is_datasheet": true,
   "label": "TVS diode",
   "family": true,
@@ -17,8 +17,10 @@
    "1.5KE8.2"
   ],
   "confidence": "high",
-  "seconds": 11.55,
-  "tokens_in": 1860,
+  "asked_again": false,
+  "seconds": 1.96,
+  "tokens_in": 1929,
   "tokens_out": 79
- }
+ },
+ "type": "tvs_diode"
 }

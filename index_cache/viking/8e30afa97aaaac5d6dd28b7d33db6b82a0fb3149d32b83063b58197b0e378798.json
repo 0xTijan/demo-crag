@@ -1,0 +1,23 @@
+{
+ "file": "viking/cm-series_e2315bea.md",
+ "supplier": "viking",
+ "file_hash": "8e30afa97aaaac5d6dd28b7d33db6b82a0fb3149d32b83063b58197b0e378798",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:51+00:00",
+  "is_datasheet": true,
+  "label": "chip common mode choke",
+  "family": true,
+  "part_numbers": [
+   "CMH05",
+   "CMH06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.28,
+  "tokens_in": 1485,
+  "tokens_out": 44
+ },
+ "type": "chip_common_mode_choke"
+}

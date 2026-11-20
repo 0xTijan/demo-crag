@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:57:25+00:00",
+  "at": "2026-11-19T18:58:25+00:00",
   "is_datasheet": true,
-  "label": "bridge rectifier",
+  "label": "fast recovery bridge rectifier",
   "family": true,
   "part_numbers": [
    "LB1201S",
@@ -17,8 +17,10 @@
    "LB1210S"
   ],
   "confidence": "high",
-  "seconds": 7.55,
-  "tokens_in": 2054,
-  "tokens_out": 71
- }
+  "asked_again": false,
+  "seconds": 2.12,
+  "tokens_in": 2123,
+  "tokens_out": 73
+ },
+ "type": "fast_recovery_bridge_rectifier"
 }

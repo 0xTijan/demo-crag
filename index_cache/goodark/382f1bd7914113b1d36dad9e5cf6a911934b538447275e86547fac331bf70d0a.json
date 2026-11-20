@@ -5,17 +5,19 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:01:21+00:00",
+  "at": "2026-11-19T19:02:28+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "superfast rectifier",
   "family": true,
   "part_numbers": [
    "MUR140",
    "MUR160"
   ],
   "confidence": "high",
-  "seconds": 4.67,
-  "tokens_in": 1362,
-  "tokens_out": 44
- }
+  "asked_again": false,
+  "seconds": 1.25,
+  "tokens_in": 1431,
+  "tokens_out": 46
+ },
+ "type": "superfast_rectifier"
 }

@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:48+00:00",
+  "at": "2026-11-19T19:11:07+00:00",
   "is_datasheet": true,
-  "label": "MOSFET",
+  "label": "N-channel MOSFET",
   "family": false,
   "part_numbers": [
    "SSFD6046X"
   ],
   "confidence": "high",
-  "seconds": 6.36,
-  "tokens_in": 1908,
-  "tokens_out": 41
- }
+  "asked_again": false,
+  "seconds": 1.66,
+  "tokens_in": 1977,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
 }

@@ -5,14 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:40+00:00",
+  "at": "2026-11-19T18:46:31+00:00",
   "is_datasheet": true,
-  "label": "switching diode",
+  "label": "fast recovery switching diode",
   "family": false,
-  "part_numbers": [],
+  "part_numbers": [
+   "GOOD-ARK"
+  ],
   "confidence": "high",
-  "seconds": 5.44,
-  "tokens_in": 1146,
-  "tokens_out": 33
- }
+  "asked_again": false,
+  "seconds": 1.12,
+  "tokens_in": 1215,
+  "tokens_out": 38
+ },
+ "type": "fast_recovery_switching_diode"
 }

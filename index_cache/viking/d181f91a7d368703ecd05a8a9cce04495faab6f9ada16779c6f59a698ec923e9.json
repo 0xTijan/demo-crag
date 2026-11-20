@@ -1,0 +1,25 @@
+{
+ "file": "viking/csm-series-data-sheet-edition-rev-c_1468a99d.md",
+ "supplier": "viking",
+ "file_hash": "d181f91a7d368703ecd05a8a9cce04495faab6f9ada16779c6f59a698ec923e9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:44+00:00",
+  "is_datasheet": true,
+  "label": "metal chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CSM02",
+   "CSM03",
+   "CSM05",
+   "CSM06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.88,
+  "tokens_in": 2367,
+  "tokens_out": 55
+ },
+ "type": "metal_chip_resistor"
+}

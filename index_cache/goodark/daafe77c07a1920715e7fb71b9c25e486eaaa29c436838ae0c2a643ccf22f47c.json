@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:37:21+00:00",
+  "at": "2026-11-19T18:40:18+00:00",
   "is_datasheet": true,
   "label": "TVS diode",
   "family": true,
@@ -17,8 +17,10 @@
    "1.5SMC16A"
   ],
   "confidence": "high",
-  "seconds": 8.39,
-  "tokens_in": 1914,
+  "asked_again": false,
+  "seconds": 2.11,
+  "tokens_in": 1983,
   "tokens_out": 82
- }
+ },
+ "type": "tvs_diode"
 }

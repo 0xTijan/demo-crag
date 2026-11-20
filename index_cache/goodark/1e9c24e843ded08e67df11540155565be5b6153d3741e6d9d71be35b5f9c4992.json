@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:51:34+00:00",
+  "at": "2026-11-19T18:52:29+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "GMN07515W"
   ],
   "confidence": "high",
-  "seconds": 6.23,
-  "tokens_in": 1781,
+  "asked_again": false,
+  "seconds": 1.51,
+  "tokens_in": 1850,
   "tokens_out": 43
- }
+ },
+ "type": "mosfet_n"
 }

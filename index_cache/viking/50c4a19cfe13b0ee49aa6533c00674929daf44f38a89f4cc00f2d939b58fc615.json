@@ -1,0 +1,23 @@
+{
+ "file": "viking/sdia-ga-series-data-sheet-edition-rev-a1_50b1aed1.md",
+ "supplier": "viking",
+ "file_hash": "50c4a19cfe13b0ee49aa6533c00674929daf44f38a89f4cc00f2d939b58fc615",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:56+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SDIA0418-GA",
+   "SDIA0645-GA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.57,
+  "tokens_in": 1552,
+  "tokens_out": 53
+ },
+ "type": "smd_power_inductor"
+}

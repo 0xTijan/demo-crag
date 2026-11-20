@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:04:04+00:00",
+  "at": "2026-11-19T19:05:15+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "superfast rectifier",
   "family": true,
   "part_numbers": [
    "PU1",
@@ -17,8 +17,10 @@
    "PU5"
   ],
   "confidence": "high",
-  "seconds": 5.02,
-  "tokens_in": 1514,
-  "tokens_out": 54
- }
+  "asked_again": false,
+  "seconds": 1.57,
+  "tokens_in": 1583,
+  "tokens_out": 52
+ },
+ "type": "superfast_rectifier"
 }

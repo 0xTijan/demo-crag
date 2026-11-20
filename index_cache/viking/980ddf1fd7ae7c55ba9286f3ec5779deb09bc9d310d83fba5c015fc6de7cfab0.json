@@ -1,0 +1,25 @@
+{
+ "file": "viking/wr-series-data-sheet-edition-rev-a4_596717ee.md",
+ "supplier": "viking",
+ "file_hash": "980ddf1fd7ae7c55ba9286f3ec5779deb09bc9d310d83fba5c015fc6de7cfab0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:18:00+00:00",
+  "is_datasheet": true,
+  "label": "wire wound chip power resistor",
+  "family": true,
+  "part_numbers": [
+   "WR27",
+   "WR15",
+   "WR16",
+   "WR25"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.65,
+  "tokens_in": 1889,
+  "tokens_out": 53
+ },
+ "type": "wire_wound_power_resistor"
+}

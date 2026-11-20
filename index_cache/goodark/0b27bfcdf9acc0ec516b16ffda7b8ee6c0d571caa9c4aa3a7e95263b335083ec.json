@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:58:59+00:00",
+  "at": "2026-11-19T19:00:02+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "MBR40150PT"
   ],
   "confidence": "high",
-  "seconds": 4.88,
-  "tokens_in": 1314,
+  "asked_again": false,
+  "seconds": 1.25,
+  "tokens_in": 1383,
   "tokens_out": 44
- }
+ },
+ "type": "schottky_diode"
 }

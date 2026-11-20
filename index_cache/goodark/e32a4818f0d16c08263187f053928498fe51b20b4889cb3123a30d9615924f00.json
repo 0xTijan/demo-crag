@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:49:07+00:00",
+  "at": "2026-11-19T18:50:01+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "GBJL20JA",
@@ -15,8 +15,10 @@
    "GBJL20MA"
   ],
   "confidence": "high",
-  "seconds": 6.65,
-  "tokens_in": 1684,
-  "tokens_out": 54
- }
+  "asked_again": true,
+  "seconds": 2.58,
+  "tokens_in": 3548,
+  "tokens_out": 110
+ },
+ "type": "fast_recovery_rectifier"
 }

@@ -5,17 +5,19 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:50:11+00:00",
+  "at": "2026-11-19T18:51:06+00:00",
   "is_datasheet": true,
-  "label": "rectifier diode",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "GL1506A",
    "GL1508A"
   ],
   "confidence": "high",
-  "seconds": 5.69,
-  "tokens_in": 1632,
+  "asked_again": false,
+  "seconds": 1.58,
+  "tokens_in": 1701,
   "tokens_out": 48
- }
+ },
+ "type": "fast_recovery_rectifier"
 }

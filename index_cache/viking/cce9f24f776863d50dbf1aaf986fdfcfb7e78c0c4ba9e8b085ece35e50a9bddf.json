@@ -1,0 +1,26 @@
+{
+ "file": "viking/cs-a-series-data-sheet-edition-rev-b7_f582446d.md",
+ "supplier": "viking",
+ "file_hash": "cce9f24f776863d50dbf1aaf986fdfcfb7e78c0c4ba9e8b085ece35e50a9bddf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:38+00:00",
+  "is_datasheet": true,
+  "label": "current sensing chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CS02",
+   "CS03",
+   "CS05",
+   "CS06",
+   "CS13"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.54,
+  "tokens_in": 2588,
+  "tokens_out": 97
+ },
+ "type": "current_sensing_chip_resistor"
+}

@@ -1,0 +1,25 @@
+{
+ "file": "viking/lrp-a-series-data-sheet-edition-rev-a8_6b8e94f3.md",
+ "supplier": "viking",
+ "file_hash": "7fc839b9f2324c26543c02c6d8851f4cfb28acf7da754781d39c4a11b40e1de5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:47+00:00",
+  "is_datasheet": true,
+  "label": "low ohm chip resistor",
+  "family": true,
+  "part_numbers": [
+   "LRP05",
+   "LRP06",
+   "LRP10",
+   "LRP12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.63,
+  "tokens_in": 1816,
+  "tokens_out": 57
+ },
+ "type": "low_ohm_chip_resistor"
+}

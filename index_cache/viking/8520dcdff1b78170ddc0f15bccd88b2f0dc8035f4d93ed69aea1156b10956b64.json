@@ -1,0 +1,22 @@
+{
+ "file": "viking/sc-series-data-sheet-edition-rev-b1_3150157c.md",
+ "supplier": "viking",
+ "file_hash": "8520dcdff1b78170ddc0f15bccd88b2f0dc8035f4d93ed69aea1156b10956b64",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:29+00:00",
+  "is_datasheet": true,
+  "label": "supercapacitor",
+  "family": true,
+  "part_numbers": [
+   "SC Series"
+  ],
+  "confidence": "high",
+  "asked_again": true,
+  "seconds": 2.03,
+  "tokens_in": 3159,
+  "tokens_out": 74
+ },
+ "type": "conductive_polymer_aluminum_solid_electr"
+}

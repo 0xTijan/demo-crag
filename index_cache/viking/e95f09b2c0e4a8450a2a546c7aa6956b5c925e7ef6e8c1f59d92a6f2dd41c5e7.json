@@ -1,0 +1,26 @@
+{
+ "file": "viking/pcd-series_00c0b152.md",
+ "supplier": "viking",
+ "file_hash": "e95f09b2c0e4a8450a2a546c7aa6956b5c925e7ef6e8c1f59d92a6f2dd41c5e7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:47+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "PCD0301",
+   "PCD0302",
+   "PCD0403",
+   "PCD0502",
+   "PCD0503"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.71,
+  "tokens_in": 2300,
+  "tokens_out": 121
+ },
+ "type": "smd_power_inductor"
+}

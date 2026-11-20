@@ -1,0 +1,22 @@
+{
+ "file": "viking/wl-series-data-sheet-edition-rev-h1_15b520cf.md",
+ "supplier": "viking",
+ "file_hash": "7b8518dbb81c15ac01c3213d4d65df2032907eed7767d97e11fd722b4c23f68a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:46+00:00",
+  "is_datasheet": true,
+  "label": "SMD wire wound chip inductor",
+  "family": true,
+  "part_numbers": [
+   "WL Series"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.17,
+  "tokens_in": 1309,
+  "tokens_out": 39
+ },
+ "type": "smd_wire_wound_chip_inductor"
+}

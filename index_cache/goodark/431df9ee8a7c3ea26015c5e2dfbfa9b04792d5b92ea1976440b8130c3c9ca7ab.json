@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:50+00:00",
+  "at": "2026-11-19T19:01:56+00:00",
   "is_datasheet": true,
   "label": "NPN transistor",
   "family": false,
@@ -13,8 +13,10 @@
    "MMBTA43"
   ],
   "confidence": "high",
-  "seconds": 5.07,
-  "tokens_in": 1467,
+  "asked_again": false,
+  "seconds": 1.39,
+  "tokens_in": 1536,
   "tokens_out": 38
- }
+ },
+ "type": "npn_transistor"
 }

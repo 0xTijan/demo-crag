@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:37:26+00:00",
+  "at": "2026-11-19T18:40:16+00:00",
   "is_datasheet": true,
   "label": "Zener diode",
   "family": true,
@@ -17,8 +17,10 @@
    "1.5SMBZ13A"
   ],
   "confidence": "high",
-  "seconds": 13.66,
-  "tokens_in": 1753,
-  "tokens_out": 99
- }
+  "asked_again": false,
+  "seconds": 1.99,
+  "tokens_in": 1822,
+  "tokens_out": 88
+ },
+ "type": "zener_diode"
 }

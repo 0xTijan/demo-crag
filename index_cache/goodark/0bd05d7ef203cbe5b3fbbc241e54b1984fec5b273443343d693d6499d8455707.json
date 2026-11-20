@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:46:48+00:00",
+  "at": "2026-11-19T18:47:38+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "bridge rectifier",
   "family": true,
   "part_numbers": [
    "DF2002",
@@ -17,8 +17,10 @@
    "DF2010"
   ],
   "confidence": "high",
-  "seconds": 7.3,
-  "tokens_in": 1856,
+  "asked_again": false,
+  "seconds": 1.83,
+  "tokens_in": 1925,
   "tokens_out": 66
- }
+ },
+ "type": "bridge_rectifier"
 }

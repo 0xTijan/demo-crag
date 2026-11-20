@@ -14,6 +14,9 @@ Answer with JSON only:
 }
 
 - Every label given must appear exactly once in "assign", spelled exactly as given.
-- A type key is short, lower case, snake_case, e.g. mosfet_n, mlcc, schottky_diode, tvs_diode,
+- A type key is short, lower case, snake_case, e.g. mosfet_n, ceramic_capacitor_mlcc, schottky_diode, tvs_diode,
   chip_resistor_thick_film, can_transceiver_isolated.
+- Every type key and every name has at least two words: the kind and what sets it apart from other parts of
+  that kind, e.g. standard_rectifier ("standard rectifier"), not rectifier; mosfet_n, not mosfet.
+  Put a one-word label ("rectifier") into the most likely specific type (standard_rectifier).
 - List in "new_types" only keys that are not in the existing types.

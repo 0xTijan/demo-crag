@@ -1,0 +1,26 @@
+{
+ "file": "viking/sdim-series-data-sheet-edition-rev-a2_1a14624d.md",
+ "supplier": "viking",
+ "file_hash": "5974e37d0e4c234c9cd2d79642ddb96674c024dd603656d40a101d00b509e149",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:03+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SDIM0210",
+   "SDIM02510",
+   "SDIM02512",
+   "SDIM0310",
+   "SDIM0312"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.14,
+  "tokens_in": 2082,
+  "tokens_out": 75
+ },
+ "type": "smd_power_inductor"
+}

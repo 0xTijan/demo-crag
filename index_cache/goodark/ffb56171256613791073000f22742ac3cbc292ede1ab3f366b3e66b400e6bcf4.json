@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:42:53+00:00",
+  "at": "2026-11-19T18:43:49+00:00",
   "is_datasheet": true,
   "label": "Zener diode",
   "family": true,
@@ -17,8 +17,10 @@
    "AL1N4743"
   ],
   "confidence": "high",
-  "seconds": 7.67,
-  "tokens_in": 1748,
+  "asked_again": false,
+  "seconds": 1.96,
+  "tokens_in": 1817,
   "tokens_out": 86
- }
+ },
+ "type": "zener_diode"
 }

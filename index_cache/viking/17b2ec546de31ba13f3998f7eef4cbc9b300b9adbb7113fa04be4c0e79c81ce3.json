@@ -1,0 +1,24 @@
+{
+ "file": "viking/nl-m-series-data-sheet-edition-rev-a5_3d3c27e4.md",
+ "supplier": "viking",
+ "file_hash": "17b2ec546de31ba13f3998f7eef4cbc9b300b9adbb7113fa04be4c0e79c81ce3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:29+00:00",
+  "is_datasheet": true,
+  "label": "wire wound chip inductor",
+  "family": true,
+  "part_numbers": [
+   "NL-M Series",
+   "NL10(C)-M",
+   "NL12(C)-M"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.55,
+  "tokens_in": 1604,
+  "tokens_out": 54
+ },
+ "type": "wire_wound_chip_inductor"
+}

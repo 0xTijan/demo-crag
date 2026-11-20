@@ -1,0 +1,26 @@
+{
+ "file": "viking/pcdr-series_4216f74c.md",
+ "supplier": "viking",
+ "file_hash": "45be51dd97c11b87495dd81397f9c0b7155e00bf274ca22e494e343e0cca2067",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:52+00:00",
+  "is_datasheet": true,
+  "label": "shielded SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "PCDR0628",
+   "PCDR0728",
+   "PCDR0730",
+   "PCDR0732",
+   "PCDR0745"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.58,
+  "tokens_in": 2450,
+  "tokens_out": 107
+ },
+ "type": "shielded_smd_power_inductor"
+}

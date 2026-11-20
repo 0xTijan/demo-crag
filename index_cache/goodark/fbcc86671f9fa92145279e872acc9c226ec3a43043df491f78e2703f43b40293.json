@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:53:20+00:00",
+  "at": "2026-11-19T18:54:12+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": false,
   "part_numbers": [
    "GR30120SP"
   ],
   "confidence": "high",
-  "seconds": 6.55,
-  "tokens_in": 1271,
-  "tokens_out": 39
- }
+  "asked_again": false,
+  "seconds": 1.18,
+  "tokens_in": 1340,
+  "tokens_out": 40
+ },
+ "type": "standard_rectifier"
 }

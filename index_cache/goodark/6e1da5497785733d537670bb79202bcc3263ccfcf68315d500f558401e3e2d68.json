@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:43:36+00:00",
+  "at": "2026-11-19T18:44:29+00:00",
   "is_datasheet": true,
   "label": "Transient Voltage Suppressor",
   "family": true,
@@ -17,8 +17,10 @@
    "AP6SMB16A"
   ],
   "confidence": "high",
-  "seconds": 8.04,
-  "tokens_in": 1908,
+  "asked_again": false,
+  "seconds": 2.1,
+  "tokens_in": 1977,
   "tokens_out": 77
- }
+ },
+ "type": "tvs_diode"
 }

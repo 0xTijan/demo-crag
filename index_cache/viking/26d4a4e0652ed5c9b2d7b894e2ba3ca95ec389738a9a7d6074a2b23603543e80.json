@@ -1,0 +1,26 @@
+{
+ "file": "viking/asg-a-series_baf010d0.md",
+ "supplier": "viking",
+ "file_hash": "26d4a4e0652ed5c9b2d7b894e2ba3ca95ec389738a9a7d6074a2b23603543e80",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:26+00:00",
+  "is_datasheet": true,
+  "label": "chip resistor",
+  "family": true,
+  "part_numbers": [
+   "ASG02",
+   "ASG03",
+   "ASG05",
+   "ASG06",
+   "ASG10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.67,
+  "tokens_in": 1752,
+  "tokens_out": 60
+ },
+ "type": "chip_resistor"
+}

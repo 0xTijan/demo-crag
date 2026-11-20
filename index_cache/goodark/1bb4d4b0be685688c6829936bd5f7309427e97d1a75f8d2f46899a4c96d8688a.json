@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:57:27+00:00",
+  "at": "2026-11-19T18:58:28+00:00",
   "is_datasheet": true,
-  "label": "bridge rectifier",
+  "label": "fast recovery bridge rectifier",
   "family": true,
   "part_numbers": [
    "LB151S",
@@ -17,8 +17,10 @@
    "LB158S"
   ],
   "confidence": "high",
-  "seconds": 7.8,
-  "tokens_in": 1950,
-  "tokens_out": 74
- }
+  "asked_again": false,
+  "seconds": 2.14,
+  "tokens_in": 2019,
+  "tokens_out": 76
+ },
+ "type": "fast_recovery_bridge_rectifier"
 }

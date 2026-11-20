@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:34+00:00",
+  "at": "2026-11-19T19:01:39+00:00",
   "is_datasheet": true,
   "label": "switching diode",
   "family": false,
@@ -13,8 +13,10 @@
    "5D"
   ],
   "confidence": "high",
-  "seconds": 5.46,
-  "tokens_in": 1229,
+  "asked_again": false,
+  "seconds": 1.13,
+  "tokens_in": 1298,
   "tokens_out": 36
- }
+ },
+ "type": "switching_diode"
 }

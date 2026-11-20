@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:21+00:00",
+  "at": "2026-11-19T19:10:40+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "SSF2318E"
   ],
   "confidence": "high",
-  "seconds": 5.77,
-  "tokens_in": 1755,
+  "asked_again": false,
+  "seconds": 1.61,
+  "tokens_in": 1824,
   "tokens_out": 41
- }
+ },
+ "type": "mosfet_n"
 }

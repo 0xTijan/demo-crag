@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:41:57+00:00",
+  "at": "2026-11-19T18:42:53+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -15,8 +15,10 @@
    "AFS24"
   ],
   "confidence": "high",
-  "seconds": 6.32,
-  "tokens_in": 1445,
+  "asked_again": false,
+  "seconds": 1.56,
+  "tokens_in": 1514,
   "tokens_out": 52
- }
+ },
+ "type": "schottky_diode"
 }

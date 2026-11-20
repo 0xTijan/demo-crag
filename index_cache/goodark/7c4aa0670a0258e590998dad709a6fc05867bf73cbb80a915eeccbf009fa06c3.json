@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:38+00:00",
+  "at": "2026-11-19T18:46:28+00:00",
   "is_datasheet": true,
-  "label": "switching diode",
+  "label": "Schottky barrier diode",
   "family": false,
   "part_numbers": [
    "K52"
   ],
   "confidence": "high",
-  "seconds": 5.16,
-  "tokens_in": 1538,
-  "tokens_out": 37
- }
+  "asked_again": false,
+  "seconds": 1.43,
+  "tokens_in": 1607,
+  "tokens_out": 39
+ },
+ "type": "schottky_diode"
 }

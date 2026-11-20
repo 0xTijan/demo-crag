@@ -1,0 +1,26 @@
+{
+ "file": "viking/pd-series-data-sheet-edition-rev-c1_4df43f79.md",
+ "supplier": "viking",
+ "file_hash": "203b6ba268fa71de3bb8b22ae30bd8037208152e0c08c60c7d0c3570bc10a08a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:00+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "PD1608",
+   "PD3308",
+   "PD3316",
+   "PD3340",
+   "PD5022"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.05,
+  "tokens_in": 2048,
+  "tokens_out": 68
+ },
+ "type": "smd_power_inductor"
+}

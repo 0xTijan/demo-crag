@@ -1,0 +1,26 @@
+{
+ "file": "viking/arm-a-series-data-sheet-edition-rev-a5_35559266.md",
+ "supplier": "viking",
+ "file_hash": "08e92d3d25ee5cb9413b46966c02c1247264ca8ced48d6ac6616221006aff07f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:53+00:00",
+  "is_datasheet": true,
+  "label": "Automotive Grade Metal Thin Film Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "ARM..A Series",
+   "ARM02",
+   "ARM03",
+   "ARM05",
+   "ARM06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.7,
+  "tokens_in": 1737,
+  "tokens_out": 63
+ },
+ "type": "automotive_grade_metal_thin_film_chip_re"
+}

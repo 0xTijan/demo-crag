@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:04:30+00:00",
+  "at": "2026-11-19T19:05:42+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "RL101G",
@@ -17,8 +17,10 @@
    "RL105G"
   ],
   "confidence": "high",
-  "seconds": 7.56,
-  "tokens_in": 1559,
-  "tokens_out": 79
- }
+  "asked_again": false,
+  "seconds": 1.91,
+  "tokens_in": 1628,
+  "tokens_out": 80
+ },
+ "type": "standard_rectifier"
 }

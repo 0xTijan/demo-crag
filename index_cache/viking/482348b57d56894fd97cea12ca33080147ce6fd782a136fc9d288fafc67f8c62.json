@@ -1,0 +1,26 @@
+{
+ "file": "viking/csn-series-data-sheet-edition-rev-a7_cecbd00e.md",
+ "supplier": "viking",
+ "file_hash": "482348b57d56894fd97cea12ca33080147ce6fd782a136fc9d288fafc67f8c62",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:50+00:00",
+  "is_datasheet": true,
+  "label": "current sensing chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CSN05",
+   "CSN06",
+   "CSN13",
+   "CSN10",
+   "CSN12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.71,
+  "tokens_in": 1817,
+  "tokens_out": 62
+ },
+ "type": "current_sensing_chip_resistor"
+}

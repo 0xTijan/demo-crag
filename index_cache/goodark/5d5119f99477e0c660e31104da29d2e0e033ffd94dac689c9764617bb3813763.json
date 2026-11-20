@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:59+00:00",
+  "at": "2026-11-19T19:11:19+00:00",
   "is_datasheet": true,
-  "label": "rectifier diode",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "U05B4B48",
@@ -15,8 +15,10 @@
    "U05J4B48"
   ],
   "confidence": "high",
-  "seconds": 5.76,
-  "tokens_in": 1761,
-  "tokens_out": 62
- }
+  "asked_again": true,
+  "seconds": 2.69,
+  "tokens_in": 3703,
+  "tokens_out": 121
+ },
+ "type": "standard_rectifier"
 }

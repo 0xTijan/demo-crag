@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:46:52+00:00",
+  "at": "2026-11-19T18:47:41+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "DR200 G",
@@ -17,8 +17,10 @@
    "DR206 G"
   ],
   "confidence": "high",
-  "seconds": 7.17,
-  "tokens_in": 1558,
-  "tokens_out": 79
- }
+  "asked_again": false,
+  "seconds": 1.66,
+  "tokens_in": 1627,
+  "tokens_out": 80
+ },
+ "type": "standard_rectifier"
 }

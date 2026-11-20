@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:33+00:00",
+  "at": "2026-11-19T19:01:38+00:00",
   "is_datasheet": true,
-  "label": "switching diode",
+  "label": "fast recovery switching diode",
   "family": false,
   "part_numbers": [
    "M5C"
   ],
   "confidence": "high",
-  "seconds": 5.73,
-  "tokens_in": 1277,
-  "tokens_out": 37
- }
+  "asked_again": false,
+  "seconds": 1.16,
+  "tokens_in": 1346,
+  "tokens_out": 38
+ },
+ "type": "fast_recovery_switching_diode"
 }

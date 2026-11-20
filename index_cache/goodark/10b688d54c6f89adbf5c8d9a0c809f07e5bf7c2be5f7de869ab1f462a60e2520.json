@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:55:24+00:00",
+  "at": "2026-11-19T18:56:16+00:00",
   "is_datasheet": true,
-  "label": "Silicon Carbide Schottky Diode",
+  "label": "Silicon Carbide Schottky diode",
   "family": false,
   "part_numbers": [
    "GS60D120CP"
   ],
   "confidence": "high",
-  "seconds": 6.1,
-  "tokens_in": 1672,
+  "asked_again": false,
+  "seconds": 1.55,
+  "tokens_in": 1741,
   "tokens_out": 47
- }
+ },
+ "type": "silicon_carbide_schottky_diode"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "viking/lrj-series-data-sheet-edition-rev-b1_82567d63.md",
+ "supplier": "viking",
+ "file_hash": "1109cedb62097a2b6668e507a4e5de5ea97896c21d7b77b28bb071435a2dba8f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:46+00:00",
+  "is_datasheet": true,
+  "label": "ultra-low chip resistor jumper",
+  "family": true,
+  "part_numbers": [
+   "LRJ02",
+   "LRJ03",
+   "LRJ05",
+   "LRJ05(U)",
+   "LRJ06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.91,
+  "tokens_in": 1678,
+  "tokens_out": 77
+ },
+ "type": "ultra_low_chip_resistor_jumper"
+}

@@ -1,0 +1,24 @@
+{
+ "file": "viking/hvrg-series-data-sheet-edition-rev-a_f4ee488a.md",
+ "supplier": "viking",
+ "file_hash": "4cedc87a115e4decbb65f3f50f7917955c66093230194a8f5cfd6698db969abc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:32+00:00",
+  "is_datasheet": true,
+  "label": "thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "HVRG06",
+   "HVRG0A",
+   "HVRG12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.55,
+  "tokens_in": 1653,
+  "tokens_out": 54
+ },
+ "type": "thick_film_chip_resistor"
+}

@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:14+00:00",
+  "at": "2026-11-19T18:46:05+00:00",
   "is_datasheet": true,
-  "label": "Schottky diode",
-  "family": false,
+  "label": "Schottky barrier diode",
+  "family": true,
   "part_numbers": [
    "BAS85"
   ],
   "confidence": "high",
-  "seconds": 5.44,
-  "tokens_in": 1320,
-  "tokens_out": 39
- }
+  "asked_again": false,
+  "seconds": 1.15,
+  "tokens_in": 1389,
+  "tokens_out": 40
+ },
+ "type": "schottky_diode"
 }

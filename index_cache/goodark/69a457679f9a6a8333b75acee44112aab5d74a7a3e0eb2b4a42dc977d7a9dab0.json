@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:43:16+00:00",
+  "at": "2026-11-19T18:44:11+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "AMBRD1045CT"
   ],
   "confidence": "high",
-  "seconds": 4.9,
-  "tokens_in": 1322,
+  "asked_again": false,
+  "seconds": 1.18,
+  "tokens_in": 1391,
   "tokens_out": 44
- }
+ },
+ "type": "schottky_diode"
 }

@@ -5,14 +5,16 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:41:21+00:00",
+  "at": "2026-11-19T18:42:18+00:00",
   "is_datasheet": true,
-  "label": "Silicon Epitaxial Planar Switching Diode",
+  "label": "fast recovery diode",
   "family": false,
   "part_numbers": [],
   "confidence": "high",
-  "seconds": 6.08,
-  "tokens_in": 1350,
-  "tokens_out": 41
- }
+  "asked_again": false,
+  "seconds": 1.25,
+  "tokens_in": 1419,
+  "tokens_out": 33
+ },
+ "type": "fast_recovery_diode"
 }

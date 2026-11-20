@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:48:26+00:00",
+  "at": "2026-11-19T18:49:15+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "FSL14"
   ],
   "confidence": "high",
-  "seconds": 4.98,
-  "tokens_in": 1202,
+  "asked_again": false,
+  "seconds": 1.09,
+  "tokens_in": 1271,
   "tokens_out": 40
- }
+ },
+ "type": "schottky_diode"
 }

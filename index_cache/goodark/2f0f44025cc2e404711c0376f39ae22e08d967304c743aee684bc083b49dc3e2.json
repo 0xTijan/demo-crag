@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:47:58+00:00",
+  "at": "2026-11-19T18:48:47+00:00",
   "is_datasheet": true,
-  "label": "rectifier diode",
+  "label": "fast recovery rectifier",
   "family": false,
   "part_numbers": [
    "FR15"
   ],
   "confidence": "high",
-  "seconds": 6.53,
-  "tokens_in": 1149,
+  "asked_again": false,
+  "seconds": 1.11,
+  "tokens_in": 1218,
   "tokens_out": 37
- }
+ },
+ "type": "fast_recovery_rectifier"
 }

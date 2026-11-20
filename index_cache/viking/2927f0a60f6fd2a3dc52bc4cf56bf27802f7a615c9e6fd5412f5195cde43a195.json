@@ -1,0 +1,22 @@
+{
+ "file": "viking/mcrf05btn2516r8_821d39ba.md",
+ "supplier": "viking",
+ "file_hash": "2927f0a60f6fd2a3dc52bc4cf56bf27802f7a615c9e6fd5412f5195cde43a195",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:08+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ceramic capacitor",
+  "family": false,
+  "part_numbers": [
+   "MCRF05BTN2516R8"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.56,
+  "tokens_in": 1711,
+  "tokens_out": 47
+ },
+ "type": "multilayer_ceramic_capacitor"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "viking/csm-series_f5e8cbcf.md",
+ "supplier": "viking",
+ "file_hash": "117146b844f3fa867e7cc858692dd9536ea03cbafee096bba0def66bb5e287af",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:46+00:00",
+  "is_datasheet": true,
+  "label": "current sensing metal chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CSM02",
+   "CSM03",
+   "CSM05",
+   "CSM06",
+   "CSM10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.62,
+  "tokens_in": 3392,
+  "tokens_out": 69
+ },
+ "type": "current_sensing_metal_chip_resistor"
+}

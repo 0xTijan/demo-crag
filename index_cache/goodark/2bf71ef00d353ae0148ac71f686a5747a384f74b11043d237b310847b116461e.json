@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:39:39+00:00",
+  "at": "2026-11-19T18:40:38+00:00",
   "is_datasheet": true,
-  "label": "rectifier diode",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "1N4001G",
@@ -17,8 +17,10 @@
    "1N4005G"
   ],
   "confidence": "high",
-  "seconds": 7.71,
-  "tokens_in": 1591,
-  "tokens_out": 95
- }
+  "asked_again": false,
+  "seconds": 2.03,
+  "tokens_in": 1660,
+  "tokens_out": 94
+ },
+ "type": "standard_rectifier"
 }

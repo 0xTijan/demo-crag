@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:37:19+00:00",
+  "at": "2026-11-19T18:40:12+00:00",
   "is_datasheet": true,
-  "label": "rectifier diode",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "05B4B48",
@@ -15,8 +15,10 @@
    "05J4B48"
   ],
   "confidence": "high",
-  "seconds": 6.26,
-  "tokens_in": 1815,
+  "asked_again": false,
+  "seconds": 12.54,
+  "tokens_in": 1884,
   "tokens_out": 59
- }
+ },
+ "type": "fast_recovery_rectifier"
 }

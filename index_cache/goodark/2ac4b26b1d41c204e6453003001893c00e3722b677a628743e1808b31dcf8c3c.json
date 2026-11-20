@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:41:31+00:00",
+  "at": "2026-11-19T18:42:28+00:00",
   "is_datasheet": true,
   "label": "NPN transistor",
   "family": false,
@@ -14,8 +14,10 @@
    "ABCX56-16U"
   ],
   "confidence": "high",
-  "seconds": 6.41,
-  "tokens_in": 1445,
+  "asked_again": false,
+  "seconds": 1.49,
+  "tokens_in": 1514,
   "tokens_out": 51
- }
+ },
+ "type": "npn_transistor"
 }

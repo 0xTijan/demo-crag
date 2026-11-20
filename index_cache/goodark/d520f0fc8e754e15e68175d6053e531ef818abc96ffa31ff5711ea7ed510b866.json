@@ -5,16 +5,16 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:36+00:00",
+  "at": "2026-11-19T18:46:27+00:00",
   "is_datasheet": true,
   "label": "switching diode",
   "family": false,
-  "part_numbers": [
-   "JX"
-  ],
+  "part_numbers": [],
   "confidence": "high",
-  "seconds": 4.87,
-  "tokens_in": 1527,
-  "tokens_out": 36
- }
+  "asked_again": false,
+  "seconds": 1.36,
+  "tokens_in": 1596,
+  "tokens_out": 33
+ },
+ "type": "switching_diode"
 }

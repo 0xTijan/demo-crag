@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:20+00:00",
+  "at": "2026-11-19T19:01:25+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -14,8 +14,10 @@
    "MBRFH3045CT"
   ],
   "confidence": "high",
-  "seconds": 4.78,
-  "tokens_in": 1338,
+  "asked_again": false,
+  "seconds": 1.33,
+  "tokens_in": 1407,
   "tokens_out": 53
- }
+ },
+ "type": "schottky_diode"
 }

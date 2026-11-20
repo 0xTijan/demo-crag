@@ -1,0 +1,26 @@
+{
+ "file": "viking/cfr-series-data-sheet-edition-rev-b3_8b2b39ff.md",
+ "supplier": "viking",
+ "file_hash": "356962f92b89682ac289a77e0fd7d0a7fae3658a62b1f4e976f1c2b702af6238",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:42+00:00",
+  "is_datasheet": true,
+  "label": "carbon film resistor",
+  "family": true,
+  "part_numbers": [
+   "CFR0318",
+   "CFR0623",
+   "CFR0932",
+   "CFR1145",
+   "CFR1550"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.65,
+  "tokens_in": 1447,
+  "tokens_out": 71
+ },
+ "type": "carbon_film_resistor"
+}

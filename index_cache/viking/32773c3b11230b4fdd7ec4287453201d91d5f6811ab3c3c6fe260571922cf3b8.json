@@ -1,0 +1,22 @@
+{
+ "file": "viking/wmb12-series-data-sheet-edition-rev-a2_65927fc4.md",
+ "supplier": "viking",
+ "file_hash": "32773c3b11230b4fdd7ec4287453201d91d5f6811ab3c3c6fe260571922cf3b8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:49+00:00",
+  "is_datasheet": true,
+  "label": "molding E-beam welded metal strip resistor",
+  "family": true,
+  "part_numbers": [
+   "WMB12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.24,
+  "tokens_in": 1427,
+  "tokens_out": 43
+ },
+ "type": "molding_e_beam_welded_metal_strip_resist"
+}

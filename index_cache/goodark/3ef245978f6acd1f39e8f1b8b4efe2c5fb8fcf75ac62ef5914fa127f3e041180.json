@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:55:29+00:00",
+  "at": "2026-11-19T18:56:22+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "HER101",
@@ -17,8 +17,10 @@
    "HER105"
   ],
   "confidence": "high",
-  "seconds": 7.33,
-  "tokens_in": 1563,
-  "tokens_out": 78
- }
+  "asked_again": false,
+  "seconds": 1.94,
+  "tokens_in": 1632,
+  "tokens_out": 80
+ },
+ "type": "fast_recovery_rectifier"
 }

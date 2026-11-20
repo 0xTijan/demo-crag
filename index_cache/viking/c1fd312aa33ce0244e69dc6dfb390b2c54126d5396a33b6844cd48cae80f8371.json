@@ -1,0 +1,26 @@
+{
+ "file": "viking/crg-series-data-sheet-edition-rev-b_276969d5.md",
+ "supplier": "viking",
+ "file_hash": "c1fd312aa33ce0244e69dc6dfb390b2c54126d5396a33b6844cd48cae80f8371",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:21+00:00",
+  "is_datasheet": true,
+  "label": "green thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CRG01",
+   "CRG02",
+   "CRG03",
+   "CRG05",
+   "CRG06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.71,
+  "tokens_in": 1904,
+  "tokens_out": 63
+ },
+ "type": "green_thick_film_chip_resistor"
+}

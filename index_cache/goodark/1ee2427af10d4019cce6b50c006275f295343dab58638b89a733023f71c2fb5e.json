@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:07:08+00:00",
+  "at": "2026-11-19T19:08:25+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "SGC151BS"
   ],
   "confidence": "high",
-  "seconds": 4.76,
-  "tokens_in": 1459,
+  "asked_again": false,
+  "seconds": 1.23,
+  "tokens_in": 1528,
   "tokens_out": 42
- }
+ },
+ "type": "schottky_diode"
 }

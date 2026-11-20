@@ -1,0 +1,26 @@
+{
+ "file": "viking/ar5k-series-data-sheet-edition-rev-a2_687e2752.md",
+ "supplier": "viking",
+ "file_hash": "bf00ed5f2fcde880c0d1daa44df56cbf09dcf3ed5c42e6a8823dafced0b6b0c1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:37+00:00",
+  "is_datasheet": true,
+  "label": "conductive polymer aluminum solid electrolytic capacitor",
+  "family": true,
+  "part_numbers": [
+   "AR5K0405",
+   "AR5K0508",
+   "AR5K0605",
+   "AR5K0608",
+   "AR5K0808"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.97,
+  "tokens_in": 1886,
+  "tokens_out": 81
+ },
+ "type": "conductive_polymer_aluminum_solid_electr"
+}

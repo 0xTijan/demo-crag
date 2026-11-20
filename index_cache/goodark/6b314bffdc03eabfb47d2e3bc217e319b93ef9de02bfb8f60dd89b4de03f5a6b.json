@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:49:49+00:00",
+  "at": "2026-11-19T18:50:44+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "glass passivated bridge rectifier",
   "family": true,
   "part_numbers": [
    "GBU 4005",
@@ -17,8 +17,10 @@
    "GBU 406"
   ],
   "confidence": "high",
-  "seconds": 9.06,
-  "tokens_in": 1921,
-  "tokens_out": 88
- }
+  "asked_again": false,
+  "seconds": 2.25,
+  "tokens_in": 1990,
+  "tokens_out": 91
+ },
+ "type": "glass_passivated_bridge_rectifier"
 }

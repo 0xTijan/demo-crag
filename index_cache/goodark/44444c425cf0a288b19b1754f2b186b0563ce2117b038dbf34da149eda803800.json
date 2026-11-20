@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:01:03+00:00",
+  "at": "2026-11-19T19:02:09+00:00",
   "is_datasheet": true,
   "label": "Zener diode",
   "family": true,
@@ -17,8 +17,10 @@
    "MMSZ4682S"
   ],
   "confidence": "high",
-  "seconds": 6.68,
-  "tokens_in": 1613,
+  "asked_again": false,
+  "seconds": 1.89,
+  "tokens_in": 1682,
   "tokens_out": 82
- }
+ },
+ "type": "zener_diode"
 }

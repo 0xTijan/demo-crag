@@ -1,0 +1,26 @@
+{
+ "file": "viking/tcs-series-data-sheet-edition-rev-b9_b22b1c95.md",
+ "supplier": "viking",
+ "file_hash": "3329deb17c665ad4bf5ddf2f3e4273e59781dfdf0e2ebb963609d82a428e53ca",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:25+00:00",
+  "is_datasheet": true,
+  "label": "thin film current sensing chip resistor",
+  "family": true,
+  "part_numbers": [
+   "TCS02",
+   "TCS03",
+   "TCS05",
+   "TCS06",
+   "TCS10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.73,
+  "tokens_in": 1834,
+  "tokens_out": 64
+ },
+ "type": "current_sensing_thin_film_chip_resistor"
+}

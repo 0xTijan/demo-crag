@@ -5,17 +5,19 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:50:15+00:00",
+  "at": "2026-11-19T18:51:10+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "GL2506",
    "GL2508"
   ],
   "confidence": "high",
-  "seconds": 5.98,
-  "tokens_in": 1644,
-  "tokens_out": 44
- }
+  "asked_again": false,
+  "seconds": 1.25,
+  "tokens_in": 1713,
+  "tokens_out": 46
+ },
+ "type": "fast_recovery_rectifier"
 }

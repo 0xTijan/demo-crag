@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:48:20+00:00",
+  "at": "2026-11-19T18:49:08+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "FS2BH"
   ],
   "confidence": "high",
-  "seconds": 5.03,
-  "tokens_in": 1143,
+  "asked_again": false,
+  "seconds": 1.08,
+  "tokens_in": 1212,
   "tokens_out": 39
- }
+ },
+ "type": "schottky_diode"
 }

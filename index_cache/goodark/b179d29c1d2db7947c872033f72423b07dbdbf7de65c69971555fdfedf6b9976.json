@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:44:52+00:00",
+  "at": "2026-11-19T18:45:43+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier diode",
   "family": true,
@@ -15,8 +15,10 @@
    "B5819W"
   ],
   "confidence": "high",
-  "seconds": 7.01,
-  "tokens_in": 1325,
+  "asked_again": false,
+  "seconds": 1.4,
+  "tokens_in": 1394,
   "tokens_out": 58
- }
+ },
+ "type": "schottky_diode"
 }

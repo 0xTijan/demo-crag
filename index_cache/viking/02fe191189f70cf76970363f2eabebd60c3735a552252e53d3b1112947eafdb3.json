@@ -1,0 +1,26 @@
+{
+ "file": "viking/mof-series-data-sheet-edition-rev-b3_7e1cf4bb.md",
+ "supplier": "viking",
+ "file_hash": "02fe191189f70cf76970363f2eabebd60c3735a552252e53d3b1112947eafdb3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:27+00:00",
+  "is_datasheet": true,
+  "label": "metal oxide film resistor",
+  "family": true,
+  "part_numbers": [
+   "0623",
+   "0932",
+   "1145",
+   "1550",
+   "1765"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.72,
+  "tokens_in": 1563,
+  "tokens_out": 68
+ },
+ "type": "metal_film_resistor"
+}

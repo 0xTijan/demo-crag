@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:01:07+00:00",
+  "at": "2026-11-19T19:02:13+00:00",
   "is_datasheet": true,
   "label": "ultrafast recovery rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "MUR1020CT"
   ],
   "confidence": "high",
-  "seconds": 5.99,
-  "tokens_in": 1398,
+  "asked_again": false,
+  "seconds": 1.21,
+  "tokens_in": 1467,
   "tokens_out": 43
- }
+ },
+ "type": "ultrafast_recovery_rectifier"
 }

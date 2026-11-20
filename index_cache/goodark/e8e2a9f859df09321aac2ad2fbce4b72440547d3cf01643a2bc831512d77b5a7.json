@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:37+00:00",
+  "at": "2026-11-19T19:10:56+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "SSF6808A3X"
   ],
   "confidence": "high",
-  "seconds": 5.89,
-  "tokens_in": 1886,
+  "asked_again": false,
+  "seconds": 1.59,
+  "tokens_in": 1955,
   "tokens_out": 43
- }
+ },
+ "type": "mosfet_n"
 }

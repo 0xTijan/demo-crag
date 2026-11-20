@@ -1,0 +1,26 @@
+{
+ "file": "viking/cbf-series-data-sheet-edition-rev-a4_309a4533.md",
+ "supplier": "viking",
+ "file_hash": "f540c156c0c04d3dcb57c7e73bcab1f02c9502b059170626d9bd8147c70ac35d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:39+00:00",
+  "is_datasheet": true,
+  "label": "multilayer chip bead",
+  "family": true,
+  "part_numbers": [
+   "CBF02",
+   "CBF03",
+   "CBF05",
+   "CBF04",
+   "CBF10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.75,
+  "tokens_in": 1758,
+  "tokens_out": 63
+ },
+ "type": "multilayer_chip_bead"
+}

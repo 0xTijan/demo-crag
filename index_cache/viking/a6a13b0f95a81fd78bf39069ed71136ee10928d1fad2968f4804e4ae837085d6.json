@@ -1,0 +1,25 @@
+{
+ "file": "viking/arw-a-series-data-sheet-edition-rev-a4_f7a35a2d.md",
+ "supplier": "viking",
+ "file_hash": "a6a13b0f95a81fd78bf39069ed71136ee10928d1fad2968f4804e4ae837085d6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:12+00:00",
+  "is_datasheet": true,
+  "label": "Automotive Grade Thin Film Precision Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "ARW08",
+   "ARW62",
+   "ARW20",
+   "ARW25"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.67,
+  "tokens_in": 1783,
+  "tokens_out": 61
+ },
+ "type": "automotive_grade_thin_film_precision_chi"
+}

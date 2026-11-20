@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:06:58+00:00",
+  "at": "2026-11-19T19:08:14+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "SGC101BSH"
   ],
   "confidence": "high",
-  "seconds": 4.65,
-  "tokens_in": 1170,
+  "asked_again": false,
+  "seconds": 1.15,
+  "tokens_in": 1239,
   "tokens_out": 43
- }
+ },
+ "type": "schottky_diode"
 }

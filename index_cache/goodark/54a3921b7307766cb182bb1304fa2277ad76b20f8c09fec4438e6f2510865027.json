@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:09+00:00",
+  "at": "2026-11-19T18:46:00+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier diode",
   "family": true,
@@ -16,8 +16,10 @@
    "BAS40-06"
   ],
   "confidence": "high",
-  "seconds": 5.25,
-  "tokens_in": 1195,
+  "asked_again": false,
+  "seconds": 1.45,
+  "tokens_in": 1264,
   "tokens_out": 67
- }
+ },
+ "type": "schottky_diode"
 }

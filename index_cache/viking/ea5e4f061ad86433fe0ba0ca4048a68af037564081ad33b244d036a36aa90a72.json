@@ -1,0 +1,25 @@
+{
+ "file": "viking/arn-series_26a134c4.md",
+ "supplier": "viking",
+ "file_hash": "ea5e4f061ad86433fe0ba0ca4048a68af037564081ad33b244d036a36aa90a72",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:57+00:00",
+  "is_datasheet": true,
+  "label": "aluminum nitride thin film precision chip resistor",
+  "family": true,
+  "part_numbers": [
+   "ARN03",
+   "ARN05",
+   "ARN06",
+   "ARN12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.63,
+  "tokens_in": 1810,
+  "tokens_out": 57
+ },
+ "type": "aluminum_nitride_thin_film_precision_chi"
+}

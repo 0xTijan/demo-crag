@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:49:58+00:00",
+  "at": "2026-11-19T18:50:52+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "bridge rectifier",
   "family": true,
   "part_numbers": [
    "GBU 8005",
@@ -17,8 +17,10 @@
    "GBU 806"
   ],
   "confidence": "high",
-  "seconds": 8.33,
-  "tokens_in": 1908,
+  "asked_again": false,
+  "seconds": 2.2,
+  "tokens_in": 1977,
   "tokens_out": 88
- }
+ },
+ "type": "bridge_rectifier"
 }

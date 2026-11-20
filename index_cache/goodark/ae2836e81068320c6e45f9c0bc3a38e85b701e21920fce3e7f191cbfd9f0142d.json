@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:05+00:00",
+  "at": "2026-11-19T18:45:56+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "fast switching diode",
   "family": false,
   "part_numbers": [
-   "200mW SOD-323 Fast Switching Diode"
+   "200mW SOD-323"
   ],
   "confidence": "high",
-  "seconds": 5.02,
-  "tokens_in": 1342,
-  "tokens_out": 52
- }
+  "asked_again": false,
+  "seconds": 1.23,
+  "tokens_in": 1411,
+  "tokens_out": 45
+ },
+ "type": "fast_switching_diode"
 }

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:43:41+00:00",
+  "at": "2026-11-19T18:44:34+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -15,8 +15,10 @@
    "ASGC0340S"
   ],
   "confidence": "high",
-  "seconds": 7.11,
-  "tokens_in": 1436,
+  "asked_again": false,
+  "seconds": 1.66,
+  "tokens_in": 1505,
   "tokens_out": 61
- }
+ },
+ "type": "schottky_diode"
 }

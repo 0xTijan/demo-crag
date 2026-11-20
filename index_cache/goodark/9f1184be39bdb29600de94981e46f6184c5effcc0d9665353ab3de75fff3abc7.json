@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:49:38+00:00",
+  "at": "2026-11-19T18:50:33+00:00",
   "is_datasheet": true,
   "label": "bridge rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "GBPC3506"
   ],
   "confidence": "high",
-  "seconds": 8.43,
-  "tokens_in": 2055,
-  "tokens_out": 89
- }
+  "asked_again": false,
+  "seconds": 1.99,
+  "tokens_in": 2124,
+  "tokens_out": 73
+ },
+ "type": "bridge_rectifier"
 }

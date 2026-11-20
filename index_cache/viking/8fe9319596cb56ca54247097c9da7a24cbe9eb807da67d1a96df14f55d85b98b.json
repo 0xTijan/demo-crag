@@ -1,0 +1,26 @@
+{
+ "file": "viking/crw-series-data-sheet-edition-rev-a3_e1223131.md",
+ "supplier": "viking",
+ "file_hash": "8fe9319596cb56ca54247097c9da7a24cbe9eb807da67d1a96df14f55d85b98b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:35+00:00",
+  "is_datasheet": true,
+  "label": "thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CRW08",
+   "CRW08(Jumper)",
+   "CRW62",
+   "CRW62(Jumper)",
+   "CRW20"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.79,
+  "tokens_in": 1802,
+  "tokens_out": 67
+ },
+ "type": "thick_film_chip_resistor"
+}

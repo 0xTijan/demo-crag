@@ -1,0 +1,25 @@
+{
+ "file": "viking/fmr-series-data-sheet-edition-rev-b1_9321321b.md",
+ "supplier": "viking",
+ "file_hash": "7b16846675c3cb049ae33efada1f29276f099cac2be2757b383f8b890ace3d8b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:14+00:00",
+  "is_datasheet": true,
+  "label": "metal film flame-proof resistor",
+  "family": true,
+  "part_numbers": [
+   "FMR0623",
+   "FMR0932",
+   "FMR1145",
+   "FMR1550"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.44,
+  "tokens_in": 1345,
+  "tokens_out": 65
+ },
+ "type": "metal_film_flame_proof_resistor"
+}

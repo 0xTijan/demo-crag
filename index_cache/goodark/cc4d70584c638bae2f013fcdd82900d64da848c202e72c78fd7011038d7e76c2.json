@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:41:40+00:00",
+  "at": "2026-11-19T18:42:37+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "superfast rectifier",
   "family": true,
   "part_numbers": [
    "AES2AA",
@@ -17,8 +17,10 @@
    "AES2FA"
   ],
   "confidence": "high",
-  "seconds": 6.83,
-  "tokens_in": 1550,
-  "tokens_out": 59
- }
+  "asked_again": false,
+  "seconds": 1.58,
+  "tokens_in": 1619,
+  "tokens_out": 57
+ },
+ "type": "superfast_rectifier"
 }

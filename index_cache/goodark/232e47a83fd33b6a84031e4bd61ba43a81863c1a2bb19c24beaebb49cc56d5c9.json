@@ -5,14 +5,16 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:23+00:00",
+  "at": "2026-11-19T18:46:13+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier diode",
   "family": false,
   "part_numbers": [],
   "confidence": "high",
-  "seconds": 4.95,
-  "tokens_in": 1325,
+  "asked_again": false,
+  "seconds": 1.08,
+  "tokens_in": 1394,
   "tokens_out": 35
- }
+ },
+ "type": "schottky_diode"
 }

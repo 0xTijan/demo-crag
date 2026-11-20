@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:56:27+00:00",
+  "at": "2026-11-19T18:57:22+00:00",
   "is_datasheet": true,
-  "label": "rectifier diode",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "KBJ10A",
@@ -17,8 +17,10 @@
    "KBJ10J"
   ],
   "confidence": "high",
-  "seconds": 8.27,
-  "tokens_in": 2043,
-  "tokens_out": 81
- }
+  "asked_again": true,
+  "seconds": 3.36,
+  "tokens_in": 4267,
+  "tokens_out": 159
+ },
+ "type": "standard_rectifier"
 }

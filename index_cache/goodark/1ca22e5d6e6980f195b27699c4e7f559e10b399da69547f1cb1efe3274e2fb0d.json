@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:48+00:00",
+  "at": "2026-11-19T18:46:39+00:00",
   "is_datasheet": true,
   "label": "NPN transistor",
   "family": true,
@@ -15,8 +15,10 @@
    "BC817-40"
   ],
   "confidence": "high",
-  "seconds": 5.43,
-  "tokens_in": 1509,
+  "asked_again": false,
+  "seconds": 1.6,
+  "tokens_in": 1578,
   "tokens_out": 58
- }
+ },
+ "type": "npn_transistor"
 }

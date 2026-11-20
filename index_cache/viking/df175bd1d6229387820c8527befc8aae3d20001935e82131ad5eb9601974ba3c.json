@@ -1,0 +1,25 @@
+{
+ "file": "viking/cma-series-data-sheet-edition-rev-a2_854a0a84.md",
+ "supplier": "viking",
+ "file_hash": "df175bd1d6229387820c8527befc8aae3d20001935e82131ad5eb9601974ba3c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:53+00:00",
+  "is_datasheet": true,
+  "label": "multilayer array chip common mode filter",
+  "family": true,
+  "part_numbers": [
+   "CMA06B",
+   "CMA06BYT900",
+   "CMA06BYT121",
+   "CMA06BYT181"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.81,
+  "tokens_in": 1540,
+  "tokens_out": 76
+ },
+ "type": "multilayer_array_chip_common_mode_filter"
+}

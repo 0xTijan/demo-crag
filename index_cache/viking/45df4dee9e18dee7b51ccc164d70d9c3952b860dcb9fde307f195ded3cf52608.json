@@ -1,0 +1,26 @@
+{
+ "file": "viking/ntcd-series-data-sheet-edition-rev-a1_26294909.md",
+ "supplier": "viking",
+ "file_hash": "45df4dee9e18dee7b51ccc164d70d9c3952b860dcb9fde307f195ded3cf52608",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:33+00:00",
+  "is_datasheet": true,
+  "label": "NTC thermistor",
+  "family": true,
+  "part_numbers": [
+   "NTCD05",
+   "NTCD07",
+   "NTCD09",
+   "NTCD11",
+   "NTCD13"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.81,
+  "tokens_in": 1646,
+  "tokens_out": 74
+ },
+ "type": "ntc_thermistor"
+}

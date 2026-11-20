@@ -1,0 +1,26 @@
+{
+ "file": "viking/hvr-series_47309ac7.md",
+ "supplier": "viking",
+ "file_hash": "2ea3f9440c6b6d89f75ede96c6a8a032d0b9477c1908623c22e5a7668a19bf44",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:25+00:00",
+  "is_datasheet": true,
+  "label": "high voltage thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "HVR02",
+   "HVR03",
+   "HVR05",
+   "HVR06",
+   "HVR0A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.04,
+  "tokens_in": 2077,
+  "tokens_out": 70
+ },
+ "type": "high_voltage_thick_film_chip_resistor"
+}

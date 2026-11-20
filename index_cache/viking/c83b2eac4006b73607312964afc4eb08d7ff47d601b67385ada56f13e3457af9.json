@@ -1,0 +1,23 @@
+{
+ "file": "viking/pcm-series-data-sheet-edition-rev-a_59578887.md",
+ "supplier": "viking",
+ "file_hash": "c83b2eac4006b73607312964afc4eb08d7ff47d601b67385ada56f13e3457af9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:57+00:00",
+  "is_datasheet": true,
+  "label": "chip common mode filter",
+  "family": true,
+  "part_numbers": [
+   "PCM7060",
+   "PCM9070"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.26,
+  "tokens_in": 1385,
+  "tokens_out": 46
+ },
+ "type": "multilayer_chip_common_mode_filter"
+}

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:08:44+00:00",
+  "at": "2026-11-19T19:10:01+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "SL39C"
   ],
   "confidence": "high",
-  "seconds": 6.4,
-  "tokens_in": 1547,
+  "asked_again": false,
+  "seconds": 1.84,
+  "tokens_in": 1616,
   "tokens_out": 71
- }
+ },
+ "type": "schottky_diode"
 }

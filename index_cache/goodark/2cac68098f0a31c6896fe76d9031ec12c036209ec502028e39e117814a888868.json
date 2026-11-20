@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:46:17+00:00",
+  "at": "2026-11-19T18:47:06+00:00",
   "is_datasheet": true,
   "label": "Zener diode",
   "family": true,
@@ -17,8 +17,10 @@
    "BZT52C3V3S"
   ],
   "confidence": "high",
-  "seconds": 8.31,
-  "tokens_in": 1643,
+  "asked_again": false,
+  "seconds": 2.14,
+  "tokens_in": 1712,
   "tokens_out": 104
- }
+ },
+ "type": "zener_diode"
 }

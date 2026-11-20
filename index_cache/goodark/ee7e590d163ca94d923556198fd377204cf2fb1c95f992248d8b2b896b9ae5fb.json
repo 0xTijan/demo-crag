@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:31+00:00",
+  "at": "2026-11-19T19:10:50+00:00",
   "is_datasheet": true,
   "label": "P-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "SSF3341UP"
   ],
   "confidence": "high",
-  "seconds": 6.01,
-  "tokens_in": 1734,
+  "asked_again": false,
+  "seconds": 1.47,
+  "tokens_in": 1803,
   "tokens_out": 41
- }
+ },
+ "type": "mosfet_p"
 }

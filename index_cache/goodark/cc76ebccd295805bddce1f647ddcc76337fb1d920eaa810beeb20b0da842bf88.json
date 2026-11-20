@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:04:08+00:00",
+  "at": "2026-11-19T19:05:20+00:00",
   "is_datasheet": true,
-  "label": "high voltage rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "R1200F",
@@ -16,8 +16,10 @@
    "R2000F"
   ],
   "confidence": "high",
-  "seconds": 6.05,
-  "tokens_in": 1515,
+  "asked_again": false,
+  "seconds": 1.49,
+  "tokens_in": 1584,
   "tokens_out": 64
- }
+ },
+ "type": "fast_recovery_rectifier"
 }

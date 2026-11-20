@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:12+00:00",
+  "at": "2026-11-19T19:10:30+00:00",
   "is_datasheet": true,
-  "label": "transistor",
+  "label": "NPN transistor",
   "family": false,
   "part_numbers": [
-   "Y2"
+   "GOOD-ARK"
   ],
   "confidence": "high",
-  "seconds": 4.96,
-  "tokens_in": 1510,
-  "tokens_out": 34
- }
+  "asked_again": false,
+  "seconds": 1.38,
+  "tokens_in": 1579,
+  "tokens_out": 36
+ },
+ "type": "npn_transistor"
 }

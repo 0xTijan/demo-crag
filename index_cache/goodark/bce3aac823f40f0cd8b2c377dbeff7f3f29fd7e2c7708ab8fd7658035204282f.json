@@ -5,16 +5,19 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:35+00:00",
+  "at": "2026-11-19T19:01:41+00:00",
   "is_datasheet": true,
   "label": "NPN transistor",
   "family": false,
   "part_numbers": [
-   "MMBT2222A"
+   "MMBT2222A",
+   "MMBT2907A"
   ],
   "confidence": "high",
-  "seconds": 5.07,
-  "tokens_in": 1596,
-  "tokens_out": 40
- }
+  "asked_again": false,
+  "seconds": 1.51,
+  "tokens_in": 1665,
+  "tokens_out": 49
+ },
+ "type": "npn_transistor"
 }

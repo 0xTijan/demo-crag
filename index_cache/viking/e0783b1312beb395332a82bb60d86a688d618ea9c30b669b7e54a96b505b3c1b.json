@@ -1,0 +1,26 @@
+{
+ "file": "viking/ml-series-data-sheet-edition-rev-b4_2dc97080.md",
+ "supplier": "viking",
+ "file_hash": "e0783b1312beb395332a82bb60d86a688d618ea9c30b669b7e54a96b505b3c1b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:18+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ferrite chip inductor",
+  "family": true,
+  "part_numbers": [
+   "ML03",
+   "ML05",
+   "ML06",
+   "MLH05",
+   "MLH06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.7,
+  "tokens_in": 1636,
+  "tokens_out": 63
+ },
+ "type": "multilayer_ferrite_chip_inductor"
+}

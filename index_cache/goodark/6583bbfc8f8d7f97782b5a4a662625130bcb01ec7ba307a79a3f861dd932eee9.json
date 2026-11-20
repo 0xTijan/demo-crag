@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:04:58+00:00",
+  "at": "2026-11-19T19:06:11+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "SBR1060CT"
   ],
   "confidence": "high",
-  "seconds": 5.27,
-  "tokens_in": 1325,
+  "asked_again": false,
+  "seconds": 1.24,
+  "tokens_in": 1394,
   "tokens_out": 43
- }
+ },
+ "type": "schottky_diode"
 }

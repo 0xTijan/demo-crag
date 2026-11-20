@@ -1,0 +1,26 @@
+{
+ "file": "viking/scds-series_c1f8af13.md",
+ "supplier": "viking",
+ "file_hash": "6c417b76d5de9951dc544f8608729f7080b11586cbefa808d402e8c39bed0cc0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:37+00:00",
+  "is_datasheet": true,
+  "label": "shielded SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SCDS3D18",
+   "SCDS4D18",
+   "SCDS4D28",
+   "SCDS5D18",
+   "SCDS5D28"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.16,
+  "tokens_in": 1946,
+  "tokens_out": 91
+ },
+ "type": "shielded_smd_power_inductor"
+}

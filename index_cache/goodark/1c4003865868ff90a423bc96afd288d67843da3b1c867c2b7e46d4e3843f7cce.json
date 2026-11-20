@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:42:43+00:00",
+  "at": "2026-11-19T18:43:38+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "AGN3AB",
@@ -17,8 +17,10 @@
    "AGN3JB"
   ],
   "confidence": "high",
-  "seconds": 6.74,
-  "tokens_in": 1656,
-  "tokens_out": 72
- }
+  "asked_again": false,
+  "seconds": 1.81,
+  "tokens_in": 1725,
+  "tokens_out": 73
+ },
+ "type": "standard_rectifier"
 }

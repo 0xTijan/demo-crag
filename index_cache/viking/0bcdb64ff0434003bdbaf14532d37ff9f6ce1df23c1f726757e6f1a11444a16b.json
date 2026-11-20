@@ -1,0 +1,25 @@
+{
+ "file": "viking/arhv-a-series-data-sheet-edition-rev-a6_c750d68b.md",
+ "supplier": "viking",
+ "file_hash": "0bcdb64ff0434003bdbaf14532d37ff9f6ce1df23c1f726757e6f1a11444a16b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:48+00:00",
+  "is_datasheet": true,
+  "label": "Automotive Grade High Voltage Thin Film Flat Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "ARHV..A Series",
+   "ARHV05",
+   "ARHV06",
+   "ARHV13"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.69,
+  "tokens_in": 1684,
+  "tokens_out": 64
+ },
+ "type": "automotive_grade_high_voltage_thin_film_"
+}

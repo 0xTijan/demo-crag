@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:06:15+00:00",
+  "at": "2026-11-19T19:07:30+00:00",
   "is_datasheet": true,
   "label": "ESD/Surge Protection Diode Array",
   "family": false,
@@ -13,8 +13,10 @@
    "5M2"
   ],
   "confidence": "high",
-  "seconds": 4.4,
-  "tokens_in": 1275,
+  "asked_again": false,
+  "seconds": 1.21,
+  "tokens_in": 1344,
   "tokens_out": 41
- }
+ },
+ "type": "esd_surge_protection_diode_array"
 }

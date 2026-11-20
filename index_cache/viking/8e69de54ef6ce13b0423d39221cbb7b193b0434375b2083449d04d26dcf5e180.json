@@ -1,0 +1,22 @@
+{
+ "file": "viking/lrsw-a-series-data-sheet-edition-rev-a7_cdc087e2.md",
+ "supplier": "viking",
+ "file_hash": "8e69de54ef6ce13b0423d39221cbb7b193b0434375b2083449d04d26dcf5e180",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:57+00:00",
+  "is_datasheet": true,
+  "label": "automotive grade chip shunt resistor",
+  "family": true,
+  "part_numbers": [
+   "LRSW..A Series"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.43,
+  "tokens_in": 1490,
+  "tokens_out": 43
+ },
+ "type": "automotive_grade_chip_shunt_resistor"
+}

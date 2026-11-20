@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:03:42+00:00",
+  "at": "2026-11-19T19:04:53+00:00",
   "is_datasheet": true,
   "label": "fast recovery rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "PF25"
   ],
   "confidence": "high",
-  "seconds": 7.34,
-  "tokens_in": 1547,
+  "asked_again": false,
+  "seconds": 1.79,
+  "tokens_in": 1616,
   "tokens_out": 67
- }
+ },
+ "type": "fast_recovery_rectifier"
 }

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:59:48+00:00",
+  "at": "2026-11-19T19:00:52+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "MBRD5200S"
   ],
   "confidence": "high",
-  "seconds": 4.72,
-  "tokens_in": 1286,
+  "asked_again": false,
+  "seconds": 1.24,
+  "tokens_in": 1355,
   "tokens_out": 43
- }
+ },
+ "type": "schottky_diode"
 }

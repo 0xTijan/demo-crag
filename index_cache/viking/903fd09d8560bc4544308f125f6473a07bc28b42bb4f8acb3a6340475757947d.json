@@ -1,0 +1,26 @@
+{
+ "file": "viking/sdia-series-data-sheet-edition-rev-c6_10e6fab7.md",
+ "supplier": "viking",
+ "file_hash": "903fd09d8560bc4544308f125f6473a07bc28b42bb4f8acb3a6340475757947d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:58+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SDIA0310",
+   "SDIA0312",
+   "SDIA0315",
+   "SDIA0410",
+   "SDIA0412"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.05,
+  "tokens_in": 2425,
+  "tokens_out": 73
+ },
+ "type": "smd_power_inductor"
+}

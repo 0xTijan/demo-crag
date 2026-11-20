@@ -1,0 +1,25 @@
+{
+ "file": "viking/arp-series-data-sheet-edition-rev-a4_1c99d4df.md",
+ "supplier": "viking",
+ "file_hash": "f5d59fa1b165ae5714669183f66363fb0a499c4aea42c4832a4287ebf68a9977",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:59+00:00",
+  "is_datasheet": true,
+  "label": "thin film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "ARP03",
+   "ARP05",
+   "ARP06",
+   "ARP12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.59,
+  "tokens_in": 1852,
+  "tokens_out": 52
+ },
+ "type": "thin_film_chip_resistor"
+}

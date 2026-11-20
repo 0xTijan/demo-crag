@@ -1,0 +1,22 @@
+{
+ "file": "viking/mc10ktbs101106_7eacaf52.md",
+ "supplier": "viking",
+ "file_hash": "bb348f8b57b9ba439e826540b9be41cb3c0cfe12cac57b0ed5210abeb726e1cf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:01+00:00",
+  "is_datasheet": true,
+  "label": "multilayer ceramic capacitor",
+  "family": true,
+  "part_numbers": [
+   "MC10KTBS101106"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.29,
+  "tokens_in": 1432,
+  "tokens_out": 46
+ },
+ "type": "multilayer_ceramic_capacitor"
+}

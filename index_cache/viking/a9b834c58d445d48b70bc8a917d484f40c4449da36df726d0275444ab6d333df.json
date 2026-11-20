@@ -1,0 +1,22 @@
+{
+ "file": "viking/tfan-series-data-sheet-edition-rev-b9_7b22d7b7.md",
+ "supplier": "viking",
+ "file_hash": "a9b834c58d445d48b70bc8a917d484f40c4449da36df726d0275444ab6d333df",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:26+00:00",
+  "is_datasheet": true,
+  "label": "thin film array chip resistor",
+  "family": true,
+  "part_numbers": [
+   "TFAN Series"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.09,
+  "tokens_in": 1177,
+  "tokens_out": 38
+ },
+ "type": "thin_film_array_chip_resistor"
+}

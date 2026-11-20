@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:39:52+00:00",
+  "at": "2026-11-19T18:40:50+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "1N4933G",
@@ -17,8 +17,10 @@
    "1N4937G"
   ],
   "confidence": "high",
-  "seconds": 6.49,
-  "tokens_in": 1578,
-  "tokens_out": 75
- }
+  "asked_again": false,
+  "seconds": 1.62,
+  "tokens_in": 1647,
+  "tokens_out": 77
+ },
+ "type": "fast_recovery_rectifier"
 }

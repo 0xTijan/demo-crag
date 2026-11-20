@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:34+00:00",
+  "at": "2026-11-19T19:10:53+00:00",
   "is_datasheet": true,
   "label": "P-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "SSF4013H1"
   ],
   "confidence": "high",
-  "seconds": 5.73,
-  "tokens_in": 1788,
+  "asked_again": false,
+  "seconds": 1.52,
+  "tokens_in": 1857,
   "tokens_out": 42
- }
+ },
+ "type": "mosfet_p"
 }

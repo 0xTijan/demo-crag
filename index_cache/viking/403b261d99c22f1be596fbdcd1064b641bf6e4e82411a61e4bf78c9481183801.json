@@ -1,0 +1,25 @@
+{
+ "file": "viking/lrp-series-data-sheet-edition-rev-c1_5f8a611d.md",
+ "supplier": "viking",
+ "file_hash": "403b261d99c22f1be596fbdcd1064b641bf6e4e82411a61e4bf78c9481183801",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:51+00:00",
+  "is_datasheet": true,
+  "label": "low ohm metal strip chip resistor",
+  "family": true,
+  "part_numbers": [
+   "LRP05",
+   "LRP06",
+   "LRP10",
+   "LRP12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.66,
+  "tokens_in": 1806,
+  "tokens_out": 59
+ },
+ "type": "low_ohm_metal_strip_chip_resistor"
+}

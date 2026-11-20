@@ -1,0 +1,26 @@
+{
+ "file": "viking/crg-a-series_8254480f.md",
+ "supplier": "viking",
+ "file_hash": "75a4e4931dde589a882f9fb3bb66ad3bb3d491f0c082d5fc21daec6d818dc099",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:19+00:00",
+  "is_datasheet": true,
+  "label": "Automotive Grade Green Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "CRG02",
+   "CRG03",
+   "CRG05",
+   "CRG06",
+   "CRG10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.72,
+  "tokens_in": 1734,
+  "tokens_out": 65
+ },
+ "type": "automotive_grade_green_chip_resistor"
+}

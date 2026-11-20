@@ -1,0 +1,25 @@
+{
+ "file": "viking/csw-series-data-sheet-edition-rev-a2_0ce50dc8.md",
+ "supplier": "viking",
+ "file_hash": "ce48a8657527ec7425d35d52af778094161eb33c310c4f3d4aba934b2f0b05bf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:06+00:00",
+  "is_datasheet": true,
+  "label": "current sensing chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CSW08",
+   "CSW62",
+   "CSW20",
+   "CSW25"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.6,
+  "tokens_in": 1748,
+  "tokens_out": 56
+ },
+ "type": "current_sensing_chip_resistor"
+}

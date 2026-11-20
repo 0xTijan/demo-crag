@@ -1,0 +1,26 @@
+{
+ "file": "viking/arep-series-data-sheet-edition-rev-a3_dd14ec14.md",
+ "supplier": "viking",
+ "file_hash": "d10bdc653607b2cd937d26386b7dd1be7f722316ca7a7549988112c2d90684c0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:39+00:00",
+  "is_datasheet": true,
+  "label": "conductive polymer aluminum solid electrolytic capacitor",
+  "family": true,
+  "part_numbers": [
+   "AREP0507",
+   "AREP0508",
+   "AREP0605",
+   "AREP0608",
+   "AREP0610"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.08,
+  "tokens_in": 2138,
+  "tokens_out": 76
+ },
+ "type": "conductive_polymer_aluminum_solid_electr"
+}

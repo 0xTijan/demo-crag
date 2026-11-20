@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:47:56+00:00",
+  "at": "2026-11-19T18:48:45+00:00",
   "is_datasheet": true,
   "label": "fast recovery rectifier",
   "family": true,
@@ -17,8 +17,10 @@
    "FR155"
   ],
   "confidence": "high",
-  "seconds": 7.27,
-  "tokens_in": 1562,
+  "asked_again": false,
+  "seconds": 1.83,
+  "tokens_in": 1631,
   "tokens_out": 74
- }
+ },
+ "type": "fast_recovery_rectifier"
 }

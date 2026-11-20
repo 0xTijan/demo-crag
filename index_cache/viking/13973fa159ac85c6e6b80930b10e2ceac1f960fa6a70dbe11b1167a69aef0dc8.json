@@ -1,0 +1,26 @@
+{
+ "file": "viking/mgr-series-data-sheet-edition-rev-b1_69fe7182.md",
+ "supplier": "viking",
+ "file_hash": "13973fa159ac85c6e6b80930b10e2ceac1f960fa6a70dbe11b1167a69aef0dc8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:17+00:00",
+  "is_datasheet": true,
+  "label": "high ohmic metal glaze resistor",
+  "family": true,
+  "part_numbers": [
+   "MGR0623",
+   "MGR0932",
+   "MGR1145",
+   "MGR1550",
+   "MGR1760"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.84,
+  "tokens_in": 1738,
+  "tokens_out": 75
+ },
+ "type": "high_ohmic_chip_resistor"
+}

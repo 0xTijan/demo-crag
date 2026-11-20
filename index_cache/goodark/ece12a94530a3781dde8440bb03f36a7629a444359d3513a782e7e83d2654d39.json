@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:02:03+00:00",
+  "at": "2026-11-19T19:03:11+00:00",
   "is_datasheet": true,
   "label": "ultrafast recovery rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "MUR3065"
   ],
   "confidence": "high",
-  "seconds": 5.02,
-  "tokens_in": 1308,
+  "asked_again": false,
+  "seconds": 1.22,
+  "tokens_in": 1377,
   "tokens_out": 42
- }
+ },
+ "type": "ultrafast_recovery_rectifier"
 }

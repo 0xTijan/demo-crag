@@ -1,0 +1,25 @@
+{
+ "file": "viking/arg-series_7463713a.md",
+ "supplier": "viking",
+ "file_hash": "4dcb1da7bece4100a9c42ef42e7487380d239742e8cd72051cfb43f4620423d3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:44+00:00",
+  "is_datasheet": true,
+  "label": "thin film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "ARG02",
+   "ARG03",
+   "ARG05",
+   "ARG06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.54,
+  "tokens_in": 1719,
+  "tokens_out": 52
+ },
+ "type": "thin_film_chip_resistor"
+}

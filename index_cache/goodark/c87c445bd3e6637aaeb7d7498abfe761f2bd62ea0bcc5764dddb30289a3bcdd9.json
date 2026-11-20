@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:40:10+00:00",
+  "at": "2026-11-19T18:41:09+00:00",
   "is_datasheet": true,
   "label": "Zener diode",
   "family": true,
@@ -17,8 +17,10 @@
    "1N750A"
   ],
   "confidence": "high",
-  "seconds": 7.09,
-  "tokens_in": 1668,
+  "asked_again": false,
+  "seconds": 2.47,
+  "tokens_in": 1737,
   "tokens_out": 128
- }
+ },
+ "type": "zener_diode"
 }

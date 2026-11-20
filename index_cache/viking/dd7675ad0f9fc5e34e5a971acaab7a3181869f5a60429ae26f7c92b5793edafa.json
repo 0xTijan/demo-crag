@@ -1,0 +1,24 @@
+{
+ "file": "viking/lrp-a-series_5601c0fd.md",
+ "supplier": "viking",
+ "file_hash": "dd7675ad0f9fc5e34e5a971acaab7a3181869f5a60429ae26f7c92b5793edafa",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:49+00:00",
+  "is_datasheet": true,
+  "label": "Automotive Grade Low Ohm Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "LRP06",
+   "LRP10",
+   "LRP12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.63,
+  "tokens_in": 1854,
+  "tokens_out": 55
+ },
+ "type": "automotive_grade_low_ohm_chip_resistor"
+}

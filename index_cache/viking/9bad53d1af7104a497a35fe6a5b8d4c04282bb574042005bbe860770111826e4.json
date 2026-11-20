@@ -1,0 +1,26 @@
+{
+ "file": "viking/drgh-series_5aa35c46.md",
+ "supplier": "viking",
+ "file_hash": "9bad53d1af7104a497a35fe6a5b8d4c04282bb574042005bbe860770111826e4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:14:09+00:00",
+  "is_datasheet": true,
+  "label": "DIP power inductor",
+  "family": true,
+  "part_numbers": [
+   "DRGH664",
+   "DRGH855",
+   "DRGH875",
+   "DRGH895",
+   "DRGH110"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.79,
+  "tokens_in": 1869,
+  "tokens_out": 68
+ },
+ "type": "dip_power_inductor"
+}

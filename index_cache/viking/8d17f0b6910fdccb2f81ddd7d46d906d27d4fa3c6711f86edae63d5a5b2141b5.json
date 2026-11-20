@@ -1,0 +1,26 @@
+{
+ "file": "viking/pr-series_3a5e12ca.md",
+ "supplier": "viking",
+ "file_hash": "8d17f0b6910fdccb2f81ddd7d46d906d27d4fa3c6711f86edae63d5a5b2141b5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:05+00:00",
+  "is_datasheet": true,
+  "label": "anti-corrosive thin film precision chip resistor",
+  "family": true,
+  "part_numbers": [
+   "PR Series",
+   "PR02",
+   "PR03",
+   "PR05",
+   "PR06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.67,
+  "tokens_in": 1761,
+  "tokens_out": 61
+ },
+ "type": "anti_corrosive_thin_film_precision_chip_"
+}

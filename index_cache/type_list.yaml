@@ -4,173 +4,610 @@
 types:
   schottky_diode:
     name: Schottky barrier rectifier
-    datasheets: 517
+    datasheets: 426
     labels:
     - Schottky barrier diode
     - Schottky barrier rectifier
     - Schottky diode
-  ultrafast_rectifier:
-    name: Ultrafast Rectifier
-    datasheets: 122
+  fast_recovery_rectifier:
+    name: fast recovery rectifier
+    datasheets: 134
+    labels:
+    - fast recovery rectifier
+  ultrafast_recovery_rectifier:
+    name: ultrafast recovery rectifier
+    datasheets: 117
     labels:
     - ultrafast recovery rectifier
-    - ultrafast rectifier
   mosfet_n:
     name: N-channel MOSFET
-    datasheets: 98
+    datasheets: 99
     labels:
     - N-channel MOSFET
-  rectifier:
-    name: rectifier
-    datasheets: 81
-    labels:
-    - rectifier
-  sic_schottky_diode:
+  silicon_carbide_schottky_diode:
     name: Silicon Carbide Schottky Diode
     datasheets: 79
     labels:
     - Silicon Carbide Schottky Diode
-  bridge_rectifier:
-    name: Bridge Rectifier
-    datasheets: 55
+  standard_rectifier:
+    name: standard rectifier
+    datasheets: 74
     labels:
-    - Bridge rectifier
-  fast_recovery_rectifier:
-    name: Fast Recovery Rectifier
-    datasheets: 45
+    - standard rectifier
+  superfast_rectifier:
+    name: superfast rectifier
+    datasheets: 49
     labels:
-    - fast recovery rectifier
+    - superfast rectifier
   zener_diode:
     name: Zener diode
     datasheets: 42
     labels:
     - Zener diode
-  rectifier_diode:
-    name: Rectifier Diode
-    datasheets: 34
-    labels:
-    - rectifier diode
-  sic_mosfet_n:
-    name: N-channel SiC MOSFET
-    datasheets: 28
-    labels:
-    - N-channel SiC MOSFET
   npn_transistor:
     name: NPN transistor
-    datasheets: 26
+    datasheets: 35
     labels:
     - NPN transistor
+  bridge_rectifier:
+    name: bridge rectifier
+    datasheets: 34
+    labels:
+    - bridge rectifier
+  silicon_carbide_mosfet_n:
+    name: N-channel SiC MOSFET
+    datasheets: 30
+    labels:
+    - N-channel SiC MOSFET
   tvs_diode:
-    name: TVS diode
+    name: transient voltage suppressor
     datasheets: 26
     labels:
     - TVS diode
-    - Transient voltage suppressor
-  switching_diode:
-    name: switching diode
+    - transient voltage suppressor
+  thick_film_chip_resistor:
+    name: thick film chip resistor
     datasheets: 19
     labels:
-    - Silicon Epitaxial Planar Switching Diode
-    - switching diode
+    - thick film chip resistor
+    - trimmable thick film chip resistor
+  shielded_smd_power_inductor:
+    name: shielded SMD power inductor
+    datasheets: 18
+    labels:
+    - shielded SMD power inductor
+    - shielded molding SMD power inductor
   mosfet_p:
     name: P-channel MOSFET
     datasheets: 17
     labels:
     - P-channel MOSFET
-  esd_diode:
-    name: ESD Protection Diode
-    datasheets: 15
+  smd_power_inductor:
+    name: SMD power inductor
+    datasheets: 16
+    labels:
+    - SMD power inductor
+  esd_protection_diode:
+    name: ESD protection diode
+    datasheets: 13
     labels:
     - ESD protection diode
+  glass_passivated_bridge_rectifier:
+    name: glass passivated bridge rectifier
+    datasheets: 12
+    labels:
+    - glass passivated bridge rectifier
   fast_switching_diode:
-    name: Fast Switching Diode
+    name: fast switching diode
     datasheets: 11
     labels:
     - fast switching diode
-  transistor:
-    name: transistor
-    datasheets: 11
+  fast_recovery_bridge_rectifier:
+    name: fast recovery bridge rectifier
+    datasheets: 9
     labels:
-    - transistor
-  superfast_rectifier:
-    name: Superfast Rectifier
+    - fast recovery bridge rectifier
+  multilayer_ceramic_capacitor:
+    name: multilayer ceramic capacitor
+    datasheets: 8
+    labels:
+    - multilayer ceramic capacitor
+  switching_diode:
+    name: switching diode
+    datasheets: 8
+    labels:
+    - switching diode
+  thin_film_chip_resistor:
+    name: thin film chip resistor
+    datasheets: 7
+    labels:
+    - thin film chip resistor
+  to_220_power_resistor:
+    name: TO-220 power resistor
+    datasheets: 7
+    labels:
+    - TO-220 power resistor
+    - TO-247 power resistor
+  conductive_polymer_aluminum_solid_electr:
+    name: conductive polymer aluminum solid electrolytic capacitor
     datasheets: 6
     labels:
-    - superfast rectifier
-  high_voltage_rectifier:
-    name: High Voltage Rectifier
+    - conductive polymer aluminum solid electrolytic capacitor
+    - supercapacitor
+  power_resistor:
+    name: power resistor
+    datasheets: 6
+    labels:
+    - power resistor
+  thin_film_precision_chip_resistor:
+    name: thin film precision chip resistor
+    datasheets: 6
+    labels:
+    - thin film precision chip resistor
+  current_sensing_chip_resistor:
+    name: current sensing chip resistor
+    datasheets: 5
+    labels:
+    - current sensing chip resistor
+  fast_recovery_diode:
+    name: fast recovery diode
+    datasheets: 5
+    labels:
+    - fast recovery diode
+  fast_recovery_switching_diode:
+    name: fast recovery switching diode
+    datasheets: 5
+    labels:
+    - fast recovery switching diode
+  thick_film_array_chip_resistor:
+    name: thick film array chip resistor
+    datasheets: 5
+    labels:
+    - thick film array chip resistor
+  ultrafast_rectifier:
+    name: ultrafast rectifier
+    datasheets: 5
+    labels:
+    - ultrafast rectifier
+  aluminum_nitride_thin_film_precision_chi:
+    name: aluminum nitride thin film precision chip resistor
     datasheets: 4
     labels:
-    - high voltage rectifier
-  igbt:
-    name: Insulated Gate Bipolar Transistor
+    - aluminum nitride thin film precision chip resistor
+    - tantalum nitride thin film precision chip resistor
+    - tantalum nitride thin film resistor
+  dip_power_inductor:
+    name: DIP power inductor
+    datasheets: 4
+    labels:
+    - DIP power inductor
+  metal_film_resistor:
+    name: metal film resistor
+    datasheets: 4
+    labels:
+    - metal film resistor
+    - metal oxide film resistor
+  molding_e_beam_welded_metal_strip_resist:
+    name: molding E-beam welded metal strip resistor
+    datasheets: 4
+    labels:
+    - molding E-beam welded metal strip resistor
+  ntc_thermistor:
+    name: NTC thermistor
+    datasheets: 4
+    labels:
+    - NTC thermistor
+  pulse_withstanding_chip_resistor:
+    name: pulse withstanding chip resistor
+    datasheets: 4
+    labels:
+    - pulse withstanding chip resistor
+  surge_withstanding_chip_resistor:
+    name: surge withstanding chip resistor
+    datasheets: 4
+    labels:
+    - surge withstanding chip resistor
+  thick_film_flat_array_chip_resistor:
+    name: thick film flat array chip resistor
+    datasheets: 4
+    labels:
+    - thick film flat array chip resistor
+  alloy_chip_shunt_resistor:
+    name: alloy chip shunt resistor
     datasheets: 3
+    labels:
+    - alloy chip shunt resistor
+  chip_resistor:
+    name: chip resistor
+    datasheets: 3
+    labels:
+    - chip resistor
+  high_ohmic_chip_resistor:
+    name: high ohmic chip resistor
+    datasheets: 3
+    labels:
+    - high ohmic chip resistor
+    - high ohmic metal glaze resistor
+  high_voltage_thick_film_chip_resistor:
+    name: high voltage thick film chip resistor
+    datasheets: 3
+    labels:
+    - high voltage thick film chip resistor
+  low_ohm_metal_strip_chip_resistor:
+    name: low ohm metal strip chip resistor
+    datasheets: 3
+    labels:
+    - low ohm metal strip chip resistor
+  metal_film_precision_melf_resistor:
+    name: metal film precision MELF resistor
+    datasheets: 3
+    labels:
+    - metal film leaded precision resistor
+    - metal film precision MELF resistor
+  metal_strip_chip_resistor:
+    name: metal strip chip resistor
+    datasheets: 3
+    labels:
+    - metal strip chip resistor
+    - metal strip resistor
+  multilayer_chip_inductor:
+    name: multilayer chip inductor
+    datasheets: 3
+    labels:
+    - multilayer chip inductor
+  multilayer_ferrite_chip_inductor:
+    name: multilayer ferrite chip inductor
+    datasheets: 3
+    labels:
+    - multilayer ferrite chip inductor
+  wire_wound_chip_inductor:
+    name: wire wound chip inductor
+    datasheets: 3
+    labels:
+    - wire wound chip inductor
+  anti_corrosive_thin_film_precision_chip_:
+    name: anti-corrosive thin film precision chip resistor
+    datasheets: 2
+    labels:
+    - anti-corrosive thin film precision chip resistor
+  anti_sulfurated_thick_film_chip_resistor:
+    name: anti-sulfurated thick film chip resistor
+    datasheets: 2
+    labels:
+    - anti-sulfurated thick film chip resistor
+  automotive_grade_anti_sulfurated_chip_re:
+    name: Automotive Grade Anti-Sulfurated Chip Resistor
+    datasheets: 2
+    labels:
+    - Automotive Grade Anti-Sulfurated Chip Resistor
+  automotive_grade_chip_resistor:
+    name: automotive grade chip resistor
+    datasheets: 2
+    labels:
+    - automotive grade chip resistor
+  automotive_grade_high_power_thin_film_ch:
+    name: Automotive Grade High Power Thin Film Chip Resistor
+    datasheets: 2
+    labels:
+    - Automotive Grade High Power Thin Film Chip Resistor
+  automotive_grade_high_voltage_thin_film_:
+    name: Automotive Grade High Voltage Thin Film Flat Chip Resistor
+    datasheets: 2
+    labels:
+    - Automotive Grade High Voltage Thin Film Flat Chip Resistor
+  chip_common_mode_choke:
+    name: chip common mode choke
+    datasheets: 2
+    labels:
+    - chip common mode choke
+  current_sensing_thick_film_chip_resistor:
+    name: current sensing thick film chip resistor
+    datasheets: 2
+    labels:
+    - current sensing thick film chip resistor
+  esd_tvs_array:
+    name: ESD TVS array
+    datasheets: 2
+    labels:
+    - ESD TVS array
+  four_terminal_metal_strip_resistor:
+    name: four-terminal metal strip resistor
+    datasheets: 2
+    labels:
+    - four-terminal metal strip resistor
+  green_thick_film_chip_resistor:
+    name: green thick film chip resistor
+    datasheets: 2
+    labels:
+    - green thick film chip resistor
+  igbt:
+    name: IGBT
+    datasheets: 2
     labels:
     - IGBT
     - Insulated Gate Bipolar Transistor
-  tvs_array:
-    name: TVS Array
-    datasheets: 3
-    labels:
-    - ESD TVS array
-    - TVS diode array
-  esd_array:
-    name: ESD Protection Array
+  low_capacitance_esd_tvs_array:
+    name: low capacitance ESD TVS array
     datasheets: 2
     labels:
-    - ESD protection array
-  mosfet:
-    name: MOSFET
+    - low capacitance ESD TVS array
+  metal_chip_resistor:
+    name: metal chip resistor
     datasheets: 2
     labels:
-    - MOSFET
+    - metal chip resistor
+  metal_foil_chip_resistor:
+    name: metal foil chip resistor
+    datasheets: 2
+    labels:
+    - metal foil chip resistor
+  multilayer_chip_common_mode_filter:
+    name: multilayer chip common mode filter
+    datasheets: 2
+    labels:
+    - chip common mode filter
+    - multilayer chip common mode filter
   pnp_transistor:
-    name: PNP Transistor
+    name: PNP transistor
     datasheets: 2
     labels:
     - PNP transistor
+  silicon_schottky_barrier_diode:
+    name: Silicon Schottky barrier diode
+    datasheets: 2
+    labels:
+    - Silicon Schottky barrier diode
+  smd_wire_wound_chip_inductor:
+    name: SMD wire wound chip inductor
+    datasheets: 2
+    labels:
+    - SMD wire wound chip inductor
+  thin_film_array_chip_resistor:
+    name: thin film array chip resistor
+    datasheets: 2
+    labels:
+    - thin film array chip resistor
+  wire_wound_power_inductor:
+    name: wire wound power inductor
+    datasheets: 2
+    labels:
+    - wire wound power inductor
+  automotive_grade_chip_shunt_resistor:
+    name: automotive grade chip shunt resistor
+    datasheets: 1
+    labels:
+    - automotive grade chip shunt resistor
+  automotive_grade_current_sensing_chip_re:
+    name: Automotive Grade Current Sensing Chip Resistor
+    datasheets: 1
+    labels:
+    - Automotive Grade Current Sensing Chip Resistor
+  automotive_grade_current_sensing_thin_fi:
+    name: automotive grade current sensing thin film chip resistor
+    datasheets: 1
+    labels:
+    - automotive grade current sensing thin film chip resistor
+  automotive_grade_green_chip_resistor:
+    name: Automotive Grade Green Chip Resistor
+    datasheets: 1
+    labels:
+    - Automotive Grade Green Chip Resistor
+  automotive_grade_low_ohm_chip_resistor:
+    name: Automotive Grade Low Ohm Chip Resistor
+    datasheets: 1
+    labels:
+    - Automotive Grade Low Ohm Chip Resistor
+  automotive_grade_metal_film_melf_resisto:
+    name: automotive grade metal film MELF resistor
+    datasheets: 1
+    labels:
+    - automotive grade metal film MELF resistor
+  automotive_grade_metal_thin_film_chip_re:
+    name: Automotive Grade Metal Thin Film Chip Resistor
+    datasheets: 1
+    labels:
+    - Automotive Grade Metal Thin Film Chip Resistor
+  automotive_grade_professional_thin_film_:
+    name: Automotive Grade Professional Thin Film Chip Resistor
+    datasheets: 1
+    labels:
+    - Automotive Grade Professional Thin Film Chip Resistor
+  automotive_grade_thin_film_precision_chi:
+    name: Automotive Grade Thin Film Precision Chip Resistor
+    datasheets: 1
+    labels:
+    - Automotive Grade Thin Film Precision Chip Resistor
+  carbon_film_resistor:
+    name: carbon film resistor
+    datasheets: 1
+    labels:
+    - carbon film resistor
+  chip_shunt_resistor:
+    name: chip shunt resistor
+    datasheets: 1
+    labels:
+    - chip shunt resistor
+  current_sensing_metal_chip_resistor:
+    name: current sensing metal chip resistor
+    datasheets: 1
+    labels:
+    - current sensing metal chip resistor
+  current_sensing_thin_film_chip_resistor:
+    name: thin film current sensing chip resistor
+    datasheets: 1
+    labels:
+    - thin film current sensing chip resistor
+  dual_channel_low_side_gate_driver:
+    name: dual channel low side gate driver
+    datasheets: 1
+    labels:
+    - dual channel low side gate driver
   dual_transistor:
-    name: Dual Transistor
+    name: dual transistor
     datasheets: 1
     labels:
     - dual transistor
-  esd_surge_array:
+  esd_surge_protection_diode:
+    name: ESD/Surge Protection Diode
+    datasheets: 1
+    labels:
+    - ESD/Surge Protection Diode
+  esd_surge_protection_diode_array:
     name: ESD/Surge Protection Diode Array
     datasheets: 1
     labels:
     - ESD/Surge Protection Diode Array
-  low_side_gate_driver:
-    name: Low Side Gate Driver
+  fast_switching_diode_array:
+    name: fast switching diode array
     datasheets: 1
     labels:
-    - low side gate driver
+    - fast switching diode array
+  four_terminal_high_precision_current_sen:
+    name: four terminal high precision current sense resistor
+    datasheets: 1
+    labels:
+    - four terminal high precision current sense resistor
+  green_anti_sulfurated_thick_film_chip_re:
+    name: Green Anti-Sulfurated Thick Film Chip Resistor
+    datasheets: 1
+    labels:
+    - Green Anti-Sulfurated Thick Film Chip Resistor
+  high_power_thin_film_chip_resistor:
+    name: high power thin film chip resistor
+    datasheets: 1
+    labels:
+    - high power thin film chip resistor
+  high_precision_metal_film_resistor:
+    name: high precision metal film resistor
+    datasheets: 1
+    labels:
+    - high precision metal film resistor
+  high_voltage_rectifier:
+    name: high voltage rectifier
+    datasheets: 1
+    labels:
+    - high voltage rectifier
+  low_capacitance_esd_protection_diode:
+    name: low capacitance ESD protection diode
+    datasheets: 1
+    labels:
+    - low capacitance ESD protection diode
+  low_ohm_chip_resistor:
+    name: low ohm chip resistor
+    datasheets: 1
+    labels:
+    - low ohm chip resistor
+  metal_film_flame_proof_resistor:
+    name: metal film flame-proof resistor
+    datasheets: 1
+    labels:
+    - metal film flame-proof resistor
+  metal_thin_film_chip_resistor:
+    name: metal thin film chip resistor
+    datasheets: 1
+    labels:
+    - metal thin film chip resistor
+  multilayer_array_chip_common_mode_filter:
+    name: multilayer array chip common mode filter
+    datasheets: 1
+    labels:
+    - multilayer array chip common mode filter
+  multilayer_ceramic_inductor:
+    name: multilayer ceramic inductor
+    datasheets: 1
+    labels:
+    - multilayer ceramic inductor
+  multilayer_chip_bead:
+    name: multilayer chip bead
+    datasheets: 1
+    labels:
+    - multilayer chip bead
+  multilayer_common_mode_filter:
+    name: multilayer common mode filter
+    datasheets: 1
+    labels:
+    - multilayer common mode filter
+  npn_switching_transistor:
+    name: NPN switching transistor
+    datasheets: 1
+    labels:
+    - NPN switching transistor
   push_pull_transformer_driver:
-    name: Push-Pull Transformer Driver
+    name: push-pull transformer driver
     datasheets: 1
     labels:
     - push-pull transformer driver
-  silicon_diode:
-    name: Silicon Diode
+  silicon_epitaxial_planar_diode:
+    name: Silicon Epitaxial Planar Diode
     datasheets: 1
     labels:
-    - Silicon diode
-  small_signal_diode:
-    name: Small-Signal Diode
+    - Silicon Epitaxial Planar Diode
+  silicon_epitaxial_planar_switching_diode:
+    name: Silicon Epitaxial Planar Switching Diode
     datasheets: 1
     labels:
-    - small-signal diode
-  switching_diode_array:
-    name: Switching Diode Array
+    - Silicon Epitaxial Planar Switching Diode
+  silicon_epitaxial_schottky_barrier_diode:
+    name: Silicon Epitaxial Schottky Barrier Diode
     datasheets: 1
     labels:
-    - switching diode array
-  three_phase_bridge_rectifier:
-    name: Three-Phase Bridge Rectifier
+    - Silicon Epitaxial Schottky Barrier Diode
+  small_signal_fast_switching_diode:
+    name: small-signal fast switching diode
     datasheets: 1
     labels:
-    - three-phase rectifier bridge
+    - small-signal fast switching diode
+  thick_film_chip_resistor_array:
+    name: thick film chip resistor array
+    datasheets: 1
+    labels:
+    - thick film chip resistor array
+  thin_film_chip_inductor:
+    name: thin film chip inductor
+    datasheets: 1
+    labels:
+    - thin film chip inductor
+  thin_film_flat_chip_resistor:
+    name: thin film flat chip resistor
+    datasheets: 1
+    labels:
+    - thin film flat chip resistor
   three_phase_rectifier:
-    name: Three-Phase Rectifier
+    name: three phase rectifier
     datasheets: 1
     labels:
-    - three-phase rectifier
+    - three phase rectifier
+  three_phase_rectifier_bridge:
+    name: three phase rectifier bridge
+    datasheets: 1
+    labels:
+    - three phase rectifier bridge
+  trench_field_stop_igbt:
+    name: Trench Field Stop IGBT
+    datasheets: 1
+    labels:
+    - Trench Field Stop IGBT
+  ultra_low_capacitance_tvs_diode_array:
+    name: ultra low capacitance TVS diode array
+    datasheets: 1
+    labels:
+    - ultra low capacitance TVS diode array
+  ultra_low_chip_resistor_jumper:
+    name: ultra-low chip resistor jumper
+    datasheets: 1
+    labels:
+    - ultra-low chip resistor jumper
+  wire_wound_power_resistor:
+    name: wire wound chip power resistor
+    datasheets: 1
+    labels:
+    - wire wound chip power resistor
+  wire_wound_resistor:
+    name: wire wound resistor
+    datasheets: 1
+    labels:
+    - wire wound resistor
+  _not_a_datasheet:
+    name: Not a datasheet (application note, brochure, ...)
+    datasheets: 3
+    labels: []

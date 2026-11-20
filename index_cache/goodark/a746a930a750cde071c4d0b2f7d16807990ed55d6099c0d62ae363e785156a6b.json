@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:44:34+00:00",
+  "at": "2026-11-19T18:45:26+00:00",
   "is_datasheet": true,
-  "label": "TVS diode",
+  "label": "transient voltage suppressor",
   "family": true,
   "part_numbers": [
    "ASMA6J7.0A",
@@ -17,8 +17,10 @@
    "ASMA6J9.0A"
   ],
   "confidence": "high",
-  "seconds": 6.74,
-  "tokens_in": 1829,
-  "tokens_out": 82
- }
+  "asked_again": false,
+  "seconds": 1.99,
+  "tokens_in": 1898,
+  "tokens_out": 83
+ },
+ "type": "tvs_diode"
 }

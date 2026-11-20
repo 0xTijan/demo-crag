@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:40:03+00:00",
+  "at": "2026-11-19T18:41:02+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "1N5400G",
@@ -17,8 +17,10 @@
    "1N5404G"
   ],
   "confidence": "high",
-  "seconds": 7.81,
-  "tokens_in": 1547,
-  "tokens_out": 111
- }
+  "asked_again": false,
+  "seconds": 1.99,
+  "tokens_in": 1616,
+  "tokens_out": 112
+ },
+ "type": "standard_rectifier"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "viking/mlp-series_ce907393.md",
+ "supplier": "viking",
+ "file_hash": "dba4806419b414b14bfca0ca44496c0cfc7b3a6104bafa5d3d4d4ce3326d3bac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:25+00:00",
+  "is_datasheet": true,
+  "label": "wire wound power inductor",
+  "family": true,
+  "part_numbers": [
+   "MLP(H)03",
+   "MLP(H)04",
+   "MLP(H)06",
+   "MLP(H)08",
+   "MLP10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.81,
+  "tokens_in": 1746,
+  "tokens_out": 71
+ },
+ "type": "wire_wound_power_inductor"
+}

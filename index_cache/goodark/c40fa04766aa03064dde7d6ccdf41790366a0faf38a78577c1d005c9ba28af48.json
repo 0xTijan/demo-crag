@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:47:32+00:00",
+  "at": "2026-11-19T18:48:22+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "superfast rectifier",
   "family": false,
   "part_numbers": [
    "ES4HGW"
   ],
   "confidence": "high",
-  "seconds": 4.41,
-  "tokens_in": 1164,
-  "tokens_out": 40
- }
+  "asked_again": false,
+  "seconds": 1.09,
+  "tokens_in": 1233,
+  "tokens_out": 38
+ },
+ "type": "superfast_rectifier"
 }

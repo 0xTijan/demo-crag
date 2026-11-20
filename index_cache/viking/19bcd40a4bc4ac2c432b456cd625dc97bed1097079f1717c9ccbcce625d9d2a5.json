@@ -1,0 +1,26 @@
+{
+ "file": "viking/as-a-series-data-sheet-edition-rev-b6_95edaf9c.md",
+ "supplier": "viking",
+ "file_hash": "19bcd40a4bc4ac2c432b456cd625dc97bed1097079f1717c9ccbcce625d9d2a5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:13+00:00",
+  "is_datasheet": true,
+  "label": "Automotive Grade Anti-Sulfurated Chip Resistor",
+  "family": true,
+  "part_numbers": [
+   "AS01",
+   "AS02",
+   "AS03",
+   "AS05",
+   "AS06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.75,
+  "tokens_in": 1891,
+  "tokens_out": 64
+ },
+ "type": "automotive_grade_anti_sulfurated_chip_re"
+}

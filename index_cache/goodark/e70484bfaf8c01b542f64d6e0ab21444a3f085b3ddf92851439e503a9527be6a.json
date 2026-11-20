@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:42:37+00:00",
+  "at": "2026-11-19T18:43:33+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "AGN2AA",
@@ -17,8 +17,10 @@
    "AGN2JA"
   ],
   "confidence": "high",
-  "seconds": 7.0,
-  "tokens_in": 1553,
-  "tokens_out": 76
- }
+  "asked_again": false,
+  "seconds": 1.56,
+  "tokens_in": 1622,
+  "tokens_out": 73
+ },
+ "type": "standard_rectifier"
 }

@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:46:50+00:00",
+  "at": "2026-11-19T18:47:40+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "glass passivated bridge rectifier",
   "family": true,
   "part_numbers": [
    "DF2002S",
@@ -17,8 +17,10 @@
    "DF2010S"
   ],
   "confidence": "high",
-  "seconds": 7.33,
-  "tokens_in": 1794,
-  "tokens_out": 71
- }
+  "asked_again": false,
+  "seconds": 1.81,
+  "tokens_in": 1863,
+  "tokens_out": 74
+ },
+ "type": "glass_passivated_bridge_rectifier"
 }

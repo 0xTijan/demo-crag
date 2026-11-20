@@ -1,0 +1,26 @@
+{
+ "file": "viking/as-series_ab3faebe.md",
+ "supplier": "viking",
+ "file_hash": "f69220c1a5688794c0b85be01d5fb271638e3cf1ba550cf1eb3e5958ee779a22",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:22+00:00",
+  "is_datasheet": true,
+  "label": "anti-sulfurated thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "AS01",
+   "AS02",
+   "AS03",
+   "AS05",
+   "AS06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.71,
+  "tokens_in": 1859,
+  "tokens_out": 62
+ },
+ "type": "anti_sulfurated_thick_film_chip_resistor"
+}

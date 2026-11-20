@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:43:24+00:00",
+  "at": "2026-11-19T18:44:18+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "AMBRF30200CT"
   ],
   "confidence": "high",
-  "seconds": 4.89,
-  "tokens_in": 1324,
+  "asked_again": false,
+  "seconds": 1.19,
+  "tokens_in": 1393,
   "tokens_out": 45
- }
+ },
+ "type": "schottky_diode"
 }

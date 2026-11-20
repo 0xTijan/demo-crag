@@ -1,0 +1,22 @@
+{
+ "file": "viking/tr35-series-data-sheet-edition-rev-c_0e809c40.md",
+ "supplier": "viking",
+ "file_hash": "03d95fab7560daf43bca676faab4848ce7d3179f90c9bf4cbd49e29b8ee40a86",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:33+00:00",
+  "is_datasheet": true,
+  "label": "TO-220 power resistor",
+  "family": true,
+  "part_numbers": [
+   "TR35"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.29,
+  "tokens_in": 1470,
+  "tokens_out": 40
+ },
+ "type": "to_220_power_resistor"
+}

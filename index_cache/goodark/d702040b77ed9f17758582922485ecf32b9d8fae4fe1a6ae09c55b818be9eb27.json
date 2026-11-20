@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:56:07+00:00",
+  "at": "2026-11-19T18:57:00+00:00",
   "is_datasheet": true,
-  "label": "rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "HSOAA",
@@ -17,8 +17,10 @@
    "HSOGA"
   ],
   "confidence": "high",
-  "seconds": 6.87,
-  "tokens_in": 1608,
-  "tokens_out": 70
- }
+  "asked_again": false,
+  "seconds": 1.82,
+  "tokens_in": 1677,
+  "tokens_out": 72
+ },
+ "type": "fast_recovery_rectifier"
 }

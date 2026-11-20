@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:41:53+00:00",
+  "at": "2026-11-19T18:42:49+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "AFH1",
@@ -17,8 +17,10 @@
    "AFH5"
   ],
   "confidence": "high",
-  "seconds": 7.37,
-  "tokens_in": 1602,
-  "tokens_out": 74
- }
+  "asked_again": false,
+  "seconds": 1.79,
+  "tokens_in": 1671,
+  "tokens_out": 72
+ },
+ "type": "fast_recovery_rectifier"
 }

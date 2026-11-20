@@ -1,0 +1,26 @@
+{
+ "file": "viking/sde-a-series-data-sheet-edition-rev-a1_38bbe3bd.md",
+ "supplier": "viking",
+ "file_hash": "493da0b156a2038d13ba8aa9eadfba30471594688dcf89c13fc0596a82a747c8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:49+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "SDE0420",
+   "SDE0530",
+   "SDE0630",
+   "SDE0650",
+   "SDE1040"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 2.13,
+  "tokens_in": 2003,
+  "tokens_out": 73
+ },
+ "type": "smd_power_inductor"
+}

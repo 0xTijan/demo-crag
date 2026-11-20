@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:59:57+00:00",
+  "at": "2026-11-19T19:01:00+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "MBRF10150"
   ],
   "confidence": "high",
-  "seconds": 4.64,
-  "tokens_in": 1240,
+  "asked_again": false,
+  "seconds": 1.2,
+  "tokens_in": 1309,
   "tokens_out": 43
- }
+ },
+ "type": "schottky_diode"
 }

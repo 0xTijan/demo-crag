@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:03:21+00:00",
+  "at": "2026-11-19T19:04:31+00:00",
   "is_datasheet": true,
   "label": "ultrafast rectifier",
   "family": true,
@@ -14,8 +14,10 @@
    "MURS160A"
   ],
   "confidence": "high",
-  "seconds": 5.2,
-  "tokens_in": 1436,
+  "asked_again": false,
+  "seconds": 1.32,
+  "tokens_in": 1505,
   "tokens_out": 51
- }
+ },
+ "type": "ultrafast_rectifier"
 }

@@ -5,20 +5,19 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:45:58+00:00",
+  "at": "2026-11-19T18:46:48+00:00",
   "is_datasheet": true,
   "label": "bridge rectifier",
   "family": true,
   "part_numbers": [
    "BR35005(W)",
-   "BR3501(W)",
-   "BR3502(W)",
-   "BR3504(W)",
-   "BR3506(W)"
+   "BR35010(W)"
   ],
   "confidence": "high",
-  "seconds": 7.22,
-  "tokens_in": 1852,
-  "tokens_out": 89
- }
+  "asked_again": false,
+  "seconds": 1.56,
+  "tokens_in": 1921,
+  "tokens_out": 50
+ },
+ "type": "bridge_rectifier"
 }

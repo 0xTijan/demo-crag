@@ -1,0 +1,24 @@
+{
+ "file": "viking/cfh-a-series-data-sheet-edition-rev-a2_0b264cc9.md",
+ "supplier": "viking",
+ "file_hash": "a1d5044617af1df059744609dfbfa188aec251379c3e3d2fc96f3301759c2c72",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:40+00:00",
+  "is_datasheet": false,
+  "label": "catalogue",
+  "family": true,
+  "part_numbers": [
+   "CFH..A series",
+   "CFH10",
+   "CFH12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.33,
+  "tokens_in": 1368,
+  "tokens_out": 49
+ },
+ "type": "_not_a_datasheet"
+}

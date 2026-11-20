@@ -12,6 +12,9 @@ Answer with JSON only, exactly these fields:
 - "type": the kind of component, in English, singular, a few words, as specific as the document allows,
   e.g. "N-channel MOSFET", "Schottky barrier rectifier", "multilayer ceramic capacitor", "TVS diode",
   "isolated CAN transceiver", "magnetic angle encoder", "thick film chip resistor".
+  Always at least two words: the kind and what sets it apart from other parts of that kind,
+  e.g. "standard rectifier" or "fast recovery rectifier", not "rectifier"; "N-channel MOSFET", not "MOSFET";
+  "NTC thermistor", not "thermistor".
   No manufacturer, series name, part number, package or rating in it.
   If the document covers several kinds of component, give the main one.
 - "is_datasheet": false for anything that is not a product datasheet (application note, brochure,

@@ -1,0 +1,26 @@
+{
+ "file": "viking/mf-a-series-data-sheet-edition-rev-a4_9a2d0ce0.md",
+ "supplier": "viking",
+ "file_hash": "f977547faa390c14f1ba039577755b26ef7fcd825f3e4457ae9a6cf69c62c73a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:10+00:00",
+  "is_datasheet": true,
+  "label": "metal foil chip resistor",
+  "family": true,
+  "part_numbers": [
+   "MF03",
+   "MF05",
+   "MF06",
+   "MF10",
+   "MF12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.91,
+  "tokens_in": 2344,
+  "tokens_out": 57
+ },
+ "type": "metal_foil_chip_resistor"
+}

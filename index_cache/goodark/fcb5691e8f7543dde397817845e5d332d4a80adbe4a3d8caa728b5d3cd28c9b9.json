@@ -5,16 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:50:09+00:00",
+  "at": "2026-11-19T18:51:04+00:00",
   "is_datasheet": true,
-  "label": "IGBT",
+  "label": "Trench Field Stop IGBT",
   "family": false,
   "part_numbers": [
    "GIT065N75E1C2"
   ],
   "confidence": "high",
-  "seconds": 5.29,
-  "tokens_in": 1749,
-  "tokens_out": 43
- }
+  "asked_again": false,
+  "seconds": 1.56,
+  "tokens_in": 1818,
+  "tokens_out": 47
+ },
+ "type": "trench_field_stop_igbt"
 }

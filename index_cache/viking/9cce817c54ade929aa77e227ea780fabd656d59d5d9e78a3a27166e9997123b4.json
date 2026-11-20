@@ -1,0 +1,22 @@
+{
+ "file": "viking/crht-a-series-data-sheet-edition-rev_3ed69c54.md",
+ "supplier": "viking",
+ "file_hash": "9cce817c54ade929aa77e227ea780fabd656d59d5d9e78a3a27166e9997123b4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:24+00:00",
+  "is_datasheet": true,
+  "label": "thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CRHT03FTEW1002A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.52,
+  "tokens_in": 1744,
+  "tokens_out": 47
+ },
+ "type": "thick_film_chip_resistor"
+}

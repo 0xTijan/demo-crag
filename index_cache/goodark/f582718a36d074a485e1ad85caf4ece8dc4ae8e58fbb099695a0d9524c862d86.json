@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:09:57+00:00",
+  "at": "2026-11-19T19:11:17+00:00",
   "is_datasheet": true,
   "label": "ESD protection diode",
   "family": false,
@@ -13,8 +13,10 @@
    "TPESD1CAN"
   ],
   "confidence": "high",
-  "seconds": 5.44,
-  "tokens_in": 1304,
+  "asked_again": false,
+  "seconds": 1.2,
+  "tokens_in": 1373,
   "tokens_out": 40
- }
+ },
+ "type": "esd_protection_diode"
 }

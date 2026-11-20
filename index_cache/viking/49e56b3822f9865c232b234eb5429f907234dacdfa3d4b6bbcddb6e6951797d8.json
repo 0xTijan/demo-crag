@@ -1,0 +1,24 @@
+{
+ "file": "viking/ps-series_c0dd35ad.md",
+ "supplier": "viking",
+ "file_hash": "49e56b3822f9865c232b234eb5429f907234dacdfa3d4b6bbcddb6e6951797d8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:16:09+00:00",
+  "is_datasheet": true,
+  "label": "shielded SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "PS1608",
+   "PS3316",
+   "PS5022"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.69,
+  "tokens_in": 1797,
+  "tokens_out": 56
+ },
+ "type": "shielded_smd_power_inductor"
+}

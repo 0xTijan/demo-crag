@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:41:12+00:00",
+  "at": "2026-11-19T18:42:10+00:00",
   "is_datasheet": true,
-  "label": "Silicon diode",
+  "label": "Silicon Epitaxial Planar Diode",
   "family": true,
   "part_numbers": [
    "ABAS19",
@@ -15,8 +15,10 @@
    "ABAS21"
   ],
   "confidence": "high",
-  "seconds": 6.78,
-  "tokens_in": 1580,
-  "tokens_out": 50
- }
+  "asked_again": false,
+  "seconds": 1.66,
+  "tokens_in": 1649,
+  "tokens_out": 56
+ },
+ "type": "silicon_epitaxial_planar_diode"
 }

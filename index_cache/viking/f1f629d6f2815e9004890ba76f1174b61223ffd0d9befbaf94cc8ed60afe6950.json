@@ -1,0 +1,23 @@
+{
+ "file": "viking/al-series-data-sheet-edition-rev-d1_d0ac06f9.md",
+ "supplier": "viking",
+ "file_hash": "f1f629d6f2815e9004890ba76f1174b61223ffd0d9befbaf94cc8ed60afe6950",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:11:25+00:00",
+  "is_datasheet": true,
+  "label": "thin film chip inductor",
+  "family": true,
+  "part_numbers": [
+   "AL01",
+   "AL02"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.37,
+  "tokens_in": 1445,
+  "tokens_out": 43
+ },
+ "type": "thin_film_chip_inductor"
+}

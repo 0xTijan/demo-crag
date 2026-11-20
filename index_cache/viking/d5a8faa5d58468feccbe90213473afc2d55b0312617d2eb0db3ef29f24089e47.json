@@ -1,0 +1,23 @@
+{
+ "file": "viking/cmx-a-series-data-sheet-edition-rev-a1_bd4a350e.md",
+ "supplier": "viking",
+ "file_hash": "d5a8faa5d58468feccbe90213473afc2d55b0312617d2eb0db3ef29f24089e47",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:12:56+00:00",
+  "is_datasheet": true,
+  "label": "multilayer common mode filter",
+  "family": true,
+  "part_numbers": [
+   "CMX04W",
+   "CMX05W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.71,
+  "tokens_in": 1970,
+  "tokens_out": 48
+ },
+ "type": "multilayer_common_mode_filter"
+}

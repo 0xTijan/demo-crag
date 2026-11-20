@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:50:49+00:00",
+  "at": "2026-11-19T18:51:44+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
@@ -13,8 +13,10 @@
    "GMN01810LL"
   ],
   "confidence": "high",
-  "seconds": 5.88,
-  "tokens_in": 1807,
+  "asked_again": false,
+  "seconds": 1.46,
+  "tokens_in": 1876,
   "tokens_out": 43
- }
+ },
+ "type": "mosfet_n"
 }

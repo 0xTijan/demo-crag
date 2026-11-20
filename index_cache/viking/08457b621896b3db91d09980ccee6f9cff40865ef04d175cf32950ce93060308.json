@@ -1,0 +1,26 @@
+{
+ "file": "viking/swr-a-series_c83bba2d.md",
+ "supplier": "viking",
+ "file_hash": "08457b621896b3db91d09980ccee6f9cff40865ef04d175cf32950ce93060308",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:17:15+00:00",
+  "is_datasheet": true,
+  "label": "surge withstanding chip resistor",
+  "family": true,
+  "part_numbers": [
+   "SWR02",
+   "SWR03",
+   "SWR05",
+   "SWR05(1/2W)",
+   "SWR06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.95,
+  "tokens_in": 2028,
+  "tokens_out": 69
+ },
+ "type": "surge_withstanding_chip_resistor"
+}

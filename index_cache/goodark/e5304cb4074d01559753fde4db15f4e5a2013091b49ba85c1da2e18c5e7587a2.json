@@ -5,16 +5,16 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:04:15+00:00",
+  "at": "2026-11-19T19:05:27+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier diode",
   "family": false,
-  "part_numbers": [
-   "SOD-323"
-  ],
+  "part_numbers": [],
   "confidence": "high",
-  "seconds": 4.48,
-  "tokens_in": 1043,
-  "tokens_out": 42
- }
+  "asked_again": false,
+  "seconds": 1.05,
+  "tokens_in": 1112,
+  "tokens_out": 35
+ },
+ "type": "schottky_diode"
 }

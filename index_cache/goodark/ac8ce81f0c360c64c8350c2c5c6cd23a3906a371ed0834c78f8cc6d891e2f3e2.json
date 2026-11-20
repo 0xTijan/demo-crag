@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:39:41+00:00",
+  "at": "2026-11-19T18:40:40+00:00",
   "is_datasheet": true,
   "label": "fast switching diode",
   "family": false,
@@ -13,8 +13,10 @@
    "200mWSOD-323"
   ],
   "confidence": "high",
-  "seconds": 6.53,
-  "tokens_in": 1289,
+  "asked_again": false,
+  "seconds": 1.21,
+  "tokens_in": 1358,
   "tokens_out": 44
- }
+ },
+ "type": "fast_switching_diode"
 }

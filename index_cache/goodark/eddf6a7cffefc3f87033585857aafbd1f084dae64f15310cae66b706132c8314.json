@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T15:00:38+00:00",
+  "at": "2026-11-19T19:01:43+00:00",
   "is_datasheet": true,
   "label": "NPN transistor",
   "family": false,
@@ -13,8 +13,10 @@
    "MMBT3904"
   ],
   "confidence": "high",
-  "seconds": 5.21,
-  "tokens_in": 1620,
+  "asked_again": false,
+  "seconds": 1.4,
+  "tokens_in": 1689,
   "tokens_out": 39
- }
+ },
+ "type": "npn_transistor"
 }

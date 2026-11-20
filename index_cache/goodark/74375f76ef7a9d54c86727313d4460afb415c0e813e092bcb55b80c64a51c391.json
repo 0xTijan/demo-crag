@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:42:51+00:00",
+  "at": "2026-11-19T18:43:47+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "AHS3A",
@@ -17,8 +17,10 @@
    "AHS3J"
   ],
   "confidence": "high",
-  "seconds": 7.16,
-  "tokens_in": 1561,
-  "tokens_out": 76
- }
+  "asked_again": false,
+  "seconds": 1.84,
+  "tokens_in": 1630,
+  "tokens_out": 74
+ },
+ "type": "fast_recovery_rectifier"
 }

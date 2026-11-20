@@ -1,0 +1,24 @@
+{
+ "file": "viking/pcd-g-series-data-sheet-edition-rev-a2_0ff84f34.md",
+ "supplier": "viking",
+ "file_hash": "c4dd1ac46516c14f1bda924a7dd4f31abc200423b13bb3d63c84cdbb1ff9dce3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:15:41+00:00",
+  "is_datasheet": true,
+  "label": "SMD power inductor",
+  "family": true,
+  "part_numbers": [
+   "PCD0403-G",
+   "PCD0504-G",
+   "PCD0705-G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.7,
+  "tokens_in": 1829,
+  "tokens_out": 60
+ },
+ "type": "smd_power_inductor"
+}

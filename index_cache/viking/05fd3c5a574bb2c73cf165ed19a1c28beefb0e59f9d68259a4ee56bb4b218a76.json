@@ -1,0 +1,23 @@
+{
+ "file": "viking/crp-series-data-sheet-edition-rev-a4_2c1f1bfd.md",
+ "supplier": "viking",
+ "file_hash": "05fd3c5a574bb2c73cf165ed19a1c28beefb0e59f9d68259a4ee56bb4b218a76",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-19T19:13:25+00:00",
+  "is_datasheet": true,
+  "label": "thick film chip resistor",
+  "family": true,
+  "part_numbers": [
+   "CRP06",
+   "CRP12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 1.21,
+  "tokens_in": 1410,
+  "tokens_out": 45
+ },
+ "type": "thick_film_chip_resistor"
+}

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:44:41+00:00",
+  "at": "2026-11-19T18:45:33+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
@@ -13,8 +13,10 @@
    "ASS34C"
   ],
   "confidence": "high",
-  "seconds": 6.96,
-  "tokens_in": 1214,
+  "asked_again": false,
+  "seconds": 1.24,
+  "tokens_in": 1283,
   "tokens_out": 40
- }
+ },
+ "type": "schottky_diode"
 }

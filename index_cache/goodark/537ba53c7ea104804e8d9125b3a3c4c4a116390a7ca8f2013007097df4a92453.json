@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T14:46:30+00:00",
+  "at": "2026-11-19T18:47:20+00:00",
   "is_datasheet": true,
-  "label": "Bridge rectifier",
+  "label": "bridge rectifier",
   "family": true,
   "part_numbers": [
    "DB103",
@@ -17,8 +17,10 @@
    "DB107"
   ],
   "confidence": "high",
-  "seconds": 7.52,
-  "tokens_in": 1825,
+  "asked_again": false,
+  "seconds": 1.76,
+  "tokens_in": 1894,
   "tokens_out": 61
- }
+ },
+ "type": "bridge_rectifier"
 }
