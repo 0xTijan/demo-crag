@@ -162,6 +162,8 @@ the database is not reachable.
 | Setting | Where | Default |
 |---|---|---|
 | Models and their options (temperature, `num_ctx`) | `config.json`: `datasheetClassifierModel`, `typeGroupingModel`, `specInventoryModel`, `specListModel`, `specExtractionModel` | `qwen3:30b-a3b` |
+| Longest answer per call (a looping model stops here) | `num_predict` in each `config.json` model entry | 8192 tokens (`specExtractionModel`: 16384) |
+| Time limit per call | `timeout` (seconds) in each `config.json` model entry | 1800 |
 | Parallel requests on the server | `OLLAMA_NUM_PARALLEL` environment variable of the Ollama server | 1 |
 | Re-run every classification / inventory / extraction after a prompt or code change | `CLASSIFIER_VERSION` in `classify.py`, `INVENTORY_VERSION` in `spec_lists.py`, `EXTRACTOR_VERSION` in `extract.py` | `"1"` |
 | Database | `DATABASE_URL` (environment or `.env`) | `postgresql+psycopg2://username:postgres@localhost:5432/postgres` |

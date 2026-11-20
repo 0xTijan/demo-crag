@@ -108,16 +108,29 @@ class LLMAnswer:
     tokens_out: int
 
 
+DEFAULT_NUM_PREDICT = 8192    # most answered tokens per call; a looping model stops here instead of never
+DEFAULT_TIMEOUT = 1800        # seconds per call (also counts time queued behind other requests on the server)
+
+
 class OllamaJSON:
-    """One JSON-answer chat call to a local Ollama model (temperature etc. from config.json)."""
+    """One JSON-answer chat call to a local Ollama model (temperature etc. from config.json).
+
+    Two limits keep a run from hanging when the model loops (writes the same text or whitespace forever,
+    which happens now and then in JSON mode): `num_predict` caps the answer length (config.json, default
+    8192 tokens), and `timeout` (config.json, seconds, default 1800) ends a call that takes too long. Either
+    one makes the call fail with LLMError; the commands then skip that datasheet and the next run retries it."""
 
     def __init__(self, config_key: str, default_model: str):
         from ollama import Client  # imported here: tests and `report` do not need Ollama
 
         from helpers.config import model_settings
 
-        self.model, self.options = model_settings(config_key, default_model=default_model)
-        self.client = Client()
+        self.model, options = model_settings(config_key, default_model=default_model)
+        options = dict(options)
+        self.timeout = float(options.pop("timeout", DEFAULT_TIMEOUT))  # not an Ollama model option
+        options.setdefault("num_predict", DEFAULT_NUM_PREDICT)
+        self.options = options
+        self.client = Client(timeout=self.timeout)
 
     def check_model(self) -> None:
         """Fail early with a clear message if the model is not pulled / Ollama is not running."""
@@ -137,8 +150,14 @@ class OllamaJSON:
             except TypeError:
                 resp = self.client.chat(self.model, messages=messages, format="json", options=self.options)
         except Exception as exc:  # noqa: BLE001
+            if "timeout" in exc.__class__.__name__.lower() or "timed out" in str(exc).lower():
+                raise LLMError(f"no answer after {self.timeout:.0f} s (model looping or server busy; "
+                               f"raise `timeout` in config.json if calls are just slow)") from exc
             raise LLMError(f"{exc.__class__.__name__}: {exc}") from exc
         content = resp.message.content or ""
+        if getattr(resp, "done_reason", None) == "length":
+            raise LLMError(f"answer cut at {self.options.get('num_predict')} tokens (model looping, or the "
+                           f"answer is longer: raise `num_predict` in config.json)")
         try:
             data = json.loads(content)
         except ValueError as exc:

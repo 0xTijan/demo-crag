@@ -39,6 +39,7 @@
     "specExtractionModel": {
         "model": "qwen3:30b-a3b",
         "temperature": 0,
-        "num_ctx": 32768
+        "num_ctx": 32768,
+        "num_predict": 16384
     }
 }
