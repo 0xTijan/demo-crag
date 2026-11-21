@@ -324,7 +324,7 @@ because output is the slow part (plan section 8):
             "values": ["vds_max | 60 | V | 1 | 60 |", "id_max | 200 | mA | 1 | 200 | TA=25C"]}]}
 ```
 
-`key | value | unit | page | raw | conditions`; `common` holds the values shared by every part, written once.
+`key | value | unit | page | raw | conditions`; `common` holds the values shared by every part, written once. A row with several part numbers (unidirectional `1.5KE6.8` and bidirectional `1.5KE6.8C`) is written once, the other part numbers under `variants` with only the lines that differ; code expands them into full parts (`variant_of` names the first). Tables are compacted before they are sent (the converter pads every cell to the column width: ~55,000 characters of a TVS table become ~6,500), so long ordering tables fit.
 A family with a code system and availability tables (MLCC) gives one entry per availability row,
 `part_number: ""` and `family_row: "0603 / X7R / 50 V"`, with ranges (`150..470000`) and option lists
 (`1; 2; 5; 10`).

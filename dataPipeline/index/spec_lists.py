@@ -36,7 +36,7 @@ if __package__ in (None, ""):  # allow `python dataPipeline/index/spec_lists.py`
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from dataPipeline.index.common import (  # noqa: E402
-    MARKDOWN_DIR, ROOT, LLMError, OllamaJSON, find_datasheets, read_cache, split_pages, write_cache,
+    MARKDOWN_DIR, ROOT, LLMError, OllamaJSON, compact_tables, find_datasheets, read_cache, split_pages, write_cache,
 )
 
 SPEC_LIST_DIR = ROOT / "spec_lists"
@@ -71,7 +71,7 @@ def spec_pages(markdown: str, max_chars: int = 24000) -> str:
     pages = split_pages(markdown)
     chosen = []
     for n in sorted(pages):
-        text = re.sub(r"!\[[^\]]*\]\(data:[^)]*\)", "", pages[n])
+        text = compact_tables(re.sub(r"!\[[^\]]*\]\(data:[^)]*\)", "", pages[n]))
         has_table = re.search(r"^\s*\|", text, re.M) is not None
         if n == min(pages) or (has_table and (not SKIP_PAGE_RE.search(text) or KEEP_PAGE_RE.search(text))):
             chosen.append(f"<!-- page: {n} -->\n{text}" if len(pages) > 1 else text)

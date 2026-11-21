@@ -19,6 +19,10 @@ Parts:
 - A datasheet with a part-numbering code system and availability tables (capacitors, resistors, ...) and no
   list of part numbers: one entry per row of the availability table, "part_number": "" and "family_row": a
   short name of the row, e.g. "0603 / X7R / 50 V". Do not invent part numbers.
+- One row (or one set of values) with several part numbers that share its values, e.g. a unidirectional and
+  a bidirectional version ("1.5KE6.8" and "1.5KE6.8C"), or a lead-free / packing variant: ONE entry for the
+  first part number, the others in "variants", each with only the lines that differ (often none):
+  {"part_number": "1.5KE6.8", "values": [...], "variants": [{"part_number": "1.5KE6.8C", "values": [...]}]}
 - "ordering_page": the page of the ordering / part-numbering table, or 0.
 
 Lines, one per specification:

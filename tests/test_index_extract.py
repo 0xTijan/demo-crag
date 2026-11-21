@@ -179,6 +179,34 @@ def test_extract_family_rows_flag_typos_and_invented_values():
     assert a["specs"]["tolerance"]["verified"]  # raw "K" is a whole word on page 1 ("03 K T B")
 
 
+def test_variants_share_the_row_and_tables_are_compacted():
+    md = ("<!-- page: 1 -->\n| Part (Uni)" + " " * 60 + "| Part (Bi)" + " " * 60 + "| VWM" + " " * 60 + "|\n"
+          "|" + "-" * 70 + "|" + "-" * 70 + "|" + "-" * 70 + "|\n"
+          "| 1.5KE6.8" + " " * 60 + "| 1.5KE6.8C" + " " * 60 + "| 5.50" + " " * 60 + "|\n")
+    spec_list = {"type": "tvs_diode", "name": "TVS diode", "version": 1, "status": "reviewed",
+                 "specs": {"vwm": {"label": "VWM", "unit": "V", "stat": "max", "rule": ">=", "critical": True},
+                           "polarity": {"label": "Polarity", "unit": None, "stat": "value", "rule": "=",
+                                        "critical": True}}}
+
+    class Fake:
+        calls = []
+
+        def __call__(self, system, user):
+            self.calls.append(user)
+            return LLMAnswer({"parts": [{"part_number": "1.5KE6.8", "values": [
+                "vwm | 5.50 | V | 1 | 5.50 |", "polarity | unidirectional | | 1 | Uni |"],
+                "variants": [{"part_number": "1.5KE6.8C", "values": ["polarity | bidirectional | | 1 | Bi |"]},
+                             {"part_number": ""}]}]}, 1.0, 100, 50)
+    fake = Fake()
+    r = ex.extract(md, spec_list, fake)
+    assert "| 1.5KE6.8 | 1.5KE6.8C | 5.50 |" in fake.calls[0] and "      " not in fake.calls[0]
+    parts = {p["part_number"]: p for p in r["parts"]}
+    assert list(parts) == ["1.5KE6.8", "1.5KE6.8C"]
+    assert parts["1.5KE6.8C"]["specs"]["vwm"]["value"] == 5.5 and parts["1.5KE6.8C"]["variant_of"] == "1.5KE6.8"
+    assert parts["1.5KE6.8C"]["specs"]["polarity"]["value"] == "bidirectional"
+    assert parts["1.5KE6.8"]["specs"]["polarity"]["value"] == "unidirectional" and "variant_of" not in parts["1.5KE6.8"]
+
+
 def test_spec_pages_drop_tape_and_reel_pages():
     user = FakeExtractor()
     ex.extract(MOSFET_MD, MOSFET_LIST, user)

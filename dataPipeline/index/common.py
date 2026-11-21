@@ -71,13 +71,38 @@ def split_pages(markdown: str) -> dict[int, str]:
     return pages
 
 
+TABLE_SEP_CELL_RE = re.compile(r"^:?-{3,}:?$")
+
+
+def compact_tables(text: str) -> str:
+    """Shrink Markdown tables for the LLM: the converter pads every cell with spaces to the column width
+    (a 9-column row is ~600 characters for ~70 of content) and repeats a spanning header cell in every column.
+    Cells are stripped, a row whose cells are all the same becomes one cell, and separator rows become
+    |---|. Only lines starting with '|' change; the text keeps every value. The raw-text check reads the
+    original pages, so it is not affected."""
+    out = []
+    for line in text.split("\n"):
+        s = line.strip()
+        if not (s.startswith("|") and s.endswith("|") and len(s) > 1):
+            out.append(line)
+            continue
+        cells = [c.strip() for c in s[1:-1].split("|")]
+        if all(TABLE_SEP_CELL_RE.match(c) for c in cells if c) and any(cells):
+            out.append("|" + "|".join("---" for _ in cells) + "|")
+            continue
+        if len(cells) > 1 and len(set(cells)) == 1:
+            cells = cells[:1]
+        out.append("| " + " | ".join(cells) + " |")
+    return "\n".join(out)
+
+
 def first_pages(markdown: str, pages: int = 2, max_chars: int = 12000) -> str:
     """The first `pages` pages (with their markers), cut at max_chars. Enough to tell the type."""
     split = split_pages(markdown)
     chosen = sorted(split)[:pages]
     text = "\n\n".join(f"<!-- page: {n} -->\n{split[n]}" for n in chosen) if len(split) > 1 else markdown
     text = re.sub(r"!\[[^\]]*\]\(data:[^)]*\)", "", text)  # inline base64 images carry no type information
-    return text[:max_chars]
+    return compact_tables(text)[:max_chars]
 
 
 def read_cache(path: Path) -> dict:

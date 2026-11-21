@@ -41,7 +41,7 @@ from dataPipeline.index.spec_lists import (  # noqa: E402
 )
 from dataPipeline.index.values import check_value, parse_line, show  # noqa: E402
 
-EXTRACTOR_VERSION = "1"   # bump when the prompt or the code changes in a way that needs a re-run
+EXTRACTOR_VERSION = "2"   # bump when the prompt or the code changes in a way that needs a re-run
 EXTRACT_PROMPT = (Path(__file__).parent / "prompts" / "extract.txt").read_text(encoding="utf-8")
 DEFAULT_MODEL = "qwen3:30b-a3b"
 MAX_PARTS = 1000          # a family datasheet with more rows than this is cut (and reported)
@@ -92,7 +92,16 @@ def extract(markdown: str, spec_list: dict, llm, max_chars: int = 48000) -> dict
     common = _parse_lines(data.get("common"), specs, pages, dropped)
 
     merged: dict = {}
-    raw_parts = [p for p in (data.get("parts") or []) if isinstance(p, dict)]
+    raw_parts = []
+    for p in (data.get("parts") or []):
+        if not isinstance(p, dict):
+            continue
+        raw_parts.append(p)
+        for v in p.get("variants") or []:  # same row, other part number: the part's values + its own lines
+            if isinstance(v, dict) and v.get("part_number"):
+                lines = list(p.get("values") or []) + list(v.get("values") or [])
+                raw_parts.append({**p, "part_number": v["part_number"], "values": lines, "variant_of":
+                                  p.get("part_number") or ""})
     for p in raw_parts[:MAX_PARTS]:
         pn = " ".join(str(p.get("part_number") or "").split())[:80]
         row = " ".join(str(p.get("family_row") or "").split())[:120]
@@ -104,6 +113,8 @@ def extract(markdown: str, spec_list: dict, llm, max_chars: int = 48000) -> dict
         ident = (pn.upper(), row.lower())
         part = merged.setdefault(ident, {"part_number": pn, "family_row": row, "ordering_page": ordering_page,
                                          "specs": {}})
+        if p.get("variant_of"):
+            part["variant_of"] = " ".join(str(p["variant_of"]).split())[:80]
         part["specs"].update(values)
     if not merged and common:
         merged[("", "")] = {"part_number": "", "family_row": "", "ordering_page": None, "specs": {}}
