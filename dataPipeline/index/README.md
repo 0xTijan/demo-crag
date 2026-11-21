@@ -150,6 +150,7 @@ share unverified, coverage (share of the spec list found per part). Per datashee
 |---|---|---|
 | `--cache DIR` | `index_cache/` | The index cache |
 | `--supplier A B …` | all | Only these supplier folders (rows of other suppliers are left alone) |
+| `--input DIR` | `markdowns/` | Markdown folder: a cache file whose markdown now has another hash (changed, reconverted) is not loaded and its rows are removed |
 | `--dry-run` | off | Print what would change, write nothing |
 | `--database-url URL` | `DATABASE_URL` from the environment / `.env` | SQLAlchemy URL, same as the converter and `db_gui.py` |
 

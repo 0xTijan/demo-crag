@@ -242,7 +242,7 @@ def test_load_cache_syncs_catalog_parts():
             assert conn.execute(text("SELECT count(*) FROM catalog_parts")).scalar() == 0
 
         s = load_cache.sync(engine, cache)
-        assert s == {"datasheets": 2, "unchanged": 0, "loaded": 2, "rows_added": 4, "removed_datasheets": 0,
+        assert s == {"datasheets": 2, "stale": 0, "unchanged": 0, "loaded": 2, "rows_added": 4, "removed_datasheets": 0,
                      "rows_removed": 0}
         with engine.connect() as conn:
             rows = conn.execute(text("SELECT type, part_number, family_row, specs, unverified FROM catalog_parts "
@@ -261,6 +261,12 @@ def test_load_cache_syncs_catalog_parts():
         ex.cmd_run(run_args(md, drafts=True, types=["mosfet_n"]), FakeExtractor())  # re-extracted
         s = load_cache.sync(engine, cache)
         assert s["loaded"] == 1 and s["rows_removed"] == 1 and s["rows_added"] == 1
+
+        (md / "goodark/2n7000.md").write_text(MOSFET_MD + "\nrev B", encoding="utf-8")  # reconverted markdown
+        s = load_cache.sync(engine, cache, markdown_dir=md)
+        assert s["stale"] == 1 and s["removed_datasheets"] == 1 and s["rows_removed"] == 1
+        (md / "goodark/2n7000.md").write_text(MOSFET_MD, encoding="utf-8")
+        load_cache.sync(engine, cache, markdown_dir=md)                 # back: loaded again
 
         next(p for p in cache.glob("viking/*.json")).unlink()          # datasheet gone from the cache
         s = load_cache.sync(engine, cache)

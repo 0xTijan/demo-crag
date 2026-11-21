@@ -10,7 +10,8 @@ No LLM: on a new installation this rebuilds the table in minutes.
 It is a sync, so it can run after every extraction run:
 * a datasheet whose rows are already loaded from the same extraction is skipped;
 * a re-extracted datasheet gets its rows replaced;
-* rows of datasheets that are no longer in the cache (file changed or deleted) are removed
+* rows of datasheets that are no longer in the cache are removed, and so are the rows of a cache file whose
+  markdown has changed since (a reconverted PDF): its markdown in --input now has another hash
   (only for the suppliers that are loaded, see --supplier).
 
 Our suppliers' parts only. External (requested) parts go to `external_parts` from their own cache folder,
@@ -79,9 +80,14 @@ def ensure_tables(engine) -> None:
             conn.execute(text(statement))
 
 
-def cache_entries(cache_dir: Path, suppliers=None) -> list[dict]:
+def cache_entries(cache_dir: Path, suppliers=None, markdown_dir: Path | None = None,
+                  stale: list | None = None) -> list[dict]:
     """Every cache file with an extraction, sorted. Files directly in cache_dir (type_list.yaml, reports)
-    are not datasheets."""
+    are not datasheets. With markdown_dir: a cache file whose markdown still exists but now has another hash
+    (the markdown was changed or reconverted) is outdated and left out (appended to `stale`), so its rows are
+    removed. A cache file whose markdown is not on this PC is kept (a new installation may have no markdowns)."""
+    from dataPipeline.index.common import file_sha256
+    current: dict = {}
     out = []
     for path in sorted(cache_dir.glob("*/*.json")):
         supplier = path.parent.name
@@ -90,6 +96,15 @@ def cache_entries(cache_dir: Path, suppliers=None) -> list[dict]:
         cache = read_cache(path)
         ex = cache.get("extraction")
         if ex and ex.get("parts") is not None:
+            file_hash = cache.get("file_hash") or path.stem
+            if markdown_dir is not None and cache.get("file"):
+                md = markdown_dir / cache["file"]
+                if md not in current:
+                    current[md] = file_sha256(md) if md.is_file() else None
+                if current[md] is not None and current[md] != file_hash:
+                    if stale is not None:
+                        stale.append(str(path))
+                    continue
             out.append({"supplier": supplier, "file": cache.get("file") or path.name,
                         "file_hash": cache.get("file_hash") or path.stem, "extraction": ex})
     return out
@@ -116,10 +131,12 @@ def part_rows(entry: dict) -> list[dict]:
     return rows
 
 
-def sync(engine, cache_dir: Path, suppliers=None, dry_run: bool = False, log=print) -> dict:
+def sync(engine, cache_dir: Path, suppliers=None, dry_run: bool = False, log=print,
+         markdown_dir: Path | None = None) -> dict:
     from sqlalchemy import text
-    entries = cache_entries(cache_dir, suppliers)
-    stats = {"datasheets": len(entries), "unchanged": 0, "loaded": 0, "rows_added": 0, "removed_datasheets": 0,
+    stale: list = []
+    entries = cache_entries(cache_dir, suppliers, markdown_dir, stale)
+    stats = {"datasheets": len(entries), "stale": len(stale), "unchanged": 0, "loaded": 0, "rows_added": 0, "removed_datasheets": 0,
              "rows_removed": 0}
     with engine.begin() as conn:
         loaded = {(r.supplier, r.file_hash): (r.digest, r.n) for r in conn.execute(text(
@@ -164,6 +181,8 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--cache", default=str(common.CACHE_DIR), help="index cache folder (default index_cache/)")
     parser.add_argument("--supplier", nargs="+", help="only these supplier folders")
+    parser.add_argument("--input", default=str(common.MARKDOWN_DIR),
+                        help="markdown folder, to leave out cache files of changed markdowns (default markdowns/)")
     parser.add_argument("--dry-run", action="store_true", help="print what would change, write nothing")
     parser.add_argument("--database-url", help="SQLAlchemy URL (default: DATABASE_URL from the environment / .env)")
     args = parser.parse_args(argv)
@@ -177,7 +196,10 @@ def main(argv=None) -> int:
     except Exception as exc:  # noqa: BLE001
         print(f"Database unavailable ({url.split('@')[-1]}): {exc}", file=sys.stderr)
         return 2
-    s = sync(engine, Path(args.cache), args.supplier, args.dry_run)
+    s = sync(engine, Path(args.cache), args.supplier, args.dry_run, markdown_dir=Path(args.input))
+    if s["stale"]:
+        print(f"{s['stale']} cache file(s) belong to an older version of their markdown (changed or reconverted) "
+              f"and are not loaded; classify and extract the new version")
     print(f"{s['datasheets']} extracted datasheets in the cache: {s['unchanged']} unchanged, {s['loaded']} "
           f"(re)loaded with {s['rows_added']} rows; {s['removed_datasheets']} datasheets no longer in the cache; "
           f"{s['rows_removed']} old rows removed" + (" (dry run, nothing written)" if args.dry_run else ""))
