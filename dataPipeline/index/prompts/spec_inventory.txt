@@ -15,11 +15,16 @@ Answer with JSON only:
   case, size, pin count, mounting type), environmental data (operating temperature range, qualifications such
   as AEC-Q101, RoHS) and the options of the part number (package, tolerance, voltage, dielectric, ...).
 - Leave out: test circuits, curves and figures, tape and reel, soldering profiles, package drawing dimensions
-  (A, A1, b, e, ...), company information, revision history.
+  (A, A1, b, e, ...), reliability test results (damp heat, endurance, temperature cycling, solderability),
+  materials, company information, revision history.
 - "name": as printed, without footnote numbers. "symbol": as printed, or "".
 - "unit": as printed, or "" for text values.
 - "stat": "min", "typ" or "max" when only that one is given; "range" when both a min and a max are given;
   "value" for a single rated or nominal value, or a text value.
-- "conditions": short, as printed, or "" (e.g. "VGS=10V, ID=500mA, TA=25°C").
+- "conditions": short, as printed, or "" (e.g. "VGS=10V, ID=500mA, TA=25°C"). A parameter given for every
+  part in a table (one column, one value per part number) is ONE entry, even if its test condition changes
+  from row to row; give the condition of the first row.
+- Always include the package / case name if the datasheet names it anywhere (title, features, ordering
+  table, outline heading), as an entry named "Package".
 - "example": one value as printed, for one part (e.g. "60", "-55 to 150", "TO-92", "X7R").
 - At most 100 entries. If there are more, keep the ones engineers use to choose or replace a part.

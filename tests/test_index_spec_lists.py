@@ -81,7 +81,7 @@ class FakeMerge:
             key, rule, crit = self.RULES[sym]
             specs.append({"key": key, "label": sym, "unit": "V", "rule": rule, "critical": crit,
                           "members": members + (["D99.1"] if sym == "VDS" else [])})
-        return LLMAnswer({"specs": specs, "must_match": ["package", "nonexistent"],
+        return LLMAnswer({"specs": specs, "must_match": ["vds_max", "package", "nonexistent"],
                           "visual_check": "pinout"}, 3.0, 5000, 800)
 
 
@@ -158,7 +158,8 @@ def test_draft_writes_spec_list_with_common_and_rare_specs():
     assert specs["id_max"]["rule"] == ">=" and specs["rds_on_max@vgs_10v"]["rule"] == "<="
     assert specs["vgs_th"]["rule"] == "≈" and out["rare_specs"]["eas"]["rule"] == "info"
     assert "Breakdown Voltage" in specs["vds_max"]["aliases"]  # synonym from another supplier
-    assert out["must_match"] == ["package"] and out["visual_check"] == "pinout"
+    assert out["must_match"] == ["package"] and out["visual_check"] == "pinout"  # vds_max (>=) is not must_match
+    assert specs["package"]["critical"] is True and specs["package"]["rule"] == "="
     assert sl.validate(out)[0] == []
     # the inventories are cached: a second draft calls only the merge
     inv2, merge2 = FakeInventory(), FakeMerge()
@@ -219,3 +220,16 @@ if __name__ == "__main__":
         if name.startswith("test_") and callable(fn):
             fn()
             print(f"ok  {name}")
+
+
+def test_package_is_always_in_the_spec_list():
+    specs, rare = {"vrrm_max": {"rule": ">="}}, {"package": {"label": "Case", "rule": "info", "found_in": "3/10"}}
+    sl.ensure_package(specs, rare)
+    assert specs["package"]["label"] == "Case" and specs["package"]["rule"] == "=" and "package" not in rare
+    specs, rare = {"vrrm_max": {"rule": ">="}}, {}
+    sl.ensure_package(specs, rare)
+    assert specs["package"]["found_in"] == "added" and specs["package"]["critical"] is True
+    good = {"type": "x", "name": "x y", "version": 1, "status": "draft", "must_match": ["vrrm_max"],
+            "specs": {"vrrm_max": {"label": "VRRM", "unit": "V", "rule": ">=", "critical": True}}}
+    errors, warnings = sl.validate(good)
+    assert not errors and any("must_match" in w for w in warnings) and any("package" in w for w in warnings)

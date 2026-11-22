@@ -40,7 +40,7 @@ from dataPipeline.index.common import (  # noqa: E402
 )
 
 SPEC_LIST_DIR = ROOT / "spec_lists"
-INVENTORY_VERSION = "1"   # bump when the inventory prompt or its input changes in a way that needs a re-run
+INVENTORY_VERSION = "2"   # bump when the inventory prompt or its input changes in a way that needs a re-run
 INVENTORY_PROMPT = (Path(__file__).parent / "prompts" / "spec_inventory.txt").read_text(encoding="utf-8")
 MERGE_PROMPT = (Path(__file__).parent / "prompts" / "spec_merge.txt").read_text(encoding="utf-8")
 DEFAULT_MODEL = "qwen3:30b-a3b"
@@ -217,9 +217,13 @@ def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_sha
         return {k: v for k, (_, v) in sorted(d.items(), key=lambda kv: (-kv[1][0], not kv[1][1]["critical"], kv[0]))}
 
     common_specs, rare = ordered(common_specs), ordered(rare)
-    must = [k for k in (norm_key(x) for x in data.get("must_match") or []) if k in common_specs]
-    if not must and "package" in common_specs:
-        must = ["package"]
+    ensure_package(common_specs, rare)
+    # must_match is for equal-or-nothing keys (package, pin count, polarity); a rating there would turn every
+    # higher-rated part into a mismatch, so keys whose rule is not "=" are left out
+    must = [k for k in dict.fromkeys(norm_key(x) for x in data.get("must_match") or [])
+            if k in common_specs and common_specs[k]["rule"] == "="]
+    if "package" in common_specs and "package" not in must:
+        must.insert(0, "package")
     spec_list = {
         "type": type_key,
         "name": type_name,
@@ -236,6 +240,21 @@ def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_sha
     stats = {"items": len(valid), "grouped": len(used), "specs": len(common_specs), "rare": len(rare),
              "seconds": round(answer.seconds, 1), "tokens_in": answer.tokens_in, "tokens_out": answer.tokens_out}
     return {"spec_list": spec_list, "stats": stats}
+
+
+PACKAGE_SPEC = {"label": "Package / case", "unit": None, "stat": "value", "conditions": None, "rule": "=",
+                "critical": True, "aliases": ["Package", "Case"], "found_in": "added"}
+
+
+def ensure_package(specs: dict, rare: dict) -> None:
+    """Every spec list compares the package (plan: drop-in = same footprint). Datasheets often name it only in
+    the title or an outline heading, so the samples miss it: move it up from rare_specs, or add it."""
+    if "package" in specs:
+        specs["package"].update(rule="=", critical=True)
+        return
+    spec = dict(rare.pop("package", None) or PACKAGE_SPEC)
+    spec.update(rule="=", critical=True, unit=None)
+    specs["package"] = spec
 
 
 # ------------------------------------------------------------------ files
@@ -315,6 +334,11 @@ def validate(spec_list: dict, type_keys: set | None = None) -> tuple[list[str], 
     for k in spec_list.get("must_match") or []:
         if k not in specs:
             errors.append(f"must_match: {k!r} is not a key in `specs`")
+        elif isinstance(specs[k], dict) and specs[k].get("rule") != "=":
+            warnings.append(f"must_match: {k!r} has rule {specs[k].get('rule')!r}; must_match is for keys that "
+                            f"must be equal (package, pin count, polarity)")
+    if specs and "package" not in specs:
+        warnings.append("no `package` spec: drop-in replacements cannot be recognised")
     if specs and not any(s.get("critical") for s in specs.values() if isinstance(s, dict)):
         warnings.append("no spec is critical")
     if specs and all(s.get("rule") == "info" for s in specs.values() if isinstance(s, dict)):

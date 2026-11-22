@@ -5,9 +5,21 @@ You get the specifications found in several sample datasheets of this type, one 
 id | name | symbol | unit | stat | conditions | example
 
 Group the items that are the same specification across datasheets: different names or symbols for the same
-parameter ("Drain-Source Voltage", "V(BR)DSS", "VDS") are one specification. Keep as many distinct
-specifications as possible. The same parameter at a clearly different defining condition (RDS(on) at VGS=10 V
-and at VGS=4.5 V) or with a different statistic (a max value and a typical value) are different specifications.
+parameter ("Drain-Source Voltage", "V(BR)DSS", "VDS"; "VWM", "VRWM", "Stand-off Voltage"; "PPPM", "PPP",
+"Peak Pulse Power") are one specification. Keep as many distinct specifications as possible, but never two
+specifications for the same parameter.
+
+Conditions:
+- A defining condition is fixed and changes what is measured, the same for every part of the type: RDS(on) at
+  VGS=10 V and at VGS=4.5 V, leakage at TJ=25 °C and at TJ=125 °C. Those are different specifications.
+- A condition that follows the part is NOT a defining condition: VR = the part's rated VRWM, IF = the part's
+  rated current, ID = 20 A in one datasheet and 3.5 A in another, IPP of the part. Put all those items into ONE
+  specification and leave that condition out of its key.
+- A different statistic (a max value and a typical value) is a different specification.
+
+Leave out, do not make specifications of: package drawing dimensions (A, B, D, E, L, ...), tape and reel and
+packing dimensions, reliability or environmental test results (damp heat, endurance, temperature cycling,
+solderability, bending, sulfur test), materials, weights and storage conditions.
 
 Answer with JSON only:
 {
@@ -21,7 +33,9 @@ Answer with JSON only:
 }
 
 - "key": lower case snake_case; a defining condition goes after "@". Examples: vds_max, id_max,
-  rds_on_max@vgs_10v, vgs_th_range, package, operating_temp_range, capacitance, tolerance, aec_q.
+  rds_on_max@vgs_10v, ir_max@tj_125c, vgs_th_range, package, operating_temp_range, capacitance, tolerance, aec_q.
+- Always include "package" (the package or case name, e.g. "SMA", "DO-214AC", "TO-220", "0603"), even if only
+  a few datasheets state it in a table.
 - "label": short and readable, with the symbol, e.g. "R(DS)on max @ VGS=10 V".
 - "unit": one canonical unit (V, A, ohm, F, H, Hz, W, degC, s, m, %, ...), or "" for text values.
 - "stat": "min", "typ", "max", "range" or "value".
@@ -36,5 +50,7 @@ Answer with JSON only:
 - "critical": true only for the few specifications that make a part unusable when they are worse.
 - "members": the ids of all items that are this specification. Each id in at most one specification.
   Put every item into a specification if one fits.
-- "must_match": keys that must be equal for a drop-in replacement (package / footprint, pin count, polarity).
-- "visual_check": what an engineer must still check on a drawing (e.g. "pinout (G/D/S order)"), or "".
+- "must_match": only keys with rule "=" that must be equal for a drop-in replacement: package / footprint,
+  pin count, polarity, configuration. Never ratings, temperatures, tolerances or values (those have rules).
+- "visual_check": what an engineer must still check on a drawing for THIS type, or "". Examples: MOSFET
+  "pinout (G/D/S order)", diode "cathode band / polarity mark", bridge "pin order (~ ~ + -)", resistor "".
