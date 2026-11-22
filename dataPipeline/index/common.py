@@ -165,26 +165,36 @@ class OllamaJSON:
             raise LLMError(f"Ollama model {self.model!r} not available ({exc}). "
                            f"Start Ollama and run: ollama pull {self.model}") from exc
 
-    def __call__(self, system: str, user: str) -> LLMAnswer:
-        messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
-        started = time.monotonic()
+    # Options for the one retry after a cut answer: at temperature 0 the same input loops the same way again,
+    # so the retry samples a little and penalises repeats.
+    RETRY_OPTIONS = {"temperature": 0.3, "repeat_penalty": 1.15}
+
+    def _chat(self, messages, options):
         try:
             try:  # thinking models (qwen3, ...) would spend most of their output on reasoning
-                resp = self.client.chat(self.model, messages=messages, format="json", options=self.options,
-                                        think=False)
+                return self.client.chat(self.model, messages=messages, format="json", options=options, think=False)
             except TypeError:
-                resp = self.client.chat(self.model, messages=messages, format="json", options=self.options)
+                return self.client.chat(self.model, messages=messages, format="json", options=options)
         except Exception as exc:  # noqa: BLE001
             if "timeout" in exc.__class__.__name__.lower() or "timed out" in str(exc).lower():
                 raise LLMError(f"no answer after {self.timeout:.0f} s (model looping or server busy; "
                                f"raise `timeout` in config.json if calls are just slow)") from exc
             raise LLMError(f"{exc.__class__.__name__}: {exc}") from exc
+
+    def __call__(self, system: str, user: str) -> LLMAnswer:
+        messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
+        started = time.monotonic()
+        resp = self._chat(messages, self.options)
+        tokens_in, tokens_out = resp.prompt_eval_count or 0, resp.eval_count or 0
+        if getattr(resp, "done_reason", None) == "length":  # usually a loop: try once more, differently
+            resp = self._chat(messages, {**self.options, **self.RETRY_OPTIONS})
+            tokens_in, tokens_out = tokens_in + (resp.prompt_eval_count or 0), tokens_out + (resp.eval_count or 0)
+            if getattr(resp, "done_reason", None) == "length":
+                raise LLMError(f"answer cut at {self.options.get('num_predict')} tokens twice (model looping, or "
+                               f"the answer is longer: raise `num_predict` in config.json)")
         content = resp.message.content or ""
-        if getattr(resp, "done_reason", None) == "length":
-            raise LLMError(f"answer cut at {self.options.get('num_predict')} tokens (model looping, or the "
-                           f"answer is longer: raise `num_predict` in config.json)")
         try:
             data = json.loads(content)
         except ValueError as exc:
             raise LLMError(f"answer is not JSON: {content[:200]!r}") from exc
-        return LLMAnswer(data, time.monotonic() - started, resp.prompt_eval_count or 0, resp.eval_count or 0)
+        return LLMAnswer(data, time.monotonic() - started, tokens_in, tokens_out)
