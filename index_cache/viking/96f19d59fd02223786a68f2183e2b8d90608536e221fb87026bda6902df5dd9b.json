@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:28+00:00",
+  "at": "2026-11-21T12:02:08+00:00",
   "is_datasheet": true,
   "label": "power resistor",
   "family": true,
@@ -14,8 +14,8 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.07,
-  "tokens_in": 1245,
+  "seconds": 5.42,
+  "tokens_in": 1206,
   "tokens_out": 36
  },
  "type": "power_resistor"

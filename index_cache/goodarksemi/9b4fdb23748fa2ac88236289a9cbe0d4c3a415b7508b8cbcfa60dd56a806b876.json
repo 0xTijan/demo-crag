@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc3026e_8cb477b7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9b4fdb23748fa2ac88236289a9cbe0d4c3a415b7508b8cbcfa60dd56a806b876",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:07+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC3026E"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.18,
+  "tokens_in": 1980,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

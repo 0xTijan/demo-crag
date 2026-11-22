@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp08130_d7af85f9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1e4e5edbf618e51f28117b67296f42cf3c005f94de9980fc7920d599e0c0c361",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:13+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP08130"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.6,
+  "tokens_in": 2057,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

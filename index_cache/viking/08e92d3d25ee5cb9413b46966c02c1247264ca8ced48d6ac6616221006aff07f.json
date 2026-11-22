@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:11:53+00:00",
+  "at": "2026-11-21T11:56:35+00:00",
   "is_datasheet": true,
-  "label": "Automotive Grade Metal Thin Film Chip Resistor",
+  "label": "metal thin film chip resistor",
   "family": true,
   "part_numbers": [
    "ARM..A Series",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.7,
-  "tokens_in": 1737,
-  "tokens_out": 63
+  "seconds": 6.32,
+  "tokens_in": 1664,
+  "tokens_out": 59
  },
- "type": "automotive_grade_metal_thin_film_chip_re"
+ "type": "thin_film_chip_resistor"
 }

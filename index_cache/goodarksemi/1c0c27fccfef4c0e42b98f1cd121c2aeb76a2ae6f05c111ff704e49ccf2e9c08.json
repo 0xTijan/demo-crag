@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfcr0600_1198294f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1c0c27fccfef4c0e42b98f1cd121c2aeb76a2ae6f05c111ff704e49ccf2e9c08",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:27+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFCR0600"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.15,
+  "tokens_in": 1863,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

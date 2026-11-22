@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsepp24u4000_fe398e45.md",
+ "supplier": "goodarksemi",
+ "file_hash": "93ee781a7c7069ca2da47a4759e51c7d77dacbcb49a77298e0b92861359786b9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:00+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEPP24U4000"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.72,
+  "tokens_in": 1119,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

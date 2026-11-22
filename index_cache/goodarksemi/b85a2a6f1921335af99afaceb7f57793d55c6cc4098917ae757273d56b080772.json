@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/smbrp15100_1742df03.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b85a2a6f1921335af99afaceb7f57793d55c6cc4098917ae757273d56b080772",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:43+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMBRP15100"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.67,
+  "tokens_in": 1316,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

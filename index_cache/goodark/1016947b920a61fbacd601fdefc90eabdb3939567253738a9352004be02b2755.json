@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:57:19+00:00",
+  "at": "2026-11-21T10:43:46+00:00",
   "is_datasheet": true,
-  "label": "glass passivated bridge rectifier",
+  "label": "bridge rectifier",
   "family": true,
   "part_numbers": [
    "KBF401",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.01,
-  "tokens_in": 1945,
-  "tokens_out": 76
+  "seconds": 7.48,
+  "tokens_in": 1678,
+  "tokens_out": 73
  },
- "type": "glass_passivated_bridge_rectifier"
+ "type": "bridge_rectifier"
 }

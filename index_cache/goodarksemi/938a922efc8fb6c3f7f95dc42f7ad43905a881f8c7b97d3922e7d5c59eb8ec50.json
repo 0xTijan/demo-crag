@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssft25n80_823128fc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "938a922efc8fb6c3f7f95dc42f7ad43905a881f8c7b97d3922e7d5c59eb8ec50",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:27+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFT25N80"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.79,
+  "tokens_in": 1842,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd6507_c50755c2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "84a5098107b8528efd5ba99cf51febc808f302dd2b5faf282c5d0efb820ac8c5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:17+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD6507"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.71,
+  "tokens_in": 1872,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsh108bf_b102af21.md",
+ "supplier": "goodarksemi",
+ "file_hash": "182ed57d93476df2c68150fd62c60d022cdca1c33eafedc49f9e1bf0711426e4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:11+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSH108BF"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.47,
+  "tokens_in": 981,
+  "tokens_out": 42
+ },
+ "type": "ultrafast_rectifier"
+}

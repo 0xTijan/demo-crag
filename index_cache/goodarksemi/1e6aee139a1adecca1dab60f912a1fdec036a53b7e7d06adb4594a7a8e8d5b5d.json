@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsps2100_cf0676be.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1e6aee139a1adecca1dab60f912a1fdec036a53b7e7d06adb4594a7a8e8d5b5d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:15+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSPS2100"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.09,
+  "tokens_in": 1201,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

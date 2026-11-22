@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp3056_25d21ae7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dddd2c8a3983c89007d9f0d3bda4b91b650dbd8dc5ea0d6d4b414b1a51df44c6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:59+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP3056"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.22,
+  "tokens_in": 2060,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

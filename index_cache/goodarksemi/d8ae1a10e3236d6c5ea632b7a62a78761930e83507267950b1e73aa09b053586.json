@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfat03001_12d02e80.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d8ae1a10e3236d6c5ea632b7a62a78761930e83507267950b1e73aa09b053586",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:18+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFAT03001"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.4,
+  "tokens_in": 1529,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

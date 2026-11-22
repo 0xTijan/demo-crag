@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bss84akw_5fee3290.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f342e6ad1028526b0bc704ac1dcfb9e806d0b9c28b6ec3096875ac920957627b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:15+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "BSS84AKW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.88,
+  "tokens_in": 1643,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsps35-gsps36_cdf9e076.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8477dbc1c0f908a19f8dbfa0d5da70352b5c97c5db84f691e83da19eeb24dac8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:19+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSPS35",
+   "GSPS36"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.93,
+  "tokens_in": 1270,
+  "tokens_out": 48
+ },
+ "type": "schottky_rectifier"
+}

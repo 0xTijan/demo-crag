@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsecl3u0031_24f74b21.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8d905f789c621356c00a4ca6ec7dd248565ec3d0d27a092b2561f02f557d29a5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:12+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode array",
+  "family": false,
+  "part_numbers": [
+   "GSECL3U0031"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.78,
+  "tokens_in": 1219,
+  "tokens_out": 44
+ },
+ "type": "esd_tvs_array"
+}

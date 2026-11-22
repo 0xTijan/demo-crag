@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:59:13+00:00",
+  "at": "2026-11-21T10:45:36+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": false,
   "part_numbers": [
-   "L56"
+   "LSL56"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.12,
-  "tokens_in": 1312,
-  "tokens_out": 39
+  "seconds": 4.32,
+  "tokens_in": 1039,
+  "tokens_out": 40
  },
- "type": "schottky_diode"
+ "type": "schottky_rectifier"
 }

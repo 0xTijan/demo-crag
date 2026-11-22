@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/zmm52xx_5333206b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "42abe595df549ce035496121f5798db0bf355494d90f36d5f2e79f210cdbabc2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:56:03+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "ZMM5225",
+   "ZMM5226",
+   "ZMM5227",
+   "ZMM5228",
+   "ZMM5229"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.28,
+  "tokens_in": 2804,
+  "tokens_out": 72
+ },
+ "type": "zener_diode"
+}

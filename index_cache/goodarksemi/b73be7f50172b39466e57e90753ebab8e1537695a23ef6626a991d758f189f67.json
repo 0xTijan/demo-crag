@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez12b0032_38b4f19f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b73be7f50172b39466e57e90753ebab8e1537695a23ef6626a991d758f189f67",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:12+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ12B0032"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.56,
+  "tokens_in": 1407,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

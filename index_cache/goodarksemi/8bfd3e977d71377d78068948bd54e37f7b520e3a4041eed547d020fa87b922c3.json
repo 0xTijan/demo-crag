@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/v1-v7_2d4705ab.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8bfd3e977d71377d78068948bd54e37f7b520e3a4041eed547d020fa87b922c3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:50+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "V1",
+   "V2",
+   "V3",
+   "V4",
+   "V5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.99,
+  "tokens_in": 1558,
+  "tokens_out": 59
+ },
+ "type": "standard_rectifier"
+}

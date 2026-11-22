@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gs1-5smcxxa_0693d6aa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cf443c71dc511be747c3114fd8714197f632f9ed69f9644a3df2ebbea2c1e65c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:57+00:00",
+  "is_datasheet": true,
+  "label": "Transient voltage suppressor",
+  "family": true,
+  "part_numbers": [
+   "GS1.5SMC6.8A",
+   "GS1.5SMC7.5A",
+   "GS1.5SMC8.2A",
+   "GS1.5SMC9.1A",
+   "GS1.5SMC10A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.53,
+  "tokens_in": 3220,
+  "tokens_out": 91
+ },
+ "type": "tvs_diode"
+}

@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/fs2b5h-fs2ch_de67e9b9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "18fbfd6223b1baa30d77e62639408d2d0f0f7d5b5c678225b104818a547308dd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:45+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FS2B5H",
+   "FS2CH"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.39,
+  "tokens_in": 1124,
+  "tokens_out": 46
+ },
+ "type": "schottky_rectifier"
+}

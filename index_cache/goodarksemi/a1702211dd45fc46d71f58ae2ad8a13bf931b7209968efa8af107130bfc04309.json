@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsju6024_c994bdb7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a1702211dd45fc46d71f58ae2ad8a13bf931b7209968efa8af107130bfc04309",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:57+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJU6024"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.82,
+  "tokens_in": 2028,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

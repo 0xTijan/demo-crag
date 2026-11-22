@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd21010_0b229ed1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "06b0932885b6050681cbb639f3c748e857645169a527abf927dc7da60036e514",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:28+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD21010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.88,
+  "tokens_in": 2036,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

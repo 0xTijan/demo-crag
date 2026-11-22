@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/grox_daaf8ede.md",
+ "supplier": "goodarksemi",
+ "file_hash": "06e51d54f5717ff698ad97410d677a9f1e7fb96743acc5f70eb5145e8c60133c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:48+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GROA",
+   "GROB",
+   "GROD",
+   "GROG",
+   "GROJ"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.25,
+  "tokens_in": 1771,
+  "tokens_out": 66
+ },
+ "type": "fast_recovery_rectifier"
+}

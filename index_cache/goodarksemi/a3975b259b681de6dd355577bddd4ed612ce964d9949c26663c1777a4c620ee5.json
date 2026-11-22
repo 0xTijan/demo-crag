@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsr10200m_21ce0551.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a3975b259b681de6dd355577bddd4ed612ce964d9949c26663c1777a4c620ee5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSR10200M"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.11,
+  "tokens_in": 1175,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

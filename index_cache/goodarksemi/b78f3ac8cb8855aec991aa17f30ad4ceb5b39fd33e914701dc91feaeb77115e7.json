@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsbc858xw_d6e76f6b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b78f3ac8cb8855aec991aa17f30ad4ceb5b39fd33e914701dc91feaeb77115e7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:24+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBC858AW",
+   "GSBC858BW",
+   "GSBC858CW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.09,
+  "tokens_in": 1247,
+  "tokens_out": 55
+ },
+ "type": "pnp_transistor"
+}

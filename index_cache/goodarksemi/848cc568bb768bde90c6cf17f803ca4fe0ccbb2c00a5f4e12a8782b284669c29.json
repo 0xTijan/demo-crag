@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/fhx_d7453672.md",
+ "supplier": "goodarksemi",
+ "file_hash": "848cc568bb768bde90c6cf17f803ca4fe0ccbb2c00a5f4e12a8782b284669c29",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:34+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated rectifier",
+  "family": true,
+  "part_numbers": [
+   "FH1",
+   "FH2",
+   "FH3",
+   "FH4",
+   "FH5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.91,
+  "tokens_in": 1609,
+  "tokens_out": 61
+ },
+ "type": "standard_rectifier"
+}

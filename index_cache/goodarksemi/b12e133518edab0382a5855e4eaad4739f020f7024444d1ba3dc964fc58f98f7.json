@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgt15150_1a25eec1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b12e133518edab0382a5855e4eaad4739f020f7024444d1ba3dc964fc58f98f7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:39+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGT15150"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.27,
+  "tokens_in": 2047,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

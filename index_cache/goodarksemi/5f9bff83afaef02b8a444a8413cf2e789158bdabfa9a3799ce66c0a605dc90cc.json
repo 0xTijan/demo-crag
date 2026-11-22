@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf3051g7_69dea610.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5f9bff83afaef02b8a444a8413cf2e789158bdabfa9a3799ce66c0a605dc90cc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:37+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF3051G7"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.38,
+  "tokens_in": 1897,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

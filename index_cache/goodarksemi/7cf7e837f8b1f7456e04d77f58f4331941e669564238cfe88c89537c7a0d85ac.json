@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc601dpe_1f8f8413.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7cf7e837f8b1f7456e04d77f58f4331941e669564238cfe88c89537c7a0d85ac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:19+00:00",
+  "is_datasheet": true,
+  "label": "N-channel depletion MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC601DPE"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.48,
+  "tokens_in": 2044,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n_depletion"
+}

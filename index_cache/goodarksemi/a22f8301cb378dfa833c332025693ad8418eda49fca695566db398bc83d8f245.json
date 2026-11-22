@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/kbpc25xx-kbpc25xxw_1a5fc72e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a22f8301cb378dfa833c332025693ad8418eda49fca695566db398bc83d8f245",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:56+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBPC25005",
+   "KBPC2501",
+   "KBPC2502",
+   "KBPC2504",
+   "KBPC2506"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.59,
+  "tokens_in": 1540,
+  "tokens_out": 75
+ },
+ "type": "bridge_rectifier"
+}

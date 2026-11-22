@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:09:44+00:00",
+  "at": "2026-11-21T10:54:44+00:00",
   "is_datasheet": true,
   "label": "Schottky barrier rectifier",
   "family": true,
@@ -16,9 +16,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.56,
-  "tokens_in": 1478,
+  "seconds": 4.81,
+  "tokens_in": 1140,
   "tokens_out": 52
  },
- "type": "schottky_diode"
+ "type": "schottky_rectifier"
 }

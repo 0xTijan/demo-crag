@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/lf6-lf7_47f03d2e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c0a8729b02f47b024d8da638ba437c9f7f03698c03a5e4525fab2171b7eafd20",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:30+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "LF6",
+   "LF7"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.51,
+  "tokens_in": 1069,
+  "tokens_out": 43
+ },
+ "type": "fast_recovery_rectifier"
+}

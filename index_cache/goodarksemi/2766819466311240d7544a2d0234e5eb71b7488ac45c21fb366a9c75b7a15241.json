@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/uf540x_2fafb60e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2766819466311240d7544a2d0234e5eb71b7488ac45c21fb366a9c75b7a15241",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:48+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast rectifier",
+  "family": true,
+  "part_numbers": [
+   "UF 5400",
+   "UF 5401",
+   "UF 5402",
+   "UF 5403",
+   "UF 5404"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.68,
+  "tokens_in": 2051,
+  "tokens_out": 105
+ },
+ "type": "ultrafast_rectifier"
+}

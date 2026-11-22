@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:07:31+00:00",
+  "at": "2026-11-21T10:52:49+00:00",
   "is_datasheet": true,
   "label": "low capacitance ESD TVS array",
   "family": false,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.19,
-  "tokens_in": 1367,
+  "seconds": 4.55,
+  "tokens_in": 1166,
   "tokens_out": 40
  },
- "type": "low_capacitance_esd_tvs_array"
+ "type": "esd_tvs_array"
 }

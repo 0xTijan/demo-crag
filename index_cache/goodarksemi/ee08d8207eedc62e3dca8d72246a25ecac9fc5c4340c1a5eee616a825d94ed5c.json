@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc1208_33cabf34.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ee08d8207eedc62e3dca8d72246a25ecac9fc5c4340c1a5eee616a825d94ed5c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:47+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC1208"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.28,
+  "tokens_in": 1968,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

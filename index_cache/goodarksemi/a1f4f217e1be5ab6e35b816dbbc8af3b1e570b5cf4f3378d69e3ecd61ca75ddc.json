@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfl1003_abdcd3a5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a1f4f217e1be5ab6e35b816dbbc8af3b1e570b5cf4f3378d69e3ecd61ca75ddc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:00+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFL1003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.53,
+  "tokens_in": 2089,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

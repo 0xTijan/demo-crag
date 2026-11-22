@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsf2319k_3a984838.md",
+ "supplier": "goodarksemi",
+ "file_hash": "820150f041bbde3da90805a9ecd03253e177ba97da9d0866dd2c7e42dd7d2fdb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:41+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSF2319K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.01,
+  "tokens_in": 2034,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

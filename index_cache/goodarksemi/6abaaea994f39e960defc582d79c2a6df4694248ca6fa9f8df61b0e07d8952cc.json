@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/sct250d_3da23c64.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6abaaea994f39e960defc582d79c2a6df4694248ca6fa9f8df61b0e07d8952cc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:09+00:00",
+  "is_datasheet": true,
+  "label": "twin SMD ceramic PTC thermistor",
+  "family": false,
+  "part_numbers": [
+   "SCT250D"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.08,
+  "tokens_in": 1525,
+  "tokens_out": 45
+ },
+ "type": "ptc_thermistor"
+}

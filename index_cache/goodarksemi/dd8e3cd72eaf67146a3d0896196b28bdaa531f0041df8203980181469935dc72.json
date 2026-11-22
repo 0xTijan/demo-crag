@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gseslc5vt723-3u_10898cda.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dd8e3cd72eaf67146a3d0896196b28bdaa531f0041df8203980181469935dc72",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:29+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSESLC5VT723-3U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.88,
+  "tokens_in": 1209,
+  "tokens_out": 50
+ },
+ "type": "esd_protection_diode"
+}

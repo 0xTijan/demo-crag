@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ls545_905fc841.md",
+ "supplier": "goodarksemi",
+ "file_hash": "036d8411d52dfdbb28f114335b43849bfdfa77e202647fa7869784cccf4d562a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:47+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "LS545"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.63,
+  "tokens_in": 1249,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

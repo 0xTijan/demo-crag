@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/murs320_efbb9a3a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "992eabde8432d013d0ead2a49cf1d2547f87832b9dd04f867cf33aeb7f550716",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:20+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURS320"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.96,
+  "tokens_in": 1141,
+  "tokens_out": 40
+ },
+ "type": "fast_recovery_rectifier"
+}

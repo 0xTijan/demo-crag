@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/fsl13_caa96fd2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ce7bb3fbf6cc07123f8d05f1e2b06ec68cb5daa9f7d562c695d034e5fb935e2f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:49+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "FSL13"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.62,
+  "tokens_in": 1139,
+  "tokens_out": 40
+ },
+ "type": "schottky_rectifier"
+}

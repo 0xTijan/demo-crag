@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr2116au_04d128b1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4c86b300d64ebb95ef59af24033947e328370045e5c616d33131cf8a610bfcbc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:51+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR2116AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.79,
+  "tokens_in": 2051,
+  "tokens_out": 46
+ },
+ "type": "complementary_mosfet"
+}

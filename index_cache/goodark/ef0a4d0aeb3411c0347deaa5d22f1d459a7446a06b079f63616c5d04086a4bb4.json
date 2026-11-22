@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:57:42+00:00",
+  "at": "2026-11-21T10:44:09+00:00",
   "is_datasheet": true,
   "label": "standard rectifier",
   "family": true,
@@ -18,8 +18,8 @@
   ],
   "confidence": "high",
   "asked_again": true,
-  "seconds": 3.19,
-  "tokens_in": 4085,
+  "seconds": 12.3,
+  "tokens_in": 3340,
   "tokens_out": 145
  },
  "type": "standard_rectifier"

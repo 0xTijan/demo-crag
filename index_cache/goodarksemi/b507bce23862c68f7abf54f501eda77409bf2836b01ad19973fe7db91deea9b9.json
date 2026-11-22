@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsr1060d1_0100cf6e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b507bce23862c68f7abf54f501eda77409bf2836b01ad19973fe7db91deea9b9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:56+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSR1060D1"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.6,
+  "tokens_in": 1191,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

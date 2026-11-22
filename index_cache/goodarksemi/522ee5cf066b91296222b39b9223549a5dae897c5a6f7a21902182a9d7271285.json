@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgd65r400au_0495760a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "522ee5cf066b91296222b39b9223549a5dae897c5a6f7a21902182a9d7271285",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:30+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGD65R400AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.34,
+  "tokens_in": 2288,
+  "tokens_out": 45
+ },
+ "type": "mosfet_n"
+}

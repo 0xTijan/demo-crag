@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez5b003_ede1a3c9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9b5d17c19c5ef6e8655d624288387268a60bc6a789dc39bf33b9383043bc9409",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:48+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ5B003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.61,
+  "tokens_in": 1331,
+  "tokens_out": 42
+ },
+ "type": "tvs_diode"
+}

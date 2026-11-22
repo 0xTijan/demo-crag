@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sk17-sk1b_bec93c58.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e3770a36747cd4837b3e768df3ad86dadf36c1670442d72ec992b0606acbe4d1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK17",
+   "SK17E",
+   "SK18",
+   "SK18E",
+   "SK19"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.42,
+  "tokens_in": 1210,
+  "tokens_out": 77
+ },
+ "type": "schottky_rectifier"
+}

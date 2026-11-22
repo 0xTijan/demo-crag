@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmbj53xxb_5c8c69e5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e9ccfa1750071b13f6acd93d635734bd7009ea7c96cd0d3d0216e705ec095ab6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:42+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GSMBJ5342B",
+   "GSMBJ5343B",
+   "GSMBJ5344B",
+   "GSMBJ5345B",
+   "GSMBJ5346B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.42,
+  "tokens_in": 3692,
+  "tokens_out": 82
+ },
+ "type": "zener_diode"
+}

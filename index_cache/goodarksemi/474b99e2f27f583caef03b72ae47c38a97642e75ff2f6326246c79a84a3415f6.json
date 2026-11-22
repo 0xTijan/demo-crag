@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp6009_c58704aa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "474b99e2f27f583caef03b72ae47c38a97642e75ff2f6326246c79a84a3415f6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:31+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP6009"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.16,
+  "tokens_in": 2057,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsk15pc150_4f62df51.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e6713026302c575c29d4b06a81f66253735333f843c8491b19765e1d6347635c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:27+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSK15PC150"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.48,
+  "tokens_in": 1285,
+  "tokens_out": 45
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsr5xx_4fcad1f2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "19417463f03c3068ac12e699bf323ecde47fffa28730d2c0875190c2c9c74f63",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:36+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSR520",
+   "GSR530",
+   "GSR540",
+   "GSR560",
+   "GSR5100"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.55,
+  "tokens_in": 1855,
+  "tokens_out": 86
+ },
+ "type": "schottky_rectifier"
+}

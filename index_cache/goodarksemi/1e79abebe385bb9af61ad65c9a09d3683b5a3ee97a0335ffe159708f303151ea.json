@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp1r204_d235483f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1e79abebe385bb9af61ad65c9a09d3683b5a3ee97a0335ffe159708f303151ea",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:56+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP1R204"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.26,
+  "tokens_in": 2090,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

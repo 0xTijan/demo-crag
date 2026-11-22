@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:47+00:00",
+  "at": "2026-11-21T11:57:29+00:00",
   "is_datasheet": true,
-  "label": "multilayer ceramic inductor",
+  "label": "multilayer chip inductor",
   "family": true,
   "part_numbers": [
    "CL-S Series",
@@ -17,9 +17,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.7,
-  "tokens_in": 1895,
+  "seconds": 6.54,
+  "tokens_in": 1816,
   "tokens_out": 57
  },
- "type": "multilayer_ceramic_inductor"
+ "type": "multilayer_chip_inductor"
 }

@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gs3xxb_189dcc67.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4a41a50f88b7996b22965a54b1e15c33d339f73bc4d0895473759eac02331eda",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:30+00:00",
+  "is_datasheet": true,
+  "label": "general purpose rectifier",
+  "family": true,
+  "part_numbers": [
+   "*S313B",
+   "*S320B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.03,
+  "tokens_in": 1379,
+  "tokens_out": 47
+ },
+ "type": "standard_rectifier"
+}

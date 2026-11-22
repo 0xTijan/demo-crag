@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:47:47+00:00",
+  "at": "2026-11-21T10:34:56+00:00",
   "is_datasheet": true,
-  "label": "high voltage rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "EM513",
@@ -16,9 +16,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.51,
-  "tokens_in": 1460,
+  "seconds": 6.71,
+  "tokens_in": 1121,
   "tokens_out": 50
  },
- "type": "high_voltage_rectifier"
+ "type": "fast_recovery_rectifier"
 }

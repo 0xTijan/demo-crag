@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsk3exxl_7895da6b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c2072c82a2e6e9a80b77fa281b7d104d949ac886ec737463e603c35cff609aef",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:32+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSK3E45L",
+   "GSK3E60L"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.89,
+  "tokens_in": 1136,
+  "tokens_out": 52
+ },
+ "type": "schottky_rectifier"
+}

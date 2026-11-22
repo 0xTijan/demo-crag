@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsr20200ct_02375cde.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d8afa43b249b7856aff3fbbdd9f0c59f705543f7caeecbf49f8587570b17fbdb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:08+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSR20200CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.63,
+  "tokens_in": 3844,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gshs1oc_405dfcec.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c92265a3e30eff50cfd08e99d0b4af7595a755657a19f5df705de5c2c229e290",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:25+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSHS1OC"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.91,
+  "tokens_in": 1398,
+  "tokens_out": 41
+ },
+ "type": "ultrafast_rectifier"
+}

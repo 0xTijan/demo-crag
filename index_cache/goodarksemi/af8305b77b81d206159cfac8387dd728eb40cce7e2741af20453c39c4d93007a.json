@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsesuc5vd882-2b_dd9ec3e8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "af8305b77b81d206159cfac8387dd728eb40cce7e2741af20453c39c4d93007a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:33+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSESUC5VD882-2B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.79,
+  "tokens_in": 1308,
+  "tokens_out": 47
+ },
+ "type": "esd_protection_diode"
+}

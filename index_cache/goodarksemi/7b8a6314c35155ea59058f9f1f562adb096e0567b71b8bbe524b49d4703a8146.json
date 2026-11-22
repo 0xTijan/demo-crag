@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/schottky-wafer-200ma-70v_7e09a651.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7b8a6314c35155ea59058f9f1f562adb096e0567b71b8bbe524b49d4703a8146",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:03+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GDSYQC15AP"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.53,
+  "tokens_in": 1031,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

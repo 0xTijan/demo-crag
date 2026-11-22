@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsr30100ld1_737dbd09.md",
+ "supplier": "goodarksemi",
+ "file_hash": "819ab61933566067c7e91038ceffea8bfa70e088a1cfa12a47aa8ff4476c08fc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:16+00:00",
+  "is_datasheet": true,
+  "label": "Low VF Schottky Barrier Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSR30100LD1"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.11,
+  "tokens_in": 1472,
+  "tokens_out": 47
+ },
+ "type": "schottky_rectifier"
+}

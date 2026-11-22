@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsec36u025_3fe8b58a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d458e0f47ad9908202416e16a2b23a1cd379bb392585cc51511c615d28118be1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:51+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode array",
+  "family": false,
+  "part_numbers": [
+   "GSEC36U025"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.54,
+  "tokens_in": 1092,
+  "tokens_out": 44
+ },
+ "type": "esd_tvs_array"
+}

@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:47+00:00",
-  "is_datasheet": true,
-  "label": "SMD wire wound chip inductor",
+  "at": "2026-11-21T12:02:25+00:00",
+  "is_datasheet": false,
+  "label": "catalogue",
   "family": true,
   "part_numbers": [
    "WL Series"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.12,
-  "tokens_in": 1305,
-  "tokens_out": 39
+  "seconds": 6.99,
+  "tokens_in": 1275,
+  "tokens_out": 34
  },
- "type": "smd_wire_wound_chip_inductor"
+ "type": "_not_a_datasheet"
 }

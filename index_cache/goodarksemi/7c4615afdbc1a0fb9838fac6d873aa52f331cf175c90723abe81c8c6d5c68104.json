@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gskbp2xxa_d0a499e2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7c4615afdbc1a0fb9838fac6d873aa52f331cf175c90723abe81c8c6d5c68104",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:51+00:00",
+  "is_datasheet": true,
+  "label": "general purpose bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSKBP201A",
+   "GSKBP202A",
+   "GSKBP204A",
+   "GSKBP206A",
+   "GSKBP208A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.92,
+  "tokens_in": 4796,
+  "tokens_out": 87
+ },
+ "type": "bridge_rectifier"
+}

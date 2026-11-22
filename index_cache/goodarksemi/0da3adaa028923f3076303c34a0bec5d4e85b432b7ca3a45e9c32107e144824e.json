@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf02n15_8d24b237.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0da3adaa028923f3076303c34a0bec5d4e85b432b7ca3a45e9c32107e144824e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:01+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF02N15"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.18,
+  "tokens_in": 2031,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mbrp3200_0a711a8f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e440cb928772c93abd5414893fe139bfda13db69148319bb77f932d84989766e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:24+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRP3200"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.65,
+  "tokens_in": 1258,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

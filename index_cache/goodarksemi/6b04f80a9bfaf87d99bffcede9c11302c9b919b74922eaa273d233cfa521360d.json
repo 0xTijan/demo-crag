@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gstd35120d3_221f1bd7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6b04f80a9bfaf87d99bffcede9c11302c9b919b74922eaa273d233cfa521360d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:36+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated general purpose rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSTD35120D3"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.38,
+  "tokens_in": 1438,
+  "tokens_out": 46
+ },
+ "type": "standard_rectifier"
+}

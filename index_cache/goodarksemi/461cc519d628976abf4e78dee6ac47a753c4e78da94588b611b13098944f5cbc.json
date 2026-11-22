@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmurd1540s_5e10a1b9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "461cc519d628976abf4e78dee6ac47a753c4e78da94588b611b13098944f5cbc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:25+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMURD1540S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.07,
+  "tokens_in": 1208,
+  "tokens_out": 45
+ },
+ "type": "ultrafast_rectifier"
+}

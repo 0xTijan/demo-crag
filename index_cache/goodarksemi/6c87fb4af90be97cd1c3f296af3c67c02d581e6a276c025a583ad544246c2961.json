@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsdf15xxs_a86b6ce4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6c87fb4af90be97cd1c3f296af3c67c02d581e6a276c025a583ad544246c2961",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:37+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSDF15005S",
+   "GSDF1501S",
+   "GSDF1502S",
+   "GSDF1504S",
+   "GSDF1506S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.85,
+  "tokens_in": 1766,
+  "tokens_out": 98
+ },
+ "type": "bridge_rectifier"
+}

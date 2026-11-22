@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft3410_c1045ff6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "129fe65e4a64ff1fa05955675fee8c12ac33cdfee4c7d9ceadc8753c93971af7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:52+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT3410"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.65,
+  "tokens_in": 1919,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfl1004_ecc5306a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4564092d98f017f72d4fd57b687a3b38d4a8f6222e428a980241ce48475cc533",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:02+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFL1004"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.56,
+  "tokens_in": 2036,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

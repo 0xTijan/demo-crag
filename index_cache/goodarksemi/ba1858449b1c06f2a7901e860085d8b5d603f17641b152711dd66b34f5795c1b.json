@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu60r360_c38ef421.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ba1858449b1c06f2a7901e860085d8b5d603f17641b152711dd66b34f5795c1b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:04+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU60R360"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.83,
+  "tokens_in": 2212,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

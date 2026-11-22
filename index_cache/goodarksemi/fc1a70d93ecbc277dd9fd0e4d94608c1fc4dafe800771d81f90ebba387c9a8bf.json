@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd6046_631019dd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fc1a70d93ecbc277dd9fd0e4d94608c1fc4dafe800771d81f90ebba387c9a8bf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:12+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD6046"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.55,
+  "tokens_in": 2054,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

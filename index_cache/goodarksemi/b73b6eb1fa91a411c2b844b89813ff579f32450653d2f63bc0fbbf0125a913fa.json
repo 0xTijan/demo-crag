@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/bzt52cxxsl_fdf612cf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b73b6eb1fa91a411c2b844b89813ff579f32450653d2f63bc0fbbf0125a913fa",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:31+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "BZT52C1L8SL",
+   "BZT52C2L0SL",
+   "BZT52C2L2SL",
+   "BZT52C2L4SL",
+   "BZT52C2L5SL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.35,
+  "tokens_in": 3132,
+  "tokens_out": 92
+ },
+ "type": "zener_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsey30u1930_57a7ec24.md",
+ "supplier": "goodarksemi",
+ "file_hash": "752b53b4cd812a2303777895e8cabce95ea57041fa989f982091e44bf34891bd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:01+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEY30U1930"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.58,
+  "tokens_in": 1028,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

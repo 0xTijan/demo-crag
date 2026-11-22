@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/mb22s-mb210s_72f71910.md",
+ "supplier": "goodarksemi",
+ "file_hash": "eb99cf7d1c9f2de0cd71bd6342ca9a469853b08d339270d697e73fc4edf0875d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:12+00:00",
+  "is_datasheet": true,
+  "label": "Schottky bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "MB22S",
+   "MB24S",
+   "MB26S",
+   "MB28S",
+   "MB210S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.85,
+  "tokens_in": 1180,
+  "tokens_out": 65
+ },
+ "type": "schottky_bridge_rectifier"
+}

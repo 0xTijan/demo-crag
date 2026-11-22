@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbta44_03f568d6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "db5fb4e34fc55d0e435e94e3e2ace3c7bdce01fefde8f4c0ae1d953478534328",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:34+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMMBTA44"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.08,
+  "tokens_in": 1239,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

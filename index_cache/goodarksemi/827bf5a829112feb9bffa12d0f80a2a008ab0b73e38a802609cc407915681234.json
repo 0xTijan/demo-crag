@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gseqp3u0015_b8a1171e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "827bf5a829112feb9bffa12d0f80a2a008ab0b73e38a802609cc407915681234",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:08+00:00",
+  "is_datasheet": true,
+  "label": "ESD array",
+  "family": false,
+  "part_numbers": [
+   "GSEQP3U0015"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.73,
+  "tokens_in": 1306,
+  "tokens_out": 42
+ },
+ "type": "esd_tvs_array"
+}

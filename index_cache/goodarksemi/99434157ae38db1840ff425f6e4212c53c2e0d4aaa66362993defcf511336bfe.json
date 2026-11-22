@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mbr20100ct-mbrf20100ct_d74cf7a1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "99434157ae38db1840ff425f6e4212c53c2e0d4aaa66362993defcf511336bfe",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "MBR20100CT",
+   "MBRF20100CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.75,
+  "tokens_in": 1516,
+  "tokens_out": 54
+ },
+ "type": "schottky_rectifier"
+}

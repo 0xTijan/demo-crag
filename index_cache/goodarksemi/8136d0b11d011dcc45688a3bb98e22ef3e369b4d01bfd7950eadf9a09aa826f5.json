@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn2812_5ab0667f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8136d0b11d011dcc45688a3bb98e22ef3e369b4d01bfd7950eadf9a09aa826f5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:20:35+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN2812"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.77,
+  "tokens_in": 2102,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

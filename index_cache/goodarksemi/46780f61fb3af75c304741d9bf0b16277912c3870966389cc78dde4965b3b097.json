@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mur1020ct-mur1020fct_e922a4e0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "46780f61fb3af75c304741d9bf0b16277912c3870966389cc78dde4965b3b097",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:55+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR1020CT",
+   "MUR1020FCT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.93,
+  "tokens_in": 1524,
+  "tokens_out": 51
+ },
+ "type": "fast_recovery_rectifier"
+}

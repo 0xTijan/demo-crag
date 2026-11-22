@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsedp6b0005_2dc8b773.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4f490d478204b8b09d76ce5dfd6194b07905a234e207f1b9b72d868f667720fc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:38+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSEDP6B0005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.99,
+  "tokens_in": 1034,
+  "tokens_out": 43
+ },
+ "type": "tvs_diode"
+}

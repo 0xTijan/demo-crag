@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/hs1x_d48122d8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "40069e9b0c1532777cd2ae2efa154287cb06e02e93ab3405e92835f2b795e6b9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:32+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "HS1A",
+   "HS1B",
+   "HS1D",
+   "HS1F",
+   "HS1G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.21,
+  "tokens_in": 1918,
+  "tokens_out": 74
+ },
+ "type": "ultrafast_rectifier"
+}

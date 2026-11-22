@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:57:38+00:00",
+  "at": "2026-11-21T10:44:02+00:00",
   "is_datasheet": true,
-  "label": "standard rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "KBJ6AU",
@@ -17,10 +17,10 @@
    "KBJ6JU"
   ],
   "confidence": "high",
-  "asked_again": true,
-  "seconds": 3.25,
-  "tokens_in": 4125,
-  "tokens_out": 149
+  "asked_again": false,
+  "seconds": 6.24,
+  "tokens_in": 1666,
+  "tokens_out": 76
  },
- "type": "standard_rectifier"
+ "type": "fast_recovery_rectifier"
 }

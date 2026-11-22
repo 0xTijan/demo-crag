@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft4r010_a60a15fc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b890e7311156b7cc8b118d5dd996732f132c05be9cd57c32899cf590188bab5b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:01+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT4R010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.17,
+  "tokens_in": 1990,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

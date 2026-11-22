@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsr5100lm2_7c591349.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8b074cdd4cf64c6213e29259fa157f1a8c86c42f38227f190d910e5a94439f41",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:32+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSR5100LM2"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.95,
+  "tokens_in": 1370,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp0876_d3b4cd9c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "02e18782915ab3632c810c275673cef48b611e6968c8637b4f3fb81e73228fea",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:16+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP0876"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.82,
+  "tokens_in": 2072,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

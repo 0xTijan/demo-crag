@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsrb751s-40_7a98b565.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3b1ce9f7ed96d17204f1cf22bad048499cc32ccdd276cb29099d5216ae1e5a45",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:48+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GSRB751S-40"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 3.77,
+  "tokens_in": 791,
+  "tokens_out": 46
+ },
+ "type": "schottky_rectifier"
+}

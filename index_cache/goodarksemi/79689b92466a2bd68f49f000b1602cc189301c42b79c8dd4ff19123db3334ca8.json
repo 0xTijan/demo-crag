@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/rectifier-wafer-fast-recovery_53dd6e1a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "79689b92466a2bd68f49f000b1602cc189301c42b79c8dd4ff19123db3334ca8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:06+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GDGF50A-M",
+   "GDGF56A-M",
+   "GDGF60A-M",
+   "GDGF84A-M",
+   "GDGF95A-M"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.46,
+  "tokens_in": 1730,
+  "tokens_out": 81
+ },
+ "type": "fast_recovery_rectifier"
+}

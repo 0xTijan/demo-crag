@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsmmbtrc23x_48e12821.md",
+ "supplier": "goodarksemi",
+ "file_hash": "169bc6c0f37953b64527479030c489076dd2d65d3e2ba5ca54a6bb2c9858cf91",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:40+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "GSMMBTRC231",
+   "GSMMBTRC232",
+   "GSMMBTRC233",
+   "GSMMBTRC234"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.33,
+  "tokens_in": 1185,
+  "tokens_out": 71
+ },
+ "type": "npn_transistor"
+}

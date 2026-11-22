@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu65r400_f8b0fbbb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1bf92094105dcb303c8325246abab9a909a10eeda4ee47e2f3964f5e63248833",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:14+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU65R400"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.78,
+  "tokens_in": 2193,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

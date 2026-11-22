@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd4n65_957ae464.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b2233bc6325a16031f49c0a2bb5cf613b872e51121bdc1b421b9bd376537ccd5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:59+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD4N65"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.68,
+  "tokens_in": 1862,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gspsm0201v12_6049a351.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fa3d572e5a0c0ac0f9b582b0c6e83c7e5a9ea2a9ba322c20cf310d2d94d74bbd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:31+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSPSM0201V12"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.92,
+  "tokens_in": 1258,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

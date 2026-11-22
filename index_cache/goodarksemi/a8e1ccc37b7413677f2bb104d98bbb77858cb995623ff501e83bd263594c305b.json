@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sk12-sk16_15f70272.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a8e1ccc37b7413677f2bb104d98bbb77858cb995623ff501e83bd263594c305b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:24+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK12",
+   "SK12E",
+   "SK13",
+   "SK13E",
+   "SK14"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.06,
+  "tokens_in": 1378,
+  "tokens_out": 89
+ },
+ "type": "schottky_rectifier"
+}

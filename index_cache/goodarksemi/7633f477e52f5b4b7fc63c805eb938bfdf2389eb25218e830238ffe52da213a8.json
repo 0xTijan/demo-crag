@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf6602_46cceb1e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7633f477e52f5b4b7fc63c805eb938bfdf2389eb25218e830238ffe52da213a8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:04+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6602"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.71,
+  "tokens_in": 1864,
+  "tokens_out": 44
+ },
+ "type": "complementary_mosfet"
+}

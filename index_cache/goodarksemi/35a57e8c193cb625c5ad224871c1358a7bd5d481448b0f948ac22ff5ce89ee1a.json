@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp1050_66685dee.md",
+ "supplier": "goodarksemi",
+ "file_hash": "35a57e8c193cb625c5ad224871c1358a7bd5d481448b0f948ac22ff5ce89ee1a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:31+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP1050"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.5,
+  "tokens_in": 2057,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

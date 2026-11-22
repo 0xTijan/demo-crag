@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp12r08_7a112c5a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b81af62cf0c9af728e04597ab1f48dd606cd0ae9377797c6430db1002798811e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:39+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP12R08"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.98,
+  "tokens_in": 1982,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

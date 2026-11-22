@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsp10u45l-t_51d3db9f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "18bac30f29e7ae68a47437b1be6c6521e70e2214cb36ac280db0aa2e5c1d5407",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:51+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSP10U45L-T"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.09,
+  "tokens_in": 1569,
+  "tokens_out": 45
+ },
+ "type": "schottky_rectifier"
+}

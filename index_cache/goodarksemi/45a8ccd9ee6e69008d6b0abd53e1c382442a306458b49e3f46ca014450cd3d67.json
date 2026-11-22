@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsekbj40x_7d38983f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "45a8ccd9ee6e69008d6b0abd53e1c382442a306458b49e3f46ca014450cd3d67",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:49+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Bridge Rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSEKBJ402",
+   "GSEKBJ404",
+   "GSEKBJ406"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.05,
+  "tokens_in": 1516,
+  "tokens_out": 61
+ },
+ "type": "fast_recovery_bridge_rectifier"
+}

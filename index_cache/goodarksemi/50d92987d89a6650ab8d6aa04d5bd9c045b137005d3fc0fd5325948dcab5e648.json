@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfl1n60_ce588599.md",
+ "supplier": "goodarksemi",
+ "file_hash": "50d92987d89a6650ab8d6aa04d5bd9c045b137005d3fc0fd5325948dcab5e648",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:05+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFL1N60"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.67,
+  "tokens_in": 1944,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

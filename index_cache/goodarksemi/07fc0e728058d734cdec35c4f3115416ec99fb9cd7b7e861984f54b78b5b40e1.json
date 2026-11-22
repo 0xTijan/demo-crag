@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez24b010_bc98be6e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "07fc0e728058d734cdec35c4f3115416ec99fb9cd7b7e861984f54b78b5b40e1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:27+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ24B010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.48,
+  "tokens_in": 1148,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

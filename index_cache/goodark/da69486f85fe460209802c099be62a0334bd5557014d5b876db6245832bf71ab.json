@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:49:27+00:00",
+  "at": "2026-11-21T10:36:27+00:00",
   "is_datasheet": true,
-  "label": "fast recovery rectifier",
+  "label": "single-phase bridge rectifier",
   "family": true,
   "part_numbers": [
    "GBJ15AU",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.27,
-  "tokens_in": 2148,
-  "tokens_out": 83
+  "seconds": 7.45,
+  "tokens_in": 1914,
+  "tokens_out": 84
  },
- "type": "fast_recovery_rectifier"
+ "type": "bridge_rectifier"
 }

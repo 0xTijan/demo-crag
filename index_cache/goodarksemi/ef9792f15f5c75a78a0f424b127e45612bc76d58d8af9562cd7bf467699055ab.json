@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp1r703_7392a6b4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ef9792f15f5c75a78a0f424b127e45612bc76d58d8af9562cd7bf467699055ab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:07+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP1R703"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.2,
+  "tokens_in": 2101,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

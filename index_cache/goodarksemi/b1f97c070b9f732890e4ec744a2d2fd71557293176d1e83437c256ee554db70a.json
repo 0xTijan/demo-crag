@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjd6505_7a5fe0e2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b1f97c070b9f732890e4ec744a2d2fd71557293176d1e83437c256ee554db70a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:00+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJD6505"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.03,
+  "tokens_in": 2020,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

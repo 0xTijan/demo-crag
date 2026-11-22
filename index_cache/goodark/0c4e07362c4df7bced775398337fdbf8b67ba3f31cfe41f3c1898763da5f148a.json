@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:40:43+00:00",
+  "at": "2026-11-21T10:27:51+00:00",
   "is_datasheet": true,
   "label": "fast switching diode",
   "family": false,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.4,
-  "tokens_in": 1478,
+  "seconds": 4.37,
+  "tokens_in": 1191,
   "tokens_out": 44
  },
- "type": "fast_switching_diode"
+ "type": "switching_diode"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1n6267-1n6303a_262f251d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fa5d7536a55dac47ba3d0e47a8620be76f19da5a79300266605117bbfa1af547",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:14+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "1N6267",
+   "1N6267A",
+   "1N6268",
+   "1N6268A",
+   "1N6269"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.04,
+  "tokens_in": 4653,
+  "tokens_out": 74
+ },
+ "type": "tvs_diode"
+}

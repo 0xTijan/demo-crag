@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sk82-sk86_84eae537.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7f6630dc0e0d1ea50115957afdadab147cf0347dd6d7b071f03a957afc3a8bdb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:11+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK82",
+   "SK83",
+   "SK84",
+   "SK85",
+   "SK86"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.71,
+  "tokens_in": 1165,
+  "tokens_out": 58
+ },
+ "type": "schottky_rectifier"
+}

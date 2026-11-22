@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/kbpc6xx_5267d241.md",
+ "supplier": "goodarksemi",
+ "file_hash": "58554b3a41d89d985bbf9fc51fe5e861d3cf1f1198f0ee5d6c0abb375eaabd4f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:01+00:00",
+  "is_datasheet": true,
+  "label": "single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBPC6005",
+   "KBPC601",
+   "KBPC602",
+   "KBPC604",
+   "KBPC606"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.2,
+  "tokens_in": 1399,
+  "tokens_out": 83
+ },
+ "type": "bridge_rectifier"
+}

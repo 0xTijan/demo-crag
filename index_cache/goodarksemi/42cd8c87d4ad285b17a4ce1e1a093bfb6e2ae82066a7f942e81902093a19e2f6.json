@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/ls22-ls2b_9591b9ed.md",
+ "supplier": "goodarksemi",
+ "file_hash": "42cd8c87d4ad285b17a4ce1e1a093bfb6e2ae82066a7f942e81902093a19e2f6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:38+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LS22",
+   "LS23",
+   "LS24",
+   "LS25",
+   "LS26"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.2,
+  "tokens_in": 1527,
+  "tokens_out": 79
+ },
+ "type": "schottky_rectifier"
+}

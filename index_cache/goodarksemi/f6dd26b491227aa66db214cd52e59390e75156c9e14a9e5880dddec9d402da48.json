@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfa90r350_b728205f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f6dd26b491227aa66db214cd52e59390e75156c9e14a9e5880dddec9d402da48",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:13+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFA90R350"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.44,
+  "tokens_in": 2164,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

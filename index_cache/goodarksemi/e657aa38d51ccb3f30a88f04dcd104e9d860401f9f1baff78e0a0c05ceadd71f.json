@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp8r012_1f62dea9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e657aa38d51ccb3f30a88f04dcd104e9d860401f9f1baff78e0a0c05ceadd71f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:16+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP8R012"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.76,
+  "tokens_in": 1876,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

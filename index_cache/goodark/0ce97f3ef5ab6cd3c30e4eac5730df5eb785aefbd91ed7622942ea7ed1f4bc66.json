@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:57:22+00:00",
+  "at": "2026-11-21T10:43:48+00:00",
   "is_datasheet": true,
   "label": "standard rectifier",
   "family": true,
@@ -17,10 +17,10 @@
    "KBJ10J"
   ],
   "confidence": "high",
-  "asked_again": true,
-  "seconds": 3.36,
-  "tokens_in": 4267,
-  "tokens_out": 159
+  "asked_again": false,
+  "seconds": 7.54,
+  "tokens_in": 1858,
+  "tokens_out": 80
  },
  "type": "standard_rectifier"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsbpz60x_df68b34e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "464abe824df7feebb4e4ae4a094e3c6fc46b2386bf281ec3650f4a059b387fe4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:54+00:00",
+  "is_datasheet": true,
+  "label": "high current automobile rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSBPZ60L",
+   "GSBPZ60M",
+   "GSBPZ60N",
+   "GSBPZ60H",
+   "GSBPZ60Z"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.58,
+  "tokens_in": 1450,
+  "tokens_out": 73
+ },
+ "type": "standard_rectifier"
+}

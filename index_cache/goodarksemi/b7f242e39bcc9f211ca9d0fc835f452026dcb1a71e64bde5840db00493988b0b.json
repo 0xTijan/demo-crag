@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/db10xs_73c17d2d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b7f242e39bcc9f211ca9d0fc835f452026dcb1a71e64bde5840db00493988b0b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:02+00:00",
+  "is_datasheet": true,
+  "label": "single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DB101S",
+   "DB102S",
+   "DB103S",
+   "DB104S",
+   "DB105S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.02,
+  "tokens_in": 1625,
+  "tokens_out": 82
+ },
+ "type": "bridge_rectifier"
+}

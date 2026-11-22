@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf6072g5_1430193c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a46b2d51fb9ec9e036a2fa5aeaaf817d016c5a5889d169c933d0e36c60d27306",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:01+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6072G5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.42,
+  "tokens_in": 2105,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

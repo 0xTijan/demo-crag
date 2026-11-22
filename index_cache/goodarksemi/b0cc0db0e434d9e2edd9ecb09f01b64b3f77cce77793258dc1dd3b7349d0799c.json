@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bss138_4d2eb811.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b0cc0db0e434d9e2edd9ecb09f01b64b3f77cce77793258dc1dd3b7349d0799c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:12+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "BSS138"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.03,
+  "tokens_in": 1859,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

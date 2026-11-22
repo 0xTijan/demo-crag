@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsr20xxpt_627ddbb1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9c1e5c5c83ec3d98676c9280abc7c24546ec180d7f92a86c08e0867972a994b4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:13+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSR2020PT",
+   "GSR2030PT",
+   "GSR2040PT",
+   "GSR2060PT",
+   "GSR20100PT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.13,
+  "tokens_in": 1827,
+  "tokens_out": 100
+ },
+ "type": "schottky_rectifier"
+}

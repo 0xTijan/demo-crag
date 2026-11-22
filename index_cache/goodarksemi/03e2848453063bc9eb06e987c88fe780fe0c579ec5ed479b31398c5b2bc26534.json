@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp2009_3b5b9544.md",
+ "supplier": "goodarksemi",
+ "file_hash": "03e2848453063bc9eb06e987c88fe780fe0c579ec5ed479b31398c5b2bc26534",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:52+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP2009"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.99,
+  "tokens_in": 2043,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

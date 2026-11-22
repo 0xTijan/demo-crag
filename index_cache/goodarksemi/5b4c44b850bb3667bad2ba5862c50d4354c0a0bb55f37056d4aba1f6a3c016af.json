@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gn3o_d5ba1c46.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5b4c44b850bb3667bad2ba5862c50d4354c0a0bb55f37056d4aba1f6a3c016af",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:17+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated surface mount rectifier",
+  "family": false,
+  "part_numbers": [
+   "GN3O"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.16,
+  "tokens_in": 1135,
+  "tokens_out": 40
+ },
+ "type": "standard_rectifier"
+}

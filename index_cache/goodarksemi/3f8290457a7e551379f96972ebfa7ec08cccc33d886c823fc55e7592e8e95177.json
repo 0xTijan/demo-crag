@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn4020_a3d87d28.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3f8290457a7e551379f96972ebfa7ec08cccc33d886c823fc55e7592e8e95177",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:14+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN4020"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.79,
+  "tokens_in": 2059,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

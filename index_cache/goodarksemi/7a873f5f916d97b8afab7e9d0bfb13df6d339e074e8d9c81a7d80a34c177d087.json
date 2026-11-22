@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsf2tvs_3cf5402b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7a873f5f916d97b8afab7e9d0bfb13df6d339e074e8d9c81a7d80a34c177d087",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:44+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GSF2TVS5.0A",
+   "GSF2TVS6.0A",
+   "GSF2TVS6.5A",
+   "GSF2TVS7.0A",
+   "GSF2TVS7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.52,
+  "tokens_in": 2909,
+  "tokens_out": 87
+ },
+ "type": "tvs_diode"
+}

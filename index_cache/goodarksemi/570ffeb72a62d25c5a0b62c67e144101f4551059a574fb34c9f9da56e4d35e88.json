@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgn4r303_4ed4c7cc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "570ffeb72a62d25c5a0b62c67e144101f4551059a574fb34c9f9da56e4d35e88",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:08+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGN4R303"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.04,
+  "tokens_in": 2012,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

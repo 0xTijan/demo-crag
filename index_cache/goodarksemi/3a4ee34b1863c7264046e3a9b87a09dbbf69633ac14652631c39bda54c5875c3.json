@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb2114s_38b95072.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3a4ee34b1863c7264046e3a9b87a09dbbf69633ac14652631c39bda54c5875c3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:38+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB2114S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.87,
+  "tokens_in": 1967,
+  "tokens_out": 46
+ },
+ "type": "complementary_mosfet"
+}

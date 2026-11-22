@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr4065_fa32f136.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2be80c55137c4325d8cc8011806d1152d161cc99cbeb16e46f1aac5f94bd00c1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:07+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR4065"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.66,
+  "tokens_in": 1873,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

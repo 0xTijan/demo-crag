@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc2303_c2cf9949.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6e364da5745c3ad0d94083e0800ba615dd7d37af0ca4f94b5f9d44e82677dd41",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:56+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC2303"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.19,
+  "tokens_in": 1991,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

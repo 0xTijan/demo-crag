@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/rl20xg_173bca97.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e548b73e4e5ef9aa1815502cf82c8bf8964a18b3e004a431b95f66175feb7d62",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:17+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "RL201G",
+   "RL202G",
+   "RL203G",
+   "RL204G",
+   "RL205G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.51,
+  "tokens_in": 1625,
+  "tokens_out": 81
+ },
+ "type": "standard_rectifier"
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsb1124x_54503607.md",
+ "supplier": "goodarksemi",
+ "file_hash": "862ab88be270f4d2b810e49e2834479aa40f476ebbb7f1de9d67331003e4b643",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:04+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSB1124A",
+   "GSB1124B",
+   "GSB1124C"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.26,
+  "tokens_in": 1377,
+  "tokens_out": 58
+ },
+ "type": "npn_transistor"
+}

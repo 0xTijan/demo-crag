@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:07:46+00:00",
+  "at": "2026-11-21T10:53:01+00:00",
   "is_datasheet": true,
-  "label": "three phase rectifier",
+  "label": "three phase rectifier bridge",
   "family": true,
   "part_numbers": [
    "SGBJ25A08",
@@ -17,9 +17,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.83,
-  "tokens_in": 1625,
-  "tokens_out": 72
+  "seconds": 5.43,
+  "tokens_in": 1282,
+  "tokens_out": 73
  },
- "type": "three_phase_rectifier"
+ "type": "three_phase_bridge_rectifier"
 }

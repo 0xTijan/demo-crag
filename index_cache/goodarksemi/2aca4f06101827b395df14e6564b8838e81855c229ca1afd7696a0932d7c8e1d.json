@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2319cj1_dca83258.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2aca4f06101827b395df14e6564b8838e81855c229ca1afd7696a0932d7c8e1d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:29+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2319CJ1"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.61,
+  "tokens_in": 2147,
+  "tokens_out": 43
+ },
+ "type": "mosfet_p"
+}

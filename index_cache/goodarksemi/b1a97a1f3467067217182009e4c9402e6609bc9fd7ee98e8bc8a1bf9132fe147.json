@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgd1520ak_f02fe14e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b1a97a1f3467067217182009e4c9402e6609bc9fd7ee98e8bc8a1bf9132fe147",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:28+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGD1520AK"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.75,
+  "tokens_in": 1924,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

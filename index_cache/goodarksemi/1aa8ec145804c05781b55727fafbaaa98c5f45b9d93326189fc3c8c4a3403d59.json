@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gs1ta3000_cced927e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1aa8ec145804c05781b55727fafbaaa98c5f45b9d93326189fc3c8c4a3403d59",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:02+00:00",
+  "is_datasheet": true,
+  "label": "high voltage rectifier",
+  "family": false,
+  "part_numbers": [
+   "GS1TA3000"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.57,
+  "tokens_in": 1209,
+  "tokens_out": 41
+ },
+ "type": "standard_rectifier"
+}

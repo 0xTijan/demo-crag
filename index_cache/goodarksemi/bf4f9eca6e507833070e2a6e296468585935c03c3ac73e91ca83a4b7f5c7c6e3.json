@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsr40100ct_597ac034.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bf4f9eca6e507833070e2a6e296468585935c03c3ac73e91ca83a4b7f5c7c6e3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:21+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSR40100CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.82,
+  "tokens_in": 1408,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

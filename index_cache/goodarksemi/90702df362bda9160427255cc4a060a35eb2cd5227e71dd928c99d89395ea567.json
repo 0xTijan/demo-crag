@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsde01u40s_552cf532.md",
+ "supplier": "goodarksemi",
+ "file_hash": "90702df362bda9160427255cc4a060a35eb2cd5227e71dd928c99d89395ea567",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:35+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSDE01U40S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.94,
+  "tokens_in": 1010,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/6a0x_3a19cf70.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fad73f19bbcb1ba152b3386f8b92172793fcbac67abb4a0a0031c9cacfd8fe3a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:18+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "6A05",
+   "6A1",
+   "6A2",
+   "6A4",
+   "6A6"
+  ],
+  "confidence": "high",
+  "asked_again": true,
+  "seconds": 16.55,
+  "tokens_in": 3648,
+  "tokens_out": 124
+ },
+ "type": "standard_rectifier"
+}

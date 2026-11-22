@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/bzx7bxx_a5f3e10d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c3638fa62f3fdc544d86db29135b9290137279a939f74d4ff0837fd906d0169e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:50+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "BZX7B2V2",
+   "BZX7B2V4",
+   "BZX7B2V7",
+   "BZX7B3V0",
+   "BZX7B3V3"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.02,
+  "tokens_in": 2249,
+  "tokens_out": 77
+ },
+ "type": "zener_diode"
+}

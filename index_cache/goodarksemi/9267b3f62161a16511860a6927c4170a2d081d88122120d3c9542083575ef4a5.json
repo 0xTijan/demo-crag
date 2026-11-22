@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gseslc18vd323s-2b_be412fc4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9267b3f62161a16511860a6927c4170a2d081d88122120d3c9542083575ef4a5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:25+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSESLC18VD323S-2B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.8,
+  "tokens_in": 1051,
+  "tokens_out": 52
+ },
+ "type": "esd_protection_diode"
+}

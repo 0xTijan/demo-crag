@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd4015_f4567467.md",
+ "supplier": "goodarksemi",
+ "file_hash": "00b32db7fdf455c08f50de6cd4bfaea7c0bc9fcfdc441dbc113e906cc9a446a3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:54+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD4015"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.92,
+  "tokens_in": 2109,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

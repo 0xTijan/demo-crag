@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc6002m_7c9ace3b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8909494a1f7bf646c9205e2e53476462fcd01ba5e909c0cf5db4531990b7274e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:18+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC6002M"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.21,
+  "tokens_in": 1903,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

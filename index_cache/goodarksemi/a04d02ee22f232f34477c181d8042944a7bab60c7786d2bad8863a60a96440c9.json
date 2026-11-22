@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh65r400_c4a07ca5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a04d02ee22f232f34477c181d8042944a7bab60c7786d2bad8863a60a96440c9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:55+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH65R400"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.8,
+  "tokens_in": 2196,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

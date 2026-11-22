@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsl6tvs_d9491066.md",
+ "supplier": "goodarksemi",
+ "file_hash": "67cd8882c97d702a755cd0d9f21be99278119bcc1ca5f8cb4209a1108eda4775",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:08+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GSL6TVS10A",
+   "GSL6TVS11A",
+   "GSL6TVS12A",
+   "GSL6TVS13A",
+   "GSL6TVS14A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.08,
+  "tokens_in": 3418,
+  "tokens_out": 82
+ },
+ "type": "tvs_diode"
+}

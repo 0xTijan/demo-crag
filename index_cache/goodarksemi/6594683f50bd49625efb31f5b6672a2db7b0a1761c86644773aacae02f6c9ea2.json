@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gnoxa_8f28a21a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6594683f50bd49625efb31f5b6672a2db7b0a1761c86644773aacae02f6c9ea2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:26+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "GNOAA",
+   "GNOBA",
+   "GNODA",
+   "GNOGA",
+   "GNOJA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.67,
+  "tokens_in": 1618,
+  "tokens_out": 66
+ },
+ "type": "standard_rectifier"
+}

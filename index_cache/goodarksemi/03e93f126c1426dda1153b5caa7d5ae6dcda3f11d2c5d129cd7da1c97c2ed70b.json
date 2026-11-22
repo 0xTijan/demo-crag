@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp1080_d06bc73f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "03e93f126c1426dda1153b5caa7d5ae6dcda3f11d2c5d129cd7da1c97c2ed70b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP1080"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.21,
+  "tokens_in": 2003,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

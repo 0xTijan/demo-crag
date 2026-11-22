@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/sbrx20300s_cb1b6fd4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "882ac459216cb01712f37900eeb11256bc48489e017361b447491bc0262ceebf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:55+00:00",
+  "is_datasheet": true,
+  "label": "Trench Schottky Barrier Rectifier",
+  "family": true,
+  "part_numbers": [
+   "SBR20300S",
+   "SBRF20300S",
+   "SBRB20300S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.77,
+  "tokens_in": 1582,
+  "tokens_out": 68
+ },
+ "type": "schottky_rectifier"
+}

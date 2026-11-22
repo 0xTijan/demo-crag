@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsus1xs_f1e40ab4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3deb19f1ac2b25bace41272e176c9260de41012674247f04cf9472f3f6d15ceb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:03+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSUS1AS",
+   "GSUS1BS",
+   "GSUS1CS",
+   "GSUS1DS",
+   "GSUS1ES"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.61,
+  "tokens_in": 1948,
+  "tokens_out": 110
+ },
+ "type": "fast_recovery_rectifier"
+}

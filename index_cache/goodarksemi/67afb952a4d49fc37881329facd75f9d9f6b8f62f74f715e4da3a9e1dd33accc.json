@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/lsl5b_e4a6d327.md",
+ "supplier": "goodarksemi",
+ "file_hash": "67afb952a4d49fc37881329facd75f9d9f6b8f62f74f715e4da3a9e1dd33accc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:06+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "LSL5B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.65,
+  "tokens_in": 1113,
+  "tokens_out": 40
+ },
+ "type": "schottky_rectifier"
+}

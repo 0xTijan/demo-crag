@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf3324_6d6227dc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2ffbc3c0514677cbe64a230c1abec4ba31631327318ad46ce777e79796f35d30",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:38+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF3324"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.32,
+  "tokens_in": 1980,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

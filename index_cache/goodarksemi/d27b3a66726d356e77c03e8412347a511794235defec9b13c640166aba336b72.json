@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/smcj188x_94a56902.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d27b3a66726d356e77c03e8412347a511794235defec9b13c640166aba336b72",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:47+00:00",
+  "is_datasheet": true,
+  "label": "Transient voltage suppressor diode",
+  "family": true,
+  "part_numbers": [
+   "SMCJ188A",
+   "SMCJ188CA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.1,
+  "tokens_in": 1478,
+  "tokens_out": 52
+ },
+ "type": "tvs_diode"
+}

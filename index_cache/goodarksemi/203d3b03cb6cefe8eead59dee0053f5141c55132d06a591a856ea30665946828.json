@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsclamp5010-5u_3b2da9c0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "203d3b03cb6cefe8eead59dee0053f5141c55132d06a591a856ea30665946828",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:12+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSCLAMP5010-5U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.7,
+  "tokens_in": 1331,
+  "tokens_out": 45
+ },
+ "type": "esd_tvs_array"
+}

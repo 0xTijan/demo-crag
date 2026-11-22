@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/s6125f_2c40e17a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "06c01d15abbd6dc506d960f944ac4fb56bb82cfad0c30d41f99f15de0c40372f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:42+00:00",
+  "is_datasheet": true,
+  "label": "surface mount fuse",
+  "family": true,
+  "part_numbers": [
+   "S6125F500",
+   "S6125F750",
+   "S6125F1",
+   "S6125F1.5",
+   "S6125F2"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.81,
+  "tokens_in": 1820,
+  "tokens_out": 82
+ },
+ "type": "fast_acting_chip_fuse"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfk0501_a00063d5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ac09d5fdcdef566be5820f61266da91e5c7b284e0be09c6fe81094cf4c255099",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:34+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFK0501"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.97,
+  "tokens_in": 1289,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

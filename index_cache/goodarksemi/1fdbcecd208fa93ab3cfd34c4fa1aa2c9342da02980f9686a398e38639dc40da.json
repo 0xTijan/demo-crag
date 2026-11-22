@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft65r400_beba2382.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1fdbcecd208fa93ab3cfd34c4fa1aa2c9342da02980f9686a398e38639dc40da",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:17+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT65R400"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.46,
+  "tokens_in": 2161,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

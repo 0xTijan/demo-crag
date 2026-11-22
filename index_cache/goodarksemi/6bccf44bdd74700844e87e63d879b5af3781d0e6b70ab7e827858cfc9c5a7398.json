@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjt80r280_c4c49f8e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6bccf44bdd74700844e87e63d879b5af3781d0e6b70ab7e827858cfc9c5a7398",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:43+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJT80R280"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.83,
+  "tokens_in": 2223,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

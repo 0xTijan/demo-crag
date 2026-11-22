@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:59:23+00:00",
+  "at": "2026-11-21T10:45:45+00:00",
   "is_datasheet": true,
-  "label": "fast recovery rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "MB22S",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.74,
-  "tokens_in": 1772,
-  "tokens_out": 63
+  "seconds": 4.98,
+  "tokens_in": 1358,
+  "tokens_out": 62
  },
- "type": "fast_recovery_rectifier"
+ "type": "standard_rectifier"
 }

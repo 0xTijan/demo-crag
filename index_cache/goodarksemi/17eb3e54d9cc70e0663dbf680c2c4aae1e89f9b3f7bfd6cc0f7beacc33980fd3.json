@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/sbrx40100ct_27004ac8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "17eb3e54d9cc70e0663dbf680c2c4aae1e89f9b3f7bfd6cc0f7beacc33980fd3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:57+00:00",
+  "is_datasheet": true,
+  "label": "Trench Schottky Barrier Rectifier",
+  "family": false,
+  "part_numbers": [
+   "SBRx40100CT",
+   "SBRF40100CT",
+   "SBR40100CT",
+   "SBRB40100CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.1,
+  "tokens_in": 1668,
+  "tokens_out": 79
+ },
+ "type": "schottky_rectifier"
+}

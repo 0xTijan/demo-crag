@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn4004_3172904e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b90747844b8b1439f86f90cd6118ed88e155f39bdf28465f1c4ad1697a4c296d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:05+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN4004"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.7,
+  "tokens_in": 1648,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

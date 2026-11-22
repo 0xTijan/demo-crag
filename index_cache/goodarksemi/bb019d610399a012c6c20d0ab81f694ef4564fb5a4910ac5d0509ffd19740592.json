@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1sma47xxa_645b2d22.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bb019d610399a012c6c20d0ab81f694ef4564fb5a4910ac5d0509ffd19740592",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:23+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "1SMA4728A",
+   "1SMA4729A",
+   "1SMA4730A",
+   "1SMA4731A",
+   "1SMA4732A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.58,
+  "tokens_in": 3654,
+  "tokens_out": 82
+ },
+ "type": "zener_diode"
+}

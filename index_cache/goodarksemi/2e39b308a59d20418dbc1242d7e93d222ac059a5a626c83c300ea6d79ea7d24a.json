@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgh04200_b312de55.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2e39b308a59d20418dbc1242d7e93d222ac059a5a626c83c300ea6d79ea7d24a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGH04200"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.66,
+  "tokens_in": 1834,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

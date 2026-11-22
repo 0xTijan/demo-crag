@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfq3710_31dae9b6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "34649dec52e117b35c9eafa8e21a349673785a142033f986bca42e9c1658c8ee",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:52+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFQ3710"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.8,
+  "tokens_in": 2064,
+  "tokens_out": 44
+ },
+ "type": "complementary_mosfet"
+}

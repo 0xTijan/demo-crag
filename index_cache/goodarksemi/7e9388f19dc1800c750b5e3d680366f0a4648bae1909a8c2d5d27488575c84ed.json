@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp08150_028cee6b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7e9388f19dc1800c750b5e3d680366f0a4648bae1909a8c2d5d27488575c84ed",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:14+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP08150"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.81,
+  "tokens_in": 2035,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

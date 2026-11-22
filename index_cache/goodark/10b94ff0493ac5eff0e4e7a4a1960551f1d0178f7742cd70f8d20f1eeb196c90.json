@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:05:55+00:00",
+  "at": "2026-11-21T10:51:24+00:00",
   "is_datasheet": true,
   "label": "NPN transistor",
   "family": false,
@@ -14,8 +14,8 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.34,
-  "tokens_in": 1515,
+  "seconds": 4.96,
+  "tokens_in": 1235,
   "tokens_out": 36
  },
  "type": "npn_transistor"

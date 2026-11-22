@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbaw56w_feef9f8e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "38e2b77d7b5badb05982d3496df8bb48a5f0143e8ebe232e43709481735e110c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:52+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAW56W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.12,
+  "tokens_in": 1013,
+  "tokens_out": 40
+ },
+ "type": "switching_diode"
+}

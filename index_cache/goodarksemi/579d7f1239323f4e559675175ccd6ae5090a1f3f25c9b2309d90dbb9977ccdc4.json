@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/ls12-ls1ch_79ea80e5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "579d7f1239323f4e559675175ccd6ae5090a1f3f25c9b2309d90dbb9977ccdc4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:36+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LS12",
+   "LS14",
+   "LS16",
+   "LS18",
+   "LS19"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.44,
+  "tokens_in": 1568,
+  "tokens_out": 81
+ },
+ "type": "schottky_rectifier"
+}

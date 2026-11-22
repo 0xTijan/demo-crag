@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gstk6015_73cc2419.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e471c0ad93a1e2b0e0321d05a632945868db049b8f1470524d35ff1d9780f9e6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:42+00:00",
+  "is_datasheet": true,
+  "label": "NPN+PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSTK6015"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.81,
+  "tokens_in": 1521,
+  "tokens_out": 42
+ },
+ "type": "complementary_npn_pnp_transistor"
+}

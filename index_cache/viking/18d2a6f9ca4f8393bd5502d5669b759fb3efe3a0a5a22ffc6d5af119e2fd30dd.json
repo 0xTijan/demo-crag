@@ -5,18 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:16:04+00:00",
+  "at": "2026-11-21T12:00:44+00:00",
   "is_datasheet": true,
   "label": "anti-corrosive thin film precision chip resistor",
   "family": true,
   "part_numbers": [
-   "PR Series"
+   "PR Series",
+   "PR02",
+   "PR03",
+   "PR05",
+   "PR06"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.49,
-  "tokens_in": 1765,
-  "tokens_out": 41
+  "seconds": 7.41,
+  "tokens_in": 1697,
+  "tokens_out": 61
  },
- "type": "anti_corrosive_thin_film_precision_chip_"
+ "type": "thin_film_chip_resistor"
 }

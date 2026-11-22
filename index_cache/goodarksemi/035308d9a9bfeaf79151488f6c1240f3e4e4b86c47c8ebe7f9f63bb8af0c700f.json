@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2116_969e1b7e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "035308d9a9bfeaf79151488f6c1240f3e4e4b86c47c8ebe7f9f63bb8af0c700f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:07+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2116"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.8,
+  "tokens_in": 2122,
+  "tokens_out": 43
+ },
+ "type": "complementary_mosfet"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgbj1016_317331b3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e5737f5df867acd08b42056aad7e33f093dacce9546f8ce8f534319a75c84198",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:37+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGBJ1016"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.25,
+  "tokens_in": 1201,
+  "tokens_out": 40
+ },
+ "type": "bridge_rectifier"
+}

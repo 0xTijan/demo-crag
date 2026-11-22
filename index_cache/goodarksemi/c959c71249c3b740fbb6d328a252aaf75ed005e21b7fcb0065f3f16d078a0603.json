@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/sk5b5c_abf91056.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c959c71249c3b740fbb6d328a252aaf75ed005e21b7fcb0065f3f16d078a0603",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:06+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "SK5B5C"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.78,
+  "tokens_in": 1067,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

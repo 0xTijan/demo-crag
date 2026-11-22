@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfa10200_96912642.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4e2e64d94ecc0ca394f1e43175af54a0fa5a3cba1260054859c14681b53db208",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:02+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFA10200"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.61,
+  "tokens_in": 1921,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

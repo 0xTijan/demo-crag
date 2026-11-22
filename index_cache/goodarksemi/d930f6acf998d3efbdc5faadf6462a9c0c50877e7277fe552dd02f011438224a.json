@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/goodark-semi-product-brief-15kw-30kw-tvs_e32ecbf7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d930f6acf998d3efbdc5faadf6462a9c0c50877e7277fe552dd02f011438224a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:27+00:00",
+  "is_datasheet": false,
+  "label": "product brochure",
+  "family": true,
+  "part_numbers": [
+   "15KPA17A-15KPA280CA",
+   "30KPA28A-30KPA320CA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.17,
+  "tokens_in": 877,
+  "tokens_out": 66
+ },
+ "type": "_not_a_datasheet"
+}

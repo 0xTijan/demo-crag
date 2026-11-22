@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn3914_380a4aa8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e37d6fb885790a5b14d9f2d4614b900e67071413aaac835eb76dc35e1c2059c7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:04+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN3914"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.94,
+  "tokens_in": 2247,
+  "tokens_out": 45
+ },
+ "type": "complementary_mosfet"
+}

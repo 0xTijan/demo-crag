@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1n540xg_e237d033.md",
+ "supplier": "goodarksemi",
+ "file_hash": "048dcac89166a98f5f884650c936d4d23e198512a93233d18d260caa1db160a1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:01+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "1N 5400G",
+   "1N 5401G",
+   "1N 5402G",
+   "1N 5404G",
+   "1N 5406G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.44,
+  "tokens_in": 1668,
+  "tokens_out": 101
+ },
+ "type": "standard_rectifier"
+}

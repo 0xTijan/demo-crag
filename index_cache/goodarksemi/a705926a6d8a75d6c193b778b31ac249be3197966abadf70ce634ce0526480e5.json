@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr3504_9a4e3931.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a705926a6d8a75d6c193b778b31ac249be3197966abadf70ce634ce0526480e5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:02+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR3504"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.67,
+  "tokens_in": 2002,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

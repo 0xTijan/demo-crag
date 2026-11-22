@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbc847s_254fb1fe.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d341d372017259b53f9838bee1b2d26eb1b1304f431861be81c27016fdf668be",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:14+00:00",
+  "is_datasheet": true,
+  "label": "dual NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSBC847S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.2,
+  "tokens_in": 1304,
+  "tokens_out": 41
+ },
+ "type": "dual_npn_transistor"
+}

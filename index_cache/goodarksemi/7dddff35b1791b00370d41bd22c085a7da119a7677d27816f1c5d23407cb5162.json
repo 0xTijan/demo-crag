@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/grs10xxfh_21363984.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7dddff35b1791b00370d41bd22c085a7da119a7677d27816f1c5d23407cb5162",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:52+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GRS1000FH",
+   "GRS1001FH",
+   "GRS1002FH",
+   "GRS1004FH",
+   "GRS1006FH"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.62,
+  "tokens_in": 1780,
+  "tokens_out": 95
+ },
+ "type": "fast_recovery_rectifier"
+}

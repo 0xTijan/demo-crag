@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp0446_7537b5fd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f09e228c1b3133e97ece3d0ae69a648495becf825570b01111b65e93b53f287b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:59+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP0446"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.54,
+  "tokens_in": 2070,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

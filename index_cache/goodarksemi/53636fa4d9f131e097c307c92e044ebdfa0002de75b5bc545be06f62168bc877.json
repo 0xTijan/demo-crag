@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/zmmx_cb2ada13.md",
+ "supplier": "goodarksemi",
+ "file_hash": "53636fa4d9f131e097c307c92e044ebdfa0002de75b5bc545be06f62168bc877",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:56:05+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "ZMM1",
+   "ZMM2.4",
+   "ZMM2.7",
+   "ZMM3",
+   "ZMM3.3"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.64,
+  "tokens_in": 3240,
+  "tokens_out": 63
+ },
+ "type": "zener_diode"
+}

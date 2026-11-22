@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsedc3b011_b2ff0ee1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7f6e52832531ef7a7db3eb9c7b3641bc2057942bcb81bf1fe05ae403f9c7575f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:24+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEDC3B011"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.57,
+  "tokens_in": 1170,
+  "tokens_out": 46
+ },
+ "type": "esd_protection_diode"
+}

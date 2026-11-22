@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbas40lp_71d4fd55.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f9e7160a54b92852c62143fd1ec1be0b8607de581998bae8ba8303fc46a0b6eb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:17+00:00",
+  "is_datasheet": true,
+  "label": "small signal Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAS40LP"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.29,
+  "tokens_in": 1039,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

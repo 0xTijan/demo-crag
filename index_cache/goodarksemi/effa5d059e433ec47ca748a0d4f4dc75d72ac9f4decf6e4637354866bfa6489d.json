@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbt5401_39fb8df4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "effa5d059e433ec47ca748a0d4f4dc75d72ac9f4decf6e4637354866bfa6489d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:29+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMMBT5401"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.79,
+  "tokens_in": 1193,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

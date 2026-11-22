@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsmurs440-gsmurs460_5060b50b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "764c53d0259cee674ab122b72857c574c0b5810faa16f98f438aff80935a4114",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:44+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSMURS440",
+   "GSMURS460"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.35,
+  "tokens_in": 1337,
+  "tokens_out": 52
+ },
+ "type": "ultrafast_rectifier"
+}

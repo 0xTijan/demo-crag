@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsk22bf-gsk220bf_cd34a3c7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "81100fc972855936586033defa10cb23519a01971564aae466108cca10db6445",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:29+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSK22BF",
+   "GSK24BF",
+   "GSK26BF",
+   "GSK28BF",
+   "GSK210BF"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.64,
+  "tokens_in": 1531,
+  "tokens_out": 94
+ },
+ "type": "schottky_rectifier"
+}

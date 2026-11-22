@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft4003_3be17a64.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2c03d015409bef3001258644251521a9de58f6309e930b3a56b1f7133dc253e0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:55+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT4003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.66,
+  "tokens_in": 2047,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

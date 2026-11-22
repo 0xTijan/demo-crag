@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/r1200g-r2000g_726eb84c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4e9fbfca8d376988dadc03f8ddc08dd6bd21267d2af9f62f04b560acf51c1898",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:58+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated high voltage silicon rectifier",
+  "family": true,
+  "part_numbers": [
+   "R1200G",
+   "R1500G",
+   "R1800G",
+   "R2000G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.74,
+  "tokens_in": 1314,
+  "tokens_out": 68
+ },
+ "type": "standard_rectifier"
+}

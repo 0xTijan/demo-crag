@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp27010_2c6496d9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "476e59a2dfd32e521b8ada1963d14cf6743458ac72112f65bd8291e5fbc9e559",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:57+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP27010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.22,
+  "tokens_in": 2186,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

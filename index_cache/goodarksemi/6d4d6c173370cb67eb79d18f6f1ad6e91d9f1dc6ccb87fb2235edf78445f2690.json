@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbsp62_6e459f42.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6d4d6c173370cb67eb79d18f6f1ad6e91d9f1dc6ccb87fb2235edf78445f2690",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:58+00:00",
+  "is_datasheet": true,
+  "label": "PNP Darlington Transistor",
+  "family": false,
+  "part_numbers": [
+   "GSBSP62"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.71,
+  "tokens_in": 1342,
+  "tokens_out": 41
+ },
+ "type": "pnp_darlington_transistor"
+}

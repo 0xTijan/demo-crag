@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsbat54xw_cdcb04c2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ab84ab56477136f80d3780f4abb1cfb329d4f3a79f137df52d9c19633526df99",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:41+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": true,
+  "part_numbers": [
+   "GSBAT54ADW",
+   "GSBAT54BRW",
+   "GSBAT54CDW",
+   "GSBAT54SDW",
+   "GSBAT54TW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.78,
+  "tokens_in": 1193,
+  "tokens_out": 72
+ },
+ "type": "schottky_rectifier"
+}

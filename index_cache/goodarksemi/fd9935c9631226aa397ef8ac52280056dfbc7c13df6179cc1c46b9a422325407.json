@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/s1206f_d4fc8431.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fd9935c9631226aa397ef8ac52280056dfbc7c13df6179cc1c46b9a422325407",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:34+00:00",
+  "is_datasheet": true,
+  "label": "fast acting chip fuse",
+  "family": true,
+  "part_numbers": [
+   "S1206F250",
+   "S1206F375",
+   "S1206F500",
+   "S1206F750",
+   "S1206F1"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.04,
+  "tokens_in": 2062,
+  "tokens_out": 85
+ },
+ "type": "fast_acting_chip_fuse"
+}

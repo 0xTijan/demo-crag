@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfw0300_bfaa1cc2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0b7ce96cd2359a2a2d038db6913708a9179bc8a13351e9a7f506f280656f7fa9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:08+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFW0300"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.96,
+  "tokens_in": 1710,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

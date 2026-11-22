@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfv2546_786d1ce3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e37d871588ce77f3c35d312c6e643a3607396c33013c154f055c25ce5e76efc7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:54+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFV2546"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.98,
+  "tokens_in": 2084,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

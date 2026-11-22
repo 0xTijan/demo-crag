@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf6092g1_e7d9d0e0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "09081fc79634c97788ab07f6fb5b809ba2e2974981f1aac58c40a6bb88de7286",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:03+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6092G1"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.63,
+  "tokens_in": 2106,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

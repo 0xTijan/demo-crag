@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp0r704h_268d1f7d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "33d6dbf874c34802daef3f389dbdedb23bcf1371f22e11dc51f2b01fafe47006",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:42+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP0R704H"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.1,
+  "tokens_in": 2194,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

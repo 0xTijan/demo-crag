@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh10125_711cedd9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e27e82d0ad428334257892e4d3c4d2c22becdcee3f77b88502ea81f5b1f2452a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:10+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH10125"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.8,
+  "tokens_in": 1998,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

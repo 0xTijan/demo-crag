@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsb2045_5925a093.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d508ffc58be7dbb0acc6f7970382cb52de9eb91a392d25b2f35812e00387a2db",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:05+00:00",
+  "is_datasheet": true,
+  "label": "Schottky bypass rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSB2045"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.22,
+  "tokens_in": 1083,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

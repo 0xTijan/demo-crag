@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgtl1r104_3c580675.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7d9850a644c3f004b0f8d9adf1300a307a602856ec4d7cf2800ff3f472069fd4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:54+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGTL1R104"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.92,
+  "tokens_in": 2167,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

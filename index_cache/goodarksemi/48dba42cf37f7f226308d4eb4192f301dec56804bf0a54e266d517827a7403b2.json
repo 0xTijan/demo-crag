@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gseslc3v3d3020-10u_4a534983.md",
+ "supplier": "goodarksemi",
+ "file_hash": "48dba42cf37f7f226308d4eb4192f301dec56804bf0a54e266d517827a7403b2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:26+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSESLC3V3D3020-10U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.78,
+  "tokens_in": 1412,
+  "tokens_out": 51
+ },
+ "type": "esd_tvs_array"
+}

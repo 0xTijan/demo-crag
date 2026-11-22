@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/kbpc8xx_9788c423.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3842a684beb44461d8f6418832d224cb77720007d316048de3cc9fd8b4e0baf4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:03+00:00",
+  "is_datasheet": true,
+  "label": "single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBPC8005",
+   "KBPC801",
+   "KBPC802",
+   "KBPC804",
+   "KBPC806"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.2,
+  "tokens_in": 1856,
+  "tokens_out": 69
+ },
+ "type": "bridge_rectifier"
+}

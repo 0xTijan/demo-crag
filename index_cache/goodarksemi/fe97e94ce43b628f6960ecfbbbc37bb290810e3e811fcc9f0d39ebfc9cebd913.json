@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsrb520e-30_9bcef0bc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fe97e94ce43b628f6960ecfbbbc37bb290810e3e811fcc9f0d39ebfc9cebd913",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:39+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GSRB520E-30"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.37,
+  "tokens_in": 1097,
+  "tokens_out": 46
+ },
+ "type": "schottky_rectifier"
+}

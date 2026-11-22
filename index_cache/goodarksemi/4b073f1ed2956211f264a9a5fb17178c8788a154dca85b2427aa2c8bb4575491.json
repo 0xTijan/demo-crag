@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mur1620ct-mur1620fct_8494bb17.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4b073f1ed2956211f264a9a5fb17178c8788a154dca85b2427aa2c8bb4575491",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:00+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "MUR1620CT",
+   "MUR1620FCT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.99,
+  "tokens_in": 1404,
+  "tokens_out": 52
+ },
+ "type": "ultrafast_rectifier"
+}

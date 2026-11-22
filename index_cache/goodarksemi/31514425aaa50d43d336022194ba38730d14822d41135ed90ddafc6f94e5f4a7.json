@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc0403_97d7cea0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "31514425aaa50d43d336022194ba38730d14822d41135ed90ddafc6f94e5f4a7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:28+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC0403"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.13,
+  "tokens_in": 1815,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

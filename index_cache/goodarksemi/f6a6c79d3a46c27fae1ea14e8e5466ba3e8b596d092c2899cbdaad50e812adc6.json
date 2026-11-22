@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjh4n90_873e0397.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f6a6c79d3a46c27fae1ea14e8e5466ba3e8b596d092c2899cbdaad50e812adc6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:20+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJH4N90"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.97,
+  "tokens_in": 1961,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

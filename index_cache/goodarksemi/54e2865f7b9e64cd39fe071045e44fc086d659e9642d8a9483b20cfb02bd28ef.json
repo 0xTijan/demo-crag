@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt5551_3450f945.md",
+ "supplier": "goodarksemi",
+ "file_hash": "54e2865f7b9e64cd39fe071045e44fc086d659e9642d8a9483b20cfb02bd28ef",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:05+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT5551"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.51,
+  "tokens_in": 1321,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

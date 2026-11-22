@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc3416_7e792c60.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7a0eeafd36ca82dd0757c25a25f5205df7f3d5b156fdefb6a389a499e41afb6f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC3416"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.99,
+  "tokens_in": 1951,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

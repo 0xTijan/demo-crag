@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmps2222a_16d235f2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "00b78a4d1278ed90123b4ec71ea9d4689e68f67acce4b696870cb30e6bedb8d7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:44+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMPS2222A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.86,
+  "tokens_in": 1454,
+  "tokens_out": 41
+ },
+ "type": "npn_transistor"
+}

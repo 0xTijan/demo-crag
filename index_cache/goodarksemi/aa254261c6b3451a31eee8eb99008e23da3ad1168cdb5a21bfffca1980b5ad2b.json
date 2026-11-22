@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ls3c0_a32e35ca.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aa254261c6b3451a31eee8eb99008e23da3ad1168cdb5a21bfffca1980b5ad2b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:46+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "LS3C0"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.35,
+  "tokens_in": 1075,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

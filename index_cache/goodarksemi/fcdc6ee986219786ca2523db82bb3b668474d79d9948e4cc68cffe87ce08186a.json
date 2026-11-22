@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf6909_af2ba0aa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fcdc6ee986219786ca2523db82bb3b668474d79d9948e4cc68cffe87ce08186a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:11+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6909"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.61,
+  "tokens_in": 2148,
+  "tokens_out": 40
+ },
+ "type": "mosfet_p"
+}

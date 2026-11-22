@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mur2040ct-mur2040fct_d4a1ff2e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "81eeaa903213ffb21233d1a96f856bd11f7a29db675480f5a145e6ab2d395001",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:03+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "MUR2040CT",
+   "MUR2040FCT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.18,
+  "tokens_in": 1449,
+  "tokens_out": 53
+ },
+ "type": "ultrafast_rectifier"
+}

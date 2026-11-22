@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmur1620ca_f83f2eb6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0b43ce75c131a7a60db10b92d3c58b42decb56a3ce2b91ccef97a93ad505c908",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:59+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMUR1620CA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.16,
+  "tokens_in": 1209,
+  "tokens_out": 43
+ },
+ "type": "ultrafast_rectifier"
+}

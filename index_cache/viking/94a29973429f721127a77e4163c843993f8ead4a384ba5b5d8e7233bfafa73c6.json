@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:14:04+00:00",
+  "at": "2026-11-21T11:58:46+00:00",
   "is_datasheet": true,
-  "label": "Automotive Grade Current Sensing Chip Resistor",
+  "label": "current sensing chip resistor",
   "family": true,
   "part_numbers": [
    "CSW08",
@@ -17,9 +17,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.6,
-  "tokens_in": 1612,
-  "tokens_out": 61
+  "seconds": 7.11,
+  "tokens_in": 1542,
+  "tokens_out": 56
  },
- "type": "automotive_grade_current_sensing_chip_re"
+ "type": "current_sensing_chip_resistor"
 }

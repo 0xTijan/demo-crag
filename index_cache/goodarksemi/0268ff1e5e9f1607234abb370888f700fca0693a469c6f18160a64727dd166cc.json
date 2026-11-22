@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsxt874a_0fab4795.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0268ff1e5e9f1607234abb370888f700fca0693a469c6f18160a64727dd166cc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:16+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSXT874A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.77,
+  "tokens_in": 1202,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

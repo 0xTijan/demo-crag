@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsmurs1xxa_a112f880.md",
+ "supplier": "goodarksemi",
+ "file_hash": "afe648efc8e227bb7a07c8b8fec8c644dcdd2e6e18a5b7ae55d941abc3cb096a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:37+00:00",
+  "is_datasheet": true,
+  "label": "super fast rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSMURS120A",
+   "GSMURS140A",
+   "GSMURS160A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.4,
+  "tokens_in": 2787,
+  "tokens_out": 62
+ },
+ "type": "ultrafast_rectifier"
+}

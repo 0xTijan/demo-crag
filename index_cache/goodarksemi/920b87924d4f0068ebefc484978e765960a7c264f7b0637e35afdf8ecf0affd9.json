@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsm8sx_689b9547.md",
+ "supplier": "goodarksemi",
+ "file_hash": "920b87924d4f0068ebefc484978e765960a7c264f7b0637e35afdf8ecf0affd9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:27+00:00",
+  "is_datasheet": true,
+  "label": "transient voltage suppressor",
+  "family": true,
+  "part_numbers": [
+   "GSM8S10A",
+   "GSM8S11A",
+   "GSM8S12A",
+   "GSM8S13A",
+   "GSM8S14A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.65,
+  "tokens_in": 2472,
+  "tokens_out": 78
+ },
+ "type": "tvs_diode"
+}

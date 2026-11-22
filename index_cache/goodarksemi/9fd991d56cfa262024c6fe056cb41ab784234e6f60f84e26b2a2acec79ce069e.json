@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsgp0140sl-gsgp0160sl_ebd7dd8f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9fd991d56cfa262024c6fe056cb41ab784234e6f60f84e26b2a2acec79ce069e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:28+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGP0140SL",
+   "GSGP0160SL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.12,
+  "tokens_in": 1170,
+  "tokens_out": 55
+ },
+ "type": "schottky_rectifier"
+}

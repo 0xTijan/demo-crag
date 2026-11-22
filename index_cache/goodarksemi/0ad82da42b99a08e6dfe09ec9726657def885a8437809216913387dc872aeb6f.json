@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gi250-x_f8980b61.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0ad82da42b99a08e6dfe09ec9726657def885a8437809216913387dc872aeb6f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:52+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated rectifier",
+  "family": true,
+  "part_numbers": [
+   "GI250-1",
+   "GI250-2",
+   "GI250-3",
+   "GI250-4"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.1,
+  "tokens_in": 1538,
+  "tokens_out": 65
+ },
+ "type": "standard_rectifier"
+}

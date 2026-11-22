@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bas299_a9ac77d2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9d0258aac56db108ed60c78e731ea0294d7b4ff1405897c67958b4f6c01aa8e8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:27+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "BAS299"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.19,
+  "tokens_in": 3470,
+  "tokens_out": 39
+ },
+ "type": "switching_diode"
+}

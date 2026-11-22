@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgl65r640_ef0de47b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "84d4c3c29c90dd9e14d9ee09a8f0c0c6703260ce66fe1b500aa2974ed596d23e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:54+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGL65R640"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.0,
+  "tokens_in": 2123,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

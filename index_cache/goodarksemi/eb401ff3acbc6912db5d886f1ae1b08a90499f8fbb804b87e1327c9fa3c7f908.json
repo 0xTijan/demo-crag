@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbc847xt_6e3f2634.md",
+ "supplier": "goodarksemi",
+ "file_hash": "eb401ff3acbc6912db5d886f1ae1b08a90499f8fbb804b87e1327c9fa3c7f908",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:16+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBC847xT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.73,
+  "tokens_in": 1348,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

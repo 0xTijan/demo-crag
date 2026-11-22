@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd2514_4b0d84c3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c4a81befe6698f0a6aa1c53663e93afdccba01ec9dc4fdc938141b16fddee37f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:35+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD2514"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 2052,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

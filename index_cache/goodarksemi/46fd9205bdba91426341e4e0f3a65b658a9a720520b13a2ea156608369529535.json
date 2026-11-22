@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez7b300_63b6b557.md",
+ "supplier": "goodarksemi",
+ "file_hash": "46fd9205bdba91426341e4e0f3a65b658a9a720520b13a2ea156608369529535",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:15+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ7B300"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.57,
+  "tokens_in": 1042,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

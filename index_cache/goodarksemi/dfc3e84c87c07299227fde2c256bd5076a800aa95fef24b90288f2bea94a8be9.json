@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsrxxx_72bf5dd8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dfc3e84c87c07299227fde2c256bd5076a800aa95fef24b90288f2bea94a8be9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:02+00:00",
+  "is_datasheet": true,
+  "label": "high voltage rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSR1200",
+   "GSR1500",
+   "GSR1800",
+   "GSR2000",
+   "GSR2500"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.24,
+  "tokens_in": 1960,
+  "tokens_out": 96
+ },
+ "type": "standard_rectifier"
+}

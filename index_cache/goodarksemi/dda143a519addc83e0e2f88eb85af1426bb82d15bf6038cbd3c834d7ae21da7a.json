@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsr10xxct_d4f42ca8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dda143a519addc83e0e2f88eb85af1426bb82d15bf6038cbd3c834d7ae21da7a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:58+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSR1020CT",
+   "GSR1030CT",
+   "GSR1040CT",
+   "GSR1045CT",
+   "GSR1060CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.71,
+  "tokens_in": 1833,
+  "tokens_out": 109
+ },
+ "type": "schottky_rectifier"
+}

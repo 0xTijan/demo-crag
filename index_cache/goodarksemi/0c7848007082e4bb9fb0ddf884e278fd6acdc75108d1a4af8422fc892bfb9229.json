@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sl32c-sl310c_334c2b1f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0c7848007082e4bb9fb0ddf884e278fd6acdc75108d1a4af8422fc892bfb9229",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL32C",
+   "SL33C",
+   "SL34C",
+   "SL35C",
+   "SL36C"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.28,
+  "tokens_in": 1837,
+  "tokens_out": 88
+ },
+ "type": "schottky_rectifier"
+}

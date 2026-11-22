@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsmf3-3x_5e296106.md",
+ "supplier": "goodarksemi",
+ "file_hash": "970b05f9403079cc140c9f7927a721b9dd11cb75ae0c0dd32c4789c6a7f37075",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:09+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GSMF3.3A",
+   "GSMF3.3CA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.49,
+  "tokens_in": 1599,
+  "tokens_out": 50
+ },
+ "type": "tvs_diode"
+}

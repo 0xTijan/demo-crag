@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/df20xxxs_bcabfbe8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1004787cfa75ccd1d5d563897b85ee473e8b84f2a056b58e175f0ea05d0dfb13",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:06+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DF2002S",
+   "DF2006S",
+   "DF2008S",
+   "DF2010S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.86,
+  "tokens_in": 1619,
+  "tokens_out": 63
+ },
+ "type": "bridge_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gselp3u010_adabbf85.md",
+ "supplier": "goodarksemi",
+ "file_hash": "52d1874b4e99007162987017addd51b399aa234141f9683559147249a407950c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:50+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode array",
+  "family": false,
+  "part_numbers": [
+   "GSELP3U010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.13,
+  "tokens_in": 1350,
+  "tokens_out": 43
+ },
+ "type": "esd_tvs_array"
+}

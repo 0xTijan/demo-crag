@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr1005_313324f6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bb6c99c57e022ae2bee84d99cd92aca339064c2005c9122bd5a51a16a51f3d4c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:46+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR1005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.58,
+  "tokens_in": 3985,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

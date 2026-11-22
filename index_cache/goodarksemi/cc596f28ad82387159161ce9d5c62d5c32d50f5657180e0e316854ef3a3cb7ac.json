@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbt0540x_3521ec19.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cc596f28ad82387159161ce9d5c62d5c32d50f5657180e0e316854ef3a3cb7ac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:59+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GSBT0540X"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.98,
+  "tokens_in": 929,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

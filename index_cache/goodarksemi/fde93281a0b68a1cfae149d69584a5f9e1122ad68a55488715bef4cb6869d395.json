@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfb2310l_042a5596.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fde93281a0b68a1cfae149d69584a5f9e1122ad68a55488715bef4cb6869d395",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:34+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFB2310L"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.5,
+  "tokens_in": 2010,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

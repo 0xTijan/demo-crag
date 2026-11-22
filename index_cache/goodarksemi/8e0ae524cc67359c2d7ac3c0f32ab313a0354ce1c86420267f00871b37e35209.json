@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/1n5419_40a63eac.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8e0ae524cc67359c2d7ac3c0f32ab313a0354ce1c86420267f00871b37e35209",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:02+00:00",
+  "is_datasheet": true,
+  "label": "fast avalanche rectifier",
+  "family": false,
+  "part_numbers": [
+   "1N5419"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.34,
+  "tokens_in": 1087,
+  "tokens_out": 40
+ },
+ "type": "fast_recovery_rectifier"
+}

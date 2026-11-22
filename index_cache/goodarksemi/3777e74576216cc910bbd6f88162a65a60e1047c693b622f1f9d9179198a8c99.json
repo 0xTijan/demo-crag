@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmst3904_5c481d3a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3777e74576216cc910bbd6f88162a65a60e1047c693b622f1f9d9179198a8c99",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:43+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMST3904"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.15,
+  "tokens_in": 4003,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

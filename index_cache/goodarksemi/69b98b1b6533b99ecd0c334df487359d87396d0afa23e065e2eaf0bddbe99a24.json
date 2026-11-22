@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/fs24a_7d6abb42.md",
+ "supplier": "goodarksemi",
+ "file_hash": "69b98b1b6533b99ecd0c334df487359d87396d0afa23e065e2eaf0bddbe99a24",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:42+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "FS24A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.91,
+  "tokens_in": 1061,
+  "tokens_out": 40
+ },
+ "type": "schottky_rectifier"
+}

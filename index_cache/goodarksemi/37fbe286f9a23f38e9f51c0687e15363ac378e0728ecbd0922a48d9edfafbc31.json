@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/l4tvs_e8aec57e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "37fbe286f9a23f38e9f51c0687e15363ac378e0728ecbd0922a48d9edfafbc31",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:20+00:00",
+  "is_datasheet": true,
+  "label": "Transient voltage suppressor",
+  "family": true,
+  "part_numbers": [
+   "L4TVS10A",
+   "L4TVS11A",
+   "L4TVS12A",
+   "L4TVS13A",
+   "L4TVS14A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.54,
+  "tokens_in": 2217,
+  "tokens_out": 77
+ },
+ "type": "tvs_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgt72r006_0c00e1f7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1c14f971741cb6608983dc2e69a07bd4cfe92cd9fcd9feb7cc0fabd2df16d54c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:51+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGT72R006"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.9,
+  "tokens_in": 1959,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh60r160_a9bfd3f2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f82b13fdd1fb6281afe9932ea64657b23bb301fe40c7cc43490b6c25b6f79b2f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:48+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH60R160"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.68,
+  "tokens_in": 2044,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsey15u2550_f4484165.md",
+ "supplier": "goodarksemi",
+ "file_hash": "58b54e0f7e99519985f8109f6e9416240afd3a9f6140b44d5931c49d6a5e4cc4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:55+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEY15U2550"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.52,
+  "tokens_in": 1006,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

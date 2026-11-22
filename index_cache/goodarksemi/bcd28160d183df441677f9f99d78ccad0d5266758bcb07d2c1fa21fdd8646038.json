@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gs4002el_8db4ffa4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bcd28160d183df441677f9f99d78ccad0d5266758bcb07d2c1fa21fdd8646038",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:41+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GS4002EL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.15,
+  "tokens_in": 1132,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

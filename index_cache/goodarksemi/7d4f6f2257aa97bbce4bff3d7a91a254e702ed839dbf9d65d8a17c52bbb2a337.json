@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsem5u600_30aec58c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7d4f6f2257aa97bbce4bff3d7a91a254e702ed839dbf9d65d8a17c52bbb2a337",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:03+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEM5U600"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.42,
+  "tokens_in": 962,
+  "tokens_out": 42
+ },
+ "type": "esd_protection_diode"
+}

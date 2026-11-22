@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/bas16l_ccd81045.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c9bb01177acd90732beea84cef0dd2724f3cf9b668fc0c214402560c25459df1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:23+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "MUR1020",
+   "MUR1020L",
+   "MUR1020T",
+   "MUR1020LT",
+   "MUR1020W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.3,
+  "tokens_in": 5547,
+  "tokens_out": 78
+ },
+ "type": "schottky_rectifier"
+}

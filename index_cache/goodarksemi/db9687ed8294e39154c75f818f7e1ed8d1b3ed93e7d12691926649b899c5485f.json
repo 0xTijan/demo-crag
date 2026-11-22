@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bav99w_0b2f5128.md",
+ "supplier": "goodarksemi",
+ "file_hash": "db9687ed8294e39154c75f818f7e1ed8d1b3ed93e7d12691926649b899c5485f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:52+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "BAV99W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 3.81,
+  "tokens_in": 928,
+  "tokens_out": 39
+ },
+ "type": "switching_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gspzta94_97437934.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cbeb96b887f82b77631c7ef07744ea63c88c965a79709e71c62f694fba562e04",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:54+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSPZTA94"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.19,
+  "tokens_in": 1102,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

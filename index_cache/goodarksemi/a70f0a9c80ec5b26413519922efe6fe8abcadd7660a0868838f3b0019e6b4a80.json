@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gspsm0201v6-3_2b28bd37.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a70f0a9c80ec5b26413519922efe6fe8abcadd7660a0868838f3b0019e6b4a80",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:37+00:00",
+  "is_datasheet": true,
+  "label": "polymer ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSPSM0201V6.3"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.95,
+  "tokens_in": 1266,
+  "tokens_out": 48
+ },
+ "type": "polymer_esd_suppressor"
+}

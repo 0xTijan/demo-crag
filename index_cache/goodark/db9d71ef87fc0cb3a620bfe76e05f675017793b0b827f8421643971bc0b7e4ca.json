@@ -5,22 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:44:23+00:00",
+  "at": "2026-11-21T10:31:38+00:00",
   "is_datasheet": true,
   "label": "Zener diode",
   "family": true,
   "part_numbers": [
    "AMM1ZB4",
    "AMM1ZB7",
-   "AMM1Z30",
-   "AMM1Z33",
-   "AMM1Z36"
+   "AMM1ZB30",
+   "AMM1ZB33",
+   "AMM1ZB36"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.76,
-  "tokens_in": 1680,
-  "tokens_out": 72
+  "seconds": 5.42,
+  "tokens_in": 2749,
+  "tokens_out": 75
  },
  "type": "zener_diode"
 }

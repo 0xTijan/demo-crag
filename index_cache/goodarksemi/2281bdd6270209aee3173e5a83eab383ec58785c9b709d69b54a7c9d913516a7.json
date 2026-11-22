@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/smur1060-smur1060f_721535ea.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2281bdd6270209aee3173e5a83eab383ec58785c9b709d69b54a7c9d913516a7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:55+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "SMUR1060",
+   "SMUR1060F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.5,
+  "tokens_in": 1490,
+  "tokens_out": 50
+ },
+ "type": "ultrafast_rectifier"
+}

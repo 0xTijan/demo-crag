@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfy2840k_d5c2ebf8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "037be9cfd30dc328302fdb4313a5a98e69c9895af19a70640bc3e2b583c249b7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:23+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFY2840K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.61,
+  "tokens_in": 2053,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/2n7002k_bf96b29e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "14912fd676af58dd2d56e87c06d256322d0e99d6ccce4e4b062bb12eb289d6fc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:44+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "2N7002K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.17,
+  "tokens_in": 1741,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

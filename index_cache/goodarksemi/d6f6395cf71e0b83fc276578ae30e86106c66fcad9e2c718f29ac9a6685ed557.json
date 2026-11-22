@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp7r010_32ddb66d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d6f6395cf71e0b83fc276578ae30e86106c66fcad9e2c718f29ac9a6685ed557",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:11+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP7R010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.05,
+  "tokens_in": 2002,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

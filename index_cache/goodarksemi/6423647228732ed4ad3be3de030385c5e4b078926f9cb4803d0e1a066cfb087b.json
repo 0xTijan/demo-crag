@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgc1545sa_4f82b5ee.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6423647228732ed4ad3be3de030385c5e4b078926f9cb4803d0e1a066cfb087b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:16+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGC1545SA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.08,
+  "tokens_in": 1508,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

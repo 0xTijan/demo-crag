@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbt491a_dd924951.md",
+ "supplier": "goodarksemi",
+ "file_hash": "59d062c1280981705a031159f8a722a222c5feb6fe47da9bb19c86b8d3542d0a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:27+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMMBT491A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.45,
+  "tokens_in": 1277,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

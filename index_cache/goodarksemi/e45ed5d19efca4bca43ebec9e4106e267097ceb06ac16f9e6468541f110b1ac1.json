@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbd7000_6228e812.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e45ed5d19efca4bca43ebec9e4106e267097ceb06ac16f9e6468541f110b1ac1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:42+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "MMBD7000"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.88,
+  "tokens_in": 1053,
+  "tokens_out": 40
+ },
+ "type": "switching_diode"
+}

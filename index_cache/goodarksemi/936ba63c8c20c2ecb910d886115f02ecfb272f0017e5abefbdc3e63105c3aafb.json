@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmdt4413_2b3c8c85.md",
+ "supplier": "goodarksemi",
+ "file_hash": "936ba63c8c20c2ecb910d886115f02ecfb272f0017e5abefbdc3e63105c3aafb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:39+00:00",
+  "is_datasheet": true,
+  "label": "complementary NPN+PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMDT4413"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.18,
+  "tokens_in": 1643,
+  "tokens_out": 45
+ },
+ "type": "complementary_npn_pnp_transistor"
+}

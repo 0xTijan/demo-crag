@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/grs1x_c0188130.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4eb19e5842c10b30b1053b54e44aa1f97b99263b72ab8c03b4f758ad18903ea1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:54+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GRS1A",
+   "GRS1B",
+   "GRS1D",
+   "GRS1G",
+   "GRS1J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.54,
+  "tokens_in": 1735,
+  "tokens_out": 74
+ },
+ "type": "fast_recovery_rectifier"
+}

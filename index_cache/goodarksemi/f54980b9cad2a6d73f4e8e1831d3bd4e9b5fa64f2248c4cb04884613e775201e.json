@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp12100_42522dd3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f54980b9cad2a6d73f4e8e1831d3bd4e9b5fa64f2248c4cb04884613e775201e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:49+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP12100"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 1895,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

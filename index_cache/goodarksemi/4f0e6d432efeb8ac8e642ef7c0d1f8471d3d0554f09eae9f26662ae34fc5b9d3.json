@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/murd1040_a7d87a2e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4f0e6d432efeb8ac8e642ef7c0d1f8471d3d0554f09eae9f26662ae34fc5b9d3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:15+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURD1040"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.77,
+  "tokens_in": 1323,
+  "tokens_out": 41
+ },
+ "type": "fast_recovery_rectifier"
+}

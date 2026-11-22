@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:17+00:00",
+  "at": "2026-11-21T12:01:57+00:00",
   "is_datasheet": true,
   "label": "surge withstanding chip resistor",
   "family": true,
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.0,
-  "tokens_in": 2054,
+  "seconds": 6.69,
+  "tokens_in": 1976,
   "tokens_out": 69
  },
- "type": "surge_withstanding_chip_resistor"
+ "type": "pulse_withstanding_chip_resistor"
 }

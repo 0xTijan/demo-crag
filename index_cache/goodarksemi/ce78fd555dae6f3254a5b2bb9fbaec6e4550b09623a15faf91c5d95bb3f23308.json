@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn8116_3aa58907.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ce78fd555dae6f3254a5b2bb9fbaec6e4550b09623a15faf91c5d95bb3f23308",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:33+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN8116"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.97,
+  "tokens_in": 2111,
+  "tokens_out": 45
+ },
+ "type": "complementary_mosfet"
+}

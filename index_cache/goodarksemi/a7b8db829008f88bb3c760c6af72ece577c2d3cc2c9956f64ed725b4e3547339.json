@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gss17e-gss1100e_dd41a94f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a7b8db829008f88bb3c760c6af72ece577c2d3cc2c9956f64ed725b4e3547339",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:06+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSS17E",
+   "GSS18E",
+   "GSS19E",
+   "GSS1100E"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.2,
+  "tokens_in": 1402,
+  "tokens_out": 64
+ },
+ "type": "schottky_rectifier"
+}

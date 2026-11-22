@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/s0603s_0745a74d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c3a5d3c1fb19f1e062fe479ddcb113797c465fed268c5baca59afe74a5bbe06e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:31+00:00",
+  "is_datasheet": true,
+  "label": "slow blow chip fuse",
+  "family": true,
+  "part_numbers": [
+   "S0603S1",
+   "S0603S1.5",
+   "S0603S2",
+   "S0603S2.5",
+   "S0603S3"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.72,
+  "tokens_in": 1610,
+  "tokens_out": 81
+ },
+ "type": "slow_blow_chip_fuse"
+}

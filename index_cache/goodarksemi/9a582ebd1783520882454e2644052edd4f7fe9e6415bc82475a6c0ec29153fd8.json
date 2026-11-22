@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsga60r160_0ebcaf13.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9a582ebd1783520882454e2644052edd4f7fe9e6415bc82475a6c0ec29153fd8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:31+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGA60R160"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.56,
+  "tokens_in": 2062,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

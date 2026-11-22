@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft9r8p06_8e2f7290.md",
+ "supplier": "goodarksemi",
+ "file_hash": "79e01a02e4794d980927984a9908ee780fb87b05def491838fbc617a4fb82afc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:33+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT9R8P06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.1,
+  "tokens_in": 2023,
+  "tokens_out": 43
+ },
+ "type": "mosfet_p"
+}

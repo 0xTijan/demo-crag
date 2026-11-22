@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1gx_29333a01.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b78784f473ef59434d628482432be5f0d8d265a2d666206c6e5f3a495b17529b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:32+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "1G1",
+   "1G2",
+   "1G3",
+   "1G4",
+   "1G5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.87,
+  "tokens_in": 1598,
+  "tokens_out": 67
+ },
+ "type": "standard_rectifier"
+}

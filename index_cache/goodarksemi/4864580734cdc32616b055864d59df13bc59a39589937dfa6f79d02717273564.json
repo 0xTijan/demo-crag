@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsgbj35xx_e72ab354.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4864580734cdc32616b055864d59df13bc59a39589937dfa6f79d02717273564",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:41+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGBJ3501",
+   "GSGBJ3502",
+   "GSGBJ3503",
+   "GSGBJ3504",
+   "GSGBJ3505"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.54,
+  "tokens_in": 2011,
+  "tokens_out": 81
+ },
+ "type": "bridge_rectifier"
+}

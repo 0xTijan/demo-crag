@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:43:28+00:00",
+  "at": "2026-11-21T10:30:45+00:00",
   "is_datasheet": true,
   "label": "P-channel MOSFET",
   "family": false,
@@ -14,8 +14,8 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.52,
-  "tokens_in": 1843,
+  "seconds": 6.53,
+  "tokens_in": 1869,
   "tokens_out": 43
  },
  "type": "mosfet_p"

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/mbxs_76290ac7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2e26ce12f7700a68899b93695399a1a5a3ed9ed2b4f4628a7f37a1ed970ec113",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:27+00:00",
+  "is_datasheet": true,
+  "label": "general purpose bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "MB2S",
+   "MB4S",
+   "MB6S",
+   "MB8S",
+   "MB10S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.59,
+  "tokens_in": 1689,
+  "tokens_out": 64
+ },
+ "type": "bridge_rectifier"
+}

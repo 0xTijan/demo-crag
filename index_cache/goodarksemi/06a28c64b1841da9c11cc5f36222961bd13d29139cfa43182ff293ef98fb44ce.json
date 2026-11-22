@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/goodarksemi-product-brief-mosfet-low-noise-650v-70a-37mω-gsja65r041-to-247_71ac3e62.md",
+ "supplier": "goodarksemi",
+ "file_hash": "06a28c64b1841da9c11cc5f36222961bd13d29139cfa43182ff293ef98fb44ce",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:33+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJA65R041"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.55,
+  "tokens_in": 1103,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

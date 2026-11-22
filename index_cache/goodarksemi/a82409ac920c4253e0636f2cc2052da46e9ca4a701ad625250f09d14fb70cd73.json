@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjl80r1k3_7cd954b0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a82409ac920c4253e0636f2cc2052da46e9ca4a701ad625250f09d14fb70cd73",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:33+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJL80R1K3"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.09,
+  "tokens_in": 2052,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

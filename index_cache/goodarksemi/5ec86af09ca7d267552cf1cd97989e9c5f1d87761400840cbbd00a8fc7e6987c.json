@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bas70s_fa0a04cd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5ec86af09ca7d267552cf1cd97989e9c5f1d87761400840cbbd00a8fc7e6987c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:36+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "BAS70S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.53,
+  "tokens_in": 936,
+  "tokens_out": 40
+ },
+ "type": "schottky_rectifier"
+}

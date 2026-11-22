@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt589_15549052.md",
+ "supplier": "goodarksemi",
+ "file_hash": "eebbde210f9868e22281a8589f77fccaac737adb94fe3d21c449960e698f5515",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:07+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT589"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.95,
+  "tokens_in": 1777,
+  "tokens_out": 38
+ },
+ "type": "pnp_transistor"
+}

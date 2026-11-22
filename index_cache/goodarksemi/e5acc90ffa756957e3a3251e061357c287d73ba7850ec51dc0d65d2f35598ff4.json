@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf3341_4efda88f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e5acc90ffa756957e3a3251e061357c287d73ba7850ec51dc0d65d2f35598ff4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:40+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF3341"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.31,
+  "tokens_in": 2001,
+  "tokens_out": 40
+ },
+ "type": "mosfet_p"
+}

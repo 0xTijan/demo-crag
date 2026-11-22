@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc138a_37e0b271.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ba0c155957c703789b60c6ce9e852ba72c05fd1d037d9ffc53bba61d5e678ec6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:52+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC138A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.33,
+  "tokens_in": 1870,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

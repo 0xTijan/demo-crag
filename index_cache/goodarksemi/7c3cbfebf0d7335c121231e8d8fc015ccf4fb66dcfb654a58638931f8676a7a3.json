@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgtl15166_a5b4a2e9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7c3cbfebf0d7335c121231e8d8fc015ccf4fb66dcfb654a58638931f8676a7a3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:53+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGTL15166"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.91,
+  "tokens_in": 2037,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

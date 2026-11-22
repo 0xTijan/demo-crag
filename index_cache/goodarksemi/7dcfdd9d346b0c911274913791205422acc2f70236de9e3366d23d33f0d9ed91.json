@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjh5n100_41c2ff58.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7dcfdd9d346b0c911274913791205422acc2f70236de9e3366d23d33f0d9ed91",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:22+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJH5N100"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.72,
+  "tokens_in": 1901,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

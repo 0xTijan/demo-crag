@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/p6kex_811b500c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "40c1328498fc1dc02c8adc61eed3593003b14026642d0c5038bd82fae64969b5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:34+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "P6KE6.8",
+   "P6KE6.8A",
+   "P6KE7.5",
+   "P6KE7.5A",
+   "P6KE8.2"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.23,
+  "tokens_in": 4110,
+  "tokens_out": 74
+ },
+ "type": "tvs_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gmf3000_5572a532.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4784bcfd403f84edf60761b9916f3a668c6abb4adecdfcd07e6894961890c320",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:55+00:00",
+  "is_datasheet": true,
+  "label": "surface mount rectifier",
+  "family": false,
+  "part_numbers": [
+   "GMF3000"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.22,
+  "tokens_in": 1068,
+  "tokens_out": 40
+ },
+ "type": "standard_rectifier"
+}

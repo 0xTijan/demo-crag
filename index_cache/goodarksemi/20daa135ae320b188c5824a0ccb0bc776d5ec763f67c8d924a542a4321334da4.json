@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/smbjx_88de5024.md",
+ "supplier": "goodarksemi",
+ "file_hash": "20daa135ae320b188c5824a0ccb0bc776d5ec763f67c8d924a542a4321334da4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:34+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "SMBJ5.0A",
+   "SMBJ6.0A",
+   "SMBJ6.5A",
+   "SMBJ7.0A",
+   "SMBJ7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.98,
+  "tokens_in": 2598,
+  "tokens_out": 77
+ },
+ "type": "tvs_diode"
+}

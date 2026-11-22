@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfw3018k_56c784a9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ff37907ea649b5d5e077f0de193c10f526a8caa31d92e6c4bb4ecf99cbaab583",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:17+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFW3018K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.47,
+  "tokens_in": 1742,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

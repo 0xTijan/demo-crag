@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu2580_7a94ecb0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d7f512ccda820dbdabfb0a011ff9922adb18af8ba1ec86958b7860b39673ac51",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:54+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU2580"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.73,
+  "tokens_in": 1871,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

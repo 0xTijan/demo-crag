@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:13:10+00:00",
+  "at": "2026-11-21T11:57:52+00:00",
   "is_datasheet": true,
   "label": "thick film flat array chip resistor",
   "family": true,
@@ -16,9 +16,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.55,
-  "tokens_in": 1601,
+  "seconds": 6.19,
+  "tokens_in": 1537,
   "tokens_out": 53
  },
- "type": "thick_film_flat_array_chip_resistor"
+ "type": "thick_film_array_chip_resistor"
 }

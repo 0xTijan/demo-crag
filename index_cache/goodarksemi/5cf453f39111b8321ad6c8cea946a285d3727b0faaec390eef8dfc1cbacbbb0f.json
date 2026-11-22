@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmb30j58ca_ec094269.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5cf453f39111b8321ad6c8cea946a285d3727b0faaec390eef8dfc1cbacbbb0f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:39+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSMB30J58CA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.12,
+  "tokens_in": 1988,
+  "tokens_out": 42
+ },
+ "type": "tvs_diode"
+}

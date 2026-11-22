@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/fsl32-fsl34_7f5d7458.md",
+ "supplier": "goodarksemi",
+ "file_hash": "799f23dca34c7380736701bea6be9cc77078a0483bd5991c82d3b7eec004b5b2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:53+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": true,
+  "part_numbers": [
+   "FSL32",
+   "FSL33",
+   "FSL34"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.59,
+  "tokens_in": 1155,
+  "tokens_out": 53
+ },
+ "type": "schottky_rectifier"
+}

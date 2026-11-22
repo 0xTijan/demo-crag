@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/mmbd4148x_086a9eba.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a4b9b98608967cc3dd116e8ecf73cd0ed40ac72396caa9f075968ca203f6302d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:40+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": true,
+  "part_numbers": [
+   "MMBD4148",
+   "MMBD4148CA",
+   "MMBD4148CC"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.11,
+  "tokens_in": 1116,
+  "tokens_out": 58
+ },
+ "type": "switching_diode"
+}

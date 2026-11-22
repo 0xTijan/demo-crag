@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sk32-sk36_89fa0de1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aa96bd4df0096771fabd899fe1fb62aabc6b242f8c06f1038a8b20deff3fca41",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:41+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK32",
+   "SK33",
+   "SK34",
+   "SK35",
+   "SK36"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.07,
+  "tokens_in": 1423,
+  "tokens_out": 60
+ },
+ "type": "schottky_rectifier"
+}

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:56:07+00:00",
+  "at": "2026-11-21T10:42:39+00:00",
   "is_datasheet": true,
   "label": "Silicon Carbide Schottky Diode",
   "family": false,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.25,
-  "tokens_in": 1688,
+  "seconds": 4.7,
+  "tokens_in": 1304,
   "tokens_out": 47
  },
- "type": "silicon_carbide_schottky_diode"
+ "type": "sic_schottky_diode"
 }

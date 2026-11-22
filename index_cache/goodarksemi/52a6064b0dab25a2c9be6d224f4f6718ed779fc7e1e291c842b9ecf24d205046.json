@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gs3xxfh_fcb2f140.md",
+ "supplier": "goodarksemi",
+ "file_hash": "52a6064b0dab25a2c9be6d224f4f6718ed779fc7e1e291c842b9ecf24d205046",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:34+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GS32FH",
+   "GS33FH",
+   "GS34FH",
+   "GS35FH",
+   "GS36FH"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.82,
+  "tokens_in": 1712,
+  "tokens_out": 91
+ },
+ "type": "schottky_rectifier"
+}

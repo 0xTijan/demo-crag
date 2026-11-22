@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gbj25x_4e3fc437.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b818f3385cac8f3f8b17c09bf6ea57581d08678234e044de340952f4ef046663",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:04+00:00",
+  "is_datasheet": true,
+  "label": "single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJ25A",
+   "GBJ25B",
+   "GBJ25D",
+   "GBJ25G",
+   "GBJ25J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.92,
+  "tokens_in": 1970,
+  "tokens_out": 82
+ },
+ "type": "bridge_rectifier"
+}

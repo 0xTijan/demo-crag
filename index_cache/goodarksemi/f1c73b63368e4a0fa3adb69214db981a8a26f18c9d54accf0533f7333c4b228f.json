@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsda312-sds_adcbbee5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f1c73b63368e4a0fa3adb69214db981a8a26f18c9d54accf0533f7333c4b228f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:26+00:00",
+  "is_datasheet": true,
+  "label": "three-axis digital accelerometer",
+  "family": false,
+  "part_numbers": [
+   "GSDA312"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.82,
+  "tokens_in": 1454,
+  "tokens_out": 40
+ },
+ "type": "three_axis_accelerometer"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfd6025b_eeedcff6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f8ff6570c04377bae2d4f2af957c06169dcfcfe5b395e64873e49ead64f0fff9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:51+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFD6025B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.75,
+  "tokens_in": 2049,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

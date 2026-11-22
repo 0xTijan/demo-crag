@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsbc807w_b36eee42.md",
+ "supplier": "goodarksemi",
+ "file_hash": "91f959d2138af13d491af767310887c13593cc0c2be30ac57c9e0e9ed88af5e8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:54+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBC807W",
+   "GSBC807-16W",
+   "GSBC807-25W",
+   "GSBC807-40W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.55,
+  "tokens_in": 1148,
+  "tokens_out": 72
+ },
+ "type": "pnp_transistor"
+}

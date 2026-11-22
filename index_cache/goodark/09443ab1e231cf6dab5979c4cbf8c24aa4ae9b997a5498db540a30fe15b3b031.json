@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:40:52+00:00",
+  "at": "2026-11-21T10:28:01+00:00",
   "is_datasheet": true,
   "label": "fast recovery rectifier",
   "family": true,
@@ -18,8 +18,8 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.84,
-  "tokens_in": 1643,
+  "seconds": 7.16,
+  "tokens_in": 1356,
   "tokens_out": 72
  },
  "type": "fast_recovery_rectifier"

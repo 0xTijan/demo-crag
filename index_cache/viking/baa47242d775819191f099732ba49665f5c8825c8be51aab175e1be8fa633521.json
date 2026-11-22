@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:12+00:00",
+  "at": "2026-11-21T12:01:51+00:00",
   "is_datasheet": true,
   "label": "power resistor",
-  "family": true,
+  "family": false,
   "part_numbers": [
-   "STR50 Series"
+   "STR50"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.05,
-  "tokens_in": 1175,
-  "tokens_out": 36
+  "seconds": 4.77,
+  "tokens_in": 1144,
+  "tokens_out": 35
  },
  "type": "power_resistor"
 }

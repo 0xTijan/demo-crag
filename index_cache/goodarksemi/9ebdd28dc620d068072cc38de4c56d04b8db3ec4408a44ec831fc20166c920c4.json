@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmurfs860_560fec9a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9ebdd28dc620d068072cc38de4c56d04b8db3ec4408a44ec831fc20166c920c4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:32+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMURFS860"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.01,
+  "tokens_in": 1382,
+  "tokens_out": 42
+ },
+ "type": "ultrafast_rectifier"
+}

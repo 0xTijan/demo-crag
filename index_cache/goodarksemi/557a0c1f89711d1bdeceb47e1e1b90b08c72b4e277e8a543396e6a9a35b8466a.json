@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bas85_e4e147ac.md",
+ "supplier": "goodarksemi",
+ "file_hash": "557a0c1f89711d1bdeceb47e1e1b90b08c72b4e277e8a543396e6a9a35b8466a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:38+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "BAS85"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.53,
+  "tokens_in": 1144,
+  "tokens_out": 39
+ },
+ "type": "schottky_rectifier"
+}

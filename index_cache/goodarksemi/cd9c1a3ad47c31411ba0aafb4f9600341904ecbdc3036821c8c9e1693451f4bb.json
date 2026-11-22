@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq1508_f20299b5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cd9c1a3ad47c31411ba0aafb4f9600341904ecbdc3036821c8c9e1693451f4bb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:16+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ1508"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.94,
+  "tokens_in": 1846,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn24010au_2b99e566.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aa488654c235f4aff3c10a77cb930953ca3dc1717055e04fbf4ea9810b418e50",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:20:29+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN24010AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.64,
+  "tokens_in": 2159,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

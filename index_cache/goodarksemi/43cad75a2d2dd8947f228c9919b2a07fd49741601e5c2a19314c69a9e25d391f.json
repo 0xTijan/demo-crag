@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sl52c-sl510c_45db266d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "43cad75a2d2dd8947f228c9919b2a07fd49741601e5c2a19314c69a9e25d391f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:30+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL52C",
+   "SL53C",
+   "SL54C",
+   "SL55C",
+   "SL56C"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.41,
+  "tokens_in": 1838,
+  "tokens_out": 88
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgc10cs_ed54e0d9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "abf672f101eeb359c179235eb1218ebf420d1745b8cea82d7ea01ac23de22357",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:08+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGC10CS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.26,
+  "tokens_in": 1081,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

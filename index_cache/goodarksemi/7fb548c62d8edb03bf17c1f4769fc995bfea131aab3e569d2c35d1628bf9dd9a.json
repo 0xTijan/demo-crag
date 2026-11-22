@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsgbj50xxh_9cef1f80.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7fb548c62d8edb03bf17c1f4769fc995bfea131aab3e569d2c35d1628bf9dd9a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:43+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGBJ50005H",
+   "GSGBJ5001H",
+   "GSGBJ5002H",
+   "GSGBJ5004H",
+   "GSGBJ5006H"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.72,
+  "tokens_in": 1812,
+  "tokens_out": 102
+ },
+ "type": "bridge_rectifier"
+}

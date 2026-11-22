@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/es2xa_ca3f8e90.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2ae71a51fbd2f19007b989c9ca16d6d1634ae45d27e7e293d0b95d4926f7530a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:17+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "ES2AA",
+   "ES2BA",
+   "ES2CA",
+   "ES2DA",
+   "ES2FA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.26,
+  "tokens_in": 1617,
+  "tokens_out": 68
+ },
+ "type": "ultrafast_rectifier"
+}

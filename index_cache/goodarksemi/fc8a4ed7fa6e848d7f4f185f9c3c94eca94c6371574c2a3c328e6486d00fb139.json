@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsbc845xxde_40fe1091.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fc8a4ed7fa6e848d7f4f185f9c3c94eca94c6371574c2a3c328e6486d00fb139",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:05+00:00",
+  "is_datasheet": true,
+  "label": "complementary NPN+PNP transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBC8456xDE",
+   "GSBC8457xDE",
+   "GSBC8458xDE",
+   "GSBC8456ADE",
+   "GSBC8456BDE"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.39,
+  "tokens_in": 1827,
+  "tokens_out": 82
+ },
+ "type": "complementary_npn_pnp_transistor"
+}

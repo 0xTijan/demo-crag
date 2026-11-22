@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp1090_fc378cfa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cbf959dea5c8a22fa10d0d86c28d354635712b8803b676e6c56fa9fba3e1da5f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:34+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP1090"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.05,
+  "tokens_in": 2047,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

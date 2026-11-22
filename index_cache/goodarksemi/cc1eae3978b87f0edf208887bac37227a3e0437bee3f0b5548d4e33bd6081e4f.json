@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr3804au_506a551e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cc1eae3978b87f0edf208887bac37227a3e0437bee3f0b5548d4e33bd6081e4f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:04+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR3804AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.49,
+  "tokens_in": 1931,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mmbta05-mmbta06_d698ae4c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ca1b98cc746d701b1e038f709e0878d3059568e3e7d13cf581f515f4f62e4125",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:15+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "MMBTA05",
+   "MMBTA06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.24,
+  "tokens_in": 1555,
+  "tokens_out": 45
+ },
+ "type": "npn_transistor"
+}

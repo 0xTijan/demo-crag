@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp4107au_8e1f8706.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b7e979b6d52901e12f42a11538422035cd1f953700380a145422f7db9885d2e2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:20+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP4107AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.21,
+  "tokens_in": 2118,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

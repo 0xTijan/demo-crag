@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/schottky-wafer-1a-40v_c7736c80.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7df73e66b8c7624c9b06cf62dba703dbaaf12cb3148964f31abe2958c2761dc4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:01+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": false,
+  "part_numbers": [
+   "GDSB140-32"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.64,
+  "tokens_in": 1026,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

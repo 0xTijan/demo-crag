@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmjd45h11_2587562a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "391ca35961ffea99cd8c7a9a4dd4718fe4eed712bc4fe0be0098e734404831c2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:16+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMJD45H11"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.5,
+  "tokens_in": 1315,
+  "tokens_out": 41
+ },
+ "type": "pnp_transistor"
+}

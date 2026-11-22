@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:05+00:00",
+  "at": "2026-11-21T12:01:45+00:00",
   "is_datasheet": true,
-  "label": "shielded molding SMD power inductor",
+  "label": "shielded SMD power inductor",
   "family": true,
   "part_numbers": [
    "SDN0412",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.48,
-  "tokens_in": 2277,
-  "tokens_out": 100
+  "seconds": 8.74,
+  "tokens_in": 2205,
+  "tokens_out": 75
  },
- "type": "shielded_smd_power_inductor"
+ "type": "power_inductor"
 }

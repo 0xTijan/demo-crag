@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsax_b6d036c7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7a93f22633a9975abdf9e2c6ff33b01df592dfb9dd9a2f44633d78415a65e037",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:56+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSA1",
+   "GSA2",
+   "GSA3",
+   "GSA4",
+   "GSA5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.59,
+  "tokens_in": 1468,
+  "tokens_out": 68
+ },
+ "type": "standard_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/sct500h_56d1302d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0db75f1d5392ce8ae2c88364c9833e811c228f4ef445d51063f9ad6c76ce78b9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:12+00:00",
+  "is_datasheet": true,
+  "label": "Twin SMD Ceramic PTC Thermistor",
+  "family": false,
+  "part_numbers": [
+   "SCT500H"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.52,
+  "tokens_in": 1565,
+  "tokens_out": 45
+ },
+ "type": "ptc_thermistor"
+}

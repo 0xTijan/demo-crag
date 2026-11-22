@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sk32a-sk36a_f3a751d1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "37157514adb861be658a918b118f7fb2539b3f30fd7c98f826a878188145060a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:42+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK32A",
+   "SK33A",
+   "SK34A",
+   "SK35A",
+   "SK36A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.33,
+  "tokens_in": 1377,
+  "tokens_out": 64
+ },
+ "type": "schottky_rectifier"
+}

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:13+00:00",
+  "at": "2026-11-21T11:56:55+00:00",
   "is_datasheet": true,
   "label": "Automotive Grade Anti-Sulfurated Chip Resistor",
   "family": true,
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.75,
-  "tokens_in": 1891,
+  "seconds": 6.6,
+  "tokens_in": 1820,
   "tokens_out": 64
  },
- "type": "automotive_grade_anti_sulfurated_chip_re"
+ "type": "thick_film_chip_resistor"
 }

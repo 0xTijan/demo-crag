@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft06150_b4ddac7a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4e075a4aa6d6bd2cc6ec0969406065c6bd582c21f477ac2c08d2b6b90546f5df",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:21+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT06150"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.96,
+  "tokens_in": 1928,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

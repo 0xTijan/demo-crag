@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfb8116_11c97130.md",
+ "supplier": "goodarksemi",
+ "file_hash": "372cd93ed4b9358c07b3f0aee7dbbed080cdea53dfae2976d65021bb7135539e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:39+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFB8116"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.94,
+  "tokens_in": 2113,
+  "tokens_out": 45
+ },
+ "type": "complementary_mosfet"
+}

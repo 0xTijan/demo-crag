@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsepa5b0005_5ac4df62.md",
+ "supplier": "goodarksemi",
+ "file_hash": "efbc4ea7b8c7bfacc78297ba243e182878d8e8e69fed1997d4f5fea5e1953b43",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:53+00:00",
+  "is_datasheet": true,
+  "label": "polymer ESD suppressor",
+  "family": false,
+  "part_numbers": [
+   "GSEPA5B0005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.09,
+  "tokens_in": 1185,
+  "tokens_out": 45
+ },
+ "type": "polymer_esd_suppressor"
+}

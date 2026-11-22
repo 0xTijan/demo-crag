@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:11:42+00:00",
+  "at": "2026-11-21T11:56:25+00:00",
   "is_datasheet": true,
   "label": "thin film chip resistor",
   "family": true,
@@ -17,8 +17,8 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.55,
-  "tokens_in": 1728,
+  "seconds": 7.51,
+  "tokens_in": 1656,
   "tokens_out": 52
  },
  "type": "thin_film_chip_resistor"

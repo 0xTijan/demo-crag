@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbf620_d609aead.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aa2d54b71be3607eeb9ed898dccae2718472b0b979764f2cf2429097084c68e2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:47+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSBF620"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.62,
+  "tokens_in": 1459,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

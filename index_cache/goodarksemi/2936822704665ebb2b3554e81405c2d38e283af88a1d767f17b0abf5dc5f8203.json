@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp4r608_4f20b8f9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2936822704665ebb2b3554e81405c2d38e283af88a1d767f17b0abf5dc5f8203",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:47+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP4R608"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.85,
+  "tokens_in": 1997,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

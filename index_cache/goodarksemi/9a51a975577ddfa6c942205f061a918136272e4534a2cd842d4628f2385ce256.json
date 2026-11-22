@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsff02011_a36d8e88.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9a51a975577ddfa6c942205f061a918136272e4534a2cd842d4628f2385ce256",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:39+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFF02011"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.69,
+  "tokens_in": 1736,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

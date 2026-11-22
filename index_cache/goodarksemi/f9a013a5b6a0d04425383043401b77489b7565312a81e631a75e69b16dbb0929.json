@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgtl1r710au_2e9c26f1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f9a013a5b6a0d04425383043401b77489b7565312a81e631a75e69b16dbb0929",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:03+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGTL1R710AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.95,
+  "tokens_in": 2038,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

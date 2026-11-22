@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfl6046_855ce9a1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8e6f876b922314c86d43090a0e70b8b59e38c721b99cc19552ec91164c40d416",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFL6046"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.29,
+  "tokens_in": 2036,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf72kau_c004d70f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "96fe231fc246bf976306ab79d8f1aa15773e76bc4ffa7416c00aa9d9a1a54c93",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:21+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF72KAU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.4,
+  "tokens_in": 1651,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

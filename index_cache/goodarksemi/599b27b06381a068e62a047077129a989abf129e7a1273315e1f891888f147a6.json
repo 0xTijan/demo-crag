@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft06130_f94988fa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "599b27b06381a068e62a047077129a989abf129e7a1273315e1f891888f147a6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:20+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT06130"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.15,
+  "tokens_in": 2207,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

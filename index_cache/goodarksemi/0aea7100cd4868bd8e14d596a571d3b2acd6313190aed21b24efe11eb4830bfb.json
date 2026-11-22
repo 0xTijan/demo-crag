@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gms3x_813c436e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0aea7100cd4868bd8e14d596a571d3b2acd6313190aed21b24efe11eb4830bfb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:10+00:00",
+  "is_datasheet": true,
+  "label": "Schottky bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GMS32",
+   "GMS34",
+   "GMS36",
+   "GMS38",
+   "GMS310"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.26,
+  "tokens_in": 1605,
+  "tokens_out": 79
+ },
+ "type": "schottky_bridge_rectifier"
+}

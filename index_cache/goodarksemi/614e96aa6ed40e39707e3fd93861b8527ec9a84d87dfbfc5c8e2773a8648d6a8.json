@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbta42_a5c3ecab.md",
+ "supplier": "goodarksemi",
+ "file_hash": "614e96aa6ed40e39707e3fd93861b8527ec9a84d87dfbfc5c8e2773a8648d6a8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:19+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBTA42"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.93,
+  "tokens_in": 1215,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

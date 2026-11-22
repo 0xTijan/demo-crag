@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt2029am_4b738970.md",
+ "supplier": "goodarksemi",
+ "file_hash": "de30da74fe070afe1fd74b219b6b2514ac2963f31c28349079aabbe4795b25c1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:46+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT2029AM"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.23,
+  "tokens_in": 1255,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjg80r420_7731c4fd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fffd558282c96ab8b1b447ce6e74338e3ec8244f4ca7cd18cefb991962120136",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:17+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJG80R420"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.1,
+  "tokens_in": 2215,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

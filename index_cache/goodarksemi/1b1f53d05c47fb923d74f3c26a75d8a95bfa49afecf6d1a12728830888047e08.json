@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfl72015_2b9b8387.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1b1f53d05c47fb923d74f3c26a75d8a95bfa49afecf6d1a12728830888047e08",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:27+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFL72015"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.87,
+  "tokens_in": 1958,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

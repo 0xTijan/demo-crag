@@ -1,0 +1,20 @@
+{
+ "file": "goodarksemi/mje350_4f1de7a3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0059258eb43ba1ee0bd6abed5695a79ebe0d1a97b40f41ce2574bdc456c2668b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:34+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.85,
+  "tokens_in": 1400,
+  "tokens_out": 32
+ },
+ "type": "npn_transistor"
+}

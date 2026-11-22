@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsja60r190_a0084936.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1b0282560ac778565d46895f72a044e54fbc588203ff298f84221b6dc5888abd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:34+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJA60R190"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.14,
+  "tokens_in": 2080,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

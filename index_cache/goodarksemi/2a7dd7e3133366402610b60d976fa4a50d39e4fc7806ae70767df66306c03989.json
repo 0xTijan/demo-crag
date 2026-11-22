@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbt5087_27f5c86b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2a7dd7e3133366402610b60d976fa4a50d39e4fc7806ae70767df66306c03989",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:28+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMMBT5087"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.21,
+  "tokens_in": 1169,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

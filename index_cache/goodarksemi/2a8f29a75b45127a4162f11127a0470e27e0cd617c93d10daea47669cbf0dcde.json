@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsrf3045lct_7014124a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2a8f29a75b45127a4162f11127a0470e27e0cd617c93d10daea47669cbf0dcde",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSRF3045LCT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.56,
+  "tokens_in": 1583,
+  "tokens_out": 45
+ },
+ "type": "schottky_rectifier"
+}

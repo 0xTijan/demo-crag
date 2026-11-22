@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp8r610l_85809d59.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4d1ed9f4f2496f43d564f07b4502006a2daba7817d2aac4ba04ffcd677a27442",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:18+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP8R610L"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.78,
+  "tokens_in": 2054,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

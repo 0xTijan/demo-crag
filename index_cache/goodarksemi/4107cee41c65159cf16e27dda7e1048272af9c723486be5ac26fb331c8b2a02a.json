@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfq4614_a0e1c9b9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4107cee41c65159cf16e27dda7e1048272af9c723486be5ac26fb331c8b2a02a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:14+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFQ4614"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.8,
+  "tokens_in": 1838,
+  "tokens_out": 45
+ },
+ "type": "complementary_mosfet"
+}

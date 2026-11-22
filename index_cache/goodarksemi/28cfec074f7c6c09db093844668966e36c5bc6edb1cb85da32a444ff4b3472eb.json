@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfn3010h_60a7e9e3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "28cfec074f7c6c09db093844668966e36c5bc6edb1cb85da32a444ff4b3472eb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:19+00:00",
+  "is_datasheet": true,
+  "label": "dual N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFN3010H"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.85,
+  "tokens_in": 2122,
+  "tokens_out": 44
+ },
+ "type": "dual_mosfet_n"
+}

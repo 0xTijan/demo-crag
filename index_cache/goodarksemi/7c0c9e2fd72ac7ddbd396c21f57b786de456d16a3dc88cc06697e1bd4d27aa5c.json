@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gss1150e-gss1200e_dfb780fd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7c0c9e2fd72ac7ddbd396c21f57b786de456d16a3dc88cc06697e1bd4d27aa5c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:05+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSS1150E",
+   "GSS1200E"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.93,
+  "tokens_in": 1175,
+  "tokens_out": 51
+ },
+ "type": "schottky_rectifier"
+}

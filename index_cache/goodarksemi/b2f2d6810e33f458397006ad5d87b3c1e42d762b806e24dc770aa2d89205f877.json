@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjh60r280_1fe5dba9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b2f2d6810e33f458397006ad5d87b3c1e42d762b806e24dc770aa2d89205f877",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:24+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJH60R280"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.7,
+  "tokens_in": 2099,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

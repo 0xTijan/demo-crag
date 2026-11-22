@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsp151a-gsp157a_4f93f793.md",
+ "supplier": "goodarksemi",
+ "file_hash": "69cbfb1878d95f22e4c80ada4aa75cdfc41b76cc5f342d6d1ac5ec5031f1cdeb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:54+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSP151A",
+   "GSP152A",
+   "GSP153A",
+   "GSP154A",
+   "GSP155A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.91,
+  "tokens_in": 1840,
+  "tokens_out": 90
+ },
+ "type": "standard_rectifier"
+}

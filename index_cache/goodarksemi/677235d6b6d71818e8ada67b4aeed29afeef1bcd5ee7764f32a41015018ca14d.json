@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft49020_bb617a99.md",
+ "supplier": "goodarksemi",
+ "file_hash": "677235d6b6d71818e8ada67b4aeed29afeef1bcd5ee7764f32a41015018ca14d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:59+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT49020"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.15,
+  "tokens_in": 1976,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

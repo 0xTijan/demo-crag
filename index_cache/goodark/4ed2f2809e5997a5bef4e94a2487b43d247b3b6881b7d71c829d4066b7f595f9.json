@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:41:21+00:00",
+  "at": "2026-11-21T10:28:34+00:00",
   "is_datasheet": true,
-  "label": "switching diode",
+  "label": "Schottky barrier rectifier",
   "family": false,
   "part_numbers": [
    "C3"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.13,
-  "tokens_in": 1269,
-  "tokens_out": 36
+  "seconds": 7.86,
+  "tokens_in": 1045,
+  "tokens_out": 38
  },
- "type": "switching_diode"
+ "type": "schottky_rectifier"
 }

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr0600_a859392f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ae2d40f15cd44f414cedbe7a87985589b2431fffb8747bd2af62a6b8c55f9840",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:40+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR0600"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.91,
+  "tokens_in": 1912,
+  "tokens_out": 45
+ },
+ "type": "complementary_mosfet"
+}

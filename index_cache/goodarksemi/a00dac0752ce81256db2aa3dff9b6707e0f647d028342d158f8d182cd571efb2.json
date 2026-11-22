@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzt955_3305978f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a00dac0752ce81256db2aa3dff9b6707e0f647d028342d158f8d182cd571efb2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:54+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "PZT955"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.94,
+  "tokens_in": 1507,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

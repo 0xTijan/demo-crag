@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu9006_ad756285.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e4b418cd4c0c50f3aa373028c3f7cb0e1c077a488b05f6e75d125d299c74148d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:38+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU9006"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.42,
+  "tokens_in": 2205,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

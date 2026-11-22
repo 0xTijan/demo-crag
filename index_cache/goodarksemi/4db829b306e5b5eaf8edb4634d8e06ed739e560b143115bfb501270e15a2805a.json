@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsabs210k_142f8c6e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4db829b306e5b5eaf8edb4634d8e06ed739e560b143115bfb501270e15a2805a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:51+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier bridge rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSABS210K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.98,
+  "tokens_in": 1499,
+  "tokens_out": 43
+ },
+ "type": "schottky_bridge_rectifier"
+}

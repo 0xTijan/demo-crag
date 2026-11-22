@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/5kp300a-5kp440ca_c0f135f1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "67c8ee3568417c324a24d5a9bbd2fde88bc2da2c9dad8221ac936984a2967f8b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:07+00:00",
+  "is_datasheet": true,
+  "label": "Transient Voltage Suppressor",
+  "family": true,
+  "part_numbers": [
+   "5KP300A",
+   "5KP350A",
+   "5KP400A",
+   "5KP440A",
+   "5KP300CA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.45,
+  "tokens_in": 1552,
+  "tokens_out": 96
+ },
+ "type": "tvs_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfn3907_eef4d85b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cf5326a3901210cd087029ef3713ecf31198fb3a7f42a0079b8c232c5604ac40",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:25+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFN3907"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.67,
+  "tokens_in": 4000,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb2924_d70ebd28.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6603dc56195e4190a5532298890b0d64a40ddf502cc3889841570a24e35d4cee",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:47+00:00",
+  "is_datasheet": true,
+  "label": "complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB2924"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.71,
+  "tokens_in": 4460,
+  "tokens_out": 41
+ },
+ "type": "complementary_mosfet"
+}

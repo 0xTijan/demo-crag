@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mur440-mur460_b41fefaf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0cb4ba95cce627e9c88e61b2fc375735e8e5b6a213a993b1feedb26cec21ea30",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:08+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "MUR440",
+   "MUR460"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.0,
+  "tokens_in": 1531,
+  "tokens_out": 48
+ },
+ "type": "ultrafast_rectifier"
+}

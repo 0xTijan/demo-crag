@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsgpxr_9788bd31.md",
+ "supplier": "goodarksemi",
+ "file_hash": "613a951fc31ca69d23ebb6d8dc3bc770966a4fcd20db7a6a963ef5b23a025bf4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:28+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGP1R",
+   "GSGP2R",
+   "GSGP3R",
+   "GSGP4R",
+   "GSGP5R"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.65,
+  "tokens_in": 1536,
+  "tokens_out": 84
+ },
+ "type": "fast_recovery_rectifier"
+}

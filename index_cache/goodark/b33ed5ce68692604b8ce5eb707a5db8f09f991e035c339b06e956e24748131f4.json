@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:45:51+00:00",
+  "at": "2026-11-21T10:33:01+00:00",
   "is_datasheet": true,
-  "label": "fast recovery diode",
+  "label": "fast recovery switching diode",
   "family": false,
   "part_numbers": [
    "A6"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.09,
-  "tokens_in": 1260,
-  "tokens_out": 36
+  "seconds": 4.87,
+  "tokens_in": 1043,
+  "tokens_out": 37
  },
- "type": "fast_recovery_diode"
+ "type": "switching_diode"
 }

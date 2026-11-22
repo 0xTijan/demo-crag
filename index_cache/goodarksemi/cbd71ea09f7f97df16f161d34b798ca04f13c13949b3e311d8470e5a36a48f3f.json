@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp2r912_5a8e5f2d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cbd71ea09f7f97df16f161d34b798ca04f13c13949b3e311d8470e5a36a48f3f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:30+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP2R912"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.18,
+  "tokens_in": 2080,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

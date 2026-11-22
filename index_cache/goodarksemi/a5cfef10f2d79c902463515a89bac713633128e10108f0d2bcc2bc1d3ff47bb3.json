@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgtl1r608_f07d56a7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a5cfef10f2d79c902463515a89bac713633128e10108f0d2bcc2bc1d3ff47bb3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:58+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGTL1R608"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.97,
+  "tokens_in": 2041,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

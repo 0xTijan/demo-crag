@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmurp1020_4f6512d8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "166da3669297651212361883547b57f4f2886bc22d57276d3767d05b3d5496a6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:35+00:00",
+  "is_datasheet": true,
+  "label": "super fast rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMURP1020"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.53,
+  "tokens_in": 1787,
+  "tokens_out": 42
+ },
+ "type": "ultrafast_rectifier"
+}

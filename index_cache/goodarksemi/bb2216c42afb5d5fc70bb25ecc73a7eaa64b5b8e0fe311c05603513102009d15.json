@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh3006_0a3d5dbf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bb2216c42afb5d5fc70bb25ecc73a7eaa64b5b8e0fe311c05603513102009d15",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:22+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH3006"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.85,
+  "tokens_in": 2160,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

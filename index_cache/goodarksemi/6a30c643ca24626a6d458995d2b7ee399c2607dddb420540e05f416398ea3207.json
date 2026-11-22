@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp4006_751551f9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6a30c643ca24626a6d458995d2b7ee399c2607dddb420540e05f416398ea3207",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP4006"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.05,
+  "tokens_in": 2043,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

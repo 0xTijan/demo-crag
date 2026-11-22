@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbl1545_e01869de.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5ae722c35d3111c35806a51e1254a84cda29bed51a41bad5597b54c75ac6b91a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:52+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSBL1545"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.99,
+  "tokens_in": 1306,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

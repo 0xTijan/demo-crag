@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsegp10x_0278f185.md",
+ "supplier": "goodarksemi",
+ "file_hash": "81259a3014c0e49994963246b97d759245739a0310766a498eb19e305cf365a5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:43+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated ultrafast rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSEGP10A",
+   "GSEGP10B",
+   "GSEGP10C",
+   "GSEGP10D",
+   "GSEGP10F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.33,
+  "tokens_in": 1631,
+  "tokens_out": 83
+ },
+ "type": "ultrafast_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbta28_db4a16fa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "75f34b0074cf28e83a266d47021b3362114bf32e17a6ace549899643208bc16b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:18+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBTA28"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.06,
+  "tokens_in": 1266,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

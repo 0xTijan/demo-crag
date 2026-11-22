@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsecxb006_30591a8c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d512caccc0797566d7cd10f43fc803fcd5cf15e49553e4dbc6a17a068e684f27",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:16+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": true,
+  "part_numbers": [
+   "GSEC3B006",
+   "GSEC5B006",
+   "GSEC12B006",
+   "GSEC15B006",
+   "GSEC18B006"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.18,
+  "tokens_in": 1153,
+  "tokens_out": 91
+ },
+ "type": "esd_protection_diode"
+}

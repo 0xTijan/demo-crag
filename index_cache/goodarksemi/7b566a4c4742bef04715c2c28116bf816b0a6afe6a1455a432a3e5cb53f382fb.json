@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsrb751v-40_a076cb89.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7b566a4c4742bef04715c2c28116bf816b0a6afe6a1455a432a3e5cb53f382fb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:49+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSRB751V-40"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.06,
+  "tokens_in": 1165,
+  "tokens_out": 45
+ },
+ "type": "schottky_rectifier"
+}

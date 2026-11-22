@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzt4403_3a14c670.md",
+ "supplier": "goodarksemi",
+ "file_hash": "40fdfa617ad25e4726bbf062991d3a5ce3a987713557aa4988e6589855ab293c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:49+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "PZT4403"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.23,
+  "tokens_in": 1623,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

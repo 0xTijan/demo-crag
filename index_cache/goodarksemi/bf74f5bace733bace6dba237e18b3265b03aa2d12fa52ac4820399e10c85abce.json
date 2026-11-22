@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsp1a-gsp7a_2098478b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bf74f5bace733bace6dba237e18b3265b03aa2d12fa52ac4820399e10c85abce",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:58+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSP1A",
+   "GSP2A",
+   "GSP3A",
+   "GSP4A",
+   "GSP5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.2,
+  "tokens_in": 1557,
+  "tokens_out": 75
+ },
+ "type": "standard_rectifier"
+}

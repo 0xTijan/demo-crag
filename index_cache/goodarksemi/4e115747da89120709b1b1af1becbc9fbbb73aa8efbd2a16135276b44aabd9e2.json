@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmur4060pt_219125d6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4e115747da89120709b1b1af1becbc9fbbb73aa8efbd2a16135276b44aabd9e2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:14+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMUR4060PT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.36,
+  "tokens_in": 1364,
+  "tokens_out": 43
+ },
+ "type": "ultrafast_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh74180_2bec1bea.md",
+ "supplier": "goodarksemi",
+ "file_hash": "315bdcdd22fda5fd2aaf2eab8a4da9756f34623797a9db4654a8f85da4aa56f4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:00+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH74180"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.6,
+  "tokens_in": 1996,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

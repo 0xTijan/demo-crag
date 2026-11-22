@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd6008_c6c02ec8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "027214e016d0ab06eef98b7b7ad9762c83cc042370a4071f70cc13c0b86fbd9d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:04+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD6008"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.48,
+  "tokens_in": 2047,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gs2005eld_62f2dc58.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2e9e27306a67f6ec0f38b974672a0c2b3a423766f82763f86a936b5f18076090",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:07+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GS2005ELD"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.14,
+  "tokens_in": 1215,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfk06003_f20fafca.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f573a8ab69953d43f051137cea10ad3d3f1c3354be4eb250d7eb5d6ca525037c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:42+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFK06003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.34,
+  "tokens_in": 6519,
+  "tokens_out": 46
+ },
+ "type": "complementary_mosfet"
+}

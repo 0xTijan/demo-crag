@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmur20xxpt_a90b0489.md",
+ "supplier": "goodarksemi",
+ "file_hash": "202fb981fc90b33c30d080c4eb2b26c1bc8e3537863c7bfaa853e3ccee11d227",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:04+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSMUR2010PT",
+   "GSMUR2020PT",
+   "GSMUR2030PT",
+   "GSMUR2040PT",
+   "GSMUR2050PT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.84,
+  "tokens_in": 1672,
+  "tokens_out": 92
+ },
+ "type": "fast_recovery_rectifier"
+}

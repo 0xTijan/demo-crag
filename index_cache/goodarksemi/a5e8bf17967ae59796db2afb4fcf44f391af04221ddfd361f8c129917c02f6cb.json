@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsabs1xk_647b1b14.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a5e8bf17967ae59796db2afb4fcf44f391af04221ddfd361f8c129917c02f6cb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:49+00:00",
+  "is_datasheet": true,
+  "label": "Schottky bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSABS12K",
+   "GSABS14K",
+   "GSABS16K",
+   "GSABS18K",
+   "GSABS110K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.67,
+  "tokens_in": 1449,
+  "tokens_out": 70
+ },
+ "type": "schottky_bridge_rectifier"
+}

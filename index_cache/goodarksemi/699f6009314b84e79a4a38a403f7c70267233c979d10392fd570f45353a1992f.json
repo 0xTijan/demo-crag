@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzt5401_f9870833.md",
+ "supplier": "goodarksemi",
+ "file_hash": "699f6009314b84e79a4a38a403f7c70267233c979d10392fd570f45353a1992f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:50+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "PZT5401"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.11,
+  "tokens_in": 1283,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

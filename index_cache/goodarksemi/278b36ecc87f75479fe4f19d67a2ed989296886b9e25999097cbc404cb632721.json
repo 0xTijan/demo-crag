@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbcx1440_7e967edf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "278b36ecc87f75479fe4f19d67a2ed989296886b9e25999097cbc404cb632721",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:36+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSBCX1440"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.09,
+  "tokens_in": 1243,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

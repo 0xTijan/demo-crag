@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbcx591_15becf14.md",
+ "supplier": "goodarksemi",
+ "file_hash": "82d8217a52134fd8b8b976cdc6baa84cfeda28907cb0e5209a0c712055f822bd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:41+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSBCX591"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.69,
+  "tokens_in": 1696,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

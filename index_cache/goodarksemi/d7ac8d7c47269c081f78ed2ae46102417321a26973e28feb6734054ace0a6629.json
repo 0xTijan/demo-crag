@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfp3806_37110a3c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d7ac8d7c47269c081f78ed2ae46102417321a26973e28feb6734054ace0a6629",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:35+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFP3806"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 2187,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

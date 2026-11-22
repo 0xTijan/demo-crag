@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc0500_c49b8843.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fd29838db86971ff1e82aebd94bdf325b9f14ae37fc8842aa338ec70390516d9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:30+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC0500"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.05,
+  "tokens_in": 1848,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsd101aws_b6349a8c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4297eb4b378d2d6f02fb385ac7f95f7720d0d38e252026058f0a763c771bac9c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:15+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSD101AWS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.33,
+  "tokens_in": 929,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

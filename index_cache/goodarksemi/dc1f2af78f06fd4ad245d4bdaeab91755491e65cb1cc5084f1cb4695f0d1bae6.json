@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gbpc3512-gbpc3512w_03d94025.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dc1f2af78f06fd4ad245d4bdaeab91755491e65cb1cc5084f1cb4695f0d1bae6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:11+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBPC3512",
+   "GBPC3512W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.36,
+  "tokens_in": 1091,
+  "tokens_out": 51
+ },
+ "type": "bridge_rectifier"
+}

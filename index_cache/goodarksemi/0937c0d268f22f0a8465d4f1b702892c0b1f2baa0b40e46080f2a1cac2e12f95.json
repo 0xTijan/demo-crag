@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/cxt5401_79688212.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0937c0d268f22f0a8465d4f1b702892c0b1f2baa0b40e46080f2a1cac2e12f95",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:00+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "CXT5401"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.06,
+  "tokens_in": 1390,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

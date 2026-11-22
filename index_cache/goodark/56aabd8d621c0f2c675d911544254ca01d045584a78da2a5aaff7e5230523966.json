@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:46:33+00:00",
+  "at": "2026-11-21T10:33:39+00:00",
   "is_datasheet": true,
-  "label": "fast switching diode array",
+  "label": "fast recovery switching diode",
   "family": false,
   "part_numbers": [
    "KJG"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.13,
-  "tokens_in": 1330,
+  "seconds": 4.51,
+  "tokens_in": 1094,
   "tokens_out": 38
  },
- "type": "fast_switching_diode_array"
+ "type": "switching_diode"
 }

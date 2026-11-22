@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfk03007_a1bc4922.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a5f0024a0a879124cf4f2fccb5330518182af0d13b5a8ecc48a8c711805f4376",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:29+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFK03007"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.13,
+  "tokens_in": 1732,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gs4mbj58ca_0e76f5e2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c567da05bcdfb312baec0794648f5b116b969d89469cc0ae773137f7c657cdc3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:42+00:00",
+  "is_datasheet": true,
+  "label": "Transient Voltage Suppressor",
+  "family": false,
+  "part_numbers": [
+   "GS4MBJ58CA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.21,
+  "tokens_in": 1280,
+  "tokens_out": 41
+ },
+ "type": "tvs_diode"
+}

@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:59+00:00",
+  "at": "2026-11-21T12:02:36+00:00",
   "is_datasheet": true,
-  "label": "metal strip resistor",
+  "label": "molding E-beam welded metal strip resistor",
   "family": true,
   "part_numbers": [
    "WMR06",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.53,
-  "tokens_in": 3123,
-  "tokens_out": 67
+  "seconds": 6.83,
+  "tokens_in": 2970,
+  "tokens_out": 73
  },
- "type": "metal_strip_chip_resistor"
+ "type": "current_sensing_chip_resistor"
 }

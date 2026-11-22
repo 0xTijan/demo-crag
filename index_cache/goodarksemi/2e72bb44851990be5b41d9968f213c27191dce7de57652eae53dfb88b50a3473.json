@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn0200_fdd7b341.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2e72bb44851990be5b41d9968f213c27191dce7de57652eae53dfb88b50a3473",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:31+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN0200"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.1,
+  "tokens_in": 1860,
+  "tokens_out": 44
+ },
+ "type": "complementary_mosfet"
+}

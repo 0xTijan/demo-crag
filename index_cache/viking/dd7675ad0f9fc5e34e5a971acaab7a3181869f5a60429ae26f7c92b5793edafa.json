@@ -5,20 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:14:49+00:00",
+  "at": "2026-11-21T11:59:29+00:00",
   "is_datasheet": true,
-  "label": "Automotive Grade Low Ohm Chip Resistor",
+  "label": "automotive grade low ohm chip resistor",
   "family": true,
   "part_numbers": [
+   "LRP..A Series",
    "LRP06",
    "LRP10",
-   "LRP12"
+   "LRP12",
+   "LRP12 (1mΩ)"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.63,
-  "tokens_in": 1854,
-  "tokens_out": 55
+  "seconds": 7.36,
+  "tokens_in": 1781,
+  "tokens_out": 72
  },
- "type": "automotive_grade_low_ohm_chip_resistor"
+ "type": "current_sensing_chip_resistor"
 }

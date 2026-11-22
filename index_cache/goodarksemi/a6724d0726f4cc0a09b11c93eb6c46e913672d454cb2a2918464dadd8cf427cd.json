@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/smurp560_a9e5a31d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a6724d0726f4cc0a09b11c93eb6c46e913672d454cb2a2918464dadd8cf427cd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:00+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Planar Rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMURP560"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.69,
+  "tokens_in": 1372,
+  "tokens_out": 43
+ },
+ "type": "ultrafast_rectifier"
+}

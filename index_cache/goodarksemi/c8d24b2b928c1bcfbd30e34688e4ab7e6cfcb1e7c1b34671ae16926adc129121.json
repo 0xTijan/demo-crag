@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfpr8504au_8320f3c5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c8d24b2b928c1bcfbd30e34688e4ab7e6cfcb1e7c1b34671ae16926adc129121",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:54+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFPR8504AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.58,
+  "tokens_in": 2156,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

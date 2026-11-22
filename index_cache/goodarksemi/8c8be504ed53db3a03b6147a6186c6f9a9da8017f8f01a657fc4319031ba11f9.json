@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn6035au_fd3d02be.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8c8be504ed53db3a03b6147a6186c6f9a9da8017f8f01a657fc4319031ba11f9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:26+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN6035AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.37,
+  "tokens_in": 1833,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

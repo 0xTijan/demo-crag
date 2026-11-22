@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:14:54+00:00",
+  "at": "2026-11-21T11:59:34+00:00",
   "is_datasheet": true,
-  "label": "low ohm metal strip chip resistor",
+  "label": "low ohm chip resistor",
   "family": true,
   "part_numbers": [
    "LRP12H"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.41,
-  "tokens_in": 1505,
-  "tokens_out": 42
+  "seconds": 6.78,
+  "tokens_in": 1454,
+  "tokens_out": 40
  },
- "type": "low_ohm_metal_strip_chip_resistor"
+ "type": "current_sensing_chip_resistor"
 }

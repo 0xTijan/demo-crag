@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mmbt596_3a0f0884.md",
+ "supplier": "goodarksemi",
+ "file_hash": "94b4267d85ab2a37c5fc93965a9ca07864e981d93797a9e07f5fbde33fc4cb3a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:11+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "MMBT596",
+   "MMBT624"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.14,
+  "tokens_in": 1299,
+  "tokens_out": 45
+ },
+ "type": "npn_transistor"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/6a0xg_38ffbf07.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6f1016fe90f1c682f3693dbe8d0d16e655b1fa0b3973f040c8888cd0be6f90ea",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:14+00:00",
+  "is_datasheet": true,
+  "label": "rectifier diode",
+  "family": true,
+  "part_numbers": [
+   "6A05G",
+   "6A1G",
+   "6A2G",
+   "6A4G",
+   "6A6G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.23,
+  "tokens_in": 1689,
+  "tokens_out": 76
+ },
+ "type": "standard_rectifier"
+}

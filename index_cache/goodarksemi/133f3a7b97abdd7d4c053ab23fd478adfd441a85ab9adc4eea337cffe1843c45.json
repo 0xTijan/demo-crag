@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzt2907a_fad28d47.md",
+ "supplier": "goodarksemi",
+ "file_hash": "133f3a7b97abdd7d4c053ab23fd478adfd441a85ab9adc4eea337cffe1843c45",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:43+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "PZT2907A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.07,
+  "tokens_in": 1714,
+  "tokens_out": 41
+ },
+ "type": "pnp_transistor"
+}

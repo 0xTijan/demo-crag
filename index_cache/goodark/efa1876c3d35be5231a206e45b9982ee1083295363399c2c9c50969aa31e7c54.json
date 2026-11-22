@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:46:43+00:00",
+  "at": "2026-11-21T10:33:48+00:00",
   "is_datasheet": true,
   "label": "dual transistor",
-  "family": false,
+  "family": true,
   "part_numbers": [
    "5Ft"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.34,
-  "tokens_in": 1537,
+  "seconds": 5.37,
+  "tokens_in": 1289,
   "tokens_out": 36
  },
- "type": "dual_transistor"
+ "type": "dual_npn_transistor"
 }

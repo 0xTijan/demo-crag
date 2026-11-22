@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gs8050_59ccba28.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cb14302cdf09a511ebe81e2c3f15c16bad81deb067bd155e7677e997825a6be1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:45+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GS8050"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.29,
+  "tokens_in": 1338,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

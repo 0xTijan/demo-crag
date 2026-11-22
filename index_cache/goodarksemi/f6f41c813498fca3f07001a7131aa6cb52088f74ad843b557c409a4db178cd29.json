@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gskbp3xx_3e1c88a7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f6f41c813498fca3f07001a7131aa6cb52088f74ad843b557c409a4db178cd29",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:02+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSKBP3005",
+   "GSKBP301",
+   "GSKBP302",
+   "GSKBP304",
+   "GSKBP306"
+  ],
+  "confidence": "high",
+  "asked_again": true,
+  "seconds": 20.21,
+  "tokens_in": 4457,
+  "tokens_out": 175
+ },
+ "type": "standard_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/rs1002fl_1e3a26d4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0bfcbd6e814a4cf1c7ffcfa1c90a1b2adaa246d6db70b94eb01868d351702200",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:22+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "RS1002FL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.13,
+  "tokens_in": 1026,
+  "tokens_out": 43
+ },
+ "type": "fast_recovery_rectifier"
+}

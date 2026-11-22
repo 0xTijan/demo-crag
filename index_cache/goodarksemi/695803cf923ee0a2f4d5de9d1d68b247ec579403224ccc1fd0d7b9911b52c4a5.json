@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsn3008sf2_582e061f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "695803cf923ee0a2f4d5de9d1d68b247ec579403224ccc1fd0d7b9911b52c4a5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:48+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSN3008SF2"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.97,
+  "tokens_in": 1630,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

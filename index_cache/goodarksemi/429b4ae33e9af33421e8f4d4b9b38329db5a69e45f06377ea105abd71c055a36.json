@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr6090_117d49db.md",
+ "supplier": "goodarksemi",
+ "file_hash": "429b4ae33e9af33421e8f4d4b9b38329db5a69e45f06377ea105abd71c055a36",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:14+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR6090"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.43,
+  "tokens_in": 2090,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

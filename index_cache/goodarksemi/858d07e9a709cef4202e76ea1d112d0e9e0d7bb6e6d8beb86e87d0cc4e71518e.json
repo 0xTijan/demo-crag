@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/mbxm_ddc2d80b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "858d07e9a709cef4202e76ea1d112d0e9e0d7bb6e6d8beb86e87d0cc4e71518e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:25+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "MB2M",
+   "MB4M",
+   "MB6M",
+   "MB8M",
+   "MB10M"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.0,
+  "tokens_in": 1431,
+  "tokens_out": 60
+ },
+ "type": "bridge_rectifier"
+}

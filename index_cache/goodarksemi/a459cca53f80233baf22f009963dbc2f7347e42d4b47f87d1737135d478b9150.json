@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bas21_622fcda1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a459cca53f80233baf22f009963dbc2f7347e42d4b47f87d1737135d478b9150",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "BAS21"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.1,
+  "tokens_in": 1018,
+  "tokens_out": 40
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez5b008_a8928366.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dc54ce00a2b4afaab255f7ae1daef8b084657c0540d0bad95f80466676ed3c7d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:50+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ5B008"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.71,
+  "tokens_in": 1298,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

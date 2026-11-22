@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbat46ws_46d76bc8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9bd9a30a7606e8ba6c335b1eb2a41f3f74ebb16517d5a5a603015fb33746bfc2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:31+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAT46WS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.33,
+  "tokens_in": 1077,
+  "tokens_out": 40
+ },
+ "type": "schottky_rectifier"
+}

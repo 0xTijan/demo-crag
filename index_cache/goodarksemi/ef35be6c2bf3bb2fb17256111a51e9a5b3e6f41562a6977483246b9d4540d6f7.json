@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf6903_b8456b73.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ef35be6c2bf3bb2fb17256111a51e9a5b3e6f41562a6977483246b9d4540d6f7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:07+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6903"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.45,
+  "tokens_in": 1840,
+  "tokens_out": 40
+ },
+ "type": "mosfet_p"
+}

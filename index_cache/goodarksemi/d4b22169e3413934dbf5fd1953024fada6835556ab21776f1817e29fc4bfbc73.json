@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbta56_68350664.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d4b22169e3413934dbf5fd1953024fada6835556ab21776f1817e29fc4bfbc73",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:35+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMMBTA56"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.74,
+  "tokens_in": 1167,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

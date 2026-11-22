@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/1n5817-1n5819_97af0962.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b5e27c092e1102240e3fe249173205256f6c24110bd403e77fb9546d7907d76a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:07+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "1N5817",
+   "1N5818",
+   "1N5819"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.14,
+  "tokens_in": 1991,
+  "tokens_out": 58
+ },
+ "type": "schottky_rectifier"
+}

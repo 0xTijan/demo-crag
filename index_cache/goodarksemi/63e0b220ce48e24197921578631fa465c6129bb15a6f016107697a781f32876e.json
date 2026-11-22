@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/wxxg_5030c066.md",
+ "supplier": "goodarksemi",
+ "file_hash": "63e0b220ce48e24197921578631fa465c6129bb15a6f016107697a781f32876e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:52+00:00",
+  "is_datasheet": true,
+  "label": "silicon bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "W005G",
+   "W01G",
+   "W02G",
+   "W04G",
+   "W06G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.2,
+  "tokens_in": 1642,
+  "tokens_out": 76
+ },
+ "type": "bridge_rectifier"
+}

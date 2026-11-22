@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/lbxsl_3b189cd5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3a313b3760cc6a8bbdcb3d00707fd6c7b1a84d4c0bb10f5f49b61775e7bbce0b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:29+00:00",
+  "is_datasheet": true,
+  "label": "single phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "LB1SL",
+   "LB2SL",
+   "LB4SL",
+   "LB6SL",
+   "LB8SL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.26,
+  "tokens_in": 1513,
+  "tokens_out": 64
+ },
+ "type": "bridge_rectifier"
+}

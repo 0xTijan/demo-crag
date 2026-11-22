@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh50n06_d433ca4b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ec41b5774afb863b836e2c3d50a705ddde8adfef930c04e1dd3ed572b7cd177b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:42+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH50N06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.62,
+  "tokens_in": 1951,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

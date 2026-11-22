@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu90r340_20478dc5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "10f376f5d11e4e691a9584c22f695dae16cca37c36262d1b7874a7aa75d3746c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:40+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU90R340"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.52,
+  "tokens_in": 2132,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

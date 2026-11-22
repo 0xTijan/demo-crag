@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjbf310_85b24790.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9c2769ec6896d10facd256cb0620d3a88df92910f33b59fd82ef6bcf1bc57f7b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:46+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSJBF310"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.64,
+  "tokens_in": 1330,
+  "tokens_out": 42
+ },
+ "type": "bridge_rectifier"
+}

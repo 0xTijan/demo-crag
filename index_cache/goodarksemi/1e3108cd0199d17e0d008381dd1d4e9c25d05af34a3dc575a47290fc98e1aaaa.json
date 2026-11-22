@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfl6090_5ec2a190.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1e3108cd0199d17e0d008381dd1d4e9c25d05af34a3dc575a47290fc98e1aaaa",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:18+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFL6090"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.59,
+  "tokens_in": 2121,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

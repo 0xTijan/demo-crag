@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/fxds_08dcf2e2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bb970b1697c15c3a55e7c3fdc0502fd628e2dc0c643dc031641c1f19da1ab41f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:56+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "F1DS",
+   "F2DS",
+   "F3DS",
+   "F4DS",
+   "F5DS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.46,
+  "tokens_in": 1629,
+  "tokens_out": 66
+ },
+ "type": "standard_rectifier"
+}

@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/sk37-sk3b_ae4002dd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "64decfbfe2eda5a11bfe9c97ee29ed743e45e832f262cdf02e77132831467df2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:45+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK37",
+   "SK38",
+   "SK39",
+   "SK3B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.73,
+  "tokens_in": 1218,
+  "tokens_out": 54
+ },
+ "type": "schottky_rectifier"
+}

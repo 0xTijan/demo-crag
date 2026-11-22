@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gszm47xxx_33a932df.md",
+ "supplier": "goodarksemi",
+ "file_hash": "77d98032461ee54d126bc41eeaa4999fdd5ce33bdc284bbcf882985c9c7859c8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:20+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GSZM4727PF",
+   "GSZM4728PF",
+   "GSZM4729PF",
+   "GSZM4730PF",
+   "GSZM4731PF"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.52,
+  "tokens_in": 3277,
+  "tokens_out": 82
+ },
+ "type": "zener_diode"
+}

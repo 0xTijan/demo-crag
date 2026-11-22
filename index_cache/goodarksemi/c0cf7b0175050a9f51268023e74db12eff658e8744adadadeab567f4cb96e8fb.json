@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/2n2907-2n2907a_ba373f69.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c0cf7b0175050a9f51268023e74db12eff658e8744adadadeab567f4cb96e8fb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:33+00:00",
+  "is_datasheet": true,
+  "label": "PNP switching transistor",
+  "family": false,
+  "part_numbers": [
+   "2N2907",
+   "2N2907A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.85,
+  "tokens_in": 1999,
+  "tokens_out": 49
+ },
+ "type": "pnp_transistor"
+}

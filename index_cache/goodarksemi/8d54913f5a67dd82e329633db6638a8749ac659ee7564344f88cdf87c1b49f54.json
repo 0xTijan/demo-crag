@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsem51xg_6950478f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8d54913f5a67dd82e329633db6638a8749ac659ee7564344f88cdf87c1b49f54",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:58+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSEM513G",
+   "GSEM516G",
+   "GSEM518G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.62,
+  "tokens_in": 1303,
+  "tokens_out": 56
+ },
+ "type": "fast_recovery_rectifier"
+}

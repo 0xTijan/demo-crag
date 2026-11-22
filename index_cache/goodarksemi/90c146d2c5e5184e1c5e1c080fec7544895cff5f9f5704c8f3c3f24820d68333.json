@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb2004_7fce7ec0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "90c146d2c5e5184e1c5e1c080fec7544895cff5f9f5704c8f3c3f24820d68333",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB2004"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.45,
+  "tokens_in": 2105,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

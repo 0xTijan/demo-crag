@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bas16_236d6ae0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f65ec967642a5539b40449e49458b0de0de59f068d09257320b81d6b4c7ee668",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:19+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery diode",
+  "family": false,
+  "part_numbers": [
+   "BAS16"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.19,
+  "tokens_in": 1001,
+  "tokens_out": 38
+ },
+ "type": "fast_recovery_rectifier"
+}

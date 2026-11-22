@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2314_584ef72c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1a357ccefe4a6a4919887fa5ad52f6cc60625f77512f9dd841c133c582efe4b7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:25+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2314"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.57,
+  "tokens_in": 2024,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

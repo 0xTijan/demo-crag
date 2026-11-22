@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt1781_20e2c4c7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fb7f4a30a7f44038232da96a3e5f14d3b8893b514e2efd31b15266885003c82b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:45+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT1781"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.2,
+  "tokens_in": 1155,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

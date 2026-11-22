@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsedc27b050_7afc6c3b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fc7abf4b581574dab46ad3955a7bc79f7d7064b76bc34a0d2ce342efa428155b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:21+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEDC27B050"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.62,
+  "tokens_in": 1127,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

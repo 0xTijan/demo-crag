@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/df15xxs_2fa06505.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bd8a79242cce8eb9c3bf2c34faf42790d41c3ae8006b901307f4710778cf207e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:04+00:00",
+  "is_datasheet": true,
+  "label": "single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DF15005S",
+   "DF1501S",
+   "DF1502S",
+   "DF1504S",
+   "DF1506S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.92,
+  "tokens_in": 1633,
+  "tokens_out": 90
+ },
+ "type": "bridge_rectifier"
+}

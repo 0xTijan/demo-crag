@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfk3420_09428c58.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f31d38430ac9e32e9d3a90e8f0d83eb6d56df9174bf4f912c7e2eda350ec3c74",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:44+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFK3420"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.83,
+  "tokens_in": 2346,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

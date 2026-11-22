@@ -5,22 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:43+00:00",
+  "at": "2026-11-21T12:02:20+00:00",
   "is_datasheet": true,
   "label": "SMD power inductor",
   "family": true,
   "part_numbers": [
    "VLH252010E",
-   "252012E",
-   "252510",
-   "322515",
-   "322520"
+   "VLH252012E",
+   "VLH252510",
+   "VLH322515",
+   "VLH322520"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.19,
-  "tokens_in": 2341,
-  "tokens_out": 77
+  "seconds": 5.89,
+  "tokens_in": 2257,
+  "tokens_out": 85
  },
- "type": "smd_power_inductor"
+ "type": "power_inductor"
 }

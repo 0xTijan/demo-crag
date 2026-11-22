@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfcp0114_c0fbf346.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d328dbf0956e054dabcc8bbd8778da7337bc53a9c93a419978e7c5dd146aeeb2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:21+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFCP0114"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.43,
+  "tokens_in": 1815,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

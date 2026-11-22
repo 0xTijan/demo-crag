@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gstp0120s_458dcc22.md",
+ "supplier": "goodarksemi",
+ "file_hash": "432052a44dfc2b1abb8b9dca27573da635b457424614d28b75ab5de4beb0b199",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:48+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSTP0120S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.73,
+  "tokens_in": 1383,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gse1xh_795ed8e8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "68ba8b8c57fdcfe0838d7c47728b45f17db70a0d404c13fac60f8451b12a0bbb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:43+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSE1AH",
+   "GSE1BH",
+   "GSE1DH",
+   "GSE1FH",
+   "GSE1GH"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.22,
+  "tokens_in": 1803,
+  "tokens_out": 70
+ },
+ "type": "ultrafast_rectifier"
+}

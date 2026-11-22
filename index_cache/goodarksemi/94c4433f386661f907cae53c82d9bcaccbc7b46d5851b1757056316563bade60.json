@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsbcx54-55-56_43477bd7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "94c4433f386661f907cae53c82d9bcaccbc7b46d5851b1757056316563bade60",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:40+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBCX54",
+   "GSBCX55",
+   "GSBCX56"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.63,
+  "tokens_in": 1770,
+  "tokens_out": 52
+ },
+ "type": "npn_transistor"
+}

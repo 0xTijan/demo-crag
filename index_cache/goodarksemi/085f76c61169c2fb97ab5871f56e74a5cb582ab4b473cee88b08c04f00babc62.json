@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1n494xg_2b9e90f2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "085f76c61169c2fb97ab5871f56e74a5cb582ab4b473cee88b08c04f00babc62",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:48+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "1N4942G",
+   "1N4944G",
+   "1N4946G",
+   "1N4947G",
+   "1N4948G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.52,
+  "tokens_in": 1725,
+  "tokens_out": 77
+ },
+ "type": "fast_recovery_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft6016_c2844470.md",
+ "supplier": "goodarksemi",
+ "file_hash": "264ab497dea748898b68169582b383acc3d81d124fd712da8bb1b15cd2ac99d4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:06+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT6016"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.83,
+  "tokens_in": 2039,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

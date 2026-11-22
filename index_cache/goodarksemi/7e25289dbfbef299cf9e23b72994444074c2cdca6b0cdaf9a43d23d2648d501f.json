@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mbr1645-mbrf1645_3585fd61.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7e25289dbfbef299cf9e23b72994444074c2cdca6b0cdaf9a43d23d2648d501f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:24+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBR1645",
+   "MBRF1645"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.44,
+  "tokens_in": 1506,
+  "tokens_out": 50
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/goodarksemi-product-brief-esd-tvs-gsclamp0524pe-dfn2510_7c5ae6c7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a633278b7ebbab0ff07db4b032b8c947c57ef7f71b3cfac98debd51f93ce4af2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:28+00:00",
+  "is_datasheet": true,
+  "label": "TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSCLAMP0524PE",
+   "EP4250PMALCSG"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.9,
+  "tokens_in": 1277,
+  "tokens_out": 52
+ },
+ "type": "esd_tvs_array"
+}

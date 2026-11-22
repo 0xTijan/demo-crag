@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gss2xxs_554798f2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "15a881d2a01b5cf015ea0cef509c46c4c1e28c854724d025d288178757f45c47",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:17+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSS22S",
+   "GSS23S",
+   "GSS24S",
+   "GSS26S",
+   "GSS210S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.45,
+  "tokens_in": 1749,
+  "tokens_out": 86
+ },
+ "type": "schottky_rectifier"
+}

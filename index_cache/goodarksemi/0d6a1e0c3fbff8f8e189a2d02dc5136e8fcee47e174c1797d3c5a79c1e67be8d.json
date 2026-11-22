@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu6513_9b8c0549.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0d6a1e0c3fbff8f8e189a2d02dc5136e8fcee47e174c1797d3c5a79c1e67be8d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:08+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU6513"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.61,
+  "tokens_in": 1872,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

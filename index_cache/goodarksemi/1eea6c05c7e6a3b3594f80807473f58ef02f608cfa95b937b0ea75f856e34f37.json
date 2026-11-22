@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gbu4x_23fd2638.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1eea6c05c7e6a3b3594f80807473f58ef02f608cfa95b937b0ea75f856e34f37",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:20+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU4A",
+   "GBU4B",
+   "GBU4D",
+   "GBU4G",
+   "GBU4J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.97,
+  "tokens_in": 1919,
+  "tokens_out": 74
+ },
+ "type": "fast_recovery_rectifier"
+}

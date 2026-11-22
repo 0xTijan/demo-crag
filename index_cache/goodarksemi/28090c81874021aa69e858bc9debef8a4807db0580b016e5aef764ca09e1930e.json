@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gbj25xxa_a34e0b3f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "28090c81874021aa69e858bc9debef8a4807db0580b016e5aef764ca09e1930e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:06+00:00",
+  "is_datasheet": true,
+  "label": "general purpose bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJ2501A",
+   "GBJ2502A",
+   "GBJ2504A",
+   "GBJ2506A",
+   "GBJ2508A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.51,
+  "tokens_in": 1779,
+  "tokens_out": 87
+ },
+ "type": "bridge_rectifier"
+}

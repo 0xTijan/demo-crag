@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsgpd2xxs_5325ed51.md",
+ "supplier": "goodarksemi",
+ "file_hash": "99d5db5f05572c76faad58a0aa3efa57656525c1075eb9221db876c6dc0b99be",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": true,
+  "part_numbers": [
+   "GSGPD220S",
+   "GSGPD240S",
+   "GSGPD260S",
+   "GSGPD2BS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.88,
+  "tokens_in": 1344,
+  "tokens_out": 68
+ },
+ "type": "schottky_rectifier"
+}

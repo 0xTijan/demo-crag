@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsba892wt_ae67b7e2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f7cedeea4576b62fd30342da3b444b261b5b5c3c907ac3f42db711876050b04d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:09+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSBA892WT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.04,
+  "tokens_in": 935,
+  "tokens_out": 40
+ },
+ "type": "switching_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd6959_fc7c1e05.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5e246c347db7cf4bb3a3b91457216521dcc3db9a4f8da6c79f762784a49d26d9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:24+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD6959"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.79,
+  "tokens_in": 2012,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gr3x_b2396bd0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5a17e8debac8256b86b0dfb1f6bed30ea062c70a562943ee6007b0653aec899d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:43+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GR3A",
+   "GR3B",
+   "GR3D",
+   "GR3G",
+   "GR3J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.39,
+  "tokens_in": 1763,
+  "tokens_out": 67
+ },
+ "type": "fast_recovery_rectifier"
+}

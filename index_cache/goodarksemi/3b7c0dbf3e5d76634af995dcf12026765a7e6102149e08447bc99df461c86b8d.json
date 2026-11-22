@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2215_eec6c41a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3b7c0dbf3e5d76634af995dcf12026765a7e6102149e08447bc99df461c86b8d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:12+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2215"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.39,
+  "tokens_in": 2017,
+  "tokens_out": 40
+ },
+ "type": "mosfet_p"
+}

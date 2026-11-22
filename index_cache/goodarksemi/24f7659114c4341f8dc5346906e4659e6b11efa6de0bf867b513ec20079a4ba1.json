@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsec5u700_4e2df71c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "24f7659114c4341f8dc5346906e4659e6b11efa6de0bf867b513ec20079a4ba1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:01+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEC5U700"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.46,
+  "tokens_in": 1115,
+  "tokens_out": 42
+ },
+ "type": "esd_protection_diode"
+}

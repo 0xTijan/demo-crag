@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/fs22n-fsl26_75d788a1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "29a17a79fdca0abb7bffe0e9f71b72cc3c5a75073aec0d88cb27033cc6be55dc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:40+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FS22N",
+   "FS22NS",
+   "FSL23",
+   "FSL23S",
+   "FSL24"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.86,
+  "tokens_in": 1536,
+  "tokens_out": 65
+ },
+ "type": "schottky_rectifier"
+}

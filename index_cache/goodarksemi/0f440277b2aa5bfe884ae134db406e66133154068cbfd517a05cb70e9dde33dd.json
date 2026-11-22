@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsclamp0524peu_3f6e7cbc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0f440277b2aa5bfe884ae134db406e66133154068cbfd517a05cb70e9dde33dd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:08+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSCLAMP0524PEU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.42,
+  "tokens_in": 1304,
+  "tokens_out": 44
+ },
+ "type": "esd_tvs_array"
+}

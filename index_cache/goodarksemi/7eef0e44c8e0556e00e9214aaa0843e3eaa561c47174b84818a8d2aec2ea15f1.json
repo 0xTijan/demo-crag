@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfdt4022_33427d2d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7eef0e44c8e0556e00e9214aaa0843e3eaa561c47174b84818a8d2aec2ea15f1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:36+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFDT4022"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.92,
+  "tokens_in": 2019,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

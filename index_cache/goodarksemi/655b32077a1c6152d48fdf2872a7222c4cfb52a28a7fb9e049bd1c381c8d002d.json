@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1-5sma59xxa_b761892e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "655b32077a1c6152d48fdf2872a7222c4cfb52a28a7fb9e049bd1c381c8d002d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:21+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "1.5SMA5913A",
+   "1.5SMA5914A",
+   "1.5SMA5915A",
+   "1.5SMA5916A",
+   "1.5SMA5917A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.24,
+  "tokens_in": 4077,
+  "tokens_out": 92
+ },
+ "type": "zener_diode"
+}

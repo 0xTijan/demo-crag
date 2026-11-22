@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gses5vd523h-2b_03623f81.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f52396ea8471e0864ff208610c5b17700088f75f7dd0ef371f380e31c0404ac3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:24+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSES5VD523H-2B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.81,
+  "tokens_in": 1029,
+  "tokens_out": 46
+ },
+ "type": "esd_protection_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmur3020bct_1c7cbb0d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "866826475d8ebd8714c5d51f6fb0aa74e40446c4d7492ab1a37b5caf0a56808b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:06+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMUR3020BCT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.82,
+  "tokens_in": 1217,
+  "tokens_out": 44
+ },
+ "type": "ultrafast_rectifier"
+}

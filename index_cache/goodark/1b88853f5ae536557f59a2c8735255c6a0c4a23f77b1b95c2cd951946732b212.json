@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:46:32+00:00",
+  "at": "2026-11-21T10:33:38+00:00",
   "is_datasheet": true,
-  "label": "fast recovery diode",
+  "label": "fast switching diode",
   "family": false,
   "part_numbers": [
-   "35"
+   "35 SOD-123"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.12,
-  "tokens_in": 1373,
-  "tokens_out": 36
+  "seconds": 4.61,
+  "tokens_in": 1135,
+  "tokens_out": 42
  },
- "type": "fast_recovery_diode"
+ "type": "switching_diode"
 }

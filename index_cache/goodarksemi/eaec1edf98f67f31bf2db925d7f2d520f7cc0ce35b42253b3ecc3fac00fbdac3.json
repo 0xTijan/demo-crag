@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsk3xb_c75b9576.md",
+ "supplier": "goodarksemi",
+ "file_hash": "eaec1edf98f67f31bf2db925d7f2d520f7cc0ce35b42253b3ecc3fac00fbdac3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:35+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSK32B",
+   "GSK33B",
+   "GSK34B",
+   "GSK35B",
+   "GSK36B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.88,
+  "tokens_in": 1720,
+  "tokens_out": 100
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/groxa_00c6e892.md",
+ "supplier": "goodarksemi",
+ "file_hash": "04eef142c4b2cd1080bb2970d1ebe431d1ee8e9ec5e355fff84e7423e686a026",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:50+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GROAA",
+   "GROBA",
+   "GRODA",
+   "GROGA",
+   "GROJA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.28,
+  "tokens_in": 1712,
+  "tokens_out": 67
+ },
+ "type": "fast_recovery_rectifier"
+}

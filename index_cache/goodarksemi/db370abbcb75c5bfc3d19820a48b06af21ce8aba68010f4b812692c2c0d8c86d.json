@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbav70w_85510353.md",
+ "supplier": "goodarksemi",
+ "file_hash": "db370abbcb75c5bfc3d19820a48b06af21ce8aba68010f4b812692c2c0d8c86d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:47+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAV70W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.08,
+  "tokens_in": 1014,
+  "tokens_out": 40
+ },
+ "type": "switching_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf6912_aa799a43.md",
+ "supplier": "goodarksemi",
+ "file_hash": "799f5681946d2078b410c2dcc1ba2c651b1fe39966dd61bdd4e6de7d0ed8379f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:16+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6912"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.9,
+  "tokens_in": 2086,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

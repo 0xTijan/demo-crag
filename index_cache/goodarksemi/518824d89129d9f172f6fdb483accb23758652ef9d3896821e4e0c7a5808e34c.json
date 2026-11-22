@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmbrd1045s_f5389b5b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "518824d89129d9f172f6fdb483accb23758652ef9d3896821e4e0c7a5808e34c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:54+00:00",
+  "is_datasheet": true,
+  "label": "dual Schottky rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMBRD1045S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.74,
+  "tokens_in": 966,
+  "tokens_out": 45
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmdt3906_16745713.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7521cd03a17d63e19ac6362cb379bc7fa5ac1b8137780be314d45fd310dd63e8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:35+00:00",
+  "is_datasheet": true,
+  "label": "dual PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMDT3906"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.66,
+  "tokens_in": 1595,
+  "tokens_out": 42
+ },
+ "type": "dual_pnp_transistor"
+}

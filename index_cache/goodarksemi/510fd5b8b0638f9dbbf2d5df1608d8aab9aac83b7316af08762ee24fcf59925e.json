@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbt2222aw_19e66cb7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "510fd5b8b0638f9dbbf2d5df1608d8aab9aac83b7316af08762ee24fcf59925e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:23+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMMBT2222AW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.35,
+  "tokens_in": 1528,
+  "tokens_out": 41
+ },
+ "type": "npn_transistor"
+}

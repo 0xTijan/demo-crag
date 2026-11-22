@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf3611e_b1c6b40b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b4227b4f85ddda7fb53a7702c76d738b459cfc82107d368197424c28e538de98",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:49+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF3611E"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.05,
+  "tokens_in": 1910,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

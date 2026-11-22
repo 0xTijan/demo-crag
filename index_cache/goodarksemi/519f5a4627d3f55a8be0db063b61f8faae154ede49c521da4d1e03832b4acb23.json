@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgd7r204hau_fd7b9d9a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "519f5a4627d3f55a8be0db063b61f8faae154ede49c521da4d1e03832b4acb23",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:35+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGD7R204HAU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.21,
+  "tokens_in": 2137,
+  "tokens_out": 45
+ },
+ "type": "mosfet_n"
+}

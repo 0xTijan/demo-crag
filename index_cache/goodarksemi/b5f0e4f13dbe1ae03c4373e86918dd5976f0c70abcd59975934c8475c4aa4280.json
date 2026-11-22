@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgn2r104au_e1884f6a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b5f0e4f13dbe1ae03c4373e86918dd5976f0c70abcd59975934c8475c4aa4280",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:59+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGN2R104AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.24,
+  "tokens_in": 2223,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

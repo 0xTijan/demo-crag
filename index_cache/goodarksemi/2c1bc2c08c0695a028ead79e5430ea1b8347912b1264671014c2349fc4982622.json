@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsra4016_15be831e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2c1bc2c08c0695a028ead79e5430ea1b8347912b1264671014c2349fc4982622",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:37+00:00",
+  "is_datasheet": true,
+  "label": "general purpose rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSRA4016"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.36,
+  "tokens_in": 939,
+  "tokens_out": 40
+ },
+ "type": "standard_rectifier"
+}

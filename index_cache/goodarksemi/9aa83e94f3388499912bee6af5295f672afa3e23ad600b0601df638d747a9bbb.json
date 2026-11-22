@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/scc250d_32d8e409.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9aa83e94f3388499912bee6af5295f672afa3e23ad600b0601df638d747a9bbb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:59+00:00",
+  "is_datasheet": true,
+  "label": "ceramic PTC thermistor",
+  "family": false,
+  "part_numbers": [
+   "SCC250D"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.03,
+  "tokens_in": 1213,
+  "tokens_out": 42
+ },
+ "type": "ptc_thermistor"
+}

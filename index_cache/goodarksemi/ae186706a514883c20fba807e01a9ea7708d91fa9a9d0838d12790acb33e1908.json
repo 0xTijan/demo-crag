@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmurs3060d2_153cf8dc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ae186706a514883c20fba807e01a9ea7708d91fa9a9d0838d12790acb33e1908",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:39+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMURS3060D2"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.78,
+  "tokens_in": 1680,
+  "tokens_out": 45
+ },
+ "type": "ultrafast_rectifier"
+}

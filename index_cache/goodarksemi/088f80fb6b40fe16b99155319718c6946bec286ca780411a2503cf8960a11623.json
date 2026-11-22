@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbas70lp_db247bb9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "088f80fb6b40fe16b99155319718c6946bec286ca780411a2503cf8960a11623",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:22+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSBAS70LP"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.48,
+  "tokens_in": 927,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbat54lp_03c78cb7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3377115c7da3b1a3aaea9df89809b8d01700d6b41788b9f82f7b5371c06ce998",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:36+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAT54LP"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.75,
+  "tokens_in": 979,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

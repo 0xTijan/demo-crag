@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:47+00:00",
+  "at": "2026-11-21T12:00:27+00:00",
   "is_datasheet": true,
   "label": "SMD power inductor",
   "family": true,
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.71,
-  "tokens_in": 2300,
+  "seconds": 8.74,
+  "tokens_in": 2177,
   "tokens_out": 121
  },
- "type": "smd_power_inductor"
+ "type": "power_inductor"
 }

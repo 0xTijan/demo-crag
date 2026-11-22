@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp65r640_08049368.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d133f2923471cdb431009421cc1cc25b5fd03a9593f9fb8d790f03b54b524a92",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:36+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP65R640"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.95,
+  "tokens_in": 2096,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

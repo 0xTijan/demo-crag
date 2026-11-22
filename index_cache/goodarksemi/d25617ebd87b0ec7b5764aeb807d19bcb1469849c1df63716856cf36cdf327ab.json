@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/f2tvs_2eafe499.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d25617ebd87b0ec7b5764aeb807d19bcb1469849c1df63716856cf36cdf327ab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:28+00:00",
+  "is_datasheet": true,
+  "label": "Transient voltage suppressor",
+  "family": true,
+  "part_numbers": [
+   "F2TVS10A",
+   "F2TVS11A",
+   "F2TVS12A",
+   "F2TVS13A",
+   "F2TVS14A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.11,
+  "tokens_in": 2317,
+  "tokens_out": 77
+ },
+ "type": "tvs_diode"
+}

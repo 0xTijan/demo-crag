@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfq4903_ceaf74e2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6a04933ec293e3e5ad4a160572a55ad88aa0b250af5ec249173e51bf7a5d59c5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:18+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFQ4903"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.83,
+  "tokens_in": 1921,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

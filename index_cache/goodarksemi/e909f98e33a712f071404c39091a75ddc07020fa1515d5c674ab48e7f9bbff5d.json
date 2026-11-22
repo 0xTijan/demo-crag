@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/1n4148ws_dbb9de49.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e909f98e33a712f071404c39091a75ddc07020fa1515d5c674ab48e7f9bbff5d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:40+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "1N4148WS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.87,
+  "tokens_in": 1091,
+  "tokens_out": 41
+ },
+ "type": "switching_diode"
+}

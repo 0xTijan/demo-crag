@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsec3u2000_a65f2c19.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4538f8f3b9ff4847494170c463539c4d0ef75d8cb40f6a35c49744e93566d858",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:56+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEC3U2000"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.73,
+  "tokens_in": 1074,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

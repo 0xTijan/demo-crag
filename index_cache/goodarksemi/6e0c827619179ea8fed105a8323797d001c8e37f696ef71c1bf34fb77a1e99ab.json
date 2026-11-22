@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgd6r506hau_7a49b75e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6e0c827619179ea8fed105a8323797d001c8e37f696ef71c1bf34fb77a1e99ab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGD6R506HAU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.65,
+  "tokens_in": 2153,
+  "tokens_out": 45
+ },
+ "type": "mosfet_n"
+}

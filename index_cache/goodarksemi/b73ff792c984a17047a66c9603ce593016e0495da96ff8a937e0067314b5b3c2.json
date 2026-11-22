@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gnox_6761b832.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b73ff792c984a17047a66c9603ce593016e0495da96ff8a937e0067314b5b3c2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:24+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GNOA",
+   "GNOB",
+   "GNOD",
+   "GNOG",
+   "GNOJ"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.71,
+  "tokens_in": 1755,
+  "tokens_out": 64
+ },
+ "type": "fast_recovery_rectifier"
+}

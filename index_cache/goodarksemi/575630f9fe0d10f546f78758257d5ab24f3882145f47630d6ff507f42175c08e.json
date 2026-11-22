@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq2603_aca6fe63.md",
+ "supplier": "goodarksemi",
+ "file_hash": "575630f9fe0d10f546f78758257d5ab24f3882145f47630d6ff507f42175c08e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:35+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ2603"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.58,
+  "tokens_in": 7280,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

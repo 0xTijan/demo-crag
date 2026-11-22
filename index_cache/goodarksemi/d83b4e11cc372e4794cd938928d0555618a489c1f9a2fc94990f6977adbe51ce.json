@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfk3220b_15d4f500.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d83b4e11cc372e4794cd938928d0555618a489c1f9a2fc94990f6977adbe51ce",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:07+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFK3220B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.12,
+  "tokens_in": 2127,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

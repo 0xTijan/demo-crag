@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt591_4a80f332.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2463f6fa1290ace8fe5a1478edb517be76cf634ee70522c00ad1518f51a4712f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:09+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT591"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.97,
+  "tokens_in": 1299,
+  "tokens_out": 38
+ },
+ "type": "pnp_transistor"
+}

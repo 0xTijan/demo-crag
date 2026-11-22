@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ls565t_9c8be229.md",
+ "supplier": "goodarksemi",
+ "file_hash": "80d239ae9691881a105d8daee5d617e2107c83eb358306becf4a527f0f477a71",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:50+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "LS565T"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.36,
+  "tokens_in": 997,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

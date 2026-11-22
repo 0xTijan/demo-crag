@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsedc7u2700_e41fd22f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "665de049e528cfb7a854fed2a1037d918420988b5284f3eebd13e5d6123d4fb5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:32+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEDC7U2700"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.57,
+  "tokens_in": 1137,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/bav10x_358768a6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fe884e8d7bcb1a50fa2ff253dfbe35b753428f2ab095d8f7f1ac863a234d7391",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:42+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "BAV100",
+   "BAV101",
+   "BAV102",
+   "BAV103"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.93,
+  "tokens_in": 1533,
+  "tokens_out": 62
+ },
+ "type": "schottky_rectifier"
+}

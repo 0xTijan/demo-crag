@@ -1,0 +1,20 @@
+{
+ "file": "goodarksemi/gn1p_10262ea5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0381e5faf345cea6e6e89573ac81aa91c32ecdedab26690590952150c51b9064",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:12+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.84,
+  "tokens_in": 1081,
+  "tokens_out": 32
+ },
+ "type": "standard_rectifier"
+}

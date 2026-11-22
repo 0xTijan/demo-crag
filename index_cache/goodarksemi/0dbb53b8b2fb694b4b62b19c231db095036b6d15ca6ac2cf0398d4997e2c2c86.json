@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbd4448hxx_e9dbfa49.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0dbb53b8b2fb694b4b62b19c231db095036b6d15ca6ac2cf0398d4997e2c2c86",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:41+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "MMBD4448Hxx"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.06,
+  "tokens_in": 1220,
+  "tokens_out": 42
+ },
+ "type": "switching_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mlsep30a-0603_ed1c0d80.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2ffdb0b374e5510581dfd9c92f743aac50cc7909bb8df140470cf5565a1e3cec",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:35+00:00",
+  "is_datasheet": true,
+  "label": "ESD suppressor",
+  "family": false,
+  "part_numbers": [
+   "MLSEP30A-0603"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.62,
+  "tokens_in": 1065,
+  "tokens_out": 44
+ },
+ "type": "polymer_esd_suppressor"
+}

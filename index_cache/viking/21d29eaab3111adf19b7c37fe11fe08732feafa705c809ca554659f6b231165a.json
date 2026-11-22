@@ -5,21 +5,21 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:45+00:00",
+  "at": "2026-11-21T11:57:27+00:00",
   "is_datasheet": true,
   "label": "multilayer chip inductor",
   "family": true,
   "part_numbers": [
    "CL-S Series",
    "CLE5-S",
+   "CL01-S",
    "CL02-S",
-   "CL03-S",
-   "CL01-S"
+   "CL03-S"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.94,
-  "tokens_in": 2113,
+  "seconds": 6.16,
+  "tokens_in": 2021,
   "tokens_out": 62
  },
  "type": "multilayer_chip_inductor"

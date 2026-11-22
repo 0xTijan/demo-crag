@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgtl6r015_b3be69ee.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c09ab1cfe57e9c5fb20e5572e46323ceb1d8b9574d94e674323c0e1a5e70aad6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:05+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGTL6R015"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.96,
+  "tokens_in": 2012,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsftl60025_e8e8c666.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1ec9d5189888385e510505abe3f72e57d0bc5049d9136bfc4923134df2c857d5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:40+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFTL60025"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.38,
+  "tokens_in": 1992,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

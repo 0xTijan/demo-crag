@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gstd90160p_a3961ea7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c4dc402890d094012f04a2c1a07dfd430628f193f58df4e69471e7900f50abfe",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:39+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated general purpose rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSTD90160P"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.47,
+  "tokens_in": 1322,
+  "tokens_out": 45
+ },
+ "type": "standard_rectifier"
+}

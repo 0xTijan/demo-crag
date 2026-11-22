@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/murb1620ct_41ecc6f8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9f784e23a850b71d8b5d387a4e30c198ebc8227b1d5e4e47954fa4e7289bc873",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:13+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURB1620CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.01,
+  "tokens_in": 1249,
+  "tokens_out": 43
+ },
+ "type": "ultrafast_rectifier"
+}

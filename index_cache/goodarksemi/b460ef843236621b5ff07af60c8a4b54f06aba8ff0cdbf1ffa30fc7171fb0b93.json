@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/glsl52-glsl53_bcd9760e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b460ef843236621b5ff07af60c8a4b54f06aba8ff0cdbf1ffa30fc7171fb0b93",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:53+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GLSL52",
+   "GLSL53"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.1,
+  "tokens_in": 1225,
+  "tokens_out": 46
+ },
+ "type": "schottky_rectifier"
+}

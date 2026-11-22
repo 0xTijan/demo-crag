@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsf1n47xx_21588ecd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "278007aad2d718cbce6a8c068f3bfad39c3624a1dd5f6bfb21aaee691f505498",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:34+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GSF1N4738",
+   "GSF1N4739",
+   "GSF1N4740",
+   "GSF1N4741",
+   "GSF1N4742"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.38,
+  "tokens_in": 3202,
+  "tokens_out": 82
+ },
+ "type": "zener_diode"
+}

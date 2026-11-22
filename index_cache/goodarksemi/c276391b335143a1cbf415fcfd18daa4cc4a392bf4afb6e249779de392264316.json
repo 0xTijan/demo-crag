@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bav70_5f16d59d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c276391b335143a1cbf415fcfd18daa4cc4a392bf4afb6e249779de392264316",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:49+00:00",
+  "is_datasheet": true,
+  "label": "dual switching diode",
+  "family": false,
+  "part_numbers": [
+   "BAV70"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.55,
+  "tokens_in": 997,
+  "tokens_out": 39
+ },
+ "type": "switching_diode"
+}

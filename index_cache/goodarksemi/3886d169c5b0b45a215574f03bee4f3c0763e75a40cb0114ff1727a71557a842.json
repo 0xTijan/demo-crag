@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt3906_680b0037.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3886d169c5b0b45a215574f03bee4f3c0763e75a40cb0114ff1727a71557a842",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:56+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT3906"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.79,
+  "tokens_in": 1401,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

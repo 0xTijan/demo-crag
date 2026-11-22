@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfp4959a_710f7d25.md",
+ "supplier": "goodarksemi",
+ "file_hash": "621d48dd746dde113f356d3ce94787de197e3782dffb987af01a664dd4a72f19",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:45+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFP4959A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.85,
+  "tokens_in": 2072,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

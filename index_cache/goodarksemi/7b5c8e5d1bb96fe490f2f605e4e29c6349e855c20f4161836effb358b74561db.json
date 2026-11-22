@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/kbf401-kbf410_cab465e1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7b5c8e5d1bb96fe490f2f605e4e29c6349e855c20f4161836effb358b74561db",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:44+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBF401",
+   "KBF402",
+   "KBF404",
+   "KBF406",
+   "KBF408"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.44,
+  "tokens_in": 1713,
+  "tokens_out": 76
+ },
+ "type": "bridge_rectifier"
+}

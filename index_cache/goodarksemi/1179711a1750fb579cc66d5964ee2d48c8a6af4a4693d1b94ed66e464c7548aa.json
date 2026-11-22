@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/kbu4x_a14826d7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1179711a1750fb579cc66d5964ee2d48c8a6af4a4693d1b94ed66e464c7548aa",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:08+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBU4A",
+   "KBU4B",
+   "KBU4D",
+   "KBU4G",
+   "KBU4J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.07,
+  "tokens_in": 1792,
+  "tokens_out": 73
+ },
+ "type": "standard_rectifier"
+}

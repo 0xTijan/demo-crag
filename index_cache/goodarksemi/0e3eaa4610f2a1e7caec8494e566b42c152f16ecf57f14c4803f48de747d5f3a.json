@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbav3004w_1e08d3f6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0e3eaa4610f2a1e7caec8494e566b42c152f16ecf57f14c4803f48de747d5f3a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:45+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAV3004W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.34,
+  "tokens_in": 1188,
+  "tokens_out": 43
+ },
+ "type": "switching_diode"
+}

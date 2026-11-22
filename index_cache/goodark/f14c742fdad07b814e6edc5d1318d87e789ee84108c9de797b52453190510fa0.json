@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:50:18+00:00",
+  "at": "2026-11-21T10:37:13+00:00",
   "is_datasheet": true,
   "label": "glass passivated bridge rectifier",
   "family": true,
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.02,
-  "tokens_in": 2039,
-  "tokens_out": 65
+  "seconds": 6.11,
+  "tokens_in": 1658,
+  "tokens_out": 77
  },
- "type": "glass_passivated_bridge_rectifier"
+ "type": "bridge_rectifier"
 }

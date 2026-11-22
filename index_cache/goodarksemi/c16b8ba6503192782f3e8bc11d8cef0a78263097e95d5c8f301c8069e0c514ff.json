@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp1076_695b311d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c16b8ba6503192782f3e8bc11d8cef0a78263097e95d5c8f301c8069e0c514ff",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:47+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP1076"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.16,
+  "tokens_in": 2060,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

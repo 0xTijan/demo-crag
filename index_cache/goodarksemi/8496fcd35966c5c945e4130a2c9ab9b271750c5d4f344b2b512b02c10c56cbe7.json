@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gn3x_77d7edb3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8496fcd35966c5c945e4130a2c9ab9b271750c5d4f344b2b512b02c10c56cbe7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:19+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN3A",
+   "GN3B",
+   "GN3D",
+   "GN3G",
+   "GN3J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 1753,
+  "tokens_out": 66
+ },
+ "type": "standard_rectifier"
+}

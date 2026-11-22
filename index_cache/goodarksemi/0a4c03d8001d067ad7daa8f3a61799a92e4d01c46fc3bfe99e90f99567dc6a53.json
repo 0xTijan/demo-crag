@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn3703_d0084daa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0a4c03d8001d067ad7daa8f3a61799a92e4d01c46fc3bfe99e90f99567dc6a53",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:20:50+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN3703"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.74,
+  "tokens_in": 2185,
+  "tokens_out": 45
+ },
+ "type": "complementary_mosfet"
+}

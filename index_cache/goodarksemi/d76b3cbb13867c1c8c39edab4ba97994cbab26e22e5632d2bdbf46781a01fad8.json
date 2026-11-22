@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/1n4148wsfl_4f93d649.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d76b3cbb13867c1c8c39edab4ba97994cbab26e22e5632d2bdbf46781a01fad8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:41+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "1N4148WSFL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.51,
+  "tokens_in": 960,
+  "tokens_out": 42
+ },
+ "type": "switching_diode"
+}

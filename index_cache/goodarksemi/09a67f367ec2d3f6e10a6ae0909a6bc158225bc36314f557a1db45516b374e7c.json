@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsbcp51-52-53_b660bee9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "09a67f367ec2d3f6e10a6ae0909a6bc158225bc36314f557a1db45516b374e7c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:28+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBCP51",
+   "GSBCP52",
+   "GSBCP53"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.48,
+  "tokens_in": 1682,
+  "tokens_out": 52
+ },
+ "type": "pnp_transistor"
+}

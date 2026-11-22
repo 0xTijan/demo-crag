@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt5658am_5cef72b1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d5ef3e59bacdb26c47b5d84cbbde8e0b89df18331ad41d2860f2e89a4c228163",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:06+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT5658AM"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.62,
+  "tokens_in": 1449,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

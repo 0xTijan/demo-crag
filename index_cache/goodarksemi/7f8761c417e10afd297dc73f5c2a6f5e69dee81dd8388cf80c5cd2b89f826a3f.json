@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsbat754x_455b60e5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7f8761c417e10afd297dc73f5c2a6f5e69dee81dd8388cf80c5cd2b89f826a3f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:43+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAT754",
+   "GSBAT754A",
+   "GSBAT754C",
+   "GSBAT754S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.17,
+  "tokens_in": 1053,
+  "tokens_out": 64
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1smb59xxb_2a7143a4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "693bedaa9593d20f5d2ba1ae6ae1396a67687ea57bbbd9faee27d50564e78293",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:26+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "1SMB5913B",
+   "1SMB5914B",
+   "1SMB5915B",
+   "1SMB5916B",
+   "1SMB5917B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.1,
+  "tokens_in": 2765,
+  "tokens_out": 82
+ },
+ "type": "zener_diode"
+}

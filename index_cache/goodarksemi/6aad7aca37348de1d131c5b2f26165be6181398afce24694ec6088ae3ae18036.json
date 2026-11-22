@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmb10jx_0de7ee34.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6aad7aca37348de1d131c5b2f26165be6181398afce24694ec6088ae3ae18036",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:35+00:00",
+  "is_datasheet": true,
+  "label": "Transient Voltage Suppressor",
+  "family": true,
+  "part_numbers": [
+   "GSMB10J5.0A",
+   "GSMB10J6.0A",
+   "GSMB10J6.5A",
+   "GSMB10J7.0A",
+   "GSMB10J7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.83,
+  "tokens_in": 3155,
+  "tokens_out": 87
+ },
+ "type": "tvs_diode"
+}

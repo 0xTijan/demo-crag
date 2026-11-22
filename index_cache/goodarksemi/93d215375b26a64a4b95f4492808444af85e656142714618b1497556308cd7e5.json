@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez8b450_a93dadb7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "93d215375b26a64a4b95f4492808444af85e656142714618b1497556308cd7e5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:17+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ8B450"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.43,
+  "tokens_in": 1032,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

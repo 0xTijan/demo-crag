@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/lu1-lu5_4a8c7ecc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f62b5ca2bff1ddf9036dd83f340c07d1759f319a2b65ce6df4a7b3b800d58a4b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:07+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "LU1",
+   "LU2",
+   "LU3",
+   "LU4",
+   "LU5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.77,
+  "tokens_in": 1353,
+  "tokens_out": 53
+ },
+ "type": "ultrafast_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mbrd560s_31bc6af1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "36a76a1ef2ead974c9717e42c23036936510938d9499e0d090d97c56b55eb99c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:04+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRD560S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.58,
+  "tokens_in": 1227,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

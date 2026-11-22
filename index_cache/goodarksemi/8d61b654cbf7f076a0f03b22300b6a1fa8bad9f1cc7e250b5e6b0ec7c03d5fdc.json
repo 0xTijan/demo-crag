@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsec3b1000-gsec36b120_f9b70194.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8d61b654cbf7f076a0f03b22300b6a1fa8bad9f1cc7e250b5e6b0ec7c03d5fdc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:54+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS Array",
+  "family": true,
+  "part_numbers": [
+   "GSEC3B1000",
+   "GSEC36B120",
+   "GSEC5B800",
+   "GSEC12B500",
+   "GSEC15B400"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.63,
+  "tokens_in": 4207,
+  "tokens_out": 82
+ },
+ "type": "esd_tvs_array"
+}

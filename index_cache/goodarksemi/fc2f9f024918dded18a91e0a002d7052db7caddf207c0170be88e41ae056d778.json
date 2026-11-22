@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbc847pn_3ec75b2d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fc2f9f024918dded18a91e0a002d7052db7caddf207c0170be88e41ae056d778",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:10+00:00",
+  "is_datasheet": true,
+  "label": "complementary NPN+PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "SBC847PN"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.37,
+  "tokens_in": 2379,
+  "tokens_out": 44
+ },
+ "type": "complementary_npn_pnp_transistor"
+}

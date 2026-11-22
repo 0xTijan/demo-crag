@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsd103atw_3f8e2367.md",
+ "supplier": "goodarksemi",
+ "file_hash": "026ba36786d57dc98de63f8282b7069c010572841e82b045d2ac15006b50b724",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:16+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GSD103ATW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.13,
+  "tokens_in": 965,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

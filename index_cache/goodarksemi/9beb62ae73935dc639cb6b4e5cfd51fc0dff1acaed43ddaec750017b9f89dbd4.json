@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn6028au_54b8a8df.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9beb62ae73935dc639cb6b4e5cfd51fc0dff1acaed43ddaec750017b9f89dbd4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:24+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN6028AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.07,
+  "tokens_in": 2053,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

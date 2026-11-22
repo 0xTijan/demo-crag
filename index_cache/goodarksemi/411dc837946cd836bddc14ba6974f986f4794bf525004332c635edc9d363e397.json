@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft3002_adc89807.md",
+ "supplier": "goodarksemi",
+ "file_hash": "411dc837946cd836bddc14ba6974f986f4794bf525004332c635edc9d363e397",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:49+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT3002"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.26,
+  "tokens_in": 2128,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

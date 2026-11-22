@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:13:55+00:00",
+  "at": "2026-11-21T11:58:37+00:00",
   "is_datasheet": true,
-  "label": "metal film resistor",
+  "label": "metal film high frequency MELF resistor",
   "family": true,
   "part_numbers": [
    "CSRF0102",
@@ -16,9 +16,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.68,
-  "tokens_in": 1913,
-  "tokens_out": 55
+  "seconds": 7.32,
+  "tokens_in": 1757,
+  "tokens_out": 60
  },
- "type": "metal_film_resistor"
+ "type": "melf_resistor"
 }

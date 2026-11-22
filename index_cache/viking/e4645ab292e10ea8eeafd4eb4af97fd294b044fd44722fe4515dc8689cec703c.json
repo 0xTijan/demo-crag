@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:35+00:00",
+  "at": "2026-11-21T12:00:15+00:00",
   "is_datasheet": true,
-  "label": "NTC thermistor",
+  "label": "SMD NTC thermistor",
   "family": true,
   "part_numbers": [
    "NTG02",
@@ -17,9 +17,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.6,
-  "tokens_in": 1655,
-  "tokens_out": 56
+  "seconds": 5.41,
+  "tokens_in": 1593,
+  "tokens_out": 58
  },
  "type": "ntc_thermistor"
 }

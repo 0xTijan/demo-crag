@@ -1,0 +1,20 @@
+{
+ "file": "goodarksemi/hs1r_cc5f49be.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1507841623ec661466526831381913aa887554f182df8716545d607be2221b79",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:31+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.31,
+  "tokens_in": 1150,
+  "tokens_out": 35
+ },
+ "type": "ultrafast_rectifier"
+}

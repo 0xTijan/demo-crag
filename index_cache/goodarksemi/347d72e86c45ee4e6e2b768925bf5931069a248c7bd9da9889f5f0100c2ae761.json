@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp8r6p06_0b334154.md",
+ "supplier": "goodarksemi",
+ "file_hash": "347d72e86c45ee4e6e2b768925bf5931069a248c7bd9da9889f5f0100c2ae761",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:19+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP8R6P06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.86,
+  "tokens_in": 2026,
+  "tokens_out": 44
+ },
+ "type": "mosfet_p"
+}

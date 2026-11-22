@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp6014_b6854e12.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bd8a9f447a7014d5dcecf287e995b16dc5c20a19298fabc746f63b88c18ff55c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:33+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP6014"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.06,
+  "tokens_in": 1999,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

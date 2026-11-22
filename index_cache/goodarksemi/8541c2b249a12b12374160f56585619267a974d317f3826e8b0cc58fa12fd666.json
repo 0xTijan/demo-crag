@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/lbxs_4fac4630.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8541c2b249a12b12374160f56585619267a974d317f3826e8b0cc58fa12fd666",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:27+00:00",
+  "is_datasheet": true,
+  "label": "single phase surface mount bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "LB1S",
+   "LB2S",
+   "LB4S",
+   "LB6S",
+   "LB8S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.49,
+  "tokens_in": 1616,
+  "tokens_out": 66
+ },
+ "type": "bridge_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsg2ma2k_3b4450fc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bde7e0501a07d6eb7df23a833c1eeca5a1d994e48440221be2aac9b70aad7adf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:29+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSG2MA2K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.2,
+  "tokens_in": 1302,
+  "tokens_out": 40
+ },
+ "type": "fast_recovery_rectifier"
+}

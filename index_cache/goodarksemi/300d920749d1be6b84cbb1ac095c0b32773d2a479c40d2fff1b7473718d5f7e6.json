@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bav23x_e0d004bc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "300d920749d1be6b84cbb1ac095c0b32773d2a479c40d2fff1b7473718d5f7e6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:48+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": true,
+  "part_numbers": [
+   "BAV23x"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.59,
+  "tokens_in": 911,
+  "tokens_out": 39
+ },
+ "type": "switching_diode"
+}

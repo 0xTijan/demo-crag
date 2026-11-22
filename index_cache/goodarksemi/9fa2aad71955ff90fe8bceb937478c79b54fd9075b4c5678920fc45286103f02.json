@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sl22a-sl210a_2f56c2b1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9fa2aad71955ff90fe8bceb937478c79b54fd9075b4c5678920fc45286103f02",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:17+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL22A",
+   "SL23A",
+   "SL24A",
+   "SL25A",
+   "SL26A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.36,
+  "tokens_in": 1603,
+  "tokens_out": 89
+ },
+ "type": "schottky_rectifier"
+}

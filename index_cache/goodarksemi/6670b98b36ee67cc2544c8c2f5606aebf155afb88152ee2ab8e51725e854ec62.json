@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/zener-wafer-5w-6-46v-7-14v_f1c19dc6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6670b98b36ee67cc2544c8c2f5606aebf155afb88152ee2ab8e51725e854ec62",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:56:00+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": false,
+  "part_numbers": [
+   "GDZ2CW100068YY-CS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.09,
+  "tokens_in": 837,
+  "tokens_out": 46
+ },
+ "type": "zener_diode"
+}

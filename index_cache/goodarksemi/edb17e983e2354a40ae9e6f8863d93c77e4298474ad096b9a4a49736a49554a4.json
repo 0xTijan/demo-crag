@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/bav19w-bav21w_bbf965e4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "edb17e983e2354a40ae9e6f8863d93c77e4298474ad096b9a4a49736a49554a4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:46+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": true,
+  "part_numbers": [
+   "BAV19W",
+   "BAV20W",
+   "BAV21W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.52,
+  "tokens_in": 1430,
+  "tokens_out": 53
+ },
+ "type": "switching_diode"
+}

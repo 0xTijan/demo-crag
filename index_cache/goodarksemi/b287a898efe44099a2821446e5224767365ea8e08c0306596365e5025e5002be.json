@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbcw66x_8f6da343.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b287a898efe44099a2821446e5224767365ea8e08c0306596365e5025e5002be",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:35+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBCW66x"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.44,
+  "tokens_in": 1542,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

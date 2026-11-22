@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsps3x_5976c5a5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3ec13a2cb31f0ae2b660fec9ec5714c72c3fc7aba28f898fa4fffeb13b3c9479",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:20+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSPS32",
+   "GSPS33",
+   "GSPS34",
+   "GSPS345"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.21,
+  "tokens_in": 1421,
+  "tokens_out": 63
+ },
+ "type": "schottky_rectifier"
+}

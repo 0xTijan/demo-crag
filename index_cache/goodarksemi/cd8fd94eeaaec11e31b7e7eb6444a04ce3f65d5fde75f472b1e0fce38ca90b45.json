@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/sga1j_179fc503.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cd8fd94eeaaec11e31b7e7eb6444a04ce3f65d5fde75f472b1e0fce38ca90b45",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:18+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated standard rectifier",
+  "family": false,
+  "part_numbers": [
+   "SGA1J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.7,
+  "tokens_in": 1273,
+  "tokens_out": 40
+ },
+ "type": "standard_rectifier"
+}

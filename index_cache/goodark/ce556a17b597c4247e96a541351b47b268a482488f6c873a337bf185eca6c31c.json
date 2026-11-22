@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:05:25+00:00",
+  "at": "2026-11-21T10:50:57+00:00",
   "is_datasheet": true,
   "label": "Silicon Epitaxial Schottky Barrier Diode",
   "family": false,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.24,
-  "tokens_in": 1074,
+  "seconds": 4.83,
+  "tokens_in": 886,
   "tokens_out": 51
  },
- "type": "silicon_epitaxial_schottky_barrier_diode"
+ "type": "schottky_rectifier"
 }

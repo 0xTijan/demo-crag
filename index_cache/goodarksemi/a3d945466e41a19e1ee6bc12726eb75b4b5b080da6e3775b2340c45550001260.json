@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq4702_9bf12863.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a3d945466e41a19e1ee6bc12726eb75b4b5b080da6e3775b2340c45550001260",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:10+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ4702"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.28,
+  "tokens_in": 2072,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsrb520b40_3c7eb5c3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b19a1065ba560fe88235aeb8c1a58d56170f090face4b7799c8af56091ceeec4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:38+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSRB520B40"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.36,
+  "tokens_in": 1193,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/rmbxs_8a3b0e52.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1b42fa95d5efe602a1a417fb4b843896ab7ac9e7f121b50ad41a072940351647",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:19+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated fast recovery bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "RMB2S",
+   "RMB4S",
+   "RMB6S",
+   "RMB8S",
+   "RMB10S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.54,
+  "tokens_in": 1665,
+  "tokens_out": 67
+ },
+ "type": "fast_recovery_bridge_rectifier"
+}

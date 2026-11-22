@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgcp2550l_2a9a82fe.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e9415b12d2513d1e54412ad6d308a174a558a26a248b127ac5318458c79fb63e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:24+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGCP2550L"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.8,
+  "tokens_in": 1406,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

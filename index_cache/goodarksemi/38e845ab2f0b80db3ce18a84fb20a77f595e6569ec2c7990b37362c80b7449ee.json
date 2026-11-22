@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gs3x_24b5bdbc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "38e845ab2f0b80db3ce18a84fb20a77f595e6569ec2c7990b37362c80b7449ee",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:29+00:00",
+  "is_datasheet": true,
+  "label": "general purpose rectifier",
+  "family": true,
+  "part_numbers": [
+   "GS3A",
+   "GS3B",
+   "GS3D",
+   "GS3G",
+   "GS3J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.81,
+  "tokens_in": 1762,
+  "tokens_out": 67
+ },
+ "type": "standard_rectifier"
+}

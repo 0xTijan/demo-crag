@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmurs420_ee03e633.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d5590c68ad50d5d4f66548866e6e86dcf121038edf44c9a00aa18e0fab0c2efd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:42+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMURS420"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.36,
+  "tokens_in": 1214,
+  "tokens_out": 42
+ },
+ "type": "ultrafast_rectifier"
+}

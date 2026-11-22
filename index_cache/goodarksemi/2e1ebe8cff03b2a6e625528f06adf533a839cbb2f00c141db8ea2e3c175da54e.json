@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sk22a-sk26a_9801937b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2e1ebe8cff03b2a6e625528f06adf533a839cbb2f00c141db8ea2e3c175da54e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:32+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SK22A",
+   "SK23A",
+   "SK24A",
+   "SK25A",
+   "SK26A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.19,
+  "tokens_in": 1371,
+  "tokens_out": 64
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/kbu35xx_6c19657f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ca88ddd6f6b0e3cf075f6cf2c923567f5f7802abca79dd34b39e744b02f8638d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:06+00:00",
+  "is_datasheet": true,
+  "label": "single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBU35005",
+   "KBU3501",
+   "KBU3502",
+   "KBU3504",
+   "KBU3506"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.92,
+  "tokens_in": 1337,
+  "tokens_out": 74
+ },
+ "type": "bridge_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp5r010au_e607a746.md",
+ "supplier": "goodarksemi",
+ "file_hash": "12598d38c4bf7d1db7fb2cf2b07f4b8032c5849d8b916870bcc0c607eb60d5c1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:51+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP5R010AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.42,
+  "tokens_in": 2058,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

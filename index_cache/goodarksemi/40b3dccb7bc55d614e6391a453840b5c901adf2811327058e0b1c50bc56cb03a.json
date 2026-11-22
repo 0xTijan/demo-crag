@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ls24a_a625bcce.md",
+ "supplier": "goodarksemi",
+ "file_hash": "40b3dccb7bc55d614e6391a453840b5c901adf2811327058e0b1c50bc56cb03a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:39+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "LS24A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.22,
+  "tokens_in": 1066,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsep12u005_8ebaf2d3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4015780877520ec5b7eaca80ed2bd0abd82d2a2eca7591458a8cdd57c70a83c5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:51+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance TVS diode array",
+  "family": false,
+  "part_numbers": [
+   "GSEP12U005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.71,
+  "tokens_in": 1429,
+  "tokens_out": 46
+ },
+ "type": "esd_tvs_array"
+}

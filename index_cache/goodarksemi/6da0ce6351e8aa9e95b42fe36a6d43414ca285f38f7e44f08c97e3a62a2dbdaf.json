@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gser5u030_d85cbd25.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6da0ce6351e8aa9e95b42fe36a6d43414ca285f38f7e44f08c97e3a62a2dbdaf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:16+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSER5U030"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.64,
+  "tokens_in": 1353,
+  "tokens_out": 42
+ },
+ "type": "esd_tvs_array"
+}

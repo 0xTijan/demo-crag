@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ls5bh_fb9a8541.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7eb9cb27ae534f6f77db44da238fc8bc4cf05738bdb27348f4884313b9dfd296",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:55+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "LS5BH"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.49,
+  "tokens_in": 1145,
+  "tokens_out": 40
+ },
+ "type": "schottky_rectifier"
+}

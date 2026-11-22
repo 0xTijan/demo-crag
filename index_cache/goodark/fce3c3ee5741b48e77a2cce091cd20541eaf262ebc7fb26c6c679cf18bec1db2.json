@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:41:15+00:00",
+  "at": "2026-11-21T10:28:26+00:00",
   "is_datasheet": true,
-  "label": "fast recovery rectifier",
+  "label": "superfast rectifier",
   "family": true,
   "part_numbers": [
    "1S1G",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.67,
-  "tokens_in": 1567,
+  "seconds": 8.71,
+  "tokens_in": 1631,
   "tokens_out": 86
  },
- "type": "fast_recovery_rectifier"
+ "type": "ultrafast_rectifier"
 }

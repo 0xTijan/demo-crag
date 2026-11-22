@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsja60r069_789a0e59.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a1582f5984e752efaf17efc8f2961e6f6bc134810ac709689768d540fe8151b4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:31+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJA60R069"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.18,
+  "tokens_in": 2201,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

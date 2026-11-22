@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr74115_3de64216.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3cb8c3bcba252de365ff7b6f8b5a2bbc8b6fd900d19b8b2322f7c3eaaa366f0b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:16+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR74115"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.66,
+  "tokens_in": 2076,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

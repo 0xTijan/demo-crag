@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gaz23cxxxw_4bd98d9a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d5e63e1c1afbd0dd640ef71b39dc7f238ef0d7e774d69762303a543ac1a85bb0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:59+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GAZ23C2V7W",
+   "GAZ23C3V0W",
+   "GAZ23C3V3W",
+   "GAZ23C3V6W",
+   "GAZ23C3V9W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.72,
+  "tokens_in": 2148,
+  "tokens_out": 87
+ },
+ "type": "zener_diode"
+}

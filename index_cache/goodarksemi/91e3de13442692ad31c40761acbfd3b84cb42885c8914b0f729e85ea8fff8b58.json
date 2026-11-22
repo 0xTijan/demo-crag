@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/2n5551_03bacb5f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "91e3de13442692ad31c40761acbfd3b84cb42885c8914b0f729e85ea8fff8b58",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:42+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "2N5551"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.0,
+  "tokens_in": 1381,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

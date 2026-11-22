@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsdm110-sds_ee057eaa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "78a601fb270b2d386b9235da6cdbc79e5f75549601c8da8e4c09acc63ee1b4e2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:40+00:00",
+  "is_datasheet": true,
+  "label": "three-axis digital magnetometer",
+  "family": false,
+  "part_numbers": [
+   "GSDM110"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.54,
+  "tokens_in": 1490,
+  "tokens_out": 41
+ },
+ "type": "three_axis_magnetometer"
+}

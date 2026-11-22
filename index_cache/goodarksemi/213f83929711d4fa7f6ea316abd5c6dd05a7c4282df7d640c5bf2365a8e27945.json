@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gbj15x_4d63e2fb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "213f83929711d4fa7f6ea316abd5c6dd05a7c4282df7d640c5bf2365a8e27945",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:01+00:00",
+  "is_datasheet": true,
+  "label": "single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBJ15A",
+   "GBJ15B",
+   "GBJ15D",
+   "GBJ15G",
+   "GBJ15J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.52,
+  "tokens_in": 1972,
+  "tokens_out": 82
+ },
+ "type": "bridge_rectifier"
+}

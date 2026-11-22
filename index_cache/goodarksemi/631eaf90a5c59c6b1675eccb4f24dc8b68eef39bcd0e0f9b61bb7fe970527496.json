@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsds4148_4c9e44ab.md",
+ "supplier": "goodarksemi",
+ "file_hash": "631eaf90a5c59c6b1675eccb4f24dc8b68eef39bcd0e0f9b61bb7fe970527496",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:41+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSDS4148"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.51,
+  "tokens_in": 1201,
+  "tokens_out": 41
+ },
+ "type": "switching_diode"
+}

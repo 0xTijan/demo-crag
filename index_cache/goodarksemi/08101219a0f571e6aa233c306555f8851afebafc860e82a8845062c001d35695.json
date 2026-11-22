@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc2312au_2dafca7f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "08101219a0f571e6aa233c306555f8851afebafc860e82a8845062c001d35695",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:01+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC2312AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.02,
+  "tokens_in": 1699,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmcl4148_a3a75093.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9d8d63ef37431670fb1fbd85b961d1dcdeeac9bff178db0677fdbf5e5bccad26",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:04+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSMCL4148"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.4,
+  "tokens_in": 991,
+  "tokens_out": 41
+ },
+ "type": "switching_diode"
+}

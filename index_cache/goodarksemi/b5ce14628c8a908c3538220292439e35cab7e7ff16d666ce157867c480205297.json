@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/bc846xw-bc848xw_3f1cab59.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b5ce14628c8a908c3538220292439e35cab7e7ff16d666ce157867c480205297",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:58+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "BC846xW",
+   "BC847xW",
+   "BC848xW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.56,
+  "tokens_in": 2035,
+  "tokens_out": 55
+ },
+ "type": "npn_transistor"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjd3n100_e2f7dc95.md",
+ "supplier": "goodarksemi",
+ "file_hash": "32f03e876ca3ffd6624687db525c238fad897527edb65037eaabe14d7976ec89",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:50+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJD3N100"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.02,
+  "tokens_in": 2137,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

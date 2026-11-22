@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgh10200_2fc42830.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e73d809d2f47cd0fcb341db7727444ef80ab73a24530884f40537e5f56824ca2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:47+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGH10200"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.48,
+  "tokens_in": 1879,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

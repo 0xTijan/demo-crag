@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgd7r210_735a27e8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c76cda97b6df1a992228b0ed48561fc6c86e9f5cd051fe3976d56178118dccde",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:37+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGD7R210"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.13,
+  "tokens_in": 2026,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

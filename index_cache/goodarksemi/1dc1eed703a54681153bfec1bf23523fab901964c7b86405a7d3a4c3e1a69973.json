@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft4005au_9210507c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1dc1eed703a54681153bfec1bf23523fab901964c7b86405a7d3a4c3e1a69973",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:57+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT4005AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.96,
+  "tokens_in": 2111,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

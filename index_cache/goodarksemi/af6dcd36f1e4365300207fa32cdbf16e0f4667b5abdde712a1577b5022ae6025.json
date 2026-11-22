@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/r12xxf_7a495e8b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "af6dcd36f1e4365300207fa32cdbf16e0f4667b5abdde712a1577b5022ae6025",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:01+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "R1200F",
+   "R1500F",
+   "R1800F",
+   "R2000F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.49,
+  "tokens_in": 1439,
+  "tokens_out": 64
+ },
+ "type": "fast_recovery_rectifier"
+}

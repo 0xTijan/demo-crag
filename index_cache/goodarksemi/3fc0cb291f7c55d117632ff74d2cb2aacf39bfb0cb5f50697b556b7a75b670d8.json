@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsja65r041au_95c30f8f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3fc0cb291f7c55d117632ff74d2cb2aacf39bfb0cb5f50697b556b7a75b670d8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:38+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJA65R041AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.19,
+  "tokens_in": 2280,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

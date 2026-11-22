@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfv1530_bbf99240.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e98556c6e5d8c7a1c1509bdcfa1538d994bdc2e67b76ce5494025b06b6685d60",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:51+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFV1530"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.2,
+  "tokens_in": 1916,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

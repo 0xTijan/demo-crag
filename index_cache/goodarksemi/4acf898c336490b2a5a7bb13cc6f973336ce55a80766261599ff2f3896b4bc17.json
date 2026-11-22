@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/es5x_f470412d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4acf898c336490b2a5a7bb13cc6f973336ce55a80766261599ff2f3896b4bc17",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:22+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "ES5A",
+   "ES5B",
+   "ES5C",
+   "ES5D",
+   "ES5F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.99,
+  "tokens_in": 1886,
+  "tokens_out": 68
+ },
+ "type": "ultrafast_rectifier"
+}

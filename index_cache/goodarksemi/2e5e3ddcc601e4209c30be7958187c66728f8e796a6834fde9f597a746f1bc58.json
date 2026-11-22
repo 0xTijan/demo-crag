@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsf1001_3f9a3bfb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2e5e3ddcc601e4209c30be7958187c66728f8e796a6834fde9f597a746f1bc58",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:29+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSF1001"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.22,
+  "tokens_in": 1977,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

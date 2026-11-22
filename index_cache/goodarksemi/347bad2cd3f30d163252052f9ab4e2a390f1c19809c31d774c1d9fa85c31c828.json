@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2341e_ccad0e06.md",
+ "supplier": "goodarksemi",
+ "file_hash": "347bad2cd3f30d163252052f9ab4e2a390f1c19809c31d774c1d9fa85c31c828",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:34+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2341E"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.85,
+  "tokens_in": 1982,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

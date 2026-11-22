@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gs2fmdz232a_2e992b45.md",
+ "supplier": "goodarksemi",
+ "file_hash": "15b685eee6b450ff5e41db74d754c486f9f3a08490475852d7611aa04ca829bf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:08+00:00",
+  "is_datasheet": true,
+  "label": "temperature compensated zener diode",
+  "family": false,
+  "part_numbers": [
+   "GS2FMDZ232A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.12,
+  "tokens_in": 1078,
+  "tokens_out": 45
+ },
+ "type": "zener_diode"
+}

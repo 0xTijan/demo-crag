@@ -5,22 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:33+00:00",
-  "is_datasheet": true,
-  "label": "NTC thermistor",
+  "at": "2026-11-21T12:00:13+00:00",
+  "is_datasheet": false,
+  "label": "product catalog",
   "family": true,
   "part_numbers": [
-   "NTCD05",
-   "NTCD07",
-   "NTCD09",
-   "NTCD11",
-   "NTCD13"
+   "NTCD05"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.81,
-  "tokens_in": 1646,
-  "tokens_out": 74
+  "seconds": 5.19,
+  "tokens_in": 1583,
+  "tokens_out": 36
  },
- "type": "ntc_thermistor"
+ "type": "_not_a_datasheet"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/hs2xa_a79e8db5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b35f2e95071f1b39b3bd449b594871c1e17c3aefb5d1c7118bbcec6e38d5624f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:36+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "HS2AA",
+   "HS2BA",
+   "HS2DA",
+   "HS2FA",
+   "HS2GA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.75,
+  "tokens_in": 1732,
+  "tokens_out": 74
+ },
+ "type": "ultrafast_rectifier"
+}

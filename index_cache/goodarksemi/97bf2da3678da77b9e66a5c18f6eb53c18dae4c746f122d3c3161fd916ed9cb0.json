@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsp6smafjxx_51ccc69b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "97bf2da3678da77b9e66a5c18f6eb53c18dae4c746f122d3c3161fd916ed9cb0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:03+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GSP6SMAFJ5.0A",
+   "GSP6SMAFJ6.0A",
+   "GSP6SMAFJ6.5A",
+   "GSP6SMAFJ7.0A",
+   "GSP6SMAFJ7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.41,
+  "tokens_in": 4316,
+  "tokens_out": 97
+ },
+ "type": "tvs_diode"
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsmbrd20100-gsmbrd20200_63bead5d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "14d748b43fff246f94e3b36ba69cfa47bad1120861c3aee7b838a993fb2aedab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:55+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSMBRD20100",
+   "GSMBRD20150",
+   "GSMBRD20200"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.99,
+  "tokens_in": 1256,
+  "tokens_out": 64
+ },
+ "type": "schottky_rectifier"
+}

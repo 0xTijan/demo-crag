@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbc817_60762fc1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a13ef39085a25908409bfd174c8d6d52d1a4444a594a08ac73c4df911ab9feac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:02+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBC817"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.4,
+  "tokens_in": 6357,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfq1006s_d2122623.md",
+ "supplier": "goodarksemi",
+ "file_hash": "749806f25f6ec0865e9139e6c7b41cc00eda45cd98f63780c4ec98e4c8bc776d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:50+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFQ1006S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.72,
+  "tokens_in": 1802,
+  "tokens_out": 46
+ },
+ "type": "complementary_mosfet"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mbrd10200ct_4c5a93eb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "776f8e2f00189447ab58f5ef624e3075065d1ff7f46b2c9eb60d5eb42a7d183f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:57+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRD10200CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.01,
+  "tokens_in": 1147,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

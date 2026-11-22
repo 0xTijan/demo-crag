@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp0r945h_244a2be4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f2f2fc51db07b3c197448f36642fe79c5b00946c64d2eca599cabb2d5cf5dbfa",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:45+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP0R945H"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.25,
+  "tokens_in": 2200,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

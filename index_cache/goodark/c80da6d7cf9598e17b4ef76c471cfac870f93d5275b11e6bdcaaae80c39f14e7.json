@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:57:12+00:00",
+  "at": "2026-11-21T10:43:40+00:00",
   "is_datasheet": true,
   "label": "bridge rectifier",
   "family": true,
@@ -18,8 +18,8 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.18,
-  "tokens_in": 2023,
+  "seconds": 7.54,
+  "tokens_in": 1680,
   "tokens_out": 79
  },
  "type": "bridge_rectifier"

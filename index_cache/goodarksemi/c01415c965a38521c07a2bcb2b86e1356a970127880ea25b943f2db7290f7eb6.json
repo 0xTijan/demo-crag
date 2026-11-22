@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbt6520_a45f35ba.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c01415c965a38521c07a2bcb2b86e1356a970127880ea25b943f2db7290f7eb6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:33+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMMBT6520"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.07,
+  "tokens_in": 1519,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

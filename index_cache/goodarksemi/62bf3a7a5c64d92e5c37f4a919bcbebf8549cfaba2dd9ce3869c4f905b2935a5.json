@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb0206_7e37006a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "62bf3a7a5c64d92e5c37f4a919bcbebf8549cfaba2dd9ce3869c4f905b2935a5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:22+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB0206"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.78,
+  "tokens_in": 1872,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

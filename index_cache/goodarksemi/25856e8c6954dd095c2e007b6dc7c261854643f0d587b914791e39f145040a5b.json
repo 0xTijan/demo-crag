@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsftl2r710_742c2ee8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "25856e8c6954dd095c2e007b6dc7c261854643f0d587b914791e39f145040a5b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:38+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFTL2R710"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.44,
+  "tokens_in": 1986,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

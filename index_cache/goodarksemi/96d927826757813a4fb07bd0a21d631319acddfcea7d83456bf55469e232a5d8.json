@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp12085_3865ad3e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "96d927826757813a4fb07bd0a21d631319acddfcea7d83456bf55469e232a5d8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:36+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP12085"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.0,
+  "tokens_in": 1997,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

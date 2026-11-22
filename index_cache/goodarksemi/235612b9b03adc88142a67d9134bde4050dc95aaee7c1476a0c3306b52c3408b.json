@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp4013au_cf262428.md",
+ "supplier": "goodarksemi",
+ "file_hash": "235612b9b03adc88142a67d9134bde4050dc95aaee7c1476a0c3306b52c3408b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:18+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP4013AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.08,
+  "tokens_in": 2104,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

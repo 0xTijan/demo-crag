@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/schottky-wafer-25a-45v_a8c5b134.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3dc6fe103d293a7c4d462b66366d40a56e706fdee41317b94b4b66f7f7d90b4a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:05+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": false,
+  "part_numbers": [
+   "GDPMBR2545-132"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.65,
+  "tokens_in": 1127,
+  "tokens_out": 47
+ },
+ "type": "schottky_rectifier"
+}

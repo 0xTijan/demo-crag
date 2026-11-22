@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq3404_7b34e1c0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b77544abd73f4a67ba86debad35a9213bda77f1f70053f6e1c8b5c33923d6256",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:52+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ3404"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.38,
+  "tokens_in": 1994,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sl22b-sl210b_e4dc7e6f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "504cf9ec6a54696c1d1051518d0d86f9b9503dbcc2c23103da33ef19ebccd222",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:19+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL22B",
+   "SL23B",
+   "SL24B",
+   "SL25B",
+   "SL26B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.14,
+  "tokens_in": 1862,
+  "tokens_out": 88
+ },
+ "type": "schottky_rectifier"
+}

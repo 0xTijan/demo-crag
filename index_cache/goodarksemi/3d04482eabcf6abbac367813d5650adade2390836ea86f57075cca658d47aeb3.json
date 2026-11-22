@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gskbj20xx_b8258bc5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3d04482eabcf6abbac367813d5650adade2390836ea86f57075cca658d47aeb3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:42+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSKBJ2001",
+   "GSKBJ2002",
+   "GSKBJ2004",
+   "GSKBJ2006",
+   "GSKBJ2008"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.0,
+  "tokens_in": 2074,
+  "tokens_out": 85
+ },
+ "type": "bridge_rectifier"
+}

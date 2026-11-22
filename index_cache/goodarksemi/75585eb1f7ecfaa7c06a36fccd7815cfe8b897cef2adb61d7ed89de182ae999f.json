@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gses2xa_ae81c6ca.md",
+ "supplier": "goodarksemi",
+ "file_hash": "75585eb1f7ecfaa7c06a36fccd7815cfe8b897cef2adb61d7ed89de182ae999f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:22+00:00",
+  "is_datasheet": true,
+  "label": "superfast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSES2AA",
+   "GSES2BA",
+   "GSES2CA",
+   "GSES2DA",
+   "GSES2FA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.8,
+  "tokens_in": 2156,
+  "tokens_out": 87
+ },
+ "type": "ultrafast_rectifier"
+}

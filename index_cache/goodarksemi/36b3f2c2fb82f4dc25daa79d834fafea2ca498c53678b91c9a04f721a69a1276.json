@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc02025_e6e47dad.md",
+ "supplier": "goodarksemi",
+ "file_hash": "36b3f2c2fb82f4dc25daa79d834fafea2ca498c53678b91c9a04f721a69a1276",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:04+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC02025"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.3,
+  "tokens_in": 1972,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

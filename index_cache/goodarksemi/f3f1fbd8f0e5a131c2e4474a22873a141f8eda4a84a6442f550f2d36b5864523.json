@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbat4005j_c5c74d5c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f3f1fbd8f0e5a131c2e4474a22873a141f8eda4a84a6442f550f2d36b5864523",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:27+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAT4005J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.5,
+  "tokens_in": 1118,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

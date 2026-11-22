@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:14:44+00:00",
+  "at": "2026-11-21T11:59:24+00:00",
   "is_datasheet": true,
   "label": "alloy chip shunt resistor",
   "family": true,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.19,
-  "tokens_in": 2645,
+  "seconds": 6.59,
+  "tokens_in": 2515,
   "tokens_out": 42
  },
- "type": "alloy_chip_shunt_resistor"
+ "type": "current_sensing_chip_resistor"
 }

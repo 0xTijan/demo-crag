@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjd60r880au_eac31d7c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "878ab55a1f0b7f4b3a7a0d438a64fc3b7529cd7d221c6e20ce4633c7a939b76b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:58+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJD60R880AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.82,
+  "tokens_in": 2110,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,20 @@
+{
+ "file": "goodarksemi/murb820_92a75957.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3cb7bf3181d7bfdde78f965e14e7ab27bbd5a765d6a87d8b2aebfb7d275e1642",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:14+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.83,
+  "tokens_in": 1306,
+  "tokens_out": 33
+ },
+ "type": "fast_recovery_rectifier"
+}

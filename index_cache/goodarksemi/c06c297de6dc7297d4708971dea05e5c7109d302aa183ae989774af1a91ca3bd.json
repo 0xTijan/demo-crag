@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr0307_f9f92b42.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c06c297de6dc7297d4708971dea05e5c7109d302aa183ae989774af1a91ca3bd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:37+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR0307"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.2,
+  "tokens_in": 1846,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

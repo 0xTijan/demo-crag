@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsedc36u025_c9e182fa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6d3cd61443f91ca6092bd1d2df4d174a92f6c744e2b0c2c950ec3bcaddf94df8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:22+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEDC36U025"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.56,
+  "tokens_in": 998,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

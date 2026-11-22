@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsen3u3374_3a628e0b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5d170f8c39f8cc67baff8f8a39030aaa738a81029d847ed6f59fafec2621fb2d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:28+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSEN3U3374"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.62,
+  "tokens_in": 1234,
+  "tokens_out": 43
+ },
+ "type": "esd_tvs_array"
+}

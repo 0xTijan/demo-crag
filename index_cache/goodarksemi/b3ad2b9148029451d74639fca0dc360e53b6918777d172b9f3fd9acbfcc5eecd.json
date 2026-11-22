@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq6806_6e9025c4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b3ad2b9148029451d74639fca0dc360e53b6918777d172b9f3fd9acbfcc5eecd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:26+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ6806"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.07,
+  "tokens_in": 2186,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

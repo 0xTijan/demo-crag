@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfl0956_6184fa61.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f016933b1c952103bc2659bc67b8e10c9120eb8afa8f83f5f929114b9ba9371c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:13+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFL0956"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 2011,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

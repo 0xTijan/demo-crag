@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2302_df2c822a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ae9a93ac78ca684650b462291870fd90609ef3206bd963e5c6537871bf838df8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:20+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2302"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.38,
+  "tokens_in": 1883,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

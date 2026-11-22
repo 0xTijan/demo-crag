@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:11:56+00:00",
+  "at": "2026-11-21T11:56:38+00:00",
   "is_datasheet": true,
   "label": "aluminum nitride thin film precision chip resistor",
   "family": true,
@@ -17,9 +17,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.62,
-  "tokens_in": 1813,
+  "seconds": 6.07,
+  "tokens_in": 1734,
   "tokens_out": 57
  },
- "type": "aluminum_nitride_thin_film_precision_chi"
+ "type": "thin_film_chip_resistor"
 }

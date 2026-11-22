@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgt5008_420e3730.md",
+ "supplier": "goodarksemi",
+ "file_hash": "66f0b69e02b57ad048267f7514e6e25ba1ec264a3c9c9005bb88e0a004a77867",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:42+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGT5008"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.7,
+  "tokens_in": 1966,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb3123au_4963f400.md",
+ "supplier": "goodarksemi",
+ "file_hash": "91c0ecd17777ee834a1c7056be10daf9f5833bc9aec18fa23a077849273e3cf7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:52+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB3123AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.77,
+  "tokens_in": 2051,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

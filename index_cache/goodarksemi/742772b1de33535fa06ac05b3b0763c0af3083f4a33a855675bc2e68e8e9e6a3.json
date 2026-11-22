@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsk12pc120l_7de3e9d0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "742772b1de33535fa06ac05b3b0763c0af3083f4a33a855675bc2e68e8e9e6a3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:26+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSK12PC120L"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.1,
+  "tokens_in": 1439,
+  "tokens_out": 45
+ },
+ "type": "schottky_rectifier"
+}

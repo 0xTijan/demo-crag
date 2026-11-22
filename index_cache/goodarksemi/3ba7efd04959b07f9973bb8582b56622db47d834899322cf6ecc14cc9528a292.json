@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gses12vd1006-2b_554d2953.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3ba7efd04959b07f9973bb8582b56622db47d834899322cf6ecc14cc9528a292",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:19+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSES12VD1006-2B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.68,
+  "tokens_in": 1155,
+  "tokens_out": 47
+ },
+ "type": "esd_protection_diode"
+}

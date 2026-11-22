@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gp15x_bb1dcd99.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aad3fb26b84010a7678190e3b2a36e7247cf32b3e05e03888e556883676d744e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:38+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated rectifier",
+  "family": true,
+  "part_numbers": [
+   "GP15A",
+   "GP15B",
+   "GP15D",
+   "GP15G",
+   "GP15J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.23,
+  "tokens_in": 1957,
+  "tokens_out": 75
+ },
+ "type": "standard_rectifier"
+}

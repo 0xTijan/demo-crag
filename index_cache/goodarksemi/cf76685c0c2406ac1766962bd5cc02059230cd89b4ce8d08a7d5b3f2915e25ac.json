@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfl0601_7281c98d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cf76685c0c2406ac1766962bd5cc02059230cd89b4ce8d08a7d5b3f2915e25ac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:55+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFL0601"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.11,
+  "tokens_in": 1979,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:12+00:00",
+  "at": "2026-11-21T11:56:53+00:00",
   "is_datasheet": true,
   "label": "Automotive Grade Thin Film Precision Chip Resistor",
   "family": true,
@@ -17,9 +17,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.67,
-  "tokens_in": 1783,
+  "seconds": 6.36,
+  "tokens_in": 1708,
   "tokens_out": 61
  },
- "type": "automotive_grade_thin_film_precision_chi"
+ "type": "thin_film_chip_resistor"
 }

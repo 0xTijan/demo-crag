@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh500p10_b7f61e2d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b5672df8d3e2607e1f0d4a52587294ac47676a50b6b1d3d2921043c0e794d95c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:37+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH500P10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.78,
+  "tokens_in": 2135,
+  "tokens_out": 43
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfa7r515_eb195cbe.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3d3636a41b81d88037cc5637c46625cfca753e6a49721de38b6f46780e87b68c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:11+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFA7R515"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.42,
+  "tokens_in": 1997,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

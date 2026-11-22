@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/tvs-wafer-1500w_6f5c68a1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fa5131c69f0258715cfc5692053dd8bfc945195ea2ce1798d0209a50fbe8163f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:31+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GDTSMCJ5.0A",
+   "GDTSMCJ6.0A",
+   "GDTSMCJ6.5A",
+   "GDTSMCJ7.0A",
+   "GDTSMCJ7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.03,
+  "tokens_in": 2978,
+  "tokens_out": 90
+ },
+ "type": "tvs_diode"
+}

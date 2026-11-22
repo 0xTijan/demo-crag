@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt718_071969f0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cae6bcd1a2f10b48ea6147579fbbc9fcc5f5d10a44c372ccab9647a853fac2b6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:14+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT718"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.14,
+  "tokens_in": 1442,
+  "tokens_out": 38
+ },
+ "type": "pnp_transistor"
+}

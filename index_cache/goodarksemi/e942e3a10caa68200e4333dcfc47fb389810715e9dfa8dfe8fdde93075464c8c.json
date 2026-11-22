@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc3001_86b7c3af.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e942e3a10caa68200e4333dcfc47fb389810715e9dfa8dfe8fdde93075464c8c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:04+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC3001"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.96,
+  "tokens_in": 1764,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

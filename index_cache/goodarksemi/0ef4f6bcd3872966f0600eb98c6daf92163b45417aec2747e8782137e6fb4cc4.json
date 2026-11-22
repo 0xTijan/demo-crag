@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/low-cap-tvs-wafer_6e1d57c4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0ef4f6bcd3872966f0600eb98c6daf92163b45417aec2747e8782137e6fb4cc4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:34+00:00",
+  "is_datasheet": false,
+  "label": "wafer specification",
+  "family": true,
+  "part_numbers": [
+   "G D T 6 U L C 9 P 6 V 0 P",
+   "G D T 5 T D A 1 P 6 V 0 P",
+   "G D T R C P 6 V 4 P",
+   "G D T R A P 5 V 3 P",
+   "G D T R A P 6 V 1 P"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.16,
+  "tokens_in": 3420,
+  "tokens_out": 111
+ },
+ "type": "_not_a_datasheet"
+}

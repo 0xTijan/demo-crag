@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmurd520_8b5eafd3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6ffd4a43ac59e71bcddf7230f2c44152b4562bb670ac84b992bd8a0eb4fec1b8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:26+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMURD520"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.0,
+  "tokens_in": 1099,
+  "tokens_out": 41
+ },
+ "type": "fast_recovery_rectifier"
+}

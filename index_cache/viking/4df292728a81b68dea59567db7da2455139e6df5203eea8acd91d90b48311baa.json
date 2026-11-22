@@ -5,22 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:14:22+00:00",
+  "at": "2026-11-21T11:59:03+00:00",
   "is_datasheet": true,
   "label": "thick film chip resistor",
   "family": true,
   "part_numbers": [
-   "HVR..A Series",
    "HVR02",
    "HVR03",
    "HVR05",
-   "HVR06"
+   "HVR06",
+   "HVR0A"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.7,
-  "tokens_in": 1711,
-  "tokens_out": 64
+  "seconds": 6.27,
+  "tokens_in": 1646,
+  "tokens_out": 63
  },
  "type": "thick_film_chip_resistor"
 }

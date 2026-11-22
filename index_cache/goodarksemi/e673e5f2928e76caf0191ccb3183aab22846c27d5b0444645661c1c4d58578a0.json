@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbav99s_9a531e35.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e673e5f2928e76caf0191ccb3183aab22846c27d5b0444645661c1c4d58578a0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:49+00:00",
+  "is_datasheet": true,
+  "label": "high-speed switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAV99S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.25,
+  "tokens_in": 956,
+  "tokens_out": 41
+ },
+ "type": "switching_diode"
+}

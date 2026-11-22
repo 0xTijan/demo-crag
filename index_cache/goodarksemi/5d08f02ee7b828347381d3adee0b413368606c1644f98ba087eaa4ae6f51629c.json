@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez5b250_d4a9642f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5d08f02ee7b828347381d3adee0b413368606c1644f98ba087eaa4ae6f51629c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:00+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ5B250"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.46,
+  "tokens_in": 1108,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

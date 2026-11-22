@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:13:21+00:00",
+  "at": "2026-11-21T11:58:02+00:00",
   "is_datasheet": true,
   "label": "green thick film chip resistor",
   "family": true,
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.71,
-  "tokens_in": 1904,
+  "seconds": 6.85,
+  "tokens_in": 1825,
   "tokens_out": 63
  },
- "type": "green_thick_film_chip_resistor"
+ "type": "thick_film_chip_resistor"
 }

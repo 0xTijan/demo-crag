@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsewt5b003_9ffc9188.md",
+ "supplier": "goodarksemi",
+ "file_hash": "59066fee10a5cca375e66422e82a94c9bb04d878e2f6fee400fd8dee85963df4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:50+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSEWT5B003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.66,
+  "tokens_in": 1302,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

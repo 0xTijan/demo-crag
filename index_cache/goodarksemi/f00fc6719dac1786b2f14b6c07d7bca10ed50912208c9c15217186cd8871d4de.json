@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gshbrf4060ct_5036409f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f00fc6719dac1786b2f14b6c07d7bca10ed50912208c9c15217186cd8871d4de",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:22+00:00",
+  "is_datasheet": true,
+  "label": "Trench Schottky Barrier Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSHBRF4060CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.45,
+  "tokens_in": 1254,
+  "tokens_out": 47
+ },
+ "type": "schottky_rectifier"
+}

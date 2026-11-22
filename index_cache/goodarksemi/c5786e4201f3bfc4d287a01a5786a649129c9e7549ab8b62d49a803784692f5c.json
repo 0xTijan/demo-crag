@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gstl304nz_b9605435.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c5786e4201f3bfc4d287a01a5786a649129c9e7549ab8b62d49a803784692f5c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:44+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSTL304NZ"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.53,
+  "tokens_in": 2022,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

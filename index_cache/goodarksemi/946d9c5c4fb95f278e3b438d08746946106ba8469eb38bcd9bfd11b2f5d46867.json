@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgc1060s_914ee4dc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "946d9c5c4fb95f278e3b438d08746946106ba8469eb38bcd9bfd11b2f5d46867",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:07+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGC1060S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.35,
+  "tokens_in": 1288,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

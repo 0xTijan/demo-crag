@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gbu8005-gbu810_3b26f548.md",
+ "supplier": "goodarksemi",
+ "file_hash": "91861cfc3f91c71d261f3b9335d6d565f8d85e1f9a11faad23b47b63ab3125a2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:24+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU8005",
+   "GBU801",
+   "GBU802",
+   "GBU804",
+   "GBU806"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.62,
+  "tokens_in": 1646,
+  "tokens_out": 70
+ },
+ "type": "bridge_rectifier"
+}

@@ -5,22 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:46:45+00:00",
+  "at": "2026-11-21T10:33:50+00:00",
   "is_datasheet": true,
   "label": "bridge rectifier",
   "family": true,
   "part_numbers": [
-   "BR15 005",
-   "BR15 01",
-   "BR15 02",
-   "BR15 04",
-   "BR15 06"
+   "BR15005(W)",
+   "BR1501(W)",
+   "BR1502(W)",
+   "BR1504(W)",
+   "BR1506(W)"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.87,
-  "tokens_in": 1916,
-  "tokens_out": 72
+  "seconds": 6.04,
+  "tokens_in": 1637,
+  "tokens_out": 89
  },
  "type": "bridge_rectifier"
 }

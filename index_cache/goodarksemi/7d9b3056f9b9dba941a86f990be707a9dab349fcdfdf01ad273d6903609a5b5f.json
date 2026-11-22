@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/zener-wafer-0-5w-4-7v-1n750a_15fab067.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7d9b3056f9b9dba941a86f990be707a9dab349fcdfdf01ad273d6903609a5b5f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:56+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": false,
+  "part_numbers": [
+   "GDZ2CW032047YQ-2S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.95,
+  "tokens_in": 939,
+  "tokens_out": 49
+ },
+ "type": "zener_diode"
+}

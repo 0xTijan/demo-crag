@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsgc05xxu_4c328b1a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "583d4edea1dade7f56d5a6c871968393ebed8e9dfe0e9ff9ed50ecd1d06551c9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:59+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGC0503U",
+   "GSGC0504U",
+   "GSGC0505U",
+   "GSGC0506U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.47,
+  "tokens_in": 1527,
+  "tokens_out": 73
+ },
+ "type": "ultrafast_rectifier"
+}

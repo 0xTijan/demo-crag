@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bss84au_c100d2b8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "21c9a258ba15d466ddbd47a0db8982e8a956dc2510215d412dd7541dfbc9dae8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:16+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "BSS84AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.65,
+  "tokens_in": 1600,
+  "tokens_out": 40
+ },
+ "type": "mosfet_p"
+}

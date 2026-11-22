@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1-5smcx_71e7b3a0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1c656ba2e5c61723469d48bcb0b8c6f2174bb2fa5162b8d9a66538b2844150f1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:24+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "1.5SMC6.8A",
+   "1.5SMC7.5A",
+   "1.5SMC8.2A",
+   "1.5SMC9.1A",
+   "1.5SMC10A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.64,
+  "tokens_in": 3446,
+  "tokens_out": 86
+ },
+ "type": "tvs_diode"
+}

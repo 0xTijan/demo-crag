@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gspzta44_87337c68.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c460c054bf315efee8e8d71317c4cea0b4149a9839c02617cd61bb696c432fc8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:53+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSPZTA44"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.32,
+  "tokens_in": 1393,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

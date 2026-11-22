@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gskp0230s_f39e8491.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0c2523166cb4f257fe210d6919f8ddc75258be768769e6feb3488c9108b59e99",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:01+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSKP0230S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.38,
+  "tokens_in": 903,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

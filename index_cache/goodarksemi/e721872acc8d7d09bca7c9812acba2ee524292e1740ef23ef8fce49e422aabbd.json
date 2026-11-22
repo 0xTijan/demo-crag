@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmbxxs_8bfb22fe.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e721872acc8d7d09bca7c9812acba2ee524292e1740ef23ef8fce49e422aabbd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:03+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSMB1S",
+   "GSMB2S",
+   "GSMB4S",
+   "GSMB6S",
+   "GSMB8S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.39,
+  "tokens_in": 2888,
+  "tokens_out": 71
+ },
+ "type": "bridge_rectifier"
+}

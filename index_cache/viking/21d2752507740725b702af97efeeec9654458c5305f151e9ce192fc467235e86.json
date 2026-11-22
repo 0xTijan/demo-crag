@@ -5,19 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:55+00:00",
+  "at": "2026-11-21T12:02:32+00:00",
   "is_datasheet": true,
   "label": "molding E-beam welded metal strip resistor",
   "family": true,
   "part_numbers": [
-   "WMP12",
-   "WMP Series"
+   "WMP12"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.59,
-  "tokens_in": 1772,
-  "tokens_out": 48
+  "seconds": 5.94,
+  "tokens_in": 1702,
+  "tokens_out": 43
  },
- "type": "molding_e_beam_welded_metal_strip_resist"
+ "type": "current_sensing_chip_resistor"
 }

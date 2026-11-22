@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsk05pc100l_6f0ea9c2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2c935fb9df892f05b7cb77b73cb55112684679bbf2a41ff8e4eb989bd3ab9bb6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:24+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSK05PC100L"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 3.74,
+  "tokens_in": 961,
+  "tokens_out": 46
+ },
+ "type": "schottky_rectifier"
+}

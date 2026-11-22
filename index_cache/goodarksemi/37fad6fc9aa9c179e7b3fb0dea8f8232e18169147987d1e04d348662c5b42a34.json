@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbc846bdw_4447299a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "37fad6fc9aa9c179e7b3fb0dea8f8232e18169147987d1e04d348662c5b42a34",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:06+00:00",
+  "is_datasheet": true,
+  "label": "dual NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSBC846BDW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.54,
+  "tokens_in": 1276,
+  "tokens_out": 42
+ },
+ "type": "dual_npn_transistor"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/kblxx_211682b2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cb7d6896f2fa77641913245b6970df3d47e2a5d89ed95f8e5b03c3da1de4a78f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:50+00:00",
+  "is_datasheet": true,
+  "label": "single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBL005",
+   "KBL01",
+   "KBL02",
+   "KBL04",
+   "KBL06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.99,
+  "tokens_in": 1638,
+  "tokens_out": 76
+ },
+ "type": "bridge_rectifier"
+}

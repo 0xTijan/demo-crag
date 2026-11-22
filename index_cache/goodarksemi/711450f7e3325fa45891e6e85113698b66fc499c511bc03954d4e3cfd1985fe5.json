@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mur120_758481e5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "711450f7e3325fa45891e6e85113698b66fc499c511bc03954d4e3cfd1985fe5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:59+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR120"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.23,
+  "tokens_in": 1190,
+  "tokens_out": 40
+ },
+ "type": "ultrafast_rectifier"
+}

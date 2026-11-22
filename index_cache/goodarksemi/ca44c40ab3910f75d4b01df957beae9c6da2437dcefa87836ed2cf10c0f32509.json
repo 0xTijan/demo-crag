@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsef5u005_c58f4876.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ca44c40ab3910f75d4b01df957beae9c6da2437dcefa87836ed2cf10c0f32509",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:39+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEF5U005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.34,
+  "tokens_in": 1152,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmdt2222a_cc17290d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "86e56ab787e58aa189fcf4e55033e62bc881359794c1ace0eff7b0e571105966",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:28+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "MMDT2222A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.96,
+  "tokens_in": 1559,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

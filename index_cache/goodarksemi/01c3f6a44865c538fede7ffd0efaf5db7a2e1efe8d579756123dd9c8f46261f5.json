@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsem3u370_f27c0891.md",
+ "supplier": "goodarksemi",
+ "file_hash": "01c3f6a44865c538fede7ffd0efaf5db7a2e1efe8d579756123dd9c8f46261f5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:56+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEM3U370"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.29,
+  "tokens_in": 990,
+  "tokens_out": 42
+ },
+ "type": "esd_protection_diode"
+}

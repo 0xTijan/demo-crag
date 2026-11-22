@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsgbu25xx_436b5946.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6a3eed75065d138639f47f8cac01135dec7a8290cf58e3f53ce455408ebf6117",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:47+00:00",
+  "is_datasheet": true,
+  "label": "general purpose bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGBU2501",
+   "GSGBU2502",
+   "GSGBU2504",
+   "GSGBU2506",
+   "GSGBU2508"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.47,
+  "tokens_in": 1777,
+  "tokens_out": 87
+ },
+ "type": "bridge_rectifier"
+}

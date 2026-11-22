@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfp3990_66e0db33.md",
+ "supplier": "goodarksemi",
+ "file_hash": "97997f8e0ee77196c2df5f263806177e776d55fd4272efad1f2f44497a85db40",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:38+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFP3990"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.88,
+  "tokens_in": 2087,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

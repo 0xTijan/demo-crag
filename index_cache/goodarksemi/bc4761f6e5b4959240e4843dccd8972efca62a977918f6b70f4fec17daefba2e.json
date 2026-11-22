@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/seslc5vt563-6u_70f0671e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bc4761f6e5b4959240e4843dccd8972efca62a977918f6b70f4fec17daefba2e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:16+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "SESLC5VT563-6U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.68,
+  "tokens_in": 1394,
+  "tokens_out": 49
+ },
+ "type": "esd_protection_diode"
+}

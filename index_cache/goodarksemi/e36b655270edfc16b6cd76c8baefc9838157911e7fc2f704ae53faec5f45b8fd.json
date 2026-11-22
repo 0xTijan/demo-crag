@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bc857s_5f673ef8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e36b655270edfc16b6cd76c8baefc9838157911e7fc2f704ae53faec5f45b8fd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:04+00:00",
+  "is_datasheet": true,
+  "label": "dual PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "BC857S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.92,
+  "tokens_in": 1691,
+  "tokens_out": 40
+ },
+ "type": "dual_pnp_transistor"
+}

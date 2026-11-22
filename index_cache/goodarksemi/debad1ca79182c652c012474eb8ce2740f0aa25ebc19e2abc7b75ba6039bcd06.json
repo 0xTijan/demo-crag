@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq0312_7280f34f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "debad1ca79182c652c012474eb8ce2740f0aa25ebc19e2abc7b75ba6039bcd06",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:59+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ0312"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.88,
+  "tokens_in": 1857,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

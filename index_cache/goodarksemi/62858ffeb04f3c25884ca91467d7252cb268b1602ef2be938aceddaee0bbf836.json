@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gs2n5684_4fddedf3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "62858ffeb04f3c25884ca91467d7252cb268b1602ef2be938aceddaee0bbf836",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:09+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GS2N5684"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.66,
+  "tokens_in": 1564,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

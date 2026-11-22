@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzt4401_795d997e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "195c46c2edb214e34b366b8cefb0a7cd7344028d1592e296a8ed24f1c6965181",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:47+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "PZT4401"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.3,
+  "tokens_in": 1351,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

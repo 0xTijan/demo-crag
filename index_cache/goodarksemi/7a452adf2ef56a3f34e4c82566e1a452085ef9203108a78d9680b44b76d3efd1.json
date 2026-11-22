@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsej5u83_6239bde5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7a452adf2ef56a3f34e4c82566e1a452085ef9203108a78d9680b44b76d3efd1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:45+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEJ5U83"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.31,
+  "tokens_in": 1124,
+  "tokens_out": 42
+ },
+ "type": "esd_protection_diode"
+}

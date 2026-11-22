@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd5005_bc6fb0b7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e85469eb99745052839807151d24a117b3bde152afd04c416eeff3572abb439e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:00+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD5005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.48,
+  "tokens_in": 1943,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

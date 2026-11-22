@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gslb20xxs_1cba92c0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8555f0d146eab8b12c559fc752f470b7a802b465e08c2475a3f34030e8ee5e7a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:10+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSLB202S",
+   "GSLB204S",
+   "GSLB206S",
+   "GSLB208S",
+   "GSLB2010S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.7,
+  "tokens_in": 1581,
+  "tokens_out": 80
+ },
+ "type": "bridge_rectifier"
+}

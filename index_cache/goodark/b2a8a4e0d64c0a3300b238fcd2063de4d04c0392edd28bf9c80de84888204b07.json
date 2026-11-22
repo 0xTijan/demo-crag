@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:49:57+00:00",
+  "at": "2026-11-21T10:36:59+00:00",
   "is_datasheet": true,
   "label": "fast recovery rectifier",
   "family": true,
@@ -15,10 +15,10 @@
    "GBJL15MA"
   ],
   "confidence": "high",
-  "asked_again": false,
-  "seconds": 1.68,
-  "tokens_in": 1766,
-  "tokens_out": 56
+  "asked_again": true,
+  "seconds": 10.93,
+  "tokens_in": 2953,
+  "tokens_out": 110
  },
  "type": "fast_recovery_rectifier"
 }

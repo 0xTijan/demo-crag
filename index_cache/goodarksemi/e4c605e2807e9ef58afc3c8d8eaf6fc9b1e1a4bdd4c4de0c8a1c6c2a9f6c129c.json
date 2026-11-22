@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgt15140_4c1eab10.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e4c605e2807e9ef58afc3c8d8eaf6fc9b1e1a4bdd4c4de0c8a1c6c2a9f6c129c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:37+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGT15140"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.06,
+  "tokens_in": 1804,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssft04n15_2b3b18fa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0dbcc49534226e2f4472718a19c9fe5992220ff84468c217d3c4efc5e255f7e1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:23+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFT04N15"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.96,
+  "tokens_in": 1766,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

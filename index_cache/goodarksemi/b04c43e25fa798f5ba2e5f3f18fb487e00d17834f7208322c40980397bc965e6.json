@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp34010_1f42a933.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b04c43e25fa798f5ba2e5f3f18fb487e00d17834f7208322c40980397bc965e6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:01+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP34010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.21,
+  "tokens_in": 2147,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

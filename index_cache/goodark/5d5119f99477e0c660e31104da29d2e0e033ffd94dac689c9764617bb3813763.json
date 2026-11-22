@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:11:19+00:00",
+  "at": "2026-11-21T10:56:10+00:00",
   "is_datasheet": true,
-  "label": "standard rectifier",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "U05B4B48",
@@ -15,10 +15,10 @@
    "U05J4B48"
   ],
   "confidence": "high",
-  "asked_again": true,
-  "seconds": 2.69,
-  "tokens_in": 3703,
-  "tokens_out": 121
+  "asked_again": false,
+  "seconds": 5.23,
+  "tokens_in": 1505,
+  "tokens_out": 62
  },
- "type": "standard_rectifier"
+ "type": "fast_recovery_rectifier"
 }

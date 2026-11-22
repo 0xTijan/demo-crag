@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh1003_57621486.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8c42cecbc7cf71ef4f1edb6c80ff3ece25b1963af0fe55d70ec7d24414e793a1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:05+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH1003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.88,
+  "tokens_in": 2076,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

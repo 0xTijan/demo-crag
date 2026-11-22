@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gbu4005-gbu410_1ab2f25d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7e6c88512c76543acf6b84ff4ee9b7eb62cba07750e9f566fedb845cdff7a973",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:25+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU4005",
+   "GBU401",
+   "GBU402",
+   "GBU404",
+   "GBU406"
+  ],
+  "confidence": "high",
+  "asked_again": true,
+  "seconds": 14.11,
+  "tokens_in": 3430,
+  "tokens_out": 148
+ },
+ "type": "fast_recovery_rectifier"
+}

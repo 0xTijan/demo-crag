@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsclamp3304_4cc2ca01.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ced896598faa50abcd7c8fa355c20326c78e97879794e57b90a1dd6630abd873",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:10+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSCLAMP3304"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.66,
+  "tokens_in": 1323,
+  "tokens_out": 41
+ },
+ "type": "tvs_diode"
+}

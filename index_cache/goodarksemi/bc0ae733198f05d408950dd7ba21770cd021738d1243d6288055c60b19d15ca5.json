@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/p4kex_8c4d72b2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bc0ae733198f05d408950dd7ba21770cd021738d1243d6288055c60b19d15ca5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:26+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "P4KE6.8",
+   "P4KE6.8A",
+   "P4KE7.5",
+   "P4KE7.5A",
+   "P4KE8.2"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.16,
+  "tokens_in": 4107,
+  "tokens_out": 74
+ },
+ "type": "tvs_diode"
+}

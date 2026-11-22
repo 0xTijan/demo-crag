@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gmlsep24a-0603_20635163.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6ddf0dea5f4c34ba1d501bfdcd97572497e76fa3567223c17b108c81ae738131",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:03+00:00",
+  "is_datasheet": true,
+  "label": "multilayer polymer ESD suppressor",
+  "family": false,
+  "part_numbers": [
+   "GMLSEP24A-0603"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.97,
+  "tokens_in": 1165,
+  "tokens_out": 49
+ },
+ "type": "polymer_esd_suppressor"
+}

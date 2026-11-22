@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsfux_7288d6d9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "78406b11824ef8d7e49bf80a8c0933107d01ad745c48b264e4ac044705d62899",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:47+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSFU1",
+   "GSFU2",
+   "GSFU3",
+   "GSFU4",
+   "GSFU5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.52,
+  "tokens_in": 1932,
+  "tokens_out": 58
+ },
+ "type": "ultrafast_rectifier"
+}

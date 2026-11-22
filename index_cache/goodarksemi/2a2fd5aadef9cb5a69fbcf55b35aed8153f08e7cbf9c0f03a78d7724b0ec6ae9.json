@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sl32a-sl310a_8cd43361.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2a2fd5aadef9cb5a69fbcf55b35aed8153f08e7cbf9c0f03a78d7724b0ec6ae9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:21+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL32A",
+   "SL33A",
+   "SL34A",
+   "SL35A",
+   "SL36A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.15,
+  "tokens_in": 1848,
+  "tokens_out": 88
+ },
+ "type": "schottky_rectifier"
+}

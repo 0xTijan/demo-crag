@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:13:52+00:00",
+  "at": "2026-11-21T11:58:34+00:00",
   "is_datasheet": true,
   "label": "metal film resistor",
   "family": true,
@@ -16,9 +16,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.91,
-  "tokens_in": 2314,
+  "seconds": 8.36,
+  "tokens_in": 2153,
   "tokens_out": 55
  },
- "type": "metal_film_resistor"
+ "type": "leaded_film_resistor"
 }

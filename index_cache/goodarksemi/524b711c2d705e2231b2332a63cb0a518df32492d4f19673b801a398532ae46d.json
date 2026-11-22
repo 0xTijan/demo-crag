@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsf7002at_a082567a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "524b711c2d705e2231b2332a63cb0a518df32492d4f19673b801a398532ae46d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:58+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSF7002AT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.95,
+  "tokens_in": 1475,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

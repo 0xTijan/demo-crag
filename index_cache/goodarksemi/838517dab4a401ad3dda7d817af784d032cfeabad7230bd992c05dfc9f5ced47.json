@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfk3820k_462cccf2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "838517dab4a401ad3dda7d817af784d032cfeabad7230bd992c05dfc9f5ced47",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFK3820K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.09,
+  "tokens_in": 2071,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

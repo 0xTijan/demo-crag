@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsf2xg_8c5196e6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "46fb49a1a058c2a0fb2bdc4fc28433e155b698808a2916b5053eb51cb6e744a8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:46+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSF21G",
+   "GSF22G",
+   "GSF23G",
+   "GSF24G",
+   "GSF25G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.96,
+  "tokens_in": 1842,
+  "tokens_out": 89
+ },
+ "type": "ultrafast_rectifier"
+}

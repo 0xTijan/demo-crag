@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/lsl32a-lsl34a_46cefad6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0c644b8bf991a494600d6696b47ff3f2136e4c32cb9cc1b25a6a34dd01e414c3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:59+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": true,
+  "part_numbers": [
+   "LSL32A",
+   "LSL33A",
+   "LSL34A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.35,
+  "tokens_in": 1080,
+  "tokens_out": 56
+ },
+ "type": "schottky_rectifier"
+}

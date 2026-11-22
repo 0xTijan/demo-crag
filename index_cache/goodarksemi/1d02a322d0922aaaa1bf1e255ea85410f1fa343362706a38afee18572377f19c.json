@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp3944_5db0b30f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1d02a322d0922aaaa1bf1e255ea85410f1fa343362706a38afee18572377f19c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:02+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP3944"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.14,
+  "tokens_in": 1968,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

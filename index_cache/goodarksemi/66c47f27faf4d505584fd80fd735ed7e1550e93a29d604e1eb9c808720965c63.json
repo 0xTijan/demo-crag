@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gmlsep12a-0402_48e906ec.md",
+ "supplier": "goodarksemi",
+ "file_hash": "66c47f27faf4d505584fd80fd735ed7e1550e93a29d604e1eb9c808720965c63",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:58+00:00",
+  "is_datasheet": true,
+  "label": "polymer ESD suppressor",
+  "family": false,
+  "part_numbers": [
+   "GMLSEP12A-0402"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.82,
+  "tokens_in": 1183,
+  "tokens_out": 47
+ },
+ "type": "polymer_esd_suppressor"
+}

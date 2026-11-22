@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq3959_76f7f174.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3a9cabcbb9adead102e36ac6908713276be19c8c28ba3dea7cdf358d5f241792",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:59+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ3959"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.02,
+  "tokens_in": 1985,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

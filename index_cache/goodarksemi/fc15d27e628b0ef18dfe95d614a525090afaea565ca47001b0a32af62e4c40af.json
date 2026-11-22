@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq18110h_dd285afd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fc15d27e628b0ef18dfe95d614a525090afaea565ca47001b0a32af62e4c40af",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:20+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ18110H"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.4,
+  "tokens_in": 2018,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

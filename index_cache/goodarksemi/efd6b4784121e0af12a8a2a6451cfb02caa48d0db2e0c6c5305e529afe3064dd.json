@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq6037_8c86a2a3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "efd6b4784121e0af12a8a2a6451cfb02caa48d0db2e0c6c5305e529afe3064dd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:19+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ6037"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.0,
+  "tokens_in": 1750,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

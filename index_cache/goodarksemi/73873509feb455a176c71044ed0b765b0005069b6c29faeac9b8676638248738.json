@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn3839_4b913e5d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "73873509feb455a176c71044ed0b765b0005069b6c29faeac9b8676638248738",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:20:57+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN3839"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.68,
+  "tokens_in": 1963,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

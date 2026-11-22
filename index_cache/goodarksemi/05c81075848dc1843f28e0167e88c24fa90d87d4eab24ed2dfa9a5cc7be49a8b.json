@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmur620m1_0265bace.md",
+ "supplier": "goodarksemi",
+ "file_hash": "05c81075848dc1843f28e0167e88c24fa90d87d4eab24ed2dfa9a5cc7be49a8b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:20+00:00",
+  "is_datasheet": true,
+  "label": "superfast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMUR620M1"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.65,
+  "tokens_in": 1332,
+  "tokens_out": 43
+ },
+ "type": "ultrafast_rectifier"
+}

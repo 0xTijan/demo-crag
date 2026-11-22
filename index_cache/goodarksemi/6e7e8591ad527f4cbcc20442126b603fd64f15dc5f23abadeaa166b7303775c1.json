@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/murb1040ct_255634c2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6e7e8591ad527f4cbcc20442126b603fd64f15dc5f23abadeaa166b7303775c1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:12+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "MURB1040CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.33,
+  "tokens_in": 1433,
+  "tokens_out": 44
+ },
+ "type": "ultrafast_rectifier"
+}

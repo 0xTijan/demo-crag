@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjt95r120_e6140b9c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e0f195197fdf5f8dc6ed7e4229414acae2db98be44aece8f51d32e175b00e2c7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:44+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJT95R120"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.84,
+  "tokens_in": 2226,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

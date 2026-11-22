@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/2n7002kau_f2867a8e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f723d6348ae596fc0b51316e8fc0f69a49a303e656e0c8335734cf3fd3a2f865",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "2N7002KAU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.38,
+  "tokens_in": 1873,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

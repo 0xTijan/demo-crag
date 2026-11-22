@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsfnp39120_41d96850.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c23b5bbdf4bb7b2c7a90d77fd9119bca028a854435b7ae0526612e1a21f772af",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:35+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFNP39110H",
+   "GSFNP39120"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.02,
+  "tokens_in": 1963,
+  "tokens_out": 54
+ },
+ "type": "mosfet_n"
+}

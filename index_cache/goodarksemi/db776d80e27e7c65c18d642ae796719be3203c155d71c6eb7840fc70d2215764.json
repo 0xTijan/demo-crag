@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzt127_541223f0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "db776d80e27e7c65c18d642ae796719be3203c155d71c6eb7840fc70d2215764",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:41+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "PZT127"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.43,
+  "tokens_in": 1214,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

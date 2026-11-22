@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gskblxx_25b98ac9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "503a6275ae7c91cb233e6148a7b4ca37c32d6d39d88a2130540a995aab5f9d16",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:44+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSKBL01",
+   "GSKBL02",
+   "GSKBL04",
+   "GSKBL06",
+   "GSKBL08"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.81,
+  "tokens_in": 1546,
+  "tokens_out": 73
+ },
+ "type": "bridge_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/tvs-wafer-600w_7491a3c4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8b5bd2b047a859020951281888e5dbe912753650f9ef5d80618b32ce4b81946a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:44+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GDTSMBJ5.0A",
+   "GDTSMBJ6.0A",
+   "GDTSMBJ6.5A",
+   "GDTSMBJ7.0A",
+   "GDTSMBJ7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.04,
+  "tokens_in": 2985,
+  "tokens_out": 82
+ },
+ "type": "tvs_diode"
+}

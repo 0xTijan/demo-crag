@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp3983_7aec9afd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "935f8e6700515bc3ba2430d77b31099e6b5abb2dae476e5c107ac4d9f2d579a7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:06+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP3983"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.07,
+  "tokens_in": 2061,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

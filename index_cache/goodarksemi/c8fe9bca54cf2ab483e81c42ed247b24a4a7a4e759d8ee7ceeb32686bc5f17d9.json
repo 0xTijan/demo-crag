@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp4r310_48f3083e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c8fe9bca54cf2ab483e81c42ed247b24a4a7a4e759d8ee7ceeb32686bc5f17d9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:28+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP4R310"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.5,
+  "tokens_in": 2085,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

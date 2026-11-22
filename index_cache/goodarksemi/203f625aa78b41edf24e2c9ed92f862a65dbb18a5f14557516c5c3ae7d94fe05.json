@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgn8r77_8b4632b6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "203f625aa78b41edf24e2c9ed92f862a65dbb18a5f14557516c5c3ae7d94fe05",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:20+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGN8R77"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.84,
+  "tokens_in": 1801,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

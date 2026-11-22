@@ -5,22 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:51:17+00:00",
+  "at": "2026-11-21T10:38:09+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
   "part_numbers": [
-   "3FD100N03",
-   "3FD100N03L",
-   "3FD100N03S",
-   "3FD100N03SL",
-   "3FD100N03SLL"
+   "GMN01003M"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.4,
-  "tokens_in": 2618,
-  "tokens_out": 88
+  "seconds": 9.04,
+  "tokens_in": 7714,
+  "tokens_out": 43
  },
  "type": "mosfet_n"
 }

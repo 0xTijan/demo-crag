@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsepn12b0005_a460eac7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "594cd376982d7a32ae3a628ada2a279c316f385e3bd4d9959c43593b0e7876eb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:57+00:00",
+  "is_datasheet": true,
+  "label": "multilayer polymer ESD suppressor",
+  "family": false,
+  "part_numbers": [
+   "GSEPN12B0005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.75,
+  "tokens_in": 1177,
+  "tokens_out": 48
+ },
+ "type": "polymer_esd_suppressor"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf6670_5f6b6149.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b1c6f261b93fb9a132e525e376e97e62fb19a7b4bfb090645f0a99d831d3bb89",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:06+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6670"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.75,
+  "tokens_in": 2126,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

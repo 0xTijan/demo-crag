@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc02r41_13a93fe8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "adbc5b3762401a97a95e4d13290e8965c21b8136c28a2a6982ecff3636fc6e55",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:17+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC02R41"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.58,
+  "tokens_in": 2043,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

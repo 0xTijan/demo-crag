@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/goodarksemi-product-brief-mosfet-30v-282a-0-55mω-gsgp0r703-ppak5x6_d5f80f0d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "93d1bdb4d9463df56a08975ee1f7a81a905d809310463a1008f22a893bac6e40",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel SGT MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP0R703"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.68,
+  "tokens_in": 1071,
+  "tokens_out": 45
+ },
+ "type": "mosfet_n"
+}

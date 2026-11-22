@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsgpd5xxs_df676047.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d249056142937a5f64e9448abfe75140c3f7f65b9294c420cea07ea9355e03a2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:26+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGPD520S",
+   "GSGPD540S",
+   "GSGPD560S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.47,
+  "tokens_in": 1251,
+  "tokens_out": 61
+ },
+ "type": "schottky_rectifier"
+}

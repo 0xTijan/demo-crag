@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn4008_386f67d8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0b088b50b68de022cb99e6eb89ba3946cb1cc0c205f49bfc56cc0aad8bcf4ffa",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:07+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN4008"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.68,
+  "tokens_in": 2041,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

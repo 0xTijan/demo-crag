@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft1530_72d19ec0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ef835494d829bd0ae90dd1903b37dc96c560dc5921b47907ad66ed59338e7358",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:38+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT1530"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.05,
+  "tokens_in": 2078,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

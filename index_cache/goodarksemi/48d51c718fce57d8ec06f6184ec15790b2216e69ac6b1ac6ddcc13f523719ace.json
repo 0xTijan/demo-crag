@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn3013_e9b9fbb6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "48d51c718fce57d8ec06f6184ec15790b2216e69ac6b1ac6ddcc13f523719ace",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:20:40+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN3013"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.85,
+  "tokens_in": 2053,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfd6974_163e5f89.md",
+ "supplier": "goodarksemi",
+ "file_hash": "449d68b887d8685cb9ed9d1a7f1e1dad5fd9a3cd78b7f8c28327fbbfe9613718",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:01+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFD6974"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.99,
+  "tokens_in": 2173,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

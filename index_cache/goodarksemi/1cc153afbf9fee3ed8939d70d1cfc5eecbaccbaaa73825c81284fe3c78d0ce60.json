@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/sbr20100ct_55153197.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1cc153afbf9fee3ed8939d70d1cfc5eecbaccbaaa73825c81284fe3c78d0ce60",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:48+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SBR20100CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.12,
+  "tokens_in": 1146,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

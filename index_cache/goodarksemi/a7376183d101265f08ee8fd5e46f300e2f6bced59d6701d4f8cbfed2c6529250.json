@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp6r610au_a8da518f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a7376183d101265f08ee8fd5e46f300e2f6bced59d6701d4f8cbfed2c6529250",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:06+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP6R610AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.06,
+  "tokens_in": 2025,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

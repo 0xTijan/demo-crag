@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez24u540_f8438127.md",
+ "supplier": "goodarksemi",
+ "file_hash": "041d1ded07a0f784a831c0dc793d67217971a737f6fc32f1941cb122003a18ec",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:31+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ24U540"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.56,
+  "tokens_in": 1170,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

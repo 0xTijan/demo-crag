@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfd3906_7fe8c57a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6a68a570d6ca4b646f7ec39188aab7a67e1202a8602d8ddf28a679ae6a38a003",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:47+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFD3906"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.46,
+  "tokens_in": 2087,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

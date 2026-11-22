@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbas21h_d561ab58.md",
+ "supplier": "goodarksemi",
+ "file_hash": "80f807e5920fe4512837c4a0899f4a3ba18efbd4f67722dbeeb10e0aa4ce5a12",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:13+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAS21H"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.2,
+  "tokens_in": 930,
+  "tokens_out": 41
+ },
+ "type": "switching_diode"
+}

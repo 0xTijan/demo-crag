@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/30kpa28a-30kpa320ca_7700d2c2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ddb99a082a602a4a22b3079b0caf3cb69053a565b31d48b77a881fc372fee09e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:58+00:00",
+  "is_datasheet": true,
+  "label": "Transient Voltage Suppressor",
+  "family": true,
+  "part_numbers": [
+   "30KPA28A",
+   "30KPA30A",
+   "30KPA33A",
+   "30KPA36A",
+   "30KPA39A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.62,
+  "tokens_in": 2340,
+  "tokens_out": 77
+ },
+ "type": "tvs_diode"
+}

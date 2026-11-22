@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp06r02_a0a024c6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "24d32d13e52c8fec7640701999a30416e3245ee193136a43427d2a3c6e2e681c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:11+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP06R02"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.59,
+  "tokens_in": 1978,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

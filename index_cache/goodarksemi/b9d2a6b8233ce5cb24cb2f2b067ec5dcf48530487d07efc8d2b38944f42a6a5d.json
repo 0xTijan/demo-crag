@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/rs1510fl_065e249d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b9d2a6b8233ce5cb24cb2f2b067ec5dcf48530487d07efc8d2b38944f42a6a5d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:24+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "RS1510FL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.51,
+  "tokens_in": 1020,
+  "tokens_out": 40
+ },
+ "type": "fast_recovery_rectifier"
+}

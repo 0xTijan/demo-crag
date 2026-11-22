@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh49020_d19a2c3d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "48f3ce8226220c5a758c37d432663331346d62a58e9916618f446849c0854435",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:30+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH49020"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.74,
+  "tokens_in": 1984,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mbr1545ct_2fea8083.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fa9c25277acf9bc1821a8923531a647f7f8df3498cc97099724eb5bda0b89ce6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:22+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBR1545CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.48,
+  "tokens_in": 1384,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

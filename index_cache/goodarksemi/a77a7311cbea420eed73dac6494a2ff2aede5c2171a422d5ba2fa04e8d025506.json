@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt2907a_865cbeec.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a77a7311cbea420eed73dac6494a2ff2aede5c2171a422d5ba2fa04e8d025506",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:52+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT2907A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.36,
+  "tokens_in": 1531,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

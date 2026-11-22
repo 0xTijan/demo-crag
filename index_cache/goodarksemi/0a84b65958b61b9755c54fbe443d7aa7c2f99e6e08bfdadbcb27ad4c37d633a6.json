@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gs85hf-xx_4b073ecd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0a84b65958b61b9755c54fbe443d7aa7c2f99e6e08bfdadbcb27ad4c37d633a6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:48+00:00",
+  "is_datasheet": true,
+  "label": "general purpose rectifier",
+  "family": true,
+  "part_numbers": [
+   "GS85HF-10",
+   "GS85HF-20",
+   "GS85HF-40",
+   "GS85HF-60",
+   "GS85HF-80"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.86,
+  "tokens_in": 1641,
+  "tokens_out": 77
+ },
+ "type": "standard_rectifier"
+}

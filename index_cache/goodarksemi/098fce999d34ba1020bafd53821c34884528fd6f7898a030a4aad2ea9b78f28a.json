@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mur840-mur840f_27b47a46.md",
+ "supplier": "goodarksemi",
+ "file_hash": "098fce999d34ba1020bafd53821c34884528fd6f7898a030a4aad2ea9b78f28a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:10+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "MUR840",
+   "MUR840F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.14,
+  "tokens_in": 1278,
+  "tokens_out": 47
+ },
+ "type": "fast_recovery_rectifier"
+}

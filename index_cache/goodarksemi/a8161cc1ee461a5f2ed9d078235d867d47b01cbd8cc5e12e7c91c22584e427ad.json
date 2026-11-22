@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/by396-by399_32451deb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a8161cc1ee461a5f2ed9d078235d867d47b01cbd8cc5e12e7c91c22584e427ad",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:18+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "BY396",
+   "BY397",
+   "BY398",
+   "BY399"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.79,
+  "tokens_in": 1628,
+  "tokens_out": 56
+ },
+ "type": "fast_recovery_rectifier"
+}

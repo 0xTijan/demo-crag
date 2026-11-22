@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez4b600_30487794.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fa4dfad9b723ce32631cbbed2f2624eba098286ce04c8445834ac06cfa7b6687",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:44+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ4B600"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.57,
+  "tokens_in": 1160,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

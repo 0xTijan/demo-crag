@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/fsl16_c540da02.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fca6a81e3668e7e166d469df46a01abb3e9afe6f222b65d924a1f953612e6709",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:51+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "FSL16"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.43,
+  "tokens_in": 1099,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

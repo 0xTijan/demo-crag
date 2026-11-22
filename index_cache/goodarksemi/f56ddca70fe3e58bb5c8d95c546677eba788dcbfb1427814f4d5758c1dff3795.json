@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsl2ux_e786dc96.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f56ddca70fe3e58bb5c8d95c546677eba788dcbfb1427814f4d5758c1dff3795",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:04+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSL2U1",
+   "GSL2U2",
+   "GSL2U3",
+   "GSL2U4",
+   "GSL2U5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.86,
+  "tokens_in": 1433,
+  "tokens_out": 68
+ },
+ "type": "ultrafast_rectifier"
+}

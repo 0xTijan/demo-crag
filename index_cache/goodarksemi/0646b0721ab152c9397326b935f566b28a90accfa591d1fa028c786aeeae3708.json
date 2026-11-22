@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmdt3946_1b68633d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0646b0721ab152c9397326b935f566b28a90accfa591d1fa028c786aeeae3708",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:38+00:00",
+  "is_datasheet": true,
+  "label": "complementary NPN+PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMDT3946"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.05,
+  "tokens_in": 4385,
+  "tokens_out": 45
+ },
+ "type": "complementary_npn_pnp_transistor"
+}

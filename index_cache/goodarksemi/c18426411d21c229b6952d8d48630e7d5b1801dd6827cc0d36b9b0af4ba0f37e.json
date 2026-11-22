@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr3157au_f64690dc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c18426411d21c229b6952d8d48630e7d5b1801dd6827cc0d36b9b0af4ba0f37e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:59+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR3157AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.92,
+  "tokens_in": 1979,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

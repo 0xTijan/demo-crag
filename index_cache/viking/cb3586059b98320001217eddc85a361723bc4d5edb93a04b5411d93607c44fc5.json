@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:14:15+00:00",
+  "at": "2026-11-21T11:58:57+00:00",
   "is_datasheet": true,
   "label": "high ohmic chip resistor",
   "family": true,
@@ -15,9 +15,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.43,
-  "tokens_in": 1560,
+  "seconds": 6.03,
+  "tokens_in": 1494,
   "tokens_out": 45
  },
- "type": "high_ohmic_chip_resistor"
+ "type": "thick_film_chip_resistor"
 }

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd2r804_8c703fe8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b14cceac99bf597193f8190af744329bb68863ce00fce5df0025032a26137006",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:37+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD2R804"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 2161,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsby1xx_757028a5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b1d2ee8ebafc664ab1e6b8c89fd9e0c15c3df1905ddeb397e717bfb22d2d91c1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:01+00:00",
+  "is_datasheet": true,
+  "label": "high voltage rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSBY127",
+   "GSBY133"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.1,
+  "tokens_in": 1262,
+  "tokens_out": 46
+ },
+ "type": "standard_rectifier"
+}

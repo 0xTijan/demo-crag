@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/p4smax_c16e04bb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1e8ca440dc029b57c121614f57589a083118efb0047609ee1169fcdd78d76257",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:29+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "P4SMA6.8A",
+   "P4SMA7.5A",
+   "P4SMA8.2A",
+   "P4SMA9.1A",
+   "P4SMA10A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.85,
+  "tokens_in": 3431,
+  "tokens_out": 81
+ },
+ "type": "tvs_diode"
+}

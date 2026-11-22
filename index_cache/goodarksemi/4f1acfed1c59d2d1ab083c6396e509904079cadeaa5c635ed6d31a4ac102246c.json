@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp8982_8d16038d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4f1acfed1c59d2d1ab083c6396e509904079cadeaa5c635ed6d31a4ac102246c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP8982"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.74,
+  "tokens_in": 1795,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

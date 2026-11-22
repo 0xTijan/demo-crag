@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/rectifier-wafer-general-purpose_6a3b25e2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9e953c1148ca84c05feaa71f2531bd2739f1991df51a9573eac02918ba5631d9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:08+00:00",
+  "is_datasheet": true,
+  "label": "standard recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GDGS41A-M",
+   "GDGS45A-M",
+   "GDGS50A-M",
+   "GDGS56A-M",
+   "GDGS60A-M"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.05,
+  "tokens_in": 2079,
+  "tokens_out": 72
+ },
+ "type": "standard_rectifier"
+}

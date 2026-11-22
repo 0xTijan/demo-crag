@@ -5,22 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:24+00:00",
+  "at": "2026-11-21T12:00:04+00:00",
   "is_datasheet": true,
   "label": "wire wound power inductor",
   "family": true,
   "part_numbers": [
    "MLP(H)03",
-   "MLP(H)04",
    "MLP(H)05",
    "MLP(H)06",
+   "MLP(H)04",
    "MLP(H)08"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.26,
-  "tokens_in": 2358,
+  "seconds": 7.08,
+  "tokens_in": 2283,
   "tokens_out": 81
  },
- "type": "wire_wound_power_inductor"
+ "type": "power_inductor"
 }

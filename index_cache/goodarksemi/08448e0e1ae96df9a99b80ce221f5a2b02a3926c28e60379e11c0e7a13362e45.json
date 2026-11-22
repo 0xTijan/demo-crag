@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp4r004_e4a78403.md",
+ "supplier": "goodarksemi",
+ "file_hash": "08448e0e1ae96df9a99b80ce221f5a2b02a3926c28e60379e11c0e7a13362e45",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:43+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP4R004"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.38,
+  "tokens_in": 2229,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

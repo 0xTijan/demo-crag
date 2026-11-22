@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn2604_dcb95e05.md",
+ "supplier": "goodarksemi",
+ "file_hash": "29d4b1ebb52ba1f7a6138cbc84a9a98be79143c590e9fccee66f861fe233f874",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:20:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN2604"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.82,
+  "tokens_in": 1962,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq4017_37dcbf8d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "184fb98897ad605cd243edc8dbeb65a4a473d92668e96adc532974d598c0bd04",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:03+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ4017"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.16,
+  "tokens_in": 2090,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

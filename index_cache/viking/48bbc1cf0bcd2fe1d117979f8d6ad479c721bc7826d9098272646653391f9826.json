@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:16:52+00:00",
+  "at": "2026-11-21T12:01:31+00:00",
   "is_datasheet": true,
-  "label": "SMD Power Inductor",
+  "label": "power inductor",
   "family": true,
   "part_numbers": [
    "SDIA0315",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.2,
-  "tokens_in": 1997,
-  "tokens_out": 89
+  "seconds": 8.94,
+  "tokens_in": 1935,
+  "tokens_out": 87
  },
- "type": "smd_power_inductor"
+ "type": "power_inductor"
 }

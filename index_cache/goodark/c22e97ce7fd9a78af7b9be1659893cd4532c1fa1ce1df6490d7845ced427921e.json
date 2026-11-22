@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:49:41+00:00",
+  "at": "2026-11-21T10:36:45+00:00",
   "is_datasheet": true,
   "label": "fast recovery rectifier",
   "family": true,
@@ -17,10 +17,10 @@
    "GBJ50J"
   ],
   "confidence": "high",
-  "asked_again": false,
-  "seconds": 2.24,
-  "tokens_in": 2150,
-  "tokens_out": 81
+  "asked_again": true,
+  "seconds": 14.98,
+  "tokens_in": 3890,
+  "tokens_out": 160
  },
  "type": "fast_recovery_rectifier"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsp21a-gsp27a_8f408292.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bdfaac74242d5b9b41aa3c22d1907490df71a334e98f8e9ecd5186e8edd4c342",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:00+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSP21A",
+   "GSP22A",
+   "GSP23A",
+   "GSP24A",
+   "GSP25A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.16,
+  "tokens_in": 1780,
+  "tokens_out": 83
+ },
+ "type": "standard_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfa95r500_83dd8470.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c89ab2412f252fc591d7365e5f04456b26983e38d3d7fda90fba2802047a143d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFA95R500"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.43,
+  "tokens_in": 2118,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfj0200_471c9fa0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "89b7e0cef0c44735f53ad85ffb8b378c1e4abfb31f96b3696f08dd4f3ba8f66e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFJ0200"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.72,
+  "tokens_in": 2168,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

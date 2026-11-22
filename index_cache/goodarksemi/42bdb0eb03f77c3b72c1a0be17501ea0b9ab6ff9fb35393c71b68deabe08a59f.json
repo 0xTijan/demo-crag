@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsev12u650_f6916adc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "42bdb0eb03f77c3b72c1a0be17501ea0b9ab6ff9fb35393c71b68deabe08a59f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:35+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEV12U650"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.75,
+  "tokens_in": 1152,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

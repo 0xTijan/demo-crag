@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc123w_88de4b40.md",
+ "supplier": "goodarksemi",
+ "file_hash": "483c71dcd914565af646cc07313e8acd6e91be9fdddb7a47735f6b05b6c4ada2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:48+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC123W"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.29,
+  "tokens_in": 1764,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/by500-xx_99669ef2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a73031151abb6dff264fe6c1fe8c225bd6367c2aa191c9077497c800dc4461a7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:20+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "BY500-50",
+   "BY500-100",
+   "BY500-200",
+   "BY500-400",
+   "BY500-600"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.63,
+  "tokens_in": 1935,
+  "tokens_out": 102
+ },
+ "type": "fast_recovery_rectifier"
+}

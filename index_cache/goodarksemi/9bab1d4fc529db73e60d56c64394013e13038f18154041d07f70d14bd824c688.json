@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsf123kl_6eea6d8c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9bab1d4fc529db73e60d56c64394013e13038f18154041d07f70d14bd824c688",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSF123KL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.26,
+  "tokens_in": 1780,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

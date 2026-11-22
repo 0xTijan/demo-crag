@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/mx_568a1d01.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7da88e5756afc5e302870d8238b5489f071b7d6a8f0b289b6039eff31efa6e33",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:23+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "M1",
+   "M2",
+   "M3",
+   "M4",
+   "M5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.63,
+  "tokens_in": 1672,
+  "tokens_out": 60
+ },
+ "type": "fast_recovery_rectifier"
+}

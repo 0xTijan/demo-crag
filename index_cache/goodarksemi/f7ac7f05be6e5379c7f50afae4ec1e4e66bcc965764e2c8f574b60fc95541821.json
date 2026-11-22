@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsd3k4xx_fe294957.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f7ac7f05be6e5379c7f50afae4ec1e4e66bcc965764e2c8f574b60fc95541821",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:23+00:00",
+  "is_datasheet": true,
+  "label": "general purpose bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSD3K4005",
+   "GSD3K401",
+   "GSD3K402",
+   "GSD3K404",
+   "GSD3K406"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.57,
+  "tokens_in": 1788,
+  "tokens_out": 97
+ },
+ "type": "bridge_rectifier"
+}

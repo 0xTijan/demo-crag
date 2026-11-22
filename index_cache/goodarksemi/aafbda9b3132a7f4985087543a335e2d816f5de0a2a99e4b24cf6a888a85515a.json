@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsecl3u0021_01ca50fe.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aafbda9b3132a7f4985087543a335e2d816f5de0a2a99e4b24cf6a888a85515a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:11+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSECL3U0021"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.21,
+  "tokens_in": 1435,
+  "tokens_out": 44
+ },
+ "type": "esd_tvs_array"
+}

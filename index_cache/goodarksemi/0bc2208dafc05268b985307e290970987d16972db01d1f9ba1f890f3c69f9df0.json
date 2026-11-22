@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsju6520_f0e38565.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0bc2208dafc05268b985307e290970987d16972db01d1f9ba1f890f3c69f9df0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:07+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJU6520"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.71,
+  "tokens_in": 2026,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

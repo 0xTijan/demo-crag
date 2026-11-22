@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:16:29+00:00",
+  "at": "2026-11-21T12:01:14+00:00",
   "is_datasheet": true,
   "label": "supercapacitor",
   "family": true,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": true,
-  "seconds": 2.03,
-  "tokens_in": 3159,
+  "seconds": 13.17,
+  "tokens_in": 3087,
   "tokens_out": 74
  },
- "type": "conductive_polymer_aluminum_solid_electr"
+ "type": "edlc_supercapacitor"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gblxx_ede9e8ec.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0e9e7c9cae29b485349c65c0cbbb50d886f752500afca7057d91108491f91b49",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:14+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBL005",
+   "GBL01",
+   "GBL02",
+   "GBL04",
+   "GBL06"
+  ],
+  "confidence": "high",
+  "asked_again": true,
+  "seconds": 15.07,
+  "tokens_in": 3921,
+  "tokens_out": 148
+ },
+ "type": "fast_recovery_rectifier"
+}

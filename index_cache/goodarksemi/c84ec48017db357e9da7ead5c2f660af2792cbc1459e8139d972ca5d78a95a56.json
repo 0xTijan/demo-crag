@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/rectifier-wafer-ultra-fast-high-efficiency_54cf3968.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c84ec48017db357e9da7ead5c2f660af2792cbc1459e8139d972ca5d78a95a56",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:12+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GDGH50A-M",
+   "GDGH56A-M",
+   "GDGH60A-M",
+   "GDGH95A-M",
+   "GDGH140A-M"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.3,
+  "tokens_in": 1618,
+  "tokens_out": 73
+ },
+ "type": "fast_recovery_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp06140_fdddf8ba.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f20958b7e440054bec8f2b48cb4a18af9bd9b6ae5500b6c15a081de8c73a33dc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:35+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP06140"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.6,
+  "tokens_in": 2070,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

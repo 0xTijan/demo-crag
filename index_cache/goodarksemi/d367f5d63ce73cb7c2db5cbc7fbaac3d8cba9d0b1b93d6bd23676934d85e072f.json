@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd4005_060761cd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d367f5d63ce73cb7c2db5cbc7fbaac3d8cba9d0b1b93d6bd23676934d85e072f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:47+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD4005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.57,
+  "tokens_in": 2053,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez3b007_dde0eec3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c775a02d3d86da989894560ed0ad80b9d3ea6ef5c0961aacd8a156be6a024195",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:34+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ3B007"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.58,
+  "tokens_in": 1302,
+  "tokens_out": 42
+ },
+ "type": "tvs_diode"
+}

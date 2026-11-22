@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsey18u2700_2397fd14.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c49de3f4cd3cdf52b94ddc5455f9cbe7038d1c218d14785907c2037dfbf74db2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:58+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEY18U2700"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.57,
+  "tokens_in": 1046,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

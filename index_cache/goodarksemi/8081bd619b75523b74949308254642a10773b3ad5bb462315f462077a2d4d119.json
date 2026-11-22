@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/3kpx_538c0cd5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8081bd619b75523b74949308254642a10773b3ad5bb462315f462077a2d4d119",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:01+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "3KP5.0",
+   "3KP5.0A",
+   "3KP6.0",
+   "3KP6.0A",
+   "3KP6.5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.59,
+  "tokens_in": 3764,
+  "tokens_out": 69
+ },
+ "type": "tvs_diode"
+}

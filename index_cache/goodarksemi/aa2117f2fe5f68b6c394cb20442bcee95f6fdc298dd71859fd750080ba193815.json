@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjg60r360_fbe22911.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aa2117f2fe5f68b6c394cb20442bcee95f6fdc298dd71859fd750080ba193815",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:06+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJG60R360"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.8,
+  "tokens_in": 2212,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

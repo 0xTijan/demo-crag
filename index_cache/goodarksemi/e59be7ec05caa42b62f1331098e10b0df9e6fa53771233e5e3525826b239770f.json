@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/kbu25xx_ec3ddc1a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e59be7ec05caa42b62f1331098e10b0df9e6fa53771233e5e3525826b239770f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:04+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBU25005",
+   "KBU2501",
+   "KBU2502",
+   "KBU2504",
+   "KBU2506"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.15,
+  "tokens_in": 1419,
+  "tokens_out": 88
+ },
+ "type": "bridge_rectifier"
+}

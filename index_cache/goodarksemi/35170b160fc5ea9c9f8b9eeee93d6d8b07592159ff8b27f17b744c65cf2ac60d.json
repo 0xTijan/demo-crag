@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsey5u4000_19aeb0d5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "35170b160fc5ea9c9f8b9eeee93d6d8b07592159ff8b27f17b744c65cf2ac60d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:07+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEY5U4000"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.56,
+  "tokens_in": 1190,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

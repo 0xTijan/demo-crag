@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gses5vd1006-2u_81dbacad.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f02cbbb231685a80eeb233ab8055c7c6f41d49f6e997157294b8ab855bd94997",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:23+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSES5VD1006-2U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.83,
+  "tokens_in": 1240,
+  "tokens_out": 46
+ },
+ "type": "esd_protection_diode"
+}

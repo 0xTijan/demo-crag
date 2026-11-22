@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/2n4403_ba36fc5f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9ce48af5afe193372bc5809d49db9a348f107228d67d3aae9eae1fcbd285bc97",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:38+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "2N4403"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.32,
+  "tokens_in": 1578,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

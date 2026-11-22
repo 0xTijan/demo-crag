@@ -5,20 +5,20 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:43+00:00",
+  "at": "2026-11-21T11:57:25+00:00",
   "is_datasheet": true,
-  "label": "multilayer chip inductor",
+  "label": "automotive grade multilayer chip inductor",
   "family": true,
   "part_numbers": [
-   "CL-GA",
+   "CL-GA Series",
    "CL02-GA",
    "CL03-GA"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.49,
-  "tokens_in": 1481,
-  "tokens_out": 53
+  "seconds": 5.99,
+  "tokens_in": 1421,
+  "tokens_out": 57
  },
  "type": "multilayer_chip_inductor"
 }

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd111p10_273c159e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "34342767e325a9b00c6ad5cc8db364e52db6e54ae66cd6fad4062178958d4133",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:11+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD111P10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.95,
+  "tokens_in": 2159,
+  "tokens_out": 43
+ },
+ "type": "mosfet_p"
+}

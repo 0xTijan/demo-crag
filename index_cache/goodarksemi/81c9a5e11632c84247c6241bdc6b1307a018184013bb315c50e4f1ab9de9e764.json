@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgdt5r585_9aeb882d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "81c9a5e11632c84247c6241bdc6b1307a018184013bb315c50e4f1ab9de9e764",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:41+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGDT5R585"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.99,
+  "tokens_in": 1995,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

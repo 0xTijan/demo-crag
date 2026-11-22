@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf6007_7360889a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d8d7b05f6252b7d3a54a303c587ee2ae0850e655f7dc87c5406d713f624a5262",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:57+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6007"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.5,
+  "tokens_in": 1660,
+  "tokens_out": 40
+ },
+ "type": "mosfet_p"
+}

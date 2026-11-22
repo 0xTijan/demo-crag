@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsem12u180_90d6dc88.md",
+ "supplier": "goodarksemi",
+ "file_hash": "143f0cd1d6c2467be4f41b0eef9839afcc3b43f38766d97ce9970cc61082cae1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:53+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEM12U180"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.6,
+  "tokens_in": 1162,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

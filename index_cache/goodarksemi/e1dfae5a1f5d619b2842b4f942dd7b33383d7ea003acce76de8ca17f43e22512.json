@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sax_cf7c504c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e1dfae5a1f5d619b2842b4f942dd7b33383d7ea003acce76de8ca17f43e22512",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:45+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "SA5.0",
+   "SA5.0A",
+   "SA6.0",
+   "SA6.0A",
+   "SA6.5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.66,
+  "tokens_in": 3825,
+  "tokens_out": 64
+ },
+ "type": "tvs_diode"
+}

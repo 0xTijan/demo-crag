@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc10201_91c5c08f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "357756f7c5d1b12019541a39fbffad03c3cf0936a7201ef06c9b932c8acd5339",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:41+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC10201"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.34,
+  "tokens_in": 1815,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

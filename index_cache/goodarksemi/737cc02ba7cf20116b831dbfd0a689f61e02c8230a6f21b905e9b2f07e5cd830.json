@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez3u080_3350a974.md",
+ "supplier": "goodarksemi",
+ "file_hash": "737cc02ba7cf20116b831dbfd0a689f61e02c8230a6f21b905e9b2f07e5cd830",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:42+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ3U080"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.58,
+  "tokens_in": 1085,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

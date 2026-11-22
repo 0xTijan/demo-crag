@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf3365_7e36a4df.md",
+ "supplier": "goodarksemi",
+ "file_hash": "07cd4ee8c52035b9e83ebc3a0cfd07519438848b23554cbfe661f70baf4bc855",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:42+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF3365"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.47,
+  "tokens_in": 1978,
+  "tokens_out": 40
+ },
+ "type": "mosfet_p"
+}

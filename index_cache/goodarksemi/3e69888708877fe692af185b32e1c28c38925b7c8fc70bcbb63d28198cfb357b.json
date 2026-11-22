@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gn1x_9308f174.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3e69888708877fe692af185b32e1c28c38925b7c8fc70bcbb63d28198cfb357b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:14+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GN1A",
+   "GN1B",
+   "GN1D",
+   "GN1G",
+   "GN1J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.04,
+  "tokens_in": 2369,
+  "tokens_out": 67
+ },
+ "type": "fast_recovery_rectifier"
+}

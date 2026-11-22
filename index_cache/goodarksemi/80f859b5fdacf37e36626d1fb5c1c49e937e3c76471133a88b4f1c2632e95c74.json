@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft8008_daaa40f0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "80f859b5fdacf37e36626d1fb5c1c49e937e3c76471133a88b4f1c2632e95c74",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:25+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT8008"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.71,
+  "tokens_in": 2096,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

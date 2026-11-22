@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:28+00:00",
+  "at": "2026-11-21T11:57:10+00:00",
   "is_datasheet": true,
   "label": "Green Anti-Sulfurated Thick Film Chip Resistor",
   "family": true,
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.8,
-  "tokens_in": 1762,
+  "seconds": 6.3,
+  "tokens_in": 1694,
   "tokens_out": 69
  },
- "type": "green_anti_sulfurated_thick_film_chip_re"
+ "type": "thick_film_chip_resistor"
 }

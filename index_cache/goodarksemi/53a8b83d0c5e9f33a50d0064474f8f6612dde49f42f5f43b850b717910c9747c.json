@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gss1010lbt_b0eb8bdc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "53a8b83d0c5e9f33a50d0064474f8f6612dde49f42f5f43b850b717910c9747c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:03+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSS1010LBT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.11,
+  "tokens_in": 1362,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

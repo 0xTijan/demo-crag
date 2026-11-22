@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ghr16_4b2b5c39.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6dd2636a378a0bbd57f8ddd31cae816523b2fe16cd9dcb20f83238b03dcce8c8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:50+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GHR16"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.66,
+  "tokens_in": 997,
+  "tokens_out": 38
+ },
+ "type": "fast_recovery_rectifier"
+}

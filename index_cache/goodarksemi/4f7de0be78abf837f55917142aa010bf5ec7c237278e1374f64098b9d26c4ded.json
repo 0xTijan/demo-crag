@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsf0304_9166e24d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4f7de0be78abf837f55917142aa010bf5ec7c237278e1374f64098b9d26c4ded",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:22+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSF0304"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.92,
+  "tokens_in": 1678,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

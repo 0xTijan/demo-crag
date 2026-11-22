@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsm4fxa_f03fb785.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b8ad65b0baf56c52f95c7ea03446be5dddf59a5ad09cdc3b62ee06579ca547a3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:24+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GSM4F5.0A",
+   "GSM4F6.0A",
+   "GSM4F6.5A",
+   "GSM4F7.0A",
+   "GSM4F7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.52,
+  "tokens_in": 3510,
+  "tokens_out": 82
+ },
+ "type": "tvs_diode"
+}

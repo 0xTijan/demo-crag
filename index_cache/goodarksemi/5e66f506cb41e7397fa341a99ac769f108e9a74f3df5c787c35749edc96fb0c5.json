@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bss123_2a3ce49c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5e66f506cb41e7397fa341a99ac769f108e9a74f3df5c787c35749edc96fb0c5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:11+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "BSS123"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.89,
+  "tokens_in": 1801,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

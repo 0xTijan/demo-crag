@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/1n5554_7eb5b7f4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fdcf63989ffd0c04ef7bb5554c9e4725e6ec91f243b4c3f5316689ef6a82a6c0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:06+00:00",
+  "is_datasheet": true,
+  "label": "sintered glass general purpose rectifier",
+  "family": false,
+  "part_numbers": [
+   "1N5554"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.42,
+  "tokens_in": 1141,
+  "tokens_out": 44
+ },
+ "type": "standard_rectifier"
+}

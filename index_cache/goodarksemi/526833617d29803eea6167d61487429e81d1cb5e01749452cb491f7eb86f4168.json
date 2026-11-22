@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmdjx_4c1c8e08.md",
+ "supplier": "goodarksemi",
+ "file_hash": "526833617d29803eea6167d61487429e81d1cb5e01749452cb491f7eb86f4168",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:08+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GSMDJ5.0A",
+   "GSMDJ6.0A",
+   "GSMDJ6.5A",
+   "GSMDJ7.0A",
+   "GSMDJ7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.16,
+  "tokens_in": 2942,
+  "tokens_out": 77
+ },
+ "type": "tvs_diode"
+}

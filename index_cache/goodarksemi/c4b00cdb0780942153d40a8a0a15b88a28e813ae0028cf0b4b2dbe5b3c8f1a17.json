@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/dfxxs_54666438.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c4b00cdb0780942153d40a8a0a15b88a28e813ae0028cf0b4b2dbe5b3c8f1a17",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:10+00:00",
+  "is_datasheet": true,
+  "label": "single-phase bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "DF005S",
+   "DF01S",
+   "DF02S",
+   "DF04S",
+   "DF06S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.55,
+  "tokens_in": 1857,
+  "tokens_out": 76
+ },
+ "type": "bridge_rectifier"
+}

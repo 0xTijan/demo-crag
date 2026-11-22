@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd15012_096ddcbb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cf5ef4f4a699d6dc23cd75d289e3472ea30ab71dd9f58986028b5b27e41f7ba9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:18+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD15012"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.05,
+  "tokens_in": 2050,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

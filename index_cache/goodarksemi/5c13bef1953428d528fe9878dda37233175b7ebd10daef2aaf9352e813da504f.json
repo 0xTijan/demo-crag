@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/a1-a7_2c1a337c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5c13bef1953428d528fe9878dda37233175b7ebd10daef2aaf9352e813da504f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:16+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "A1",
+   "A2",
+   "A3",
+   "A4",
+   "A5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.77,
+  "tokens_in": 1499,
+  "tokens_out": 62
+ },
+ "type": "standard_rectifier"
+}

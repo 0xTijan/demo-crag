@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bas316_99537c16.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0a3b8ba2b58c40ca9bd220fef168090e653f0e5f13eb98e05c54a2fbcf5000fd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:28+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "BAS316"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.45,
+  "tokens_in": 1119,
+  "tokens_out": 39
+ },
+ "type": "switching_diode"
+}

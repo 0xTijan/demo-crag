@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfp6904_b7692e8b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c79e8047e41fe6529c979051b685f9a23b1b1139e0586d5cbffddc5e31e16c2d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:49+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFP6904"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.89,
+  "tokens_in": 2105,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gss34ls_d40d046b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "deec9658e227a67d36dd43ef9e756ce0b4ab4cac2bffddc68c0796119c1b2a2a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:18+00:00",
+  "is_datasheet": true,
+  "label": "Low VF Schottky Barrier Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSS34LS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.44,
+  "tokens_in": 1369,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

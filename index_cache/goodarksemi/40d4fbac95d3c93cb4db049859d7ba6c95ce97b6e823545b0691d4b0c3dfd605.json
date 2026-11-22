@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gseq3u030_7993d83c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "40d4fbac95d3c93cb4db049859d7ba6c95ce97b6e823545b0691d4b0c3dfd605",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:05+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSEQ3U030"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.74,
+  "tokens_in": 1243,
+  "tokens_out": 45
+ },
+ "type": "esd_tvs_array"
+}

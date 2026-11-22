@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/lsl12-lsl1b_b5b124e1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6fc46321c3602849dbcf3eb5b51cda187f0a8a64c97edae6cfdccb69eabbc72e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:57+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "LSL12",
+   "LSL13",
+   "LSL14",
+   "LSL15",
+   "LSL16"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.04,
+  "tokens_in": 1423,
+  "tokens_out": 76
+ },
+ "type": "schottky_rectifier"
+}

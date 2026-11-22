@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd13010au_414872f3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "491beb9dbd4c32d1a1e94e7e5776bc4e470710aef0a2853b4eb70cbc31955150",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:14+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD13010AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.99,
+  "tokens_in": 2037,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

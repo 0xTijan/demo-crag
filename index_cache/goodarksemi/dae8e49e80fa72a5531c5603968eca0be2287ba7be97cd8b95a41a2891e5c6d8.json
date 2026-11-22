@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbt6427_2171456b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dae8e49e80fa72a5531c5603968eca0be2287ba7be97cd8b95a41a2891e5c6d8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:31+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMMBT6427"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.79,
+  "tokens_in": 1367,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

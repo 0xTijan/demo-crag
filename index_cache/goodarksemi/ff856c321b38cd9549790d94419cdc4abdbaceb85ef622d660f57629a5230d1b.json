@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb2033e_f042c16b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ff856c321b38cd9549790d94419cdc4abdbaceb85ef622d660f57629a5230d1b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:36+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB2033E"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.71,
+  "tokens_in": 6412,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

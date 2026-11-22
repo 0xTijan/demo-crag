@@ -5,19 +5,19 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:02:04+00:00",
+  "at": "2026-11-21T10:48:03+00:00",
   "is_datasheet": true,
-  "label": "N-channel MOSFET",
+  "label": "NPN transistor",
   "family": false,
   "part_numbers": [
    "MMDT3904",
    "GOOD-ARK"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "asked_again": false,
-  "seconds": 1.46,
-  "tokens_in": 1606,
-  "tokens_out": 47
+  "seconds": 6.41,
+  "tokens_in": 1542,
+  "tokens_out": 45
  },
- "type": "mosfet_n"
+ "type": "npn_transistor"
 }

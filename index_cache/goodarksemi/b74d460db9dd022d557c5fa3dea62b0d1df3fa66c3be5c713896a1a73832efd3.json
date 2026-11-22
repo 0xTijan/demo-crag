@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft0882_8675c940.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b74d460db9dd022d557c5fa3dea62b0d1df3fa66c3be5c713896a1a73832efd3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:24+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT0882"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.7,
+  "tokens_in": 1918,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

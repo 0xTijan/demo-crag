@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfk6802kl_3595916a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d525f66c402f000126b631df0c5b054cb2315ea7b132ffb9fcc9cd11bfb11761",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:49+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFK6802KL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.73,
+  "tokens_in": 1954,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

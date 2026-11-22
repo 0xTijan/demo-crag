@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsz606pl_257679c3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "125f35743693c9d26986d0098ed2701617115700355b4c558495f34961c144d6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:17+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSZ606PL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.93,
+  "tokens_in": 1525,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

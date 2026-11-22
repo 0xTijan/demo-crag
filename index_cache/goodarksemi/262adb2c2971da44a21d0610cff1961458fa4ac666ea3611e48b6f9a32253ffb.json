@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsja9n90_2290a1af.md",
+ "supplier": "goodarksemi",
+ "file_hash": "262adb2c2971da44a21d0610cff1961458fa4ac666ea3611e48b6f9a32253ffb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:45+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJA9N90"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.2,
+  "tokens_in": 1940,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

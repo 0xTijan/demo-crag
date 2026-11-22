@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsen2u020_32716ec1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "950b2f5d7905dd50a91f4abf7984004c031da41a2a9152fd086058241a265558",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:16+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSEN2U020"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.46,
+  "tokens_in": 1103,
+  "tokens_out": 42
+ },
+ "type": "esd_tvs_array"
+}

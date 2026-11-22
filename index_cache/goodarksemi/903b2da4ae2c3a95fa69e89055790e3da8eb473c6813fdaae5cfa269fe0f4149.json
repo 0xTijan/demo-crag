@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmm1wxx_6a86140b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "903b2da4ae2c3a95fa69e89055790e3da8eb473c6813fdaae5cfa269fe0f4149",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:19+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GSMM1W3V3",
+   "GSMM1W3V6",
+   "GSMM1W3V9",
+   "GSMM1W4V3",
+   "GSMM1W4V7"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.17,
+  "tokens_in": 2749,
+  "tokens_out": 77
+ },
+ "type": "zener_diode"
+}

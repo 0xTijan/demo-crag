@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsm3zxxbw_916daffc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2f64dedf43081fa5ba30a3c7ac15ad459055b2a2ca3abeff1eebace0acae9448",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:19+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GSM3Z2V0BW",
+   "GSM3Z2V2BW",
+   "GSM3Z2V4BW",
+   "GSM3Z2V7BW",
+   "GSM3Z3V0BW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.78,
+  "tokens_in": 3013,
+  "tokens_out": 82
+ },
+ "type": "zener_diode"
+}

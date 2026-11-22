@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/es3xb_06c41300.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d4ee1ba3b162d53c025c5930bdb233ed46387c8fe494e9860094387867285b9a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:20+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "ES3AB",
+   "ES3BB",
+   "ES3CB",
+   "ES3DB",
+   "ES3FB"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.91,
+  "tokens_in": 2225,
+  "tokens_out": 73
+ },
+ "type": "ultrafast_rectifier"
+}

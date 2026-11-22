@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsmmbt2369x_bed93b8e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a502e2564129470a3873b336e116b0b74cbd7a2ef4a3d924b5d85ef491d996a1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:24+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "GSMMBT2369",
+   "GSMMBT2369A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.54,
+  "tokens_in": 1673,
+  "tokens_out": 50
+ },
+ "type": "npn_transistor"
+}

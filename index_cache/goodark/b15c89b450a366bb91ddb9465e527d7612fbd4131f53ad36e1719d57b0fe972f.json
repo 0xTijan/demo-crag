@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:42:10+00:00",
+  "at": "2026-11-21T10:29:30+00:00",
   "is_datasheet": true,
-  "label": "Silicon Epitaxial Planar Diode",
+  "label": "fast recovery rectifier",
   "family": true,
   "part_numbers": [
    "ABAS19",
@@ -16,9 +16,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.66,
-  "tokens_in": 1649,
-  "tokens_out": 56
+  "seconds": 6.74,
+  "tokens_in": 1447,
+  "tokens_out": 50
  },
- "type": "silicon_epitaxial_planar_diode"
+ "type": "fast_recovery_rectifier"
 }

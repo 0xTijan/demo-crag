@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgc121b2s_20d71329.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4b103f5030c47884b7c601717794661f2e10de5fabc72117a9e519ec911a3dd0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:10+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGC121B2S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.02,
+  "tokens_in": 1389,
+  "tokens_out": 45
+ },
+ "type": "schottky_rectifier"
+}

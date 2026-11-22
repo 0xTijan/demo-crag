@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmfxxca_eb247c60.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1980816dc0f1c810a592c8729faf806fdb7649a82cc11e2d3a5e2d99c24d600f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:15+00:00",
+  "is_datasheet": true,
+  "label": "Transient voltage suppressor",
+  "family": true,
+  "part_numbers": [
+   "GSMF5.0CA",
+   "GSMF6.0CA",
+   "GSMF6.5CA",
+   "GSMF7.0CA",
+   "GSMF7.5CA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.86,
+  "tokens_in": 2651,
+  "tokens_out": 77
+ },
+ "type": "tvs_diode"
+}

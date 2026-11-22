@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft6982_dcaed9ca.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2664fb0cdab9950b4f9b5021fe82f539044fcbc3a413b89b3f8471fd3f4755f2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:20+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT6982"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.37,
+  "tokens_in": 2016,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

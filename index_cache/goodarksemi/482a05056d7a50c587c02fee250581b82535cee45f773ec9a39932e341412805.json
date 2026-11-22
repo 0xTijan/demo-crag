@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt4403_c0fb65b0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "482a05056d7a50c587c02fee250581b82535cee45f773ec9a39932e341412805",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:00+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT4403"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.04,
+  "tokens_in": 1666,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

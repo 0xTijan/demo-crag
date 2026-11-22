@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfd6508_8f272d0c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "907913bd196ee0b48d96175209536ffcc6e1b153fd75f2cf896822aa47d7b920",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:54+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFD6508"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.76,
+  "tokens_in": 2106,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

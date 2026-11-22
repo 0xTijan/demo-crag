@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb4024_0dd9e6d6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b42ff23ac722fa24dcac93fec81fa1e833e1710ba857993076170daff804eb07",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:56+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB4024"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.89,
+  "tokens_in": 2023,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

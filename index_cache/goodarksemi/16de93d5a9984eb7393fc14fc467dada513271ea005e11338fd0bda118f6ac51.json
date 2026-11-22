@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfl7004_3563373d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "16de93d5a9984eb7393fc14fc467dada513271ea005e11338fd0bda118f6ac51",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:23+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFL7004"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.88,
+  "tokens_in": 2029,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

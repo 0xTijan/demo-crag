@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp03150_56e8bd4d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f55b64a3ac6e42a922376896cef8f1c3c7ef2563fddbdce613a5609c6ac65847",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:33+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP03150"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.15,
+  "tokens_in": 1866,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

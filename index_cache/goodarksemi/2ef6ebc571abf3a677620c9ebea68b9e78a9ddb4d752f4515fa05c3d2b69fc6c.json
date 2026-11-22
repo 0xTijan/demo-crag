@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsrubf610_a4df89b4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2ef6ebc571abf3a677620c9ebea68b9e78a9ddb4d752f4515fa05c3d2b69fc6c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:00+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery bridge rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSRUBF610"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.5,
+  "tokens_in": 1304,
+  "tokens_out": 42
+ },
+ "type": "fast_recovery_bridge_rectifier"
+}

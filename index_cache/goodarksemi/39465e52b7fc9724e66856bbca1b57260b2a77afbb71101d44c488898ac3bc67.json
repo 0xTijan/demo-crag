@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/2n7000_947f8407.md",
+ "supplier": "goodarksemi",
+ "file_hash": "39465e52b7fc9724e66856bbca1b57260b2a77afbb71101d44c488898ac3bc67",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:43+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "2N7000"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.83,
+  "tokens_in": 1426,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

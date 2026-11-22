@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1n400x_f5775b32.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7c4d7760ede65ad4b49475b64d4d526779ef210d4c806f04b60787ea341b2f99",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:34+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "1N4001",
+   "1N4002",
+   "1N4003",
+   "1N4004",
+   "1N4005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.74,
+  "tokens_in": 1992,
+  "tokens_out": 87
+ },
+ "type": "standard_rectifier"
+}

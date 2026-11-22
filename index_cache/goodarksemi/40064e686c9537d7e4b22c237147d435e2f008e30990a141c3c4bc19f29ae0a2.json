@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/s1206s_559c7969.md",
+ "supplier": "goodarksemi",
+ "file_hash": "40064e686c9537d7e4b22c237147d435e2f008e30990a141c3c4bc19f29ae0a2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:37+00:00",
+  "is_datasheet": true,
+  "label": "slow blow chip fuse",
+  "family": true,
+  "part_numbers": [
+   "S1206S1",
+   "S1206S1.25",
+   "S1206S1.5",
+   "S1206S2",
+   "S1206S2.5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.97,
+  "tokens_in": 1590,
+  "tokens_out": 84
+ },
+ "type": "slow_blow_chip_fuse"
+}

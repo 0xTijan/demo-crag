@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gskbpcxxw_bf42671e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4ab9a8cf9b92f455ef5c03b10f3a47c1139228efdf7b20f47bc97873a9b1cc6a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:58+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSKBPCxxW",
+   "GSKBPCxxW",
+   "GSKBPCxxW",
+   "GSKBPCxxW",
+   "GSKBPCxxW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 14.07,
+  "tokens_in": 6047,
+  "tokens_out": 74
+ },
+ "type": "schottky_rectifier"
+}

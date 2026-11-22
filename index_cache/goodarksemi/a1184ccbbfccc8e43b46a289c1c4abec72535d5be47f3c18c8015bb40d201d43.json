@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsju8012_5602dcde.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a1184ccbbfccc8e43b46a289c1c4abec72535d5be47f3c18c8015bb40d201d43",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:12+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJU8012"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.73,
+  "tokens_in": 2049,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

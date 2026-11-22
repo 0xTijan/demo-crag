@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp3r910_134f9d74.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d0902bd124bfca4f65fc5d9d7e3b4d39a7f993eb0b385e4c9205eac52cb0902a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:11+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP3R910"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.12,
+  "tokens_in": 2101,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

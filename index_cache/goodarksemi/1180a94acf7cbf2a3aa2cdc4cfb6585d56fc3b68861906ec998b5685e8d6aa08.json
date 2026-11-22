@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmdt2227m_093ceb6d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1180a94acf7cbf2a3aa2cdc4cfb6585d56fc3b68861906ec998b5685e8d6aa08",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:31+00:00",
+  "is_datasheet": true,
+  "label": "NPN+PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMDT2227M"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.37,
+  "tokens_in": 1578,
+  "tokens_out": 44
+ },
+ "type": "complementary_npn_pnp_transistor"
+}

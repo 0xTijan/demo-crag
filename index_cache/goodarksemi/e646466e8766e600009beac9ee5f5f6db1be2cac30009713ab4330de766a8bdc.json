@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq4909_b32e0e31.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e646466e8766e600009beac9ee5f5f6db1be2cac30009713ab4330de766a8bdc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:14+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ4909"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.35,
+  "tokens_in": 2049,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

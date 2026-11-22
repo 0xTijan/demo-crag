@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjv65rf110_eb9b2fee.md",
+ "supplier": "goodarksemi",
+ "file_hash": "55a1ee8650df14cb1b637173e93410e35cb2e4fb84ccc063e126ac27beb89917",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:19+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJV65RF110"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.11,
+  "tokens_in": 2149,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ll4148_f1d85d8a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "73216be43934678b34abf4553d8d9b26e201439096049f0efd4c57f3ff5f5b1e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:31+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "LL4148"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.68,
+  "tokens_in": 1177,
+  "tokens_out": 39
+ },
+ "type": "switching_diode"
+}

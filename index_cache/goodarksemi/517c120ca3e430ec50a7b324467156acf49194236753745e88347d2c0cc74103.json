@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn0390_d069b972.md",
+ "supplier": "goodarksemi",
+ "file_hash": "517c120ca3e430ec50a7b324467156acf49194236753745e88347d2c0cc74103",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:49+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN0390"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.44,
+  "tokens_in": 1888,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

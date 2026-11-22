@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbta92_0fc889a1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "07582b47ffaf18291797c9dab09fdf3c282b3e538afb8e4a023aee4292c2aec7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:20+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBTA92"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.57,
+  "tokens_in": 1168,
+  "tokens_out": 38
+ },
+ "type": "pnp_transistor"
+}

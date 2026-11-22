@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfq4810_bc1976a2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fd7a643fe9c6a43638e2e054f5a3788198cc3cca00e1a676bb4b3a4dc1bb45b8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:16+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF4����"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.03,
+  "tokens_in": 2087,
+  "tokens_out": 38
+ },
+ "type": "mosfet_n"
+}

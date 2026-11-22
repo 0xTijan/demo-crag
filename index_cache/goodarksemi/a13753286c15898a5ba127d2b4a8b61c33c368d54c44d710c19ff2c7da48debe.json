@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbt5518de_41210ccb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a13753286c15898a5ba127d2b4a8b61c33c368d54c44d710c19ff2c7da48debe",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:30+00:00",
+  "is_datasheet": true,
+  "label": "complementary NPN+PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSMMBT5518DE"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.8,
+  "tokens_in": 1495,
+  "tokens_out": 46
+ },
+ "type": "complementary_npn_pnp_transistor"
+}

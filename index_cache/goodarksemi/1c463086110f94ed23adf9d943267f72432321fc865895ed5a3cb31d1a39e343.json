@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp1r704au_c1ed6eab.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1c463086110f94ed23adf9d943267f72432321fc865895ed5a3cb31d1a39e343",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:10+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP1R704AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.2,
+  "tokens_in": 2149,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

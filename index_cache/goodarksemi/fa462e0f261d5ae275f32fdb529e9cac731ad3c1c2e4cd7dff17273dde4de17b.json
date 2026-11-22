@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bc847x_a66457dc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fa462e0f261d5ae275f32fdb529e9cac731ad3c1c2e4cd7dff17273dde4de17b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:59+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": true,
+  "part_numbers": [
+   "BC847x"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.93,
+  "tokens_in": 1475,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

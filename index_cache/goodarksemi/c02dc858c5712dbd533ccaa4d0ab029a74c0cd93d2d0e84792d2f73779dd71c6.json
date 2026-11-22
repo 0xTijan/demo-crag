@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbth10_a0e593bc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c02dc858c5712dbd533ccaa4d0ab029a74c0cd93d2d0e84792d2f73779dd71c6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:21+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBTH10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.36,
+  "tokens_in": 1335,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

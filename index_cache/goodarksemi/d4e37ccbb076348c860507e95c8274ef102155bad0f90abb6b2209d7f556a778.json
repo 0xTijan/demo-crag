@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsepp18u9500_ce748f29.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d4e37ccbb076348c860507e95c8274ef102155bad0f90abb6b2209d7f556a778",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:59+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEPP18U9500"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.71,
+  "tokens_in": 1123,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

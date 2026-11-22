@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsep5u600_3f9c4e16.md",
+ "supplier": "goodarksemi",
+ "file_hash": "51ea3d34567d71818765389a4a523211a10014767b23ff910e4cd252d9951308",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:52+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance TVS diode array",
+  "family": false,
+  "part_numbers": [
+   "GSEP5U600"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.01,
+  "tokens_in": 1485,
+  "tokens_out": 45
+ },
+ "type": "esd_tvs_array"
+}

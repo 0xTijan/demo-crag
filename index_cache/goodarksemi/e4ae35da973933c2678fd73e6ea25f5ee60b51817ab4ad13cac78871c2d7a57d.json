@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/zener-wafer-2w-6-8v-36v-series_0f7c9a1f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e4ae35da973933c2678fd73e6ea25f5ee60b51817ab4ad13cac78871c2d7a57d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:58+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GDZ2CW071068YQS",
+   "GDZ2CW071360YQS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.54,
+  "tokens_in": 1002,
+  "tokens_out": 60
+ },
+ "type": "zener_diode"
+}

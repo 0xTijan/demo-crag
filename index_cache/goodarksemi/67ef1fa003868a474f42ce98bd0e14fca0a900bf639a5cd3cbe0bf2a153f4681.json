@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/uf400x_77805964.md",
+ "supplier": "goodarksemi",
+ "file_hash": "67ef1fa003868a474f42ce98bd0e14fca0a900bf639a5cd3cbe0bf2a153f4681",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:46+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "UF4001",
+   "UF4002",
+   "UF4003",
+   "UF4004",
+   "UF4005"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.64,
+  "tokens_in": 1818,
+  "tokens_out": 83
+ },
+ "type": "ultrafast_rectifier"
+}

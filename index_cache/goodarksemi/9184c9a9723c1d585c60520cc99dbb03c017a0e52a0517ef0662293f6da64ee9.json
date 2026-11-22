@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh6801_1efe0fe0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9184c9a9723c1d585c60520cc99dbb03c017a0e52a0517ef0662293f6da64ee9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:58+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH6801"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.5,
+  "tokens_in": 1964,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

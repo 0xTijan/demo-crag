@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft04180_d81c53ff.md",
+ "supplier": "goodarksemi",
+ "file_hash": "00d5c950b83a1228c2e52495bb146cc4e758982995af0f83618ed4fc280bdfbc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:18+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT04180"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.88,
+  "tokens_in": 2004,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt491_09db9c8f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "89f074b9cd63b1d0f42fff552871eb86bf547086bc106e35a8d3b700354a6116",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:01+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT491"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.02,
+  "tokens_in": 1316,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

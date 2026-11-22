@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfzt951_d297e90e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5451d56e06b54fc77b4fa467b62e99582e4b28639498e3bf3767d66356662b73",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:27+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSFZT951"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.74,
+  "tokens_in": 1348,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

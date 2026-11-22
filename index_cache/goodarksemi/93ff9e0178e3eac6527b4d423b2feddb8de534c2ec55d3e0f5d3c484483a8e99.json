@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gs2xbt_938086ce.md",
+ "supplier": "goodarksemi",
+ "file_hash": "93ff9e0178e3eac6527b4d423b2feddb8de534c2ec55d3e0f5d3c484483a8e99",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:16+00:00",
+  "is_datasheet": true,
+  "label": "surface mount general purpose rectifier",
+  "family": true,
+  "part_numbers": [
+   "GS2ABT",
+   "GS2BBT",
+   "GS2DBT",
+   "GS2GBT",
+   "GS2JBT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.57,
+  "tokens_in": 1685,
+  "tokens_out": 75
+ },
+ "type": "standard_rectifier"
+}

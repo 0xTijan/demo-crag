@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/tvs-wafer-400w_0fd6e061.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5a455ab2df52df37371ce52d9635579fe386fd0e904f016f5c797f1ec6b711c1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:39+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GDTSMAJ5.0A",
+   "GDTSMAJ6.0A",
+   "GDTSMAJ6.5A",
+   "GDTSMAJ7.0A",
+   "GDTSMAJ7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.45,
+  "tokens_in": 2884,
+  "tokens_out": 85
+ },
+ "type": "tvs_diode"
+}

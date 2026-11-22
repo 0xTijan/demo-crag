@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsbr20150ct-gsbrf20150ct_8cabc7b7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "10acb6d0b64d782e162b2c30606b70c3cad26d6c8cc95b53a9201c6e0d2d50b3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:56+00:00",
+  "is_datasheet": true,
+  "label": "Trench Schottky Barrier Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSBR20150CT",
+   "GSBRF20150CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.87,
+  "tokens_in": 1541,
+  "tokens_out": 57
+ },
+ "type": "schottky_rectifier"
+}

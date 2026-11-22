@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp1036_2dc379a9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "eee178cf8fe2746cfc428e53bdc878173e834070be390bc5d0770bed41c0f51d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:25+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP1036"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.42,
+  "tokens_in": 2087,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

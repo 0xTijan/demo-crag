@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsbc856xw_ff8f9a14.md",
+ "supplier": "goodarksemi",
+ "file_hash": "07ae11cff62c4de2c64b09283c38392e960ca76d9b74f102f66fa43a6e621f77",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:19+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBC856AW",
+   "GSBC856BW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.39,
+  "tokens_in": 1211,
+  "tokens_out": 47
+ },
+ "type": "pnp_transistor"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gbu10xx_bb936386.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9b58b016f082a5f8ad8a1070419c60beb8c566193a3b985aacdaa2e418e4be64",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:16+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU1001",
+   "GBU1002",
+   "GBU1004",
+   "GBU1006",
+   "GBU1008"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.58,
+  "tokens_in": 1873,
+  "tokens_out": 79
+ },
+ "type": "bridge_rectifier"
+}

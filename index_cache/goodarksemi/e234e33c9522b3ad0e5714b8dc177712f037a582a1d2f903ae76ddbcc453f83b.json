@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/mmbz4xxx_b4dcfe2d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e234e33c9522b3ad0e5714b8dc177712f037a582a1d2f903ae76ddbcc453f83b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:23+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "MMBZ4678",
+   "MMBZ4679",
+   "MMBZ4680",
+   "MMBZ4681",
+   "MMBZ4682"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.62,
+  "tokens_in": 2663,
+  "tokens_out": 77
+ },
+ "type": "zener_diode"
+}

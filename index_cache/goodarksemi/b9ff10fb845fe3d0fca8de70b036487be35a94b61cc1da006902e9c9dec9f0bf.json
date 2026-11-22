@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/kbf201-kbf210_2b45b70d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b9ff10fb845fe3d0fca8de70b036487be35a94b61cc1da006902e9c9dec9f0bf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:42+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "KBF201",
+   "KBF202",
+   "KBF204",
+   "KBF206",
+   "KBF208"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.43,
+  "tokens_in": 1798,
+  "tokens_out": 76
+ },
+ "type": "bridge_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsma6jx_b54e9f80.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dd89455e83a6806f9cb3b259665a2a55a52b89aafb2915e77521b55782204b65",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:30+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GSMA6J5.0A",
+   "GSMA6J6.0A",
+   "GSMA6J6.5A",
+   "GSMA6J7.0A",
+   "GSMA6J7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.21,
+  "tokens_in": 4393,
+  "tokens_out": 82
+ },
+ "type": "tvs_diode"
+}

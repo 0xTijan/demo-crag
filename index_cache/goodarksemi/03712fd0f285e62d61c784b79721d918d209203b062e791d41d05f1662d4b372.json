@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfzt851_e611ec21.md",
+ "supplier": "goodarksemi",
+ "file_hash": "03712fd0f285e62d61c784b79721d918d209203b062e791d41d05f1662d4b372",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:26+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSFZT851"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.36,
+  "tokens_in": 1287,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

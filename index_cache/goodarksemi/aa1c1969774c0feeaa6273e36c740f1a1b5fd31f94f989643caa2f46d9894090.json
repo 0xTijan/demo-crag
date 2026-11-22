@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsgc0601a-gsgc0607a_49df10a5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aa1c1969774c0feeaa6273e36c740f1a1b5fd31f94f989643caa2f46d9894090",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:01+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGC0601A",
+   "GSGC0602A",
+   "GSGC0603A",
+   "GSGC0604A",
+   "GSGC0605A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.3,
+  "tokens_in": 1542,
+  "tokens_out": 103
+ },
+ "type": "standard_rectifier"
+}

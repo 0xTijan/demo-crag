@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmbrb40xxct_b14a16ac.md",
+ "supplier": "goodarksemi",
+ "file_hash": "04195fa911aa7eefbadc5adad04cca94938f32310c4c4248e65db8db688eb7b1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:52+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSMBRB4035CT",
+   "GSMBRB4040CT",
+   "GSMBRB4045CT",
+   "GSMBRB4060CT",
+   "GSMBRB40100CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.74,
+  "tokens_in": 1811,
+  "tokens_out": 107
+ },
+ "type": "schottky_rectifier"
+}

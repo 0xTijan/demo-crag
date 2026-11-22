@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft5r010_92b92793.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dec074745ca44cf0d52ee2d99909ffe423cac79b269ad58ec79160b92e44dcaf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:02+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT5R010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.89,
+  "tokens_in": 1924,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

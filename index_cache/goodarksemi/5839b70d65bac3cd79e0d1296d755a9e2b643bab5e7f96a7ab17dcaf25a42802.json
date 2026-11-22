@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp6019_2e8a62b9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5839b70d65bac3cd79e0d1296d755a9e2b643bab5e7f96a7ab17dcaf25a42802",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:53+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP6019"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.48,
+  "tokens_in": 2087,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

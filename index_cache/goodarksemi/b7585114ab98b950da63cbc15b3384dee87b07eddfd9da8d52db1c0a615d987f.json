@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgd7r110au_1f22cb48.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b7585114ab98b950da63cbc15b3384dee87b07eddfd9da8d52db1c0a615d987f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:34+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGD7R110AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.94,
+  "tokens_in": 2028,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

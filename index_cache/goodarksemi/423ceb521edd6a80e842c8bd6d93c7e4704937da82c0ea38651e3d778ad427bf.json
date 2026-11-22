@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp0625_8fe82c37.md",
+ "supplier": "goodarksemi",
+ "file_hash": "423ceb521edd6a80e842c8bd6d93c7e4704937da82c0ea38651e3d778ad427bf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:04+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP0625"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.79,
+  "tokens_in": 2131,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsez36u250_430cf236.md",
+ "supplier": "goodarksemi",
+ "file_hash": "03a3989397a0d630c7770e7438c464bb1ce0c578d8437257cc485cbd68beb7c9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:32+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEZ36U250"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.53,
+  "tokens_in": 1125,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

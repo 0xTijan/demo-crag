@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:53:41+00:00",
+  "at": "2026-11-21T10:40:34+00:00",
   "is_datasheet": true,
   "label": "N-channel SiC MOSFET",
   "family": false,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.5,
-  "tokens_in": 1940,
+  "seconds": 5.88,
+  "tokens_in": 1908,
   "tokens_out": 46
  },
- "type": "silicon_carbide_mosfet_n"
+ "type": "sic_mosfet_n"
 }

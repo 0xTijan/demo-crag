@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:54+00:00",
+  "at": "2026-11-21T11:57:36+00:00",
   "is_datasheet": false,
   "label": "common mode filter",
   "family": true,
@@ -14,8 +14,8 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.16,
-  "tokens_in": 1330,
+  "seconds": 5.41,
+  "tokens_in": 1287,
   "tokens_out": 39
  },
  "type": "_not_a_datasheet"

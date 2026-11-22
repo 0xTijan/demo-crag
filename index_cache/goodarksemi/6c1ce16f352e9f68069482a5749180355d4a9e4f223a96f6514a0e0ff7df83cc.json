@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/f1210a_7a0de77d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6c1ce16f352e9f68069482a5749180355d4a9e4f223a96f6514a0e0ff7df83cc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:24+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated standard rectifier",
+  "family": false,
+  "part_numbers": [
+   "F1210A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.37,
+  "tokens_in": 1020,
+  "tokens_out": 42
+ },
+ "type": "standard_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/p6smbx_054a382b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "64db32d792408212f26e3631dfde0b76b5f23fde380df543071ebe62b2468dfc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:37+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "P6SMB6.8A",
+   "P6SMB7.5A",
+   "P6SMB8.2A",
+   "P6SMB9.1A",
+   "P6SMB10A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.89,
+  "tokens_in": 3245,
+  "tokens_out": 81
+ },
+ "type": "tvs_diode"
+}

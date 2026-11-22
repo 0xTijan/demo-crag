@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mur520-mur520f_49ad0b6e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4db4f26de88c963f432e8b9f53ca3a3f33b68ce68bf688c50a9cbe22d7bb8bea",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:09+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR520",
+   "MUR520F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.08,
+  "tokens_in": 1314,
+  "tokens_out": 48
+ },
+ "type": "ultrafast_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd80r420_c430057a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "67ffb03b4f9fd624a4284ed278f36c5ef0cfb986b0dcda4fa209c33e1538f301",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:30+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD80R420"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.75,
+  "tokens_in": 2215,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

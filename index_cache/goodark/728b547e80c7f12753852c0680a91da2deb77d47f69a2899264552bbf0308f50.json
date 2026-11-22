@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:58:05+00:00",
+  "at": "2026-11-21T10:44:34+00:00",
   "is_datasheet": true,
   "label": "Zener diode",
   "family": true,
@@ -18,8 +18,8 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.85,
-  "tokens_in": 1808,
+  "seconds": 8.34,
+  "tokens_in": 3194,
   "tokens_out": 77
  },
  "type": "zener_diode"

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfg65r900_d768c0ae.md",
+ "supplier": "goodarksemi",
+ "file_hash": "898a978d54a0402ea4ed3070d8324e88aa856a6a94de937de0b957cad2e48e79",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:45+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFG65R900"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.29,
+  "tokens_in": 2155,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

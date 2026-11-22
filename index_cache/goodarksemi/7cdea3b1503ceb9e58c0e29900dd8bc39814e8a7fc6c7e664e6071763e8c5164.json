@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp6r206hau_309dd5d4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7cdea3b1503ceb9e58c0e29900dd8bc39814e8a7fc6c7e664e6071763e8c5164",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:58+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP6R206HAU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.14,
+  "tokens_in": 2157,
+  "tokens_out": 45
+ },
+ "type": "mosfet_n"
+}

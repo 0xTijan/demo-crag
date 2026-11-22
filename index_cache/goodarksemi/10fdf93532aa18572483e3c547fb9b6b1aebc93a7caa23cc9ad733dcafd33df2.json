@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gser5u003_cbc91690.md",
+ "supplier": "goodarksemi",
+ "file_hash": "10fdf93532aa18572483e3c547fb9b6b1aebc93a7caa23cc9ad733dcafd33df2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:12+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSER5U003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.9,
+  "tokens_in": 1305,
+  "tokens_out": 45
+ },
+ "type": "esd_tvs_array"
+}

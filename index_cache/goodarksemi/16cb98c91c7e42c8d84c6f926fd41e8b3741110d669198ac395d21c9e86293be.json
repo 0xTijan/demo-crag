@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb2121_116dfebf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "16cb98c91c7e42c8d84c6f926fd41e8b3741110d669198ac395d21c9e86293be",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:41+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB2121"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.16,
+  "tokens_in": 1982,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

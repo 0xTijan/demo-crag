@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:13:50+00:00",
+  "at": "2026-11-21T11:58:32+00:00",
   "is_datasheet": true,
   "label": "current sensing chip resistor",
   "family": true,
@@ -18,8 +18,8 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.71,
-  "tokens_in": 1817,
+  "seconds": 8.33,
+  "tokens_in": 1749,
   "tokens_out": 62
  },
  "type": "current_sensing_chip_resistor"

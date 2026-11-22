@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:50:22+00:00",
+  "at": "2026-11-21T10:37:17+00:00",
   "is_datasheet": true,
-  "label": "bridge rectifier",
+  "label": "glass passivated bridge rectifier",
   "family": true,
   "part_numbers": [
    "GBL2AU",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.03,
-  "tokens_in": 2010,
-  "tokens_out": 75
+  "seconds": 7.4,
+  "tokens_in": 1559,
+  "tokens_out": 78
  },
  "type": "bridge_rectifier"
 }

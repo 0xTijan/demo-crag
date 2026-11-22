@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:56+00:00",
+  "at": "2026-11-21T11:57:37+00:00",
   "is_datasheet": true,
-  "label": "multilayer common mode filter",
+  "label": "common mode filter",
   "family": true,
   "part_numbers": [
    "CMX04W",
@@ -15,9 +15,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.71,
-  "tokens_in": 1970,
-  "tokens_out": 48
+  "seconds": 5.68,
+  "tokens_in": 1835,
+  "tokens_out": 45
  },
- "type": "multilayer_common_mode_filter"
+ "type": "common_mode_filter"
 }

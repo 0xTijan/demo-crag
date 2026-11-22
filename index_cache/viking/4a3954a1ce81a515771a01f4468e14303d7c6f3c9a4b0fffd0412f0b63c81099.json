@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:24+00:00",
+  "at": "2026-11-21T11:57:06+00:00",
   "is_datasheet": true,
-  "label": "thick film chip resistor",
+  "label": "Anti-Sulfurated Thick Film Flat Array Chip Resistor",
   "family": true,
   "part_numbers": [
    "ASF42",
@@ -15,9 +15,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.39,
-  "tokens_in": 1505,
-  "tokens_out": 43
+  "seconds": 6.2,
+  "tokens_in": 1448,
+  "tokens_out": 50
  },
- "type": "thick_film_chip_resistor"
+ "type": "thick_film_array_chip_resistor"
 }

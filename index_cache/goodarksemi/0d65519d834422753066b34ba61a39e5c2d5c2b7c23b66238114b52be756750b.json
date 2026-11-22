@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gstr2040_249bf41d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0d65519d834422753066b34ba61a39e5c2d5c2b7c23b66238114b52be756750b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:55+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSTR2040"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.32,
+  "tokens_in": 1336,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

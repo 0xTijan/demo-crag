@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bav116ws_28b07642.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fcc3638b40f6ddcbd9a57a9ff773aa4fa1fe62f801c84eda425b43bc7f3bc773",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:43+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "BAV116WS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.88,
+  "tokens_in": 1056,
+  "tokens_out": 40
+ },
+ "type": "switching_diode"
+}

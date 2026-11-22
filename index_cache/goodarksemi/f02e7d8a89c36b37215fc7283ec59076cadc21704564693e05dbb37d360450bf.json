@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsmur10x0m3_e7923975.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f02e7d8a89c36b37215fc7283ec59076cadc21704564693e05dbb37d360450bf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:55+00:00",
+  "is_datasheet": true,
+  "label": "super fast rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSMUR1020M3",
+   "GSMUR1040M3",
+   "GSMUR1060M3"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.69,
+  "tokens_in": 1429,
+  "tokens_out": 65
+ },
+ "type": "ultrafast_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gser12u700_a849a6cc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8e83d173a02b96ffa1a28b28519b55e4e59706799e9c14586bf5ff1e03ee70b3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:09+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSER12U700"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.7,
+  "tokens_in": 1200,
+  "tokens_out": 43
+ },
+ "type": "esd_tvs_array"
+}

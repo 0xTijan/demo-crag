@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/l2a1-l2a7_28904ce1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "caeda0fa8d423d0766470a43ee972a827d8df5e85cf89b62c38d705e2a7eb682",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:13+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated rectifier",
+  "family": true,
+  "part_numbers": [
+   "L2A1",
+   "L2A2",
+   "L2A3",
+   "L2A4",
+   "L2A5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.22,
+  "tokens_in": 1502,
+  "tokens_out": 75
+ },
+ "type": "standard_rectifier"
+}

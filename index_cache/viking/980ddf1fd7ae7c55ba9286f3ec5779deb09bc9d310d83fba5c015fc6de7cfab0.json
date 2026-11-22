@@ -5,21 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:18:00+00:00",
+  "at": "2026-11-21T12:02:37+00:00",
   "is_datasheet": true,
   "label": "wire wound chip power resistor",
   "family": true,
   "part_numbers": [
-   "WR27",
-   "WR15",
-   "WR16",
-   "WR25"
+   "WR27JTER1001"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.65,
-  "tokens_in": 1889,
-  "tokens_out": 53
+  "seconds": 6.94,
+  "tokens_in": 1788,
+  "tokens_out": 44
  },
- "type": "wire_wound_power_resistor"
+ "type": "wire_wound_chip_power_resistor"
 }

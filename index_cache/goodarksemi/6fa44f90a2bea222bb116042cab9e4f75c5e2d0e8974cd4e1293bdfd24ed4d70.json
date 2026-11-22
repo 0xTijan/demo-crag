@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsdbxxxs_a15c43f0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6fa44f90a2bea222bb116042cab9e4f75c5e2d0e8974cd4e1293bdfd24ed4d70",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:32+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSDB201S",
+   "GSDB202S",
+   "GSDB203S",
+   "GSDB204S",
+   "GSDB205S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.07,
+  "tokens_in": 1835,
+  "tokens_out": 90
+ },
+ "type": "bridge_rectifier"
+}

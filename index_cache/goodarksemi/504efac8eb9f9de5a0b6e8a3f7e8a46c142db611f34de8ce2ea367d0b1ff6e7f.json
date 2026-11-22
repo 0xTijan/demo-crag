@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbas40mc9_30379eb1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "504efac8eb9f9de5a0b6e8a3f7e8a46c142db611f34de8ce2ea367d0b1ff6e7f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:19+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAS40MC9"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.3,
+  "tokens_in": 838,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

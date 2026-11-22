@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:47:55+00:00",
+  "at": "2026-11-21T10:35:05+00:00",
   "is_datasheet": true,
   "label": "superfast rectifier",
   "family": false,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.08,
-  "tokens_in": 1222,
+  "seconds": 5.01,
+  "tokens_in": 983,
   "tokens_out": 38
  },
- "type": "superfast_rectifier"
+ "type": "ultrafast_rectifier"
 }

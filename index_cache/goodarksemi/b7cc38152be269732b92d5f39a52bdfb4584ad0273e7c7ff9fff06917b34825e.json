@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgh7r515_3ee78bbb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b7cc38152be269732b92d5f39a52bdfb4584ad0273e7c7ff9fff06917b34825e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:52+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGH7R515"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.7,
+  "tokens_in": 1989,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

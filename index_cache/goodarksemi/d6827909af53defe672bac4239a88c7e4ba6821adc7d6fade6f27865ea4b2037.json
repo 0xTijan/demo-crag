@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/r25xxf_63c41c1a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d6827909af53defe672bac4239a88c7e4ba6821adc7d6fade6f27865ea4b2037",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:04+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "R2500F",
+   "R3000F",
+   "R4000F",
+   "R5000F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.93,
+  "tokens_in": 1446,
+  "tokens_out": 64
+ },
+ "type": "fast_recovery_rectifier"
+}

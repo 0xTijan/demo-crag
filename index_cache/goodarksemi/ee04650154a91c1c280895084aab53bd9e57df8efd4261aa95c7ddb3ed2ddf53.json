@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn6049_a59982a8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ee04650154a91c1c280895084aab53bd9e57df8efd4261aa95c7ddb3ed2ddf53",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:28+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN6049"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.43,
+  "tokens_in": 2123,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

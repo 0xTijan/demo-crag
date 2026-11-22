@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:42:44+00:00",
+  "at": "2026-11-21T10:30:02+00:00",
   "is_datasheet": true,
-  "label": "Transient Voltage Suppressor",
+  "label": "transient voltage suppressor",
   "family": true,
   "part_numbers": [
    "AF2TVS10A",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.88,
-  "tokens_in": 1881,
-  "tokens_out": 77
+  "seconds": 7.27,
+  "tokens_in": 2763,
+  "tokens_out": 78
  },
  "type": "tvs_diode"
 }

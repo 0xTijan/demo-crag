@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/2n3904_ba12e1e8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "005a067d717a650805bbef55fc25a51d5b60892b7f37560e53125d627e53b8d8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:34+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "2N3904"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.53,
+  "tokens_in": 1529,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

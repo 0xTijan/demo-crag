@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:49:44+00:00",
+  "at": "2026-11-21T10:36:46+00:00",
   "is_datasheet": true,
-  "label": "fast recovery rectifier",
+  "label": "standard rectifier",
   "family": true,
   "part_numbers": [
    "GBJ6A",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": true,
-  "seconds": 3.24,
-  "tokens_in": 4321,
-  "tokens_out": 146
+  "seconds": 14.07,
+  "tokens_in": 3726,
+  "tokens_out": 145
  },
- "type": "fast_recovery_rectifier"
+ "type": "standard_rectifier"
 }

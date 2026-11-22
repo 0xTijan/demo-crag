@@ -1,0 +1,20 @@
+{
+ "file": "goodarksemi/gsll4148_f3bc3f46.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9140d9d3c991b25daddd4cf1bbbd0537f7593ce040cbb5fc3aff1c803f2263e4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:13+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.75,
+  "tokens_in": 1370,
+  "tokens_out": 35
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gspf27_4215332d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "83b5001628bf6d55580c680e8e137a0611caadd5925de641cfa8b20fbfdcd852",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:09+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSPF27"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.6,
+  "tokens_in": 1168,
+  "tokens_out": 42
+ },
+ "type": "fast_recovery_rectifier"
+}

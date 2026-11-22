@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsp1550l_cff3fad0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2a80d7eb15dba2e7c3a3deb8d3ddb6447d02dbf12c214c56b3de6f24e1df9ce0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:55+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSP1550L"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.87,
+  "tokens_in": 1023,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

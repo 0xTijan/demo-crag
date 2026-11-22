@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzta06_98b705b5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6e97d14b3a43b5227340c8a8c0db8404fbdb1d8b99cd5af23289360997996ec1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:55+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "PZTA06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.87,
+  "tokens_in": 1194,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

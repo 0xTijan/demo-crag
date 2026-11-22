@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq3012_b661fe31.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c4547052a752d721cc8a941b6ff1c79eb1789b87cbe68712c4c91f81ee6b15fb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:39+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ3012"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.23,
+  "tokens_in": 2068,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

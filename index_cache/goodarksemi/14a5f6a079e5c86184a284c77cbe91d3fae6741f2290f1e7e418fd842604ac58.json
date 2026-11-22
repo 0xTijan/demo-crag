@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq3025_97e59a92.md",
+ "supplier": "goodarksemi",
+ "file_hash": "14a5f6a079e5c86184a284c77cbe91d3fae6741f2290f1e7e418fd842604ac58",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:47+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ3025"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.74,
+  "tokens_in": 2121,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfq3805_ccbc2581.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d3c9121add88fcb2567e3ff60addbbdaedb4ec6c136a7bb42f13564f3df8eb66",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:55+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFQ3805"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.83,
+  "tokens_in": 2066,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

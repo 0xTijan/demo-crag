@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq161p15_33e4150c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8db319cee9875c6412e884a510d4e6e1b514bf289549ef738dbef5bd64e9d2aa",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:18+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ161P15"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.0,
+  "tokens_in": 2153,
+  "tokens_out": 44
+ },
+ "type": "mosfet_p"
+}

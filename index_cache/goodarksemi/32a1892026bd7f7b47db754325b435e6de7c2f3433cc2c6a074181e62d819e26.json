@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgn6r204au_463dc5b4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "32a1892026bd7f7b47db754325b435e6de7c2f3433cc2c6a074181e62d819e26",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGN6R204AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.04,
+  "tokens_in": 2120,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

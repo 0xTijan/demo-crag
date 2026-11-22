@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp1r404hau_912d3b3a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "edf439618973adb0126c2760ff55ad99b4d568c149f233116ab13adb57cce01f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:05+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP1R404HAU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.23,
+  "tokens_in": 2163,
+  "tokens_out": 45
+ },
+ "type": "mosfet_n"
+}

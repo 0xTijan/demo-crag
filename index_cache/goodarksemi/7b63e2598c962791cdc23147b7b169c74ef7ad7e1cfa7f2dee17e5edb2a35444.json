@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbas70ws_e1bac951.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7b63e2598c962791cdc23147b7b169c74ef7ad7e1cfa7f2dee17e5edb2a35444",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:23+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAS70WS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.67,
+  "tokens_in": 977,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

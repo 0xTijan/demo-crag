@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/1n4148_6498be6a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "348dd4d1b609a3383f416179a925342871eb3273de399f1fa02a724e5f41bac8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:38+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "1N4148S",
+   "LL4148",
+   "DO-34",
+   "DO-35"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.77,
+  "tokens_in": 1256,
+  "tokens_out": 60
+ },
+ "type": "fast_recovery_rectifier"
+}

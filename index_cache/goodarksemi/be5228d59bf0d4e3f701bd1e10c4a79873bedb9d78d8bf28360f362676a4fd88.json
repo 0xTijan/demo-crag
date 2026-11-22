@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu9504_04d27882.md",
+ "supplier": "goodarksemi",
+ "file_hash": "be5228d59bf0d4e3f701bd1e10c4a79873bedb9d78d8bf28360f362676a4fd88",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:41+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU9504"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.49,
+  "tokens_in": 2225,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

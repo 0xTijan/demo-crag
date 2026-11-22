@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mbrh20150s-mbrfh20150s_a51ce750.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2ce46ff5387f1b55e23b089b018e38c2f3cdc5126acda1531ef8b495142c5979",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:12+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "MBRH20150S",
+   "MBRFH20150S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.29,
+  "tokens_in": 1496,
+  "tokens_out": 55
+ },
+ "type": "schottky_rectifier"
+}

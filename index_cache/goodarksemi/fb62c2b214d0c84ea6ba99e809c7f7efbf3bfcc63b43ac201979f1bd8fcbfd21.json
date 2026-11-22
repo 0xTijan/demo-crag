@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp6r804hdau_d2eb7815.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fb62c2b214d0c84ea6ba99e809c7f7efbf3bfcc63b43ac201979f1bd8fcbfd21",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:09+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP6R804HDAU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.11,
+  "tokens_in": 2040,
+  "tokens_out": 46
+ },
+ "type": "mosfet_n"
+}

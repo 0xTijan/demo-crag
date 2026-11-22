@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf3402_6d016af6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8b02f4db6648d1d795224c899798052c0f87276150c5aa9d45687b3f7f62d2c4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:43+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF3402"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.45,
+  "tokens_in": 1774,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

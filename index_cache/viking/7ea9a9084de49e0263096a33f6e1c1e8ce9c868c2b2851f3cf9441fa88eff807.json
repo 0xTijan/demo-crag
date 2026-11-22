@@ -5,22 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:33+00:00",
+  "at": "2026-11-21T11:57:15+00:00",
   "is_datasheet": true,
   "label": "conductive polymer aluminum solid electrolytic capacitor",
   "family": true,
   "part_numbers": [
-   "0506",
-   "0645",
-   "0606",
-   "0608",
-   "0610"
+   "AV5K0506",
+   "AV5K0645",
+   "AV5K0606",
+   "AV5K0608",
+   "AV5K0610"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.92,
-  "tokens_in": 2030,
-  "tokens_out": 66
+  "seconds": 7.2,
+  "tokens_in": 1941,
+  "tokens_out": 117
  },
- "type": "conductive_polymer_aluminum_solid_electr"
+ "type": "polymer_aluminum_capacitor"
 }

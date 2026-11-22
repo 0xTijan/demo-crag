@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb3916k_05dcabb8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9e2c0194e6243b2216d1ae0d20e4d604d4105db0fcc91257778bac82f4144e9e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:54+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB3916K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.74,
+  "tokens_in": 2265,
+  "tokens_out": 45
+ },
+ "type": "complementary_mosfet"
+}

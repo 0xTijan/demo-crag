@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/smurp460_c88ce13c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2e892947804cd7db62fa1b4761117648a5f7e96c3b62d02697c3ba05d5c5e175",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:59+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMURP460"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.03,
+  "tokens_in": 1222,
+  "tokens_out": 41
+ },
+ "type": "ultrafast_rectifier"
+}

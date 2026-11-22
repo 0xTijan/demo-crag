@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/gsb0520ws-gsb0540ws_d6ab90e5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9d4768c734d5337e9f33f469173054319f3cd49cb3e03fbd3ee5cb9ddd79c1d9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:03+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSB0520WS",
+   "GSB0530WS",
+   "GSB0540WS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.67,
+  "tokens_in": 1390,
+  "tokens_out": 61
+ },
+ "type": "schottky_rectifier"
+}

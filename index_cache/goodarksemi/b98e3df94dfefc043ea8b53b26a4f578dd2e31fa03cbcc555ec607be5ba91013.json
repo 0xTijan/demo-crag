@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gs3xxc_56bb105b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b98e3df94dfefc043ea8b53b26a4f578dd2e31fa03cbcc555ec607be5ba91013",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:39+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "*S313C",
+   "*S320C"
+  ],
+  "confidence": "high",
+  "asked_again": true,
+  "seconds": 15.48,
+  "tokens_in": 7605,
+  "tokens_out": 92
+ },
+ "type": "fast_recovery_rectifier"
+}

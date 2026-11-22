@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmbt3440_1ecd014e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7f36da3cbb24b254822b768315ce16e47fc149cad5c5e89d6d65ef9f4239e4b1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:53+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "MMBT3440"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.17,
+  "tokens_in": 1238,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

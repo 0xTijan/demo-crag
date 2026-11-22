@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq2504_7807e4a3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e4e24ea1dd1a538d35e0b3b16ef2d6990c265d3bcca0abee52fec929e84737d3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:31+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ2504"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.75,
+  "tokens_in": 2061,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsdc213-sds_7fa42e24.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2283f7c4d4828d4729312c4bf727c3471877af28888ce1237ad6eb69a4f99dff",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:34+00:00",
+  "is_datasheet": true,
+  "label": "MEMS digital output motion sensor",
+  "family": false,
+  "part_numbers": [
+   "GSDC213"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.23,
+  "tokens_in": 1728,
+  "tokens_out": 42
+ },
+ "type": "mems_motion_sensor"
+}

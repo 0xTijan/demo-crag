@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:57+00:00",
+  "at": "2026-11-21T12:00:36+00:00",
   "is_datasheet": true,
   "label": "chip common mode filter",
   "family": true,
@@ -15,9 +15,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.26,
-  "tokens_in": 1385,
+  "seconds": 7.35,
+  "tokens_in": 1344,
   "tokens_out": 46
  },
- "type": "multilayer_chip_common_mode_filter"
+ "type": "common_mode_filter"
 }

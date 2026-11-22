@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjtl65rf076_85d99bff.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a3aa1dfe9af2ae4def8fc75a47faff4d435fedafd9158c3fd688261cb9ffd098",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:50+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJTL65RF076"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.17,
+  "tokens_in": 2207,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

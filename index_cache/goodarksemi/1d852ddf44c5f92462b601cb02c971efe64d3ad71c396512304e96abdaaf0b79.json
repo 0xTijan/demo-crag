@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd8003_2ece1c1e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1d852ddf44c5f92462b601cb02c971efe64d3ad71c396512304e96abdaaf0b79",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:25+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD8003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.53,
+  "tokens_in": 1933,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/zener-wafer-1w-20v-1n4747a_128c54c1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e4e85c9a49bd1308d11aa8c911b2b12dec2dfceac2946e5af943f96aebf3d11c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:57+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": false,
+  "part_numbers": [
+   "GDZ2CW040200YQS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.17,
+  "tokens_in": 985,
+  "tokens_out": 46
+ },
+ "type": "zener_diode"
+}

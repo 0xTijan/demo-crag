@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/ff1-ff7_6e6ad6b9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "73aa880e832b3b191333c656ce447b0730f082886aaa5fcbe2035a1490f5f9a3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:33+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "FF1",
+   "FF2",
+   "FF3",
+   "FF4",
+   "FF5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.99,
+  "tokens_in": 1659,
+  "tokens_out": 60
+ },
+ "type": "fast_recovery_rectifier"
+}

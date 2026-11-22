@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp06120_e37a9dd9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b4025e012b4991d5261cac0fd8e49a24a806da8874ac790e7dc0abf8f22095cf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:03+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP06120"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.73,
+  "tokens_in": 2044,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

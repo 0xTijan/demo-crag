@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:52+00:00",
+  "at": "2026-11-21T12:00:32+00:00",
   "is_datasheet": true,
   "label": "shielded SMD power inductor",
   "family": true,
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.58,
-  "tokens_in": 2450,
+  "seconds": 10.52,
+  "tokens_in": 2374,
   "tokens_out": 107
  },
- "type": "shielded_smd_power_inductor"
+ "type": "power_inductor"
 }

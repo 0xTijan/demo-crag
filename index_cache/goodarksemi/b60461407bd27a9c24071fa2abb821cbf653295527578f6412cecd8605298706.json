@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsrf20xxct_59bec6e4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b60461407bd27a9c24071fa2abb821cbf653295527578f6412cecd8605298706",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:53+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSRF2020CT",
+   "GSRF2030CT",
+   "GSRF2040CT",
+   "GSRF2045CT",
+   "GSRF2060CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.94,
+  "tokens_in": 1951,
+  "tokens_out": 117
+ },
+ "type": "schottky_rectifier"
+}

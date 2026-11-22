@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mbrb3060ct_f8d7ca40.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fa16ffa496118087fe37a1aa8b653144e94e28f1d8fdae64ff7837a358ce602e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:54+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "MBRB3060CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.79,
+  "tokens_in": 1289,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

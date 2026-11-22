@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsczt32c_7551dd97.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fa9b3aa60af062f551eb9697acd95ca73b9ef3a7365b6375ee79ae6ef7fb091a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:14+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSCZT32C"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.55,
+  "tokens_in": 1161,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

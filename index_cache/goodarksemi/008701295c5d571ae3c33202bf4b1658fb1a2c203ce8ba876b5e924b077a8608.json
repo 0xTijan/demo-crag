@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsftl10020_0a055511.md",
+ "supplier": "goodarksemi",
+ "file_hash": "008701295c5d571ae3c33202bf4b1658fb1a2c203ce8ba876b5e924b077a8608",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:35+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFTL10020"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.11,
+  "tokens_in": 2110,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

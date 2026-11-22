@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsec7b750_3bb27a65.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b4655623407dc6a655dcc8693a062da277773b9dac94da551159493f108059ff",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:02+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSEC7B750"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.45,
+  "tokens_in": 1129,
+  "tokens_out": 41
+ },
+ "type": "tvs_diode"
+}

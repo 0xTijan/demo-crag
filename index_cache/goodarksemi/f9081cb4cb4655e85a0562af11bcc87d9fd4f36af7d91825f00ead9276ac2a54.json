@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gbu10xx-4mm_cbc5023b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f9081cb4cb4655e85a0562af11bcc87d9fd4f36af7d91825f00ead9276ac2a54",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:13+00:00",
+  "is_datasheet": true,
+  "label": "general purpose bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU1001-4MM",
+   "GBU1002-4MM",
+   "GBU1004-4MM",
+   "GBU1006-4MM",
+   "GBU1008-4MM"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.5,
+  "tokens_in": 1920,
+  "tokens_out": 99
+ },
+ "type": "bridge_rectifier"
+}

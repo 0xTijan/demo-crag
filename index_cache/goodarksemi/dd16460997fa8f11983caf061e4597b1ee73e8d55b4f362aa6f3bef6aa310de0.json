@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc2039eau_ea62ea51.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dd16460997fa8f11983caf061e4597b1ee73e8d55b4f362aa6f3bef6aa310de0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:55+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC2039EAU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.23,
+  "tokens_in": 1933,
+  "tokens_out": 43
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/smbr30100ct-smbrf30100ct_e87dfcbd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2691f70af44084415f673ceae9e97f70138c5f00707e69d19124b65cafbb4f7d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:38+00:00",
+  "is_datasheet": true,
+  "label": "Trench Schottky rectifier",
+  "family": true,
+  "part_numbers": [
+   "SMBR30100CT",
+   "SMBRF30100CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.04,
+  "tokens_in": 1567,
+  "tokens_out": 57
+ },
+ "type": "schottky_rectifier"
+}

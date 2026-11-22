@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb10110_5c2a6b58.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5d9e6364c0acef5ae3d375bc146a84104a2bb3f01b2a5bc75964646a3971a854",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:27+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB10110"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.45,
+  "tokens_in": 2059,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

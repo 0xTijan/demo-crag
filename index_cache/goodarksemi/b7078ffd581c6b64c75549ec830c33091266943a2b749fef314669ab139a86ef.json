@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/tvs-wafer-5000w_1c49959d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b7078ffd581c6b64c75549ec830c33091266943a2b749fef314669ab139a86ef",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:41+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated TVS",
+  "family": true,
+  "part_numbers": [
+   "GDT5KP5.0A",
+   "GDT5KP6.0A",
+   "GDT5KP6.5A",
+   "GDT5KP7.0A",
+   "GDT5KP7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.08,
+  "tokens_in": 2778,
+  "tokens_out": 83
+ },
+ "type": "tvs_diode"
+}

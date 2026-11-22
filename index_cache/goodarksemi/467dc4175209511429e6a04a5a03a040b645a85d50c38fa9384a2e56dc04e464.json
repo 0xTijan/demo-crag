@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft68015_14570946.md",
+ "supplier": "goodarksemi",
+ "file_hash": "467dc4175209511429e6a04a5a03a040b645a85d50c38fa9384a2e56dc04e464",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:19+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT68015"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.41,
+  "tokens_in": 1976,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

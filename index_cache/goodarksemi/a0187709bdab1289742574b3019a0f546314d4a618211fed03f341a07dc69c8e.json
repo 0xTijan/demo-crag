@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gskbu8x_f2b0d2a6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a0187709bdab1289742574b3019a0f546314d4a618211fed03f341a07dc69c8e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:00+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSKBU8B",
+   "GSKBU8D",
+   "GSKBU8G",
+   "GSKBU8J",
+   "GSKBU8K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 12.38,
+  "tokens_in": 1675,
+  "tokens_out": 73
+ },
+ "type": "bridge_rectifier"
+}

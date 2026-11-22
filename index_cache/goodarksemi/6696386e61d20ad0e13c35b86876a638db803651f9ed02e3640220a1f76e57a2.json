@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/goodarksemi-product-brief-mosfet-100v-300a-1-2mω-gsgtl1r510-toll_2d84825e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6696386e61d20ad0e13c35b86876a638db803651f9ed02e3640220a1f76e57a2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:29+00:00",
+  "is_datasheet": true,
+  "label": "SGT MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGTL1R510"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.33,
+  "tokens_in": 1139,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

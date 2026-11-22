@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmcl4448_809ba59e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "284edb32bec8c25c272c11ec18a465925152968f23ec805f0e53fe6a27d81ba5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:05+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSMCL4448"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.31,
+  "tokens_in": 944,
+  "tokens_out": 42
+ },
+ "type": "switching_diode"
+}

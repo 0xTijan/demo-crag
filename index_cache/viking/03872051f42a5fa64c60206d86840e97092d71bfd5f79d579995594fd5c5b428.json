@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:16:35+00:00",
+  "at": "2026-11-21T12:01:14+00:00",
   "is_datasheet": true,
-  "label": "shielded SMD power inductor",
+  "label": "Shielded SMD Power Inductor",
   "family": true,
   "part_numbers": [
    "SCDS3D18",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.3,
-  "tokens_in": 2092,
-  "tokens_out": 91
+  "seconds": 6.77,
+  "tokens_in": 2022,
+  "tokens_out": 75
  },
- "type": "shielded_smd_power_inductor"
+ "type": "power_inductor"
 }

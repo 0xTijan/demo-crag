@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsp1560l_f65f1425.md",
+ "supplier": "goodarksemi",
+ "file_hash": "50cef7234d5ad41dcef5e5340a88b02f308e5e51cc67377acc10372a14f8ce1a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:56+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSP1560L"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.58,
+  "tokens_in": 1134,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

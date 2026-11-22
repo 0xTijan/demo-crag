@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gstfcx495u_e3acba94.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3fb436464f94c29dff16038adca57368883fdf6c17706fd0b4a41907dd2e8241",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:40+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSTFCX495U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.74,
+  "tokens_in": 1306,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

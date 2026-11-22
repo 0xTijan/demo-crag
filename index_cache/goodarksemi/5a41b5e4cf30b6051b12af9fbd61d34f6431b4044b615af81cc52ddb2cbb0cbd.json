@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf3714_0a4d73cf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5a41b5e4cf30b6051b12af9fbd61d34f6431b4044b615af81cc52ddb2cbb0cbd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:51+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF3714"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.2,
+  "tokens_in": 2033,
+  "tokens_out": 44
+ },
+ "type": "complementary_mosfet"
+}

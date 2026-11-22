@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzta92_2a3d90e9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "243883400916928795e0c13d99fe7dbd9d94364c0159b87cb22d3f4c15f16c01",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:57+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "PZTA92"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.6,
+  "tokens_in": 1250,
+  "tokens_out": 38
+ },
+ "type": "pnp_transistor"
+}

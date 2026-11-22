@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgc1045s_5c7e5b05.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b512494d708953e89ce9d98a536d289fda907ad5432301139de65450fd272b03",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:06+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGC1045S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.29,
+  "tokens_in": 1540,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

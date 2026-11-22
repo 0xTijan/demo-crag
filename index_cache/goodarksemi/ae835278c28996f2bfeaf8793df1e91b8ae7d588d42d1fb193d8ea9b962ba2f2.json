@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/smcjx_e52fc9a7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ae835278c28996f2bfeaf8793df1e91b8ae7d588d42d1fb193d8ea9b962ba2f2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:49+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "SMCJ5.0A",
+   "SMCJ6.0A",
+   "SMCJ6.5A",
+   "SMCJ7.0A",
+   "SMCJ7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.24,
+  "tokens_in": 2828,
+  "tokens_out": 77
+ },
+ "type": "tvs_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsen24b003_60f676f2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "07bba8738516d43180990245595d41ac21820400f1124365ef9f57f1a4ec1e70",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:14+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS diode",
+  "family": false,
+  "part_numbers": [
+   "GSEN24B003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.51,
+  "tokens_in": 1106,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

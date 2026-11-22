@@ -5,16 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:06+00:00",
+  "at": "2026-11-21T11:59:47+00:00",
   "is_datasheet": true,
   "label": "multilayer ceramic capacitor",
   "family": true,
-  "part_numbers": [],
+  "part_numbers": [
+   "01005",
+   "0201",
+   "0402",
+   "0603",
+   "0805"
+  ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.62,
-  "tokens_in": 2423,
-  "tokens_out": 34
+  "seconds": 7.2,
+  "tokens_in": 2296,
+  "tokens_out": 88
  },
  "type": "multilayer_ceramic_capacitor"
 }

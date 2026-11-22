@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd2089_f8914903.md",
+ "supplier": "goodarksemi",
+ "file_hash": "af3fe7b9e95523e099a47ad1517b0fe17fa0f7c4f68b510d5d4fae18e58a3c67",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:26+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD2089"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.89,
+  "tokens_in": 1999,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

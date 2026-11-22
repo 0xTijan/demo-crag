@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gdb5819hws_143eae87.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f7a40f4dd9e0a18e6d318d1c7262a8f2155db03d4491cf1f6d22033c02cfd19b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:26+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GDB5819HWS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.97,
+  "tokens_in": 932,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

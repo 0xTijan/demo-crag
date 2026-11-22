@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfp4960_0db2232e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3812fcf627cb79f0443f4cee510d131b5c3176f9017528b5b6b6fef08e8f1dff",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:47+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFP4960"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 2104,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

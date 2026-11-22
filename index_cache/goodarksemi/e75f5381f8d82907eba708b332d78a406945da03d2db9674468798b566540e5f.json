@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2300_74782ba2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e75f5381f8d82907eba708b332d78a406945da03d2db9674468798b566540e5f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:17+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2300"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.65,
+  "tokens_in": 1853,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

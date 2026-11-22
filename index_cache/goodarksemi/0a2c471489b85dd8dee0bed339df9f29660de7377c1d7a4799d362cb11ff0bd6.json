@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/lsl36_cf8ee6c7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0a2c471489b85dd8dee0bed339df9f29660de7377c1d7a4799d362cb11ff0bd6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:01+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "LSL36"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.92,
+  "tokens_in": 1174,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

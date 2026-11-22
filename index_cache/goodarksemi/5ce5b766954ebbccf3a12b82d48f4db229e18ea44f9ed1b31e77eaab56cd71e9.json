@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq6r803_f0ba2dd1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5ce5b766954ebbccf3a12b82d48f4db229e18ea44f9ed1b31e77eaab56cd71e9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:33+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ6R803"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 2100,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

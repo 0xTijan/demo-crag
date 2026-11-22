@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh80r280_d142a6cf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cfb957a984051e9e32251b3532cb98e24d0cb9bcd291e8821757b1f44452c438",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:05+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH80R280"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.82,
+  "tokens_in": 2203,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

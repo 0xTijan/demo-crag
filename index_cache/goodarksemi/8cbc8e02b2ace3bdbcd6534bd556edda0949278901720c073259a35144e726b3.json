@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gspsl13_69e3c930.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8cbc8e02b2ace3bdbcd6534bd556edda0949278901720c073259a35144e726b3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:21+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSPSL13"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.03,
+  "tokens_in": 1185,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

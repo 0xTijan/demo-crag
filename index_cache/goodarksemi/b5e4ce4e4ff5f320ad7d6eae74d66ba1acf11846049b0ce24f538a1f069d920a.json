@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsbcx69_9f896ff8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b5e4ce4e4ff5f320ad7d6eae74d66ba1acf11846049b0ce24f538a1f069d920a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:43+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": true,
+  "part_numbers": [
+   "GSBCX69",
+   "GSBCX69-10",
+   "GSBCX69-16",
+   "GSBCX69-25"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.35,
+  "tokens_in": 1885,
+  "tokens_out": 68
+ },
+ "type": "pnp_transistor"
+}

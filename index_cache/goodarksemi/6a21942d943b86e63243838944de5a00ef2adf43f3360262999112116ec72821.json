@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsgp0230s-gsgp0240s_888c6dc5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6a21942d943b86e63243838944de5a00ef2adf43f3360262999112116ec72821",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:29+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGP0230S",
+   "GSGP0240S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.97,
+  "tokens_in": 1100,
+  "tokens_out": 55
+ },
+ "type": "schottky_rectifier"
+}

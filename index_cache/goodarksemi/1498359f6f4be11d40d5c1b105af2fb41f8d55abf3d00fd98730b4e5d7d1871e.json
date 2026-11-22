@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2220y_564d4a52.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1498359f6f4be11d40d5c1b105af2fb41f8d55abf3d00fd98730b4e5d7d1871e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:16+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2220Y"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.31,
+  "tokens_in": 2127,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

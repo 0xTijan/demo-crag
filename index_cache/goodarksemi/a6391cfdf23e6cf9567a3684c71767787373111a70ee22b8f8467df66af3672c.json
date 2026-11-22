@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsbar43x_42f7ee53.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a6391cfdf23e6cf9567a3684c71767787373111a70ee22b8f8467df66af3672c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:10+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSBAR43",
+   "GSBAR43A",
+   "GSBAR43C",
+   "GSBAR43S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.05,
+  "tokens_in": 932,
+  "tokens_out": 61
+ },
+ "type": "schottky_rectifier"
+}

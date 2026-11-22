@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsps1150-gsps1200_92fc889b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3e3daef65fc8423c950f1b9d3c827234df28c63613aba72d21924dcf2beec306",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:10+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSPS1150",
+   "GSPS1200"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.5,
+  "tokens_in": 1346,
+  "tokens_out": 52
+ },
+ "type": "schottky_rectifier"
+}

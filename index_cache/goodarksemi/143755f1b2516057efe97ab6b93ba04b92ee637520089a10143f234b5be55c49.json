@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsd45160p_4e26afe9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "143755f1b2516057efe97ab6b93ba04b92ee637520089a10143f234b5be55c49",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:24+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSD45160P"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.45,
+  "tokens_in": 1320,
+  "tokens_out": 43
+ },
+ "type": "standard_rectifier"
+}

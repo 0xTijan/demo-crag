@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp3984_54407142.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7ab8f48ffe23389f0edd445b213d13ae1dc09fc67757dfa352fe05b8003a38a9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:08+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP3984"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.96,
+  "tokens_in": 2077,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

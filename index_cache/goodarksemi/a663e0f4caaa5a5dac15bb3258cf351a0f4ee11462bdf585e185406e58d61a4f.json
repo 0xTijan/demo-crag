@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgx0r904au_e1191db4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a663e0f4caaa5a5dac15bb3258cf351a0f4ee11462bdf585e185406e58d61a4f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:10+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGX0R904AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.12,
+  "tokens_in": 2223,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

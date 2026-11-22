@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsgp4u-gsgp5u_c53b9fa3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3763cb422a2b0e3a0f47674347019598f4a690aac972eb5122e0ceb76acc18a1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:50+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGP4U",
+   "GSGP5U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.41,
+  "tokens_in": 1236,
+  "tokens_out": 47
+ },
+ "type": "ultrafast_rectifier"
+}

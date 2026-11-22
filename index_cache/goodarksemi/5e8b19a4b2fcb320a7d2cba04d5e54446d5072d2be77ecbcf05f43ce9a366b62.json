@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/grl25x_178659a6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5e8b19a4b2fcb320a7d2cba04d5e54446d5072d2be77ecbcf05f43ce9a366b62",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:02:47+00:00",
+  "is_datasheet": true,
+  "label": "general purpose rectifier",
+  "family": true,
+  "part_numbers": [
+   "GRL251",
+   "GRL252",
+   "GRL253",
+   "GRL254",
+   "GRL255"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.26,
+  "tokens_in": 1701,
+  "tokens_out": 81
+ },
+ "type": "standard_rectifier"
+}

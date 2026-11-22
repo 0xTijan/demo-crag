@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/bc856_16f017f8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "89e071e725c179847b28fa30bf9d74c8d0c93bf92e0665880e6ef15271a4c0e3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:02+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "BC856"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.65,
+  "tokens_in": 1194,
+  "tokens_out": 37
+ },
+ "type": "pnp_transistor"
+}

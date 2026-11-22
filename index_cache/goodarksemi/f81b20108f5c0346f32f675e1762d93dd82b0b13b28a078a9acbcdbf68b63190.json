@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/2n2222a_3509deee.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f81b20108f5c0346f32f675e1762d93dd82b0b13b28a078a9acbcdbf68b63190",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:29+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "2N2222A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.35,
+  "tokens_in": 2294,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

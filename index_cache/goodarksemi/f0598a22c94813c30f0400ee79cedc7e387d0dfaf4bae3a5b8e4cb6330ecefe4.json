@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/smsz4xxx_2439a7a5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f0598a22c94813c30f0400ee79cedc7e387d0dfaf4bae3a5b8e4cb6330ecefe4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:53+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "SMSZ4678",
+   "SMSZ4679",
+   "SMSZ4680",
+   "SMSZ4681",
+   "SMSZ4682"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.42,
+  "tokens_in": 2593,
+  "tokens_out": 72
+ },
+ "type": "zener_diode"
+}

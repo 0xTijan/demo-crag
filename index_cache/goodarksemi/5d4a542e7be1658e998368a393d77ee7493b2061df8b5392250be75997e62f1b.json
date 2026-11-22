@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/sd945_08918dd3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5d4a542e7be1658e998368a393d77ee7493b2061df8b5392250be75997e62f1b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:13+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "SD945"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.47,
+  "tokens_in": 1145,
+  "tokens_out": 40
+ },
+ "type": "schottky_rectifier"
+}

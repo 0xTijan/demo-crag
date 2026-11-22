@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsb0520sd_f0845f3e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3ac6f44e220cf58b1e6573d5db602ac58e849fb7fe12d7e4bc1f886b764b210c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:00+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSB0520SD"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.33,
+  "tokens_in": 1096,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

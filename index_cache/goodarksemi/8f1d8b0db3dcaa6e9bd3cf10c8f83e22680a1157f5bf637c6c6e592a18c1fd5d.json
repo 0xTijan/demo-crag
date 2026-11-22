@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf6910_af72e24c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8f1d8b0db3dcaa6e9bd3cf10c8f83e22680a1157f5bf637c6c6e592a18c1fd5d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:12+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF6910"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.61,
+  "tokens_in": 2133,
+  "tokens_out": 40
+ },
+ "type": "mosfet_n"
+}

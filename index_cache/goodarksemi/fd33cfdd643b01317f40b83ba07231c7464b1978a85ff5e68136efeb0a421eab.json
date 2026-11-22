@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn0354_2a1c7d60.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fd33cfdd643b01317f40b83ba07231c7464b1978a85ff5e68136efeb0a421eab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN0354"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.61,
+  "tokens_in": 2218,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

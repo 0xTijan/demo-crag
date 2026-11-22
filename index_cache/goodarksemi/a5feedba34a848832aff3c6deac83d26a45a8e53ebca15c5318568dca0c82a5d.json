@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd0471_bf3c5bb2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a5feedba34a848832aff3c6deac83d26a45a8e53ebca15c5318568dca0c82a5d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:40+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD0471"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.52,
+  "tokens_in": 1947,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

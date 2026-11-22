@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq4701_f937be62.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e196057c084f37e9829b7cdc24994dc15e30fa2bc3f86d383a5606814f681b14",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:08+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ4701"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.43,
+  "tokens_in": 2084,
+  "tokens_out": 46
+ },
+ "type": "complementary_mosfet"
+}

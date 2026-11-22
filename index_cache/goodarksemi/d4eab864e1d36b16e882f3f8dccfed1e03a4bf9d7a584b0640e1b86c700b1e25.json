@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsey12u4400_71cf259a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d4eab864e1d36b16e882f3f8dccfed1e03a4bf9d7a584b0640e1b86c700b1e25",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:54+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEY12U4400"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.57,
+  "tokens_in": 1187,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

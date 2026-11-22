@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc13110_b5525f23.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f9980656339b46b1b0e155f90d6b999ee860a5ff7e47904dd5bca347c735e9dd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:50+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC13110"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.57,
+  "tokens_in": 2012,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgq6988_3c2328e1.md",
+ "supplier": "goodarksemi",
+ "file_hash": "99f70028b385ae0144bb0bb47d1e260ee13f34007bb9ba7a5a93182d8add4023",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:31+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGQ6988"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.62,
+  "tokens_in": 2244,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsrb521d3-30_ba6dfaa9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "59f6539c17eba05d0dc7d9a4ff93608613cadf20f2f9be1b1ef8aa6f1a9a9eb2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:43+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSRB521D3-30"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 3.85,
+  "tokens_in": 885,
+  "tokens_out": 47
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsf0500at_940afa6b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "74dece67c3b12812850075c529ccb83d1d3ed179d02167a85894c534a646df13",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:27+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSF0500AT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.06,
+  "tokens_in": 1825,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgc2050s_4528c607.md",
+ "supplier": "goodarksemi",
+ "file_hash": "de045738a91bd24ddc4fcb3b12d79d246d3501f4c8936c9b54924f2eb2d2e81e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:22+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGC2050S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.81,
+  "tokens_in": 1282,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

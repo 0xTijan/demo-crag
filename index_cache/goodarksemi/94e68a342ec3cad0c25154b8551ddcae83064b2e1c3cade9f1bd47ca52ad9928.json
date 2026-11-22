@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfj7002k_e1d1838f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "94e68a342ec3cad0c25154b8551ddcae83064b2e1c3cade9f1bd47ca52ad9928",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:21+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFJ7002K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.25,
+  "tokens_in": 1874,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

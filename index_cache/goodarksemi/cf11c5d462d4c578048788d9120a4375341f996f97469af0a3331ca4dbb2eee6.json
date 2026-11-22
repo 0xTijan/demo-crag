@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfn4906_1e424159.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cf11c5d462d4c578048788d9120a4375341f996f97469af0a3331ca4dbb2eee6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:30+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFN4906"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.67,
+  "tokens_in": 2154,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

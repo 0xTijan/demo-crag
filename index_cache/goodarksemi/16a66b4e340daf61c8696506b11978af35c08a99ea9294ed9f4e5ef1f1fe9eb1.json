@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsk27-gsk2b_fe4f13e6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "16a66b4e340daf61c8696506b11978af35c08a99ea9294ed9f4e5ef1f1fe9eb1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:30+00:00",
+  "is_datasheet": true,
+  "label": "surface mount Schottky rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSK27",
+   "GSK28",
+   "GSK29",
+   "GSK2B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.96,
+  "tokens_in": 1206,
+  "tokens_out": 59
+ },
+ "type": "schottky_rectifier"
+}

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/mb12s-mb110s_1f051331.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f4852e68fcb654a5cdde58c5714c5eae150ea7392043ede2559edbf1dc88a4d8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:11+00:00",
+  "is_datasheet": true,
+  "label": "Schottky bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "MB12S",
+   "MB14S",
+   "MB16S",
+   "MB18S",
+   "MB110S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.51,
+  "tokens_in": 1319,
+  "tokens_out": 65
+ },
+ "type": "schottky_bridge_rectifier"
+}

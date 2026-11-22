@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmmbd4448htw_b80bda55.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e7e1fc11362c35b3ad2dc2d37656232a1920a698a84b4917753c95430b5ab091",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:21+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSMMBD4448HTW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.22,
+  "tokens_in": 1060,
+  "tokens_out": 43
+ },
+ "type": "switching_diode"
+}

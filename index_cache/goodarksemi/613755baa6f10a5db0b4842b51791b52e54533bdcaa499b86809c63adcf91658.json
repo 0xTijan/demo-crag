@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsr20xxm1_07a73267.md",
+ "supplier": "goodarksemi",
+ "file_hash": "613755baa6f10a5db0b4842b51791b52e54533bdcaa499b86809c63adcf91658",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:10+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSR2030M1",
+   "GSR2040M1",
+   "GSR2045M1",
+   "GSR2060M1",
+   "GSR20150M1"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.44,
+  "tokens_in": 1749,
+  "tokens_out": 96
+ },
+ "type": "schottky_rectifier"
+}

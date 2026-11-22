@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp0694_afa04b1b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8ead56daad718cdd8c5c1b2348be066e5f841275f13a74c80767e69efae95d49",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:22:07+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP0694"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.61,
+  "tokens_in": 1930,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

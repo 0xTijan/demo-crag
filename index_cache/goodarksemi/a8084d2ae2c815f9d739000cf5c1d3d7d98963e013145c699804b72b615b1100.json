@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/fu1-fu5_db15a256.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a8084d2ae2c815f9d739000cf5c1d3d7d98963e013145c699804b72b615b1100",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:54+00:00",
+  "is_datasheet": true,
+  "label": "superfast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "FU1",
+   "FU2",
+   "FU3",
+   "FU4",
+   "FU5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.82,
+  "tokens_in": 1419,
+  "tokens_out": 53
+ },
+ "type": "ultrafast_rectifier"
+}

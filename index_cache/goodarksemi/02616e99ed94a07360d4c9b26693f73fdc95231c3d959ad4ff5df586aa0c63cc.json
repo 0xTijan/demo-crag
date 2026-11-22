@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn10096_6189b2bd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "02616e99ed94a07360d4c9b26693f73fdc95231c3d959ad4ff5df586aa0c63cc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:20:08+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN10096"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.53,
+  "tokens_in": 1628,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

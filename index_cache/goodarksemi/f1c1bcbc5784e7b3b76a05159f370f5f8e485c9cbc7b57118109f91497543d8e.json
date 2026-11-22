@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp011bsl_02910e10.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f1c1bcbc5784e7b3b76a05159f370f5f8e485c9cbc7b57118109f91497543d8e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:22+00:00",
+  "is_datasheet": true,
+  "label": "Surface mount Schottky rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGP011BSL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.22,
+  "tokens_in": 988,
+  "tokens_out": 45
+ },
+ "type": "schottky_rectifier"
+}

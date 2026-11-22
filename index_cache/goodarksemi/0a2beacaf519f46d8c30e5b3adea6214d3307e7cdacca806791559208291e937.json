@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp2r206_bd2947aa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0a2beacaf519f46d8c30e5b3adea6214d3307e7cdacca806791559208291e937",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:16+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP2R206"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.06,
+  "tokens_in": 1984,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

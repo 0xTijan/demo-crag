@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsen3b150_fac31c98.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4a1a4e2d9644d5d1d58b57c6b93541694d90c3f881b046a6f1431ed5ae6c86c3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:22+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEN3B150"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.51,
+  "tokens_in": 1064,
+  "tokens_out": 42
+ },
+ "type": "esd_protection_diode"
+}

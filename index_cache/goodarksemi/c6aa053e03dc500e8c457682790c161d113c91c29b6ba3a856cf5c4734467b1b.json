@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmb20jxx_90bf43fd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c6aa053e03dc500e8c457682790c161d113c91c29b6ba3a856cf5c4734467b1b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:37+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "GSMB20J20A",
+   "GSMB20J22A",
+   "GSMB20J24A",
+   "GSMB20J26A",
+   "GSMB20J28A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 10.78,
+  "tokens_in": 2219,
+  "tokens_out": 82
+ },
+ "type": "tvs_diode"
+}

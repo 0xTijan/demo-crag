@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsc406r_0c161504.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ca8ca25df44b3fad7071f119123732173b49be9d5c35c0a487f9e74e10b843a3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:06+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSC406R"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.3,
+  "tokens_in": 1092,
+  "tokens_out": 39
+ },
+ "type": "npn_transistor"
+}

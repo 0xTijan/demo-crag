@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgt71r710_464fbb0a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "98ccc8e7af45b7978adb44441896f499dd890392d525f7b90b3b2f88182a9514",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:49+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGT71R710"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.97,
+  "tokens_in": 2074,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

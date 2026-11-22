@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gs2x_5432bcfa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fb7e976814538ca81c6c9a7b4eb78045d1f84fa2206cb42562a74ee1759600cf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:14+00:00",
+  "is_datasheet": true,
+  "label": "general purpose rectifier",
+  "family": true,
+  "part_numbers": [
+   "GS2A",
+   "GS2B",
+   "GS2D",
+   "GS2G",
+   "GS2J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.07,
+  "tokens_in": 1911,
+  "tokens_out": 67
+ },
+ "type": "standard_rectifier"
+}

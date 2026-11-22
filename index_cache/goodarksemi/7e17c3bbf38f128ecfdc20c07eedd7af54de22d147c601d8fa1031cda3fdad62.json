@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu80r900_74d6e17f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7e17c3bbf38f128ecfdc20c07eedd7af54de22d147c601d8fa1031cda3fdad62",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:36+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU80R900"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.45,
+  "tokens_in": 2042,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

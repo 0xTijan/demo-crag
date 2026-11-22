@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/15kpa17a-15kpa280ca_a217f650.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f99d301fa03ff06b84aa4e688611de969fb11bac778d2aa548e7a975e2f3f110",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:26+00:00",
+  "is_datasheet": true,
+  "label": "TVS diode",
+  "family": true,
+  "part_numbers": [
+   "15KPA17A",
+   "15KPA280CA"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 12.04,
+  "tokens_in": 3004,
+  "tokens_out": 51
+ },
+ "type": "tvs_diode"
+}

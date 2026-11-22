@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/bas40_22f98bc3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aca134504e498f9ff6a04a2148ea2a66080f81105758ec4168b3051797b94760",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:30+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": true,
+  "part_numbers": [
+   "BAS40",
+   "BAS40-04",
+   "BAS40-05",
+   "BAS40-06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.71,
+  "tokens_in": 1056,
+  "tokens_out": 66
+ },
+ "type": "schottky_rectifier"
+}

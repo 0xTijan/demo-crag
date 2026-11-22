@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbav99t_11989091.md",
+ "supplier": "goodarksemi",
+ "file_hash": "172daaf2ae8cc52e978ce83cb85a3c5418acc2b17fa8b45aa254a9e32631ea6e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:50+00:00",
+  "is_datasheet": true,
+  "label": "switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAV99T"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.12,
+  "tokens_in": 992,
+  "tokens_out": 40
+ },
+ "type": "switching_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp9r115_7dd4a350.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8a9befb87b6d54c26340d95cbb74eb432bfb669b9aeff293435d5db5522feaaf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:21+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP9R115"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.83,
+  "tokens_in": 2208,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mur30u60ptw5_2e7902b5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5685563968760aa46ebfee51232215687c1672a76367fb1ba4b9c34cffbea6a8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:05+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast rectifier",
+  "family": false,
+  "part_numbers": [
+   "MUR30U60PTW5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.11,
+  "tokens_in": 1243,
+  "tokens_out": 45
+ },
+ "type": "ultrafast_rectifier"
+}

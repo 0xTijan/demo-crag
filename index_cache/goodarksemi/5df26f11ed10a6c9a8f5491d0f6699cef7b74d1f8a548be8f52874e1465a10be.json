@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmur2040d1_dad84732.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5df26f11ed10a6c9a8f5491d0f6699cef7b74d1f8a548be8f52874e1465a10be",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:00+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated super fast rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMUR2040D1"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.04,
+  "tokens_in": 1505,
+  "tokens_out": 46
+ },
+ "type": "ultrafast_rectifier"
+}

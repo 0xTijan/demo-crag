@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gs3ezxxd_1a26de5d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9a3bcbabdc1c772d5e6d3ac2ab39d8a117efcad2c792ef702728f7deedb9ff49",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:27+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GS3EZ3.9D",
+   "GS3EZ4.3D",
+   "GS3EZ4.7D",
+   "GS3EZ5.1D",
+   "GS3EZ5.6D"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.83,
+  "tokens_in": 3463,
+  "tokens_out": 77
+ },
+ "type": "zener_diode"
+}

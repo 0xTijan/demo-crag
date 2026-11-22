@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjv4n150_1b3707e0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e5515380cc1c44487b232d6c0615a79aba911c8650b2d086584f59ee5de551e0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:14+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJV4N150"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.77,
+  "tokens_in": 2118,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

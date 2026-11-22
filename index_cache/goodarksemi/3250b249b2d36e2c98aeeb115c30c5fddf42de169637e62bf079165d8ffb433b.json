@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/bav19ws-bav21ws_816d5e12.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3250b249b2d36e2c98aeeb115c30c5fddf42de169637e62bf079165d8ffb433b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:58:47+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery switching diode",
+  "family": true,
+  "part_numbers": [
+   "BAV19WS",
+   "BAV20WS",
+   "BAV21WS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.79,
+  "tokens_in": 1323,
+  "tokens_out": 54
+ },
+ "type": "switching_diode"
+}

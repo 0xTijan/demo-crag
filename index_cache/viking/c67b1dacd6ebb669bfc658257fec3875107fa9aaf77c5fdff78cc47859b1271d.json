@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:16:27+00:00",
+  "at": "2026-11-21T12:01:07+00:00",
   "is_datasheet": true,
   "label": "trimmable thick film chip resistor",
   "family": true,
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.71,
-  "tokens_in": 1765,
-  "tokens_out": 65
+  "seconds": 7.29,
+  "tokens_in": 1698,
+  "tokens_out": 77
  },
  "type": "thick_film_chip_resistor"
 }

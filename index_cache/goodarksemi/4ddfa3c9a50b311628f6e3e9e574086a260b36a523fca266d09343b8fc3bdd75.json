@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjd70r420_014ba610.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4ddfa3c9a50b311628f6e3e9e574086a260b36a523fca266d09343b8fc3bdd75",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:05+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJD70R420"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.72,
+  "tokens_in": 2041,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

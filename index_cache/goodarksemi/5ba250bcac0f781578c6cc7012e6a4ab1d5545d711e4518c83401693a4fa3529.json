@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp9r706_a03685e9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5ba250bcac0f781578c6cc7012e6a4ab1d5545d711e4518c83401693a4fa3529",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:48+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP9R706"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.86,
+  "tokens_in": 2073,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

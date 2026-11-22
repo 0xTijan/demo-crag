@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbat54x_fd98f916.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2f96759a9490fa20802b80aab4e3ea8d791b0172f47bb10c3c05c24ebaddd365",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:38+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAT54X"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.12,
+  "tokens_in": 934,
+  "tokens_out": 40
+ },
+ "type": "schottky_rectifier"
+}

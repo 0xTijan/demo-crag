@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/sl12a-sl110a_6b551c01.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a3d9bf9403ad26c12586b141f65d26c3a335dbc56a16e6d37c309642e1546b1a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:15+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SL12A",
+   "SL13A",
+   "SL14A",
+   "SL15A",
+   "SL16A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.68,
+  "tokens_in": 1730,
+  "tokens_out": 89
+ },
+ "type": "schottky_rectifier"
+}

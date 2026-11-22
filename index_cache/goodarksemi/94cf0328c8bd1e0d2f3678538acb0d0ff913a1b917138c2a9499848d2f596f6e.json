@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu65r070_46a66539.md",
+ "supplier": "goodarksemi",
+ "file_hash": "94cf0328c8bd1e0d2f3678538acb0d0ff913a1b917138c2a9499848d2f596f6e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:12+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU65R070"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.65,
+  "tokens_in": 2264,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

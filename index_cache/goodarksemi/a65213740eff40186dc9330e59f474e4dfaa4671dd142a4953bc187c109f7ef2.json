@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq6710_81c73243.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a65213740eff40186dc9330e59f474e4dfaa4671dd142a4953bc187c109f7ef2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:22+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ6710"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.95,
+  "tokens_in": 2080,
+  "tokens_out": 46
+ },
+ "type": "complementary_mosfet"
+}

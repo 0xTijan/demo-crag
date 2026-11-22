@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft0886_20b89ae5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2ba1d491abd9c9e62c6350f76cb233177f329be36614ae784bf1f61a7d0e17c4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:26+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT0886"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.56,
+  "tokens_in": 2021,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

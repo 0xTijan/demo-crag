@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmdt2907a_cf26fbe3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9748b84a702530f0b2574f334ae412bc681b0978f475e84abd3f38def66b23ee",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:32+00:00",
+  "is_datasheet": true,
+  "label": "dual PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMDT2907A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.82,
+  "tokens_in": 1606,
+  "tokens_out": 43
+ },
+ "type": "dual_pnp_transistor"
+}

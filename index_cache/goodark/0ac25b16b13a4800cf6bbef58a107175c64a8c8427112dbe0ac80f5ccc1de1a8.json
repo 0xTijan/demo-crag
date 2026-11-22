@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:43:52+00:00",
+  "at": "2026-11-21T10:31:10+00:00",
   "is_datasheet": true,
-  "label": "transient voltage suppressor",
+  "label": "Transient voltage suppressor",
   "family": true,
   "part_numbers": [
    "AL4TVS10A",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.89,
-  "tokens_in": 1896,
-  "tokens_out": 78
+  "seconds": 8.87,
+  "tokens_in": 2788,
+  "tokens_out": 77
  },
  "type": "tvs_diode"
 }

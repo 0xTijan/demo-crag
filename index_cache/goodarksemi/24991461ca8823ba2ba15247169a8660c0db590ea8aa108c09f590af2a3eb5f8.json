@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsju6n90_f1e68fdf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "24991461ca8823ba2ba15247169a8660c0db590ea8aa108c09f590af2a3eb5f8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:10+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJU6N90"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.75,
+  "tokens_in": 1932,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

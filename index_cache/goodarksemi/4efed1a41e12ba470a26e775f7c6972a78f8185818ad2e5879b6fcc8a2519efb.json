@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsf1002_d165dfc3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4efed1a41e12ba470a26e775f7c6972a78f8185818ad2e5879b6fcc8a2519efb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:30+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSF1002"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.23,
+  "tokens_in": 2083,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

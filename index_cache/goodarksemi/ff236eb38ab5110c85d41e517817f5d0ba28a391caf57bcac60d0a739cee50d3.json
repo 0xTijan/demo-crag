@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/rectifier-wafer-super-fast_c048aa45.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ff236eb38ab5110c85d41e517817f5d0ba28a391caf57bcac60d0a739cee50d3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:10+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": true,
+  "part_numbers": [
+   "GDGU50A-M",
+   "GDGU60A-M",
+   "GDGU95A-M",
+   "GDGU140A-M"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.11,
+  "tokens_in": 1438,
+  "tokens_out": 66
+ },
+ "type": "ultrafast_rectifier"
+}

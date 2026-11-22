@@ -5,15 +5,15 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:10:33+00:00",
+  "at": "2026-11-21T10:55:27+00:00",
   "is_datasheet": true,
   "label": "N-channel MOSFET",
   "family": false,
   "part_numbers": [],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.48,
-  "tokens_in": 1819,
+  "seconds": 4.69,
+  "tokens_in": 1675,
   "tokens_out": 34
  },
  "type": "mosfet_n"

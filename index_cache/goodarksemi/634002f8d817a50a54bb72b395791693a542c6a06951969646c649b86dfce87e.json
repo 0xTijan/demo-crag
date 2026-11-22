@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/p600x_634fedab.md",
+ "supplier": "goodarksemi",
+ "file_hash": "634002f8d817a50a54bb72b395791693a542c6a06951969646c649b86dfce87e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:31+00:00",
+  "is_datasheet": true,
+  "label": "axial lead rectifier",
+  "family": true,
+  "part_numbers": [
+   "P600A",
+   "P600B",
+   "P600D",
+   "P600G",
+   "P600J"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.77,
+  "tokens_in": 1960,
+  "tokens_out": 82
+ },
+ "type": "standard_rectifier"
+}

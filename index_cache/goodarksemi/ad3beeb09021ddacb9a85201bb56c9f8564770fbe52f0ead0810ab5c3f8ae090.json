@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsk3pc10_e4fbef55.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ad3beeb09021ddacb9a85201bb56c9f8564770fbe52f0ead0810ab5c3f8ae090",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:33+00:00",
+  "is_datasheet": true,
+  "label": "Schottky rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSK3PC10"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.74,
+  "tokens_in": 1042,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

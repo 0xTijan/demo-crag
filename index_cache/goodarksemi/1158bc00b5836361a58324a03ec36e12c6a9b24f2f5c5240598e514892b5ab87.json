@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsma6txa_b373d030.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1158bc00b5836361a58324a03ec36e12c6a9b24f2f5c5240598e514892b5ab87",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:32+00:00",
+  "is_datasheet": true,
+  "label": "Transient voltage suppressor diode",
+  "family": true,
+  "part_numbers": [
+   "GSMA6T5.0A",
+   "GSMA6T6.0A",
+   "GSMA6T6.5A",
+   "GSMA6T7.0A",
+   "GSMA6T7.5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.01,
+  "tokens_in": 2749,
+  "tokens_out": 84
+ },
+ "type": "tvs_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn3110_91064abc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2a70462fb3ed42d19409fd95d5d4783c5638b454d7b220c92624025844424a34",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:20:45+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN3110"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.71,
+  "tokens_in": 2037,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

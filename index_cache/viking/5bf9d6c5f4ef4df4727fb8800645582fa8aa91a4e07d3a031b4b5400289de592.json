@@ -5,18 +5,22 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:13:28+00:00",
+  "at": "2026-11-21T11:58:10+00:00",
   "is_datasheet": true,
   "label": "chip resistor",
   "family": true,
   "part_numbers": [
-   "CRS..A"
+   "CRS01",
+   "CRS02",
+   "CRS03",
+   "CRS05",
+   "CRS06"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.35,
-  "tokens_in": 1763,
-  "tokens_out": 36
+  "seconds": 5.61,
+  "tokens_in": 1696,
+  "tokens_out": 60
  },
- "type": "chip_resistor"
+ "type": "thick_film_chip_resistor"
 }

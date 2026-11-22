@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsff3134_59079a0a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "71ae9d9afc881160b9e6f94a4794e373808db968e1e19f7bf158962abac30e54",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:43+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFF3134"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.03,
+  "tokens_in": 1491,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

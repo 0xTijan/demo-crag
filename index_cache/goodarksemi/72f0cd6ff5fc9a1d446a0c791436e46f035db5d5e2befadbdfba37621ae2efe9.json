@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft24010_cfec0726.md",
+ "supplier": "goodarksemi",
+ "file_hash": "72f0cd6ff5fc9a1d446a0c791436e46f035db5d5e2befadbdfba37621ae2efe9",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:41+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT24010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.06,
+  "tokens_in": 2045,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

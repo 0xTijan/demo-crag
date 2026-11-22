@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgg1050_31035077.md",
+ "supplier": "goodarksemi",
+ "file_hash": "cf9d9d4e32d9584d53b95d49f7095b2d5946595e6f44d5a04a292627d062667e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:42+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGG1050"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.92,
+  "tokens_in": 2104,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

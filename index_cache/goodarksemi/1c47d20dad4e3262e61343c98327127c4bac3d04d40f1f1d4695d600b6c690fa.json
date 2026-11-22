@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmmsz4xxxt_7117a58d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1c47d20dad4e3262e61343c98327127c4bac3d04d40f1f1d4695d600b6c690fa",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:43+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GSMMSZ4678T",
+   "GSMMSZ4679T",
+   "GSMMSZ4680T",
+   "GSMMSZ4681T",
+   "GSMMSZ4682T"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.6,
+  "tokens_in": 2495,
+  "tokens_out": 87
+ },
+ "type": "zener_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfq3812_8b345e5f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b5eff9823e6eb854c8ffcdaed47c3d9cfbb861502552578b4e9b005544b0181a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:54:57+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFQ3812"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.0,
+  "tokens_in": 2066,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

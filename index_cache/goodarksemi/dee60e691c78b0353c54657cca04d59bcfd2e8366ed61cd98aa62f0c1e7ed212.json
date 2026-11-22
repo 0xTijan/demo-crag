@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/her60xg_ad546d6a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dee60e691c78b0353c54657cca04d59bcfd2e8366ed61cd98aa62f0c1e7ed212",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:28+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "HER 601G",
+   "HER 602G",
+   "HER 603G",
+   "HER 604G",
+   "HER 605G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.66,
+  "tokens_in": 1799,
+  "tokens_out": 96
+ },
+ "type": "fast_recovery_rectifier"
+}

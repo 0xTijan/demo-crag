@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/2n3906_6133741a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "da55d5b9014cf8d27d63a4962216caae26a67a589ab73697ef802f286daeb1fe",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:35+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "2N3906"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.5,
+  "tokens_in": 1373,
+  "tokens_out": 39
+ },
+ "type": "pnp_transistor"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ses5vd523-2u_db0970a2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d2e797a28d6945268ac71ad2806ec72ac305ed8942d21b15141295cab1fd9101",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:15+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "SES5VD523-2U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.88,
+  "tokens_in": 1013,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

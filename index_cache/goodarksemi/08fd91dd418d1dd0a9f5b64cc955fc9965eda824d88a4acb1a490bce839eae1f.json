@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjtl60r190_1c4db27e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "08fd91dd418d1dd0a9f5b64cc955fc9965eda824d88a4acb1a490bce839eae1f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJTL60R190"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.15,
+  "tokens_in": 2198,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

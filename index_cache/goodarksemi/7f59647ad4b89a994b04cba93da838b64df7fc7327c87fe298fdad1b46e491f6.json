@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh60r570_04a33b44.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7f59647ad4b89a994b04cba93da838b64df7fc7327c87fe298fdad1b46e491f6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:52+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH60R570"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 2070,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd4011au_5c8836dc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2e6e38c0af525fe179c78f6ad220a31001d4726f94a0c0cf2605221dd403e780",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:52+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD4011AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.9,
+  "tokens_in": 2120,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

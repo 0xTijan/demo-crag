@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft65r310_20c00516.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b67ffae8c92864c431ddcfbc57c6fa991dd63f8395409c69b592c24deef26a8b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT65R310"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.44,
+  "tokens_in": 2099,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

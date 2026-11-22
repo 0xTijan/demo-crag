@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:30+00:00",
+  "at": "2026-11-21T12:02:10+00:00",
   "is_datasheet": true,
   "label": "TO-220 power resistor",
-  "family": false,
+  "family": true,
   "part_numbers": [
    "TR30"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.31,
-  "tokens_in": 1475,
+  "seconds": 4.58,
+  "tokens_in": 1415,
   "tokens_out": 40
  },
- "type": "to_220_power_resistor"
+ "type": "power_resistor"
 }

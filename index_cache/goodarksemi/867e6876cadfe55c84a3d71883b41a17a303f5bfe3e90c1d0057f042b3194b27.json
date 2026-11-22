@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfl3409_f60a34f2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "867e6876cadfe55c84a3d71883b41a17a303f5bfe3e90c1d0057f042b3194b27",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:13+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFL3409"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.31,
+  "tokens_in": 1921,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

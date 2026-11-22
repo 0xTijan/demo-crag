@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:02:02+00:00",
+  "at": "2026-11-21T10:48:02+00:00",
   "is_datasheet": true,
   "label": "fast switching diode",
   "family": false,
   "part_numbers": [
-   "5D"
+   "SOD-323"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.17,
-  "tokens_in": 1288,
-  "tokens_out": 36
+  "seconds": 6.07,
+  "tokens_in": 1070,
+  "tokens_out": 40
  },
- "type": "fast_switching_diode"
+ "type": "switching_diode"
 }

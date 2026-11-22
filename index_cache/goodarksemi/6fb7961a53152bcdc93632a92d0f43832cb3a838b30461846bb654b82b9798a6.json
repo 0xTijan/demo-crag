@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc2312_f1614cad.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6fb7961a53152bcdc93632a92d0f43832cb3a838b30461846bb654b82b9798a6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:59+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC2312"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.11,
+  "tokens_in": 1689,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

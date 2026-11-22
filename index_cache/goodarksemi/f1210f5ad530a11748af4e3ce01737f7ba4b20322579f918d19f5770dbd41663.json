@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh13n50_501c5fb8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f1210f5ad530a11748af4e3ce01737f7ba4b20322579f918d19f5770dbd41663",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH13N50"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.72,
+  "tokens_in": 2015,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

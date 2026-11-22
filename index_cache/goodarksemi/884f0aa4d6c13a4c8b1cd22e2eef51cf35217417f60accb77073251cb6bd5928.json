@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gseslc5vd1006-2u_d835cd4b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "884f0aa4d6c13a4c8b1cd22e2eef51cf35217417f60accb77073251cb6bd5928",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:28+00:00",
+  "is_datasheet": true,
+  "label": "low capacitance ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSESLC5VD1006-2U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.79,
+  "tokens_in": 1233,
+  "tokens_out": 51
+ },
+ "type": "esd_protection_diode"
+}

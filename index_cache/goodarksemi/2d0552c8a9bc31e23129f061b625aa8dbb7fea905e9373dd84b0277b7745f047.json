@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfu6511_9add5d14.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2d0552c8a9bc31e23129f061b625aa8dbb7fea905e9373dd84b0277b7745f047",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:28+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFU6511"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.74,
+  "tokens_in": 2116,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmur2060d1_b925d87e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f34b0194eb6d393757fc18afc27a2ec2b8306f78817ecf02a888d8145edc9ca6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:02+00:00",
+  "is_datasheet": true,
+  "label": "super fast rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMUR2060D1"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.08,
+  "tokens_in": 1288,
+  "tokens_out": 43
+ },
+ "type": "ultrafast_rectifier"
+}

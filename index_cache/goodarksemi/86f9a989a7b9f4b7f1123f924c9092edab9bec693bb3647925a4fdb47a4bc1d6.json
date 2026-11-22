@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsby228_4504756a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "86f9a989a7b9f4b7f1123f924c9092edab9bec693bb3647925a4fdb47a4bc1d6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:02+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSBY228"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 3.98,
+  "tokens_in": 981,
+  "tokens_out": 39
+ },
+ "type": "fast_recovery_rectifier"
+}

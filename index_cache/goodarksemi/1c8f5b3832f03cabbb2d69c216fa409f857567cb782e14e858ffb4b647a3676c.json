@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gbu6005-gbu610_12a2640f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1c8f5b3832f03cabbb2d69c216fa409f857567cb782e14e858ffb4b647a3676c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:22+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GBU6005",
+   "GBU601",
+   "GBU602",
+   "GBU604",
+   "GBU606"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.76,
+  "tokens_in": 1826,
+  "tokens_out": 84
+ },
+ "type": "bridge_rectifier"
+}

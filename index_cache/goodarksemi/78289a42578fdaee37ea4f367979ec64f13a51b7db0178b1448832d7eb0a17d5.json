@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsen7b0015_37733523.md",
+ "supplier": "goodarksemi",
+ "file_hash": "78289a42578fdaee37ea4f367979ec64f13a51b7db0178b1448832d7eb0a17d5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:48+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEN7B0015"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.56,
+  "tokens_in": 1182,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

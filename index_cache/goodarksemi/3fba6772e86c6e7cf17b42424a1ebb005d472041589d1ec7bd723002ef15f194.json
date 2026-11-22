@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsmbxf_2784f1e7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3fba6772e86c6e7cf17b42424a1ebb005d472041589d1ec7bd723002ef15f194",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:38:01+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSMB2F",
+   "GSMB4F",
+   "GSMB6F",
+   "GSMB8F",
+   "GSMB10F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.22,
+  "tokens_in": 1733,
+  "tokens_out": 65
+ },
+ "type": "bridge_rectifier"
+}

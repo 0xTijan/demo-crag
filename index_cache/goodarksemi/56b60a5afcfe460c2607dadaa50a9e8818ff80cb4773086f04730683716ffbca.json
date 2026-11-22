@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu65rf110_aeb7a87f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "56b60a5afcfe460c2607dadaa50a9e8818ff80cb4773086f04730683716ffbca",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:17+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU65RF110"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.45,
+  "tokens_in": 2121,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

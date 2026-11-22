@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsus3x_01125049.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9a80a1b8bf6aff5b7f488925b2dffbd7900eed43afea5ff8764e18b6a2d38b37",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:12+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSUS3A",
+   "GSUS3B",
+   "GSUS3D",
+   "GSUS3F",
+   "GSUS3G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.04,
+  "tokens_in": 2027,
+  "tokens_out": 81
+ },
+ "type": "ultrafast_rectifier"
+}

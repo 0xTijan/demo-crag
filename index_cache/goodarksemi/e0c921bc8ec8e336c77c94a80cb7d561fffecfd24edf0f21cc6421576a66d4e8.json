@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbas40-07_3cd4fbc5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e0c921bc8ec8e336c77c94a80cb7d561fffecfd24edf0f21cc6421576a66d4e8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:15+00:00",
+  "is_datasheet": true,
+  "label": "reverse voltage forward current",
+  "family": false,
+  "part_numbers": [
+   "GSBAS40-07"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.13,
+  "tokens_in": 3120,
+  "tokens_out": 42
+ },
+ "type": "_check_by_hand"
+}

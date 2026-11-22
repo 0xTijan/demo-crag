@@ -1,0 +1,20 @@
+{
+ "file": "goodarksemi/1n914_81ab4606.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d0e86b44e45a8a17b446dc7fb268eb87c619dce9d5899383e71d38ba560cd48f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:57:16+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.91,
+  "tokens_in": 923,
+  "tokens_out": 33
+ },
+ "type": "fast_recovery_rectifier"
+}

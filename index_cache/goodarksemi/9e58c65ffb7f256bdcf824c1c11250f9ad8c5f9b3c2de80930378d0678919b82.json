@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsh1ma16_8d9b238c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9e58c65ffb7f256bdcf824c1c11250f9ad8c5f9b3c2de80930378d0678919b82",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:34:14+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSH1MA16"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.08,
+  "tokens_in": 1124,
+  "tokens_out": 42
+ },
+ "type": "ultrafast_rectifier"
+}

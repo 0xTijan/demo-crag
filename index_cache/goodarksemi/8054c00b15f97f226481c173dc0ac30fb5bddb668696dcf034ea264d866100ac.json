@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsey20u2500_7a88b877.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8054c00b15f97f226481c173dc0ac30fb5bddb668696dcf034ea264d866100ac",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:59+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEY20U2500"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.57,
+  "tokens_in": 1173,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

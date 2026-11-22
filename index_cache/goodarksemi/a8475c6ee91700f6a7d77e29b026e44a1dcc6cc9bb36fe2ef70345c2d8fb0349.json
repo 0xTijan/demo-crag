@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsen5b003_bfcbc79e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a8475c6ee91700f6a7d77e29b026e44a1dcc6cc9bb36fe2ef70345c2d8fb0349",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:08:37+00:00",
+  "is_datasheet": true,
+  "label": "Ultra Low Capacitance TVS Diode",
+  "family": false,
+  "part_numbers": [
+   "GSEN5B003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.65,
+  "tokens_in": 1306,
+  "tokens_out": 46
+ },
+ "type": "esd_protection_diode"
+}

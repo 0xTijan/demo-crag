@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfd6911_97949dfa.md",
+ "supplier": "goodarksemi",
+ "file_hash": "996c0daf027615ea9cf099f338dcbb56bdd10e705b31fa23c804b562cc93831d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:58+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFD6911"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.68,
+  "tokens_in": 2051,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

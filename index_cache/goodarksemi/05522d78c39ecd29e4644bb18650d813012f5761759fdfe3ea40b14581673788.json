@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp1r103_9f3475b3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "05522d78c39ecd29e4644bb18650d813012f5761759fdfe3ea40b14581673788",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:54+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP1R103"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.05,
+  "tokens_in": 2085,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

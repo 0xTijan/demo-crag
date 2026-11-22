@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/s3139k_e41efa1b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6d76b56270e028fe1e16dfed7ffa76a06c42dcd92679d92029d02fb7fdd797d1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:40+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "S3139K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.78,
+  "tokens_in": 1539,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

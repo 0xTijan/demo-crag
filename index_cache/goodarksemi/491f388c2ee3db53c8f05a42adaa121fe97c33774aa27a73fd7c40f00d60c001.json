@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsps1b5h-gsps1ch_ace52623.md",
+ "supplier": "goodarksemi",
+ "file_hash": "491f388c2ee3db53c8f05a42adaa121fe97c33774aa27a73fd7c40f00d60c001",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:12+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSPS1B5H",
+   "GSPS1CH"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.89,
+  "tokens_in": 1238,
+  "tokens_out": 50
+ },
+ "type": "schottky_rectifier"
+}

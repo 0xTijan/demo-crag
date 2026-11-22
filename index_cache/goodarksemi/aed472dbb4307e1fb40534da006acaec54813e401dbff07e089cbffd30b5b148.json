@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/s0603h_6d534634.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aed472dbb4307e1fb40534da006acaec54813e401dbff07e089cbffd30b5b148",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:30+00:00",
+  "is_datasheet": true,
+  "label": "chip fuse",
+  "family": true,
+  "part_numbers": [
+   "S0603H1",
+   "S0603H1.5",
+   "S0603H2",
+   "S0603H2.5",
+   "S0603H3"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.87,
+  "tokens_in": 1582,
+  "tokens_out": 79
+ },
+ "type": "fast_acting_chip_fuse"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu250n06_3cfad895.md",
+ "supplier": "goodarksemi",
+ "file_hash": "260e90de9c5e9fccc3ad82e0158aa3eb8f599f3d9177923564e5562ded82c75d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:52+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU250N06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.01,
+  "tokens_in": 2050,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

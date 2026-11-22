@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:46:31+00:00",
+  "at": "2026-11-21T10:33:37+00:00",
   "is_datasheet": true,
   "label": "fast recovery switching diode",
   "family": false,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.12,
-  "tokens_in": 1215,
+  "seconds": 4.59,
+  "tokens_in": 1008,
   "tokens_out": 38
  },
- "type": "fast_recovery_switching_diode"
+ "type": "switching_diode"
 }

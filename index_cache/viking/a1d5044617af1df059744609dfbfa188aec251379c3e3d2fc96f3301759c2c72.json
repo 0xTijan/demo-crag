@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:40+00:00",
-  "is_datasheet": false,
-  "label": "catalogue",
+  "at": "2026-11-21T11:57:22+00:00",
+  "is_datasheet": true,
+  "label": "wire wound common mode filter",
   "family": true,
   "part_numbers": [
    "CFH..A series",
@@ -16,9 +16,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.33,
-  "tokens_in": 1368,
-  "tokens_out": 49
+  "seconds": 6.86,
+  "tokens_in": 1317,
+  "tokens_out": 52
  },
- "type": "_not_a_datasheet"
+ "type": "common_mode_filter"
 }

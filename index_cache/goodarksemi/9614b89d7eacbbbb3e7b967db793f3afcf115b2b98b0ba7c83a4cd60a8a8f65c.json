@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/schottky-wafer-30ma-40v-0-30mil_d6cc36ce.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9614b89d7eacbbbb3e7b967db793f3afcf115b2b98b0ba7c83a4cd60a8a8f65c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:07+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier diode",
+  "family": false,
+  "part_numbers": [
+   "GDSYHF033P",
+   "GDSYHF034P"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.91,
+  "tokens_in": 1041,
+  "tokens_out": 54
+ },
+ "type": "schottky_rectifier"
+}

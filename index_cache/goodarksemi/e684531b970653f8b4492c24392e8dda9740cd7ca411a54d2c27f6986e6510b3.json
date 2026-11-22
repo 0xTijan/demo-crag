@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/scc100d-msx_20922c19.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e684531b970653f8b4492c24392e8dda9740cd7ca411a54d2c27f6986e6510b3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:58+00:00",
+  "is_datasheet": true,
+  "label": "ceramic PTC thermistor",
+  "family": false,
+  "part_numbers": [
+   "SCC100D-MSX"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.07,
+  "tokens_in": 1223,
+  "tokens_out": 45
+ },
+ "type": "ptc_thermistor"
+}

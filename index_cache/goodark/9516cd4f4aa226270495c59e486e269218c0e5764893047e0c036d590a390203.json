@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:41:49+00:00",
+  "at": "2026-11-21T10:29:06+00:00",
   "is_datasheet": true,
-  "label": "transient voltage suppressor",
+  "label": "TVS diode",
   "family": true,
   "part_numbers": [
    "A1.5SMC11A",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.15,
-  "tokens_in": 1964,
-  "tokens_out": 88
+  "seconds": 8.04,
+  "tokens_in": 2144,
+  "tokens_out": 87
  },
  "type": "tvs_diode"
 }

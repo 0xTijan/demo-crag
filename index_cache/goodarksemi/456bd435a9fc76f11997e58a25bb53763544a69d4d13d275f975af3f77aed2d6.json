@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh9r015_4bc5a2e3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "456bd435a9fc76f11997e58a25bb53763544a69d4d13d275f975af3f77aed2d6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:12+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH9R015"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.76,
+  "tokens_in": 1891,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

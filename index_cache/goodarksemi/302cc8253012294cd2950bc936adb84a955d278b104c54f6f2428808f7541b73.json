@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gsbas70wx_82a30c61.md",
+ "supplier": "goodarksemi",
+ "file_hash": "302cc8253012294cd2950bc936adb84a955d278b104c54f6f2428808f7541b73",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:25+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": true,
+  "part_numbers": [
+   "GSBAS70W",
+   "GSBAS70W-04",
+   "GSBAS70W-05",
+   "GSBAS70W-06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.89,
+  "tokens_in": 946,
+  "tokens_out": 74
+ },
+ "type": "schottky_rectifier"
+}

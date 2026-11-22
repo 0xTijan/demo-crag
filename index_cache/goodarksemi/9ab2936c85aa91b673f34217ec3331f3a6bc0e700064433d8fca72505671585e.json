@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfmmt720_d1e0c513.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9ab2936c85aa91b673f34217ec3331f3a6bc0e700064433d8fca72505671585e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:19:28+00:00",
+  "is_datasheet": true,
+  "label": "PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "GSFMMT720"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.49,
+  "tokens_in": 1656,
+  "tokens_out": 40
+ },
+ "type": "pnp_transistor"
+}

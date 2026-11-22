@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gseq2b020_2335e370.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6c7e6145a1ad6f83c62616092b8391206f2a48d9b83efaba86312125f430eb23",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:04+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSEQ2B020"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.68,
+  "tokens_in": 1266,
+  "tokens_out": 42
+ },
+ "type": "esd_tvs_array"
+}

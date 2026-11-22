@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh60r190_9f91c7b8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f14927cf031d6a1da2d664c0017c956ef7d030611fb18f70edfc9d112666beb5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:50+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH60R190"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.76,
+  "tokens_in": 2108,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

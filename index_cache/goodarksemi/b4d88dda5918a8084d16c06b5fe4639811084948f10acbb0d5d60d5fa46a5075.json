@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmdt5451_9e6551fd.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b4d88dda5918a8084d16c06b5fe4639811084948f10acbb0d5d60d5fa46a5075",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:40+00:00",
+  "is_datasheet": true,
+  "label": "complementary NPN+PNP transistor",
+  "family": false,
+  "part_numbers": [
+   "MMDT5451"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.97,
+  "tokens_in": 1407,
+  "tokens_out": 45
+ },
+ "type": "complementary_npn_pnp_transistor"
+}

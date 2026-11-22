@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gspf15x_f9621ecf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d80ab9dace3932469c25d95e299fcd807237c6d82a4ec1fd5eff526db948a8f8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:07+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "PF151",
+   "PF152",
+   "PF153",
+   "PF154",
+   "PF155"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.43,
+  "tokens_in": 1882,
+  "tokens_out": 77
+ },
+ "type": "fast_recovery_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu70r420_296ef8c8.md",
+ "supplier": "goodarksemi",
+ "file_hash": "90a2e10cecbacd4933a6cd64e7dca99caaf37c6c74c8d98afd8ddef0eb62844c",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:19+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU70R420"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.5,
+  "tokens_in": 2104,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

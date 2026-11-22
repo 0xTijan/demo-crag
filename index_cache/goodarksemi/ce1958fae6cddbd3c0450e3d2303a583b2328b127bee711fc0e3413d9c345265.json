@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/ssfq6810_9d5d1019.md",
+ "supplier": "goodarksemi",
+ "file_hash": "ce1958fae6cddbd3c0450e3d2303a583b2328b127bee711fc0e3413d9c345265",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:20+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF46810",
+   "SSFQ6810"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.02,
+  "tokens_in": 2523,
+  "tokens_out": 49
+ },
+ "type": "mosfet_n"
+}

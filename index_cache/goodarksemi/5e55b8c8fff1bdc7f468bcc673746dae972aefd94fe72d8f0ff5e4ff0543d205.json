@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbcv47_60106e53.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5e55b8c8fff1bdc7f468bcc673746dae972aefd94fe72d8f0ff5e4ff0543d205",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:34+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSBCV47"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.64,
+  "tokens_in": 1246,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

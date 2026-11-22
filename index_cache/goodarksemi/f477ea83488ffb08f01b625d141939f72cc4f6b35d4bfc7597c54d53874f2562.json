@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/1n47xx_617c61df.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f477ea83488ffb08f01b625d141939f72cc4f6b35d4bfc7597c54d53874f2562",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:56:45+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "1N4728A",
+   "1N4729A",
+   "1N4730A",
+   "1N4731A",
+   "1N4732A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.73,
+  "tokens_in": 3366,
+  "tokens_out": 77
+ },
+ "type": "zener_diode"
+}

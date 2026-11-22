@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd60r300_b9271faf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0c33f263c823ce83c289827158b6ec50092c0354d9f09a8d6fc570f5dad72938",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:16:15+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD60R300"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.9,
+  "tokens_in": 2238,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

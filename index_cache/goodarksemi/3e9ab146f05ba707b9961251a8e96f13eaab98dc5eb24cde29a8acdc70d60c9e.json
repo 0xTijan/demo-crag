@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/hs1o_b23e49b7.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3e9ab146f05ba707b9961251a8e96f13eaab98dc5eb24cde29a8acdc70d60c9e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:30+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "HS1O"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.23,
+  "tokens_in": 1126,
+  "tokens_out": 37
+ },
+ "type": "fast_recovery_rectifier"
+}

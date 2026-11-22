@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/bzv55x_793eb1db.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5da3bb2d8f77db73c0a844db8ea6a8b4d2fa7923dff9042dfeba82510e77b794",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T10:59:40+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "BZV55-Y2V4",
+   "BZV55-Y2V7",
+   "BZV55-Y3V0",
+   "BZV55-Y3V3",
+   "BZV55-Y3V6"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 11.8,
+  "tokens_in": 3753,
+  "tokens_out": 87
+ },
+ "type": "zener_diode"
+}

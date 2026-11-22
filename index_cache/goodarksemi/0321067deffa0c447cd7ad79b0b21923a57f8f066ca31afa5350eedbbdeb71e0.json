@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/mmsz52xxc_f6139978.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0321067deffa0c447cd7ad79b0b21923a57f8f066ca31afa5350eedbbdeb71e0",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:52+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "MMSZ5221C",
+   "MMSZ5223C",
+   "MMSZ5225C",
+   "MMSZ5226C",
+   "MMSZ5227C"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.38,
+  "tokens_in": 2965,
+  "tokens_out": 82
+ },
+ "type": "zener_diode"
+}

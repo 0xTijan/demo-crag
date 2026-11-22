@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/s3134k_c776883a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0823623c26bf70aa86c977c523bfa59e6751689f0ae9cca4f22b6d505c0549d8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:39+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "S3134K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.58,
+  "tokens_in": 1666,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

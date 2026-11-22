@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsft10176_9ad8efdf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a70f247fae60f6e5b1b82291c9b8fc2fb1327d3443ee390e9553ba63af433e31",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:26:30+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFT10176"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.83,
+  "tokens_in": 2027,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

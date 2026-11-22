@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssft0980_3cb6647e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f2c05dd4e49170bc4c262b531159d1ee999de0bae38b36f2e034add371587397",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:25+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFT0980"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.27,
+  "tokens_in": 2073,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

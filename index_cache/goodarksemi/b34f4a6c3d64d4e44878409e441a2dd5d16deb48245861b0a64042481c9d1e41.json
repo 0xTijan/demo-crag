@@ -1,0 +1,20 @@
+{
+ "file": "goodarksemi/gsk745b_70070958.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b34f4a6c3d64d4e44878409e441a2dd5d16deb48245861b0a64042481c9d1e41",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:40+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.73,
+  "tokens_in": 1443,
+  "tokens_out": 35
+ },
+ "type": "schottky_rectifier"
+}

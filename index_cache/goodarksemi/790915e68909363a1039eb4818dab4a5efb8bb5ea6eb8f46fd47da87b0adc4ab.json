@@ -1,0 +1,25 @@
+{
+ "file": "goodarksemi/gs2xxb_e91c0949.md",
+ "supplier": "goodarksemi",
+ "file_hash": "790915e68909363a1039eb4818dab4a5efb8bb5ea6eb8f46fd47da87b0adc4ab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:19+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "S213B",
+   "S216B",
+   "S218B",
+   "S220B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.83,
+  "tokens_in": 1375,
+  "tokens_out": 60
+ },
+ "type": "fast_recovery_rectifier"
+}

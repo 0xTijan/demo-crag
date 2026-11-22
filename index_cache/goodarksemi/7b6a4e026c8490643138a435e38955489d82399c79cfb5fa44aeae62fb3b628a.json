@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsewt5b150_723d89b3.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7b6a4e026c8490643138a435e38955489d82399c79cfb5fa44aeae62fb3b628a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:09:52+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEWT5B150"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.6,
+  "tokens_in": 1030,
+  "tokens_out": 43
+ },
+ "type": "esd_protection_diode"
+}

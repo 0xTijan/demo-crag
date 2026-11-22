@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsga65rf050au_4148d3fb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4943fc9c7644fc23f42be87c40db43745f88c4c41db918abdf5def353e9072e6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:32+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGA65RF050AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.23,
+  "tokens_in": 2226,
+  "tokens_out": 45
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,24 @@
+{
+ "file": "goodarksemi/sgc1020s-sgc1040s_dc150324.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a835117969221d6cf21617365d2e9e5a3ef744851e3838934ad62d2fec3ced83",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:50:20+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "SGC1020S",
+   "SGC1030S",
+   "SGC1040S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.31,
+  "tokens_in": 1583,
+  "tokens_out": 61
+ },
+ "type": "schottky_rectifier"
+}

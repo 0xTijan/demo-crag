@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gszxxxs_ea72ffee.md",
+ "supplier": "goodarksemi",
+ "file_hash": "64f5aecd0d3fa049b410e63f2bbb11204404fcbd0cebc0f021f4346bdc11c1f2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:43:22+00:00",
+  "is_datasheet": true,
+  "label": "Zener diode",
+  "family": true,
+  "part_numbers": [
+   "GSZ1L8S",
+   "GSZ2L0S",
+   "GSZ2L2S",
+   "GSZ2L4S",
+   "GSZ2L5S"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.94,
+  "tokens_in": 2729,
+  "tokens_out": 72
+ },
+ "type": "zener_diode"
+}

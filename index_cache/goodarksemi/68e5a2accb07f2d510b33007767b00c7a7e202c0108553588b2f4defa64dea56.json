@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsf3400_8f1830ca.md",
+ "supplier": "goodarksemi",
+ "file_hash": "68e5a2accb07f2d510b33007767b00c7a7e202c0108553588b2f4defa64dea56",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:11:47+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSF3400"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.74,
+  "tokens_in": 1858,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

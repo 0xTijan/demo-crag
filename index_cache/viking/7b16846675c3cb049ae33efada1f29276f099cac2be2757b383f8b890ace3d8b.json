@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:14:14+00:00",
+  "at": "2026-11-21T11:58:55+00:00",
   "is_datasheet": true,
   "label": "metal film flame-proof resistor",
   "family": true,
@@ -17,9 +17,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.44,
-  "tokens_in": 1345,
+  "seconds": 6.42,
+  "tokens_in": 1300,
   "tokens_out": 65
  },
- "type": "metal_film_flame_proof_resistor"
+ "type": "leaded_film_resistor"
 }

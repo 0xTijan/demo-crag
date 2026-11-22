@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsr560m3_b09ce902.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e75fedeb2b139a6e7012c5c8f55ae402275690ecff276b5240c39205a3ccfb42",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:34+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSR560M3"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.68,
+  "tokens_in": 1151,
+  "tokens_out": 43
+ },
+ "type": "schottky_rectifier"
+}

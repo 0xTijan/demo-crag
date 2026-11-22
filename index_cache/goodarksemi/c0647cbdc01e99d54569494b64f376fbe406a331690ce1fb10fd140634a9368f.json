@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/f1a-f7a_94d9a1d2.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c0647cbdc01e99d54569494b64f376fbe406a331690ce1fb10fd140634a9368f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:26+00:00",
+  "is_datasheet": true,
+  "label": "glass passivated standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "F1A",
+   "F2A",
+   "F3A",
+   "F4A",
+   "F5A"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.88,
+  "tokens_in": 1630,
+  "tokens_out": 69
+ },
+ "type": "standard_rectifier"
+}

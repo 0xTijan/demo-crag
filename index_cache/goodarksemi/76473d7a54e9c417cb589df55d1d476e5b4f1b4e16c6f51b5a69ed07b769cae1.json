@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgt65100_c0aa965d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "76473d7a54e9c417cb589df55d1d476e5b4f1b4e16c6f51b5a69ed07b769cae1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:46+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGT65100"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.85,
+  "tokens_in": 2015,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

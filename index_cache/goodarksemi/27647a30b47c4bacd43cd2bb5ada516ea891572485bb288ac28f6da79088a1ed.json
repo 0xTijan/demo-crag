@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/mur1040-mur1040f_d23f4e1e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "27647a30b47c4bacd43cd2bb5ada516ea891572485bb288ac28f6da79088a1ed",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:56+00:00",
+  "is_datasheet": true,
+  "label": "Super Fast Recovery Rectifier",
+  "family": true,
+  "part_numbers": [
+   "MUR1040",
+   "MUR1040F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.48,
+  "tokens_in": 1300,
+  "tokens_out": 50
+ },
+ "type": "ultrafast_rectifier"
+}

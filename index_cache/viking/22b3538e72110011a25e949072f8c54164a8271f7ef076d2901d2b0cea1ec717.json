@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:16:24+00:00",
+  "at": "2026-11-21T12:01:03+00:00",
   "is_datasheet": true,
-  "label": "current sensing thick film chip resistor",
+  "label": "Current sensing thick film chip resistor",
   "family": true,
   "part_numbers": [
    "RS-02",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.73,
-  "tokens_in": 1838,
-  "tokens_out": 64
+  "seconds": 7.28,
+  "tokens_in": 1770,
+  "tokens_out": 76
  },
- "type": "current_sensing_thick_film_chip_resistor"
+ "type": "current_sensing_chip_resistor"
 }

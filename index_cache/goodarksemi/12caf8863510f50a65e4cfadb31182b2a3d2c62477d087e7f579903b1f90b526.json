@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmbrbl3045ct_d798e680.md",
+ "supplier": "goodarksemi",
+ "file_hash": "12caf8863510f50a65e4cfadb31182b2a3d2c62477d087e7f579903b1f90b526",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:37:53+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMBRBL3045CT"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.76,
+  "tokens_in": 1042,
+  "tokens_out": 45
+ },
+ "type": "schottky_rectifier"
+}

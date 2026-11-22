@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsr2wxx_6fb325bb.md",
+ "supplier": "goodarksemi",
+ "file_hash": "518ce38c852c684c3d8d079b8fc35329afa5b6116f12d869001d3af734801561",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:41:15+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSR2W005",
+   "GSR2W01",
+   "GSR2W02",
+   "GSR2W04",
+   "GSR2W06"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 9.17,
+  "tokens_in": 1991,
+  "tokens_out": 90
+ },
+ "type": "fast_recovery_bridge_rectifier"
+}

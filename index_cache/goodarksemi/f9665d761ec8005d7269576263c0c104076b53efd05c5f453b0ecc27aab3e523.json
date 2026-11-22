@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfj8402k_dcda7138.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f9665d761ec8005d7269576263c0c104076b53efd05c5f453b0ecc27aab3e523",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:23+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFJ8402K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.55,
+  "tokens_in": 2060,
+  "tokens_out": 47
+ },
+ "type": "complementary_mosfet"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp03116_6faea604.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8561d195f55a4ef1e3b85993f9bb8465362c6b6e49b4660e822563e5e95b0433",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:21:40+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP03116"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.93,
+  "tokens_in": 2198,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

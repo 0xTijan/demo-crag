@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfr1502_7695be9e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e8da7f1489eb5733d321f0afe8aad5e2fe208b7f4eccf3cad42adf5ad0085700",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:49+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFR1502"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.63,
+  "tokens_in": 3509,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzta42_ade6c0b4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "394fbb15076dcd665a5f67ab185724e4433cbbb54dbf956a89aecd8171a53978",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:56+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "PZTA42"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.82,
+  "tokens_in": 1181,
+  "tokens_out": 38
+ },
+ "type": "npn_transistor"
+}

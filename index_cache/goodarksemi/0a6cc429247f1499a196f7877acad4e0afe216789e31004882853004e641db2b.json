@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp0260sd_22966b14.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0a6cc429247f1499a196f7877acad4e0afe216789e31004882853004e641db2b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:32+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSGP0260SD"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.98,
+  "tokens_in": 1005,
+  "tokens_out": 44
+ },
+ "type": "schottky_rectifier"
+}

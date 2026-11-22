@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd03c16_c50fb52d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aa0f0efda2ee4172b0897d818995377aaf549418abc5d5ee768cebb4d757b449",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:33+00:00",
+  "is_datasheet": true,
+  "label": "N-channel and P-channel complementary MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD03C16"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.13,
+  "tokens_in": 2085,
+  "tokens_out": 46
+ },
+ "type": "complementary_mosfet"
+}

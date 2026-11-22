@@ -5,18 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T18:46:28+00:00",
+  "at": "2026-11-21T10:33:35+00:00",
   "is_datasheet": true,
-  "label": "Schottky barrier diode",
+  "label": "Schottky barrier rectifier",
   "family": false,
   "part_numbers": [
    "K52"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.43,
-  "tokens_in": 1607,
+  "seconds": 4.3,
+  "tokens_in": 1334,
   "tokens_out": 39
  },
- "type": "schottky_diode"
+ "type": "schottky_rectifier"
 }

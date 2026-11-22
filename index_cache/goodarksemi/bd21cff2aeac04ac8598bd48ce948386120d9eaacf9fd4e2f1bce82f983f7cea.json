@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq3816k_64c44a94.md",
+ "supplier": "goodarksemi",
+ "file_hash": "bd21cff2aeac04ac8598bd48ce948386120d9eaacf9fd4e2f1bce82f983f7cea",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:54+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ3816K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.95,
+  "tokens_in": 1929,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

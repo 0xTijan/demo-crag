@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgt2r206au_95a0f166.md",
+ "supplier": "goodarksemi",
+ "file_hash": "62d8bb33fbc6eb41e1f4ce91d5dd76abad88fbe6ae04c2c5254e55f9e14ff5c4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:41+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGT2R206AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.52,
+  "tokens_in": 2311,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

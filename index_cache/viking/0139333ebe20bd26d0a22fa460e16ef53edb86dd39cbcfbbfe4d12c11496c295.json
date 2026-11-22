@@ -5,21 +5,20 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:12:07+00:00",
+  "at": "2026-11-21T11:56:49+00:00",
   "is_datasheet": true,
-  "label": "Automotive Grade High Power Thin Film Chip Resistor",
+  "label": "thin film chip resistor",
   "family": true,
   "part_numbers": [
-   "ARTP..A Series",
    "ARTP02",
    "ARTP03",
    "ARTP05"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.7,
-  "tokens_in": 1664,
-  "tokens_out": 63
+  "seconds": 6.41,
+  "tokens_in": 1599,
+  "tokens_out": 50
  },
- "type": "automotive_grade_high_power_thin_film_ch"
+ "type": "thin_film_chip_resistor"
 }

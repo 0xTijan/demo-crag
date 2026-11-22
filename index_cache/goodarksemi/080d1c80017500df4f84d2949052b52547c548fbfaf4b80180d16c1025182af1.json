@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/rl10xg_dc5c11bf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "080d1c80017500df4f84d2949052b52547c548fbfaf4b80180d16c1025182af1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:20+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "RL101G",
+   "RL102G",
+   "RL103G",
+   "RL104G",
+   "RL105G"
+  ],
+  "confidence": "high",
+  "asked_again": true,
+  "seconds": 14.19,
+  "tokens_in": 3290,
+  "tokens_out": 159
+ },
+ "type": "standard_rectifier"
+}

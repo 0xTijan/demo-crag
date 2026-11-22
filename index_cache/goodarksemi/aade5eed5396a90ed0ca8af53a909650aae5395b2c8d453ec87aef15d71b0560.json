@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbav199_46d734d0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "aade5eed5396a90ed0ca8af53a909650aae5395b2c8d453ec87aef15d71b0560",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:44+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery diode",
+  "family": false,
+  "part_numbers": [
+   "GSBAV199"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.67,
+  "tokens_in": 900,
+  "tokens_out": 40
+ },
+ "type": "fast_recovery_rectifier"
+}

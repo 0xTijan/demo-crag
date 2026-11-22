@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2318e_d2375b2e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "412e5349bca29b2b1ec5d438a94deea0c1a616a6fcc7b093a1edb60d326af9bd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:27+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2318E"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.54,
+  "tokens_in": 1782,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssfd6035_60c9005a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6d3b36995ce444bf3a3603f90c1e781a0f179dcef620597728f2b84e1a6a9ff1",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:53:53+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSFD6035"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.75,
+  "tokens_in": 1830,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

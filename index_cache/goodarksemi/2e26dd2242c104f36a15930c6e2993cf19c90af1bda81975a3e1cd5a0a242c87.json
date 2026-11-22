@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/ssf2219y_c2f0a98a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "2e26dd2242c104f36a15930c6e2993cf19c90af1bda81975a3e1cd5a0a242c87",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:52:14+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF2219Y"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.34,
+  "tokens_in": 2147,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

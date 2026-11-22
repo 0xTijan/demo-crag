@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/pzt5551_badb1820.md",
+ "supplier": "goodarksemi",
+ "file_hash": "736ae0e34312cd371ce37cd7bd67cab6a5c8789a35deb9e6f51f420a39a2b9d8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:48:51+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "PZT5551"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.83,
+  "tokens_in": 1304,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

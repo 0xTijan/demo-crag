@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq6020_1853be78.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e8ea26b56b23652309b9e85c6e1aaf379c377c6f9a8e12a0e13f01e419b0b3b2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:25:17+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ6020"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.22,
+  "tokens_in": 1994,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

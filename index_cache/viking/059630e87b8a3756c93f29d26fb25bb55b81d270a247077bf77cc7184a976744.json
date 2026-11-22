@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:13:48+00:00",
+  "at": "2026-11-21T11:58:30+00:00",
   "is_datasheet": true,
-  "label": "metal chip resistor",
+  "label": "Automotive Grade Current Sensing Metal Chip Resistor",
   "family": true,
   "part_numbers": [
    "CSMW36",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.97,
-  "tokens_in": 2235,
-  "tokens_out": 61
+  "seconds": 8.54,
+  "tokens_in": 2148,
+  "tokens_out": 68
  },
- "type": "metal_chip_resistor"
+ "type": "current_sensing_chip_resistor"
 }

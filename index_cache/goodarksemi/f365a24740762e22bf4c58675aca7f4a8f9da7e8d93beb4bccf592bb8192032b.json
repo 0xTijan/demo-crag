@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsju6508_63c83bde.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f365a24740762e22bf4c58675aca7f4a8f9da7e8d93beb4bccf592bb8192032b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:36:03+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJU6508"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.82,
+  "tokens_in": 1910,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

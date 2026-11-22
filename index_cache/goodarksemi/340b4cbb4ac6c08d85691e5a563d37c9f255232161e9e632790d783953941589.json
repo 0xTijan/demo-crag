@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp0r704hau_3085e18c.md",
+ "supplier": "goodarksemi",
+ "file_hash": "340b4cbb4ac6c08d85691e5a563d37c9f255232161e9e632790d783953941589",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:44+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP0R704HAU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.26,
+  "tokens_in": 2208,
+  "tokens_out": 45
+ },
+ "type": "mosfet_n"
+}

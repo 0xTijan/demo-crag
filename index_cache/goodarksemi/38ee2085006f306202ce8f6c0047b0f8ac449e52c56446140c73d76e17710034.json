@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfp3r210_b242f462.md",
+ "supplier": "goodarksemi",
+ "file_hash": "38ee2085006f306202ce8f6c0047b0f8ac449e52c56446140c73d76e17710034",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:23:09+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFP3R210"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.03,
+  "tokens_in": 2064,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

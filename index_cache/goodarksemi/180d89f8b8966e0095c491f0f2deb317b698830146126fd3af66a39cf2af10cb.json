@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mmdt3904_1c20ad63.md",
+ "supplier": "goodarksemi",
+ "file_hash": "180d89f8b8966e0095c491f0f2deb317b698830146126fd3af66a39cf2af10cb",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:47:33+00:00",
+  "is_datasheet": true,
+  "label": "N-channel transistor",
+  "family": false,
+  "part_numbers": [
+   "MMDT3904"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.71,
+  "tokens_in": 1656,
+  "tokens_out": 40
+ },
+ "type": "_check_by_hand"
+}

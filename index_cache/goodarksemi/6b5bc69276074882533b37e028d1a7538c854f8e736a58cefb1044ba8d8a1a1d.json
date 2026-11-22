@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfw3139k_5ff0c559.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6b5bc69276074882533b37e028d1a7538c854f8e736a58cefb1044ba8d8a1a1d",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:20+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFW3139K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.93,
+  "tokens_in": 1735,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

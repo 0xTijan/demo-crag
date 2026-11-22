@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsclamp3324pe_33afb38e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3cdef63e47091f404aa3c5b1961ff603f50cc235a8ce261cf916d7460523b847",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:11+00:00",
+  "is_datasheet": true,
+  "label": "ESD TVS array",
+  "family": false,
+  "part_numbers": [
+   "GSCLAMP3324PE"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.66,
+  "tokens_in": 1256,
+  "tokens_out": 43
+ },
+ "type": "esd_tvs_array"
+}

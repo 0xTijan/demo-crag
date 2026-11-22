@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgt08298_f38480a5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4937101d8dce4a32f011e5de83d17ec5276548f8046574246fc381379505d6cc",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:33+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGT08298"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.78,
+  "tokens_in": 1926,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

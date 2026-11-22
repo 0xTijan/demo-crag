@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gss5xxc_6b344016.md",
+ "supplier": "goodarksemi",
+ "file_hash": "6c108b417028bcf4840aff4ef08b26b1d51bd23cc094b35e258b404d04e8b819",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:30+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSS52C",
+   "GSS54C",
+   "GSS56C",
+   "GSS510C",
+   "GSS515C"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.84,
+  "tokens_in": 1564,
+  "tokens_out": 79
+ },
+ "type": "schottky_rectifier"
+}

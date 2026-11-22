@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu26010_6922e0e6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "546d37917fd985547e705cc4a971199b10919276da9ecb8178321e6afaa36cca",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:27:56+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU26010"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.82,
+  "tokens_in": 2019,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

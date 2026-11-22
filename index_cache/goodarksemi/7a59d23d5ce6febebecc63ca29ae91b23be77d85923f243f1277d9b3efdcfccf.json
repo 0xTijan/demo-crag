@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsbfu520_c8cfefba.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7a59d23d5ce6febebecc63ca29ae91b23be77d85923f243f1277d9b3efdcfccf",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:05:48+00:00",
+  "is_datasheet": true,
+  "label": "NPN power transistor",
+  "family": false,
+  "part_numbers": [
+   "GSBFU520"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.64,
+  "tokens_in": 1212,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/ls34as-ls345as_8daca107.md",
+ "supplier": "goodarksemi",
+ "file_hash": "666b6017cefcd17c8ef1b464c3410c63ffa2d9b0ca431b8b9bef7e0f889edf7b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:44:44+00:00",
+  "is_datasheet": true,
+  "label": "Surface Mount Schottky Rectifier",
+  "family": true,
+  "part_numbers": [
+   "LS34AS",
+   "LS345AS"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.47,
+  "tokens_in": 1100,
+  "tokens_out": 48
+ },
+ "type": "schottky_rectifier"
+}

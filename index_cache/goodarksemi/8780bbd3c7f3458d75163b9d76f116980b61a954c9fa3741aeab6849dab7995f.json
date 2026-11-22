@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsda213-sds_ac9c6c45.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8780bbd3c7f3458d75163b9d76f116980b61a954c9fa3741aeab6849dab7995f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:25+00:00",
+  "is_datasheet": true,
+  "label": "three-axis digital accelerometer",
+  "family": false,
+  "part_numbers": [
+   "GSDA213"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.52,
+  "tokens_in": 1349,
+  "tokens_out": 40
+ },
+ "type": "three_axis_accelerometer"
+}

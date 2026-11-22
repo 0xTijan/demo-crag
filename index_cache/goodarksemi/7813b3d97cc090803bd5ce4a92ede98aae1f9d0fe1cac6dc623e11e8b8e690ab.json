@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/rs1210fl_a210cd65.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7813b3d97cc090803bd5ce4a92ede98aae1f9d0fe1cac6dc623e11e8b8e690ab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:23+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "RS1210FL"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.28,
+  "tokens_in": 1104,
+  "tokens_out": 40
+ },
+ "type": "fast_recovery_rectifier"
+}

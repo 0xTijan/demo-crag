@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gesdpsa0603v32_b3c67fcc.md",
+ "supplier": "goodarksemi",
+ "file_hash": "927917442cd55c440e48f2f6ee7b0fc9045f20356e468557544a6cf14cce43ee",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:45+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection device",
+  "family": false,
+  "part_numbers": [
+   "GESDPSA0603V32"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.79,
+  "tokens_in": 1164,
+  "tokens_out": 45
+ },
+ "type": "esd_protection_diode"
+}

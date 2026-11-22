@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgn3r183_fbafc081.md",
+ "supplier": "goodarksemi",
+ "file_hash": "13e53429b414c67db550d8d034290941ea3b6adce0596eb0c4bd3bc5e1ca0d12",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:31:05+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGN3R183"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.13,
+  "tokens_in": 1972,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

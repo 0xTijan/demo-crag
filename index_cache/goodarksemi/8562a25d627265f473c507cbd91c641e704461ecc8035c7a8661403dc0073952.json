@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/rl15xg_57704bb6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "8562a25d627265f473c507cbd91c641e704461ecc8035c7a8661403dc0073952",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:15+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "RL151G",
+   "RL152G",
+   "RL153G",
+   "RL154G",
+   "RL155G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.1,
+  "tokens_in": 1580,
+  "tokens_out": 81
+ },
+ "type": "fast_recovery_rectifier"
+}

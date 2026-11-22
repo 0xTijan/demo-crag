@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/smurp1060_e0f9efcf.md",
+ "supplier": "goodarksemi",
+ "file_hash": "0559ce0f540d02954753c2b1e22e0ce0d94610b7d382a1ca4751163efb2a8dfa",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:51:57+00:00",
+  "is_datasheet": true,
+  "label": "ultrafast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "SMURP1060"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.14,
+  "tokens_in": 1273,
+  "tokens_out": 43
+ },
+ "type": "ultrafast_rectifier"
+}

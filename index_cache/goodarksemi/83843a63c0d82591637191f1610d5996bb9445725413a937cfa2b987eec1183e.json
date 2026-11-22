@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc2307l_6cf6ce29.md",
+ "supplier": "goodarksemi",
+ "file_hash": "83843a63c0d82591637191f1610d5996bb9445725413a937cfa2b987eec1183e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:58+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC2307L"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.19,
+  "tokens_in": 1891,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

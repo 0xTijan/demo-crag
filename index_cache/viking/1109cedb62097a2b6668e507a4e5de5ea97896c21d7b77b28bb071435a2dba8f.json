@@ -5,9 +5,9 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:14:46+00:00",
+  "at": "2026-11-21T11:59:26+00:00",
   "is_datasheet": true,
-  "label": "ultra-low chip resistor jumper",
+  "label": "thick film chip resistor",
   "family": true,
   "part_numbers": [
    "LRJ02",
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.91,
-  "tokens_in": 1678,
-  "tokens_out": 77
+  "seconds": 7.38,
+  "tokens_in": 1616,
+  "tokens_out": 76
  },
- "type": "ultra_low_chip_resistor_jumper"
+ "type": "thick_film_chip_resistor"
 }

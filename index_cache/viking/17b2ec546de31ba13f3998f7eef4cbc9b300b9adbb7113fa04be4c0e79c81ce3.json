@@ -5,20 +5,18 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:29+00:00",
+  "at": "2026-11-21T12:00:09+00:00",
   "is_datasheet": true,
   "label": "wire wound chip inductor",
   "family": true,
   "part_numbers": [
-   "NL-M Series",
-   "NL10(C)-M",
-   "NL12(C)-M"
+   "NL-M Series"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.55,
-  "tokens_in": 1604,
-  "tokens_out": 54
+  "seconds": 7.22,
+  "tokens_in": 1540,
+  "tokens_out": 38
  },
  "type": "wire_wound_chip_inductor"
 }

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gspsl14_ba62a266.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f3ef539a99d402cb6c98ba1b87ca6c3fd54bb990fd38f65001e7cf6f1e87e048",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:40:23+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSPSL14"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.99,
+  "tokens_in": 1212,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

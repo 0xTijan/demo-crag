@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsjh65r290_b381ac30.md",
+ "supplier": "goodarksemi",
+ "file_hash": "446414c8bb849278b74c14c62f3f3013d58e15b3389aefcc0c4289e0af1f0088",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:35:29+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSJH65R290"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.13,
+  "tokens_in": 2150,
+  "tokens_out": 44
+ },
+ "type": "mosfet_n"
+}

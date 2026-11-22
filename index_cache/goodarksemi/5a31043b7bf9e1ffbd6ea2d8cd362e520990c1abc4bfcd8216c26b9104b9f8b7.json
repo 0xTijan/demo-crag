@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gsgbu15xx_47f12a0f.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5a31043b7bf9e1ffbd6ea2d8cd362e520990c1abc4bfcd8216c26b9104b9f8b7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:45+00:00",
+  "is_datasheet": true,
+  "label": "bridge rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSGBU1501",
+   "GSGBU1502",
+   "GSGBU1504",
+   "GSGBU1506",
+   "GSGBU1508"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 8.39,
+  "tokens_in": 1881,
+  "tokens_out": 85
+ },
+ "type": "bridge_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gss355_31ca9d33.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5c04f79f5ef6a691fde4aedd1291378dcbc8ca37d8862bc2936ed01f2c817ddd",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:19+00:00",
+  "is_datasheet": true,
+  "label": "fast switching diode",
+  "family": false,
+  "part_numbers": [
+   "GSS355"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.07,
+  "tokens_in": 836,
+  "tokens_out": 39
+ },
+ "type": "switching_diode"
+}

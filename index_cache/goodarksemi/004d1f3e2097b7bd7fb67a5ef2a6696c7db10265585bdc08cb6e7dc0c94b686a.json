@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/dr20xg_ef72f589.md",
+ "supplier": "goodarksemi",
+ "file_hash": "004d1f3e2097b7bd7fb67a5ef2a6696c7db10265585bdc08cb6e7dc0c94b686a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:12+00:00",
+  "is_datasheet": true,
+  "label": "fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "DR200G",
+   "DR201G",
+   "DR202G",
+   "DR204G",
+   "DR206G"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.31,
+  "tokens_in": 1739,
+  "tokens_out": 67
+ },
+ "type": "fast_recovery_rectifier"
+}

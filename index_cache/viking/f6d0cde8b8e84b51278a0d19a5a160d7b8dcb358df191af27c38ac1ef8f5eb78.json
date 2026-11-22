@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:12+00:00",
+  "at": "2026-11-21T11:59:53+00:00",
   "is_datasheet": true,
   "label": "metal foil chip resistor",
   "family": true,
@@ -18,9 +18,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.06,
-  "tokens_in": 2442,
+  "seconds": 7.78,
+  "tokens_in": 2345,
   "tokens_out": 62
  },
- "type": "metal_foil_chip_resistor"
+ "type": "current_sensing_chip_resistor"
 }

@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/max_55991fe5.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d6f55829b82a10ab65407f1f0bdd601ea3bf491ff2d90ee28866b47190584964",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:45:09+00:00",
+  "is_datasheet": true,
+  "label": "standard rectifier",
+  "family": true,
+  "part_numbers": [
+   "MA1",
+   "MA2",
+   "MA3",
+   "MA4",
+   "MA5"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.16,
+  "tokens_in": 1555,
+  "tokens_out": 59
+ },
+ "type": "standard_rectifier"
+}

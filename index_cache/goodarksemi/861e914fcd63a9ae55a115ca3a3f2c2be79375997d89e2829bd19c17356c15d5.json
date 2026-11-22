@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp4012_0bd6f753.md",
+ "supplier": "goodarksemi",
+ "file_hash": "861e914fcd63a9ae55a115ca3a3f2c2be79375997d89e2829bd19c17356c15d5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:41+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP4012"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.35,
+  "tokens_in": 2016,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

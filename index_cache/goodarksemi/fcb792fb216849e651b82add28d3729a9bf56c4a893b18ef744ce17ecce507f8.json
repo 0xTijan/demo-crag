@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgt65rf110au_69343211.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fcb792fb216849e651b82add28d3729a9bf56c4a893b18ef744ce17ecce507f8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:33:48+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGT65RF110AU"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.87,
+  "tokens_in": 2180,
+  "tokens_out": 45
+ },
+ "type": "mosfet_n"
+}

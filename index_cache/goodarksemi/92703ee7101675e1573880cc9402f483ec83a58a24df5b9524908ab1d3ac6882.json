@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/gss8xx_b4dfbce9.md",
+ "supplier": "goodarksemi",
+ "file_hash": "92703ee7101675e1573880cc9402f483ec83a58a24df5b9524908ab1d3ac6882",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:42:35+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSS82",
+   "GSS84",
+   "GSS85",
+   "GSS86",
+   "GSS810"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.94,
+  "tokens_in": 1624,
+  "tokens_out": 79
+ },
+ "type": "schottky_rectifier"
+}

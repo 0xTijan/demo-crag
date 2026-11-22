@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfc0301k_768278a6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "a3310680f59c168f48550c6d3b82c6c1cd50a74bb71fd6c96511cb2e94a35365",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:13:22+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFC0301K"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.83,
+  "tokens_in": 2140,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

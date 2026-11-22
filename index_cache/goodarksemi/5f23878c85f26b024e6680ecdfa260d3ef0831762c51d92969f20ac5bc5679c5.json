@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsd103ax_f13ed894.md",
+ "supplier": "goodarksemi",
+ "file_hash": "5f23878c85f26b024e6680ecdfa260d3ef0831762c51d92969f20ac5bc5679c5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:06:17+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GSD103AX"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.08,
+  "tokens_in": 1013,
+  "tokens_out": 41
+ },
+ "type": "schottky_rectifier"
+}

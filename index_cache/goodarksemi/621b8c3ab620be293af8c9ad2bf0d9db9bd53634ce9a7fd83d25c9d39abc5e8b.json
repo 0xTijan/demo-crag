@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsey3b5500_5fd1ecc0.md",
+ "supplier": "goodarksemi",
+ "file_hash": "621b8c3ab620be293af8c9ad2bf0d9db9bd53634ce9a7fd83d25c9d39abc5e8b",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:10:03+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEY3B5500"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.55,
+  "tokens_in": 1027,
+  "tokens_out": 44
+ },
+ "type": "esd_protection_diode"
+}

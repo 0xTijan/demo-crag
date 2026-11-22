@@ -5,7 +5,7 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:17:53+00:00",
+  "at": "2026-11-21T12:02:31+00:00",
   "is_datasheet": true,
   "label": "four-terminal metal strip resistor",
   "family": true,
@@ -14,9 +14,9 @@
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 1.45,
-  "tokens_in": 1794,
+  "seconds": 5.47,
+  "tokens_in": 1729,
   "tokens_out": 39
  },
- "type": "four_terminal_metal_strip_resistor"
+ "type": "four_terminal_current_sensing_resistor"
 }

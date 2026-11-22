@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/fs12-fs1ch_52f48284.md",
+ "supplier": "goodarksemi",
+ "file_hash": "17e0447d5700a58673536b2f58177e808d8c7a43671e747dd302a7a2cfa93659",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:00:36+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "FS12",
+   "FS13",
+   "FS14",
+   "FS16",
+   "FS1B"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.63,
+  "tokens_in": 1665,
+  "tokens_out": 71
+ },
+ "type": "schottky_rectifier"
+}

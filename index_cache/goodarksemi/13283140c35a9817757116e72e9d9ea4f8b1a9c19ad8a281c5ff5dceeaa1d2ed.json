@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsmurh3065p_c306ce01.md",
+ "supplier": "goodarksemi",
+ "file_hash": "13283140c35a9817757116e72e9d9ea4f8b1a9c19ad8a281c5ff5dceeaa1d2ed",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:39:33+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": false,
+  "part_numbers": [
+   "GSMURH3065P"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.8,
+  "tokens_in": 1499,
+  "tokens_out": 44
+ },
+ "type": "ultrafast_rectifier"
+}

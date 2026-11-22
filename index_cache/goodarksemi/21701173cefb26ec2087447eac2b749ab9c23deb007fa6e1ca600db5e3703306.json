@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfd3006_6aefa3d4.md",
+ "supplier": "goodarksemi",
+ "file_hash": "21701173cefb26ec2087447eac2b749ab9c23deb007fa6e1ca600db5e3703306",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:15:40+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFD3006"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.9,
+  "tokens_in": 2044,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/ssfq3983_e4255b65.md",
+ "supplier": "goodarksemi",
+ "file_hash": "7f0842f215c48376268007cddea72307461496ed9fbbe044bbf11f21c4746bb6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:55:13+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "SSF43��3",
+   "SSFQ3983"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.76,
+  "tokens_in": 3880,
+  "tokens_out": 48
+ },
+ "type": "mosfet_p"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh3r110_91f10800.md",
+ "supplier": "goodarksemi",
+ "file_hash": "c147d592cd493ee0f8a9bd5e00e6e10f29adf714c9a6bbaf4f59da3ece76a3b7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:17:25+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH3R110"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.63,
+  "tokens_in": 1989,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgd9r008_1bdb4976.md",
+ "supplier": "goodarksemi",
+ "file_hash": "f6d419c44812953c9c2585aec02105d3982646fa9022060d85af31bcc15fe3a8",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:30:39+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGD9R008"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.08,
+  "tokens_in": 2033,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

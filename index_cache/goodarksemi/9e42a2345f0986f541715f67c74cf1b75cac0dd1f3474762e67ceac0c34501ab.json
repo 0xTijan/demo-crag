@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gs3010eld_ba7e1a7d.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9e42a2345f0986f541715f67c74cf1b75cac0dd1f3474762e67ceac0c34501ab",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:20+00:00",
+  "is_datasheet": true,
+  "label": "Schottky diode",
+  "family": false,
+  "part_numbers": [
+   "GS3010ELD"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.91,
+  "tokens_in": 855,
+  "tokens_out": 42
+ },
+ "type": "schottky_rectifier"
+}

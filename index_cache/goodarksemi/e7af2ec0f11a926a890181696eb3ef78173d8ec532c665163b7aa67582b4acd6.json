@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfb4045_656af147.md",
+ "supplier": "goodarksemi",
+ "file_hash": "e7af2ec0f11a926a890181696eb3ef78173d8ec532c665163b7aa67582b4acd6",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:59+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFB4045"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.89,
+  "tokens_in": 2073,
+  "tokens_out": 41
+ },
+ "type": "mosfet_p"
+}

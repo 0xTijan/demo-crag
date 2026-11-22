@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsem3b200_6f43ca72.md",
+ "supplier": "goodarksemi",
+ "file_hash": "daa184bf4913c2ad859c18d7009d4fcb9c3f0cd33bdbc89bdbfe95e1b7024678",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:07:54+00:00",
+  "is_datasheet": true,
+  "label": "ESD protection diode",
+  "family": false,
+  "part_numbers": [
+   "GSEM3B200"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 4.95,
+  "tokens_in": 932,
+  "tokens_out": 42
+ },
+ "type": "esd_protection_diode"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu70r600_2a1058af.md",
+ "supplier": "goodarksemi",
+ "file_hash": "4c6760a5707fb8cb256f6c332c2f33dc0d67e55e22f55e9c597e56b774fdb500",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:21+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU70R600"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.53,
+  "tokens_in": 2084,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

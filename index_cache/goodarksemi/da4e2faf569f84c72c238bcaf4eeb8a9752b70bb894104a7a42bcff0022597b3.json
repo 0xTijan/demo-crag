@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfcx493u_5694c70a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "da4e2faf569f84c72c238bcaf4eeb8a9752b70bb894104a7a42bcff0022597b3",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:14:30+00:00",
+  "is_datasheet": true,
+  "label": "NPN transistor",
+  "family": false,
+  "part_numbers": [
+   "GSFCX493U"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.67,
+  "tokens_in": 1297,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

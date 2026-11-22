@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/mj15003_252b0377.md",
+ "supplier": "goodarksemi",
+ "file_hash": "fc93df930ddd14fa4a4730bf1a491353c180bc16ff00043aca8d148d596bb9d2",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:46:30+00:00",
+  "is_datasheet": true,
+  "label": "NPN power transistor",
+  "family": false,
+  "part_numbers": [
+   "MJ15003"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.58,
+  "tokens_in": 1600,
+  "tokens_out": 40
+ },
+ "type": "npn_transistor"
+}

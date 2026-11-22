@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfq0605_f2b93527.md",
+ "supplier": "goodarksemi",
+ "file_hash": "b319066325d14c3f9cd2df432e6caa247534432c00bc80306513b6aec6b824ef",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:24:05+00:00",
+  "is_datasheet": true,
+  "label": "P-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFQ0605"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.24,
+  "tokens_in": 2056,
+  "tokens_out": 42
+ },
+ "type": "mosfet_p"
+}

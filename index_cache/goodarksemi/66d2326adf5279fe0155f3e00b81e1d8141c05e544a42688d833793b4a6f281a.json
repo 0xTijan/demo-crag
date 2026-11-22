@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/ges3x_ce0d3807.md",
+ "supplier": "goodarksemi",
+ "file_hash": "66d2326adf5279fe0155f3e00b81e1d8141c05e544a42688d833793b4a6f281a",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:01:30+00:00",
+  "is_datasheet": true,
+  "label": "super fast recovery rectifier",
+  "family": true,
+  "part_numbers": [
+   "GES3A",
+   "GES3B",
+   "GES3C",
+   "GES3D",
+   "GES3F"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.68,
+  "tokens_in": 2201,
+  "tokens_out": 78
+ },
+ "type": "ultrafast_rectifier"
+}

@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfa15002_37bba15e.md",
+ "supplier": "goodarksemi",
+ "file_hash": "9effae74f5584326e838c58ff1aa75de66c3d12062f973812b7e74881911fb2f",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:04+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFA15002"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.93,
+  "tokens_in": 2012,
+  "tokens_out": 42
+ },
+ "type": "mosfet_n"
+}

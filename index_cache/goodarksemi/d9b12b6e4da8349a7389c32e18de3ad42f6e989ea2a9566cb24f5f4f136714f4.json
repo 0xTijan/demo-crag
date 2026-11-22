@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfx65r220_10549138.md",
+ "supplier": "goodarksemi",
+ "file_hash": "d9b12b6e4da8349a7389c32e18de3ad42f6e989ea2a9566cb24f5f4f136714f4",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:29:22+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFX65R220"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.27,
+  "tokens_in": 2048,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

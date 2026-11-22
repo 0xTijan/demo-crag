@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfa2072_f9ee2bf6.md",
+ "supplier": "goodarksemi",
+ "file_hash": "875fd1c9d6f07e10e8d12b0bb398a613d93375e8e271e630ac645ea87f1608c7",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:12:10+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFA2072"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.39,
+  "tokens_in": 3004,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

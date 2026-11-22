@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfu6522_3e7db62b.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dd6a611ede7dd12fa5b73f9956a137265651923f87176cec4fe3bb4c8c0c26b5",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:28:10+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFU6522"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.38,
+  "tokens_in": 1945,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

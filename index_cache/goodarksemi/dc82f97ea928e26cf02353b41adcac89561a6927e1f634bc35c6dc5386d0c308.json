@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsgp2r806_69bffd92.md",
+ "supplier": "goodarksemi",
+ "file_hash": "dc82f97ea928e26cf02353b41adcac89561a6927e1f634bc35c6dc5386d0c308",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:32:26+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSGP2R806"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.08,
+  "tokens_in": 2192,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

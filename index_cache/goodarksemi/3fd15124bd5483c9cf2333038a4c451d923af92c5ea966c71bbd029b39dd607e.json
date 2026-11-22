@@ -1,0 +1,26 @@
+{
+ "file": "goodarksemi/s0402f_b216b142.md",
+ "supplier": "goodarksemi",
+ "file_hash": "3fd15124bd5483c9cf2333038a4c451d923af92c5ea966c71bbd029b39dd607e",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:49:26+00:00",
+  "is_datasheet": true,
+  "label": "fast acting chip fuse",
+  "family": true,
+  "part_numbers": [
+   "S0402F200",
+   "S0402F250",
+   "S0402F375",
+   "S0402F500",
+   "S0402F750"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.17,
+  "tokens_in": 1523,
+  "tokens_out": 87
+ },
+ "type": "fast_acting_chip_fuse"
+}

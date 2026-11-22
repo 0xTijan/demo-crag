@@ -1,0 +1,23 @@
+{
+ "file": "goodarksemi/gsb2b5-gsb2c0_2b4ca201.md",
+ "supplier": "goodarksemi",
+ "file_hash": "1aaa77d2834832c0324ecc582dd3d0fd34943c2a113ebe9f2b70582fdd597099",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:04:06+00:00",
+  "is_datasheet": true,
+  "label": "Schottky barrier rectifier",
+  "family": true,
+  "part_numbers": [
+   "GSB2B5",
+   "GSB2C0"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.02,
+  "tokens_in": 1065,
+  "tokens_out": 48
+ },
+ "type": "schottky_rectifier"
+}

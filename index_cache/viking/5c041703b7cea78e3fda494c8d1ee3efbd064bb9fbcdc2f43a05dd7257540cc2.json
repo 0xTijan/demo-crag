@@ -5,19 +5,19 @@
  "classification": {
   "version": "1",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-19T19:15:00+00:00",
+  "at": "2026-11-21T11:59:40+00:00",
   "is_datasheet": true,
   "label": "multilayer ceramic capacitor",
   "family": true,
   "part_numbers": [
-   "MC Series",
+   "MC",
    "MCRF"
   ],
   "confidence": "high",
   "asked_again": false,
-  "seconds": 2.52,
-  "tokens_in": 3932,
-  "tokens_out": 42
+  "seconds": 7.13,
+  "tokens_in": 3601,
+  "tokens_out": 41
  },
  "type": "multilayer_ceramic_capacitor"
 }

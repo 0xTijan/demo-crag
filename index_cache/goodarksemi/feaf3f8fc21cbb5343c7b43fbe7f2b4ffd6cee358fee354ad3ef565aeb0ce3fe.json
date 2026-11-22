@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gs2n7002kw_a6d0e62a.md",
+ "supplier": "goodarksemi",
+ "file_hash": "feaf3f8fc21cbb5343c7b43fbe7f2b4ffd6cee358fee354ad3ef565aeb0ce3fe",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:03:12+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GS2N7002KW"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 5.35,
+  "tokens_in": 1751,
+  "tokens_out": 43
+ },
+ "type": "mosfet_n"
+}

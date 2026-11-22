@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfh9506_3222ecec.md",
+ "supplier": "goodarksemi",
+ "file_hash": "89f298d82a8a4a44f31fbc96d384685823289c59d3124751cc1ba6768f77db83",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:18:10+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFH9506"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 7.02,
+  "tokens_in": 2226,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}

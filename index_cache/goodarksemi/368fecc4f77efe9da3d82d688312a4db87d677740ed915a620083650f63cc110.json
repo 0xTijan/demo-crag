@@ -1,0 +1,22 @@
+{
+ "file": "goodarksemi/gsfn2336_c8400e57.md",
+ "supplier": "goodarksemi",
+ "file_hash": "368fecc4f77efe9da3d82d688312a4db87d677740ed915a620083650f63cc110",
+ "classification": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-21T11:20:27+00:00",
+  "is_datasheet": true,
+  "label": "N-channel MOSFET",
+  "family": false,
+  "part_numbers": [
+   "GSFN2336"
+  ],
+  "confidence": "high",
+  "asked_again": false,
+  "seconds": 6.58,
+  "tokens_in": 2062,
+  "tokens_out": 41
+ },
+ "type": "mosfet_n"
+}
