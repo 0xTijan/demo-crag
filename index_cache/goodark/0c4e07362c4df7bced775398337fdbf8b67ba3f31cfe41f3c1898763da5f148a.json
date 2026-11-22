@@ -18,5 +18,183 @@
   "tokens_in": 1191,
   "tokens_out": 44
  },
- "type": "switching_diode"
+ "type": "switching_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:28:28+00:00",
+  "items": [
+   {
+    "name": "Reverse voltage",
+    "symbol": "V R",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Peak reverse voltage",
+    "symbol": "VR M",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Power dissipation",
+    "symbol": "PD",
+    "unit": "m W",
+    "stat": "max",
+    "conditions": "",
+    "example": "500"
+   },
+   {
+    "name": "Operating junction temperature",
+    "symbol": "TJ",
+    "unit": "℃",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55-+ 150"
+   },
+   {
+    "name": "Working Inverse voltage",
+    "symbol": "W IV",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Average rectified current",
+    "symbol": "I O",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Non-repetitive peak forward current",
+    "symbol": "IF M",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "5 00"
+   },
+   {
+    "name": "Peak forward surge current @tp=1us; TA=25 ℃",
+    "symbol": "IFS M",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "tp=1us; TA=25 ℃",
+    "example": "2.0"
+   },
+   {
+    "name": "Breakdown Voltage",
+    "symbol": "BV",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IR=100uA",
+    "example": "100"
+   },
+   {
+    "name": "Breakdown Voltage",
+    "symbol": "BV",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IR=5uA",
+    "example": "75"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "IR",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VR=20V",
+    "example": "25"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "VR=75V",
+    "example": "2.5"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IF=5mA",
+    "example": "0.62"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=10mA",
+    "example": "0.855"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=100mA",
+    "example": "1.00"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=150mA",
+    "example": "1.25"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "TRR",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "IF = 10ma IR= 10mA",
+    "example": "4"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "TRR",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "Irr=0.1mA",
+    "example": "4"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "TRR",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "RL=100",
+    "example": "4"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "Cj",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VR=0V, f=1MHZ",
+    "example": "4"
+   }
+  ],
+  "seconds": 35.05,
+  "tokens_in": 1193,
+  "tokens_out": 935
+ }
 }

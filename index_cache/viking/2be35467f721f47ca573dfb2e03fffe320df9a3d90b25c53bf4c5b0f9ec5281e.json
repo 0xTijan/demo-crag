@@ -22,5 +22,631 @@
   "tokens_in": 2205,
   "tokens_out": 75
  },
- "type": "power_inductor"
+ "type": "power_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:44:08+00:00",
+  "items": [
+   {
+    "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Shielded Molding SMD Power Inductor – SD"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0412/0420/0518/0530/0618/0624/0630/1040"
+   },
+   {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "03-Jul-25"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.A4"
+   },
+   {
+    "name": "Halogen free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Halogen free"
+   },
+   {
+    "name": "Powder iron core material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Powder iron core material"
+   },
+   {
+    "name": "Magnetically shielded",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Magnetically shielded"
+   },
+   {
+    "name": "Low EMI",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Low EMI"
+   },
+   {
+    "name": "High current carrying capacity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "High current carrying capacity"
+   },
+   {
+    "name": "Low core losses",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Low core losses"
+   },
+   {
+    "name": "Frequency range",
+    "symbol": "",
+    "unit": "MHz",
+    "stat": "range",
+    "conditions": "",
+    "example": "up to 5MHz"
+   },
+   {
+    "name": "RoHS compliant",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS compliant"
+   },
+   {
+    "name": "Saturation Rated Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "would cause inductance to drop approxima"
+   },
+   {
+    "name": "Temperature Rise Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "would cause an approximately △T of 40°C"
+   },
+   {
+    "name": "All test data is referred to",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "25"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-10 to 40"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "<75%"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "months",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 125"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "Unit: mm"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SDN0412"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.2±0.25"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.4±0.35"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.0±0.2"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.8±0.3"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.0±0.3"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.5"
+   },
+   {
+    "name": "G",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.2"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.5"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.47 to 4.7"
+   },
+   {
+    "name": "Saturation Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.8 to 2.8"
+   },
+   {
+    "name": "Test Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100KHz, 0.25V"
+   },
+   {
+    "name": "DCR",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "21.0"
+   },
+   {
+    "name": "Saturation Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "typ",
+    "conditions": "",
+    "example": "6.8"
+   },
+   {
+    "name": "Temperature Rise Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "typ",
+    "conditions": "",
+    "example": "6.0"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "M"
+   },
+   {
+    "name": "Packaging Style",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "",
+    "unit": "μH",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.10"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "More than 95% of the terminal electrode "
+   },
+   {
+    "name": "Solder heat proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Preheating: 160±10℃ Retention time: 245±"
+   },
+   {
+    "name": "Solder Heat Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance within±10% of initial value N"
+   },
+   {
+    "name": "Solder Heat Resistance Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "260±5"
+   },
+   {
+    "name": "Solder Heat Resistance Time",
+    "symbol": "",
+    "unit": "s",
+    "stat": "value",
+    "conditions": "",
+    "example": "10±1"
+   },
+   {
+    "name": "High Temperature Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance within±10% of initial value N"
+   },
+   {
+    "name": "High Temperature Resistance Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "85±2"
+   },
+   {
+    "name": "High Temperature Resistance Applied Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Rated current"
+   },
+   {
+    "name": "High Temperature Resistance Time",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000+4/-0"
+   },
+   {
+    "name": "Low Temperature Store",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance within±10% of initial value N"
+   },
+   {
+    "name": "Low Temperature Store Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "-55±2"
+   },
+   {
+    "name": "Low Temperature Store Time",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000+4/-0"
+   },
+   {
+    "name": "High Temperature Store",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance within±10% of initial value N"
+   },
+   {
+    "name": "High Temperature Store Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "125±2"
+   },
+   {
+    "name": "High Temperature Store Time",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000+4/-0"
+   },
+   {
+    "name": "Thermal Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance within±10% of initial value N"
+   },
+   {
+    "name": "Thermal Shock Cycles",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Thermal Shock Step 1 Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "-55±2"
+   },
+   {
+    "name": "Thermal Shock Step 1 Time",
+    "symbol": "",
+    "unit": "min",
+    "stat": "value",
+    "conditions": "",
+    "example": "30±3"
+   },
+   {
+    "name": "Thermal Shock Step 2 Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "Room temperature"
+   },
+   {
+    "name": "Thermal Shock Step 2 Time",
+    "symbol": "",
+    "unit": "min",
+    "stat": "value",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Thermal Shock Step 3 Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "125±2"
+   },
+   {
+    "name": "Thermal Shock Step 3 Time",
+    "symbol": "",
+    "unit": "min",
+    "stat": "value",
+    "conditions": "",
+    "example": "30±3"
+   },
+   {
+    "name": "Thermal Shock Step 4 Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "Room temperature"
+   },
+   {
+    "name": "Thermal Shock Step 4 Time",
+    "symbol": "",
+    "unit": "min",
+    "stat": "value",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Thermal Shock Recovery Time",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "",
+    "example": "48+4/-0"
+   },
+   {
+    "name": "Humidity Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance within±10% of initial value N"
+   },
+   {
+    "name": "Humidity Resistance Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "60±2"
+   },
+   {
+    "name": "Humidity Resistance Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "90~95% relative humidity"
+   },
+   {
+    "name": "Humidity Resistance Applied Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Rated current"
+   },
+   {
+    "name": "Humidity Resistance Time",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000+4/-0"
+   },
+   {
+    "name": "Vibration Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance within±10% of initial value T"
+   },
+   {
+    "name": "Vibration Test Frequency",
+    "symbol": "",
+    "unit": "Hz",
+    "stat": "range",
+    "conditions": "",
+    "example": "10 to 55"
+   },
+   {
+    "name": "Vibration Test Time",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Vibration Test Amplitude",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.5"
+   },
+   {
+    "name": "Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance within±10% of initial value T"
+   },
+   {
+    "name": "Shock Peak Value",
+    "symbol": "",
+    "unit": "G",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Shock Duration",
+    "symbol": "",
+    "unit": "ms",
+    "stat": "value",
+    "conditions": "",
+    "example": "11"
+   }
+  ],
+  "seconds": 164.68,
+  "tokens_in": 8291,
+  "tokens_out": 3741
+ }
 }

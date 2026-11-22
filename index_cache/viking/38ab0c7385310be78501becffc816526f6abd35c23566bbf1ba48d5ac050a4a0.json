@@ -18,5 +18,415 @@
   "tokens_in": 1460,
   "tokens_out": 37
  },
- "type": "power_resistor"
+ "type": "power_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:49:59+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "Case Temperature",
+    "example": "150"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "25±5"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "Case Temperature 25°C",
+    "example": "50"
+   },
+   {
+    "name": "Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Dielectric Strength",
+    "symbol": "",
+    "unit": "VAC",
+    "stat": "min",
+    "conditions": "",
+    "example": "2000"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "",
+    "example": "10000000000"
+   },
+   {
+    "name": "Thermal Resistance",
+    "symbol": "",
+    "unit": "°K/W",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.7"
+   },
+   {
+    "name": "Derating Curve Slope",
+    "symbol": "",
+    "unit": "W/°K",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.4"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±0.5%",
+    "example": "0.5"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±1%",
+    "example": "1"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±5%",
+    "example": "5"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±10%",
+    "example": "10"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "No Specified (±300~±700)",
+    "example": "300 to 700"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±300",
+    "example": "300"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "±50 ±100 ±200 ±300",
+    "example": "50 to 300"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±50",
+    "example": "50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±100",
+    "example": "100"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±200",
+    "example": "200"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±0.5%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±10%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Lead Material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tinned Copper"
+   },
+   {
+    "name": "Maximum Torque",
+    "symbol": "",
+    "unit": "N-m",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.9"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "N",
+    "stat": "value",
+    "conditions": "Pull Test",
+    "example": "2.4"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "245±5°C for 3 seconds",
+    "example": "90"
+   },
+   {
+    "name": "Vibration, High Frequency",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Thermal Shock",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "-65°C ~150°C, 100 cycles",
+    "example": "-65 to 150"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220"
+   },
+   {
+    "name": "Mounting Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Single screw mounting to heat sink"
+   },
+   {
+    "name": "Case Isolation",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Electrically isolated"
+   },
+   {
+    "name": "Non-Inductive Design",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Yes"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "1000pcs",
+    "example": "1290"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "W",
+    "example": "10.44"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "L",
+    "example": "3.18"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "H",
+    "example": "16.25"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "H1",
+    "example": "3.18"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "B",
+    "example": "12.70"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "B1",
+    "example": "3.3"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "C",
+    "example": "5.08"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "D",
+    "example": "1.27"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "D1",
+    "example": "0.76"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "T",
+    "example": "3.18"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "P",
+    "example": "0.55"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "P1",
+    "example": "1.78"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Hole",
+    "example": "H"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "No Hole",
+    "example": "No Hole"
+   }
+  ],
+  "seconds": 132.05,
+  "tokens_in": 2847,
+  "tokens_out": 2749
+ }
 }

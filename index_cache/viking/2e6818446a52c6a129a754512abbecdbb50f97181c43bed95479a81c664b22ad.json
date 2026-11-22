@@ -22,5 +22,407 @@
   "tokens_in": 1754,
   "tokens_out": 80
  },
- "type": "current_sensing_chip_resistor"
+ "type": "current_sensing_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:21:05+00:00",
+  "items": [
+   {
+    "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Low Ohm (Metal Strip) Chip Resistor – LR"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1206 /2010/2512"
+   },
+   {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "01-Sep-23"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.B9"
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Low TCR down to ±25 PPM/°C"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "NB (for Power Management)"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "LRP06"
+   },
+   {
+    "name": "Dimensions (L×W)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "06: 1206"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "D: ±0.5%"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Taping Reel"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "C: ±25"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "R: 3W"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "R015: 0.015Ω"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1W"
+   },
+   {
+    "name": "Rated Terminal Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "110°C"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "-55 ~ +170°C"
+   },
+   {
+    "name": "Resistance Range (mΩ)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "8, 10, 12, 15, 20, 25, 30, 33, 40"
+   },
+   {
+    "name": "Temperature Coefficient of Resistance (T.C.R.)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "As Spec."
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1.0%"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "≥10G"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1.0%"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1.0%"
+   },
+   {
+    "name": "Dry Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1.0%"
+   },
+   {
+    "name": "Bending Strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1.0%"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "95% min. coverage"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.5%"
+   },
+   {
+    "name": "Rapid Change of Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1.0%"
+   },
+   {
+    "name": "Low Temperature Storage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1.0%"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "15~28°C"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "< 80%RH"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2 years from production date"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "5K"
+   },
+   {
+    "name": "Tape Width",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "8mm"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "7 inch"
+   },
+   {
+    "name": "ΦA (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "178.5±1.5"
+   },
+   {
+    "name": "ΦB (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "60+1/-0"
+   },
+   {
+    "name": "ΦC (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "13.0±0.2"
+   },
+   {
+    "name": "W (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "9.0±0.5"
+   },
+   {
+    "name": "T (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "12.5±0.5"
+   },
+   {
+    "name": "A (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.80±0.10"
+   },
+   {
+    "name": "B (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "5.40±0.20"
+   },
+   {
+    "name": "E (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.75±0.10"
+   },
+   {
+    "name": "F (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "5.5±0.05"
+   },
+   {
+    "name": "P 0 (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P 1 (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P 2 (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.00±0.05"
+   },
+   {
+    "name": "ΦD 0 (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.50+0.1, -0"
+   },
+   {
+    "name": "C (mm)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.70"
+   }
+  ],
+  "seconds": 160.38,
+  "tokens_in": 5169,
+  "tokens_out": 4333
+ }
 }

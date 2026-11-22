@@ -18,5 +18,135 @@
   "tokens_in": 1191,
   "tokens_out": 47
  },
- "type": "polymer_esd_suppressor"
+ "type": "polymer_esd_suppressor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:05:43+00:00",
+  "items": [
+   {
+    "name": "Maximum Contact Discharge Voltage Per IEC61000-4-2",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "15KV"
+   },
+   {
+    "name": "Maximum Air Discharge Voltage Per IEC61000-4-2",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "25KV"
+   },
+   {
+    "name": "Maximum Operating Temperature",
+    "symbol": "TOPER",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Maximum Storage Temperature",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Maximum Lead Temperature for Soldering During 10s",
+    "symbol": "TL",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "VR",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Trigger Voltage",
+    "symbol": "VT",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "300"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "35"
+   },
+   {
+    "name": "Leakage Current",
+    "symbol": "IL",
+    "unit": "uA",
+    "stat": "typ",
+    "conditions": "DC 5V shall be applied on component",
+    "example": "0.01"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "CP",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VR = 0V, f = 1MHz",
+    "example": "0.05"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0603"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0603"
+   },
+   {
+    "name": "Carrier",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape & Reel"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "5000/Reel"
+   },
+   {
+    "name": "HSF Status",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS Compliant"
+   }
+  ],
+  "seconds": 40.7,
+  "tokens_in": 1792,
+  "tokens_out": 661
+ }
 }

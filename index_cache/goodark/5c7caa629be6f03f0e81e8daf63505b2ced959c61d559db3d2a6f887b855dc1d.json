@@ -18,5 +18,111 @@
   "tokens_in": 1445,
   "tokens_out": 43
  },
- "type": "tvs_diode"
+ "type": "tvs_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:21:37+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power",
+    "symbol": "P_PP",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "t p = 8/20μs",
+    "example": "400"
+   },
+   {
+    "name": "Peak Pulse Current",
+    "symbol": "I_PP",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t p = 8/20μs",
+    "example": "12"
+   },
+   {
+    "name": "Lead Solder Temperature − Maximum",
+    "symbol": "T_L",
+    "unit": "℃",
+    "stat": "max",
+    "conditions": "10 Second Duration",
+    "example": "260"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T_J",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 125"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T_STG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Reverse standoff voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Pin 3 to 1 or Pin 2 to 1",
+    "example": "12"
+   },
+   {
+    "name": "Breakdown voltage",
+    "symbol": "VBR",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IT=1mA",
+    "example": "13.3"
+   },
+   {
+    "name": "Reverse leakage current",
+    "symbol": "IR",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VR= VRWM",
+    "example": "1"
+   },
+   {
+    "name": "Clamping voltage",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =5A，tp= 8/20μs PP",
+    "example": "20"
+   },
+   {
+    "name": "Clamping voltage",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =12A，tp= 8/20μs PP",
+    "example": "26"
+   },
+   {
+    "name": "Junction capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VR=0V,f=1MHz",
+    "example": "75"
+   },
+   {
+    "name": "Junction capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VR=0V,f=1MHz",
+    "example": "45"
+   }
+  ],
+  "seconds": 38.51,
+  "tokens_in": 1504,
+  "tokens_out": 582
+ }
 }

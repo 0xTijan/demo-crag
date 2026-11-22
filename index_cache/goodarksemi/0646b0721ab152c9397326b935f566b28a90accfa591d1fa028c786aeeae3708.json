@@ -18,5 +18,519 @@
   "tokens_in": 4385,
   "tokens_out": 45
  },
- "type": "complementary_npn_pnp_transistor"
+ "type": "complementary_npn_pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:04:08+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "Ic=10µA, I =0 E",
+    "example": "60"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "Ic=1mA, I =0 B",
+    "example": "40"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10µA, I =0 E C",
+    "example": "5"
+   },
+   {
+    "name": "Collector Cut-Off Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =30V, I =0 CB E",
+    "example": "50"
+   },
+   {
+    "name": "Collector Cut-Off Current",
+    "symbol": "I CEO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =30V, I =0 CE B",
+    "example": "500"
+   },
+   {
+    "name": "Emitter-Base Cutoff Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =5V, I =0 EB C",
+    "example": "50"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =1V, I =0.1mA CE C",
+    "example": "40"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =1V, I =1mA CE C",
+    "example": "70"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =1V, I =10mA CE C",
+    "example": "100"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "max",
+    "conditions": "V =1V, I =10mA CE C",
+    "example": "300"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =1V, I =50mA CE C",
+    "example": "60"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =1V, I =100mA CE C",
+    "example": "30"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =10mA, I =1mA C B",
+    "example": "0.2"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =50mA, I =5mA C B",
+    "example": "0.3"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10mA, I =1mA C B",
+    "example": "0.65"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =10mA, I =1mA C B",
+    "example": "0.85"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =50mA, I =5mA C B",
+    "example": "0.95"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =20V, I =20mA, F=100MHz CE C",
+    "example": "300"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =5V, I =0, F=1MHz CB E",
+    "example": "4"
+   },
+   {
+    "name": "Noise Figure",
+    "symbol": "N F",
+    "unit": "dB",
+    "stat": "max",
+    "conditions": "V =5V, I =0.1mA, F=1KHz, CE C R =1KΩ, F=200Hz g",
+    "example": "5"
+   },
+   {
+    "name": "Delay Time",
+    "symbol": "t d",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =3V, V =0.5V, I =10mA , CC BE C I =-I =1mA B1 B2",
+    "example": "35"
+   },
+   {
+    "name": "Rise Time",
+    "symbol": "t r",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =3V, V =0.5V, I =10mA , CC BE C I =-I =1mA B1 B2",
+    "example": "35"
+   },
+   {
+    "name": "Storage Time",
+    "symbol": "t S",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =3V, I =10mA, I =-I =1mA CC C B1 B2",
+    "example": "200"
+   },
+   {
+    "name": "Fall Time",
+    "symbol": "t f",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =3V, I =10mA, I =-I =1mA CC C B1 B2",
+    "example": "50"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Ic=-10µA, I =0 E",
+    "example": "-40"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Ic=-1mA, I =0 B",
+    "example": "-40"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10µA, I =0 E C",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Cut-Off Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-30V, I =0 CB E",
+    "example": "-50"
+   },
+   {
+    "name": "Emitter-Base Cutoff Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-5V, I =0 EB C",
+    "example": "-50"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =-1V, I =-0.1mA CE C",
+    "example": "60"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =-1V, I =-1mA CE C",
+    "example": "80"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =-1V, I =-10mA CE C",
+    "example": "100"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "max",
+    "conditions": "V =-1V, I =-10mA CE C",
+    "example": "300"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =-1V, I =-50mA CE C",
+    "example": "60"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =-1V, I =-100mA CE C",
+    "example": "30"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10mA, I =-1mA C B",
+    "example": "-0.25"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-50mA, I =-5mA C B",
+    "example": "-0.4"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =-10mA, I =-1mA C B",
+    "example": "-0.65"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10mA, I =-1mA C B",
+    "example": "-0.85"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-50mA, I =-5mA C B",
+    "example": "-0.95"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =-20V, I =-10mA, F=100MHz CE C",
+    "example": "250"
+   },
+   {
+    "name": "Noise Figure",
+    "symbol": "N F",
+    "unit": "dB",
+    "stat": "max",
+    "conditions": "V =-5V, Ic=-0.1mA, F=1kHz, CE R =1KΩ, g",
+    "example": "4"
+   },
+   {
+    "name": "Delay Time",
+    "symbol": "t d",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-3V, V =-0.5V, I =-10mA, CC BE C I =-I =-1mA B1 B2",
+    "example": "35"
+   },
+   {
+    "name": "Rise Time",
+    "symbol": "t r",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-3V, V =-0.5V, I =-10mA, CC BE C I =-I =-1mA B1 B2",
+    "example": "35"
+   },
+   {
+    "name": "Storage Time",
+    "symbol": "t S",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-3V, I =-10mA, CC C I =-I =-1mA B1 B2",
+    "example": "225"
+   },
+   {
+    "name": "Fall Time",
+    "symbol": "t f",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-3V, I =-10mA, CC C I =-I =-1mA B1 B2",
+    "example": "75"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "60"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "40"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "5"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "50"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "I CEO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHD",
+    "example": "500"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "50"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "I C",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "100"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "P D",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "500"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "R th(j-c)",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "250"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "T j",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "150"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "T stg",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "150"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "T j",
+    "unit": "°C",
+    "stat": "min",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "-55"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "T stg",
+    "unit": "°C",
+    "stat": "min",
+    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
+    "example": "-55"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-363"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "K46"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3,000pcs / Reel"
+   },
+   {
+    "name": "HSF Status",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS Compliant"
+   }
+  ],
+  "seconds": 179.75,
+  "tokens_in": 5919,
+  "tokens_out": 3603
+ }
 }

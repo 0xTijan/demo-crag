@@ -18,5 +18,479 @@
   "tokens_in": 1565,
   "tokens_out": 45
  },
- "type": "ptc_thermistor"
+ "type": "ptc_thermistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:57:59+00:00",
+  "items": [
+   {
+    "name": "Rated voltage (RMS)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "230"
+   },
+   {
+    "name": "Maximum voltage (RMS)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "450"
+   },
+   {
+    "name": "Operating temperature range V=0",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to +110"
+   },
+   {
+    "name": "Operating temperature range V=VmaX",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "0 to +70"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "~1.0"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "",
+    "example": "50 ± 10%"
+   },
+   {
+    "name": "The initial resistance difference of Two PTC thermistors in one house",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "Rated zero power resistance (25℃)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "25℃",
+    "example": "45 to 55"
+   },
+   {
+    "name": "The initial resistance difference of two PTC thermistor in one device at 25℃",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "25℃",
+    "example": "1.0"
+   },
+   {
+    "name": "Hold current at 25±2℃",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "25±2℃",
+    "example": "90"
+   },
+   {
+    "name": "Hold current at 70±2℃",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "70±2℃",
+    "example": "50"
+   },
+   {
+    "name": "Operating current（230Vac,@25°C）",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "min",
+    "conditions": "230Vac,@25°C",
+    "example": "200"
+   },
+   {
+    "name": "VFault :Security failure voltage (with 10R loading)",
+    "symbol": "",
+    "unit": "Vrms",
+    "stat": "max",
+    "conditions": "with 10R loading",
+    "example": "600"
+   },
+   {
+    "name": "RHV :Minimum equivalent resistance (@ 10/700 uS, 4 KV / 40 Ω )",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "@ 10/700 uS, 4 KV / 40 Ω",
+    "example": "18"
+   },
+   {
+    "name": "Vsurge :Lightning surge test (10/700 uS, RS = 40 Ω )",
+    "symbol": "",
+    "unit": "Vp",
+    "stat": "max",
+    "conditions": "10/700 uS, RS = 40 Ω",
+    "example": "4.2KV"
+   },
+   {
+    "name": "ISmax :Overcurrent withstanding（@25°C，450Vac）",
+    "symbol": "",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "@25°C，450Vac",
+    "example": "9"
+   },
+   {
+    "name": "Recovery time (@25°C)",
+    "symbol": "",
+    "unit": "S",
+    "stat": "max",
+    "conditions": "@25°C",
+    "example": "90"
+   },
+   {
+    "name": "Operating heat capacity（@25°C, 230Vac）",
+    "symbol": "",
+    "unit": "J",
+    "stat": "min",
+    "conditions": "@25°C, 230Vac",
+    "example": "40"
+   },
+   {
+    "name": "Power induction test: 600VAC, 3A, @25°C",
+    "symbol": "",
+    "unit": "A 2 S",
+    "stat": "min",
+    "conditions": "600VAC, 3A, @25°C",
+    "example": "10"
+   },
+   {
+    "name": "Power contact test: 600VAC, 60A, @25°C",
+    "symbol": "",
+    "unit": "S",
+    "stat": "min",
+    "conditions": "600VAC, 60A, @25°C",
+    "example": "5"
+   },
+   {
+    "name": "Curie temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "typ",
+    "conditions": "",
+    "example": "120"
+   },
+   {
+    "name": "Lead material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tin plated brass"
+   },
+   {
+    "name": "Case material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "PPS"
+   },
+   {
+    "name": "Solder heat withstand",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC-STD 68-2-20"
+   },
+   {
+    "name": "Lead solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "EIC60068-2-58"
+   },
+   {
+    "name": "Flammability rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 695-2-2 Needle Flame Test for 20 s"
+   },
+   {
+    "name": "Storage humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Per IPC/JEDEC J-STD-020A Level 2a"
+   },
+   {
+    "name": "Dry Hot",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "85°C, 0V,1000 hours",
+    "example": "85°C, 0V,1000 hours"
+   },
+   {
+    "name": "Dry Cold",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "-40°C, 0V,1000 hours",
+    "example": "-40°C, 0V,1000 hours"
+   },
+   {
+    "name": "Humidity aging",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "40°C, 95% RH, 0V,1000 hours",
+    "example": "40°C, 95% RH, 0V,1000 hours"
+   },
+   {
+    "name": "Thermal shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "85°C, -40°C (10 times)",
+    "example": "85°C, -40°C (10 times)"
+   },
+   {
+    "name": "Solvent resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "MIL-STD-202, Method 215F",
+    "example": "MIL-STD-202, Method 215F"
+   },
+   {
+    "name": "Housing material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL94-V0"
+   },
+   {
+    "name": "Climatic category",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 68-1 40/125/56"
+   },
+   {
+    "name": "Compliant with ITU-T K21",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ITU-T K21"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS compliant"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape"
+   },
+   {
+    "name": "Reel QTY",
+    "symbol": "",
+    "unit": "PCS",
+    "stat": "value",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Box QTY",
+    "symbol": "",
+    "unit": "PCS",
+    "stat": "value",
+    "conditions": "",
+    "example": "2500"
+   },
+   {
+    "name": "Component Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Net Weight Per Box",
+    "symbol": "",
+    "unit": "Kg",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Gross Weight/Per Box",
+    "symbol": "",
+    "unit": "Kg",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Box Outline",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "24.00± 0.5"
+   },
+   {
+    "name": "AO",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "11.15±0.2"
+   },
+   {
+    "name": "BO",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "9.3±0.2"
+   },
+   {
+    "name": "KO",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "12.60±0.2"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.75±0.1"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "11.50±0.1"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "20.00±0.1"
+   },
+   {
+    "name": "PO",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.00±0.1"
+   },
+   {
+    "name": "P2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.00±0.1"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.50±0.1"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.50±0.1"
+   },
+   {
+    "name": "Dimension",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "330 -mm reel",
+    "example": "330 -mm reel"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "330-2/+0",
+    "example": "330-2/+0"
+   },
+   {
+    "name": "W1",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "24.4 min.",
+    "example": "24.4"
+   },
+   {
+    "name": "W2",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "30.4 max.",
+    "example": "30.4"
+   }
+  ],
+  "seconds": 68.98,
+  "tokens_in": 2746,
+  "tokens_out": 2637
+ }
 }

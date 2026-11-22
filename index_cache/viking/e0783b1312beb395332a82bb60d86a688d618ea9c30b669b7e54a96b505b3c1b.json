@@ -22,5 +22,199 @@
   "tokens_in": 1579,
   "tokens_out": 69
  },
- "type": "multilayer_chip_inductor"
+ "type": "multilayer_chip_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:27:33+00:00",
+  "items": [
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to 125"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ML03"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "",
+    "example": "0603"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "L",
+    "unit": "nH",
+    "stat": "value",
+    "conditions": "",
+    "example": "47"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "±20"
+   },
+   {
+    "name": "L/Q Test Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "50MHz, 200mV"
+   },
+   {
+    "name": "Q min.",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "SRF (MHz) min.",
+    "symbol": "SRF",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "DCR (Ω) max.",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.30"
+   },
+   {
+    "name": "IDC (mA) max.",
+    "symbol": "IDC",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Test Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1MHz, 250mV"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "(1000pcs)",
+    "example": "6.2"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.60"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.80"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.80"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.30"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T"
+   },
+   {
+    "name": "Inductance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "K"
+   },
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ML"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "03"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "",
+    "unit": "nH",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   }
+  ],
+  "seconds": 98.13,
+  "tokens_in": 11852,
+  "tokens_out": 2393
+ }
 }

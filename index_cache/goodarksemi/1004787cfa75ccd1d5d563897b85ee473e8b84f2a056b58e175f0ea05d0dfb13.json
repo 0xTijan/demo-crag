@@ -21,5 +21,135 @@
   "tokens_in": 1619,
   "tokens_out": 63
  },
- "type": "bridge_rectifier"
+ "type": "bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:24:40+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "140"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Maximum Average Forward Output Rectified Current",
+    "symbol": "I F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2.0"
+   },
+   {
+    "name": "Peak Forward Surge Current 8.3 ms Single Half Sine-Wave Superimposed on Rated Lo",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "60"
+   },
+   {
+    "name": "Rating for Fusing (t≤8.3ms)",
+    "symbol": "I2t",
+    "unit": "A2sec",
+    "stat": "max",
+    "conditions": "",
+    "example": "15.0"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "1A",
+    "example": "1.0"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "2A",
+    "example": "1.1"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "T =25℃ A",
+    "example": "5"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "T =125℃ A",
+    "example": "50"
+   },
+   {
+    "name": "Typical Reverse Recovery Time",
+    "symbol": "T rr",
+    "unit": "uS",
+    "stat": "typ",
+    "conditions": "I =0.5A, I =1.0A, F R I =0.25A rr",
+    "example": "2.0"
+   },
+   {
+    "name": "Typical Junction Capacitance at 4.0V, 1MHz",
+    "symbol": "C J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "",
+    "example": "15.9"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction to Ambient",
+    "symbol": "R θJA",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "32"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction to Case",
+    "symbol": "R θJC",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "11"
+   },
+   {
+    "name": "Operating Junction and Storage Temperature Range",
+    "symbol": "T, T J STG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   }
+  ],
+  "seconds": 44.34,
+  "tokens_in": 1543,
+  "tokens_out": 740
+ }
 }

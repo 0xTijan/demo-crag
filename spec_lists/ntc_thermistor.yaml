@@ -1,0 +1,469 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: ntc_thermistor
+name: NTC thermistor
+version: 1
+status: draft
+must_match:
+- size
+- dimensions
+- packaging_code
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T15:29:16+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - viking/ntg-series-data-sheet-edition-rev-a2_5eb2c2a7.md
+  - viking/ntgh-a-series-data-sheet-edition-rev-a1_7cf3045c.md
+  - viking/ntgh-series-data-sheet-edition-rev-a1_1aad08cd.md
+specs:
+  b_constant_25_50c:
+    label: B-Constant (25/50℃)
+    unit: K
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - B-Constant (25/50℃)
+    - B- Constant (25/50℃)
+    - B
+    - B-Constant
+    found_in: 3/3
+  b_constant_tolerance:
+    label: B-Constant Tolerance
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - B-Constant Tolerance
+    - B- Constant Tolerance
+    - ΔB
+    found_in: 3/3
+  dimensions:
+    label: Dimensions
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Dimensions
+    - Part Numbering
+    found_in: 3/3
+  packaging_code:
+    label: Packaging Code
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Packaging Code
+    found_in: 3/3
+  resistance_25c:
+    label: Resistance (25℃)
+    unit: Ω
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance (25℃)
+    - R25
+    found_in: 3/3
+  resistance_tolerance:
+    label: Resistance Tolerance
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance Tolerance
+    - ΔR
+    found_in: 3/3
+  size:
+    label: Size
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Size (Inch)
+    - Sizes
+    found_in: 3/3
+  a:
+    label: A
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - A
+    found_in: 2/3
+  a0:
+    label: A0
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - A0
+    found_in: 2/3
+  adhesion_of_electrode:
+    label: Adhesion of Electrode
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Adhesion of Electrode
+    - Board flex
+    found_in: 2/3
+  b:
+    label: B
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - B
+    found_in: 2/3
+  b0:
+    label: B0
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - B0
+    found_in: 2/3
+  c:
+    label: C
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - C
+    found_in: 2/3
+  d0:
+    label: D0
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - D0
+    found_in: 2/3
+  e:
+    label: E
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - E
+    found_in: 2/3
+  f:
+    label: F
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - F
+    found_in: 2/3
+  g:
+    label: G
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - G
+    found_in: 2/3
+  high_temperature_resistance:
+    label: High Temperature Resistance
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - High Temperature Resistance
+    - High Temperature Exposure (Storage)
+    found_in: 2/3
+  low_temperature_resistance:
+    label: Low Temperature Resistance
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Low Temperature Resistance
+    - Temperature Cycling
+    found_in: 2/3
+  n:
+    label: N
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - N
+    found_in: 2/3
+  operating_temperature_range:
+    label: Operating Temperature
+    unit: ℃
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Temperature
+    - Toper
+    found_in: 2/3
+  p0:
+    label: P0
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - P0
+    found_in: 2/3
+  p1:
+    label: P1
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - P1
+    found_in: 2/3
+  p2:
+    label: P2
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - P2
+    found_in: 2/3
+  resistance_to_soldering:
+    label: Resistance to Soldering
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Resistance to Soldering
+    - Resistance to Soldering Heat
+    found_in: 2/3
+  solderability:
+    label: Solderability
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Solderability Test
+    - Solderability
+    found_in: 2/3
+  static_humidity:
+    label: Static Humidity
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Static Humidity
+    - Biased Humidity
+    found_in: 2/3
+  storage_temperature_range:
+    label: Storage Temperature
+    unit: ℃
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    - Tstorage
+    found_in: 2/3
+  thermal_shock:
+    label: Thermal Shock
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Thermal Shock
+    - Operational Life
+    found_in: 2/3
+  vibration:
+    label: Vibration
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Vibration
+    found_in: 2/3
+rare_specs:
+  aec_q200:
+    label: AEC-Q200
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - AEC-Q200
+    found_in: 1/3
+  b_constant_25_85c:
+    label: B-Constant (25/85℃)
+    unit: K
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - B-Constant (25/85℃)
+    found_in: 1/3
+  humidity:
+    label: Humidity
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Humidity
+    - RH
+    found_in: 1/3
+  maximum_operating_current:
+    label: Maximum Operating Current @ 25℃
+    unit: mA
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum Operating Current @ 25℃
+    - Imax
+    found_in: 1/3
+  maximum_voltage:
+    label: Maximum Voltage
+    unit: V
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum Voltage
+    - Vmax
+    found_in: 1/3
+  mechanical_shock:
+    label: Mechanical Shock
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Mechanical Shock
+    found_in: 1/3
+  rated_electric_power:
+    label: Rated Electric Power @25℃
+    unit: mW
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Rated Electric Power @25℃
+    - P
+    found_in: 1/3
+  shelf_life:
+    label: Shelf life
+    unit: years
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Shelf life
+    found_in: 1/3
+  terminal_strength:
+    label: Terminal Strength
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Terminal Strength
+    found_in: 1/3
+  typical_dissipation_constant:
+    label: Typical Dissipation Constant @ 25℃
+    unit: mW/℃
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Typical Dissipation Constant @ 25℃
+    - D
+    found_in: 1/3
+  board_flex:
+    label: Board flex
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/3
+  operational_life:
+    label: Operational Life
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/3

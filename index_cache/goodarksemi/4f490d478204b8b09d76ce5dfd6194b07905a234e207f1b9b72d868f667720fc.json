@@ -18,5 +18,71 @@
   "tokens_in": 1034,
   "tokens_out": 43
  },
- "type": "tvs_diode"
+ "type": "tvs_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:21:29+00:00",
+  "items": [
+   {
+    "name": "Maximum Operating Temperature",
+    "symbol": "T OPER",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +125"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +125"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "V R",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Trigger Voltage",
+    "symbol": "V T",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC 61000-4-2 8KV Contact Discharge",
+    "example": "300"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC 61000-4-2 8KV Contact Discharge",
+    "example": "35"
+   },
+   {
+    "name": "Leakage Current",
+    "symbol": "I L",
+    "unit": "uA",
+    "stat": "range",
+    "conditions": "DC 6V shall be applied on component",
+    "example": "0.01 To 0.10"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "C P",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =0V, f=1MHz R",
+    "example": "0.05"
+   }
+  ],
+  "seconds": 41.65,
+  "tokens_in": 1093,
+  "tokens_out": 355
+ }
 }

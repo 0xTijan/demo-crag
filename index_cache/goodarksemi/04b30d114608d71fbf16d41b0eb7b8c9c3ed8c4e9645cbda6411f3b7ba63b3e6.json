@@ -22,5 +22,95 @@
   "tokens_in": 1727,
   "tokens_out": 100
  },
- "type": "schottky_rectifier"
+ "type": "schottky_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:49:22+00:00",
+  "items": [
+   {
+    "name": "Repetitive Peak Reverse Voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Average Rectified Output Current @ 60Hz Sine Wave, Resistance Load, T (FIG.1) L",
+    "symbol": "IO",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "Surge (Non-Repetitive) Forward Current @ 60Hz Half-Sine Wave, 1 Cycle, T =25°C A",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Thermal Resistance",
+    "symbol": "RθJ-A",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "65"
+   },
+   {
+    "name": "Thermal Resistance",
+    "symbol": "RθJ-L",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "Tj",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage Drop",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IFM=1.0A",
+    "example": "0.50"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage @ VRM=VRRM",
+    "symbol": "IRRM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "0.50"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage @ VRM=VRRM",
+    "symbol": "IRRM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "TA=100°C",
+    "example": "10"
+   }
+  ],
+  "seconds": 42.64,
+  "tokens_in": 1680,
+  "tokens_out": 507
+ }
 }

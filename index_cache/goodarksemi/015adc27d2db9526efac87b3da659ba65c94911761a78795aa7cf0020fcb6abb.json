@@ -18,5 +18,119 @@
   "tokens_in": 1294,
   "tokens_out": 44
  },
- "type": "esd_protection_diode"
+ "type": "esd_protection_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T11:11:41+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power (T =8/20μS)",
+    "symbol": "PPP",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "T =8/20μS",
+    "example": "60"
+   },
+   {
+    "name": "ESD Contact/air Discharge (IEC-61000-4-2)",
+    "symbol": "VESD",
+    "unit": "kV",
+    "stat": "max",
+    "conditions": "",
+    "example": "10/15"
+   },
+   {
+    "name": "Peak Pulse Current ( tP = 8/20μS )",
+    "symbol": "IPP",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "tP = 8/20μS",
+    "example": "3"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Maximum Lead Solder Temperature(10 second duration)",
+    "symbol": "TL",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "10 second duration",
+    "example": "260"
+   },
+   {
+    "name": "Reverse Stand-off Voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "3.3"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "VBR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I =1mA T",
+    "example": "5.0 to 6.5"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "IR",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =5.0V R",
+    "example": "100"
+   },
+   {
+    "name": "Clamping Voltage (IEC 61000-4-5)",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =3A PP",
+    "example": "20.5"
+   },
+   {
+    "name": "Trigger Voltage (IEC 61000-4-2)",
+    "symbol": "VT",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "V =8kV ESD",
+    "example": "135"
+   },
+   {
+    "name": "Clamping Voltage (IEC 61000-4-2)",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "V =8kV ESD",
+    "example": "20"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =0V, f=1MHz R",
+    "example": "0.3"
+   }
+  ],
+  "seconds": 76.7,
+  "tokens_in": 1251,
+  "tokens_out": 683
+ }
 }

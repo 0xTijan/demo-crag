@@ -1,0 +1,467 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: bridge_rectifier
+name: single-phase bridge rectifier
+version: 1
+status: draft
+must_match:
+- vrrm_max
+- v_dc_max
+- i_f_av_max
+- i_fsm_max
+- i2t_max
+- t_j_range
+- t_stg_range
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T10:25:52+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - goodark/df1502-thru-df1510_bba55e95.md
+  - goodark/df2002-thru-df2010_bdb0ac6d.md
+  - goodark/gbu6005-thru-gbu610_c79ac31a.md
+  - goodark/gbu8005-thru-gbu810_75c339a5.md
+  - goodark/kbf401-thru-kbf410_bc58aeef.md
+  - goodarksemi/df20xxxs_bcabfbe8.md
+  - goodarksemi/gsabs2xx_a54df031.md
+  - goodarksemi/gsgbj1016_317331b3.md
+  - goodarksemi/gsjbf310_85b24790.md
+  - goodarksemi/gskbp2xx_45743a2d.md
+specs:
+  i2t_max:
+    label: I2t max
+    unit: A2s
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Rating for fusing (t≤8.3ms)
+    - I2t
+    - Rating for Fusing (t<8.3ms)
+    - Rating for Fusing (t=8.3ms)
+    - Fusing Time for Fuse (t=8.3ms)
+    - I^2t
+    found_in: 10/10
+  i_fsm_max:
+    label: I_FSM max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Peak forward surge current 8.3ms single half sine-wave superimposed on rated loa
+    - I_FSM
+    - Peak forward surge current single sine-wave superimposed on rated load (JEDEC Me
+    - Peak forward surge current 8.3 ms single half sine-wave superimposed on rated lo
+    - I FSM
+    - Peak Forward Surge Current
+    found_in: 10/10
+  t_j_range:
+    label: T_J range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: true
+    aliases:
+    - Operating junction and storage temperature range
+    - Operating junction temperature range
+    - T_J
+    - T_J, T_STG
+    - T, T J STG
+    - Operating Temperature Range
+    - T J
+    found_in: 10/10
+  v_dc_max:
+    label: V_DC max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum DC blocking voltage
+    - V_DC
+    - V DC
+    - Blocking Voltage
+    - V R
+    found_in: 10/10
+  v_rms_max:
+    label: V_RMS max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum RMS voltage
+    - V_RMS
+    - V RMS
+    - Maximum Average Forward Rectified Current
+    - I F(AV)
+    - Maximum Rating (Peak) Voltage
+    found_in: 10/10
+  vrrm_max:
+    label: V_RRM max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum repetitive peak reverse voltage
+    - V_RRM
+    - V RRM
+    - Maximum Recurrent Peak Reverse Voltage
+    - Maximum Rating (Reverse) Voltage
+    found_in: 10/10
+  i_r_max@ta_125c:
+    label: I_R max @ TA=125°C
+    unit: µA
+    stat: max
+    conditions: TA=125°C
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum DC reverse current at rated DC blocking voltage
+    - I_R
+    - I R
+    - Reverse Current
+    found_in: 10/10
+  i_r_max@ta_25c:
+    label: I_R max @ TA=25°C
+    unit: µA
+    stat: max
+    conditions: TA=25°C
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum DC reverse current at rated DC blocking voltage
+    - I_R
+    - I R
+    - Reverse Current
+    found_in: 10/10
+  r_thja_typ:
+    label: R_θJA typ
+    unit: °C/W
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Typical thermal resistance
+    - R_θJA
+    - Typical Thermal Resistance, Junction to Ambient
+    - R θJA
+    - Typical Thermal Resistance, Junction-Ambient
+    - Typical Thermal Resistance Between Junction and Ambient, Without Heatsink
+    - R θJC
+    - Typical Thermal Resistance (Junction to Ambient)
+    - R_thJA
+    found_in: 10/10
+  i_f_av_max:
+    label: I_F(AV) max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum average forward rectified current
+    - I_F(AV)
+    - Average rectified output current at 60Hz sinewave, R-load
+    - Maximum average output rectified current
+    - I_1F(AV)
+    - Maximum Average Forward Output Rectified Current
+    - I F(AV)
+    - I (AV)
+    - Maximum Average Forward Current
+    found_in: 9/10
+  r_thjc_typ:
+    label: R_θJC typ
+    unit: °C/W
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Typical thermal resistance
+    - R_θJC
+    - Typical Thermal Resistance, Junction to Case
+    - R θJC
+    - Typical Thermal Resistance, Junction-Case
+    - Typical Thermal Resistance Between Junction and Case, With Heatsink
+    - Typical Thermal Resistance (Junction to Case)
+    - R_thJC
+    found_in: 9/10
+  c_j_typ:
+    label: C_J typ
+    unit: pF
+    stat: typ
+    conditions: 4.0V,1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - Typical junction capacitance
+    - C_J
+    - Typical Junction Capacitance at 4.0V, 1MHz
+    - C J
+    - Mounting position
+    - Junction Capacitance
+    found_in: 8/10
+  v_f_max@i_f_1a:
+    label: V_F max @ I_F=1A
+    unit: V
+    stat: max
+    conditions: I_F=1A
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum instantaneous forward voltage
+    - V_F
+    - V F
+    - Maximum Instantaneous Forward Voltage at 2.0A DC
+    - Maximum Instantaneous Forward Voltage at 5.0A DC
+    - Instaneous Forward Voltage
+    - VF
+    - Maximum Instantaneous Forward Voltage at 1.0A DC
+    found_in: 8/10
+  t_stg_range:
+    label: T_STG range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: true
+    aliases:
+    - Storage temperature range
+    - T_STG
+    - T STG
+    - Storge Temperature Range
+    found_in: 5/10
+  v_f_max@i_f_2a:
+    label: V_F max @ I_F=2A
+    unit: V
+    stat: max
+    conditions: I_F=2A
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum instantaneous forward voltage
+    - V_F
+    - V F
+    - Instaneous Forward Voltage
+    - VF
+    found_in: 5/10
+rare_specs:
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Case
+    - Package
+    found_in: 3/10
+  terminals:
+    label: Terminals
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Terminals
+    found_in: 3/10
+  molding_compound:
+    label: Molding compound
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Molding compound meets UL 94V-0 flammability rating
+    - Flammability Classification
+    found_in: 2/10
+  carrier:
+    label: Carrier
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Carrier
+    found_in: 1/10
+  halogen_free:
+    label: Halogen-free
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Halogen-free
+    found_in: 1/10
+  marking:
+    label: Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Marking
+    found_in: 1/10
+  moisture_sensitivity:
+    label: Moisture sensitivity
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Moisture sensitivity
+    found_in: 1/10
+  part_number:
+    label: Part number
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Part Number
+    found_in: 1/10
+  polarity:
+    label: Polarity
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Polarity
+    found_in: 1/10
+  quantity:
+    label: Quantity
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Quantity
+    found_in: 1/10
+  rohs_compliance:
+    label: RoHS compliance
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - RoHS Compliance
+    found_in: 1/10
+  solderability:
+    label: Solderability
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Solderable per J-STD-002 and JESD22-B102
+    found_in: 1/10
+  soldering_temp:
+    label: Soldering temperature
+    unit: °C
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - High temperature soldering guaranteed
+    found_in: 1/10
+  v_br_min:
+    label: V_BR min
+    unit: V
+    stat: min
+    conditions: I_R=10µA
+    rule: '>='
+    critical: true
+    aliases:
+    - Breakdown Voltage
+    - V BR
+    found_in: 1/10
+  v_f_typ@i_f_1a_125c:
+    label: V_F typ @ I_F=1A, T_J=125°C
+    unit: V
+    stat: typ
+    conditions: I_F=1A, T_J=125°C
+    rule: ≈
+    critical: false
+    aliases:
+    - Instaneous Forward Voltage
+    - VF
+    found_in: 1/10
+  v_f_typ@i_f_3a_125c:
+    label: V_F typ @ I_F=3A, T_J=125°C
+    unit: V
+    stat: typ
+    conditions: I_F=3A, T_J=125°C
+    rule: ≈
+    critical: false
+    aliases:
+    - Instaneous Forward Voltage
+    - VF
+    found_in: 1/10
+  case:
+    label: Case
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases: []
+    found_in: 0/10
+  v_r_min:
+    label: V_R min
+    unit: V
+    stat: min
+    conditions: I_R=10µA
+    rule: '>='
+    critical: true
+    aliases: []
+    found_in: 0/10
+  v_f_typ@i_f_1a:
+    label: V_F typ @ I_F=1A
+    unit: V
+    stat: typ
+    conditions: I_F=1A
+    rule: ≈
+    critical: false
+    aliases: []
+    found_in: 0/10
+  v_f_typ@i_f_3a:
+    label: V_F typ @ I_F=3A
+    unit: V
+    stat: typ
+    conditions: I_F=3A
+    rule: ≈
+    critical: false
+    aliases: []
+    found_in: 0/10

@@ -1,0 +1,697 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: sic_mosfet_n
+name: N-channel SiC MOSFET
+version: 1
+status: draft
+must_match: []
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T13:32:33+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - goodark/gms032120q_01e4b585.md
+  - goodark/gms040120ll_8d74544c.md
+  - goodark/gms040120p_3f7a391b.md
+  - goodark/gms040120w7_0ebd473a.md
+  - goodark/gms040150q_23f08093.md
+  - goodark/gms045065w7_f7e2b222.md
+  - goodark/gms045065w_1e1cd649.md
+  - goodark/gms080120w7_56e26892.md
+  - goodark/gms110090f_80fd67a2.md
+  - goodark/gms350120d_42d297bf.md
+specs:
+  vbrdss_min:
+    label: V (BR)DSS min
+    unit: V
+    stat: min
+    conditions: V GS=0V, I D=100μA
+    rule: '>='
+    critical: true
+    aliases:
+    - DrainSourceBreakdownVoltage
+    - V (BR)DSS
+    - Drain Source Breakdown Voltage
+    - Drain-Source Breakdown Voltage
+    - V_(BR)DSS
+    found_in: 10/10
+  vds_max:
+    label: V DS max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - DrainSourceVoltage
+    - V DS
+    - Drain Source Voltage
+    - Drain-Source Voltage
+    - V_DS
+    found_in: 10/10
+  c_iss_typ:
+    label: C iss typ
+    unit: pF
+    stat: typ
+    conditions: V GS=0V, V DS=1000V, V AC=25mV, f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - InputCapacitance
+    - C iss
+    - Input Capacitance
+    - C_iss
+    found_in: 10/10
+  c_oss_typ:
+    label: C oss typ
+    unit: pF
+    stat: typ
+    conditions: V GS=0V, V DS=1000V, V AC=25mV, f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - OutputCapacitance
+    - C oss
+    - Output Capacitance
+    - C_oss
+    found_in: 10/10
+  c_rss_typ:
+    label: C rss typ
+    unit: pF
+    stat: typ
+    conditions: V GS=0V, V DS=1000V, V AC=25mV, f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - ReverseTransferCapacitance
+    - C rss
+    - Reverse Transfer Capacitance
+    - C_rss
+    found_in: 10/10
+  e_off_typ:
+    label: E OFF typ
+    unit: mJ
+    stat: typ
+    conditions: V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH
+    rule: ≈
+    critical: false
+    aliases:
+    - Turn-OffSwitchingEnergy
+    - E OFF
+    - Turn-Off Switching Energy
+    - E_OFF
+    found_in: 10/10
+  e_on_typ:
+    label: E ON typ
+    unit: mJ
+    stat: typ
+    conditions: V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH
+    rule: ≈
+    critical: false
+    aliases:
+    - Turn-OnSwitchingEnergy
+    - E ON
+    - Turn-On Switching Energy
+    - E_ON
+    found_in: 10/10
+  id_max@vgs_18v_tc_125c:
+    label: I D max @ V GS=18V, T C=125°C
+    unit: A
+    stat: max
+    conditions: V GS=18V, T C=125°C
+    rule: '>='
+    critical: false
+    aliases:
+    - DrainCurrentContinuous
+    - I D
+    - Drain Current Continuous
+    - I_D
+    found_in: 10/10
+  id_max@vgs_18v_tc_25c:
+    label: I D max @ V GS=18V, T C=25°C
+    unit: A
+    stat: max
+    conditions: V GS=18V, T C=25°C
+    rule: '>='
+    critical: false
+    aliases:
+    - DrainCurrentContinuous
+    - I D
+    - Drain Current Continuous
+    - I_D
+    found_in: 10/10
+  idss_range:
+    label: I DSS range
+    unit: μA
+    stat: range
+    conditions: V DS=1200V, V GS=0V
+    rule: <=
+    critical: false
+    aliases:
+    - ZeroGateVoltageDrainCurrent
+    - I DSS
+    - Zero Gate Voltage Drain Current
+    - I_DSS
+    found_in: 10/10
+  igss_max:
+    label: I GSS max
+    unit: nA
+    stat: max
+    conditions: V GS=18V, V DS=0V
+    rule: <=
+    critical: false
+    aliases:
+    - GateLeakageCurrent
+    - I GSS
+    - Gate Leakage Current
+    - I_GSS
+    found_in: 10/10
+  isd_typ:
+    label: I SD typ
+    unit: A
+    stat: typ
+    conditions: V GS=-4V
+    rule: '>='
+    critical: false
+    aliases:
+    - ContinuousDiodeForwardCurrent
+    - I SD
+    - Continuous Diode Forward Current
+    - I_SD
+    found_in: 10/10
+  pd_max@tc_25c:
+    label: P D max @ T C=25°C
+    unit: W
+    stat: max
+    conditions: T C=25°C
+    rule: '>='
+    critical: false
+    aliases:
+    - PowerDissipation
+    - P D
+    - Power Dissipation
+    - P_D
+    found_in: 10/10
+  q_rr_typ:
+    label: Q rr typ
+    unit: nC
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs
+    rule: ≈
+    critical: false
+    aliases:
+    - ReverseRecoveryCharge
+    - Q rr
+    - Reverse Recovery Charge
+    - Q_rr
+    found_in: 10/10
+  qg_typ:
+    label: Q g typ
+    unit: nC
+    stat: typ
+    conditions: V GS(off)=-4V, V GS(on)=15V, V DD=800V, I D=33A
+    rule: ≈
+    critical: false
+    aliases:
+    - TotalGateCharge
+    - Q g
+    - Total Gate Charge
+    - Q_g
+    found_in: 10/10
+  qgd_typ:
+    label: Q gd typ
+    unit: nC
+    stat: typ
+    conditions: V GS(off)=-4V, V GS(on)=15V, V DD=800V, I D=33A
+    rule: ≈
+    critical: false
+    aliases:
+    - GateDrainCharge
+    - Q gd
+    - Gate Drain Charge
+    - Gate-Drain Charge
+    - Q_gd
+    found_in: 10/10
+  qgs_typ:
+    label: Q gs typ
+    unit: nC
+    stat: typ
+    conditions: V GS(off)=-4V, V GS(on)=15V, V DD=800V, I D=33A
+    rule: ≈
+    critical: false
+    aliases:
+    - GateSourceCharge
+    - Q gs
+    - Gate Source Charge
+    - Gate-Source Charge
+    - Q_gs
+    found_in: 10/10
+  r_g_typ:
+    label: R G typ
+    unit: Ω
+    stat: typ
+    conditions: V AC=25mV, f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - Gateresistance
+    - R G
+    - Gate resistance
+    - R_G
+    found_in: 10/10
+  rds_on_typ@vgs_15v_id_33a:
+    label: R DS(on) typ @ V GS=15V, I D=33A
+    unit: mΩ
+    stat: typ
+    conditions: V GS=15V, I D=33A
+    rule: <=
+    critical: false
+    aliases:
+    - Drain-SourceOn-state Resistance
+    - R DS(on)
+    - Drain-Source On-state Resistance
+    - R_DS(on)
+    found_in: 10/10
+  rds_on_typ@vgs_15v_id_33a_tj_175c:
+    label: R DS(on) typ @ V GS=15V, I D=33A, T J=175°C
+    unit: mΩ
+    stat: typ
+    conditions: V GS=15V, I D=33A, T J=175°C
+    rule: <=
+    critical: false
+    aliases:
+    - Drain-SourceOn-state Resistance
+    - R DS(on)
+    - Drain-Source On-state Resistance
+    - R_DS(on)
+    found_in: 10/10
+  rds_on_typ@vgs_18v_id_33a:
+    label: R DS(on) typ @ V GS=18V, I D=33A
+    unit: mΩ
+    stat: typ
+    conditions: V GS=18V, I D=33A
+    rule: <=
+    critical: false
+    aliases:
+    - Drain-SourceOn-state Resistance
+    - R DS(on)
+    - Drain-Source On-state Resistance
+    - R_DS(on)
+    found_in: 10/10
+  rds_on_typ@vgs_18v_id_33a_tj_175c:
+    label: R DS(on) typ @ V GS=18V, I D=33A, T J=175°C
+    unit: mΩ
+    stat: typ
+    conditions: V GS=18V, I D=33A, T J=175°C
+    rule: <=
+    critical: false
+    aliases:
+    - Drain-SourceOn-state Resistance
+    - R DS(on)
+    - Drain-Source On-state Resistance
+    - R_DS(on)
+    found_in: 10/10
+  rthja_max:
+    label: R thJA max
+    unit: °C/W
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - ThermalResistanceJunctiontoAmbient
+    - R thJA
+    - Thermal Resistance Junction to Ambient
+    - R_thJA
+    found_in: 10/10
+  rthjc_max:
+    label: R thJC max
+    unit: °C/W
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - ThermalResistanceJunctiontoCase
+    - R thJC
+    - Thermal Resistance Junction to Case
+    - R_thJC
+    found_in: 10/10
+  t_rr_typ:
+    label: t rr typ
+    unit: ns
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs
+    rule: ≈
+    critical: false
+    aliases:
+    - ReverseRecoveryTime
+    - t rr
+    - Reverse Recovery Time
+    - t_rr
+    found_in: 10/10
+  td_off_typ:
+    label: t d(off) typ
+    unit: ns
+    stat: typ
+    conditions: V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH
+    rule: ≈
+    critical: false
+    aliases:
+    - Turn-offDelayTime
+    - t d(off)
+    - Turn-off Delay Time
+    - t_d(off)
+    found_in: 10/10
+  td_on_typ:
+    label: t d(on) typ
+    unit: ns
+    stat: typ
+    conditions: V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH
+    rule: ≈
+    critical: false
+    aliases:
+    - Tum-onDelayTime
+    - t d(on)
+    - Tum-on Delay Time
+    - Turn-on Delay Time
+    - t_d(on)
+    found_in: 10/10
+  tf_typ:
+    label: t f typ
+    unit: ns
+    stat: typ
+    conditions: V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH
+    rule: ≈
+    critical: false
+    aliases:
+    - Turn-offFallTime
+    - t f
+    - Turn-off Fall Time
+    - t_f
+    found_in: 10/10
+  tj_stg_range:
+    label: T J / T STG range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - OperatingTemperatureandStorageTemperatureRange
+    - T /T J STG
+    - T J /T STG
+    - Operating Temperature and Storage Temperature Range
+    - T J/T STG
+    - T_J/T_STG
+    found_in: 10/10
+  tr_typ:
+    label: t r typ
+    unit: ns
+    stat: typ
+    conditions: V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH
+    rule: ≈
+    critical: false
+    aliases:
+    - Turn-onRiseTime
+    - t r
+    - Turn-on Rise Time
+    - t_r
+    found_in: 10/10
+  v_sd_typ:
+    label: V SD typ
+    unit: V
+    stat: typ
+    conditions: I SD=20A, V GS=-4V
+    rule: ≈
+    critical: false
+    aliases:
+    - DiodeForwardVoltage
+    - V SD
+    - Diode Forward Voltage
+    - V_SD
+    found_in: 10/10
+  v_sd_typ@tj_175c:
+    label: V SD typ @ T J=175°C
+    unit: V
+    stat: typ
+    conditions: I SD=20A, V GS=-4V, T J=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - DiodeForwardVoltage
+    - V SD
+    - Diode Forward Voltage
+    - V_SD
+    found_in: 10/10
+  vgs_max:
+    label: V GS max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - GateSourceVoltage
+    - V GS
+    - Gate Source Voltage
+    - Gate-Source Voltage
+    - V_GS
+    found_in: 10/10
+  vgs_th_range@tj_175c:
+    label: V GS(TH) range @ T J=175°C
+    unit: V
+    stat: range
+    conditions: V DS=V GS, I DS=10mA, T J=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - GateThresholdVoltage
+    - V GS(TH)
+    - Gate Threshold Voltage
+    - V_GS(TH)
+    found_in: 10/10
+  vgs_th_range@tj_25c:
+    label: V GS(TH) range @ T J=25°C
+    unit: V
+    stat: range
+    conditions: V DS=V GS, I DS=10mA, T J=25°C
+    rule: ≈
+    critical: false
+    aliases:
+    - GateThresholdVoltage
+    - V GS(TH)
+    - Gate Threshold Voltage
+    - V_GS(TH)
+    found_in: 10/10
+  vgsop_max:
+    label: V GSop max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - RecommendGateSourceVoltage
+    - V GSop
+    - Recommend Gate Source Voltage
+    - Recommended Gate-Source Voltage
+    - V_GSop
+    found_in: 10/10
+  e_rec_typ:
+    label: E REC typ
+    unit: μJ
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs
+    rule: ≈
+    critical: false
+    aliases:
+    - ReverseRecoveryEnergy
+    - E REC
+    - Reverse Recovery Energy
+    - E_REC
+    found_in: 7/10
+  e_rec_typ@tj_175c:
+    label: E REC typ @ T J=175°C
+    unit: μJ
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - ReverseRecoveryEnergy
+    - E REC
+    - Reverse Recovery Energy
+    - RoHS Compliance
+    found_in: 7/10
+  irrm_typ:
+    label: I rrm typ
+    unit: A
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs
+    rule: ≈
+    critical: false
+    aliases:
+    - PeakReverseRecoveryCurrent
+    - I rrm
+    - Peak Reverse Recovery Current
+    - I_rrm
+    found_in: 7/10
+  q_rr_typ@tj_175c:
+    label: Q rr typ @ T J=175°C
+    unit: nC
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - ReverseRecoveryCharge
+    - Q rr
+    - Reverse Recovery Charge
+    - Operating Temperature Range
+    found_in: 7/10
+  t_a_typ:
+    label: t A typ
+    unit: ns
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs
+    rule: ≈
+    critical: false
+    aliases:
+    - ChargeTime
+    - t A
+    - Charge Time
+    - t_A
+    found_in: 7/10
+  t_b_typ:
+    label: t B typ
+    unit: ns
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs
+    rule: ≈
+    critical: false
+    aliases:
+    - DisChargeTime
+    - t B
+    - DisCharge Time
+    - t_B
+    found_in: 7/10
+  t_rr_typ@tj_175c:
+    label: t rr typ @ T J=175°C
+    unit: ns
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - ReverseRecoveryTime
+    - t rr
+    - Reverse Recovery Time
+    - Package
+    found_in: 7/10
+  irrm_typ@tj_175c:
+    label: I rrm typ @ T J=175°C
+    unit: A
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - PeakReverseRecoveryCurrent
+    - I rrm
+    - Peak Reverse Recovery Current
+    found_in: 5/10
+  t_a_typ@tj_175c:
+    label: t A typ @ T J=175°C
+    unit: ns
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - ChargeTime
+    - t A
+    - Charge Time
+    found_in: 5/10
+  t_b_typ@tj_175c:
+    label: t B typ @ T J=175°C
+    unit: ns
+    stat: typ
+    conditions: V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - DisChargeTime
+    - t B
+    - DisCharge Time
+    found_in: 5/10
+rare_specs:
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 4/10
+  operating_temp_range:
+    label: Operating Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - OperatingTemperatureRange
+    found_in: 4/10
+  rohs:
+    label: RoHS
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - RoHS
+    found_in: 3/10
+  storage_temp_range:
+    label: Storage Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - StorageTemperatureRange
+    - RoHS
+    found_in: 3/10
+  pin_count:
+    label: Pin Count
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - PinCount
+    found_in: 2/10
+  aec_q101:
+    label: AEC-Q101
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - AEC-Q101
+    found_in: 2/10

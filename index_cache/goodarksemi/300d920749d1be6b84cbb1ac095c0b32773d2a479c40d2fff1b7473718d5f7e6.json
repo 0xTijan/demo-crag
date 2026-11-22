@@ -18,5 +18,135 @@
   "tokens_in": 911,
   "tokens_out": 39
  },
- "type": "switching_diode"
+ "type": "switching_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:28:05+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Reverse Voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Working Peak Reverse Voltage",
+    "symbol": "V RWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "175"
+   },
+   {
+    "name": "Reverse Voltage",
+    "symbol": "V R",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "175"
+   },
+   {
+    "name": "Average Recified Output Current",
+    "symbol": "IO",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "225"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Surge Current",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.7"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Thermal Resistance, Junction-to-Ambient",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "357"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +150"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "VBR",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IR=100μA",
+    "example": "250"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=100mA",
+    "example": "1"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=200mA",
+    "example": "1.25"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VR=250V",
+    "example": "0.1"
+   },
+   {
+    "name": "Total Capacitance",
+    "symbol": "C tot",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VR=0, f=1MHz",
+    "example": "5"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "trr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "IF=IR=30mA, RL=100, IRR=0.1×IR",
+    "example": "50"
+   }
+  ],
+  "seconds": 12.3,
+  "tokens_in": 897,
+  "tokens_out": 666
+ }
 }

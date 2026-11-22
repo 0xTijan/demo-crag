@@ -18,5 +18,231 @@
   "tokens_in": 1144,
   "tokens_out": 35
  },
- "type": "power_resistor"
+ "type": "power_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:50:54+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "350V"
+   },
+   {
+    "name": "Dielectric Strength",
+    "symbol": "",
+    "unit": "VAC",
+    "stat": "min",
+    "conditions": "",
+    "example": "1800"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "",
+    "example": "10G"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to 175"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "25±5"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Power",
+    "symbol": "",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "Case temperature 25°C, heat sink mounted",
+    "example": "50"
+   },
+   {
+    "name": "Power",
+    "symbol": "",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "Without heat sink, free air at 25°C",
+    "example": "2.5"
+   },
+   {
+    "name": "Thermal resistance",
+    "symbol": "",
+    "unit": "°K/W",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.00"
+   },
+   {
+    "name": "Derating Curve Slope",
+    "symbol": "",
+    "unit": "W/°K",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.333"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±0.5%",
+    "example": "0.5"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±1%",
+    "example": "1"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±5%",
+    "example": "5"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±10%",
+    "example": "10"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "No Specified (±300~±700)",
+    "example": "300~700"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±300",
+    "example": "300"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±100 ±200 ±300",
+    "example": "100, 200, 300"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±50 ±100 ±200",
+    "example": "50, 100, 200"
+   },
+   {
+    "name": "Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "2 times rated power, applied voltage not to exceed 1.5 times maximum continuous operating voltage for 5 seconds",
+    "example": "0.3"
+   },
+   {
+    "name": "Load Life",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "2,000 hours at rated power",
+    "example": "1.0"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs \"ON\" and 0.5 hrs \"OFF\"",
+    "example": "0.5"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "270±5°C for 3 seconds",
+    "example": "90"
+   },
+   {
+    "name": "Temperature Cycling",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "-65°C~+150°C, 100 cycles",
+    "example": "0.3"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "N",
+    "stat": "max",
+    "conditions": "(Pull Test)2.4N",
+    "example": "2.4"
+   },
+   {
+    "name": "Vibration, High Frequency",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "20g peak",
+    "example": "0.2"
+   }
+  ],
+  "seconds": 131.7,
+  "tokens_in": 2619,
+  "tokens_out": 1230
+ }
 }

@@ -1,0 +1,438 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: common_mode_filter
+name: common mode choke / filter
+version: 1
+status: draft
+must_match:
+- package
+- size
+- packaging_code
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T14:50:22+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - viking/cfh-a-series-data-sheet-edition-rev-a2_0b264cc9.md
+  - viking/cm-series-data-sheet-edition-rev-b1_13a8a0ab.md
+  - viking/cm-series_e2315bea.md
+  - viking/cma-series-data-sheet-edition-rev-a2_854a0a84.md
+  - viking/cmx-a-series-data-sheet-edition-rev-a1_bd4a350e.md
+  - viking/cmx-series-data-sheet-edition-rev-a3_73c0cc36.md
+  - viking/pcm-series-data-sheet-edition-rev-a_59578887.md
+specs:
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Size (Inch)
+    - Sizes
+    - Dimensions
+    - Dimensions LxW
+    - Size
+    - Dimensions (AxBxC)
+    found_in: 7/7
+  size:
+    label: Size
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - A
+    - B
+    - W
+    - E
+    - F
+    - P0
+    - P1
+    - P2
+    - ΦD 0
+    - T
+    - C
+    - G
+    found_in: 7/7
+  insulation_resistance_min:
+    label: Insulation Resistance min
+    unit: MΩ
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Insulation Resistance (MΩ) min.
+    - IR
+    - Insulation Resistance
+    found_in: 7/7
+  biased_humidity:
+    label: Biased Humidity
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Biased Humidity
+    - Humidity
+    found_in: 6/7
+  dc_r_max:
+    label: DCR max
+    unit: Ω
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - DCR (Ω) max.
+    - DCR
+    found_in: 6/7
+  operational_life:
+    label: Operational Life
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Operational Life
+    - High Temperature Load Life
+    found_in: 6/7
+  packaging_code:
+    label: Packaging Code
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Packaging Code
+    - Part Number
+    found_in: 6/7
+  rated_voltage_vdc_value:
+    label: Rated Voltage Vdc
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Rated Voltage Vdc (V) typ.
+    - Rated Voltage Vdc (V)
+    - Vdc
+    - Rated Voltage
+    - Rated Voltage Vdc
+    found_in: 6/7
+  resistance_to_solder_heat:
+    label: Resistance to Solder Heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Resistance to Soldering Heat
+    - Vibration Test (Low Frequency)
+    - Resistance to Solder Heat
+    found_in: 6/7
+  shelf_life:
+    label: Shelf Life
+    unit: years
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Shelf life
+    - Packaging Quantity
+    - Storage Time
+    found_in: 6/7
+  steam_aging_test:
+    label: Steam Aging Test
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Moisture Resistance
+    - Solderability
+    - Steam Aging Test
+    - Vibration
+    found_in: 6/7
+  storage_temp_range:
+    label: Storage Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 6/7
+  temperature_cycle:
+    label: Temperature Cycle
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Temperature Cycling
+    - Low Temperature Storage
+    - Thermal Shock
+    - Temperature Cycle
+    found_in: 6/7
+  idc_max:
+    label: IDC max
+    unit: mA
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - IDC (mA) max.
+    - IDC
+    - Rated Current
+    found_in: 5/7
+  operating_temp_range:
+    label: Operating Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Temperature Range
+    - Operating Temperature
+    found_in: 5/7
+  withstanding_voltage_vdc_value:
+    label: Withstanding Voltage Vdc
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Withstanding Voltage Vdc (V)
+    - Vdc
+    - Withstanding Voltage
+    found_in: 5/7
+  impedance_min@100mhz:
+    label: Impedance min @ 100 MHz
+    unit: Ω
+    stat: min
+    conditions: 100 MHz
+    rule: '>='
+    critical: false
+    aliases:
+    - Impedance(Ω) @10MHz
+    - Impedance
+    - Z
+    - Impedance (Ω)
+    found_in: 4/7
+  impedance_test_condition:
+    label: Impedance Test Condition
+    unit: MHz
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Test Condition (MHz)
+    - Impedance
+    - Test Condition
+    found_in: 4/7
+  impedance_tolerance:
+    label: Impedance Tolerance
+    unit: '%'
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Inductance Tolerance
+    - Impedance Tolerance
+    - Tolerance
+    found_in: 4/7
+  impedance_value:
+    label: Impedance Value
+    unit: Ω
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Impedance
+    - Impedance (Ω)
+    - Part Number
+    - Impedance Value
+    found_in: 4/7
+rare_specs:
+  impedance_typ@100mhz:
+    label: Impedance typ @ 100 MHz
+    unit: Ω
+    stat: typ
+    conditions: 100 MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - Impedance(Ω) @10MHz
+    - Tolerance
+    found_in: 3/7
+  packaging_quantity:
+    label: Packaging Quantity
+    unit: EA
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Packaging Quantity
+    - Quantity
+    found_in: 3/7
+  peel_off_force:
+    label: Peel-off Force
+    unit: N
+    stat: range
+    conditions: 'Temperature: 5 ~ 35°C, Humidity: 45 ~ 85%, Atmospheric pressure: 860 ~ 1060hpa'
+    rule: '>='
+    critical: false
+    aliases:
+    - Peel-off Force
+    found_in: 3/7
+  shielding_type:
+    label: Shielding Type
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Shielding Type
+    found_in: 3/7
+  construction:
+    label: Construction
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Construction
+    found_in: 2/7
+  board_flex:
+    label: Board Flex
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Board Flex
+    found_in: 1/7
+  mechanical_shock:
+    label: Mechanical Shock
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Mechanical Shock
+    found_in: 1/7
+  solderability:
+    label: Solderability
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Solderability
+    found_in: 1/7
+  terminal_strength:
+    label: Terminal Strength
+    unit: N
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Terminal Strength
+    found_in: 1/7
+  dc_r_test_condition:
+    label: DCR Test Condition
+    unit: MHz
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases: []
+    found_in: 0/7
+  dc_r_tolerance:
+    label: DCR Tolerance
+    unit: '%'
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases: []
+    found_in: 0/7
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: MΩ
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases: []
+    found_in: 0/7
+  rated_current:
+    label: Rated Current
+    unit: mA
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases: []
+    found_in: 0/7
+  rated_voltage:
+    label: Rated Voltage
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases: []
+    found_in: 0/7
+  vibration:
+    label: Vibration
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  withstanding_voltage:
+    label: Withstanding Voltage
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases: []
+    found_in: 0/7

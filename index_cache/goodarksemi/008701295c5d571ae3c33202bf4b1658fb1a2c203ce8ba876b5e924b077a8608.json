@@ -18,5 +18,527 @@
   "tokens_in": 2110,
   "tokens_out": 43
  },
- "type": "mosfet_n"
+ "type": "mosfet_n",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:53:16+00:00",
+  "items": [
+   {
+    "name": "V (BR)DSS",
+    "symbol": "V(BR)DSS",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "VGS=0V, ID=250µA",
+    "example": "200"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "10.7"
+   },
+   {
+    "name": "I D",
+    "symbol": "ID",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "T=25°C",
+    "example": "110"
+   },
+   {
+    "name": "I D",
+    "symbol": "ID",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "T=100°C",
+    "example": "78"
+   },
+   {
+    "name": "Pulsed Drain Current",
+    "symbol": "IDM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "T=25°C",
+    "example": "352"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "T=25°C",
+    "example": "313"
+   },
+   {
+    "name": "Single Pulse Avalanche Energy",
+    "symbol": "EAS",
+    "unit": "mJ",
+    "stat": "max",
+    "conditions": "",
+    "example": "600"
+   },
+   {
+    "name": "Single Pulse Avalanche Current",
+    "symbol": "IAS",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "49"
+   },
+   {
+    "name": "Junction-to-Ambient (PCB Mounted, Steady-State)",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Junction-to-Case",
+    "symbol": "RθJC",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.4"
+   },
+   {
+    "name": "Operating Junction and Storage Temperature Range",
+    "symbol": "TJ/STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Soldering Temperature (SMD)",
+    "symbol": "Tsold",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Drain-to-Source Breakdown Voltage",
+    "symbol": "V(BR)DSS",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "VGS=0V, ID=250µA",
+    "example": "200"
+   },
+   {
+    "name": "Drain-to-Source Leakage Current",
+    "symbol": "IDSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VDS=200V, VGS=0V, TJ=25°C",
+    "example": "1.0"
+   },
+   {
+    "name": "Drain-to-Source Leakage Current",
+    "symbol": "IDSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VDS=200V, VGS=0V, TJ=125°C",
+    "example": "10"
+   },
+   {
+    "name": "Gate-to-Source Forward Leakage",
+    "symbol": "IGSS",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VDS=0V, VGS=20V",
+    "example": "100"
+   },
+   {
+    "name": "Gate-to-Source Forward Leakage",
+    "symbol": "IGSS",
+    "unit": "nA",
+    "stat": "min",
+    "conditions": "VDS=0V, VGS=-20V",
+    "example": "-100"
+   },
+   {
+    "name": "Static Drain-to-Source On-Resistance",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "VGS=10V, ID=88A",
+    "example": "9.4"
+   },
+   {
+    "name": "Static Drain-to-Source On-Resistance",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "VGS=10V, ID=88A",
+    "example": "10.7"
+   },
+   {
+    "name": "Gate Threshold Voltage",
+    "symbol": "VGS(th)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VDS=VGS, ID=250μA",
+    "example": "2.0 to 4.0"
+   },
+   {
+    "name": "Input Capacitance",
+    "symbol": "Ciss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGS=0V, VDS=100V, f=1MHz",
+    "example": "4720"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "Coss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGS=0V, VDS=100V, f=1MHz",
+    "example": "430"
+   },
+   {
+    "name": "Reverse Transfer Capacitance",
+    "symbol": "Crss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGS=0V, VDS=100V, f=1MHz",
+    "example": "11"
+   },
+   {
+    "name": "Total Gate Charge",
+    "symbol": "Qg",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "ID=44A, VDD=100V, VGS=10V",
+    "example": "64"
+   },
+   {
+    "name": "Gate-to-Source Charge",
+    "symbol": "Qgs",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "ID=44A, VDD=100V, VGS=10V",
+    "example": "28"
+   },
+   {
+    "name": "Gate-to-Drain (\"Miller\") Charge",
+    "symbol": "Qgd",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "ID=44A, VDD=100V, VGS=10V",
+    "example": "7.9"
+   },
+   {
+    "name": "Gate Plateau",
+    "symbol": "Vplateau",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "ID=44A, VDD=100V, VGS=10V",
+    "example": "5.3"
+   },
+   {
+    "name": "Turn-on Delay Time",
+    "symbol": "td(on)",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=100V, VGS=10V, RG=1.6Ω, ID=44A",
+    "example": "22"
+   },
+   {
+    "name": "Rise Time",
+    "symbol": "tr",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=100V, VGS=10V, RG=1.6Ω, ID=44A",
+    "example": "40"
+   },
+   {
+    "name": "Turn-Off Delay Time",
+    "symbol": "td(off)",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=100V, VGS=10V, RG=1.6Ω, ID=44A",
+    "example": "66"
+   },
+   {
+    "name": "Fall Time",
+    "symbol": "tf",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=100V, VGS=10V, RG=1.6Ω, ID=44A",
+    "example": "18"
+   },
+   {
+    "name": "Gate Resistance",
+    "symbol": "Rg",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "f=1MHz",
+    "example": "4.9"
+   },
+   {
+    "name": "Continuous Source Current (Body Diode)",
+    "symbol": "IS",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "T=25°C",
+    "example": "88"
+   },
+   {
+    "name": "Diode Pulse Current",
+    "symbol": "IS pulse",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "T=25°C",
+    "example": "352"
+   },
+   {
+    "name": "Diode Forward Voltage",
+    "symbol": "VSD",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IS=88A, VGS=0V",
+    "example": "1.4"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "Trr",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "IS=44A, VGS=0V, dI/dt=100A/us",
+    "example": "130"
+   },
+   {
+    "name": "Reverse Recovery Charge",
+    "symbol": "Qrr",
+    "unit": "μC",
+    "stat": "typ",
+    "conditions": "IS=44A, VGS=0V, dI/dt=100A/us",
+    "example": "0.7"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TOLL"
+   },
+   {
+    "name": "A",
+    "symbol": "A",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.25 to 2.35"
+   },
+   {
+    "name": "A1",
+    "symbol": "A1",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.75 to 1.85"
+   },
+   {
+    "name": "b",
+    "symbol": "b",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.65 to 0.75"
+   },
+   {
+    "name": "b",
+    "symbol": "b1",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "9.75 to 9.85"
+   },
+   {
+    "name": "b",
+    "symbol": "b2",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.70 to 0.80"
+   },
+   {
+    "name": "b",
+    "symbol": "b3",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.15 to 1.25"
+   },
+   {
+    "name": "c",
+    "symbol": "c",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.45 to 0.55"
+   },
+   {
+    "name": "D",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "10.35 to 10.45"
+   },
+   {
+    "name": "D1",
+    "symbol": "D1",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "11.00 to 11.20"
+   },
+   {
+    "name": "D2",
+    "symbol": "D2",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.25 to 3.35"
+   },
+   {
+    "name": "D4",
+    "symbol": "D4",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.50 to 4.60"
+   },
+   {
+    "name": "e",
+    "symbol": "e",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.200 BSC"
+   },
+   {
+    "name": "e",
+    "symbol": "e1",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.225 BSC"
+   },
+   {
+    "name": "E",
+    "symbol": "E",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "9.85 to 9.95"
+   },
+   {
+    "name": "E1",
+    "symbol": "E1",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "8.00 to 8.20"
+   },
+   {
+    "name": "E2",
+    "symbol": "E2",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.65 to 0.75"
+   },
+   {
+    "name": "H",
+    "symbol": "H",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "11.60 to 11.80"
+   },
+   {
+    "name": "H1",
+    "symbol": "H1",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "6.95 BSC"
+   },
+   {
+    "name": "H2",
+    "symbol": "H2",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "5.90 BSC"
+   },
+   {
+    "name": "K",
+    "symbol": "K",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.10 REF"
+   },
+   {
+    "name": "L",
+    "symbol": "L",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.55 to 1.75"
+   },
+   {
+    "name": "L1",
+    "symbol": "L1",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.65 to 0.75"
+   },
+   {
+    "name": "L2",
+    "symbol": "L2",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.50 to 0.70"
+   },
+   {
+    "name": "L3",
+    "symbol": "L3",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.40 to 0.60"
+   },
+   {
+    "name": "Q",
+    "symbol": "Q",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "7.95 REF"
+   },
+   {
+    "name": "R",
+    "symbol": "R",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   }
+  ],
+  "seconds": 127.68,
+  "tokens_in": 3060,
+  "tokens_out": 3296
+ }
 }

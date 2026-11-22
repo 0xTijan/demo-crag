@@ -22,5 +22,175 @@
   "tokens_in": 1685,
   "tokens_out": 88
  },
- "type": "bridge_rectifier"
+ "type": "bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:23:25+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "V_RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum RMS voltage",
+    "symbol": "V_RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "V_DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Average rectified output current at 60Hz sinewave, R-load",
+    "symbol": "I_F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=110°C",
+    "example": "6.0"
+   },
+   {
+    "name": "Average rectified output current at 60Hz sinewave, R-load",
+    "symbol": "I_F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "2.8"
+   },
+   {
+    "name": "Peak forward surge current single sine-wave superimposed on rated load (JEDEC Me",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Rating for fusing (t≤8.3ms)",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "max",
+    "conditions": "",
+    "example": "94"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "T_J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "T_STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to150"
+   },
+   {
+    "name": "Maximum instantaneous forward voltage",
+    "symbol": "V_F",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "I_F=3.0A",
+    "example": "1.0"
+   },
+   {
+    "name": "Maximum DC reverse current at rated DC blocking voltage",
+    "symbol": "I_R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "5.0"
+   },
+   {
+    "name": "Maximum DC reverse current at rated DC blocking voltage",
+    "symbol": "I_R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "TA=125°C",
+    "example": "250"
+   },
+   {
+    "name": "Typical thermal resistance",
+    "symbol": "R_θJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "26"
+   },
+   {
+    "name": "Typical thermal resistance",
+    "symbol": "R_θJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "3.4"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GBU"
+   },
+   {
+    "name": "Molding compound meets UL 94V-0 flammability rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL 94V-0"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tin plated leads"
+   },
+   {
+    "name": "Solderable per J-STD-002 and JESD22-B102",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "J-STD-002 and JESD22-B102"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "As marked on body"
+   },
+   {
+    "name": "Solder dip 275 °C max. 7 s, per JESD 22-B106",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "275 °C max. 7 s"
+   }
+  ],
+  "seconds": 28.22,
+  "tokens_in": 1744,
+  "tokens_out": 957
+ }
 }

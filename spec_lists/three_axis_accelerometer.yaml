@@ -1,0 +1,370 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: three_axis_accelerometer
+name: three-axis digital accelerometer
+version: 1
+status: draft
+must_match:
+- package
+- pin_count
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T15:31:35+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - goodarksemi/gsda213-sds_ac9c6c45.md
+  - goodarksemi/gsda312-sds_adcbbee5.md
+  - goodarksemi/gsda313-sds_23cab432.md
+specs:
+  io_pins_supply_voltage:
+    label: I/O Pins supply voltage
+    unit: V
+    stat: range
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - I/O Pins supply voltage
+    - VDD_IO
+    - V_I DD O
+    found_in: 3/3
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 3/3
+  pin_count:
+    label: Pin count
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Pin count
+    - Operating Temperature Range
+    found_in: 3/3
+  supply_voltage:
+    label: Supply voltage
+    unit: V
+    stat: range
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Supply voltage
+    - VDD
+    found_in: 3/3
+  acceleration_noise_density:
+    label: Acceleration noise density
+    unit: ug/sqrt(Hz)
+    stat: value
+    conditions: FS bit set to 00, Normal Mode, ODR = 125Hz
+    rule: '='
+    critical: false
+    aliases:
+    - Acceleration noise density
+    - An
+    found_in: 3/3
+  current_consumption_low_power_mode:
+    label: Current consumption in low power mode
+    unit: uA
+    stat: value
+    conditions: Top=25°C, ODR=62.5Hz, BW=500Hz
+    rule: <=
+    critical: false
+    aliases:
+    - current consumption in low power mode
+    - IDD_LP
+    - I_l DD P
+    - I DD_lP
+    found_in: 3/3
+  current_consumption_normal_mode:
+    label: Current consumption in normal mode
+    unit: uA
+    stat: value
+    conditions: Top=25°C, ODR=1kHz
+    rule: <=
+    critical: false
+    aliases:
+    - current consumption in normal mode
+    - IDD
+    - I DD
+    found_in: 3/3
+  current_consumption_suspend_mode:
+    label: Current consumption in suspend mode
+    unit: uA
+    stat: value
+    conditions: Top=25°C
+    rule: <=
+    critical: false
+    aliases:
+    - current consumption in suspend mode
+    - IDD_SM
+    - I DD_SM
+    found_in: 3/3
+  digital_high_level_input_voltage:
+    label: Digital high level input voltage
+    unit: V
+    stat: range
+    conditions: SPI&I2C
+    rule: '='
+    critical: false
+    aliases:
+    - Digital high level input voltage
+    - VIH
+    - V IH
+    found_in: 3/3
+  digital_low_level_input_voltage:
+    label: Digital low level input voltage
+    unit: V
+    stat: range
+    conditions: SPI&I2C
+    rule: '='
+    critical: false
+    aliases:
+    - Digital low level input voltage
+    - VIL
+    - V IL
+    found_in: 3/3
+  fs_range:
+    label: FS range
+    unit: g
+    stat: range
+    conditions: FS bit set to 00
+    rule: '='
+    critical: false
+    aliases:
+    - Measurement range
+    - FS
+    found_in: 3/3
+  high_level_output_voltage:
+    label: High level output voltage
+    unit: V
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - high level output voltage
+    - VOH
+    - V OH
+    found_in: 3/3
+  low_level_output_voltage:
+    label: Low level output voltage
+    unit: V
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Low level output voltage
+    - VOL
+    - V OL
+    found_in: 3/3
+  operation_temperature_range:
+    label: Operation temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Operation temperature range
+    - Top
+    found_in: 3/3
+  output_data_rate:
+    label: Output data rate
+    unit: Hz
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Output data rate
+    - ODR
+    found_in: 3/3
+  power_supply_rejection_rate:
+    label: Power supply rejection rate
+    unit: mg/V
+    stat: max
+    conditions: Top=25°C
+    rule: '>='
+    critical: false
+    aliases:
+    - Power Supply Rejection Rate
+    - PSRR
+    found_in: 3/3
+  rohs:
+    label: RoHS
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - RoHS
+    - Environmental Qualification
+    found_in: 3/3
+  sensitivity:
+    label: Sensitivity
+    unit: LSB/g
+    stat: value
+    conditions: FS bit set to 00
+    rule: '='
+    critical: false
+    aliases:
+    - Sensitivity
+    - So
+    found_in: 3/3
+  sensitivity_change_vs_temperature:
+    label: Sensitivity change vs. temperature
+    unit: '%/°C'
+    stat: range
+    conditions: FS bit set to 00
+    rule: '='
+    critical: false
+    aliases:
+    - Sensitivity change vs. temperature
+    - TCSo
+    found_in: 3/3
+  start_up_time:
+    label: Start-up time
+    unit: ms
+    stat: value
+    conditions: From power off
+    rule: <=
+    critical: false
+    aliases:
+    - Start-up time
+    - TSU
+    found_in: 3/3
+  system_bandwidth:
+    label: System bandwidth
+    unit: Hz
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - System bandwidth
+    - BW
+    found_in: 3/3
+  wake_up_time:
+    label: Wake-up time
+    unit: ms
+    stat: value
+    conditions: From stand-by
+    rule: <=
+    critical: false
+    aliases:
+    - Wake-up time
+    - TWU
+    found_in: 3/3
+  zero_g_level_change_vs_temperature:
+    label: Zero-g level change vs. temperature
+    unit: mg/°C
+    stat: range
+    conditions: Max delta from 25°C
+    rule: '='
+    critical: false
+    aliases:
+    - Zero-g level change vs. temperature
+    - Tcoff
+    found_in: 3/3
+  zero_g_offset_accuracy:
+    label: Zero-g level offset accuracy
+    unit: mg
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Typical zero-g level offset accuracy
+    - Tyoff
+    found_in: 3/3
+  esd_rating:
+    label: ESD rating
+    unit: kV
+    stat: max
+    conditions: HMB, R=1.5k, C=100pF
+    rule: '>='
+    critical: false
+    aliases:
+    - ESD Rating
+    found_in: 2/3
+  mechanical_shock:
+    label: Mechanical shock
+    unit: g
+    stat: max
+    conditions: Duration<200us
+    rule: '>='
+    critical: false
+    aliases:
+    - Mechanical Shock
+    found_in: 2/3
+  operating_temperature_range:
+    label: Operating temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Operating temperature range
+    found_in: 2/3
+  self_test_output_change:
+    label: Self-test output change
+    unit: mg
+    stat: value
+    conditions: 'X: FS bit set to 00'
+    rule: '='
+    critical: false
+    aliases:
+    - Self-test Output Change
+    - Vst
+    found_in: 2/3
+  storage_temperature:
+    label: Storage temperature
+    unit: °C
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 2/3
+rare_specs:
+  mounting_type:
+    label: Mounting type
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Mounting Type
+    found_in: 1/3
+  package_size:
+    label: Package size
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Package Size
+    found_in: 1/3

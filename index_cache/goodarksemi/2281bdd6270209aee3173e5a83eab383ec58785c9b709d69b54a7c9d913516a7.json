@@ -19,5 +19,199 @@
   "tokens_in": 1490,
   "tokens_out": 50
  },
- "type": "ultrafast_rectifier"
+ "type": "ultrafast_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:59:59+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "600"
+   },
+   {
+    "name": "Working Peak Reverse Voltage",
+    "symbol": "VRMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "420"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "600"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current at Tc=105°C total device per diode",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "Tc=105°C",
+    "example": "10"
+   },
+   {
+    "name": "Peak Forward Surge Current (8.3ms single half sine-wave superimposed on rated lo",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Voltage Rate of Change(rated VR)",
+    "symbol": "DV/dt",
+    "unit": "V/us",
+    "stat": "max",
+    "conditions": "",
+    "example": "10000"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to+150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to+150"
+   },
+   {
+    "name": "Maximum Reverse Recover Time (I =0.5Amp, I =1.0Amp, I =0.25A) F R RR",
+    "symbol": "Trr",
+    "unit": "ns",
+    "stat": "max",
+    "conditions": "I_F=0.5A, I_R=1.0A, I_RR=0.25A",
+    "example": "25"
+   },
+   {
+    "name": "Forward Drop Voltage (I =10A, T=25°C)1 F J",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I_F=10A, T_J=25°C",
+    "example": "2.20"
+   },
+   {
+    "name": "Forward Drop Voltage (I =10A, T=125°C)1 F J",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I_F=10A, T_J=125°C",
+    "example": "2.10"
+   },
+   {
+    "name": "Reverse Leakage Current @V (T=25°C)2 R J",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "V_R=0V, T_J=25°C",
+    "example": "10"
+   },
+   {
+    "name": "Reverse Leakage Current @V (T=125°C)2 R J",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "V_R=0V, T_J=125°C",
+    "example": "500"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case per Leg",
+    "symbol": "RθJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "TO-220-AC",
+    "example": "2.0"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case per Leg",
+    "symbol": "RθJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "ITO-220-AC",
+    "example": "4.0"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Ambient per Leg",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "TO-220-AC",
+    "example": "62.5"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Ambient per Leg",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "ITO-220-AC",
+    "example": "62.5"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Epoxy, Molded"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "grams",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.9"
+   },
+   {
+    "name": "Lead Temperature for Soldering Purposes",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220-AC"
+   },
+   {
+    "name": "Flammability Classification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "94V-0"
+   },
+   {
+    "name": "Halogen-free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 61249-2-21"
+   }
+  ],
+  "seconds": 51.76,
+  "tokens_in": 2543,
+  "tokens_out": 1240
+ }
 }

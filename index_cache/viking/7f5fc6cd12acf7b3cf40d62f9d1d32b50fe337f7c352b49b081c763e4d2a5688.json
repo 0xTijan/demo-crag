@@ -21,5 +21,159 @@
   "tokens_in": 1816,
   "tokens_out": 57
  },
- "type": "multilayer_chip_inductor"
+ "type": "multilayer_chip_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:26:45+00:00",
+  "items": [
+   {
+    "name": "Inductance",
+    "symbol": "",
+    "unit": "nH",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.6 to 120"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.1nH, ±0.2nH, ±0.3nH"
+   },
+   {
+    "name": "Quality Factor /min.",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Test Freq. (MHz)",
+    "symbol": "",
+    "unit": "MHz",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Test Voltage (mV)",
+    "symbol": "",
+    "unit": "mV",
+    "stat": "value",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "SRF (GHz) Min.",
+    "symbol": "SRF",
+    "unit": "GHz",
+    "stat": "min",
+    "conditions": "",
+    "example": "0.25"
+   },
+   {
+    "name": "RDC (Ω) Max.",
+    "symbol": "RDC",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.05"
+   },
+   {
+    "name": "IDC (mA) Max.",
+    "symbol": "IDC",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "1000"
+   },
+   {
+    "name": "Size (Inch)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0201"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CL01-S"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 125"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "< 80%RH"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "02, J, T, 1N0"
+   },
+   {
+    "name": "Inductance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "B: ±0.1nH C: ±0.2nH S: ±0.3nH G: ±2% H: "
+   },
+   {
+    "name": "Packaging Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Type A, Type B"
+   },
+   {
+    "name": "Reel Dimension",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "178±1"
+   },
+   {
+    "name": "Tape Specifications",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "A: 178±1, B: 60"
+   }
+  ],
+  "seconds": 101.84,
+  "tokens_in": 15603,
+  "tokens_out": 941
+ }
 }

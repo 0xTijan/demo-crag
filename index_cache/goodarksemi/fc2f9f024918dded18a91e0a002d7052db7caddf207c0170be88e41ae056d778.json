@@ -18,5 +18,343 @@
   "tokens_in": 2379,
   "tokens_out": 44
  },
- "type": "complementary_npn_pnp_transistor"
+ "type": "complementary_npn_pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:07:15+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "45"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Collector Current-Continuous",
+    "symbol": "I C",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.1"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "P C",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IC=10μA, IE=0",
+    "example": "50"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IC=10mA, IB=0",
+    "example": "45"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IE=1μA, IC=0",
+    "example": "6"
+   },
+   {
+    "name": "Collector Cut-Off Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =30V, IE=0 CB",
+    "example": "15"
+   },
+   {
+    "name": "Emitter Cut-Off Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VEB=5V, IC=0",
+    "example": "15"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "VCE=5V, IC=2mA",
+    "example": "200 to 450"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=10mA, IB=0.5mA",
+    "example": "0.25"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=100mA, IB=5mA",
+    "example": "0.6"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=10mA, IB=0.5mA",
+    "example": "0.7"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=100mA, IB=5mA",
+    "example": "0.9"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(on)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VCE=5V, IC=2mA",
+    "example": "0.58 to 0.7"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(on)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "VCE=5V, IC=10mA",
+    "example": "0.72"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VCB=10V, IE=0, f=1MHz",
+    "example": "6.0"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "VCE=5V, IC=10mA, f=100MHz",
+    "example": "100"
+   },
+   {
+    "name": "Noise Figure",
+    "symbol": "NF",
+    "unit": "dB",
+    "stat": "max",
+    "conditions": "V.. (cid:32)(cid:24)(cid:57)(cid:15) (cid:44) (cid:32)0.(cid:21)(cid:80)(cid:36)(cid:15)(cid:3) C (cid:53) (cid:32)(cid:",
+    "example": "10"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IC=-10μA, IE=0",
+    "example": "-50"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IC=-10mA, IB=0",
+    "example": "-45"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IE=-1μA, IC=0",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Cut-Off Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-30V, IE=0 CB",
+    "example": "-15"
+   },
+   {
+    "name": "Emitter Cut-Off Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VEB=-5V, IC=0",
+    "example": "-15"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "VCE=-5V, IC=-2mA",
+    "example": "220 to 475"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=-10mA, IB=-0.5mA",
+    "example": "-0.3"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=-100mA, IB=-5mA",
+    "example": "-0.65"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=-10mA, IB=-0.5mA",
+    "example": "-0.7"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=-100mA, IB=-5mA",
+    "example": "-0.95"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(on)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VCE=-5V, IC=-2mA",
+    "example": "-0.6 to -0.75"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE(on)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "VCE=-5V, IC=-10mA",
+    "example": "-0.82"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VCB=-10V, IE=0, f=1MHz",
+    "example": "4.5"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "VCE=-5V, IC=-10mA, f=100MHz",
+    "example": "100"
+   },
+   {
+    "name": "Noise Figure",
+    "symbol": "NF",
+    "unit": "dB",
+    "stat": "max",
+    "conditions": "V(cid:38)(cid:40)(cid:32)-(cid:24)(cid:57)(cid:15) (cid:44) (cid:32)-0.(cid:21)(cid:80)(cid:36)(cid:15)(cid:3) C (cid:73",
+    "example": "10"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-363"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DV4"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "pcs",
+    "stat": "value",
+    "conditions": "",
+    "example": "3,000"
+   },
+   {
+    "name": "HSF Status",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS Compliant"
+   }
+  ],
+  "seconds": 106.29,
+  "tokens_in": 3098,
+  "tokens_out": 2654
+ }
 }

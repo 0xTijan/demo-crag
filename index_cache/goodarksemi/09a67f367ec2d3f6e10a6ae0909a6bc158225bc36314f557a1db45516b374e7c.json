@@ -20,5 +20,199 @@
   "tokens_in": 1682,
   "tokens_out": 52
  },
- "type": "pnp_transistor"
+ "type": "pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:32:01+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-45"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-45"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Current-Continuous",
+    "symbol": "I C",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "-1"
+   },
+   {
+    "name": "Peak Pulse Collector Current",
+    "symbol": "I CM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "-2"
+   },
+   {
+    "name": "Base Current-Continuous",
+    "symbol": "I B",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "-100"
+   },
+   {
+    "name": "Peak Pulse Base Current",
+    "symbol": "I BM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "-200"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "P C",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.5"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient",
+    "symbol": "R θJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with 1-inch square copper plate in still air.",
+    "example": "83.3"
+   },
+   {
+    "name": "Operation Junction and Storage Temperature Range",
+    "symbol": "T, T J stg",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-0.1mA, I =0 C E",
+    "example": "-45"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10mA, I =0 C B",
+    "example": "-45"
+   },
+   {
+    "name": "Base-Emitter Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10μA, I =0 E C",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Cut-Off Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-30V, I =0 CB E",
+    "example": "-100"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE(1)",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =-2V, I =-5mA CE C",
+    "example": "25"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE(2)",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =-2V, I =-150mA CE C",
+    "example": "63"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE(2)",
+    "unit": "-",
+    "stat": "max",
+    "conditions": "V =-2V, I =-150mA CE C",
+    "example": "250"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE(3)",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =-2V, I =-500mA CE C",
+    "example": "25"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-500mA, I =-50mA C B",
+    "example": "-0.5"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BE",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "V =-2V, I =-500mA CE C",
+    "example": "-1"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =-10V, I =-50mA, f=100MHz CE C",
+    "example": "100"
+   },
+   {
+    "name": "Classification of hFE(2)",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "GSBCP51-10, GSBCP52-10, GSBCP53-10",
+    "example": "63-160"
+   },
+   {
+    "name": "Classification of hFE(2)",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "GSBCP51-16, GSBCP52-16, GSBCP53-16",
+    "example": "100-250"
+   }
+  ],
+  "seconds": 70.36,
+  "tokens_in": 1597,
+  "tokens_out": 1592
+ }
 }

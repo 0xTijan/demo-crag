@@ -22,5 +22,239 @@
   "tokens_in": 1571,
   "tokens_out": 70
  },
- "type": "common_mode_filter"
+ "type": "common_mode_filter",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:44:52+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to 85"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "<40"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "value",
+    "conditions": "",
+    "example": "70"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CMX04B"
+   },
+   {
+    "name": "Impedance",
+    "symbol": "Z",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "Test Condition (MHz)",
+    "example": "67"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "±25"
+   },
+   {
+    "name": "Test Condition",
+    "symbol": "",
+    "unit": "MHz",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.50"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "I",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "Vdc",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Withstanding Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "25"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "IR",
+    "unit": "MΩ",
+    "stat": "min",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "LxW",
+    "example": "0504"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Dimensions",
+    "example": "1.25"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Dimensions",
+    "example": "1.00"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Dimensions",
+    "example": "0.60"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Dimensions",
+    "example": "0.50"
+   },
+   {
+    "name": "C1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Dimensions",
+    "example": "0.30"
+   },
+   {
+    "name": "C2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Dimensions",
+    "example": "0.20"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T"
+   },
+   {
+    "name": "Impedance Value",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "670"
+   },
+   {
+    "name": "Temperature Cycle",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: -40~85℃ Cycle: 1000cycles Dwell time: 30min",
+    "example": "No mechanical damage Impedance value sho"
+   },
+   {
+    "name": "Operational Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: 85±5℃ Time: 1000hrs Apply current: full rated current",
+    "example": "No mechanical damage Impedance value sho"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: 40±5℃ Humidity: 90~95% RH Time: 1000hrs Apply current: full rated current",
+    "example": "No mechanical damage Impedance value sho"
+   },
+   {
+    "name": "Resistance to Solder Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Solder temperature: 260±5℃ Flux: rosin Dip time: 10±1 sec",
+    "example": "More than 95% of terminal electrode Shou"
+   },
+   {
+    "name": "Steam Aging Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: 93±2℃ Test time: 8hrs(04B/05B/06B), 4hrs(04G/05G) Solder temperature: 235±5℃ Flux: rosin Dip time: 5±1 sec",
+    "example": "More than 95% of terminal electrode Shou"
+   }
+  ],
+  "seconds": 23.69,
+  "tokens_in": 4523,
+  "tokens_out": 1277
+ }
 }

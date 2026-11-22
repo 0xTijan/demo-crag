@@ -22,5 +22,199 @@
   "tokens_in": 1811,
   "tokens_out": 107
  },
- "type": "schottky_rectifier"
+ "type": "schottky_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:48:40+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "25"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current (See Fig.1)",
+    "symbol": "I (AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "Per Leg",
+    "example": "20.0"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current (See Fig.1)",
+    "symbol": "I (AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "Total Device",
+    "example": "40.0"
+   },
+   {
+    "name": "Peak Forward Surge Current 8.3ms Single Half Sine-Wave Superimposed on Rated Loa",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "300.0"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage at 20.0A Per Leg",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.60"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "T =25°C",
+    "example": "200"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I R",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "T =100°C",
+    "example": "5"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I R",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "T =125°C",
+    "example": "5"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction to Case",
+    "symbol": "R θJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "2.5"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "JEDEC TO-263 molded plastic body"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Solderable per MIL-STD-202, method 208"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "As marked"
+   },
+   {
+    "name": "Mounting position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "Flammability Classification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "94V-0"
+   },
+   {
+    "name": "RoHS Compliance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS 2011/65/EU"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-263"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SR4035D1"
+   },
+   {
+    "name": "Carrier",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape & Reel"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "800 Pcs / Reel"
+   }
+  ],
+  "seconds": 49.11,
+  "tokens_in": 2769,
+  "tokens_out": 1009
+ }
 }

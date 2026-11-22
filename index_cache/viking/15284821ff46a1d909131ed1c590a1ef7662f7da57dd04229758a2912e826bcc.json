@@ -18,5 +18,359 @@
   "tokens_in": 1454,
   "tokens_out": 40
  },
- "type": "current_sensing_chip_resistor"
+ "type": "current_sensing_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:15:00+00:00",
+  "items": [
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Low Ohm (Metal Strip) Chip Resistor – LR"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2512"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "R",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.5-0.75"
+   },
+   {
+    "name": "L",
+    "symbol": "L",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.40±0.30"
+   },
+   {
+    "name": "W",
+    "symbol": "W",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.20±0.30"
+   },
+   {
+    "name": "T",
+    "symbol": "T",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.05±0.20"
+   },
+   {
+    "name": "A",
+    "symbol": "A",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.90±0.25"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "P",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "",
+    "example": "2W"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "T",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +170"
+   },
+   {
+    "name": "TCR",
+    "symbol": "TCR",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "±50"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "Tol",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "±1"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "Pack",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "TCR",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "±150"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "R",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.5, 0.75"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Laser marking"
+   },
+   {
+    "name": "Soldering Parameters",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Wave Solder Temperature Condition: Prehe"
+   },
+   {
+    "name": "Solder Reflow Temperature Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Through Reflow,3times, 260±5°C for 20±1 "
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.5mΩ)"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(2.0%+0.5mΩ)"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(2.0%+0.5mΩ)"
+   },
+   {
+    "name": "High Temperature Exposure",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.5mΩ)"
+   },
+   {
+    "name": "Bending Strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.5mΩ)"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "95% min. coverage"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.5mΩ)"
+   },
+   {
+    "name": "Thermal Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.5mΩ)"
+   },
+   {
+    "name": "Low Temperature Storage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.5mΩ)"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.5mΩ)"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3K"
+   },
+   {
+    "name": "Tape Width",
+    "symbol": "W",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "12mm"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "D",
+    "unit": "inch",
+    "stat": "value",
+    "conditions": "",
+    "example": "7 inch"
+   },
+   {
+    "name": "ΦA",
+    "symbol": "ΦA",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "178.0±5.0"
+   },
+   {
+    "name": "ΦB",
+    "symbol": "ΦB",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "60±2.0"
+   },
+   {
+    "name": "ΦC",
+    "symbol": "ΦC",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "13.0±0.5"
+   },
+   {
+    "name": "B",
+    "symbol": "B",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.75±0.20"
+   },
+   {
+    "name": "E",
+    "symbol": "E",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.75±0.10"
+   },
+   {
+    "name": "F",
+    "symbol": "F",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "5.5±0.05"
+   },
+   {
+    "name": "P0",
+    "symbol": "P0",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P1",
+    "symbol": "P1",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P2",
+    "symbol": "P2",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.00±0.10"
+   },
+   {
+    "name": "ΦD0",
+    "symbol": "ΦD0",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.55±0.10"
+   },
+   {
+    "name": "Land Pattern P",
+    "symbol": "P",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.50"
+   },
+   {
+    "name": "Land Pattern W",
+    "symbol": "W",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.57"
+   },
+   {
+    "name": "Land Pattern D",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.95"
+   }
+  ],
+  "seconds": 43.08,
+  "tokens_in": 4201,
+  "tokens_out": 2695
+ }
 }

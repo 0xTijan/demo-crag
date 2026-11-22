@@ -22,5 +22,207 @@
   "tokens_in": 1678,
   "tokens_out": 73
  },
- "type": "bridge_rectifier"
+ "type": "bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:24:56+00:00",
+  "items": [
+   {
+    "name": "Reverse Voltage 100~1000V Output Current 4.0A",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Reverse Voltage 100~1000V Output Current"
+   },
+   {
+    "name": "Glass passivated Bridge Rectifiers",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Glass passivated Bridge Rectifiers"
+   },
+   {
+    "name": "Ideal for PCB",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ideal for PCB"
+   },
+   {
+    "name": "High surge current capability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "High surge current capability"
+   },
+   {
+    "name": "Moisture sensitivity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "level 1, per J-STD-020"
+   },
+   {
+    "name": "High temperature soldering guaranteed",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "260°C/10 seconds"
+   },
+   {
+    "name": "Halogen-free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "according to IEC 61249-2-21 definition"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "KBF, Molding compound meets UL 94V-0 fla"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Matte tin plated leads, solderable per M"
+   },
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "V_RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Maximum RMS voltage",
+    "symbol": "V_RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "70"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "V_DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Maximum average output rectified current",
+    "symbol": "I_1F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "4.0"
+   },
+   {
+    "name": "Maximum average output rectified current",
+    "symbol": "I_2F(AV)",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "2.0"
+   },
+   {
+    "name": "Peak forward surge current 8.3 ms single half sine-wave superimposed on rated lo",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "130"
+   },
+   {
+    "name": "Rating for fusing (t≤8.3ms)",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "max",
+    "conditions": "",
+    "example": "70"
+   },
+   {
+    "name": "Operating junction and storage temperature range",
+    "symbol": "T_J, T_STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Typical junction capacitance",
+    "symbol": "C_J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "4.0V, 1 MHz",
+    "example": "34"
+   },
+   {
+    "name": "Maximum instantaneous forward voltage",
+    "symbol": "V_F",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "I_F=2A",
+    "example": "1.0"
+   },
+   {
+    "name": "Maximum instantaneous forward voltage",
+    "symbol": "V_F",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "I_F=4A",
+    "example": "1.1"
+   },
+   {
+    "name": "Maximum DC reverse current at rated DC blocking voltage",
+    "symbol": "I_R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "5.0"
+   },
+   {
+    "name": "Maximum DC reverse current at rated DC blocking voltage",
+    "symbol": "I_R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "TA=125°C",
+    "example": "200"
+   },
+   {
+    "name": "Typical thermal resistance",
+    "symbol": "R_θJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "junction to ambient",
+    "example": "30"
+   },
+   {
+    "name": "Typical thermal resistance",
+    "symbol": "R_θJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "junction to case",
+    "example": "8"
+   }
+  ],
+  "seconds": 50.92,
+  "tokens_in": 1737,
+  "tokens_out": 1173
+ }
 }

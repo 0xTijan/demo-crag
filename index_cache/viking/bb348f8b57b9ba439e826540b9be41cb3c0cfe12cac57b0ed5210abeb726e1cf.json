@@ -18,5 +18,239 @@
   "tokens_in": 1349,
   "tokens_out": 46
  },
- "type": "multilayer_ceramic_capacitor"
+ "type": "multilayer_ceramic_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:19:48+00:00",
+  "items": [
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MC : General; Ultra-small Middle and Hig"
+   },
+   {
+    "name": "Dimensions (L×W)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "10: 1210"
+   },
+   {
+    "name": "Capacitance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "K: ±10%"
+   },
+   {
+    "name": "Packaging",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Taping Reel"
+   },
+   {
+    "name": "Dielectric",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "BS: X7S"
+   },
+   {
+    "name": "Voltage (VDCW)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "101: 100V"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "106: 10uF"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1210"
+   },
+   {
+    "name": "Rated voltage (DC)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100V"
+   },
+   {
+    "name": "Operating temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125°C"
+   },
+   {
+    "name": "Capacitance characteristic",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-22 to 22%"
+   },
+   {
+    "name": "Mounting Method",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Reflow"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Shown in Rated value"
+   },
+   {
+    "name": "Appearance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No defects or abnormalities"
+   },
+   {
+    "name": "Dimension",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Shown in Dimension"
+   },
+   {
+    "name": "Voltage proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No defects or abnormalities"
+   },
+   {
+    "name": "Insulation Resistance(I.R.) (Room Temperature)",
+    "symbol": "",
+    "unit": "Ω·F",
+    "stat": "min",
+    "conditions": "Measurement Temperature Room Temperature Test Voltage 250% of the rated voltage Applied Time 1s to 5s Charge/discharge c",
+    "example": "50"
+   },
+   {
+    "name": "Capacitance(Cap.)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Measurement Temperature Room Temperature Measurement Frequency 1.0+/-0.1kHz Measurement Voltage 1.0+/-0.2Vrms",
+    "example": "Shown in Rated value"
+   },
+   {
+    "name": "Q or Dissipation Factor (D.F.)",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "Measurement Temperature Room Temperature Measurement Frequency 1.0+/-0.1kHz Measurement Voltage 1.0+/-0.2Vrms",
+    "example": "0.1"
+   },
+   {
+    "name": "Temperature Characteristics of Capacitance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "No bias Shown in Rated value.",
+    "example": "Shown in Rated value"
+   },
+   {
+    "name": "Adhesive Strength of Termination",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No removal of the terminations or other "
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No defects or abnormalities."
+   },
+   {
+    "name": "Substrate Bending test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No defects or abnormalities."
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "95% of the terminations is to be soldere"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No defects or abnormalities."
+   },
+   {
+    "name": "High Temperature High Humidity (Steady)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No defects or abnormalities."
+   },
+   {
+    "name": "Temperature Sudden Change",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No defects or abnormalities."
+   },
+   {
+    "name": "Durability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No defects or abnormalities."
+   }
+  ],
+  "seconds": 55.2,
+  "tokens_in": 3551,
+  "tokens_out": 1469
+ }
 }

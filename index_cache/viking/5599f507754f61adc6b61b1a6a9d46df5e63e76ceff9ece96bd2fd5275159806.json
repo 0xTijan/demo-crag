@@ -19,5 +19,367 @@
   "tokens_in": 1471,
   "tokens_out": 45
  },
- "type": "thick_film_array_chip_resistor"
+ "type": "thick_film_array_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:55:11+00:00",
+  "items": [
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Automotive Grade Anti-Sulfurated Thick F"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402x4"
+   },
+   {
+    "name": "AEC-Q200 Qualified",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q200"
+   },
+   {
+    "name": "MSL",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Level 1"
+   },
+   {
+    "name": "Construction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Special construction to prevent sulfurat"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "High-end Computer"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402x4"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1%"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: 7\"Taping Reel"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±200"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1/16W"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0Ω"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1020"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "-55 ~ +155°C"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "50V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100V"
+   },
+   {
+    "name": "Number of Resistors",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "4"
+   },
+   {
+    "name": "Resistance Range (±1%)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range (±5%)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1Ω - 10MΩ"
+   },
+   {
+    "name": "Resistance Range (Jumper)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "<50mΩ"
+   },
+   {
+    "name": "Temperature Coefficient of Resistance (T.C.R.)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "As Spec."
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RCWV*2.5 or Max. Overload Voltage whiche"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "≥10G"
+   },
+   {
+    "name": "Operational Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(2.0%+0.10Ω) for ±1%"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(2.0%+0.10Ω) for ±1%"
+   },
+   {
+    "name": "High Temperature Exposure",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω) for ±1%"
+   },
+   {
+    "name": "Board Flex",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω) for ±1%"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "95% min. coverage"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No breakdown or flashover"
+   },
+   {
+    "name": "Leaching",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Individual leaching area ≦5% Total leach"
+   },
+   {
+    "name": "Temperature Cycling",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω) for ±1%"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.25%+0.05Ω) for ±1%"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω) for ±1%"
+   },
+   {
+    "name": "ESD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5KV for ASF42"
+   },
+   {
+    "name": "Resistance to Solvents",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No visible damage on appearance and mark"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No broken"
+   },
+   {
+    "name": "Flammability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL-94 V-0 or V-1"
+   },
+   {
+    "name": "Sulfur Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "EIA-977 (Condition B) 105±2°C, no power "
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "15~28°C"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2 years from production date"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "7 inch"
+   },
+   {
+    "name": "Tape Width",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "8mm"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "5K"
+   }
+  ],
+  "seconds": 99.21,
+  "tokens_in": 5002,
+  "tokens_out": 2702
+ }
 }

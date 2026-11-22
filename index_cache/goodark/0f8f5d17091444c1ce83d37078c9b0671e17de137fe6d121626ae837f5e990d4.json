@@ -22,5 +22,135 @@
   "tokens_in": 3292,
   "tokens_out": 82
  },
- "type": "zener_diode"
+ "type": "zener_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:26:24+00:00",
+  "items": [
+   {
+    "name": "Zener voltage",
+    "symbol": "VZ",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "8.65 to 9.56"
+   },
+   {
+    "name": "Power dissipation at TL=75℃",
+    "symbol": "Ptot",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Maximum instantaneous forward voltage at 200mA",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.2"
+   },
+   {
+    "name": "Typical Thermal Resistance , Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "85"
+   },
+   {
+    "name": "Typical Thermal Resistance , Junction to Case",
+    "symbol": "RθJC",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "15"
+   },
+   {
+    "name": "Typical Thermal Resistance , Junction to Lead",
+    "symbol": "RθJL",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "18"
+   },
+   {
+    "name": "Operating junction and storage temperature range",
+    "symbol": "TJ, TSTG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "VZ at IZT (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "IZT",
+    "example": "8.65 to 9.56"
+   },
+   {
+    "name": "IZT (mA)",
+    "symbol": "IZT",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "82.4"
+   },
+   {
+    "name": "Maximum zener impedance",
+    "symbol": "ZZT",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "IZT",
+    "example": "4"
+   },
+   {
+    "name": "Maximum zener impedance",
+    "symbol": "ZZK",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "IZK",
+    "example": "500"
+   },
+   {
+    "name": "IZK (mA)",
+    "symbol": "IZK",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Maximum reverse leakage at VR",
+    "symbol": "",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "VR",
+    "example": "5"
+   },
+   {
+    "name": "Test voltage VR",
+    "symbol": "VR",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "7.0"
+   },
+   {
+    "name": "Maximum Zener Current",
+    "symbol": "IZM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "308"
+   }
+  ],
+  "seconds": 31.34,
+  "tokens_in": 3351,
+  "tokens_out": 662
+ }
 }

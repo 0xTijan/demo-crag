@@ -22,5 +22,111 @@
   "tokens_in": 2965,
   "tokens_out": 82
  },
- "type": "zener_diode"
+ "type": "zener_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:26:33+00:00",
+  "items": [
+   {
+    "name": "Power Dissipation",
+    "symbol": "P D",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "T A =25°C",
+    "example": "350"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "T A =25°C",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Maximum Regulator Current",
+    "symbol": "I ZM",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "P /V D Z"
+   },
+   {
+    "name": "Vz",
+    "symbol": "V",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "I ZT = 20 mA",
+    "example": "2.4"
+   },
+   {
+    "name": "Vz",
+    "symbol": "V",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I ZT = 20 mA",
+    "example": "2.35"
+   },
+   {
+    "name": "Vz",
+    "symbol": "V",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I ZT = 20 mA",
+    "example": "2.45"
+   },
+   {
+    "name": "Zzt",
+    "symbol": "Z",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "I ZT = 20 mA",
+    "example": "30"
+   },
+   {
+    "name": "Zzk",
+    "symbol": "Z",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "I ZK = 0.25 mA",
+    "example": "1200"
+   },
+   {
+    "name": "Izk",
+    "symbol": "I zk",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.25"
+   },
+   {
+    "name": "I R",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "V R",
+    "symbol": "V R",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.0"
+   }
+  ],
+  "seconds": 39.94,
+  "tokens_in": 3024,
+  "tokens_out": 530
+ }
 }

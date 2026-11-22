@@ -22,5 +22,119 @@
   "tokens_in": 2651,
   "tokens_out": 77
  },
- "type": "tvs_diode"
+ "type": "tvs_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:21:10+00:00",
+  "items": [
+   {
+    "name": "Peak Power Dissipation with a 10/1000μs Waveform",
+    "symbol": "P_PPM",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Peak Pulse Current with a 10/1000μs Waveform",
+    "symbol": "I_PPM",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "Next Page"
+   },
+   {
+    "name": "Power Dissipation, on Infinite Heat Sink, T =75°C L",
+    "symbol": "P_D",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.4"
+   },
+   {
+    "name": "Maximum Thermal Resistance, Junction to Ambient",
+    "symbol": "R_θJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Maximum Thermal Resistance, Junction to Lead",
+    "symbol": "R_θJL",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "26"
+   },
+   {
+    "name": "Operating Junction and Storage Temperature Range",
+    "symbol": "T_J, STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Breakdown Voltage V @I_BR",
+    "symbol": "V",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I_1T=10mA",
+    "example": "6.40 to 7.07"
+   },
+   {
+    "name": "Breakdown Voltage V @I_BR",
+    "symbol": "V",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I_1T=1mA",
+    "example": "6.67 to 7.37"
+   },
+   {
+    "name": "Test Current",
+    "symbol": "I_1T",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Reverse Standoff Voltage",
+    "symbol": "V_RWM",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "5.0"
+   },
+   {
+    "name": "Max. Reverse Leakage @V_RWM",
+    "symbol": "I_2R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "V_RWM",
+    "example": "400"
+   },
+   {
+    "name": "Max. Peak Pulse Current",
+    "symbol": "I_3PP",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "21.74"
+   },
+   {
+    "name": "Max. Clamping Voltage @I_PP",
+    "symbol": "V_C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "9.2"
+   }
+  ],
+  "seconds": 48.67,
+  "tokens_in": 3823,
+  "tokens_out": 644
+ }
 }

@@ -18,5 +18,127 @@
   "tokens_in": 1258,
   "tokens_out": 49
  },
- "type": "esd_tvs_array"
+ "type": "esd_tvs_array",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:35:55+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power",
+    "symbol": "P_PP",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TP=8/20μS",
+    "example": "80"
+   },
+   {
+    "name": "Peak Pulse Current",
+    "symbol": "I_PP",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "tP = 8/20μS",
+    "example": "10"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T_J",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Storage temperature",
+    "symbol": "T_STG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Reverse stand-off Voltage",
+    "symbol": "V_RWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "3.3"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "V_BR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I =10uA",
+    "example": "5 to 15"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I_R",
+    "unit": "μA",
+    "stat": "range",
+    "conditions": "V =3.3V",
+    "example": "0.01 to 0.1"
+   },
+   {
+    "name": "Trigger Voltage",
+    "symbol": "V_T",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I_PP =10A, tP =8/20μS",
+    "example": "9.5"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V_C",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I_PP =10A, tP =8/20μS",
+    "example": "8.0"
+   },
+   {
+    "name": "Dynamic Resistance",
+    "symbol": "R_dyn",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "I =0~30A, tP =TLP",
+    "example": "0.25"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "C_J",
+    "unit": "pF",
+    "stat": "range",
+    "conditions": "V_R =0V, f=1MHz, I/O to GND",
+    "example": "0.4 to 0.50"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DFN1610-6L"
+   },
+   {
+    "name": "ESD Protection",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 61000-4-2 ±16KV contact ±20KV air"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "compliant"
+   }
+  ],
+  "seconds": 69.2,
+  "tokens_in": 1148,
+  "tokens_out": 800
+ }
 }

@@ -19,5 +19,14 @@
   "tokens_in": 1410,
   "tokens_out": 47
  },
- "type": "leaded_film_resistor"
+ "type": "leaded_film_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:17:37+00:00",
+  "items": [],
+  "seconds": 298.44,
+  "tokens_in": 14898,
+  "tokens_out": 8260
+ }
 }

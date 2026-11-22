@@ -1,0 +1,654 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: ptc_thermistor
+name: ceramic PTC thermistor
+version: 1
+status: draft
+must_match:
+- package
+- lead_material
+- coating_material
+- solder_heat_withstand
+- lead_solderability
+- flammability_rating
+- storage_humidity
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T15:02:17+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - goodarksemi/scc100d-msx_20922c19.md
+  - goodarksemi/scc250d_32d8e409.md
+  - goodarksemi/scc500d_6fc14a5f.md
+  - goodarksemi/sct250d_3da23c64.md
+  - goodarksemi/sct500d_c61a815f.md
+  - goodarksemi/sct500h_56d1302d.md
+specs:
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    - Tape reel quantity per reel
+    found_in: 6/6
+  v_max_rms:
+    label: Max voltage (RMS)
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum voltage (RMS)
+    found_in: 6/6
+  coating_material:
+    label: Coating material
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Coating material
+    - Case material
+    found_in: 6/6
+  flammability_rating:
+    label: Flammability rating
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Flammability rating
+    found_in: 6/6
+  lead_material:
+    label: Lead material
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Lead material
+    found_in: 6/6
+  lead_solderability:
+    label: Lead solderability
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Lead solderability
+    found_in: 6/6
+  r_25c_range:
+    label: Rated zero power resistance (25°C) range
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Rated zero power resistance (25℃)
+    found_in: 6/6
+  solder_heat_withstand:
+    label: Solder heat withstand
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Solder heat withstand
+    found_in: 6/6
+  storage_humidity:
+    label: Storage humidity
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Storage humidity
+    found_in: 6/6
+  temp_range_v_0:
+    label: Temp range (V=0)
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating temperature range (V=0)
+    - Operating temperature range (V=0) (V=Vmax)
+    - Operating temperature range V=0
+    found_in: 6/6
+  temp_range_v_vmax:
+    label: Temp range (V=Vmax)
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Temperature range (V=Vmax)
+    - Operating temperature range
+    - Operating temperature range V=VmaX
+    found_in: 6/6
+  weight:
+    label: Weight
+    unit: g
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Weight
+    found_in: 6/6
+  a:
+    label: A
+    unit: mm
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - A
+    - Tape width
+    - W
+    found_in: 5/6
+  b:
+    label: B
+    unit: mm
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - B
+    - Tape pitch
+    - AO
+    found_in: 5/6
+  bag_qty:
+    label: Bag QTY
+    unit: PCS
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Bag QTY
+    - Reel QTY
+    found_in: 5/6
+  box_outline:
+    label: Box Outline
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Box Outline
+    found_in: 5/6
+  box_qty:
+    label: Box QTY
+    unit: PCS
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Box QTY
+    found_in: 5/6
+  component_weight:
+    label: Component Weight
+    unit: g
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Component Weight
+    found_in: 5/6
+  gross_weight_per_box:
+    label: Gross Weight/Per Box
+    unit: Kg
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Gross Weight/Per Box
+    found_in: 5/6
+  hold_current_40c:
+    label: Hold current at 40±2°C
+    unit: mA
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Hold current at 40±2℃
+    - 1A→0.5A
+    - Hold current at 25±2℃ 40±2℃ 60±2℃
+    found_in: 5/6
+  net_weight_per_box:
+    label: Net Weight Per Box
+    unit: Kg
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Net Weight Per Box
+    found_in: 5/6
+  r_25c_typ:
+    label: Resistance (25°C) typ
+    unit: Ω
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Resistance(25℃)
+    - Resistance
+    found_in: 5/6
+  shock_test:
+    label: Shock
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Shock
+    - Thermal shock
+    found_in: 5/6
+  solderability_test:
+    label: Solderability
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Solderability
+    - Dry Hot
+    found_in: 5/6
+  soldering_heat_test:
+    label: Soldering heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Soldering heat
+    - Dry Cold
+    found_in: 5/6
+  trip_time_3a_0_5a:
+    label: Trip time 3A→0.5A
+    unit: s
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Trip time 3A→0.5A
+    - Trip time 3A→1.50A
+    - Trip time 2.5A→0.5A 1A→0.5A 0.75A→0.15A
+    found_in: 5/6
+  vibration_test:
+    label: Vibration
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Vibration
+    - Humidity aging
+    found_in: 5/6
+  i_max:
+    label: Max current
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum current
+    - Max Current
+    - ISmax :Overcurrent withstanding（@25°C，450Vac）
+    found_in: 4/6
+  damp_heat_test:
+    label: Damp heat, steady state
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Damp heat,steady state
+    - Solvent resistance
+    found_in: 4/6
+  surge_test:
+    label: Surge test
+    unit: A
+    stat: typ
+    conditions: 10/1000μs, 1KV, 25A, 30 cycles
+    rule: '>='
+    critical: false
+    aliases:
+    - 'Surge test: 10/1000μs, 1.0KV, 25A,30 Cycles'
+    - 'Surge test: 10/1000μs, 1KV, 25A, impulse 30 times, No crack and fire.'
+    found_in: 4/6
+  trip_time_0_5a_0_15a:
+    label: Trip time 0.5A→0.15A
+    unit: s
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - 500mA→150mA Rated Voltage
+    - 0.5 A→0.15A
+    - Trip time 1 A→0.5A
+    - Trip time 0.5A→0.15A
+    found_in: 4/6
+  c:
+    label: C
+    unit: mm
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - C
+    - BO
+    found_in: 3/6
+  d:
+    label: D
+    unit: mm
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - D
+    - KO
+    found_in: 3/6
+  dry_cold_test:
+    label: Dry Cold
+    unit: °C
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Dry Cold
+    found_in: 3/6
+  dry_hot_test:
+    label: Dry Hot
+    unit: °C
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Dry Hot
+    - Dry temperature
+    found_in: 3/6
+  e:
+    label: E
+    unit: mm
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - E
+    found_in: 3/6
+  f:
+    label: F
+    unit: mm
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - F
+    found_in: 3/6
+  hold_current_25c:
+    label: Hold current at 25±2°C
+    unit: mA
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Hold current at 25±2℃
+    found_in: 3/6
+  power_conduct_test:
+    label: Power conduct test
+    unit: V
+    stat: typ
+    conditions: 250 VAC, no current-limited resistance for 15min
+    rule: '>='
+    critical: false
+    aliases:
+    - 'Power conduct test: 250 VAC, no current-limited resistance for 15min, no damage.'
+    - 'Power conduct test: 250 VAC, Rs=58Ω on15min,one cycle no damage.'
+    found_in: 3/6
+  power_contact_test:
+    label: Power contact test
+    unit: V
+    stat: typ
+    conditions: 220 VAC, 3A, on 1 min, off 10min, 20 times, ∆R/R≤20%
+    rule: '>='
+    critical: false
+    aliases:
+    - 'Power contact test: 250 VAC, 3A, on 1 min, off 10min'
+    - 'Power contact test: 220 VAC, Rs=58Ω on 1 min, off 10min, 20times, ∆R/R≤20%.'
+    - 'Power contact test: 220 VAC, 3A, on 1 min, off 10min, 20times, ∆R/R≤20%.'
+    found_in: 3/6
+  power_induction_test:
+    label: Power induction test
+    unit: V
+    stat: typ
+    conditions: 600VAC, 1A, On 0.2s, Off 60s, 10 times
+    rule: '>='
+    critical: false
+    aliases:
+    - 'Power induction test: 650VAC, Rs=600Ω, On 1s, Off 60s, 10 times, No damage and f'
+    - 'Power induction test: 600VAC, 1A, On 0.2s, Off 60s, 10 times, No damage and fire'
+    found_in: 3/6
+  reel_diameter:
+    label: Reel Diameter
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Tape reel diameter
+    - Reel Diameter
+    - Dimension
+    found_in: 3/6
+  reel_width:
+    label: Reel Width
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Tape reel width
+    - Reel Width
+    - A
+    found_in: 3/6
+  storage_humidity_value:
+    label: Storage humidity
+    unit: '%'
+    stat: value
+    conditions: at 25°C
+    rule: '='
+    critical: false
+    aliases:
+    - Storage humidity
+    - 'Reflow Solder Curve: Soak end'
+    found_in: 3/6
+  storage_temp_range:
+    label: Storage temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage temperature
+    found_in: 3/6
+  thermal_shock_test:
+    label: Thermal Shock
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Thermal Shock
+    - Humidity
+    found_in: 3/6
+  trip_time_1a_0_5a:
+    label: Trip time 1A→0.5A
+    unit: s
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Trip time 1A→0.5A
+    - Trip time 2A→0.5A
+    found_in: 3/6
+rare_specs:
+  curie_temp:
+    label: Curie temperature
+    unit: °C
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Curie temperature
+    found_in: 1/6
+  hold_current_70c:
+    label: Hold current at 70±2°C
+    unit: mA
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Hold current at 70±2℃
+    found_in: 1/6
+  operating_heat_capacity:
+    label: Operating heat capacity
+    unit: J
+    stat: min
+    conditions: '@25°C, 230Vac'
+    rule: '>='
+    critical: false
+    aliases:
+    - Operating heat capacity（@25°C, 230Vac）
+    found_in: 1/6
+  power_contact_test_600vac_60a:
+    label: 'Power contact test: 600VAC, 60A'
+    unit: S
+    stat: min
+    conditions: 600VAC, 60A, @25°C
+    rule: '>='
+    critical: false
+    aliases:
+    - 'Power contact test: 600VAC, 60A, @25°C'
+    found_in: 1/6
+  power_induction_test_600vac_3a:
+    label: 'Power induction test: 600VAC, 3A'
+    unit: A 2 S
+    stat: min
+    conditions: 600VAC, 3A, @25°C
+    rule: '>='
+    critical: false
+    aliases:
+    - 'Power induction test: 600VAC, 3A, @25°C'
+    found_in: 1/6
+  recovery_time:
+    label: Recovery time
+    unit: S
+    stat: max
+    conditions: '@25°C'
+    rule: <=
+    critical: false
+    aliases:
+    - Recovery time (@25°C)
+    found_in: 1/6
+  rhv:
+    label: 'RHV: Minimum equivalent resistance'
+    unit: Ω
+    stat: min
+    conditions: '@ 10/700 uS, 4 KV / 40 Ω'
+    rule: '>='
+    critical: false
+    aliases:
+    - RHV :Minimum equivalent resistance (@ 10/700 uS, 4 KV / 40 Ω )
+    found_in: 1/6
+  v_fault:
+    label: 'VFault: Security failure voltage'
+    unit: Vrms
+    stat: max
+    conditions: with 10R loading
+    rule: '>='
+    critical: false
+    aliases:
+    - VFault :Security failure voltage (with 10R loading)
+    found_in: 1/6
+  vsurge:
+    label: 'Vsurge: Lightning surge test'
+    unit: Vp
+    stat: max
+    conditions: 10/700 uS, RS = 40 Ω
+    rule: '>='
+    critical: false
+    aliases:
+    - Vsurge :Lightning surge test (10/700 uS, RS = 40 Ω )
+    found_in: 1/6
+  ismax:
+    label: 'ISmax: Overcurrent withstanding'
+    unit: A
+    stat: max
+    conditions: '@25°C, 450Vac'
+    rule: '>='
+    critical: false
+    aliases: []
+    found_in: 0/6
+  reel_qty:
+    label: Reel QTY
+    unit: PCS
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases: []
+    found_in: 0/6

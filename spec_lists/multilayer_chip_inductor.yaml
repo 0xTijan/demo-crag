@@ -1,0 +1,452 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: multilayer_chip_inductor
+name: multilayer / thin film chip inductor
+version: 1
+status: draft
+must_match:
+- package
+- size
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T14:31:32+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - viking/al-series-data-sheet-edition-rev-d1_d0ac06f9.md
+  - viking/cl-ga-series-data-sheet-edition-rev-a2_64210a9f.md
+  - viking/cl-s-series_033595a0.md
+  - viking/cl-sa-series-data-sheet-edition-rev-a3_9f1205be.md
+  - viking/ml-series-data-sheet-edition-rev-b4_2dc97080.md
+  - viking/ml-series_db93e2a3.md
+  - viking/mlh-a-series-data-sheet-edition-rev-a1_328b2ae3.md
+specs:
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    - Type
+    - Package Type
+    - Dimensions
+    - Size
+    found_in: 7/7
+  inductance:
+    label: Inductance
+    unit: nH
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Inductance
+    - L
+    found_in: 7/7
+  inductance_tolerance:
+    label: Inductance Tolerance
+    unit: '%'
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Inductance Tolerance
+    - Tolerance
+    found_in: 7/7
+  operating_temp_range:
+    label: Operating Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Temperature Range
+    found_in: 7/7
+  srf_min:
+    label: SRF min
+    unit: MHz
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Self Resonant Frequency
+    - SRF
+    - SRF min.
+    - SRF (GHz) Min.
+    - SRF min
+    - SRF (MHz) min.
+    found_in: 7/7
+  size:
+    label: Size
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Size
+    - Sizes
+    - Size (Inch)
+    found_in: 5/7
+  dimensions:
+    label: Dimensions
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Dimensions
+    - A
+    - B
+    - W
+    - E
+    - F
+    - P0
+    - P1
+    - P2
+    - ψD0
+    - T
+    - L
+    found_in: 4/7
+  idc_max:
+    label: DC Current max
+    unit: mA
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - DC Current
+    - IDC
+    - IDC max.
+    - IDC (mA) Max.
+    - IDC max
+    found_in: 4/7
+  product_type:
+    label: Product Type
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Product Type
+    - Product
+    - Application
+    found_in: 4/7
+  q_min:
+    label: Q min
+    unit: null
+    stat: min
+    conditions: 'Test Frequency (MHz): 100, Test Voltage (mV): 50'
+    rule: '>='
+    critical: false
+    aliases:
+    - Quality Factor
+    - Q
+    - Q min
+    - Quality Factor /min.
+    found_in: 4/7
+  rdc_max:
+    label: DC Resistance max
+    unit: Ω
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - DC Resistance
+    - DCR
+    - RDC max.
+    - RDC (Ω) Max.
+    - RDC
+    - RDC max
+    found_in: 4/7
+rare_specs:
+  aec_q200_compliance:
+    label: AEC-Q200 Compliance
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - AEC-Q200 Compliance
+    found_in: 3/7
+  part_numbering:
+    label: Part Numbering
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Part Numbering
+    found_in: 3/7
+  reel_dimension:
+    label: Reel Dimension
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Reel Dimension
+    - Tape Specifications
+    found_in: 3/7
+  reel_quantity:
+    label: Reel Quantity
+    unit: EA
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Reel Quantity
+    - Quantity
+    found_in: 3/7
+  shelf_life:
+    label: Shelf Life
+    unit: years
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Shelf life
+    - Part Numbering
+    found_in: 3/7
+  solderability:
+    label: Solderability
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Solderability
+    found_in: 3/7
+  soldering_heat_resistance:
+    label: Resistance to Soldering Heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance to Soldering Heat
+    - Soldering Heat Resistance
+    found_in: 3/7
+  storage_temp_range:
+    label: Storage Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 3/7
+  temperature_cycle:
+    label: Temperature Cycle
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Temperature Cycle
+    found_in: 3/7
+  test_frequency:
+    label: Test Frequency
+    unit: MHz
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Test Frequency
+    - Test Freq. (MHz)
+    - L/Q Freq
+    found_in: 3/7
+  bias_humidity:
+    label: Biased Humidity
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Biased Humidity
+    found_in: 2/7
+  board_flex:
+    label: Board Flex
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Board Flex
+    found_in: 2/7
+  high_temp_exposure:
+    label: High Temperature Exposure
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - High Temperature Exposure (Storage)
+    - High Temperature Exposure
+    found_in: 2/7
+  humidity:
+    label: Humidity
+    unit: '%RH'
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Humidity
+    - Storage Humidity
+    found_in: 2/7
+  land_pattern:
+    label: Land Pattern
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Land Pattern A
+    - Land Pattern B
+    - Land Pattern C
+    - Land Pattern
+    found_in: 2/7
+  mechanical_shock:
+    label: Mechanical Shock
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Mechanical Shock
+    found_in: 2/7
+  operational_life:
+    label: Operational Life
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Operational Life
+    found_in: 2/7
+  tape_specifications:
+    label: Tape Specifications
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Tape Specifications
+    found_in: 2/7
+  terminal_strength:
+    label: Terminal Strength
+    unit: N
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Terminal Strength (SMD)
+    - Terminal Strength
+    found_in: 2/7
+  test_voltage:
+    label: Test Voltage
+    unit: mV
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Test Voltage
+    - Test Voltage (mV)
+    found_in: 2/7
+  vibration:
+    label: Vibration
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Vibration
+    found_in: 2/7
+  damp_heat_with_load:
+    label: Damp Heat with Load
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Damp Heat with Load
+    found_in: 1/7
+  esd:
+    label: ESD
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - ESD
+    found_in: 1/7
+  function_code:
+    label: Function Code
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Function Code
+    found_in: 1/7
+  test_equipment:
+    label: Test Equipment
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Test Equipment
+    found_in: 1/7
+  weight:
+    label: Weight
+    unit: g
+    stat: value
+    conditions: (1000pcs)
+    rule: '='
+    critical: false
+    aliases:
+    - Weight
+    found_in: 1/7

@@ -1,0 +1,238 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: polymer_esd_suppressor
+name: polymer ESD suppressor
+version: 1
+status: draft
+must_match: []
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T13:06:49+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - goodarksemi/gesdpsa0603v05_788900fa.md
+  - goodarksemi/gesdpsa2510v05_71bf9e90.md
+  - goodarksemi/gesdpsd2510v12_5b5f1e52.md
+  - goodarksemi/gmlsep05a-0402_a72b2438.md
+  - goodarksemi/gmlsep15a-0402_3038d287.md
+  - goodarksemi/gmlsep24b-0603_916e5a15.md
+  - goodarksemi/gspsm0201v04_1bc25403.md
+  - goodarksemi/gspsm0402v3-3_4188e2aa.md
+  - goodarksemi/gspsm0402v6-3_ce960d4b.md
+  - goodarksemi/mlsep30a-0603_ed1c0d80.md
+specs:
+  t_oper_range:
+    label: Operating Temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: true
+    aliases:
+    - Maximum Operating Temperature
+    - TOPER
+    - T OPER
+    - Maximum Operating Temperature Range
+    found_in: 10/10
+  vds_max:
+    label: VDS max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Rated Voltage
+    - VR
+    - V R
+    - Maximum Contact Discharge Voltage Per IEC61000-4-2
+    - '-'
+    - Maximum Air Discharge Voltage Per IEC61000-4-2
+    - Continuous Operating Voltage
+    - V DC
+    found_in: 10/10
+  t_solder_max:
+    label: Soldering Temperature max
+    unit: °C
+    stat: max
+    conditions: 10s
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum Lead Temperature for Soldering During 10s
+    - TL
+    - T L
+    - Rated Voltage
+    - V R
+    found_in: 10/10
+  t_stg_range:
+    label: Storage Temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Maximum Storage Temperature
+    - TSTG
+    - T STG
+    - Maximum Storage Temperature Range
+    found_in: 10/10
+  v_clamp_typ:
+    label: Clamping Voltage typ
+    unit: V
+    stat: typ
+    conditions: IEC61000-4-2 8KV contact discharge
+    rule: ≈
+    critical: false
+    aliases:
+    - Clamping Voltage
+    - VC
+    - V C
+    found_in: 10/10
+  v_trigger_typ:
+    label: Trigger Voltage typ
+    unit: V
+    stat: typ
+    conditions: IEC61000-4-2 8KV contact discharge
+    rule: ≈
+    critical: false
+    aliases:
+    - Trigger Voltage
+    - VT
+    - V T
+    found_in: 10/10
+  v_air_max:
+    label: Air Discharge Voltage max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum Air Discharge Voltage Per IEC61000-4-2
+    - '-'
+    - Maximum Air Discharge Voltage
+    found_in: 9/10
+  v_contact_max:
+    label: Contact Discharge Voltage max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum Contact Discharge Voltage Per IEC61000-4-2
+    - '-'
+    - Maximum Contact Discharge Voltage
+    found_in: 9/10
+  c_cap_typ:
+    label: Capacitance typ
+    unit: pF
+    stat: typ
+    conditions: VR=0V, f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - Capacitance
+    - CP
+    - C P
+    found_in: 9/10
+  esd_pulse_min:
+    label: ESD Pulse Withstand min
+    unit: pulses
+    stat: min
+    conditions: IEC61000-4-2 8KV contact discharge
+    rule: '>='
+    critical: false
+    aliases:
+    - ESD Pulse Withstand
+    - '-'
+    - Capacitance
+    - CP
+    - Pulses
+    found_in: 7/10
+  i_leak_range:
+    label: Leakage Current range
+    unit: uA
+    stat: range
+    conditions: DC [VR]V applied
+    rule: <=
+    critical: false
+    aliases:
+    - Leakage Current
+    - I L
+    found_in: 5/10
+rare_specs:
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Case
+    - Package
+    found_in: 2/10
+  carrier:
+    label: Carrier
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Carrier
+    - ESD Pulse Withstand
+    - Pulses
+    found_in: 2/10
+  hsf_status:
+    label: HSF Status
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - HSF Status
+    - D
+    found_in: 2/10
+  i_leak_typ:
+    label: Leakage Current typ
+    unit: nA
+    stat: typ
+    conditions: DC [VR]V applied
+    rule: <=
+    critical: false
+    aliases:
+    - Leakage Current
+    - IL
+    found_in: 1/10
+  quantity:
+    label: Quantity
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Quantity
+    found_in: 1/10
+  case:
+    label: Case
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases: []
+    found_in: 0/10

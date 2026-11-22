@@ -22,5 +22,175 @@
   "tokens_in": 1576,
   "tokens_out": 69
  },
- "type": "multilayer_chip_inductor"
+ "type": "multilayer_chip_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:29:30+00:00",
+  "items": [
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to 125"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "",
+    "example": "0603"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "L",
+    "unit": "nH",
+    "stat": "value",
+    "conditions": "",
+    "example": "47"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "±10"
+   },
+   {
+    "name": "L/Q Test Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "50MHz, 200mV"
+   },
+   {
+    "name": "Q min.",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "SRF (MHz) min.",
+    "symbol": "SRF",
+    "unit": "MHz",
+    "stat": "value",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "DC Resistance",
+    "symbol": "RDC",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.088"
+   },
+   {
+    "name": "IDC",
+    "symbol": "IDC",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "1800"
+   },
+   {
+    "name": "Test Method",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "HP4291B"
+   },
+   {
+    "name": "Soldering Heat Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No damage More than 75% of t"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "The electrodes shall be at least 90% cov"
+   },
+   {
+    "name": "Flexure Strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "The forces applied on the right conditio"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "The forces applied on the right conditio"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No damage L change: within±2"
+   },
+   {
+    "name": "Temperature Cycle",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No damage L change: within±2"
+   },
+   {
+    "name": "High Temperature Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No damage L change: within±2"
+   },
+   {
+    "name": "Low Temperature Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No damage L change: within±2"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Storage Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   }
+  ],
+  "seconds": 187.17,
+  "tokens_in": 11834,
+  "tokens_out": 7861
+ }
 }

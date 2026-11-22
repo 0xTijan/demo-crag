@@ -22,5 +22,271 @@
   "tokens_in": 1864,
   "tokens_out": 64
  },
- "type": "thick_film_array_chip_resistor"
+ "type": "thick_film_array_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:55:42+00:00",
+  "items": [
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Thick Film Array Chip Resistor - CN Seri"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0201x2(Flat) / 0201x4(Flat) / 0402x4 / 0"
+   },
+   {
+    "name": "Absolute Maximum Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "12.5V (CN-21), 25V (CN-42), 50V (CN-43)"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 125"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "at 70°C",
+    "example": "1/32W (CN-21), 1/16W (CN-42), 1/10W (CN-"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1% (E24,E96)",
+    "example": "10 to 1000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5% (E24)",
+    "example": "1 to 1000000"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "±200"
+   },
+   {
+    "name": "Jumper Rated Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5 (CN-21), 1 (CN-42)"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "12.5 (CN-21), 25 (CN-42), 50 (CN-43)"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "25 (CN-21), 50 (CN-42), 100 (CN-43)"
+   },
+   {
+    "name": "Number of Resistors",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2 (CN-21), 4 (CN-41, CN-42, CN-43, CNA42"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1% (F), ±5% (J)"
+   },
+   {
+    "name": "Function Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "L: 4P2R/8P4R"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "6: 7\" Reel 10Kpcs, 7: 7\" Reel 5Kpcs, A: "
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "L",
+    "example": "0.80±0.10 (CN-21), 1.40±0.10 (CN-41), 2."
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "W",
+    "example": "0.60±0.10 (CN-21), 0.60±0.10 (CN-41), 1."
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "H",
+    "example": "0.35±0.10 (CN-21), 0.35±0.10 (CN-41), 0."
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "A",
+    "example": "0.30±0.10 (CN-21), 0.20±0.10 (CN-41), 0."
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "A1",
+    "example": "0.40±0.10 (CN-42), 0.65±0.10 (CN-43)"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "B",
+    "example": "0.50±0.10 (CN-21), 0.40±0.10 (CN-41), 0."
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "C",
+    "example": "0.15±0.10 (CN-21), 0.10±0.07 (CN-41), 0."
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "Y",
+    "example": "0.15±0.10 (CN-21), 0.15±0.05 (CN-41), 0."
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "1000pcs",
+    "example": "0.500 (CN-21), 0.833 (CN-41), 2.817 (CN-"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "",
+    "example": "95"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "260°C for 10 seconds"
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No breakdown or flashover"
+   },
+   {
+    "name": "Leaching",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "",
+    "example": "Individual leaching area ≦5%, Total leac"
+   },
+   {
+    "name": "Rapid Change of Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "-55°C to +125/+155°C, 5 cycles"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   }
+  ],
+  "seconds": 130.89,
+  "tokens_in": 7008,
+  "tokens_out": 2034
+ }
 }

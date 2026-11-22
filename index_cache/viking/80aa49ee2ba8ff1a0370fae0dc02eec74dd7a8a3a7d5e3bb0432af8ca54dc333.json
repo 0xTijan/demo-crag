@@ -19,5 +19,87 @@
   "tokens_in": 1418,
   "tokens_out": 46
  },
- "type": "wire_wound_chip_inductor"
+ "type": "wire_wound_chip_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:15:58+00:00",
+  "items": [
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Size (Inch)",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "0402, 0603, 0805, 1008, 1210, 1812, 2220"
+   },
+   {
+    "name": "Inductance (μH)",
+    "symbol": "",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.018 to 47"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "+-5, +-10%, +-20%"
+   },
+   {
+    "name": "Q typ.",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "7 to 50"
+   },
+   {
+    "name": "Test Freq. (MHz)",
+    "symbol": "",
+    "unit": "MHz",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.252, 0.796, 1, 2.52, 7.9, 25.2"
+   },
+   {
+    "name": "SRF (MHz) typ.",
+    "symbol": "",
+    "unit": "MHz",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.6 to 3100"
+   },
+   {
+    "name": "DCR (Ω) max.",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.075 to 42.8"
+   },
+   {
+    "name": "IDC (mA) max.",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "range",
+    "conditions": "",
+    "example": "30 to 2900"
+   }
+  ],
+  "seconds": 383.31,
+  "tokens_in": 32236,
+  "tokens_out": 8719
+ }
 }

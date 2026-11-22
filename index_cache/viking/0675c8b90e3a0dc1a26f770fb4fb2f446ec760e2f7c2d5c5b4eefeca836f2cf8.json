@@ -22,5 +22,239 @@
   "tokens_in": 1815,
   "tokens_out": 68
  },
- "type": "power_inductor"
+ "type": "power_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:40:16+00:00",
+  "items": [
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DRGH664"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.0±0.5"
+   },
+   {
+    "name": "B max.",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.5"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.0±1.0"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.0±0.3"
+   },
+   {
+    "name": "D1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "–"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.50±0.1"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "–"
+   },
+   {
+    "name": "Rated DC Current",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "Ta=25°C",
+    "example": "1.27"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40～125"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "L",
+    "unit": "μH",
+    "stat": "value",
+    "conditions": "",
+    "example": "22"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "M"
+   },
+   {
+    "name": "Test Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1KHz, 0.1V"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.11"
+   },
+   {
+    "name": "IDC",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.27"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DIP"
+   },
+   {
+    "name": "Mounting Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Through-hole"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "5～25"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "25～80"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No damage"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No Damage"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "90% covered"
+   },
+   {
+    "name": "Temperature Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No damage"
+   },
+   {
+    "name": "Temperature Cycle",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100 cycles"
+   },
+   {
+    "name": "Humidity Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000hrs"
+   },
+   {
+    "name": "Heat Temperature Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000hrs"
+   },
+   {
+    "name": "Low Temperature Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000hrs"
+   }
+  ],
+  "seconds": 146.13,
+  "tokens_in": 10262,
+  "tokens_out": 1820
+ }
 }

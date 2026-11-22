@@ -22,5 +22,207 @@
   "tokens_in": 1367,
   "tokens_out": 61
  },
- "type": "pnp_transistor"
+ "type": "pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:31:09+00:00",
+  "items": [
+   {
+    "name": "Collector Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "ABC856 ABC857, ABC860 ABC858, ABC859",
+    "example": "-80 -50 -30"
+   },
+   {
+    "name": "Collector Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "ABC856 ABC857, ABC860 ABC858, ABC859",
+    "example": "-65 -45 -30"
+   },
+   {
+    "name": "Emitter Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "I C",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "-100"
+   },
+   {
+    "name": "Peak Collector Current",
+    "symbol": "I CM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "-200"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "TJ",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to + 150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "Tstg",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to + 150"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient",
+    "symbol": "RthJA",
+    "unit": "°C/W",
+    "stat": "value",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
+    "example": "625"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "-V CE = 5 V, -I C = 2 mA Current Gain Group A B C",
+    "example": "125 220 420"
+   },
+   {
+    "name": "Collector Base Cutoff Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "-V CB = 30 V",
+    "example": "-15"
+   },
+   {
+    "name": "Collector Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "-I C = 10 µA ABC856 C ABC857, ABC860 ABC858, ABC859",
+    "example": "-80 -50 -30"
+   },
+   {
+    "name": "Collector Emitter Breakdown Voltage",
+    "symbol": "V (BR)CES",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "-I C = 10 µA ABC856 C ABC857, ABC860 ABC858, ABC859",
+    "example": "-80 -50 -30"
+   },
+   {
+    "name": "Collector Emitter Base Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "-I C = 10 mA ABC856 ABC857, ABC860 ABC858, ABC859",
+    "example": "-65 -45 -30"
+   },
+   {
+    "name": "Emitter Base Breakdown Voltage",
+    "symbol": "V(BR)EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "-I E = 1 µA",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "-I C = 10 mA, -I B = 0.5 mA at -I C = 100 mA, -I B = 5 mA",
+    "example": "-0.3 -0.65"
+   },
+   {
+    "name": "Base Emitter On Voltage",
+    "symbol": "V BE(on)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "-I C = 2 mA, -V CE = 5 V at -I C = 10 mA, -V CE = 5 V",
+    "example": "-0.6 -0.75 -0.82"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "-V CE = 5 V, -I C = 10 mA, f = 100 MHz",
+    "example": "100"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "-V CB = 10 V, f = 1 MHz",
+    "example": "6"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
+   },
+   {
+    "name": "Mounting position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Halogen and Antimony Free(HAF), RoHS com"
+   },
+   {
+    "name": "Qualification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q101 Qualified"
+   },
+   {
+    "name": "Application",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "For switching and amplifier"
+   }
+  ],
+  "seconds": 33.86,
+  "tokens_in": 1681,
+  "tokens_out": 1326
+ }
 }

@@ -22,5 +22,175 @@
   "tokens_in": 1665,
   "tokens_out": 67
  },
- "type": "fast_recovery_bridge_rectifier"
+ "type": "fast_recovery_bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:44:57+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "140"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Maximum Average Forward Output Current",
+    "symbol": "I F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "on glass-epoxy P.C.B on aluminum substrate",
+    "example": "0.5(1) 0.8(2)"
+   },
+   {
+    "name": "Peak Forward Surge Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "8.3 MS Single HALF Sine- Wave Superimposed on Rated Load (JEDEC Method)",
+    "example": "30"
+   },
+   {
+    "name": "Ratingforfusig(t<8.3ms)",
+    "symbol": "I2t",
+    "unit": "A2sec",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage Drop per eg at 0.4A",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "at 0.4A",
+    "example": "1.30"
+   },
+   {
+    "name": "Maximum DC Reverse Current",
+    "symbol": "I R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "at T =25°C A Rated DC Blocking Voltage per Leg T A =125°C",
+    "example": "5 100"
+   },
+   {
+    "name": "Maximum Reverse Recovery Time",
+    "symbol": "A Trr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "at I =0.5A,I =1.0A,I =0.25 F R rr",
+    "example": "150"
+   },
+   {
+    "name": "Typical Thermal Resistance per Leg",
+    "symbol": "RθJA RθJA RθJL",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "85(1) 70(2) 20(1)"
+   },
+   {
+    "name": "Typical Junction Capacitance per",
+    "symbol": "C J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "at 4.0V,1.0MHz",
+    "example": "13"
+   },
+   {
+    "name": "Operating Junction and Storage Temperature Range",
+    "symbol": "T J,TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-269AA(MBS)"
+   },
+   {
+    "name": "Mounting Position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.22"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Polarity symbols marked on body"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Plated leads solderable per MIL-STD-750,"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Molded plastic body over passivated junc"
+   },
+   {
+    "name": "Flammability Classification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL Flammability Classification 94V-0"
+   },
+   {
+    "name": "High Temperature Soldering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "260 o C/10 seconds at 5 lbs. (2.3kg) ten"
+   }
+  ],
+  "seconds": 45.01,
+  "tokens_in": 1859,
+  "tokens_out": 987
+ }
 }

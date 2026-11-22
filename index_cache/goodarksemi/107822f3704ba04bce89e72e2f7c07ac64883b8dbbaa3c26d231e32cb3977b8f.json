@@ -18,5 +18,215 @@
   "tokens_in": 1237,
   "tokens_out": 49
  },
- "type": "polymer_esd_suppressor"
+ "type": "polymer_esd_suppressor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:05:25+00:00",
+  "items": [
+   {
+    "name": "Maximum Contact Discharge Voltage Per IEC61000-4-2",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "15KV"
+   },
+   {
+    "name": "Maximum Air Discharge Voltage Per IEC61000-4-2",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "25KV"
+   },
+   {
+    "name": "Maximum Operating Temperature",
+    "symbol": "TOPER",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to +90"
+   },
+   {
+    "name": "Maximum Storage Temperature",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Maximum Lead Temperature for Soldering During 10s",
+    "symbol": "TL",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "VR",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Trigger Voltage",
+    "symbol": "VT",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "300"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "20"
+   },
+   {
+    "name": "Leakage Current",
+    "symbol": "IL",
+    "unit": "nA",
+    "stat": "typ",
+    "conditions": "DC 5V shall be applied on component",
+    "example": "0.10"
+   },
+   {
+    "name": "Leakage Current",
+    "symbol": "IL",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "DC 5V shall be applied on component",
+    "example": "100"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "CP",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VR = 0V, f = 1MHz",
+    "example": "0.05"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "CP",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VR = 0V, f = 1MHz",
+    "example": "0.15"
+   },
+   {
+    "name": "ESD Pulse Withstand",
+    "symbol": "Pulses",
+    "unit": "",
+    "stat": "min",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "100"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "1.05"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.55"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.25"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.36"
+   },
+   {
+    "name": "A0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.75"
+   },
+   {
+    "name": "B0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "1.22"
+   },
+   {
+    "name": "P0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "4.00"
+   },
+   {
+    "name": "P1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "2.00"
+   },
+   {
+    "name": "P2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "2.00"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "3.50"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "typ",
+    "conditions": "",
+    "example": "8.00"
+   }
+  ],
+  "seconds": 42.41,
+  "tokens_in": 1678,
+  "tokens_out": 1141
+ }
 }

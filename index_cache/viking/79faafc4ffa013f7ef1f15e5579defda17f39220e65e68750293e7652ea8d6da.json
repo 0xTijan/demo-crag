@@ -22,5 +22,79 @@
   "tokens_in": 1665,
   "tokens_out": 87
  },
- "type": "multilayer_ceramic_capacitor"
+ "type": "multilayer_ceramic_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:22:35+00:00",
+  "items": [
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0201"
+   },
+   {
+    "name": "Dielectric",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "NPO"
+   },
+   {
+    "name": "Voltage",
+    "symbol": "",
+    "unit": "VDCW",
+    "stat": "value",
+    "conditions": "",
+    "example": "6.3V"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.1pF"
+   },
+   {
+    "name": "Capacitance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.05pF"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T"
+   },
+   {
+    "name": "Function Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A"
+   },
+   {
+    "name": "AEC-Q200",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   }
+  ],
+  "seconds": 222.21,
+  "tokens_in": 14366,
+  "tokens_out": 2523
+ }
 }

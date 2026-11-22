@@ -16,5 +16,119 @@
   "tokens_in": 1081,
   "tokens_out": 32
  },
- "type": "standard_rectifier"
+ "type": "standard_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:16:58+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1300"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "910"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1300"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current",
+    "symbol": "I F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "Peak Forward Surge Current (8.3 ms single half sine-wave superimposed on rated l",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TL=110°C",
+    "example": "30.0"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage @1A",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "1A",
+    "example": "1.10"
+   },
+   {
+    "name": "Maximum DC Reverse Current at @T=25oC A rated DC Blocking Voltage @T=125oC A",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "T=25oC, T=125oC",
+    "example": "5.0"
+   },
+   {
+    "name": "Typical Reverse Recovery Time Irr=0.25A",
+    "symbol": "t rr",
+    "unit": "us",
+    "stat": "typ",
+    "conditions": "IF=0.5A, IR=1.0A",
+    "example": "1.0"
+   },
+   {
+    "name": "Typical Junction Capacitance @4.0 V, 1 MHz",
+    "symbol": "C J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "4.0 V, 1 MHz",
+    "example": "12"
+   },
+   {
+    "name": "Typical Thermal Resistance1)",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "85"
+   },
+   {
+    "name": "Typical Thermal Resistance1)",
+    "symbol": "RθJL",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Operating Junction Temperature",
+    "symbol": "T J",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T STG",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   }
+  ],
+  "seconds": 13.56,
+  "tokens_in": 1093,
+  "tokens_out": 740
+ }
 }

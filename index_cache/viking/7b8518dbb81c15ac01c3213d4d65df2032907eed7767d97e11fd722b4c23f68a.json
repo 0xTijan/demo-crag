@@ -18,5 +18,14 @@
   "tokens_in": 1279,
   "tokens_out": 39
  },
- "type": "wire_wound_chip_inductor"
+ "type": "wire_wound_chip_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:16:07+00:00",
+  "items": [],
+  "seconds": 392.51,
+  "tokens_in": 16388,
+  "tokens_out": 8505
+ }
 }

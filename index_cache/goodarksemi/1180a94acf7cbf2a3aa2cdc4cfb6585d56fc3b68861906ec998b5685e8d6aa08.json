@@ -18,5 +18,415 @@
   "tokens_in": 1578,
   "tokens_out": 44
  },
- "type": "complementary_npn_pnp_transistor"
+ "type": "complementary_npn_pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:04:47+00:00",
+  "items": [
+   {
+    "name": "Collector to Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Collector to Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "40"
+   },
+   {
+    "name": "Emitter Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "I C",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "600"
+   },
+   {
+    "name": "Total Power Dissipation",
+    "symbol": "P tot",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient",
+    "symbol": "R θJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
+    "example": "357"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =10V, I =0.1mA CE C",
+    "example": "35"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =10V, I =1.0mA CE C",
+    "example": "50"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =10V, I =10mA CE C",
+    "example": "75"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =1V, I =150mA CE C",
+    "example": "50"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "range",
+    "conditions": "V =10V, I =150mA CE C",
+    "example": "100 to 300"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =10V, I =500mA CE C",
+    "example": "40"
+   },
+   {
+    "name": "Collector Base Cut-Off Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =60V CB",
+    "example": "10"
+   },
+   {
+    "name": "Emitter Base Cut-Off Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =3.0V EB",
+    "example": "100"
+   },
+   {
+    "name": "Collector Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10μA C",
+    "example": "75"
+   },
+   {
+    "name": "Collector Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10mA C",
+    "example": "40"
+   },
+   {
+    "name": "Emitter Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10μA E",
+    "example": "6"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =150mA, I =15mA C B",
+    "example": "0.3"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =500mA, I =50mA C B",
+    "example": "1.0"
+   },
+   {
+    "name": "Base Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I =150mA, I =15mA C B",
+    "example": "0.6 to 1.2"
+   },
+   {
+    "name": "Base Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =500mA, I =50mA C B",
+    "example": "2.0"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =20V, I =-20mA, F=100MHz CE E",
+    "example": "300"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =10V, F=100KHz CB",
+    "example": "8"
+   },
+   {
+    "name": "Delay Time",
+    "symbol": "t d",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =30V, V =0.5V CC BE(OFF) IC=150mA, I =15mA B1",
+    "example": "10"
+   },
+   {
+    "name": "Rise Time",
+    "symbol": "t r",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =30V, V =0.5V CC BE(OFF) IC=150mA, I =15mA B1",
+    "example": "25"
+   },
+   {
+    "name": "Storage Time",
+    "symbol": "t stg",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =30V, I =150mA, CC C I =-I =15mA B1 B2",
+    "example": "225"
+   },
+   {
+    "name": "Fall Time",
+    "symbol": "t f",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =30V, I =150mA, CC C I =-I =15mA B1 B2",
+    "example": "60"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =-10V, I =-0.1mA CE C",
+    "example": "75"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =-10V, I =-1.0mA CE C",
+    "example": "100"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =-10V, I =-10mA CE C",
+    "example": "100"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "range",
+    "conditions": "V =-10V, I =-150mA CE C",
+    "example": "100 to 300"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =-10V, I =-500mA CE C",
+    "example": "50"
+   },
+   {
+    "name": "Collector Base Cut Off Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-50V CB",
+    "example": "-10"
+   },
+   {
+    "name": "Collector Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10μA C",
+    "example": "-60"
+   },
+   {
+    "name": "Collector Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10mA C",
+    "example": "-60"
+   },
+   {
+    "name": "Emitter Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10μA E",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-150mA, I =-15mA C B",
+    "example": "-0.4"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-500mA, I =-50mA C B",
+    "example": "-1.6"
+   },
+   {
+    "name": "Base Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-150mA, I =-15mA C B",
+    "example": "-1.3"
+   },
+   {
+    "name": "Base Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-500mA, I =-50mA C B",
+    "example": "-2.6"
+   },
+   {
+    "name": "Gain Bandwidth Product",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =-20V, Ic=-50mA, F=100MHz CE",
+    "example": "200"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =-10V, F=1.0MHz CB",
+    "example": "8"
+   },
+   {
+    "name": "Turn-on Time",
+    "symbol": "t on",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-30V, I =-150mA, I =-15mA CC C B1",
+    "example": "45"
+   },
+   {
+    "name": "Delay Time",
+    "symbol": "t d",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-30V, I =-150mA, I =-15mA CC C B1",
+    "example": "10"
+   },
+   {
+    "name": "Rise Time",
+    "symbol": "t r",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-30V, I =-150mA, I =-15mA CC C B1",
+    "example": "40"
+   },
+   {
+    "name": "Turn-off Time",
+    "symbol": "t off",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-6V, I =-150mA, CC C I =I =-15mA B1 B2",
+    "example": "100"
+   },
+   {
+    "name": "Storage Time",
+    "symbol": "t stg",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-6V, I =-150mA, CC C I =I =-15mA B1 B2",
+    "example": "80"
+   },
+   {
+    "name": "Fall Time",
+    "symbol": "t f",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-6V, I =-150mA, CC C I =I =-15mA B1 B2",
+    "example": "30"
+   }
+  ],
+  "seconds": 176.09,
+  "tokens_in": 2493,
+  "tokens_out": 2939
+ }
 }

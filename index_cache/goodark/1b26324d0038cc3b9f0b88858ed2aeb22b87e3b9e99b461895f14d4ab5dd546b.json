@@ -18,5 +18,95 @@
   "tokens_in": 1144,
   "tokens_out": 41
  },
- "type": "esd_tvs_array"
+ "type": "esd_tvs_array",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:34:46+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power",
+    "symbol": "P PP",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TP=8/20μS",
+    "example": "320"
+   },
+   {
+    "name": "Peak Pulse Current",
+    "symbol": "IPP",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "tp=8/20μS",
+    "example": "20"
+   },
+   {
+    "name": "Operating temperature",
+    "symbol": "T J",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Storage temperature",
+    "symbol": "T STG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-50 to +150"
+   },
+   {
+    "name": "Reverse stand-off Voltage",
+    "symbol": "V RWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "V BR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I =1mA T",
+    "example": "6 to 7.4"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V =5V,T=25℃ RWM",
+    "example": "1"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =10A，T =8/20μS PP P",
+    "example": "12"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =20A ，T =8/20μS PP P",
+    "example": "16"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "C J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =0V,f=1MHz R",
+    "example": "70"
+   }
+  ],
+  "seconds": 24.32,
+  "tokens_in": 1203,
+  "tokens_out": 484
+ }
 }

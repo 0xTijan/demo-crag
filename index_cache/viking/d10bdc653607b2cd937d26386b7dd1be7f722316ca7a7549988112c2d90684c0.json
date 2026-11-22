@@ -22,5 +22,271 @@
   "tokens_in": 2086,
   "tokens_out": 76
  },
- "type": "polymer_aluminum_capacitor"
+ "type": "polymer_aluminum_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:08:31+00:00",
+  "items": [
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Conductive Polymer Aluminum Solid Electr"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0507/0508/0605/0608/0610/0611/0808/0810/"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "WV",
+    "unit": "Vdc",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.3~35"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "at 105°C",
+    "example": "3,000"
+   },
+   {
+    "name": "RoHS Compliance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   },
+   {
+    "name": "Construction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Radial type capacitors shall be enclosed"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "D: 5.0±0.5, L: 7.0, α: -0.5~1, d: 0.50±0"
+   },
+   {
+    "name": "Capacitance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "±20"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "B: Bulk"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "uF",
+    "stat": "range",
+    "conditions": "",
+    "example": "100~2200"
+   },
+   {
+    "name": "Leakage Current",
+    "symbol": "",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "",
+    "example": "7500"
+   },
+   {
+    "name": "tanδ",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "at 120Hz±10% at 20±2°C",
+    "example": "0.10"
+   },
+   {
+    "name": "ESR",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "20°C, 100K to 300KHz",
+    "example": "35"
+   },
+   {
+    "name": "Rated Ripple Current",
+    "symbol": "",
+    "unit": "mArms",
+    "stat": "max",
+    "conditions": "105°C, 100KHz",
+    "example": "8100"
+   },
+   {
+    "name": "Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 105"
+   },
+   {
+    "name": "Surge Voltage",
+    "symbol": "",
+    "unit": "Vdc",
+    "stat": "value",
+    "conditions": "rated voltage*1.15",
+    "example": "rated voltage*1.15"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "120Hz≦f<1KHz",
+    "example": "0.05"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "1KHz≦f<10KHz",
+    "example": "0.3"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "10KHz≦f<50KHz",
+    "example": "0.7"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "50KHz≦f<100KHz",
+    "example": "0.85"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "100KHz≦f≦300KHz",
+    "example": "1"
+   },
+   {
+    "name": "Pull Strength Load of Lead Wire Terminations",
+    "symbol": "",
+    "unit": "N",
+    "stat": "range",
+    "conditions": "Lead wire diameter (mm): 0.35<d≦0.5",
+    "example": "5"
+   },
+   {
+    "name": "Bending Strength of Lead Wire Terminations",
+    "symbol": "",
+    "unit": "N",
+    "stat": "range",
+    "conditions": "Lead wire diameter (mm): 0.35<d≦0.5",
+    "example": "2.5"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "Hz",
+    "stat": "range",
+    "conditions": "10 to 55Hz",
+    "example": "10 to 55"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "total amplitude",
+    "example": "1.5"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "",
+    "example": "95"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "Capacitance change",
+    "example": "±5"
+   },
+   {
+    "name": "Resistance to Solvent",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "20 to 25"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 35"
+   },
+   {
+    "name": "Storage Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Storage Time",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Marking Color",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "red"
+   }
+  ],
+  "seconds": 197.73,
+  "tokens_in": 9671,
+  "tokens_out": 1720
+ }
 }

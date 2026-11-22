@@ -19,5 +19,199 @@
   "tokens_in": 1306,
   "tokens_out": 43
  },
- "type": "pnp_transistor"
+ "type": "pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:31:25+00:00",
+  "items": [
+   {
+    "name": "Collector Base Voltage",
+    "symbol": "VCBO",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "ABC807 ABC808",
+    "example": "-50 -30"
+   },
+   {
+    "name": "Collector Emitter Voltage",
+    "symbol": "VCEO",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "ABC807 ABC808",
+    "example": "-45 -25"
+   },
+   {
+    "name": "Emitter Base Voltage",
+    "symbol": "VEBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "IC",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "-500"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "TJ",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "Tstg",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient",
+    "symbol": "RthJA",
+    "unit": "°C/W",
+    "stat": "value",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
+    "example": "417"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "hFE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "-VCE = 1 V, -IC = 100 mA -16 -25 -40",
+    "example": "100 - 250"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "hFE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "-VCE = 1 V, -IC = 500 mA -16 -25 -40",
+    "example": "160 - 400"
+   },
+   {
+    "name": "Collector Base Cutoff Current",
+    "symbol": "ICBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "-VCB = 20 V",
+    "example": "-100"
+   },
+   {
+    "name": "Emitter Base Cutoff Current",
+    "symbol": "IEBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "-VEB = 5 V",
+    "example": "-100"
+   },
+   {
+    "name": "Collector Base Breakdown Voltage",
+    "symbol": "V(BR)CBO",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "ABC807 at -IC = 10 µA ABC808",
+    "example": "-50 -30"
+   },
+   {
+    "name": "Collector Emitter Breakdown Voltage",
+    "symbol": "V(BR)CEO",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "ABC807 at -IC = 10 mA ABC808",
+    "example": "-45 -25"
+   },
+   {
+    "name": "Emitter Base Breakdown Voltage",
+    "symbol": "V(BR)EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "-IE = 10 µA",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "VCE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "-IC = 500 mA, -IB = 50 mA",
+    "example": "-0.7"
+   },
+   {
+    "name": "Base Emitter On Voltage",
+    "symbol": "VBE(on)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "-IC = 500 mA, -VCE = 1 V",
+    "example": "-1.2"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "fT",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "-VCE = 5 V, -IC = 10 mA, f = 50 MHz",
+    "example": "80"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "Cob",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "-VCB = 10 V, f = 1 MHz",
+    "example": "9"
+   },
+   {
+    "name": "Mechanical Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "SOT-23 Plastic Package",
+    "example": "SOT-23"
+   },
+   {
+    "name": "Mounting position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "AEC-Q101 Qualified",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q101"
+   },
+   {
+    "name": "RoHS compliant",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS"
+   }
+  ],
+  "seconds": 49.77,
+  "tokens_in": 1614,
+  "tokens_out": 1168
+ }
 }

@@ -22,5 +22,103 @@
   "tokens_in": 1650,
   "tokens_out": 82
  },
- "type": "fast_acting_chip_fuse"
+ "type": "fast_acting_chip_fuse",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:56:11+00:00",
+  "items": [
+   {
+    "name": "Ampere Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "1A-7A"
+   },
+   {
+    "name": "% of Amp Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "100%"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "4 Hours Minimum"
+   },
+   {
+    "name": "Product Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "S1206H1"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "1A"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "63V"
+   },
+   {
+    "name": "Interrupting Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "50A"
+   },
+   {
+    "name": "Resistance (ohms)",
+    "symbol": "R",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.41"
+   },
+   {
+    "name": "Typical Melt I2t",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.10"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "H"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1206"
+   }
+  ],
+  "seconds": 89.11,
+  "tokens_in": 1070,
+  "tokens_out": 1091
+ }
 }

@@ -18,5 +18,183 @@
   "tokens_in": 1386,
   "tokens_out": 47
  },
- "type": "esd_tvs_array"
+ "type": "esd_tvs_array",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:34:39+00:00",
+  "items": [
+   {
+    "name": "Junction Temperature",
+    "symbol": "TJ",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "TSTG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Lead Soldering Temperature",
+    "symbol": "TL",
+    "unit": "℃",
+    "stat": "value",
+    "conditions": "10sec.",
+    "example": "260"
+   },
+   {
+    "name": "Peak Pulse Current",
+    "symbol": "IPP",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "tP = 8/20μS",
+    "example": "3"
+   },
+   {
+    "name": "IEC 61000-4-2 Contact (ESD)",
+    "symbol": "VESD",
+    "unit": "kV",
+    "stat": "value",
+    "conditions": "",
+    "example": "±10"
+   },
+   {
+    "name": "IEC 61000-4-2 Air (ESD)",
+    "symbol": "VESD",
+    "unit": "kV",
+    "stat": "value",
+    "conditions": "",
+    "example": "±15"
+   },
+   {
+    "name": "Reverse stand-off Voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "VBR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I =1mA",
+    "example": "6 to 7.2"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "IR",
+    "unit": "μA",
+    "stat": "range",
+    "conditions": "V =5V",
+    "example": "0.01 to 1"
+   },
+   {
+    "name": "Clamping Voltage (IEC 61000-4-5)",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IPP =3A, tP =8/20μS",
+    "example": "10"
+   },
+   {
+    "name": "Trigger Voltage (IEC 61000-4-2)",
+    "symbol": "VT",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "VESD =8kV",
+    "example": "135"
+   },
+   {
+    "name": "Clamping Voltage (IEC 61000-4-2)",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "VESD =8kV",
+    "example": "20"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =0V, f=1MHz, I/O to I/O",
+    "example": "0.15"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =0V, f=1MHz, I/O to GND",
+    "example": "0.35"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DFN2510"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Environmental",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS compliant"
+   },
+   {
+    "name": "ESD Protection",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 61000-4-2 ±10KV contact ±15KV air"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "I/O to I/O",
+    "example": "0.15"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "I/O to GND",
+    "example": "0.35"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SESUC5VD2510-10U"
+   }
+  ],
+  "seconds": 17.5,
+  "tokens_in": 1753,
+  "tokens_out": 1012
+ }
 }

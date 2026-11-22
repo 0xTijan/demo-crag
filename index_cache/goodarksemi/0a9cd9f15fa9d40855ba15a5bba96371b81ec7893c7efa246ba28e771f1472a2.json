@@ -22,5 +22,103 @@
   "tokens_in": 3395,
   "tokens_out": 87
  },
- "type": "zener_diode"
+ "type": "zener_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:26:41+00:00",
+  "items": [
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Thermal Resistance, Junction-to-Ambient",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "417"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "TJ",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "TSTG",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 To +150"
+   },
+   {
+    "name": "Zener Voltage VZ (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "@ IZT (mA)",
+    "example": "2.28"
+   },
+   {
+    "name": "Zener Voltage VZ (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "@ IZT (mA)",
+    "example": "2.40"
+   },
+   {
+    "name": "Zener Voltage VZ (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "@ IZT (mA)",
+    "example": "2.52"
+   },
+   {
+    "name": "Maximum Zener Impedance",
+    "symbol": "ZZT",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "@ IZT (mA)",
+    "example": "85"
+   },
+   {
+    "name": "Maximum Zener Impedance",
+    "symbol": "ZZK",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "@ IZK (mA)",
+    "example": "600"
+   },
+   {
+    "name": "Typical Temperature Coefficient",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "-0.065"
+   },
+   {
+    "name": "Maximum Reverse Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "@ VR (V)",
+    "example": "100.00"
+   }
+  ],
+  "seconds": 37.93,
+  "tokens_in": 3454,
+  "tokens_out": 492
+ }
 }

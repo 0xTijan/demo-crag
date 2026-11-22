@@ -22,5 +22,303 @@
   "tokens_in": 1954,
   "tokens_out": 68
  },
- "type": "power_inductor"
+ "type": "power_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:43:12+00:00",
+  "items": [
+   {
+    "name": "Saturation Rated Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Ta=25°C",
+    "example": "The current when the inductance becomes "
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40~125°C"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40~85°C"
+   },
+   {
+    "name": "Inductor Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "K: ±10% M: ±20% N: ±30%"
+   },
+   {
+    "name": "Packaging Style",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Tape and Reel"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "L",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.0μH～1000μH"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "100KHz, 0.1V",
+    "example": "0.05"
+   },
+   {
+    "name": "IDC",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2.90"
+   },
+   {
+    "name": "Test Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100KHz, 0.1V"
+   },
+   {
+    "name": "Bending Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Adhesion strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Mechanical shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Free fall test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Solder ability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "New solder shall cover 90% minimum of th"
+   },
+   {
+    "name": "Resistance to soldering heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Dielectric strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Without damage"
+   },
+   {
+    "name": "Insulation resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "100MΩ"
+   },
+   {
+    "name": "Low temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Dry heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Dump heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Temperature cycle",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Temperature drift",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance temperature coefficient 2000 "
+   },
+   {
+    "name": "Tape size",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "16"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Parts Per Reel",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "13\"",
+    "example": "2000"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1608: 6.60×4.45×2.92 3308: 12.95×9.40×3."
+   },
+   {
+    "name": "A max.",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "6.60"
+   },
+   {
+    "name": "B max.",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.45"
+   },
+   {
+    "name": "C max.",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.92"
+   },
+   {
+    "name": "D typ.",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.32"
+   },
+   {
+    "name": "E typ.",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.27"
+   },
+   {
+    "name": "F typ.",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.02"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.40"
+   },
+   {
+    "name": "I",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.56"
+   },
+   {
+    "name": "J",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.06"
+   }
+  ],
+  "seconds": 145.1,
+  "tokens_in": 10421,
+  "tokens_out": 2229
+ }
 }

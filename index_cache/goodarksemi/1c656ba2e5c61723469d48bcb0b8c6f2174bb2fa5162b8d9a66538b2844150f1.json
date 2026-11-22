@@ -22,5 +22,159 @@
   "tokens_in": 3446,
   "tokens_out": 86
  },
- "type": "tvs_diode"
+ "type": "tvs_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:21:52+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power Dissipation",
+    "symbol": "PPPM",
+    "unit": "W",
+    "stat": "min",
+    "conditions": "with a 10/1000uS Waveform1, 2 (Fig. 1)",
+    "example": "1500"
+   },
+   {
+    "name": "Peak Pulse Current",
+    "symbol": "IPPM",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "with a 10/1000uS Waveform1 (Fig. 3)",
+    "example": "See Next Table"
+   },
+   {
+    "name": "Power Dissipation on Infinite Heatsink",
+    "symbol": "PM(AV)",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "T =50°C A",
+    "example": "6.5"
+   },
+   {
+    "name": "Peak Forward Surge Current",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "8.3mS Single Half Sine-Wave Uni-directional only2",
+    "example": "200"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient Air",
+    "symbol": "R θJA",
+    "unit": "°C/W",
+    "stat": "value",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Thermal Resistance Junction to Leads",
+    "symbol": "R θJL",
+    "unit": "°C/W",
+    "stat": "value",
+    "conditions": "",
+    "example": "15"
+   },
+   {
+    "name": "Operating Junction and Storage Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "JEDEC DO-214AB (SMC) molded plastic"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Solder plated, solderable per MIL-STD-75"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "For uni-directional types the band denot"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.21"
+   },
+   {
+    "name": "Breakdown Voltage",
+    "symbol": "V BR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I T =10mA",
+    "example": "6.45 to 7.14"
+   },
+   {
+    "name": "Test Current",
+    "symbol": "I T",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Stand-off Voltage",
+    "symbol": "V WM",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "5.8"
+   },
+   {
+    "name": "Maximum Reverse Leakage",
+    "symbol": "I D",
+    "unit": "μA",
+    "stat": "value",
+    "conditions": "Vwm",
+    "example": "1000"
+   },
+   {
+    "name": "Maximum Peak Pulse Current",
+    "symbol": "I PPM",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "143"
+   },
+   {
+    "name": "Maximum Clamping Voltage",
+    "symbol": "V C @I PPM",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "10.5"
+   },
+   {
+    "name": "Maximum Temperature Coefficient",
+    "symbol": "V (BR)",
+    "unit": "% / °C",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.057"
+   }
+  ],
+  "seconds": 42.68,
+  "tokens_in": 5361,
+  "tokens_out": 866
+ }
 }

@@ -22,5 +22,303 @@
   "tokens_in": 1820,
   "tokens_out": 64
  },
- "type": "thick_film_chip_resistor"
+ "type": "thick_film_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:09:20+00:00",
+  "items": [
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0201/0402/0603/0805/1206/1210/2010/2512"
+   },
+   {
+    "name": "AEC-Q200 Qualified",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q200"
+   },
+   {
+    "name": "MSL",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Level 1"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "06 F T E U 1002 A"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.5% F: ±1% J: ±5% or Jumper"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: 7\"Taping Reel V:10\"Taping Reel W:13\"T"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "±200 ±100"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1/20W 1/16W 1/10W 1/8W 1/4W 1/3W 3/4W 1W"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 155"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "25 to 500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "50 to 500"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1Ω - 10MΩ"
+   },
+   {
+    "name": "Temperature Coefficient of Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "As Spec."
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.5 times RCWV or Max. Overload Voltage "
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "G",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Operational Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.10Ω) ±(3.0%+0.10Ω) <100mΩ"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.10Ω) ±(3.0%+0.10Ω) <100mΩ"
+   },
+   {
+    "name": "High Temperature Exposure",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω) ±(1.5%+0.10Ω) <50mΩ"
+   },
+   {
+    "name": "Board Flex",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω) ±(1.0%+0.05Ω) <50mΩ"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "95%"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "260±5°C for 10 seconds"
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No breakdown or flashover"
+   },
+   {
+    "name": "Temperature Cycling",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω) ±(1.5%+0.05Ω) <50mΩ"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.25%+0.05Ω) ±(1.0%+0.05Ω) <50mΩ"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω) ±(1.0%+0.05Ω) <50mΩ"
+   },
+   {
+    "name": "ESD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5KV 1KV 2KV"
+   },
+   {
+    "name": "Resistance to Solvents",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No visible damage on appearance and mark"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No broken"
+   },
+   {
+    "name": "Flammability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL-94 V-0 or V-1"
+   },
+   {
+    "name": "Sulfur Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "EIA-977 (Condition B) 105±2°C, no power "
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Tape Width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "inch",
+    "stat": "value",
+    "conditions": "",
+    "example": "7/10/13"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000 2201 1002 4992 1003"
+   }
+  ],
+  "seconds": 129.34,
+  "tokens_in": 11226,
+  "tokens_out": 2060
+ }
 }

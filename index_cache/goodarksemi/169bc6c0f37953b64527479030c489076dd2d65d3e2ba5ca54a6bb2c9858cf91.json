@@ -21,5 +21,159 @@
   "tokens_in": 1185,
   "tokens_out": 71
  },
- "type": "npn_transistor"
+ "type": "npn_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:20:48+00:00",
+  "items": [
+   {
+    "name": "Collector Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Collector Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Emitter Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "I C",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Total Power Dissipation",
+    "symbol": "P tot",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Max. Thermal Resistance from Junction to Ambient",
+    "symbol": "R θJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
+    "example": "625"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to + 150"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "V =5V, I =1mA CE C",
+    "example": "100 to 600"
+   },
+   {
+    "name": "Collector Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =50µA C",
+    "example": "50"
+   },
+   {
+    "name": "Collector Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =1mA C",
+    "example": "50"
+   },
+   {
+    "name": "Emitter Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =50µA E",
+    "example": "5"
+   },
+   {
+    "name": "Collector Base Cutoff Current",
+    "symbol": "I CBO",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =50V CB",
+    "example": "0.5"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =10mA, I =0.5mA C B",
+    "example": "0.3"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "typ",
+    "conditions": "V =10V, I =-5mA, F=100MHz CE E",
+    "example": "250"
+   },
+   {
+    "name": "Input Resistor",
+    "symbol": "R1",
+    "unit": "KΩ",
+    "stat": "typ",
+    "conditions": "GSMMBTRC231",
+    "example": "2.2"
+   },
+   {
+    "name": "Input Resistor",
+    "symbol": "R1",
+    "unit": "KΩ",
+    "stat": "typ",
+    "conditions": "GSMMBTRC233",
+    "example": "10"
+   },
+   {
+    "name": "Input Resistor",
+    "symbol": "R1",
+    "unit": "KΩ",
+    "stat": "typ",
+    "conditions": "GSMMBTRC234",
+    "example": "4.7"
+   }
+  ],
+  "seconds": 51.99,
+  "tokens_in": 1140,
+  "tokens_out": 870
+ }
 }

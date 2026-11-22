@@ -20,5 +20,87 @@
   "tokens_in": 1322,
   "tokens_out": 64
  },
- "type": "schottky_bridge_rectifier"
+ "type": "schottky_bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:51:38+00:00",
+  "items": [
+   {
+    "name": "Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "40"
+   },
+   {
+    "name": "Average Forward Current",
+    "symbol": "I F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2.0"
+   },
+   {
+    "name": "Peak Forward Surge Current (8.3ms Single Half Sine-Wave)",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient",
+    "symbol": "R th(JA)",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "measured on PC board with 5.0mm 2 (0.03mm thick) land areas",
+    "example": "110"
+   },
+   {
+    "name": "Thermal Resistance Junction to Lead",
+    "symbol": "R th(JL)",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "measured on PC board with 5.0mm 2 (0.03mm thick) land areas",
+    "example": "15"
+   },
+   {
+    "name": "Operating Junction and Storage Temperature Range",
+    "symbol": "T, T J STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I =2.0A F",
+    "example": "0.49"
+   },
+   {
+    "name": "Repetitive Peak Reverse Current",
+    "symbol": "I RRM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "V =Max.V , T =25°C R RRM A",
+    "example": "0.20"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "C J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =4V, F=1.0MHz R",
+    "example": "250"
+   }
+  ],
+  "seconds": 38.83,
+  "tokens_in": 1225,
+  "tokens_out": 584
+ }
 }

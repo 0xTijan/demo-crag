@@ -22,5 +22,591 @@
   "tokens_in": 1946,
   "tokens_out": 71
  },
- "type": "pulse_withstanding_chip_resistor"
+ "type": "pulse_withstanding_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:38:37+00:00",
+  "items": [
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402/0603/0805/1206/1210/2010/2512"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +155"
+   },
+   {
+    "name": "AEC-Q200 Qualified",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Yes"
+   },
+   {
+    "name": "MSL",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Level 1"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR02 (0402)",
+    "example": "1/5"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR03 (0603)",
+    "example": "1/8"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR05 (0805)",
+    "example": "1/4"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR06 (1206)",
+    "example": "1/3"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR13 (1210)",
+    "example": "1/2"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR10 (2010)",
+    "example": "3/4"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR12 (2512)",
+    "example": "1.5"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR02 (0402)",
+    "example": "50"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR03 (0603)",
+    "example": "50"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR05 (0805)",
+    "example": "150"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR06 (1206)",
+    "example": "200"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR13 (1210)",
+    "example": "200"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR10 (2010)",
+    "example": "400"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR12 (2512)",
+    "example": "500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR02 (0402)",
+    "example": "100"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR03 (0603)",
+    "example": "100"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR05 (0805)",
+    "example": "300"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR06 (1206)",
+    "example": "400"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR13 (1210)",
+    "example": "400"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR10 (2010)",
+    "example": "800"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "SWR12 (2512)",
+    "example": "1000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR02 (0402), 1Ω - 20Ω",
+    "example": "1 - 20"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR02 (0402), 22Ω - 1MΩ",
+    "example": "22 - 1000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR03 (0603), 1Ω - 270Ω",
+    "example": "1 - 270"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR03 (0603), 300Ω - 1MΩ",
+    "example": "300 - 1000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR05 (0805), 1Ω - 270Ω",
+    "example": "1 - 270"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR05 (0805), 300Ω - 20MΩ",
+    "example": "300 - 20000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR06 (1206), 1Ω - 20Ω",
+    "example": "1 - 20"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR06 (1206), 22Ω - 20MΩ",
+    "example": "22 - 20000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR13 (1210), 1Ω - 20Ω",
+    "example": "1 - 20"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR13 (1210), 22Ω - 20MΩ",
+    "example": "22 - 20000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR10 (2010), 1Ω - 20Ω",
+    "example": "1 - 20"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR10 (2010), 22Ω - 20MΩ",
+    "example": "22 - 20000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR12 (2512), 1Ω - 20Ω",
+    "example": "1 - 20"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "SWR12 (2512), 22Ω - 20MΩ",
+    "example": "22 - 20000000"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR02 (0402), ±300",
+    "example": "±300"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR02 (0402), ±100",
+    "example": "±100"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR03 (0603), ±200",
+    "example": "±200"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR03 (0603), ±100",
+    "example": "±100"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR05 (0805), ±200",
+    "example": "±200"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR05 (0805), ±100",
+    "example": "±100"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR06 (1206), ±200",
+    "example": "±200"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR06 (1206), ±100",
+    "example": "±100"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR13 (1210), ±200",
+    "example": "±200"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR13 (1210), ±100",
+    "example": "±100"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR10 (2010), ±200",
+    "example": "±200"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR10 (2010), ±100",
+    "example": "±100"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR12 (2512), ±350",
+    "example": "±350"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "SWR12 (2512), ±100",
+    "example": "±100"
+   },
+   {
+    "name": "Sulfur Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "△R±5%"
+   },
+   {
+    "name": "Flammability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL-94 V-0 or V-1"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 ~ 28"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "0402",
+    "example": "No Marking"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "0603",
+    "example": "3 digits marking in E24"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "0805~2512",
+    "example": "4 digits marking"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402/0603/0805/1206/1210/2010/2512"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "J",
+    "example": "±5"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "K",
+    "example": "±10"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "M",
+    "example": "±20"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR03 (0603), 1/4W 1/3W",
+    "example": "1/4, 1/3"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR05 (0805), 2/5W",
+    "example": "2/5"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR05 (0805), 1/2W *",
+    "example": "1/2"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR06 (1206), 1/2W",
+    "example": "1/2"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR06 (1206), 3/4W *",
+    "example": "3/4"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR13 (1210), 3/4W 1W",
+    "example": "3/4, 1"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR10 (2010), 1W 1.25W",
+    "example": "1, 1.25"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "SWR12 (2512), 2W *",
+    "example": "2"
+   }
+  ],
+  "seconds": 285.92,
+  "tokens_in": 8387,
+  "tokens_out": 3775
+ }
 }

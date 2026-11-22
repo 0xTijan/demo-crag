@@ -22,5 +22,383 @@
   "tokens_in": 2022,
   "tokens_out": 75
  },
- "type": "power_inductor"
+ "type": "power_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:41:24+00:00",
+  "items": [
+   {
+    "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Viking"
+   },
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Shielded SMD Power Inductor – SCDS Serie"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3D18/4D18/4D28/5D18/5D28/6D28/6D38"
+   },
+   {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "11-Apr-25"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.C3"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40～125°C"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40～85℃"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "25%∼80%"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1 years Max"
+   },
+   {
+    "name": "Rated DC Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Ta=25°C",
+    "example": "The current when the inductance becomes "
+   },
+   {
+    "name": "Dimensions (AxAxB)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3D18: 3.8x3.8x2.0 4D18: 4.7x4.7x2.0 4D28"
+   },
+   {
+    "name": "Inductor Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "M: ±20% N: ±30%"
+   },
+   {
+    "name": "Packaging Style",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Tape and Reel"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1R0: 1.0μH 470: 47μH 101: 100μH"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SCDS3D18"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.8±0.2"
+   },
+   {
+    "name": "B max.",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.8"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.6"
+   },
+   {
+    "name": "I",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.65"
+   },
+   {
+    "name": "J",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "Inductance and rated current ranges",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SCDS3D18: 1.0～220μH, 2.40～0.13A"
+   },
+   {
+    "name": "Part No",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SCDS3D18□T1R0"
+   },
+   {
+    "name": "L (μH)",
+    "symbol": "",
+    "unit": "μH",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "N"
+   },
+   {
+    "name": "Test Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100KHz, 0.1V"
+   },
+   {
+    "name": "DCR (Ω) max.",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.050"
+   },
+   {
+    "name": "IDC (A) max.",
+    "symbol": "",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2.40"
+   },
+   {
+    "name": "Bending Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Adhesion strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Mechanical shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Free fall test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Solder ability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "New solder shall cover 90% minimum of th"
+   },
+   {
+    "name": "Resistance to soldering heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Dielectric strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Without damage"
+   },
+   {
+    "name": "Insulation resistance",
+    "symbol": "",
+    "unit": "MΩ",
+    "stat": "min",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Low temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Dry heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Dump heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Temperature cycle",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Change from an initial value L : within±"
+   },
+   {
+    "name": "Temperature drift",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Inductance temperature coefficient 2000 "
+   },
+   {
+    "name": "Standard atmospheric conditions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ambient temperature : 5℃ to 35℃, Relativ"
+   },
+   {
+    "name": "Tape size W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "12"
+   },
+   {
+    "name": "Tape size P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Parts Per Reel",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "13\"",
+    "example": "1000"
+   }
+  ],
+  "seconds": 213.71,
+  "tokens_in": 13508,
+  "tokens_out": 2045
+ }
 }

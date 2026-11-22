@@ -21,5 +21,231 @@
   "tokens_in": 1715,
   "tokens_out": 54
  },
- "type": "thick_film_array_chip_resistor"
+ "type": "thick_film_array_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:57:38+00:00",
+  "items": [
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0201x2(Flat)/0201x4(Flat)/0402x4/0603x4"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "42: 0201x2 41: 0201x4 42: 0402x4 43: 060"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "F: ±1% J: ±5%"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: 7\"Taping Reel V:10\"Taping Reel W:13\"T"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "F: ±200 G: ±300"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +125°C"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1/32W"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "12.5"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "25"
+   },
+   {
+    "name": "Soldering Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "Pb-Free Assembly",
+    "example": "217"
+   },
+   {
+    "name": "Soldering Time",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "range",
+    "conditions": "Pb-Free Assembly",
+    "example": "60-150"
+   },
+   {
+    "name": "Peak Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "Pb-Free Assembly",
+    "example": "235-260"
+   },
+   {
+    "name": "Soldering Time",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "max",
+    "conditions": "Pb-Free Assembly",
+    "example": "30"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "G",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(2.0%+0.10Ω)"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(2.0%+0.10Ω)"
+   },
+   {
+    "name": "Dry Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω)"
+   },
+   {
+    "name": "Bending Strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω)"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "95%"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No breakdown or flashover"
+   },
+   {
+    "name": "Leaching",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Individual leaching area ≦5% Total leach"
+   },
+   {
+    "name": "Rapid Change of Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω)"
+   },
+   {
+    "name": "Sulfur Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω)"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15~28"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   }
+  ],
+  "seconds": 115.83,
+  "tokens_in": 5963,
+  "tokens_out": 1500
+ }
 }

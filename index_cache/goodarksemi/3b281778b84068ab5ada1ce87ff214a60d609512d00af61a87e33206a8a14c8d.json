@@ -22,5 +22,199 @@
   "tokens_in": 1692,
   "tokens_out": 78
  },
- "type": "schottky_bridge_rectifier"
+ "type": "schottky_bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:51:00+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "VRMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "14"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current",
+    "symbol": "I(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "See Fig.1",
+    "example": "2.0"
+   },
+   {
+    "name": "Peak Forward Surge Current",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "8.3ms Single Half Sine-Wave Superimposed on Rated Load (JEDEC Method)",
+    "example": "50"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "at 1.0A",
+    "example": "0.75"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "at 2.0A",
+    "example": "0.55"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current",
+    "symbol": "IR",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "at Rated DC Blocking Voltage, TA=25°C",
+    "example": "0.2"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current",
+    "symbol": "IR",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "at Rated DC Blocking Voltage, TA=100°C",
+    "example": "20.0"
+   },
+   {
+    "name": "Typical Thermal Resistance",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to +125"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to +150"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MBS molded plastic body"
+   },
+   {
+    "name": "Epoxy",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL94V-0 rate flame retardant"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Plated leads solderable per MIL-STD-750,"
+   },
+   {
+    "name": "Mounting position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "Flammability Classification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "94V-0"
+   },
+   {
+    "name": "RoHS Compliance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS 2002/95/EC"
+   },
+   {
+    "name": "WEEE Compliance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "WEEE 2002/96/EC"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MBS"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MS22"
+   },
+   {
+    "name": "Carrier",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape & Reel"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3,000 Pcs / Reel"
+   }
+  ],
+  "seconds": 37.86,
+  "tokens_in": 2249,
+  "tokens_out": 985
+ }
 }

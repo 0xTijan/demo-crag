@@ -1,0 +1,444 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: npn_transistor
+name: NPN bipolar transistor
+version: 1
+status: draft
+must_match: []
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T10:22:56+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - goodark/2sc3356_dff11266.md
+  - goodark/abc817-thru-abc818_4927709c.md
+  - goodark/bc807-16-25-40_0acbcdbf.md
+  - goodark/bc817-16-25-40_cb698ff0.md
+  - goodark/s9012_e5bfbef1.md
+  - goodarksemi/2n3904_ba12e1e8.md
+  - goodarksemi/gsbc847xd_f19dcac3.md
+  - goodarksemi/gsbcp68_13828719.md
+  - goodarksemi/gsmmbtrc23x_48e12821.md
+  - goodarksemi/mje350_4f1de7a3.md
+specs:
+  ic_max:
+    label: IC max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Current-Continuous
+    - I C
+    - Collector Current
+    - IC
+    - Collector Current – Continuous
+    found_in: 10/10
+  pc_max:
+    label: PC max
+    unit: W
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Power Dissipation
+    - P C
+    - Power Dissipation
+    - PD
+    - PC
+    - Total Power Dissipation
+    - P tot
+    found_in: 10/10
+  tj_max:
+    label: TJ max
+    unit: °C
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Operating junction temperature range
+    - TJ
+    - Operation Junction and Storage Temperature Range
+    - T/T J STG
+    - Junction Temperature
+    - Thermal Resistance Junction to Ambient
+    - R θJA
+    - T J
+    found_in: 10/10
+  vbrcebo_min:
+    label: V(BR)CBO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-base breakdown voltage
+    - V(BR)CBO
+    - Collector Base Breakdown Voltage
+    - V (BR)CBO
+    found_in: 10/10
+  vbrceo_min:
+    label: V(BR)CEO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-emitter breakdown voltage
+    - V(BR)CEO
+    - Collector Emitter Breakdown Voltage
+    - V (BR)CEO
+    - Collector-Emitter Sustaining Voltage
+    - V CEO(SUS)
+    found_in: 10/10
+  vbrebo_min:
+    label: V(BR)EBO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Emitter-base breakdown voltage
+    - V(BR)EBO
+    - Emitter Base Breakdown Voltage
+    - V (BR)EBO
+    found_in: 10/10
+  vcbo_max:
+    label: VCBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-Base Voltage
+    - V CBO
+    - Collector Base Voltage
+    - VCBO
+    found_in: 10/10
+  vceo_max:
+    label: VCEO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-Emitter Voltage
+    - V CEO
+    - Collector Emitter Voltage
+    - VCEO
+    found_in: 10/10
+  vebo_max:
+    label: VEBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Emitter -Base Voltage
+    - V EBO
+    - Emitter Base Voltage
+    - VEBO
+    - Emitter-Base Voltage
+    found_in: 10/10
+  hfe_range:
+    label: hFE range
+    unit: null
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - DC current gain
+    - hFE(1)
+    - hFE
+    - hFE1
+    - hFE2
+    - hFE3
+    - h FE
+    - hFE(2)
+    - hFE(3)
+    found_in: 10/10
+  t_stg_range:
+    label: TSTG range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage temperature range
+    - T STG
+    - Tstg
+    - Operating Temperature Range
+    - Storage Temperature
+    found_in: 10/10
+  vce_sat_max:
+    label: VCE(sat) max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Collector-emitter saturation voltage
+    - VCE(sat)
+    - Collector Emitter Saturation Voltage
+    - Collector-emittersaturation voltage
+    - V CE(sat)
+    - Low collector saturation voltage
+    found_in: 10/10
+  icbo_max:
+    label: ICBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Collector cut-off current
+    - ICBO
+    - Collector Base Cutoff Current
+    - ICEO
+    - I CBO
+    - Collector-Base Cutoff Current
+    found_in: 9/10
+  ft_min:
+    label: fT min
+    unit: MHz
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Transition frequency
+    - fT
+    - Delay time
+    - f T
+    found_in: 8/10
+  iebo_max:
+    label: IEBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Emitter cut-off current
+    - IEBO
+    - Emitter Base Cutoff Current
+    - Collector cut-off current
+    - I CBO
+    - I EBO
+    - Collector-Emitter Cutoff Current
+    - I CEO
+    found_in: 8/10
+  r_thja_max:
+    label: RθJA max
+    unit: °C/W
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Thermal Resistance from Junction to Ambient
+    - R θJA
+    - Thermal Resistance Junction to Ambient
+    - RthJA
+    - Max. Thermal Resistance from Junction to Ambient
+    - Thermal Resistance, Junction to Case
+    - R thj-c
+    found_in: 8/10
+  vbe_sat_max:
+    label: VBE(sat) max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Base -emitter saturation voltage
+    - VBE(sat)
+    - Base Emitter On Voltage
+    - VBE(on)
+    - Base-emitter saturation voltage
+    - Collector-emitter saturation voltage
+    - V BE(sat)
+    - Base-Emitter Voltage
+    - VBE1
+    - VBE2
+    found_in: 8/10
+  cob_typ:
+    label: Cob typ
+    unit: pF
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Collector output capacitance
+    - Cob
+    - Transition frequency
+    - C ob
+    - Delay Time
+    - t d
+    found_in: 7/10
+rare_specs:
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 4/10
+  pin_count:
+    label: Pin count
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Pin Count
+    found_in: 1/10
+  aec_q:
+    label: AEC-Q101
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - AEC-Q101 Qualification
+    found_in: 1/10
+  fall_time:
+    label: Fall time
+    unit: ns
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Fall Time
+    - t f
+    found_in: 1/10
+  halogen_free:
+    label: Halogen free
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Halogen and Antimony Free
+    found_in: 1/10
+  input_resistor:
+    label: Input resistor
+    unit: KΩ
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Input Resistor
+    - R1
+    found_in: 1/10
+  marking:
+    label: Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Marking
+    found_in: 1/10
+  packaging:
+    label: Packaging
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Packaging
+    found_in: 1/10
+  rise_time:
+    label: Rise time
+    unit: ns
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Rise Time
+    - t r
+    found_in: 1/10
+  rohs:
+    label: RoHS
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - RoHS Compliance
+    found_in: 1/10
+  spq:
+    label: SPQ
+    unit: Pcs
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - SPQ
+    found_in: 1/10
+  storage_time:
+    label: Storage time
+    unit: ns
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Storage Time
+    - t s
+    found_in: 1/10
+  delay_time:
+    label: Delay time
+    unit: ns
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases: []
+    found_in: 0/10
+  operating_temp_range:
+    label: Operating temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases: []
+    found_in: 0/10

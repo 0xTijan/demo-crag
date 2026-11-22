@@ -20,5 +20,423 @@
   "tokens_in": 2277,
   "tokens_out": 59
  },
- "type": "melf_resistor"
+ "type": "melf_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:23:58+00:00",
+  "items": [
+   {
+    "name": "Resistance range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.22Ω-1MΩ; 0Ω"
+   },
+   {
+    "name": "Resistance tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "±5%;±1%;±0.5%;±0.25%;±0.1%"
+   },
+   {
+    "name": "Temperature coefficient",
+    "symbol": "",
+    "unit": "ppm/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "±100ppm/℃; ±50ppm/℃; ±25ppm/℃; ±15ppm/℃"
+   },
+   {
+    "name": "Operation mode",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Standard"
+   },
+   {
+    "name": "Power rating P 70",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "",
+    "example": "1/8W"
+   },
+   {
+    "name": "Operating voltage U max.",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "150V"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55℃~155℃"
+   },
+   {
+    "name": "Max. resistance change at P70 for resistance range, ΔR/R max., after 1000 h",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "",
+    "example": "≦0.5%"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.20±0.10"
+   },
+   {
+    "name": "L 1 min.",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "min",
+    "conditions": "",
+    "example": "1.1"
+   },
+   {
+    "name": "ΦD",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.10±0.10"
+   },
+   {
+    "name": "ΦD 1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "D +0/-0.15"
+   },
+   {
+    "name": "K",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.45±0.05"
+   },
+   {
+    "name": "Weight 1,000EA",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "7.7"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CSRV0204DTDV1001"
+   },
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CSRV"
+   },
+   {
+    "name": "Dimensions (L×ΦD)",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "0102: 2.2x1.1 0204: 3.5x1.4 0207: 5.9x2."
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "T: 7” Taping Reel S:7” Taping Reel, Anti"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "S: ±5 B: ±10 N: ±15 C: ±25 D: ±50 E: ±10"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "T: 1W U: 1/2W V: 1/4W G: 2/5W P: 1/5W W:"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "0010: 1Ω 0100: 10Ω 2201: 2200Ω 1001: 1KΩ"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.8"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.5"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +155°C"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "150V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "300V"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.1% (E24,E96)",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.25% (E24,E96)",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96)",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96)",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24)",
+    "example": "0.22Ω-1MΩ"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±15",
+    "example": "±15"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±25",
+    "example": "±25"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±50",
+    "example": "±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±100",
+    "example": "±100"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "High power",
+    "example": "-55 ~ +155°C"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "High power",
+    "example": "200V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "High power",
+    "example": "400V"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.1% (E24,E96) High power",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.25% (E24,E96) High power",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96) High power",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96) High power",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24) High power",
+    "example": "0.22Ω-1MΩ"
+   },
+   {
+    "name": "Jumper Specifications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0Ω(<15mΩ)"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2A"
+   },
+   {
+    "name": "AEC-Q200",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliance"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "95% min. coverage"
+   },
+   {
+    "name": "Flammability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL-94 V-0 or V-1"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2 years from production date"
+   }
+  ],
+  "seconds": 118.43,
+  "tokens_in": 12760,
+  "tokens_out": 3083
+ }
 }

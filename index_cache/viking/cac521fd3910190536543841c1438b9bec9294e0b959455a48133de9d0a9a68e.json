@@ -18,5 +18,14 @@
   "tokens_in": 2148,
   "tokens_out": 37
  },
- "type": "multilayer_ceramic_capacitor"
+ "type": "multilayer_ceramic_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:23:51+00:00",
+  "items": [],
+  "seconds": 75.62,
+  "tokens_in": 8194,
+  "tokens_out": 54
+ }
 }

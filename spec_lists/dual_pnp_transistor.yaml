@@ -1,0 +1,453 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: dual_pnp_transistor
+name: dual PNP transistor
+version: 1
+status: draft
+must_match:
+- package
+- pin_count
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T15:04:46+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - goodarksemi/bc856s_447afca5.md
+  - goodarksemi/bc857s_5f673ef8.md
+  - goodarksemi/gsbc857xde_29f2f290.md
+  - goodarksemi/mmdt2907a_cf26fbe3.md
+  - goodarksemi/mmdt3906_16745713.md
+specs:
+  ic_max:
+    label: IC max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Current-Continuous
+    - IC
+    - Collector Current –Continuous
+    - Collector Current
+    - I C
+    - Collector Current - Continuous
+    found_in: 5/5
+  pc_max:
+    label: PC max
+    unit: W
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Power Dissipation
+    - PC
+    - Collector Power
+    - Power Dissipation
+    - P tot
+    found_in: 5/5
+  vbr_cbo_max:
+    label: V(BR)CBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-Base Breakdown Voltage
+    - V (BR)CBO
+    - V(BR)CBO
+    - Collector Base Breakdown Voltage
+    found_in: 5/5
+  vbr_ceo_max:
+    label: V(BR)CEO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-Emitter Breakdown Voltage
+    - V (BR)CEO
+    - V(BR)CEO
+    - Collector Emitter Breakdown Voltage
+    found_in: 5/5
+  vbr_ebo_max:
+    label: V(BR)EBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Emitter-Base Breakdown Voltage
+    - V (BR)EBO
+    - V(BR)EBO
+    - Emitter Base Breakdown Voltage
+    found_in: 5/5
+  vcb_max:
+    label: VCBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-Base Voltage
+    - VCBO
+    - Collector Base Voltage
+    - V CBO
+    found_in: 5/5
+  vce_max:
+    label: VCEO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-Emitter Voltage
+    - VCEO
+    - Collector Emitter Voltage
+    - V CEO
+    found_in: 5/5
+  veb_max:
+    label: VEBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Emitter-Base Voltage
+    - VEBO
+    - Emitter Base Voltage
+    - V EBO
+    found_in: 5/5
+  cob_max:
+    label: Cob max
+    unit: pF
+    stat: max
+    conditions: VCB=-10V, f=1MHz
+    rule: <=
+    critical: false
+    aliases:
+    - Output Capacitance
+    - C obo
+    - Collector Output Capacitance
+    - Cob
+    - C ob
+    found_in: 5/5
+  ft_min:
+    label: fT min
+    unit: MHz
+    stat: min
+    conditions: VCE=-5V, IC=-10mA, f=100MHz
+    rule: '>='
+    critical: false
+    aliases:
+    - Transition Frequency
+    - f T
+    - fT
+    - Gain Bandwidth Product
+    found_in: 5/5
+  iebo_max:
+    label: IEBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Emitter Cut-off Current
+    - I EBO
+    - DC Current Gain
+    - hFE
+    - Emitter Base Cutoff Current
+    - Base Cut-off Current
+    found_in: 5/5
+  rja_value:
+    label: RθJA value
+    unit: °C/W
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Typical Thermal Resistance from Junction to Ambient
+    - RθJA
+    - Thermal Resistance from Junction to Ambient
+    - Thermal Resistance from Junction Ambient
+    - R θJA
+    - Junction Temperature
+    - Thermal Resistance from Junction to Ambient Air
+    found_in: 5/5
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 4/5
+  pin_count:
+    label: Pin Count
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Pin Count
+    found_in: 4/5
+  icbo_max:
+    label: ICBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Collector Cut-off Current
+    - I CBO
+    - Collector Cutoff Current
+    - ICBO
+    - Collector Base Cutoff Current
+    found_in: 4/5
+  operating_temp_range:
+    label: Operating Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Temperature Range
+    found_in: 4/5
+  tj_range:
+    label: Operating Junction Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Junction Temperature Range
+    - Junction & Storage Temperature
+    - Operating and Storage Temperature Range
+    - T, T J stg
+    - Junction Temperature
+    found_in: 4/5
+  rohs:
+    label: RoHS
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - RoHS
+    - Qualifications
+    found_in: 3/5
+  ts_range:
+    label: Storage Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature Range
+    - Storage Temperature
+    found_in: 3/5
+  vce_sat_max:
+    label: VCE(sat) max
+    unit: V
+    stat: max
+    conditions: IC=-10mA, IB=-0.5mA
+    rule: <=
+    critical: false
+    aliases:
+    - Collector-Emitter Saturation Voltage
+    - V CE(sat)
+    - VCE(SAT)1
+    - Collector Emitter Saturation Voltage
+    found_in: 3/5
+  vce_sat_max_100ma:
+    label: VCE(sat) max
+    unit: V
+    stat: max
+    conditions: IC=-100mA, IB=-5mA
+    rule: <=
+    critical: false
+    aliases:
+    - Collector-Emitter Saturation Voltage
+    - V CE(sat)
+    - VCE(SAT)2
+    - Collector Emitter Saturation Voltage
+    found_in: 3/5
+rare_specs:
+  aec_q:
+    label: AEC-Q101
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - AEC-Q101
+    - Qualifications
+    found_in: 2/5
+  hfe_min:
+    label: hFE min
+    unit: '-'
+    stat: min
+    conditions: VCE=-5V, IC=-2mA
+    rule: '>='
+    critical: false
+    aliases:
+    - DC Current Gain
+    - h FE
+    found_in: 2/5
+  hfe_range:
+    label: hFE range
+    unit: '-'
+    stat: range
+    conditions: VCE=-5V, IC=-2mA
+    rule: contains
+    critical: false
+    aliases:
+    - DC Current Gain
+    - h FE(4)
+    - h FE(3)
+    found_in: 2/5
+  mounting_type:
+    label: Mounting Type
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Mounting Type
+    found_in: 2/5
+  noise_figure:
+    label: NF max
+    unit: dB
+    stat: max
+    conditions: VCE=-5V, IC=-0.2mA, f=1kHz, R=2k, BW=200Hz
+    rule: <=
+    critical: false
+    aliases:
+    - Noise Figure
+    - NF
+    found_in: 2/5
+  part_number:
+    label: Part Number
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Part Number
+    found_in: 2/5
+  td_max:
+    label: td max
+    unit: nS
+    stat: max
+    conditions: VCC=-30V, IC=-150mA, IB=-15mA
+    rule: <=
+    critical: false
+    aliases:
+    - Delay Time
+    - t d
+    found_in: 2/5
+  tf_max:
+    label: tf max
+    unit: nS
+    stat: max
+    conditions: VCC=-6V, IC=-150mA, IB=-15mA
+    rule: <=
+    critical: false
+    aliases:
+    - Fall Time
+    - t f
+    found_in: 2/5
+  tr_max:
+    label: tr max
+    unit: nS
+    stat: max
+    conditions: VCC=-30V, IC=-150mA, IB=-15mA
+    rule: <=
+    critical: false
+    aliases:
+    - Rise Time
+    - t r
+    found_in: 2/5
+  ts_max:
+    label: ts max
+    unit: nS
+    stat: max
+    conditions: VCC=-6V, IC=-150mA, IB=-15mA
+    rule: <=
+    critical: false
+    aliases:
+    - Storage Time
+    - t s
+    found_in: 2/5
+  vbe_sat_max:
+    label: VBE(sat) max
+    unit: V
+    stat: max
+    conditions: IC=-10mA, IB=-0.5mA
+    rule: <=
+    critical: false
+    aliases:
+    - Base-Emitter Saturation Voltage
+    - V BE(sat)
+    - Base-Emitter Voltage
+    - VBE(1)
+    found_in: 2/5
+  ib_max:
+    label: Cib max
+    unit: pF
+    stat: max
+    conditions: VEB=-2V, f=1MHz
+    rule: <=
+    critical: false
+    aliases:
+    - Input Capacitance
+    - C ib
+    found_in: 1/5
+  marking:
+    label: Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Marking
+    found_in: 1/5
+  quantity:
+    label: Quantity
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Quantity
+    found_in: 1/5

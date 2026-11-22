@@ -18,5 +18,183 @@
   "tokens_in": 1268,
   "tokens_out": 41
  },
- "type": "dual_npn_transistor"
+ "type": "dual_npn_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:52:47+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "VCBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "VCEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "45"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "VEBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "IC",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "Ptot",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "Device mounted on FR-4 substrate PC board, with minimum recommended pad layout",
+    "example": "150"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +150"
+   },
+   {
+    "name": "Thermal Resistance from Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "Device mounted on FR-4 substrate PC board, with minimum recommended pad layout",
+    "example": "833"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V(BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IC=10µA",
+    "example": "50"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V(BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IC=10mA",
+    "example": "45"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V(BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IE=1µA",
+    "example": "6"
+   },
+   {
+    "name": "Collector Base Cut-off Current",
+    "symbol": "ICBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VCB=30V",
+    "example": "15"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "hFE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "VCE=5V, IC=2mA",
+    "example": "200 to 450"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "VCE(SAT)",
+    "unit": "mV",
+    "stat": "max",
+    "conditions": "IC=10mA, IB=0.5mA",
+    "example": "100"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "VCE(SAT)",
+    "unit": "mV",
+    "stat": "max",
+    "conditions": "IC=100mA, IB=5mA",
+    "example": "300"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "VBE(SAT)",
+    "unit": "mV",
+    "stat": "typ",
+    "conditions": "IC=10mA, IB=0.5mA",
+    "example": "700"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "VBE(SAT)",
+    "unit": "mV",
+    "stat": "typ",
+    "conditions": "IC=100mA, IB=5mA",
+    "example": "900"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "VBE",
+    "unit": "mV",
+    "stat": "min",
+    "conditions": "VCE=5V, IC=2mA",
+    "example": "580"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "VBE",
+    "unit": "mV",
+    "stat": "max",
+    "conditions": "VCE=5V, IC=10mA",
+    "example": "770"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "fT",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "VCE=5V, IC=10mA, f=100MHz",
+    "example": "100"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "COB",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VCB=10V, f=1MHz",
+    "example": "4.5"
+   }
+  ],
+  "seconds": 17.73,
+  "tokens_in": 1206,
+  "tokens_out": 1066
+ }
 }

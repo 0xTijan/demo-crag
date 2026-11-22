@@ -22,5 +22,127 @@
   "tokens_in": 1820,
   "tokens_out": 82
  },
- "type": "fast_acting_chip_fuse"
+ "type": "fast_acting_chip_fuse",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:54:42+00:00",
+  "items": [
+   {
+    "name": "Ampere Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "range",
+    "conditions": "",
+    "example": "500-10000"
+   },
+   {
+    "name": "% of Amp Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "Hours",
+    "stat": "min",
+    "conditions": "% of Amp Rating=100%",
+    "example": "4"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "Seconds",
+    "stat": "max",
+    "conditions": "% of Amp Rating=250%",
+    "example": "5"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Voltage Rating",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AC",
+    "example": "250"
+   },
+   {
+    "name": "Voltage Rating",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "DC",
+    "example": "125"
+   },
+   {
+    "name": "Interrupting Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "DC",
+    "example": "50"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "ohms",
+    "stat": "typ",
+    "conditions": "DC Cold",
+    "example": "0.900"
+   },
+   {
+    "name": "Typical Melting I2t",
+    "symbol": "",
+    "unit": "A2s",
+    "stat": "typ",
+    "conditions": "DC",
+    "example": "0.10"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "F"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "6125"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   }
+  ],
+  "seconds": 11.38,
+  "tokens_in": 1558,
+  "tokens_out": 535
+ }
 }

@@ -22,5 +22,287 @@
   "tokens_in": 1855,
   "tokens_out": 76
  },
- "type": "polymer_aluminum_capacitor"
+ "type": "polymer_aluminum_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:05:37+00:00",
+  "items": [
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0506/0645/0606/6102/0807/0810/0812/1012"
+   },
+   {
+    "name": "Rated voltage",
+    "symbol": "",
+    "unit": "Vdc",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.5~25"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "at 105°C",
+    "example": "2,000"
+   },
+   {
+    "name": "Suitable for",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DC-DC converters, voltage regulators and"
+   },
+   {
+    "name": "RoHS Compliant",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Yes"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "5.0±0.5"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.5~12.3"
+   },
+   {
+    "name": "α",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "±0.2~±0.5"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.00~0.20"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "5.3±0.2~10.3±0.2"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "5.3±0.2~10.3±0.2"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.0±0.2~11.0±0.2"
+   },
+   {
+    "name": "R",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.5~1.1"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.4±0.3~4.6±0.3"
+   },
+   {
+    "name": "Tolerance on Rated Capacitance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "at 120Hz±10% at 20±2°C",
+    "example": "±20%"
+   },
+   {
+    "name": "Leakage current",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "after 2 minutes with voltage reaching rated value at 20±2°C",
+    "example": "In accordance within standard ratings"
+   },
+   {
+    "name": "Tangent of loss angle (tanδ)",
+    "symbol": "tanδ",
+    "unit": "",
+    "stat": "max",
+    "conditions": "at 120Hz±10% at 20±2°C",
+    "example": "0.12"
+   },
+   {
+    "name": "Equivalent Series Resistance (ESR)",
+    "symbol": "ESR",
+    "unit": "",
+    "stat": "max",
+    "conditions": "at 100kHz",
+    "example": "shall be less than or equal to the value"
+   },
+   {
+    "name": "Impedance ratio: Z(-55°C)/Z(+20°C)",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "at -55±3°C, 100kHz",
+    "example": "1.25"
+   },
+   {
+    "name": "Impedance ratio: Z(-105°C)/Z(+20°C)",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "at -105±2°C, 100kHz",
+    "example": "1.25"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "120Hz≦f＜1KHz",
+    "example": "0.05"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "1KHz≦f＜10KHz",
+    "example": "0.03"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "10KHz≦f＜50KHz",
+    "example": "0.7"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "50KHz≦f＜100KHz",
+    "example": "0.85"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "100KHz≦f≦300KHz",
+    "example": "1"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Polarized"
+   },
+   {
+    "name": "Over voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Do not apply voltage higher than rated v"
+   },
+   {
+    "name": "Ripple current",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Do not exceed rated ripple current"
+   },
+   {
+    "name": "Operating temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "105"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Red ink"
+   },
+   {
+    "name": "Series",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AVEA"
+   },
+   {
+    "name": "Year Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "EX:Z-2019,A-2020"
+   },
+   {
+    "name": "Rated Capacitance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Rated Capacitance"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "",
+    "unit": "Vdc",
+    "stat": "value",
+    "conditions": "",
+    "example": "Rated Voltage"
+   }
+  ],
+  "seconds": 51.15,
+  "tokens_in": 5095,
+  "tokens_out": 1523
+ }
 }

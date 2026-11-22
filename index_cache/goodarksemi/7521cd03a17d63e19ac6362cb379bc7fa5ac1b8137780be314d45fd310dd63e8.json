@@ -18,5 +18,319 @@
   "tokens_in": 1595,
   "tokens_out": 42
  },
- "type": "dual_pnp_transistor"
+ "type": "dual_pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:02:46+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "VCBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-40"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "VCEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-40"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "VEBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Current-Continuous",
+    "symbol": "IC",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "-200"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "PC",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Thermal Resistance from Junction to Ambient Air",
+    "symbol": "RθJA",
+    "unit": "℃/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "625"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10μA,I =0 C E",
+    "example": "-40"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-1mA,I =0 C B",
+    "example": "-40"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10μA,I =0 E C",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Cut-off Current",
+    "symbol": "I CEX",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-30V,V =-3V CE EB(OFF)",
+    "example": "-50"
+   },
+   {
+    "name": "Base Cut-off Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-5V,I =0 EB C",
+    "example": "-50"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE(1)",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =-1V,I =-0.1mA CE C",
+    "example": "60"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE(2)",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =-1V,I =-1mA CE C",
+    "example": "80"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE(3)",
+    "unit": "",
+    "stat": "range",
+    "conditions": "V =-1V,I =-10mA CE C",
+    "example": "100 to 300"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE(4)",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =-1V,I =-50mA CE C",
+    "example": "60"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE(5)",
+    "unit": "",
+    "stat": "min",
+    "conditions": "V =-1V,I =-100mA CE C",
+    "example": "30"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)1",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10mA,I =-1mA C B",
+    "example": "-0.25"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)2",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-50mA,I =-5mA C B",
+    "example": "-0.4"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "V BE(sat)1",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I =-10mA,I =-1mA C B",
+    "example": "-0.65 to -0.85"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "V BE(sat)2",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-50mA,I =-5mA C B",
+    "example": "-0.95"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =-20V,I =-10mA,f=100MHz CE C",
+    "example": "250"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =-5V,I =0,f=1MHz CB E",
+    "example": "4.5"
+   },
+   {
+    "name": "Noise Figure",
+    "symbol": "NF",
+    "unit": "dB",
+    "stat": "max",
+    "conditions": "V =-5V,I =-0.1mA,f=1KHz,R =1K CE c g",
+    "example": "4"
+   },
+   {
+    "name": "Delay Time",
+    "symbol": "t d",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-3V, V =0.5V CC BE I =-10mA , I =-I =-1mA C B1 B2",
+    "example": "35"
+   },
+   {
+    "name": "Rise Time",
+    "symbol": "t r",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-3V, V =0.5V CC BE I =-10mA , I =-I =-1mA C B1 B2",
+    "example": "35"
+   },
+   {
+    "name": "Storage Time",
+    "symbol": "t S",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-3V, I =-10mA CC C I =-I =- 1mA B1 B2",
+    "example": "225"
+   },
+   {
+    "name": "Fall Time",
+    "symbol": "t f",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "V =-3V, I =-10mA CC C I =-I =- 1mA B1 B2",
+    "example": "75"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-363"
+   },
+   {
+    "name": "Pin Count",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Mounting Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Surface Mount"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Qualifications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q101"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MMDT3906"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "K3N"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3000pcs / Reel"
+   }
+  ],
+  "seconds": 29.35,
+  "tokens_in": 2496,
+  "tokens_out": 1892
+ }
 }

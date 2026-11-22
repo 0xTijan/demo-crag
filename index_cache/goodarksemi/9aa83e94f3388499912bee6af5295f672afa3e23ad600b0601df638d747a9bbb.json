@@ -18,5 +18,399 @@
   "tokens_in": 1213,
   "tokens_out": 42
  },
- "type": "ptc_thermistor"
+ "type": "ptc_thermistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:59:57+00:00",
+  "items": [
+   {
+    "name": "Maximum voltage (RMS)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Temperature range (V=Vmax)",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "V=Vmax",
+    "example": "0 to +70"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "typ",
+    "conditions": "",
+    "example": "~0.4921"
+   },
+   {
+    "name": "Resistance(25℃)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "25℃",
+    "example": "25"
+   },
+   {
+    "name": "Rated zero power resistance (25℃)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "25℃",
+    "example": "20 to 30"
+   },
+   {
+    "name": "Hold current at 25±2℃",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "min",
+    "conditions": "25±2℃",
+    "example": "90"
+   },
+   {
+    "name": "Trip time 3A→1.50A",
+    "symbol": "",
+    "unit": "s",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "1A→0.5A",
+    "symbol": "",
+    "unit": "s",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.5"
+   },
+   {
+    "name": "0.5 A→0.15A",
+    "symbol": "",
+    "unit": "s",
+    "stat": "max",
+    "conditions": "",
+    "example": "4.5"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Max Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Max Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Surge test: 10/700μs, 1.5KV, 37.5A,30 Cycles",
+    "symbol": "",
+    "unit": "A",
+    "stat": "typ",
+    "conditions": "10/700μs, 1.5KV, 37.5A,30 Cycles",
+    "example": "37.5"
+   },
+   {
+    "name": "Operating temperature range (V=0)",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "V=0",
+    "example": "-40 to 85"
+   },
+   {
+    "name": "Operating temperature range (V=Vmax)",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "V=Vmax",
+    "example": "0 to 70"
+   },
+   {
+    "name": "Lead material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tin plated brass"
+   },
+   {
+    "name": "Coating material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Silicon resin"
+   },
+   {
+    "name": "Solder heat withstand",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC-STD 68-2-20"
+   },
+   {
+    "name": "Lead solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "EIC60068-2-58"
+   },
+   {
+    "name": "Flammability rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 695-2-2 Needle Flame Test for 20 s"
+   },
+   {
+    "name": "Storage humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Per IPC/JEDEC J-STD-020A Level 2a"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "235℃，Immerging time is 2±0.5s",
+    "example": "Tinning must be well after testing."
+   },
+   {
+    "name": "Soldering heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "350℃， 3.5±0.5s，measure the value of its resistance",
+    "example": "|(R2-R1)/R1|＜20%"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "10HZ to 55HZ within one minute. Displacement of swing is 0.75mm. two directions of X/Y respectively 45minute",
+    "example": "|(R2-R1)/R1|＜20%"
+   },
+   {
+    "name": "Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "100 m/s 2 for 11ms. two directions of X/Y respectively 60~80 time per minute ，1000 times",
+    "example": "|(R2-R1)/R1|＜20%"
+   },
+   {
+    "name": "Damp heat,steady state",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "40℃ ，humidity of 90%-95% ，48hrs",
+    "example": "|(R2-R1)/R1|＜20%"
+   },
+   {
+    "name": "Dry Hot",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "70℃ ，2 h",
+    "example": "|(R2-R1)/R1|＜20%"
+   },
+   {
+    "name": "Dry Cold",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "-10℃，2 h.",
+    "example": "|(R2-R1)/R1|＜20%"
+   },
+   {
+    "name": "Thermal Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "-10℃，70℃，exposing for 30min，transfer for 2minute，circulate for 5 times",
+    "example": "|(R2-R1)/R1|＜20%"
+   },
+   {
+    "name": "Telecom Standards",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ITU-T K.20/21/45, GR-1089-CORE, YD/741, "
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "7.0 to 8.5"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.5 to 5.0"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "8.5 to 12.5"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.5 to 4.5"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.55 to 0.65"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.5 to 6.5"
+   },
+   {
+    "name": "Recommended wave soldering temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "235"
+   },
+   {
+    "name": "Wave soldering time",
+    "symbol": "",
+    "unit": "s",
+    "stat": "value",
+    "conditions": "",
+    "example": "2±0.5"
+   },
+   {
+    "name": "Soldering heat time",
+    "symbol": "",
+    "unit": "s",
+    "stat": "value",
+    "conditions": "350℃",
+    "example": "3.5±0.5"
+   },
+   {
+    "name": "Storage temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to +55"
+   },
+   {
+    "name": "Storage humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "at 25℃",
+    "example": "≦85"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Bulk"
+   },
+   {
+    "name": "Bag QTY",
+    "symbol": "",
+    "unit": "PCS",
+    "stat": "value",
+    "conditions": "",
+    "example": "640"
+   },
+   {
+    "name": "Box QTY",
+    "symbol": "",
+    "unit": "PCS",
+    "stat": "value",
+    "conditions": "",
+    "example": "10240"
+   },
+   {
+    "name": "Component Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.4921"
+   },
+   {
+    "name": "Net Weight Per Box",
+    "symbol": "",
+    "unit": "Kg",
+    "stat": "typ",
+    "conditions": "",
+    "example": "5.04"
+   },
+   {
+    "name": "Gross Weight/Per Box",
+    "symbol": "",
+    "unit": "Kg",
+    "stat": "typ",
+    "conditions": "",
+    "example": "6.54"
+   },
+   {
+    "name": "Box Outline",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "380×250×290"
+   }
+  ],
+  "seconds": 153.85,
+  "tokens_in": 2298,
+  "tokens_out": 2237
+ }
 }

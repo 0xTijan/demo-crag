@@ -20,5 +20,135 @@
   "tokens_in": 1122,
   "tokens_out": 54
  },
- "type": "switching_diode"
+ "type": "switching_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:29:08+00:00",
+  "items": [
+   {
+    "name": "Reverse Voltage",
+    "symbol": "V R",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Peak Repetitive Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "P D",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "225"
+   },
+   {
+    "name": "Non-repetitive Peak Forward Current",
+    "symbol": "I FM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Repetitive peak forward surge current",
+    "symbol": "I FRM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "625"
+   },
+   {
+    "name": "Peak Forward Surge Current@tp=1us; TA=25℃",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "tp=1us; TA=25℃",
+    "example": "2.5"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Thermal Resistance from Junction to Ambient",
+    "symbol": "R θJA",
+    "unit": "℃/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "555"
+   },
+   {
+    "name": "Reverse Voltage",
+    "symbol": "V (BR)",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =100uA R",
+    "example": "250"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =100mA F",
+    "example": "1.00"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =200mA F",
+    "example": "1.25"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "VR=200V",
+    "example": "0.1"
+   },
+   {
+    "name": "Typical junction capacitance",
+    "symbol": "C J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VR=0V, f=1MHZ",
+    "example": "5"
+   },
+   {
+    "name": "Typical reverse recovery time",
+    "symbol": "TR R",
+    "unit": "uS",
+    "stat": "typ",
+    "conditions": "IF=IR=30mA RL=100Ω IRR=0.1 X IR",
+    "example": "5 0"
+   }
+  ],
+  "seconds": 52.27,
+  "tokens_in": 1137,
+  "tokens_out": 713
+ }
 }

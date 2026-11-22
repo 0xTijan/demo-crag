@@ -18,5 +18,159 @@
   "tokens_in": 1120,
   "tokens_out": 44
  },
- "type": "schottky_rectifier"
+ "type": "schottky_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:48:51+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Maximum RMS voltage",
+    "symbol": "VRMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "105"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Maximum average forward",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Peak forward surge current,8.3ms single half sine-wave superimposed on rated loa",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "TJ",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "TSTG",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Forward drop voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=15A, TJ =25℃",
+    "example": "0.90"
+   },
+   {
+    "name": "Forward drop voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=15A, TJ =125℃",
+    "example": "0.80"
+   },
+   {
+    "name": "Reverse leakage current @VR",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "TJ =25℃",
+    "example": "200"
+   },
+   {
+    "name": "Reverse leakage current @VR",
+    "symbol": "IR",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "TJ =100℃",
+    "example": "15"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case",
+    "symbol": "RθJC",
+    "unit": "°C /W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "2.0"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "°C /W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "62.5"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Epoxy, Molded"
+   },
+   {
+    "name": "Finish",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "All External Surfaces Corrosion Resistan"
+   },
+   {
+    "name": "Lead Temperature for Soldering Purposes",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Shipped",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "50 units per plastic tube"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220AB"
+   }
+  ],
+  "seconds": 50.07,
+  "tokens_in": 1645,
+  "tokens_out": 796
+ }
 }

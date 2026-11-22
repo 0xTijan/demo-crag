@@ -18,5 +18,167 @@
   "tokens_in": 1309,
   "tokens_out": 36
  },
- "type": "npn_transistor"
+ "type": "npn_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:21:36+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "12"
+   },
+   {
+    "name": "Emitter -Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Collector Current-Continuous",
+    "symbol": "I C",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "P C",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55-+150"
+   },
+   {
+    "name": "Thermal Resistance from Junction to Ambient",
+    "symbol": "R θJA",
+    "unit": "℃/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "625"
+   },
+   {
+    "name": "Collector-base breakdown voltage",
+    "symbol": "V(BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IC=100uA, IE=0",
+    "example": "20"
+   },
+   {
+    "name": "Collector-emitter breakdown voltage",
+    "symbol": "V(BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IC=1mA, IB=0",
+    "example": "12"
+   },
+   {
+    "name": "Emitter-base breakdown voltage",
+    "symbol": "V(BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IE=100uA, IC=0",
+    "example": "3"
+   },
+   {
+    "name": "Collector cut-off current",
+    "symbol": "ICBO",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "VCB=10V, IE=0",
+    "example": "1"
+   },
+   {
+    "name": "Emitter cut-off current",
+    "symbol": "IEBO",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "VEB=1V, IC=0",
+    "example": "1"
+   },
+   {
+    "name": "DC current gain",
+    "symbol": "hFE(1)",
+    "unit": "",
+    "stat": "range",
+    "conditions": "VCE=10V, IC=20mA",
+    "example": "50-250"
+   },
+   {
+    "name": "Collector-emitter saturation voltage",
+    "symbol": "VCE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=50mA, IB=5mA",
+    "example": "0.3"
+   },
+   {
+    "name": "Base -emitter saturation voltage",
+    "symbol": "VBE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IC=50mA, IB=5mA",
+    "example": "1.15"
+   },
+   {
+    "name": "Transition frequency",
+    "symbol": "fT",
+    "unit": "MHz",
+    "stat": "typ",
+    "conditions": "VCE=10V, IC=20mA",
+    "example": "7"
+   },
+   {
+    "name": "Collector output capacitance",
+    "symbol": "Cob",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VCB=10V,IE=0,f=1MHZ",
+    "example": "0.8"
+   },
+   {
+    "name": "Noise figure",
+    "symbol": "NF",
+    "unit": "dB",
+    "stat": "typ",
+    "conditions": "VCE=10V,IC=7mA,Rg=10kΩ, f=1GHz",
+    "example": "1.65"
+   }
+  ],
+  "seconds": 59.94,
+  "tokens_in": 1263,
+  "tokens_out": 931
+ }
 }

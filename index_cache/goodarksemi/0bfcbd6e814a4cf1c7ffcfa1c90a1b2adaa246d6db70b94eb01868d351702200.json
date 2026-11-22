@@ -18,5 +18,175 @@
   "tokens_in": 1026,
   "tokens_out": 43
  },
- "type": "fast_recovery_rectifier"
+ "type": "fast_recovery_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:08:23+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "VRMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "140"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "Peak Forward Surge Current (8.3 ms Single Half Sine-Wave Superimposed on Rated L",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Operating Junction, Storage Temperature Range",
+    "symbol": "TJ, TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "- 55 to + 150"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "1A",
+    "example": "1.3"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "5.0"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "TA=125°C",
+    "example": "50"
+   },
+   {
+    "name": "Typical Reverse Recovery Time",
+    "symbol": "t rr",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "IF=0.55AA,IR=1.00AA, Irr=0.25A",
+    "example": "150"
+   },
+   {
+    "name": "Typical Junction Capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "4.0 V, 1 MHz",
+    "example": "7.5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "eSGA (SOD-123FL)"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "- 55 to + 150"
+   },
+   {
+    "name": "Moisture Sensitivity Level",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "AEC-Q101 Qualified",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Yes"
+   },
+   {
+    "name": "High Temperature Soldering Guaranteed",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "10 seconds",
+    "example": "260"
+   },
+   {
+    "name": "Halogen-Free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Yes"
+   },
+   {
+    "name": "Packing Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3000 pcs/Reel"
+   },
+   {
+    "name": "Tape Width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "inch",
+    "stat": "value",
+    "conditions": "",
+    "example": "7"
+   }
+  ],
+  "seconds": 15.16,
+  "tokens_in": 1297,
+  "tokens_out": 882
+ }
 }

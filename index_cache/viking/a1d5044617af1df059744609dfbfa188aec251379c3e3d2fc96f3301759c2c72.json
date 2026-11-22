@@ -20,5 +20,327 @@
   "tokens_in": 1317,
   "tokens_out": 52
  },
- "type": "common_mode_filter"
+ "type": "common_mode_filter",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:47:01+00:00",
+  "items": [
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Automotive Grade Wire Wound Common Mode "
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "High common mode impedance at high frequ"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DSI / BST / CAN-Bus / Flex-Ray"
+   },
+   {
+    "name": "Construction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Enamel-insulated wire"
+   },
+   {
+    "name": "Size (Inch)",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "",
+    "example": "1210"
+   },
+   {
+    "name": "Shielding Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "H: Shielding"
+   },
+   {
+    "name": "Inductance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "+50/-30%"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Taping Reel"
+   },
+   {
+    "name": "Function Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A: Automotive Grade"
+   },
+   {
+    "name": "Impedance(Ω) @10MHz",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Impedance(Ω) @10MHz",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "",
+    "example": "550"
+   },
+   {
+    "name": "Inductance(uH) @100KHz, 0.1V",
+    "symbol": "",
+    "unit": "uH",
+    "stat": "value",
+    "conditions": "",
+    "example": "11"
+   },
+   {
+    "name": "DCR (Ω) max.",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.4"
+   },
+   {
+    "name": "IDC (mA) max.",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Rated Voltage Vdc (V) typ.",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "80"
+   },
+   {
+    "name": "Insulation Resistance (MΩ) min.",
+    "symbol": "",
+    "unit": "MΩ",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Temperature Cycling",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "-55℃ to +150℃, 1000 hrs"
+   },
+   {
+    "name": "Moisture Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.Baked at50℃ for 25hrs, measured at roo"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000 hrs 85°C/85%RH 100% rated current M"
+   },
+   {
+    "name": "Operational Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "at +150℃ for 1000 hrs with 100% rated cu"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "260±5℃ for 10±1 seconds"
+   },
+   {
+    "name": "Thermal shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "-55℃ to +150℃, 300 cycles Measured at ro"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "95% min. coverage"
+   },
+   {
+    "name": "Flammability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "V-0 or V-1 are acceptable"
+   },
+   {
+    "name": "Terminal Strength(SMD)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "With the component mounted on a PCB with"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15~28"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "EA",
+    "stat": "value",
+    "conditions": "",
+    "example": "2000"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.88±0.10"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.65±0.10"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8.0±0.10"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.75±0.10"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.5±0.05"
+   },
+   {
+    "name": "P0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.00±0.05"
+   },
+   {
+    "name": "ΦD 0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.50+0.10"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.76±0.10"
+   },
+   {
+    "name": "Peel-off Force",
+    "symbol": "",
+    "unit": "g",
+    "stat": "range",
+    "conditions": "Temperature: 5 ~ 35°C, Humidity: 45 ~ 85%, Atmospheric pressure: 860 ~ 1060hpa, Tearing speed: 300mm min",
+    "example": "15~80"
+   }
+  ],
+  "seconds": 152.23,
+  "tokens_in": 4573,
+  "tokens_out": 4692
+ }
 }

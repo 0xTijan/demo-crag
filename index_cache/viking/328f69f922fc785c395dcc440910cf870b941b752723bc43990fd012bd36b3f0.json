@@ -18,5 +18,223 @@
   "tokens_in": 1304,
   "tokens_out": 40
  },
- "type": "power_resistor"
+ "type": "power_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:48:13+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "350V"
+   },
+   {
+    "name": "Dielectric Strength",
+    "symbol": "",
+    "unit": "VAC",
+    "stat": "min",
+    "conditions": "",
+    "example": "1800"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "",
+    "example": "10G"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to 150"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±0.5%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±10%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "±0.5%",
+    "example": "±100 ±200 ±300"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "±100 ±200 ±300"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "±50 ±100 ±200"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "±10%",
+    "example": "±50 ±100 ±200"
+   },
+   {
+    "name": "Temperature Coefficient of Resistance (T.C.R.)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Referenced to 25°C, ∆R taken at +105°C",
+    "example": "As Spec."
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "2 times rated power with applied voltage not to exceed 1.5 times maximum continuous operating voltage for 5 seconds",
+    "example": "∆R±0.3%"
+   },
+   {
+    "name": "Load Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "2,000 hours at rated power",
+    "example": "∆R±1.0%"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs “ON” and 0.5 hrs “OFF”",
+    "example": "∆R±0.5%"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "245±5°C for 3 seconds",
+    "example": "90%"
+   },
+   {
+    "name": "Thermal Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "-65°C ~150°C, 100 cycles",
+    "example": "∆R±0.3%"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "(Pull Test) 2.4N",
+    "example": "∆R±0.2%"
+   },
+   {
+    "name": "Vibration, High Frequency",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "20g peak",
+    "example": "∆R±0.2%"
+   },
+   {
+    "name": "Lead Material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tinned Copper"
+   },
+   {
+    "name": "Maximum Torque",
+    "symbol": "",
+    "unit": "N-m",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.9"
+   },
+   {
+    "name": "Rated Power",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "When in Free Air at 25°C",
+    "example": "3"
+   },
+   {
+    "name": "Case Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "Case Temperature Measurement must be made with a Thermocouple Contacting the Center of the Component mounted on the Desi",
+    "example": "25"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "25±5"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   }
+  ],
+  "seconds": 68.0,
+  "tokens_in": 2352,
+  "tokens_out": 1916
+ }
 }

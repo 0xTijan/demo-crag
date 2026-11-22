@@ -18,5 +18,135 @@
   "tokens_in": 1176,
   "tokens_out": 43
  },
- "type": "schottky_rectifier"
+ "type": "schottky_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:48:01+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Working peak reverse voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "36"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "40"
+   },
+   {
+    "name": "Peak forward surge current,8.3ms single half sine-wave superimposed on rated loa",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Peak repetitive reverse current per leg at tp=4.0us ,1KHz",
+    "symbol": "IRRM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "tp=4.0us ,1KHz",
+    "example": "3"
+   },
+   {
+    "name": "Junction Temperature in DC forward Current without reverse bias, t ≤1h",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "t ≤1h",
+    "example": "-55 to +200"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Forward Drop Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=20A, TJ =25℃",
+    "example": "0.50"
+   },
+   {
+    "name": "Forward Drop Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=20A, TJ =125℃",
+    "example": "0.42"
+   },
+   {
+    "name": "Forward Drop Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=40A, TJ =25℃",
+    "example": "0.58"
+   },
+   {
+    "name": "Forward Drop Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=40A, TJ =125℃",
+    "example": "0.52"
+   },
+   {
+    "name": "Reverse leakage current @VR",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "VR=50V, TJ =25℃",
+    "example": "200"
+   },
+   {
+    "name": "Reverse leakage current @VR",
+    "symbol": "IR",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "VR=40V, TJ =100℃",
+    "example": "25"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case",
+    "symbol": "RθJC",
+    "unit": "°C /W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.7"
+   }
+  ],
+  "seconds": 42.35,
+  "tokens_in": 1235,
+  "tokens_out": 751
+ }
 }

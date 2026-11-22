@@ -18,5 +18,327 @@
   "tokens_in": 1407,
   "tokens_out": 35
  },
- "type": "power_resistor"
+ "type": "power_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:48:43+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "350V"
+   },
+   {
+    "name": "Dielectric Strength",
+    "symbol": "",
+    "unit": "VAC",
+    "stat": "min",
+    "conditions": "",
+    "example": "1800"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "",
+    "example": "10G"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 175"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "25±5"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "Case temperature 25°C, heat sink mounted",
+    "example": "35"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "Without heat sink, free air at 25°C",
+    "example": "2.5"
+   },
+   {
+    "name": "Thermal Resistance",
+    "symbol": "",
+    "unit": "°K/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "4.28"
+   },
+   {
+    "name": "Derating Curve Slope",
+    "symbol": "",
+    "unit": "W/°K",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.23"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "±0.5%",
+    "example": "±0.5"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "±1"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "±5"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "±10%",
+    "example": "±10"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "±50",
+    "example": "±50"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "±100",
+    "example": "±100"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "±200",
+    "example": "±200"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "±300",
+    "example": "±300"
+   },
+   {
+    "name": "Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Lead Material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tinned Copper"
+   },
+   {
+    "name": "Maximum Torque",
+    "symbol": "",
+    "unit": "N-m",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.9"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "245±5°C for 3 seconds",
+    "example": "90"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "N",
+    "stat": "max",
+    "conditions": "Pull Test",
+    "example": "2.4"
+   },
+   {
+    "name": "Vibration, High Frequency",
+    "symbol": "",
+    "unit": "g",
+    "stat": "max",
+    "conditions": "Peak",
+    "example": "20"
+   },
+   {
+    "name": "Temperature Coefficient of Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Referenced to 25°C, ΔR taken at +105°C",
+    "example": "As Spec."
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "2 times rated power with applied voltage not to exceed 1.5 times maximum continuous operating voltage for 5 seconds",
+    "example": "ΔR±0.3%"
+   },
+   {
+    "name": "Load Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "2,000 hours at rated power",
+    "example": "ΔR±1.0%"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs “ON” and 0.5 hr “OFF”",
+    "example": "ΔR±0.5%"
+   },
+   {
+    "name": "Thermal Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "-65°C~150°C, 100 cycles",
+    "example": "ΔR±0.3%"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TR35"
+   },
+   {
+    "name": "Pin Count",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Mounting Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Single screw mounting to heat sink"
+   },
+   {
+    "name": "Case Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Electrically isolated case"
+   },
+   {
+    "name": "Construction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Molded case for protection and easy to m"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±0.5%",
+    "example": "0.05Ω - 0.1Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "≧ 0.1Ω - 1Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "≧ 0.1Ω - 1Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±10%",
+    "example": "≧ 0.1Ω - 1Ω"
+   }
+  ],
+  "seconds": 97.65,
+  "tokens_in": 2522,
+  "tokens_out": 2197
+ }
 }

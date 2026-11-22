@@ -1,0 +1,543 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: complementary_npn_pnp_transistor
+name: complementary NPN + PNP transistor pair
+version: 1
+status: draft
+must_match:
+- package
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T14:08:47+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - goodark/mmdt3946_1cd695b5.md
+  - goodarksemi/gsbc845xxde_40fe1091.md
+  - goodarksemi/gsbc847pn_3ec75b2d.md
+  - goodarksemi/gsmmbt5518de_41210ccb.md
+  - goodarksemi/gstk6015_73cc2419.md
+  - goodarksemi/mmbt2227a_aafbeb9d.md
+  - goodarksemi/mmdt2227m_093ceb6d.md
+  - goodarksemi/mmdt3946_1b68633d.md
+  - goodarksemi/mmdt4413_2b3c8c85.md
+  - goodarksemi/mmdt5451_9e6551fd.md
+specs:
+  i_c_max:
+    label: IC max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Current-Continuous
+    - I C
+    - Collector Current
+    - Peak Collector Current
+    - I CM
+    - Collector Current-Continous
+    - IC
+    - Collector-Emitter Saturation Voltage
+    - V CE(sat)
+    - Collector Current -Continuous
+    found_in: 10/10
+  t_j_max:
+    label: TJ max
+    unit: °C
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Junction Temperature
+    - T j
+    - Thermal Resistance, Junction to Ambient
+    - RθJA
+    - Absolute Maximum Rating
+    found_in: 10/10
+  v_cbo_max:
+    label: VCBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-Base Voltage
+    - V CBO
+    - Collector-base breakdown voltage
+    - V (BR)CBO
+    - Collector Base Voltage
+    - Collector Base Breakdown Voltage
+    - Collect-Base Voltage
+    - VCBO
+    - Collector to Base Voltage
+    - Collector−Base Breakdown Voltage
+    - Storage Temperature Range
+    - Absolute Maximum Rating
+    found_in: 10/10
+  v_ceo_max:
+    label: VCEO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-Emitter Voltage
+    - V CEO
+    - Collector-emitter breakdown voltage
+    - V (BR)CEO
+    - Collector Emitter Voltage
+    - Collector Emitter Breakdown Voltage
+    - VCEO
+    - Collector to Emitter Voltage
+    - Collector−Emitter Breakdown Voltage
+    - Absolute Maximum Rating
+    - V(BR)CEO
+    found_in: 10/10
+  v_ebo_max:
+    label: VEBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Emitter -Base Voltage
+    - V EBO
+    - Emitter-base breakdown voltage
+    - V (BR)EBO
+    - Emitter Base Voltage
+    - Emitter Base Breakdown Voltage
+    - Emitter-Base Voltage
+    - VEBO
+    - Emitter to Base Voltage
+    - Emitter−Base Breakdown Voltage
+    - Absolute Maximum Rating
+    - V(BR)EBO
+    found_in: 10/10
+  i_cbo_max:
+    label: ICBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Collector cut-off current
+    - I CBO
+    - Collector Base Cutoff Current
+    - ICEX
+    - ICBO
+    - Collector Base Cut-Off Current
+    - Collector Base Cut Off Current
+    - Absolute Maximum Rating
+    found_in: 10/10
+  i_ebo_max:
+    label: IEBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Emitter cut-off current
+    - I EBO
+    - Emitter Base Cutoff Current
+    - IEBO
+    - Emitter Base Cut-Off Current
+    - Collector Base Breakdown Voltage
+    - V (BR)CBO
+    - Emitter-Base Cutoff Current
+    - Absolute Maximum Rating
+    found_in: 10/10
+  p_c_max:
+    label: PC max
+    unit: mW
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Power Dissipation
+    - P C
+    - Total Power Dissipation
+    - P tot
+    - PC
+    - Pd
+    found_in: 9/10
+  f_t_min:
+    label: fT min
+    unit: MHz
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Transition frequency
+    - f T
+    - fT
+    - Gain Bandwidth Product
+    - Current Gain-Bandwidth Product
+    found_in: 9/10
+  t_stg_range:
+    label: TSTG range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    - Tstg
+    - Storage Temperature Range
+    - T STG
+    - Operating and Storage and Temperature Range
+    - T, TJSTG
+    - Absolute Maximum Rating
+    found_in: 9/10
+  c_ob_max:
+    label: Cob max
+    unit: pF
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Collector Output Capacitance
+    - C ob
+    - Output Capacitance
+    - Collector Capacitance
+    - C C
+    - Output Capacity
+    - Cobo
+    - Cob
+    found_in: 8/10
+  r_th_ja_max:
+    label: RθJA max
+    unit: °C/W
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Thermal resistance From junction to ambient
+    - R θJA
+    - Thermal Resistance Junction to Ambient
+    - Absolute Maximum Rating
+    - R th(j-c)
+    - RθJA
+    found_in: 7/10
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 5/10
+rare_specs:
+  hsf_status:
+    label: HSF Status
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - HSF Status
+    - Turn–Off Time
+    - toff
+    found_in: 4/10
+  marking:
+    label: Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Marking
+    found_in: 4/10
+  quantity:
+    label: Quantity
+    unit: pcs
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Quantity
+    - HSF Status
+    found_in: 4/10
+  tr_max:
+    label: tr max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Rise time
+    - tr
+    - DC Current Gain
+    - h FE
+    - t r
+    found_in: 4/10
+  v_br_cbo_min:
+    label: V(BR)CBO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-base Breakdown Voltage
+    - V (BR)CBO
+    - Collector to Base Breakdown Voltage
+    - VCBO
+    - V(BR)CBO
+    found_in: 3/10
+  v_br_ceo_min:
+    label: V(BR)CEO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector-emitter Breakdown Voltage
+    - V (BR)CEO
+    - Collector to Emitter Breakdown Voltage
+    - VCEO
+    - V(BR)CEO
+    found_in: 3/10
+  v_br_ebo_min:
+    label: V(BR)EBO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Emitter-base Breakdown Voltage
+    - V (BR)EBO
+    - Emitter to Base Breakdown Voltage
+    - VEBO
+    - V(BR)EBO
+    found_in: 3/10
+  h_fe_min_vce_1v_ic_10ma:
+    label: hFE min @ VCE=1V, IC=10mA
+    unit: null
+    stat: min
+    conditions: VCE=1V, IC=10mA
+    rule: '>='
+    critical: false
+    aliases:
+    - DC current gain
+    - h FE(3)
+    - h FE
+    - hFE(3)
+    found_in: 3/10
+  td_max:
+    label: td max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Delay time
+    - td
+    - t d
+    found_in: 3/10
+  tf_max:
+    label: tf max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Fall time
+    - tf
+    - t f
+    - Storage Time
+    - t stg
+    found_in: 3/10
+  ts_max:
+    label: ts max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Storage time
+    - ts
+    - t stg
+    - Turn-off Time
+    - t off
+    - t S
+    found_in: 3/10
+  h_fe_min:
+    label: hFE min
+    unit: null
+    stat: min
+    conditions: VCE=1V, IC=0.1mA
+    rule: '>='
+    critical: false
+    aliases:
+    - DC current gain
+    - h FE(1)
+    - h FE
+    found_in: 2/10
+  h_fe_min_vce_1v_ic_100ma:
+    label: hFE min @ VCE=1V, IC=100mA
+    unit: null
+    stat: min
+    conditions: VCE=1V, IC=100mA
+    rule: '>='
+    critical: false
+    aliases:
+    - DC current gain
+    - h FE(5)
+    - h FE
+    found_in: 2/10
+  h_fe_min_vce_1v_ic_1ma:
+    label: hFE min @ VCE=1V, IC=1mA
+    unit: null
+    stat: min
+    conditions: VCE=1V, IC=1mA
+    rule: '>='
+    critical: false
+    aliases:
+    - DC current gain
+    - h FE(2)
+    - h FE
+    found_in: 2/10
+  h_fe_min_vce_1v_ic_50ma:
+    label: hFE min @ VCE=1V, IC=50mA
+    unit: null
+    stat: min
+    conditions: VCE=1V, IC=50mA
+    rule: '>='
+    critical: false
+    aliases:
+    - DC current gain
+    - h FE(4)
+    - h FE
+    found_in: 2/10
+  v_be_sat_max:
+    label: VBE(sat) max
+    unit: V
+    stat: max
+    conditions: IC=50mA, IB=5mA
+    rule: <=
+    critical: false
+    aliases:
+    - Base-emitter saturation voltage
+    - V BE(sat)2
+    - Base-Emitter Voltage
+    - V BE(sat)
+    found_in: 2/10
+  v_be_sat_range:
+    label: VBE(sat) range
+    unit: V
+    stat: range
+    conditions: IC=10mA, IB=1mA
+    rule: contains
+    critical: false
+    aliases:
+    - Base-emitter saturation voltage
+    - V BE(sat)1
+    - Base-Emitter Voltage
+    - V BE(sat)
+    found_in: 2/10
+  v_ce_sat_max:
+    label: VCE(sat) max
+    unit: V
+    stat: max
+    conditions: IC=10mA, IB=1mA
+    rule: <=
+    critical: false
+    aliases:
+    - Collector-emitter saturation voltage
+    - V CE(sat)1
+    - V CE(sat)
+    found_in: 2/10
+  v_ce_sat_max_ic_50ma_ib_5ma:
+    label: VCE(sat) max @ IC=50mA, IB=5mA
+    unit: V
+    stat: max
+    conditions: IC=50mA, IB=5mA
+    rule: <=
+    critical: false
+    aliases:
+    - Collector-emitter saturation voltage
+    - V CE(sat)2
+    - V CE(sat)
+    found_in: 2/10
+  pin_count:
+    label: Pin Count
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Pin Count
+    found_in: 1/10
+  h_fe_min_vce_2v_ic_500ma:
+    label: hFE min @ VCE=2V, IC=500mA
+    unit: null
+    stat: min
+    conditions: VCE=2V, IC=500mA
+    rule: '>='
+    critical: false
+    aliases:
+    - DC Current Gain
+    - hFE(5)
+    found_in: 1/10
+  h_fe_range_vce_1v_ic_150ma:
+    label: hFE range @ VCE=1V, IC=150mA
+    unit: null
+    stat: range
+    conditions: VCE=1V, IC=150mA
+    rule: contains
+    critical: false
+    aliases:
+    - DC Current Gain
+    - h FE
+    found_in: 1/10
+  mounting_type:
+    label: Mounting Type
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Mounting Type
+    found_in: 1/10
+  operating_temp_range:
+    label: Operating Temp Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Temperature Range
+    found_in: 1/10

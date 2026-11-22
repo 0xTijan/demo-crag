@@ -18,5 +18,439 @@
   "tokens_in": 1525,
   "tokens_out": 45
  },
- "type": "ptc_thermistor"
+ "type": "ptc_thermistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:59:27+00:00",
+  "items": [
+   {
+    "name": "Rated voltage (RMS)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "230"
+   },
+   {
+    "name": "Maximum voltage (RMS)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "0 to+70"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "~1.557"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "",
+    "example": "25 ± 20%"
+   },
+   {
+    "name": "The initial resistance difference of Two PTC thermistors in one house",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "Rated zero power resistance (25℃)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "25℃",
+    "example": "20 to 30"
+   },
+   {
+    "name": "The initial resistance difference of two PTC thermistor in one device at 25℃",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "25℃",
+    "example": "1.0"
+   },
+   {
+    "name": "Hold current at 40±2℃",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "min",
+    "conditions": "40±2℃",
+    "example": "80"
+   },
+   {
+    "name": "Trip time 3A→0.5A",
+    "symbol": "",
+    "unit": "mS",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Trip time 1A→0.5A",
+    "symbol": "",
+    "unit": "mS",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.5"
+   },
+   {
+    "name": "Trip time 0.5A→0.15A",
+    "symbol": "",
+    "unit": "mS",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Surge test: 10/1000μs, 1KV, 25A, impulse 30 times, No crack and fire.",
+    "symbol": "",
+    "unit": "A",
+    "stat": "typ",
+    "conditions": "10/1000μs, 1KV, 25A, impulse 30 times",
+    "example": "25"
+   },
+   {
+    "name": "Power induction test: 600VAC, 1A, On 0.2s, Off 60s, 10 times, No damage and fire",
+    "symbol": "",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "600VAC, 1A, On 0.2s, Off 60s, 10 times",
+    "example": "600"
+   },
+   {
+    "name": "Power conduct test: 250 VAC, Rs=58Ω on15min,one cycle no damage.",
+    "symbol": "",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "250 VAC, Rs=58Ω on15min",
+    "example": "250"
+   },
+   {
+    "name": "Power contact test: 220 VAC, Rs=58Ω on 1 min, off 10min, 20times, ∆R/R≤20%.",
+    "symbol": "",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "220 VAC, Rs=58Ω on 1 min, off 10min, 20times",
+    "example": "220"
+   },
+   {
+    "name": "Operating temperature range (V=0) (V=Vmax)",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "V=0, V=Vmax",
+    "example": "-40~+85 0~+70"
+   },
+   {
+    "name": "Dry temperature",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "value",
+    "conditions": "125,1000h,V=0V",
+    "example": "125"
+   },
+   {
+    "name": "Dry cold",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "value",
+    "conditions": "-40,1000h, V=0V",
+    "example": "-40"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "value",
+    "conditions": "Tam=40, Rh: 95%,1000h, V=0V",
+    "example": "40"
+   },
+   {
+    "name": "Endueance Voltage",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "value",
+    "conditions": "Tam=85,72h,V=230V",
+    "example": "85"
+   },
+   {
+    "name": "Lead material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tin plated brass"
+   },
+   {
+    "name": "Case material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "PPS"
+   },
+   {
+    "name": "Solder heat withstand",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC-STD 68-2-20"
+   },
+   {
+    "name": "Lead solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "EIC60068-2-58"
+   },
+   {
+    "name": "Flammability rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 695-2-2 Needle Flame Test for 20 s"
+   },
+   {
+    "name": "Storage humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Per IPC/JEDEC J-STD-020A Level 2a"
+   },
+   {
+    "name": "Power Induction Test Level A",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A"
+   },
+   {
+    "name": "Power Induction Test Level B",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "B"
+   },
+   {
+    "name": "Power Induction Test Level C",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "C"
+   },
+   {
+    "name": "Power contact Test Level D",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "D"
+   },
+   {
+    "name": "Power contact Test Level E",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "E"
+   },
+   {
+    "name": "Lightning Surge Test Level F",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "F"
+   },
+   {
+    "name": "Lightning Surge Test Level G",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "G"
+   },
+   {
+    "name": "Lightning Surge Test Level H",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "H"
+   },
+   {
+    "name": "Lightning Surge Test Level I",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "I"
+   },
+   {
+    "name": "Criteria A",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "no damage, function must be fulfilled"
+   },
+   {
+    "name": "Criteria B",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "no fire hazard"
+   },
+   {
+    "name": "Reflow Solder Curve: Soak Start",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "150-180"
+   },
+   {
+    "name": "Reflow Solder Curve: Soak time",
+    "symbol": "",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "",
+    "example": "60-120"
+   },
+   {
+    "name": "Reflow Solder Curve: Soak end",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "180-200"
+   },
+   {
+    "name": "Reflow Solder Curve: Peak Temp.",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "value",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Reflow Solder Curve: Time above",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "230-260"
+   },
+   {
+    "name": "Reflow Solder Curve: Cooling",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Storage temperature",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to 55"
+   },
+   {
+    "name": "Storage humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "at 25℃",
+    "example": "85"
+   },
+   {
+    "name": "Tape width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "24±0.3"
+   },
+   {
+    "name": "Tape pitch",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "16±0.1"
+   },
+   {
+    "name": "Tape reel diameter",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "330"
+   },
+   {
+    "name": "Tape reel width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "24.4"
+   },
+   {
+    "name": "Tape reel outer width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "30.4"
+   },
+   {
+    "name": "Tape reel quantity per reel",
+    "symbol": "",
+    "unit": "pcs",
+    "stat": "value",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape"
+   }
+  ],
+  "seconds": 157.05,
+  "tokens_in": 3085,
+  "tokens_out": 2435
+ }
 }

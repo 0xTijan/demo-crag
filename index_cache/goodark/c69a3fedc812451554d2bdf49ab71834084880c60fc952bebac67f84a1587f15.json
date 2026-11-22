@@ -18,5 +18,335 @@
   "tokens_in": 2069,
   "tokens_out": 48
  },
- "type": "igbt_transistor"
+ "type": "igbt_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:19:55+00:00",
+  "items": [
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "VCES",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "650"
+   },
+   {
+    "name": "Gate-Emitter Voltage",
+    "symbol": "VGES",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Transient Gate-Emitter Voltage",
+    "symbol": "VGES",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "tp≤10us, D<0.01",
+    "example": "30"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "IC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "100"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "IC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=100°C",
+    "example": "50"
+   },
+   {
+    "name": "Collector Current, Pulsed",
+    "symbol": "ICM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Diode Continuous Forward Current",
+    "symbol": "IF",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "254"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=100°C",
+    "example": "127"
+   },
+   {
+    "name": "Operating Junction/ Storage Temperature Range",
+    "symbol": "TJ/ TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 175"
+   },
+   {
+    "name": "Thermal Resistance Junction to Case for IGBT",
+    "symbol": "RthJC",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.59"
+   },
+   {
+    "name": "Thermal Resistance Junction to Case for Diode",
+    "symbol": "RthJC",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.88"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient",
+    "symbol": "RthJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "Note 1",
+    "example": "40"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V(BR)CES",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "VGE=0V, ICE=1mA",
+    "example": "650"
+   },
+   {
+    "name": "Collector-Emitter Leakage Current",
+    "symbol": "ICES",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "VCS=650V, VGE=0V",
+    "example": "5"
+   },
+   {
+    "name": "Gate Threshold Voltage",
+    "symbol": "VGE(TH)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VCS=VGE, IC=1mA",
+    "example": "4 to 6"
+   },
+   {
+    "name": "Gate to Emitter Leakage Current",
+    "symbol": "IGES",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VGE=±30V, VCE=0V",
+    "example": "200"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "VCE(sat)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VGE=15V, IC=50A",
+    "example": "1.86 to 2.1"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "VCE(sat)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VGE=15V, IC=50A, TJ=175°C",
+    "example": "2.38 to 2.6"
+   },
+   {
+    "name": "Total Gate Charge",
+    "symbol": "Qg",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VGE(off)=0V, VGE(on)=15V, VCC=480V, IC=50A",
+    "example": "104"
+   },
+   {
+    "name": "Gate-Emitter Charge",
+    "symbol": "Qge",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VGE(off)=0V, VGE(on)=15V, VCC=480V, IC=50A",
+    "example": "11.8"
+   },
+   {
+    "name": "Gate-Collector Charge",
+    "symbol": "Qgc",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VGE(off)=0V, VGE(on)=15V, VCC=480V, IC=50A",
+    "example": "32"
+   },
+   {
+    "name": "Turn-on Delay Time",
+    "symbol": "td(on)",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=50A, VGE=15V, RG=10Ω",
+    "example": "39"
+   },
+   {
+    "name": "Turn-on Rise Time",
+    "symbol": "tr",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=50A, VGE=15V, RG=10Ω",
+    "example": "79"
+   },
+   {
+    "name": "Turn-off Delay Time",
+    "symbol": "td(off)",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=50A, VGE=15V, RG=10Ω",
+    "example": "145"
+   },
+   {
+    "name": "Turn-off Fall Time",
+    "symbol": "tf",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=50A, VGE=15V, RG=10Ω",
+    "example": "52"
+   },
+   {
+    "name": "Turn-On Switching Loss",
+    "symbol": "Eon",
+    "unit": "mJ",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=50A, VGE=15V, RG=10Ω",
+    "example": "1.76"
+   },
+   {
+    "name": "Turn-Off Switching Loss",
+    "symbol": "Eoff",
+    "unit": "mJ",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=50A, VGE=15V, RG=10Ω",
+    "example": "1.05"
+   },
+   {
+    "name": "Total Switching Loss",
+    "symbol": "Ets",
+    "unit": "mJ",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=50A, VGE=15V, RG=10Ω",
+    "example": "2.81"
+   },
+   {
+    "name": "Input Capacitance",
+    "symbol": "Cies",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGE=0V, VCE=25V, f=1MHz",
+    "example": "2333"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "Coes",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGE=0V, VCE=25V, f=1MHz",
+    "example": "107"
+   },
+   {
+    "name": "Reverse Transfer Capacitance",
+    "symbol": "Cres",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGE=0V, VCE=25V, f=1MHz",
+    "example": "48.6"
+   },
+   {
+    "name": "Diode Forward Voltage",
+    "symbol": "VFM",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IF=50A, VGE=0V",
+    "example": "1.9"
+   },
+   {
+    "name": "Diode Forward Voltage",
+    "symbol": "VFM",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IF=50A, VGE=0V, TJ=175°C",
+    "example": "1.65"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "Trr",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "IF=50A, di/dt=500A/μs",
+    "example": "103"
+   },
+   {
+    "name": "Reverse Recovery Charge",
+    "symbol": "Qrr",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "IF=50A, di/dt=500A/μs",
+    "example": "692"
+   },
+   {
+    "name": "Peak Reverse Recovery Current",
+    "symbol": "Irrm",
+    "unit": "A",
+    "stat": "typ",
+    "conditions": "IF=50A, di/dt=500A/μs",
+    "example": "12"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-247AD"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 175"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GIT065N50E1C2"
+   }
+  ],
+  "seconds": 33.47,
+  "tokens_in": 2622,
+  "tokens_out": 2207
+ }
 }

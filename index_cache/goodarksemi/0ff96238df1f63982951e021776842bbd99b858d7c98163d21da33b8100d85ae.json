@@ -18,5 +18,207 @@
   "tokens_in": 1336,
   "tokens_out": 43
  },
- "type": "tvs_diode"
+ "type": "tvs_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:20:21+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power",
+    "symbol": "P_PP",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "T =8/20μS",
+    "example": "30"
+   },
+   {
+    "name": "Peak Pulse Current",
+    "symbol": "I_PP",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "T =8/20μS",
+    "example": "5"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T_J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +125"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T_STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +150"
+   },
+   {
+    "name": "Reverse Stand-Off Voltage",
+    "symbol": "V_RWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "3.3"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "V_BR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I =1mA",
+    "example": "5.0 To 12"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I_R",
+    "unit": "μA",
+    "stat": "range",
+    "conditions": "V =3.3V",
+    "example": "0.01 To 0.1"
+   },
+   {
+    "name": "Trigger Voltage",
+    "symbol": "V_T",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I =5A, T =8/20μS",
+    "example": "9.0"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V_C",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I =5A, T =8/20μS",
+    "example": "6.0"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V_C",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC 61000−4−2 Level 2 (±4 kV Contact, ±4 kV Air)",
+    "example": "4.5"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V_C",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC 61000−4−2 Level 4 (±8 kV Contact, ±8 kV Air)",
+    "example": "6.0"
+   },
+   {
+    "name": "Dynamic Resistance",
+    "symbol": "R_dyn",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "I =0 to 30A, T =TLP",
+    "example": "0.25"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "C_J",
+    "unit": "pF",
+    "stat": "range",
+    "conditions": "V =0V, f=1MHz, I/O to GND",
+    "example": "0.25 To 0.35"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DFN1006"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "LS"
+   },
+   {
+    "name": "Carrier",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape & Reel"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "pcs",
+    "stat": "value",
+    "conditions": "",
+    "example": "10,000"
+   },
+   {
+    "name": "HSF Status",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS Compliant"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.95 To 1.05"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.55 To 0.65"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.45 To 0.55"
+   },
+   {
+    "name": "b",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.45 To 0.55"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.20 To 0.30"
+   },
+   {
+    "name": "e",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.65BSC"
+   }
+  ],
+  "seconds": 18.45,
+  "tokens_in": 1526,
+  "tokens_out": 1102
+ }
 }

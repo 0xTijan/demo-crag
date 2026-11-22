@@ -18,5 +18,207 @@
   "tokens_in": 1672,
   "tokens_out": 41
  },
- "type": "mosfet_n"
+ "type": "mosfet_n",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:54:02+00:00",
+  "items": [
+   {
+    "name": "BV DSS",
+    "symbol": "BV DSS",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "V =0V, I =250μA",
+    "example": "30"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "R DS(ON)",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "V =4.5V, I =0.2A",
+    "example": "650"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "R DS(ON)",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "V =2.5V, I =0.15A",
+    "example": "800"
+   },
+   {
+    "name": "I D",
+    "symbol": "I D",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "V =4.5V (T =25°C)",
+    "example": "0.6"
+   },
+   {
+    "name": "I D",
+    "symbol": "I D",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "V =4.5V (T =75°C)",
+    "example": "0.5"
+   },
+   {
+    "name": "I DM",
+    "symbol": "I DM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2.4"
+   },
+   {
+    "name": "P D",
+    "symbol": "P D",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "T =25°C",
+    "example": "0.48"
+   },
+   {
+    "name": "R θJA",
+    "symbol": "R θJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "262"
+   },
+   {
+    "name": "T, T J STG",
+    "symbol": "T, T J STG",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "I DSS",
+    "symbol": "I DSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V =30V, V =0V, T =25°C",
+    "example": "1"
+   },
+   {
+    "name": "I GSS",
+    "symbol": "I GSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V =±10V, V =0V",
+    "example": "±10"
+   },
+   {
+    "name": "V GS(th)",
+    "symbol": "V GS(th)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V =V , I =250μA",
+    "example": "0.4 to 1.1"
+   },
+   {
+    "name": "C iss",
+    "symbol": "C iss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =15V, V =0V, f=1MHz",
+    "example": "22"
+   },
+   {
+    "name": "C oss",
+    "symbol": "C oss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =15V, V =0V, f=1MHz",
+    "example": "4.2"
+   },
+   {
+    "name": "C rss",
+    "symbol": "C rss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =15V, V =0V, f=1MHz",
+    "example": "1.20"
+   },
+   {
+    "name": "Q g",
+    "symbol": "Q g",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "V =4.5V, V =10V, I =0.3A",
+    "example": "0.31"
+   },
+   {
+    "name": "Q gs",
+    "symbol": "Q gs",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "V =4.5V, V =10V, I =0.3A",
+    "example": "0.04"
+   },
+   {
+    "name": "Q gd",
+    "symbol": "Q gd",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "V =4.5V, V =10V, I =0.3A",
+    "example": "0.12"
+   },
+   {
+    "name": "t d(on)",
+    "symbol": "t d(on)",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "V =10V, V =30V, I =0.5A, R =10Ω",
+    "example": "1.23"
+   },
+   {
+    "name": "t r",
+    "symbol": "t r",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "V =10V, V =30V, I =0.5A, R =10Ω",
+    "example": "2.17"
+   },
+   {
+    "name": "t d(off)",
+    "symbol": "t d(off)",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "V =10V, V =30V, I =0.5A, R =10Ω",
+    "example": "9.77"
+   },
+   {
+    "name": "t f",
+    "symbol": "t f",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "V =10V, V =30V, I =0.5A, R =10Ω",
+    "example": "2.77"
+   },
+   {
+    "name": "V SD",
+    "symbol": "V SD",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I =0.6A, V =0V",
+    "example": "0.85 to 1.2"
+   },
+   {
+    "name": "I S",
+    "symbol": "I S",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.6"
+   }
+  ],
+  "seconds": 118.49,
+  "tokens_in": 1731,
+  "tokens_out": 1319
+ }
 }

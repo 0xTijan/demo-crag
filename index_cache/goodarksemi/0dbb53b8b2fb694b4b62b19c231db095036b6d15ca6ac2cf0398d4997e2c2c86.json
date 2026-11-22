@@ -18,5 +18,199 @@
   "tokens_in": 1220,
   "tokens_out": 42
  },
- "type": "switching_diode"
+ "type": "switching_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:29:21+00:00",
+  "items": [
+   {
+    "name": "Non-Repetitive Peak Reverse Voltage",
+    "symbol": "VRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Peak Repetitive Peak Reverse Voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   },
+   {
+    "name": "Working Peak Reverse Voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   },
+   {
+    "name": "DC Blocking Voltage",
+    "symbol": "VR",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   },
+   {
+    "name": "RMS Reverse Voltage",
+    "symbol": "VR(RMS)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "57"
+   },
+   {
+    "name": "Forward Continuous Current",
+    "symbol": "IFM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "500"
+   },
+   {
+    "name": "Average Rectified Output Current",
+    "symbol": "IO",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Surge Current @t=8.3ms",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "Pd",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Thermal Resistance from Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "℃/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "833"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "VR",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IR=2.5 μA",
+    "example": "80"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF1",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "IF=5mA",
+    "example": "0.62 to 0.72"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF2",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=10mA",
+    "example": "0.855"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF3",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=100mA",
+    "example": "1"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF4",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=150mA",
+    "example": "1.25"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR1",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VR=70V",
+    "example": "0.1"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR2",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VR=20V",
+    "example": "25"
+   },
+   {
+    "name": "Capacitance Between Terminals",
+    "symbol": "CT",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VR=6V,f=1MHz",
+    "example": "3.5"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "trr",
+    "unit": "ns",
+    "stat": "max",
+    "conditions": "I =I =10mA F R Irr=0.1XI ,R =100",
+    "example": "4"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-523"
+   },
+   {
+    "name": "Pin Count",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   }
+  ],
+  "seconds": 53.63,
+  "tokens_in": 1849,
+  "tokens_out": 998
+ }
 }

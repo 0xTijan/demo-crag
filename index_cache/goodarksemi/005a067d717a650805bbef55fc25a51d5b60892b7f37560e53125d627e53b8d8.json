@@ -18,5 +18,239 @@
   "tokens_in": 1529,
   "tokens_out": 39
  },
- "type": "npn_transistor"
+ "type": "npn_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:21:23+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "60"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "40"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Collector Current-Continuous",
+    "symbol": "I C",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.2"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "P C",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.625"
+   },
+   {
+    "name": "Operation Junction and Storage Temperature Range",
+    "symbol": "T/T J STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10mA, I =0 C E",
+    "example": "60"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =1mA, I =0 C B",
+    "example": "40"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10mA, I =0 E C",
+    "example": "6"
+   },
+   {
+    "name": "Collector Cut-Off Current",
+    "symbol": "I CBO",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V =60V, I =0 CB E",
+    "example": "0.1"
+   },
+   {
+    "name": "Collector Cut-Off Current",
+    "symbol": "I CEX",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V =30V, V =3V CE EB(off)",
+    "example": "0.05"
+   },
+   {
+    "name": "Emitter Cut-Off Current",
+    "symbol": "I EBO",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V =5V, I =0 EB C",
+    "example": "0.1"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "hFE1",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "V =1V, I =10mA CE C",
+    "example": "100-400"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "hFE2",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "V =1V, I =50mA CE C",
+    "example": "60-"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "hFE3",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "V =1V, I =100mA CE C",
+    "example": "30-"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =50mA, I =5mA C B",
+    "example": "0.3"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =50mA, I =5mA C B",
+    "example": "0.95"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =20V, I =10mA, f=100MHz CE C",
+    "example": "300"
+   },
+   {
+    "name": "Delay Time",
+    "symbol": "t d",
+    "unit": "ns",
+    "stat": "max",
+    "conditions": "V =3V, V =0.5V, I =10mA, CC BE C I =1mA B1",
+    "example": "35"
+   },
+   {
+    "name": "Rise Time",
+    "symbol": "t r",
+    "unit": "ns",
+    "stat": "max",
+    "conditions": "V =3V, V =0.5V, I =10mA, CC BE C I =1mA B1",
+    "example": "35"
+   },
+   {
+    "name": "Storage Time",
+    "symbol": "t s",
+    "unit": "ns",
+    "stat": "max",
+    "conditions": "V =3V, I =10mA, CC C I =I =1mA B1 B2",
+    "example": "200"
+   },
+   {
+    "name": "Fall Time",
+    "symbol": "t f",
+    "unit": "ns",
+    "stat": "max",
+    "conditions": "V =3V, I =10mA, CC C I =I =1mA B1 B2",
+    "example": "50"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-92"
+   },
+   {
+    "name": "Pin Count",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2N3904"
+   },
+   {
+    "name": "Packaging",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape & Reel"
+   },
+   {
+    "name": "SPQ",
+    "symbol": "",
+    "unit": "Pcs",
+    "stat": "value",
+    "conditions": "",
+    "example": "2000"
+   }
+  ],
+  "seconds": 60.26,
+  "tokens_in": 1827,
+  "tokens_out": 1390
+ }
 }

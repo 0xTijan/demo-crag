@@ -18,5 +18,175 @@
   "tokens_in": 1304,
   "tokens_out": 41
  },
- "type": "dual_npn_transistor"
+ "type": "dual_npn_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:53:53+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "45"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Collector Current-Continuous",
+    "symbol": "I C",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "P C",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "℃",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T stg",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Thermal Resistance From Junction to Ambient",
+    "symbol": "R θJA",
+    "unit": "℃/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "625"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10μA, I =0 C E",
+    "example": "50"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =1mA, I =0 C B",
+    "example": "45"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10μA, I =0 E C",
+    "example": "6"
+   },
+   {
+    "name": "Collector Cut-off Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =30V, I =0 CB E",
+    "example": "15"
+   },
+   {
+    "name": "Emitter Cut-off Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =4V, I =0 EB C",
+    "example": "15"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "V =5V, I =2mA CE C",
+    "example": "110 to 630"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =10mA, I =0.5mA C B",
+    "example": "0.25"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =100mA, I =5mA C B",
+    "example": "0.65"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BEON",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V =5V, I =2mA CE C",
+    "example": "0.58 to 0.7"
+   },
+   {
+    "name": "Base-Emitter Voltage",
+    "symbol": "V BEON",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "V =5V, I =10mA CE C",
+    "example": "0.77"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "C obo",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =10V, F=1MHz, I =0 CB E",
+    "example": "2"
+   },
+   {
+    "name": "Current Gain-Bandwidth Product",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "typ",
+    "conditions": "V =5V, I =20mA, F=100MHz CE C",
+    "example": "200"
+   }
+  ],
+  "seconds": 53.91,
+  "tokens_in": 1232,
+  "tokens_out": 1015
+ }
 }

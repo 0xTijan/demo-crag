@@ -19,5 +19,287 @@
   "tokens_in": 1434,
   "tokens_out": 44
  },
- "type": "common_mode_filter"
+ "type": "common_mode_filter",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:45:56+00:00",
+  "items": [
+   {
+    "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "VIKING TECH CORPORATION KAOHSIUNG BRANCH"
+   },
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Chip Common Mode Choke–CM series"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0805/1206"
+   },
+   {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "27-May-20"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.A9"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to 85"
+   },
+   {
+    "name": "Shielding Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "H"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0805"
+   },
+   {
+    "name": "Impedance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±20%"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T"
+   },
+   {
+    "name": "Impedance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "Test Condition (MHz)",
+    "example": "90"
+   },
+   {
+    "name": "DCR",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "Test Condition (MHz)",
+    "example": "0.20"
+   },
+   {
+    "name": "IDC",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "450"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Withstanding Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "125"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "MΩ",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Component Adhesion (Push Test)",
+    "symbol": "",
+    "unit": "Lbs",
+    "stat": "min",
+    "conditions": "Base: 0805",
+    "example": "2"
+   },
+   {
+    "name": "Component Adhesion (Push Test)",
+    "symbol": "",
+    "unit": "Lbs",
+    "stat": "min",
+    "conditions": "Cover: 0805",
+    "example": "1"
+   },
+   {
+    "name": "Component Adhesion (Push Test)",
+    "symbol": "",
+    "unit": "Lbs",
+    "stat": "min",
+    "conditions": "Base: 1206",
+    "example": "4"
+   },
+   {
+    "name": "Component Adhesion (Push Test)",
+    "symbol": "",
+    "unit": "Lbs",
+    "stat": "min",
+    "conditions": "Cover: 1206",
+    "example": "2"
+   },
+   {
+    "name": "Drop",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Component should not be damaged"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "The terminal should at least be 90% cove"
+   },
+   {
+    "name": "Vibration Test (Low Frequency)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Component should not be damaged"
+   },
+   {
+    "name": "Low Temperature Storage",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to -40"
+   },
+   {
+    "name": "Thermal Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ROOM TEMP -25 ±2℃ 15MINS 30MINS ROOM TEM"
+   },
+   {
+    "name": "High Temperature Storage",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "85 to 85"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "40 ± 2°C, 90 ~ 95%"
+   },
+   {
+    "name": "High Temperature Load Life",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "85"
+   },
+   {
+    "name": "Low Temperature Load Life",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "-40"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "EA",
+    "stat": "value",
+    "conditions": "",
+    "example": "2000"
+   },
+   {
+    "name": "Reel Specifications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ΦA: 178±2.0, ΦB: 60±0.5, ΦC: 13±0.3, W: "
+   },
+   {
+    "name": "Tape Specifications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A: 1.40±0.10, B: 2.55±0.05, W: 8.0±0.20,"
+   },
+   {
+    "name": "Peel-off Force",
+    "symbol": "",
+    "unit": "N",
+    "stat": "range",
+    "conditions": "Temperature: 5 ~ 35°C, Humidity: 45 ~ 85%, Atmospheric pressure: 860 ~ 1060hpa",
+    "example": "0.05 to 0.69"
+   }
+  ],
+  "seconds": 87.04,
+  "tokens_in": 4236,
+  "tokens_out": 1602
+ }
 }

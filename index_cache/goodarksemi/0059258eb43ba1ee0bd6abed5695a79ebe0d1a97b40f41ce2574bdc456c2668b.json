@@ -16,5 +16,175 @@
   "tokens_in": 1400,
   "tokens_out": 32
  },
- "type": "npn_transistor"
+ "type": "npn_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:20:36+00:00",
+  "items": [
+   {
+    "name": "Collector-emitter sustaining voltage",
+    "symbol": "VCEO(SUS)",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I C=-1.0mA, I B=0",
+    "example": "-260"
+   },
+   {
+    "name": "DC current gain",
+    "symbol": "hFE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "I C=-50mA",
+    "example": "30 to 240"
+   },
+   {
+    "name": "Low collector saturation voltage",
+    "symbol": "VCE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I C=-50mA, I B=-5mA",
+    "example": "-1.0"
+   },
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-260"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-260"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-3"
+   },
+   {
+    "name": "Collector Current-Continuous",
+    "symbol": "I C",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "-0.5"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "P C",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "T C=25℃",
+    "example": "20"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to 150"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case",
+    "symbol": "R thj-c",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "6.25"
+   },
+   {
+    "name": "Collector-Emitter Sustaining Voltage",
+    "symbol": "V CEO(SUS)",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I C=-1.0mA, I B=0",
+    "example": "-260"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I C=-1.0mA, I E=0",
+    "example": "-260"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I E=-1.0mA, I C=0",
+    "example": "-3"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I C=-50mA, I B=-5mA",
+    "example": "-1.0"
+   },
+   {
+    "name": "Collector Cutoff Current",
+    "symbol": "I CBO",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "V CB=-260V, I E=0",
+    "example": "-0.1"
+   },
+   {
+    "name": "Emitter Cutoff Current",
+    "symbol": "I EBO",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "V EB=-3V, I C=0",
+    "example": "-0.1"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "I C=-50mA, V CE=-10V",
+    "example": "30 to 240"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-126"
+   },
+   {
+    "name": "Package Outline Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-126"
+   }
+  ],
+  "seconds": 59.13,
+  "tokens_in": 1459,
+  "tokens_out": 961
+ }
 }

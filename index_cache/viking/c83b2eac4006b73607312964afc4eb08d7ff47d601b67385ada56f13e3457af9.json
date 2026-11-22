@@ -19,5 +19,263 @@
   "tokens_in": 1344,
   "tokens_out": 46
  },
- "type": "common_mode_filter"
+ "type": "common_mode_filter",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:47:47+00:00",
+  "items": [
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "PCM7060-T301"
+   },
+   {
+    "name": "Dimensions (AxBxC)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "7.0x6.0x3.8"
+   },
+   {
+    "name": "Impedance (Ω)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "Test Condition (MHz)",
+    "example": "225"
+   },
+   {
+    "name": "Impedance (Ω)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "Test Condition (MHz)",
+    "example": "300"
+   },
+   {
+    "name": "Test Condition (MHz)",
+    "symbol": "",
+    "unit": "MHz",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "DCR (mΩ) max.",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "IDC (A) max.",
+    "symbol": "",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Rated Voltage Vdc (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "125"
+   },
+   {
+    "name": "Insulation Resistance (MΩ) min.",
+    "symbol": "",
+    "unit": "MΩ",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Apply cream solder to the printed circuit board",
+    "example": "The product shall be connected to the te"
+   },
+   {
+    "name": "Terminal strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Solder a chip to test substrate, and then laterally apply a load 1.0Kg in the arrow direction",
+    "example": "The terminal electrode and the ferrite m"
+   },
+   {
+    "name": "Resistance to Soldering heat (reflow soldering)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "The specimen shall be passed through the reflow oven with the condition shown in the above profile for 1 time",
+    "example": "There shall be no damage or problems."
+   },
+   {
+    "name": "Strength on PC board bending",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Solder a chip to test substrate and then apply a load.",
+    "example": "The terminal electrode and the ferrite m"
+   },
+   {
+    "name": "Thermal shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Impedance:Within±20% of the initial valu"
+   },
+   {
+    "name": "High temperature resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "After the samples shall be soldered onto the test circuit board, the test shall be done. Measurement: After placing for ",
+    "example": "Impedance:Within±20% of the initial valu"
+   },
+   {
+    "name": "Humidity resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "After the samples shall be soldered onto the test circuit board, the test shall be done. Measurement: After placing for ",
+    "example": "Impedance:Within±20% of the initial valu"
+   },
+   {
+    "name": "Low temperature storage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "After the samples shall be soldered onto the test circuit board, the test shall be done. Measurement: After placing for ",
+    "example": "Impedance:Within±20% of the initial valu"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "After the samples shall be soldered onto the test circuit board, the test shall be done. Frequency: 10 to 55 Hz",
+    "example": "Impedance:Within±20% of the initial valu"
+   },
+   {
+    "name": "Solderability (for PCM7060)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Flux (rosin, isoprophl alcohol) shall be coated over the whole of the sample before hard, the sample shall then be prehe",
+    "example": "New solder more than 75%"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "330±1.5"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "21.5+0.5/-0"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "13+0.5/-0.2"
+   },
+   {
+    "name": "T1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "12.5+0.5/-0"
+   },
+   {
+    "name": "N",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "100±1.5"
+   },
+   {
+    "name": "T2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "16.9±0.4"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.0±0.5"
+   },
+   {
+    "name": "Quantity (EA)",
+    "symbol": "",
+    "unit": "EA",
+    "stat": "value",
+    "conditions": "",
+    "example": "1500"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "7.5±0.1"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "12"
+   },
+   {
+    "name": "P0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4±0.1"
+   },
+   {
+    "name": "P2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2±0.1"
+   }
+  ],
+  "seconds": 174.8,
+  "tokens_in": 3227,
+  "tokens_out": 3375
+ }
 }

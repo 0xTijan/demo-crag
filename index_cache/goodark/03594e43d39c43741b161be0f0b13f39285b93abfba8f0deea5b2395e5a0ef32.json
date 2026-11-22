@@ -18,5 +18,167 @@
   "tokens_in": 981,
   "tokens_out": 38
  },
- "type": "ultrafast_rectifier"
+ "type": "ultrafast_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:59:20+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Maximum RMS voltage",
+    "symbol": "VRMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "280"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Peak forward surge current,8.3ms single half sine-wave superimposed on rated loa",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +175"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +175"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Ambient",
+    "symbol": "RthJA",
+    "unit": "°C /W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "85"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case",
+    "symbol": "RthJC",
+    "unit": "°C /W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "15"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Lead",
+    "symbol": "RthJL",
+    "unit": "°C /W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "18"
+   },
+   {
+    "name": "Maximum forward drop voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=1A",
+    "example": "1.25"
+   },
+   {
+    "name": "Maximum reverse leakage current @VR",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "TJ =25°C",
+    "example": "5"
+   },
+   {
+    "name": "Typical junction capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VR=4.0V, f=1MHZ",
+    "example": "22"
+   },
+   {
+    "name": "Maximum reverse recovery time",
+    "symbol": "trr",
+    "unit": "ns",
+    "stat": "max",
+    "conditions": "I =0.5A, I =1.0A, F R I =0.25A RR",
+    "example": "25"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "eSGB (DO-221AC)"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +175"
+   },
+   {
+    "name": "Moisture sensitivity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "level 1, per J-STD-020"
+   },
+   {
+    "name": "Halogen-free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 61249-2-21"
+   },
+   {
+    "name": "High temperature soldering guaranteed",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "260℃/10 seconds"
+   }
+  ],
+  "seconds": 52.91,
+  "tokens_in": 1443,
+  "tokens_out": 871
+ }
 }

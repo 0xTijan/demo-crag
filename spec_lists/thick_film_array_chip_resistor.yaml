@@ -1,0 +1,463 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: thick_film_array_chip_resistor
+name: thick film chip resistor array
+version: 1
+status: draft
+must_match:
+- size
+- number_of_resistors
+- resistance_tolerance
+- resistance_range
+- operating_temp_range
+- max_operating_voltage
+- max_overload_voltage
+- power_rating
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T14:01:08+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - viking/as-array-series-data-sheet-edition-rev-a5_6d144f2a.md
+  - viking/asf-a-series-data-sheet-edition-rev-a1_c5d65c5a.md
+  - viking/asf-array-series-data-sheet-edition-rev-a1_0d3582c7.md
+  - viking/asn-a-series-data-sheet-edition-rev-a5_257b8373.md
+  - viking/asn-a-series_55912af0.md
+  - viking/cn-a-series-data-sheet-edition-rev-b5_ffee8e94.md
+  - viking/cn-a-series_945f470c.md
+  - viking/cn-series-data-sheet-edition-rev-b9_db864152.md
+  - viking/cn-series_df7b9752.md
+  - viking/cnf-series_d8bdc1d5.md
+specs:
+  packaging_code:
+    label: Packaging Code
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Packaging Code
+    - Tape Width
+    found_in: 9/10
+  resistance_tolerance:
+    label: Resistance Tolerance
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance Tolerance
+    found_in: 9/10
+  size:
+    label: Size
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Size
+    - Dimensions
+    found_in: 9/10
+  tcr:
+    label: TCR
+    unit: PPM/°C
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - TCR
+    - TCR (PPM/°C)
+    - Temperature Coefficient of Resistance
+    found_in: 9/10
+  max_operating_voltage:
+    label: Max. Operating Voltage
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Max. Operating Voltage
+    found_in: 8/10
+  max_overload_voltage:
+    label: Max. Overload Voltage
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Max. Overload Voltage
+    found_in: 8/10
+  power_rating:
+    label: Power Rating
+    unit: W
+    stat: value
+    conditions: at 70°C
+    rule: '>='
+    critical: true
+    aliases:
+    - Power Rating
+    - Power Rating at 70°C
+    - Absolute Maximum Rating
+    found_in: 8/10
+  leaching:
+    label: Leaching
+    unit: '%'
+    stat: max
+    conditions: Individual
+    rule: <=
+    critical: false
+    aliases:
+    - Leaching
+    found_in: 8/10
+  operating_temp_range:
+    label: Operating Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Temperature Range
+    - Operating Temp. Range
+    found_in: 8/10
+  part_numbering:
+    label: Part Numbering
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Part Numbering
+    - Product Type
+    found_in: 8/10
+  rapid_change_of_temperature:
+    label: Rapid Change of Temperature
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Rapid Change of Temperature
+    - Temperature Cycling
+    - Leaching
+    found_in: 8/10
+  resistance_range:
+    label: Resistance Range
+    unit: Ω
+    stat: range
+    conditions: ±1%
+    rule: contains
+    critical: false
+    aliases:
+    - Resistance Range
+    - Resistance Range (±1%)
+    - Resistance Range (±5%)
+    - Resistance Range (Jumper)
+    - Temperature Coefficient of Resistance (T.C.R.)
+    - High Temperature Exposure
+    found_in: 8/10
+  resistance_to_soldering_heat:
+    label: Resistance to Soldering Heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance to Soldering Heat
+    - Storage Temperature
+    found_in: 8/10
+  shelf_life:
+    label: Shelf Life
+    unit: years
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Shelf Life
+    found_in: 8/10
+  solderability:
+    label: Solderability
+    unit: '%'
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Solderability
+    found_in: 8/10
+  voltage_proof:
+    label: Voltage Proof
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Voltage Proof
+    found_in: 8/10
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: G
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Insulation Resistance
+    found_in: 7/10
+  number_of_resistors:
+    label: Number of Resistors
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Number of Resistors
+    found_in: 7/10
+  storage_temperature:
+    label: Storage Temperature
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 7/10
+  sulfur_test:
+    label: Sulfur Test
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Sulfur Test
+    - Marking
+    found_in: 7/10
+  bending_strength:
+    label: Bending Strength
+    unit: null
+    stat: range
+    conditions: ±1%
+    rule: ≈
+    critical: false
+    aliases:
+    - Bending Strength
+    - Board Flex
+    - Solderability
+    found_in: 6/10
+  damp_heat_with_load:
+    label: Damp Heat with Load
+    unit: null
+    stat: range
+    conditions: ±1%
+    rule: ≈
+    critical: false
+    aliases:
+    - Damp Heat with Load
+    - Biased Humidity
+    - High Temperature Exposure
+    found_in: 6/10
+  dry_heat:
+    label: Dry Heat
+    unit: null
+    stat: range
+    conditions: ±1%
+    rule: ≈
+    critical: false
+    aliases:
+    - Dry Heat
+    - High Temperature Exposure
+    - Board Flex
+    found_in: 6/10
+  endurance:
+    label: Endurance
+    unit: null
+    stat: range
+    conditions: ±1%
+    rule: ≈
+    critical: false
+    aliases:
+    - Endurance
+    - Operational Life
+    - Biased Humidity
+    found_in: 6/10
+  marking:
+    label: Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Marking
+    found_in: 5/10
+  reel_diameter:
+    label: Reel Diameter
+    unit: inch
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - ΦA
+    - Reel Diameter
+    - Dimensions
+    found_in: 5/10
+  weight:
+    label: Weight
+    unit: g
+    stat: value
+    conditions: 1000pcs
+    rule: '='
+    critical: false
+    aliases:
+    - Weight
+    - Weight (g) (1000pcs)
+    found_in: 5/10
+rare_specs:
+  aeco_q200:
+    label: AEC-Q200
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - AEC-Q200 Qualified
+    - AEC-Q200
+    - AEC-Q200 Compliance
+    found_in: 4/10
+  dimensions:
+    label: Dimensions
+    unit: mm
+    stat: range
+    conditions: L
+    rule: contains
+    critical: false
+    aliases:
+    - L
+    - L (mm)
+    - Dimensions
+    - W
+    - W (mm)
+    - H
+    - H (mm)
+    - A
+    - A (mm)
+    - A1
+    - A1 (mm)
+    - B
+    found_in: 4/10
+  flammability:
+    label: Flammability
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Flammability
+    found_in: 4/10
+  e24_code:
+    label: E24 Code
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - E24 code
+    found_in: 3/10
+  function_code:
+    label: Function Code
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Making
+    - Function Code
+    found_in: 3/10
+  packaging_quantity:
+    label: Packaging Quantity
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Packaging Quantity
+    found_in: 3/10
+  tape_width:
+    label: Tape Width
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Tape Width
+    found_in: 3/10
+  msl:
+    label: MSL
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - MSL
+    found_in: 2/10
+  rohs:
+    label: RoHS
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - RoHS
+    found_in: 2/10
+  soldering_condition:
+    label: Soldering Condition
+    unit: null
+    stat: range
+    conditions: Preheat Min. Temperature
+    rule: contains
+    critical: false
+    aliases:
+    - Soldering Temperature
+    - Soldering Time
+    - Peak Temperature
+    - Preheat Min. Temperature
+    - Preheat Max. Temperature
+    - Preheating time
+    - Ramp-up rate
+    - Liquidous temperature
+    - Time maintained above Liquidous temperature
+    - Min. Peak temperature
+    - Max. Peak temperature
+    - Time within 5°C of peak temperature
+    found_in: 2/10

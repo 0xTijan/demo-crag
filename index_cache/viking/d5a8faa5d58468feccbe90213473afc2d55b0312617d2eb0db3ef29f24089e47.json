@@ -19,5 +19,535 @@
   "tokens_in": 1835,
   "tokens_out": 45
  },
- "type": "common_mode_filter"
+ "type": "common_mode_filter",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:48:31+00:00",
+  "items": [
+   {
+    "name": "Impedance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "100 MHz",
+    "example": "67"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "±25"
+   },
+   {
+    "name": "DCR",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.50"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "Vdc",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Withstanding Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "25"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "MΩ",
+    "stat": "min",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Temperature Cycle",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: -55~ +125℃ Cycle: 1000 cycles Dwell time: 30 minutes",
+    "example": "No mechanical damage Impedance should be"
+   },
+   {
+    "name": "Operational Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: 125℃±5℃ Test time: 1000 hrs Apply current: full rated current",
+    "example": "No mechanical damage Impedance should be"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: 85±2℃ Humidity: 85% RH Test time: 1000 hrs Apply current: full rated current",
+    "example": "No mechanical damage Impedance should be"
+   },
+   {
+    "name": "High Temperature Exposure",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: 125±5℃ Test time: 1000 hrs",
+    "example": "No mechanical damage Impedance should be"
+   },
+   {
+    "name": "Resistance to Solder Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Solder temperature: 260±5℃ Flux: Rosin DIP time: 10±1 sec",
+    "example": "Impedance should be within ±20% of the i"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "N",
+    "stat": "value",
+    "conditions": "0504 size",
+    "example": "5"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "N",
+    "stat": "value",
+    "conditions": "0805 size",
+    "example": "17.7"
+   },
+   {
+    "name": "Board Flex",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Epoxy-PCB(1.6mm) Deflection 2mm(min) 60s min holding time",
+    "example": "No mechanical damage"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Condition F: 1500g’s/0.5ms/half sine",
+    "example": "No mechanical damage DCR value should be"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "5g’s for 20min, 12 cycles each of 3 orientations Test from 10-2000Hz., 12 cycles each of orientations",
+    "example": "No mechanical damage DCR value should be"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "40"
+   },
+   {
+    "name": "Operating Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 125"
+   },
+   {
+    "name": "Storage Time",
+    "symbol": "",
+    "unit": "months",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Dimensions",
+    "example": "04W"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Impedance Tolerance",
+    "example": "Y"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Packaging Code",
+    "example": "T"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Impedance",
+    "example": "900"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Function Code",
+    "example": "A"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "0504"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "0805"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "1.25"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "1.00"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "0.60"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "0.50"
+   },
+   {
+    "name": "C1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "0.30"
+   },
+   {
+    "name": "C2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "0.20"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "2.00"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "1.25"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "1.00"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "1.60"
+   },
+   {
+    "name": "C1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "0.40"
+   },
+   {
+    "name": "C2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "0.30"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "EA",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "4000"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "EA",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "3000"
+   },
+   {
+    "name": "ØA",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "178"
+   },
+   {
+    "name": "ØB",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "60"
+   },
+   {
+    "name": "ØC",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "13.0"
+   },
+   {
+    "name": "ØA",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "178"
+   },
+   {
+    "name": "ØB",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "60"
+   },
+   {
+    "name": "ØC",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "13.0"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "1.20"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "1.45"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "8.0"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "3.5"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "1.75"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "4.00"
+   },
+   {
+    "name": "G",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "2.00"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "4.00"
+   },
+   {
+    "name": "J",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX04W",
+    "example": "1.55"
+   },
+   {
+    "name": "A0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "1.40"
+   },
+   {
+    "name": "B0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "2.30"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "1.75"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "3.50"
+   },
+   {
+    "name": "P0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "4.00"
+   },
+   {
+    "name": "P2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "2.00"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "1.5"
+   },
+   {
+    "name": "D1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "1.00"
+   },
+   {
+    "name": "K0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "CMX05W",
+    "example": "1.13"
+   }
+  ],
+  "seconds": 178.91,
+  "tokens_in": 3106,
+  "tokens_out": 3191
+ }
 }

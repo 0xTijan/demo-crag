@@ -18,5 +18,95 @@
   "tokens_in": 2063,
   "tokens_out": 37
  },
- "type": "multilayer_ceramic_capacitor"
+ "type": "multilayer_ceramic_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:24:29+00:00",
+  "items": [
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Multilayer Ceramic Chip Capacitor"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "01005/0201/0402/0603/0805/1206/1210/1808"
+   },
+   {
+    "name": "Dielectric",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "NPO (COG), X7R, X5R, X6S, X6T"
+   },
+   {
+    "name": "Temperature Coefficient",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0±30ppm/°C"
+   },
+   {
+    "name": "Operation Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "-55~125°C"
+   },
+   {
+    "name": "Capacitance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.05pF, ±0.1pF, ±0.25pF, ±0.5pF, ±1%, ±"
+   },
+   {
+    "name": "Packaging",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Taping Reel, W: 13\" Taping Reel"
+   },
+   {
+    "name": "Voltage (VDCW)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "4V, 6.3V, 25V, 50V, 100V, 1000V, 2000V, "
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.9pF, 15pF, 180pF, 2.2μF, 10μF"
+   },
+   {
+    "name": "Executive Standard",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GB/T 21041-2007, GB/T 21042-2007"
+   }
+  ],
+  "seconds": 92.67,
+  "tokens_in": 14268,
+  "tokens_out": 2083
+ }
 }

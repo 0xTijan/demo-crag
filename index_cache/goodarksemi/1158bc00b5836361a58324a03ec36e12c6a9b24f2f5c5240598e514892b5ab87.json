@@ -22,5 +22,111 @@
   "tokens_in": 2749,
   "tokens_out": 84
  },
- "type": "tvs_diode"
+ "type": "tvs_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:20:59+00:00",
+  "items": [
+   {
+    "name": "Peak Power Dissipation, With a 10/1000us Waveform",
+    "symbol": "P_PPM",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "10/1000us waveform",
+    "example": "600"
+   },
+   {
+    "name": "Power Dissipation, On Infinite Heat Sink at T =75°C",
+    "symbol": "P_D",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "T =75°C",
+    "example": "3.0"
+   },
+   {
+    "name": "Peak Forward Surge Current, 8.3 ms Single Half Sine-Wave Unidirectional Only",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "8.3 ms Single Half Sine-Wave",
+    "example": "60"
+   },
+   {
+    "name": "Typical Thermal Resistance Junction to Lead",
+    "symbol": "R_θJL",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Typical Thermal Resistance Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "120"
+   },
+   {
+    "name": "Operating Junction and Storage Temperature Range",
+    "symbol": "T_J, T_STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage @ at 25A for Unidirectional Only",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "25A",
+    "example": "3.5"
+   },
+   {
+    "name": "Breakdown Voltage V_BR @ I_T",
+    "symbol": "V_BR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I_T = 1 mA",
+    "example": "6.40 to 7.07"
+   },
+   {
+    "name": "Maximum Reverse Leakage I_R @ V_RWM",
+    "symbol": "I_R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V_RWM",
+    "example": "800"
+   },
+   {
+    "name": "Working Peak Reverse Voltage V_RWM",
+    "symbol": "V_RWM",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "5.0"
+   },
+   {
+    "name": "Maximum Reverse Surge Current I_PP",
+    "symbol": "I_PP",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "65.22"
+   },
+   {
+    "name": "Maximum Clamping Voltage V_C @ I_PP",
+    "symbol": "V_C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I_PP",
+    "example": "9.2"
+   }
+  ],
+  "seconds": 56.0,
+  "tokens_in": 4587,
+  "tokens_out": 638
+ }
 }

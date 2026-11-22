@@ -18,5 +18,143 @@
   "tokens_in": 1332,
   "tokens_out": 43
  },
- "type": "ultrafast_rectifier"
+ "type": "ultrafast_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:59:31+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V_RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current",
+    "symbol": "I_F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "6.0"
+   },
+   {
+    "name": "Peak Forward Surge Current 8.3mS Single Half Sine-wave Superimposed on Rated Loa",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "60"
+   },
+   {
+    "name": "Rating for Fusing (t=8.3ms)",
+    "symbol": "I2t",
+    "unit": "A2S",
+    "stat": "max",
+    "conditions": "",
+    "example": "14.94"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Storge Temperature Range",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Instaneous Forward Voltage",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I_F=3.0A, T_J=25℃",
+    "example": "0.87 to 0.93"
+   },
+   {
+    "name": "Instaneous Forward Voltage",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I_F=3.0A, T_J=125℃",
+    "example": "0.68"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "I_R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V_R=200V, T_J=25℃",
+    "example": "5.0"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "I_R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V_R=200V, T_J=125℃",
+    "example": "50"
+   },
+   {
+    "name": "Typical Junction Capacitance",
+    "symbol": "C_J",
+    "unit": "pF",
+    "stat": "value",
+    "conditions": "4V, 1MHz",
+    "example": "43"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "t_rr",
+    "unit": "nS",
+    "stat": "range",
+    "conditions": "I_F=0.5A, I_R=1A, I_RR=0.25A, T_J=25℃",
+    "example": "17 to 25"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction to Case",
+    "symbol": "R_θJC",
+    "unit": "℃/W",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.5"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "JEDEC TO-252(DPAK) molded plastic body"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Solderable per MIL-STD-202, method 208"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "As marked"
+   }
+  ],
+  "seconds": 51.23,
+  "tokens_in": 1288,
+  "tokens_out": 812
+ }
 }

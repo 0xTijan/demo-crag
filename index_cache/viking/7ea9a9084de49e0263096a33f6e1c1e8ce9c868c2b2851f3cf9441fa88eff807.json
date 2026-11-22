@@ -22,5 +22,271 @@
   "tokens_in": 1941,
   "tokens_out": 117
  },
- "type": "polymer_aluminum_capacitor"
+ "type": "polymer_aluminum_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:05:13+00:00",
+  "items": [
+   {
+    "name": "Part No.",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0506/0645/0606/0608/0610/0807/0810/0812"
+   },
+   {
+    "name": "Rated voltage",
+    "symbol": "",
+    "unit": "Vdc",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.5~25"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "105°C",
+    "example": "5,000"
+   },
+   {
+    "name": "Suitable for",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DC-DC converters, voltage regulators and"
+   },
+   {
+    "name": "RoHS Compliant",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Yes"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AV5K0506"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "5.0±0.5"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "5.8"
+   },
+   {
+    "name": "α",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "±0.2"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.00~0.20"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "5.3±0.2"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "5.3±0.2"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.0±0.2"
+   },
+   {
+    "name": "R",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.5~0.8"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.4±0.3"
+   },
+   {
+    "name": "Frequency",
+    "symbol": "",
+    "unit": "Hz",
+    "stat": "range",
+    "conditions": "",
+    "example": "120Hz≦f<1KHz"
+   },
+   {
+    "name": "Coefficient",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.05"
+   },
+   {
+    "name": "Tolerance on Rated Capacitance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "120Hz±10% at 20±2°C",
+    "example": "±20"
+   },
+   {
+    "name": "Leakage current",
+    "symbol": "",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "DC rated voltage, 20±2°C",
+    "example": "≤ value"
+   },
+   {
+    "name": "Tangent of loss angle (tanδ)",
+    "symbol": "tanδ",
+    "unit": "",
+    "stat": "max",
+    "conditions": "120Hz±10% at 20±2°C",
+    "example": "0.12"
+   },
+   {
+    "name": "Equivalent Series Resistance (ESR)",
+    "symbol": "ESR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "100kHz",
+    "example": "≤ value"
+   },
+   {
+    "name": "Impedance ratio: Z(-55℃)/Z(+20℃)",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "100kHz",
+    "example": "1.25"
+   },
+   {
+    "name": "Impedance ratio: Z(-105℃)/Z(+20℃)",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "100kHz",
+    "example": "1.25"
+   },
+   {
+    "name": "a",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.4"
+   },
+   {
+    "name": "b",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.0"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.5±0.3"
+   },
+   {
+    "name": "Emboss Plastic Tape (EA)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1,200"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Polarized"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 105"
+   },
+   {
+    "name": "Soldering temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "Reflow soldering within recommended rang"
+   },
+   {
+    "name": "Ripple current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Leakage current",
+    "symbol": "",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "After voltage treatment",
+    "example": "≤ value"
+   }
+  ],
+  "seconds": 27.47,
+  "tokens_in": 5371,
+  "tokens_out": 1515
+ }
 }

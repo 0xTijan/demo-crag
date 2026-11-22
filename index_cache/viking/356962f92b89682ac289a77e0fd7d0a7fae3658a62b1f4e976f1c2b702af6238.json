@@ -22,5 +22,399 @@
   "tokens_in": 1397,
   "tokens_out": 73
  },
- "type": "leaded_film_resistor"
+ "type": "leaded_film_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:10:28+00:00",
+  "items": [
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "1/8"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "1/4"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "1/2"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "1"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "2"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 155"
+   },
+   {
+    "name": "Max. Working Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "150"
+   },
+   {
+    "name": "Max. Working Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "250"
+   },
+   {
+    "name": "Max. Working Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "350"
+   },
+   {
+    "name": "Max. Working Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "450"
+   },
+   {
+    "name": "Max. Working Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "300"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "700"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "1000"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "1000"
+   },
+   {
+    "name": "Dielectric Withstanding Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "300"
+   },
+   {
+    "name": "Dielectric Withstanding Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "500"
+   },
+   {
+    "name": "Dielectric Withstanding Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "700"
+   },
+   {
+    "name": "Dielectric Withstanding Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "1000"
+   },
+   {
+    "name": "Dielectric Withstanding Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "1000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5% E6",
+    "example": "0.1 to 0.68"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5% E24",
+    "example": "1 to 10000000"
+   },
+   {
+    "name": "Resistance Value",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "1 to 10000000"
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.75%+0.05)"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "MΩ",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(3%+0.05)"
+   },
+   {
+    "name": "Damp Heat, Steady State",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "<100KΩ±3% >101KΩ±5%"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "95"
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "By Type"
+   },
+   {
+    "name": "Temperature Coefficient",
+    "symbol": "",
+    "unit": "ppm/°C",
+    "stat": "range",
+    "conditions": "1145/1550",
+    "example": "< 1Ω ±1500 1Ω~100KΩ ±350 100KΩ~1MΩ -0 to"
+   },
+   {
+    "name": "Temperature Coefficient",
+    "symbol": "",
+    "unit": "ppm/°C",
+    "stat": "range",
+    "conditions": "Other sizes",
+    "example": "< 1Ω ±1500 1Ω~100KΩ +350 to -500 100KΩ~1"
+   },
+   {
+    "name": "Periodic-Pulse Overload Test",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1%+0.05)"
+   },
+   {
+    "name": "Solvent Resistance of Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No obvious deterioration"
+   },
+   {
+    "name": "Robustness of Terminations",
+    "symbol": "",
+    "unit": "kg",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.5"
+   },
+   {
+    "name": "Temperature Cycling",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1%+0.05)"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1%+0.05)"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "25±10"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "< 80"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±5%"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "ppm/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "-"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0318 J T - W 1001"
+   },
+   {
+    "name": "Dimensions (L×D)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "3.4x1.8"
+   },
+   {
+    "name": "Dimensions (L×D)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "6.3x2.3"
+   },
+   {
+    "name": "Dimensions (L×D)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "9.0x3.2"
+   },
+   {
+    "name": "Dimensions (L×D)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "11.5x4.5"
+   },
+   {
+    "name": "Dimensions (L×D)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "15.5x5.0"
+   }
+  ],
+  "seconds": 100.42,
+  "tokens_in": 6786,
+  "tokens_out": 2268
+ }
 }

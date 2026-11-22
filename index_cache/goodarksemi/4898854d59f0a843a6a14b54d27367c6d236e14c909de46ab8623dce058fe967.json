@@ -18,5 +18,191 @@
   "tokens_in": 1227,
   "tokens_out": 40
  },
- "type": "dual_pnp_transistor"
+ "type": "dual_pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:03:01+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "VCBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-80"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "VCEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-65"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "VEBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Current-Continuous",
+    "symbol": "IC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "-0.1"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "PC",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.2"
+   },
+   {
+    "name": "Typical Thermal Resistance from Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "value",
+    "conditions": "",
+    "example": "625"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +150"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10uA, I =0 C E",
+    "example": "-80"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10mA, I =0 C B",
+    "example": "-65"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10uA, I =0 E C",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Cut-off Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-30V, I =0 CB E",
+    "example": "-15"
+   },
+   {
+    "name": "Emitter Cut-off Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-5V, I =0 EB C",
+    "example": "-15"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "V =-5V, I =-2mA CE C",
+    "example": "110"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-10mA, I =-0.5mA C B",
+    "example": "-0.1"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =-100mA, I =-5mA1 C B",
+    "example": "-0.3"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "V BE(sat)",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I =-10mA, I =-0.5mA C B",
+    "example": "0.7"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "C obo",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =-10V, I =0 CB E f=1MHz",
+    "example": "2.5"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =-5V, I =-10mA, CE C F=100MHz",
+    "example": "100"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-363"
+   },
+   {
+    "name": "Pin Count",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 To +150"
+   }
+  ],
+  "seconds": 44.2,
+  "tokens_in": 1688,
+  "tokens_out": 1100
+ }
 }

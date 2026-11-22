@@ -18,5 +18,191 @@
   "tokens_in": 1276,
   "tokens_out": 42
  },
- "type": "dual_npn_transistor"
+ "type": "dual_npn_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:53:26+00:00",
+  "items": [
+   {
+    "name": "Collector Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   },
+   {
+    "name": "Collector Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "65"
+   },
+   {
+    "name": "Emitter Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "I C",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Peak Collector Current",
+    "symbol": "I CM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Total Power Dissipation",
+    "symbol": "P tot",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Thermal Resistance from Junction Ambient",
+    "symbol": "R θJA",
+    "unit": "℃/W",
+    "stat": "max",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
+    "example": "500"
+   },
+   {
+    "name": "Thermal Resistance from Junction Ambient",
+    "symbol": "R θJA",
+    "unit": "℃/W",
+    "stat": "max",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with 1-inch square copper plate in still air.",
+    "example": "335"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "℃",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "V =5V, I =2mA CE C",
+    "example": "200 to 450"
+   },
+   {
+    "name": "Collector Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10µA C",
+    "example": "80"
+   },
+   {
+    "name": "Collector Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =10mA C",
+    "example": "65"
+   },
+   {
+    "name": "Emitter Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =1µA E",
+    "example": "6"
+   },
+   {
+    "name": "Collector Base Cutoff Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =30V CB",
+    "example": "15"
+   },
+   {
+    "name": "Emitter Base Cutoff Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =5V EB",
+    "example": "100"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =10mA, I =0.5mA C B",
+    "example": "0.25"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =100mA, I =5mA C B",
+    "example": "0.6"
+   },
+   {
+    "name": "Base Emitter Turn-On Voltage",
+    "symbol": "V BE(on)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V =5V, I =2mA CE C",
+    "example": "0.58 to 0.7"
+   },
+   {
+    "name": "Base Emitter Turn-On Voltage",
+    "symbol": "V BE(on)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "V =5V, I =10mA CE C",
+    "example": "0.77"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =5V, I =10mA, F=100MHz CE C",
+    "example": "100"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =10V, F=1MHz CB",
+    "example": "4.5"
+   }
+  ],
+  "seconds": 57.64,
+  "tokens_in": 1214,
+  "tokens_out": 1113
+ }
 }

@@ -18,5 +18,263 @@
   "tokens_in": 1621,
   "tokens_out": 47
  },
- "type": "multilayer_ceramic_capacitor"
+ "type": "multilayer_ceramic_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:19:27+00:00",
+  "items": [
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MCRF: Ultra High Q and Low ESR (RF)"
+   },
+   {
+    "name": "Dimensions (L×W)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "05: 0805"
+   },
+   {
+    "name": "Capacitance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "B(±0.1pF)"
+   },
+   {
+    "name": "Packaging",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Taping Reel"
+   },
+   {
+    "name": "Dielectric",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "N: NPO"
+   },
+   {
+    "name": "Voltage (VDCW)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "251: 250V"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "pF",
+    "stat": "value",
+    "conditions": "",
+    "example": "6.8pF"
+   },
+   {
+    "name": "Capacitance tolerance",
+    "symbol": "",
+    "unit": "pF",
+    "stat": "range",
+    "conditions": "",
+    "example": "±0.1pF"
+   },
+   {
+    "name": "Rated voltage (VDCW)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Q",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "Cap<30pF:Q≥800+20C; Cap≥30pF:Q≥1400",
+    "example": "Q≥800+20C"
+   },
+   {
+    "name": "Insulation resistance at Ur",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "",
+    "example": "≥10G"
+   },
+   {
+    "name": "Operating temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "ppm/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "±30"
+   },
+   {
+    "name": "Termination",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ni/Sn (lead-free termination)"
+   },
+   {
+    "name": "External Appearance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No remarkable defect"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Cap.≤1000pF, 1.0±0.2Vrms, 1MHz±10%. Cap.>1000pF, 1.0±0.2Vrms, 1KHz±10%. At 25°C ambient temperature.",
+    "example": "Shall not exceed the limits given in the"
+   },
+   {
+    "name": "Q/D.F.",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "Cap.<30pF : Q≥800+20C; Cap.≥30pF : Q≥1400",
+    "example": "Q≥800+20C"
+   },
+   {
+    "name": "Temperature Coefficient",
+    "symbol": "",
+    "unit": "ppm/°C",
+    "stat": "range",
+    "conditions": "With no electrical load NPO:-55~125°C at 25°C",
+    "example": "±30"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "≤100V : To apply rated voltage for max. 120 sec ≥200V :To apply rated voltage (500V max.) for 60 sec.",
+    "example": "≥10GΩ or RxC≥100Ω-F"
+   },
+   {
+    "name": "Dielectric Strength",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "≤100V : 250% of rated voltage. 200V ~ 300V : 200% of rated voltage. 500V ~ 999V : 150% of rated voltage. 1000V ~ 3000V :",
+    "example": "250% of rated voltage"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "Solder temperature : 235±5°C. Dipping time : 2±0.5 sec",
+    "example": "95"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Solder temperature : 260±5°C. Dipping time : 10±1 sec. Preheating : 120 to 150°C for 1 minute before immerse the capacit",
+    "example": "No remarkable damage"
+   },
+   {
+    "name": "Capacitance change",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "Cap. change : Within ±2.5% or ±0.25pF whichever is larger.",
+    "example": "±2.5% or ±0.25pF"
+   },
+   {
+    "name": "Temperature Cycle",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Conduct the five cycles according to the temperatures and time. Step Temp.(°C) Time(min.) 1 Min. operating temp. +0/-3 3",
+    "example": "No remarkable damage"
+   },
+   {
+    "name": "Humidity (Damp Heat) Steady State",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Test temp. : 40±2°C. Humidity : 90~95% RH. Test time : 500 +24/-0hrs.",
+    "example": "No remarkable damage"
+   },
+   {
+    "name": "Humidity (Damp Heat) Load",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Test temp. : 40±2°C. Humidity : 90~95%RH. Test time : 500 +24/-0hrs. To apply voltage : Rated voltage (500Vdc max.).",
+    "example": "No remarkable damage"
+   },
+   {
+    "name": "High Temperature Load (Endurance)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Test temp. : NP0: 125±3°C To apply voltage : (1) 10V≤Ur<500V : 200% of rated voltage. (2) ≤6.3V or 500V : 150% of rated ",
+    "example": "No remarkable damage"
+   },
+   {
+    "name": "Adhesive Strength of Termination",
+    "symbol": "",
+    "unit": "N",
+    "stat": "min",
+    "conditions": "Pressurizing force： 01005 : 1N / 0201 : 2N. 0402 to 0603 : 5N / >0603 : 10N. Test time : 10±1 sec.",
+    "example": "1"
+   },
+   {
+    "name": "Bending Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "The middle part of substrate shall be pressurized by means of the pressurizing rod at a rate of about 1 mm per second un",
+    "example": "No remarkable damage"
+   },
+   {
+    "name": "Vibration Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Vibration frequency : 10~55 Hz/min. Total amplitude : 1.5mm. Test time : 6 hrs. (Two hrs each in three mutually perpendi",
+    "example": "No remarkable damage"
+   },
+   {
+    "name": "ESR",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "The ESR should be measured at room temperature and tested at frequency 1±0.1 GHz.",
+    "example": "<1500"
+   }
+  ],
+  "seconds": 33.77,
+  "tokens_in": 4007,
+  "tokens_out": 2116
+ }
 }

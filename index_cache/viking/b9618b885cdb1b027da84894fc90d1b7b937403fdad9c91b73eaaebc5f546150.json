@@ -22,5 +22,167 @@
   "tokens_in": 2296,
   "tokens_out": 88
  },
- "type": "multilayer_ceramic_capacitor"
+ "type": "multilayer_ceramic_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:23:24+00:00",
+  "items": [
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Multilayer Ceramic Chip Capacitor"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "01005/0201/0402/0603/0805/1206/1210/1808"
+   },
+   {
+    "name": "Dielectric",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "NPO (COG), X7R, X5R"
+   },
+   {
+    "name": "Temperature Coefficient",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0±30ppm/℃"
+   },
+   {
+    "name": "Operation Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "-55~125℃"
+   },
+   {
+    "name": "Dielectric Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "NPO (COG), X7R, X5R"
+   },
+   {
+    "name": "Capacitance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A: ±0.05pF (Cap≦10pF), B: ±0.1pF (Cap≦10"
+   },
+   {
+    "name": "Packaging",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Taping Reel, W: 13” Taping Reel"
+   },
+   {
+    "name": "Voltage (VDCW)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "4V0: 4V, 6V3: 6.3V, 250: 25V, 500: 50V, "
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3R9: 3.9pF, 150: 15pF, 181: 180pF, 225: "
+   },
+   {
+    "name": "Size (Inch)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "01005, 0201, 0402, 0603, 0805, 1206, 121"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.40±0.02"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.20±0.02"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.20±0.02"
+   },
+   {
+    "name": "WB",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.10±0.03"
+   },
+   {
+    "name": "Dielectric withstanding Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "100V≦Vr<500V",
+    "example": "Force 200% Rated Voltage for 5 second. M"
+   },
+   {
+    "name": "Dielectric withstanding Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "500V≦Vr≦1000V",
+    "example": "Force 150% Rated Voltage for 5 second. M"
+   },
+   {
+    "name": "Dielectric withstanding Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "1000V<Vr≦2000V",
+    "example": "Force 120% Rated Voltage for 5 second. M"
+   },
+   {
+    "name": "Dielectric withstanding Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "2000V<Vr≦5000V",
+    "example": "Force 120% Rated Voltage for 5 second. M"
+   }
+  ],
+  "seconds": 215.68,
+  "tokens_in": 14738,
+  "tokens_out": 1383
+ }
 }

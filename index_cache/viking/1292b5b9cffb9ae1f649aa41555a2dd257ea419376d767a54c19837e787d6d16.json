@@ -20,5 +20,335 @@
   "tokens_in": 1671,
   "tokens_out": 59
  },
- "type": "power_inductor"
+ "type": "power_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:41:47+00:00",
+  "items": [
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Shielded SMD Power Inductor – SCDB Serie"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2D12/2D15/2D18"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40～125°C"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "5℃～25℃"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "35%～65%"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1 years Max"
+   },
+   {
+    "name": "Dimensions Type A",
+    "symbol": "A",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.0±0.2"
+   },
+   {
+    "name": "Dimensions B",
+    "symbol": "B",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "Dimensions C max.",
+    "symbol": "C",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.2/1.5/1.8"
+   },
+   {
+    "name": "Dimensions D",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.0"
+   },
+   {
+    "name": "Dimensions E",
+    "symbol": "E",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Dimensions F",
+    "symbol": "F",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Dimensions G",
+    "symbol": "G",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.2"
+   },
+   {
+    "name": "Dimensions H",
+    "symbol": "H",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.2"
+   },
+   {
+    "name": "Dimensions I",
+    "symbol": "I",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.1"
+   },
+   {
+    "name": "Dimensions J",
+    "symbol": "J",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.8"
+   },
+   {
+    "name": "Inductance range SCDB2D12",
+    "symbol": "",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.2～22"
+   },
+   {
+    "name": "Rated current range SCDB2D12",
+    "symbol": "",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.85～0.22"
+   },
+   {
+    "name": "Inductance range SCDB2D15",
+    "symbol": "",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.2～33"
+   },
+   {
+    "name": "Rated current range SCDB2D15",
+    "symbol": "",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.00～0.25"
+   },
+   {
+    "name": "Inductance range SCDB18",
+    "symbol": "",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.2～47"
+   },
+   {
+    "name": "Rated current range SCDB18",
+    "symbol": "",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.10～0.23"
+   },
+   {
+    "name": "Test Condition Frequency",
+    "symbol": "",
+    "unit": "Hz",
+    "stat": "value",
+    "conditions": "",
+    "example": "100KHz"
+   },
+   {
+    "name": "Test Condition Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.1"
+   },
+   {
+    "name": "DCR max.",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "100KHz, 0.1V",
+    "example": "0.182"
+   },
+   {
+    "name": "IDC (A) max. at 20°C",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "20°C",
+    "example": "1.00"
+   },
+   {
+    "name": "IDC (A) max. at 100°C",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "100°C",
+    "example": "0.80"
+   },
+   {
+    "name": "I rms (A) max.",
+    "symbol": "Irms",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.05"
+   },
+   {
+    "name": "Tolerance Type M",
+    "symbol": "M",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "+20%/-20%"
+   },
+   {
+    "name": "Tolerance Type N",
+    "symbol": "N",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "+30%/-30%"
+   },
+   {
+    "name": "Packaging Style T",
+    "symbol": "T",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape and Reel"
+   },
+   {
+    "name": "Shelf Storage Temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15~28"
+   },
+   {
+    "name": "Shelf Storage Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "",
+    "example": "<80% relative humidity"
+   },
+   {
+    "name": "High temperature Storage test Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "85±2"
+   },
+   {
+    "name": "Low temperature Storage test Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "-25±2"
+   },
+   {
+    "name": "Humidity test Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "40±2"
+   },
+   {
+    "name": "Humidity test Relative humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "90~95"
+   },
+   {
+    "name": "Thermal shock test Temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-25℃ to 85℃"
+   },
+   {
+    "name": "Vibration test Amplitude",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.5"
+   },
+   {
+    "name": "Solderability Test Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "245±5"
+   }
+  ],
+  "seconds": 237.38,
+  "tokens_in": 9816,
+  "tokens_out": 9854
+ }
 }

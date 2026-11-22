@@ -18,5 +18,215 @@
   "tokens_in": 1140,
   "tokens_out": 38
  },
- "type": "esd_protection_diode"
+ "type": "esd_protection_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T11:12:38+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power (TP=8/20μS)",
+    "symbol": "Ppp",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Peak Pulse Current (TP=8/20μS)",
+    "symbol": "Ipp",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "13.5"
+   },
+   {
+    "name": "Operating Temperature",
+    "symbol": "TJ",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55-+150"
+   },
+   {
+    "name": "Storage temperature",
+    "symbol": "TSTG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55-+150"
+   },
+   {
+    "name": "Reverse stand-off voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "VBR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "IT=1mA",
+    "example": "6-7.8"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "IR",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VRWM=5V",
+    "example": "1"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IPP=1A, TP=8/20μs",
+    "example": "9.8"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IPP=9.8A, TP=8/20μs",
+    "example": "17"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IPP=13.5A, TP=8/20μs",
+    "example": "25"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "range",
+    "conditions": "VR=0V, f=1MHz",
+    "example": "80-100"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-323"
+   },
+   {
+    "name": "ESD Protection",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 61000-4-2 ± 30kV (Air)"
+   },
+   {
+    "name": "EFT Protection",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 61000-4-4 40A (5/50ns)"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "compliant"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "5C"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GOOD-ARK"
+   },
+   {
+    "name": "Package Outline Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "A",
+    "example": "1.60-1.90"
+   },
+   {
+    "name": "Package Outline Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "B",
+    "example": "1.15-1.45"
+   },
+   {
+    "name": "Package Outline Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "C",
+    "example": "2.39-2.70"
+   },
+   {
+    "name": "Package Outline Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "D",
+    "example": "0.80-1.10"
+   },
+   {
+    "name": "Package Outline Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "E",
+    "example": "0.25-0.40"
+   },
+   {
+    "name": "Package Outline Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "F",
+    "example": "0.10-0.20"
+   },
+   {
+    "name": "Package Outline Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "max",
+    "conditions": "H",
+    "example": "0.10"
+   },
+   {
+    "name": "Package Outline Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "min",
+    "conditions": "L",
+    "example": "0.20"
+   }
+  ],
+  "seconds": 66.52,
+  "tokens_in": 1427,
+  "tokens_out": 1168
+ }
 }

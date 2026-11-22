@@ -18,5 +18,111 @@
   "tokens_in": 1078,
   "tokens_out": 45
  },
- "type": "zener_diode"
+ "type": "zener_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:26:03+00:00",
+  "items": [
+   {
+    "name": "Junction Temperature",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +175"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +175"
+   },
+   {
+    "name": "Zener Voltage Tolerance",
+    "symbol": "Vz Tolerance",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "±5"
+   },
+   {
+    "name": "Typical Zener Voltage",
+    "symbol": "V",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "6.4"
+   },
+   {
+    "name": "Zenner Test Current",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "",
+    "unit": "μA",
+    "stat": "value",
+    "conditions": "VR=1V",
+    "example": "1"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "",
+    "unit": "μA",
+    "stat": "value",
+    "conditions": "VR=3.6V",
+    "example": "2"
+   },
+   {
+    "name": "Effective Temperature Coefficient",
+    "symbol": "",
+    "unit": "%/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.005"
+   },
+   {
+    "name": "Voltage Temperature Stability",
+    "symbol": "",
+    "unit": "mV",
+    "stat": "value",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +100"
+   },
+   {
+    "name": "Max. Dynamic Zener Impedance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A3-02B (B-4)"
+   }
+  ],
+  "seconds": 10.36,
+  "tokens_in": 1137,
+  "tokens_out": 489
+ }
 }

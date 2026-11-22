@@ -22,5 +22,247 @@
   "tokens_in": 2257,
   "tokens_out": 85
  },
- "type": "power_inductor"
+ "type": "power_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:40:47+00:00",
+  "items": [
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SMD Power Inductor – VLH Series"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "252010/252012/252510/322515/322520/45322"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "A",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.5±0.2"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "B",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.0±0.2"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "C",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.02 max"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "E",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.8 ref"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "F",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "-"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "H",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.0"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "I",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.85"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "J",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.8"
+   },
+   {
+    "name": "Rated DC Current",
+    "symbol": "I_sat",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "Ta=25°C",
+    "example": "2.20"
+   },
+   {
+    "name": "Temperature Rise Current",
+    "symbol": "I_rms",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "Ta=25°C",
+    "example": "2.20"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40～125"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "L",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.00～22"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "1MHz, 0.1V",
+    "example": "0.121"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "1MHz, 0.25V",
+    "example": "0.18"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "1KHz, 0.1V",
+    "example": "25.00"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "100KHz, 0.1V",
+    "example": "0.1300"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "10KHz, 0.1V",
+    "example": "140.0"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "100KHz, 0.25V",
+    "example": "61.00"
+   },
+   {
+    "name": "Inductance Tolerance",
+    "symbol": "Tolerance",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "M"
+   },
+   {
+    "name": "SRF",
+    "symbol": "SRF",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "1MHz, 0.1V",
+    "example": "100"
+   },
+   {
+    "name": "SRF",
+    "symbol": "SRF",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "100KHz, 0.1V",
+    "example": "8"
+   },
+   {
+    "name": "SRF",
+    "symbol": "SRF",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "1KHz, 0.1V",
+    "example": "8"
+   },
+   {
+    "name": "SRF",
+    "symbol": "SRF",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "10KHz, 0.1V",
+    "example": "8"
+   },
+   {
+    "name": "SRF",
+    "symbol": "SRF",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "100KHz, 0.25V",
+    "example": "8"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "5～25"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "25～80"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   }
+  ],
+  "seconds": 176.95,
+  "tokens_in": 13974,
+  "tokens_out": 1590
+ }
 }

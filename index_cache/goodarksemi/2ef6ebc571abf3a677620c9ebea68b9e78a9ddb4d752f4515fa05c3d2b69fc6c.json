@@ -18,5 +18,143 @@
   "tokens_in": 1304,
   "tokens_out": 42
  },
- "type": "fast_recovery_bridge_rectifier"
+ "type": "fast_recovery_bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:44:27+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V !!",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1000"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V !#\"",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "700"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V $%",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1000"
+   },
+   {
+    "name": "Average Rectified Output Current at T =80°C C",
+    "symbol": "I O",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "T =80°C",
+    "example": "6.0"
+   },
+   {
+    "name": "Peak Forward Surge Current, 8.3ms Single Half Sine-Wave Superimposed on Rated Lo",
+    "symbol": "I &#\"",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "I2t Rating for Fusing (t=8.3ms)",
+    "symbol": "I't",
+    "unit": "A'S",
+    "stat": "max",
+    "conditions": "t=8.3ms",
+    "example": "166"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction-Ambient",
+    "symbol": "R ()*",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "1. Mounted on glass epoxy PC board with 4 x 1.5\" x 1.5\" (3.81x3.81cm) copper pad.",
+    "example": "60"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction-Case",
+    "symbol": "R ()%",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "1. Mounted on glass epoxy PC board with 4 x 1.5\" x 1.5\" (3.81x3.81cm) copper pad.",
+    "example": "6"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction-Lead",
+    "symbol": "R ()+",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "1. Mounted on glass epoxy PC board with 4 x 1.5\" x 1.5\" (3.81x3.81cm) copper pad.",
+    "example": "14"
+   },
+   {
+    "name": "Operating and Storage Temperature Range",
+    "symbol": "T , T ) #,-",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to+150"
+   },
+   {
+    "name": "Glass passivated chip junction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Glass passivated chip junction"
+   },
+   {
+    "name": "Fast reverse recovery time",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Fast reverse recovery time"
+   },
+   {
+    "name": "Designed for surface mount application",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Designed for surface mount application"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UBF"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Solderable per MIL-STD-750, method 2026"
+   },
+   {
+    "name": "Approx. Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.461"
+   }
+  ],
+  "seconds": 15.06,
+  "tokens_in": 1237,
+  "tokens_out": 875
+ }
 }

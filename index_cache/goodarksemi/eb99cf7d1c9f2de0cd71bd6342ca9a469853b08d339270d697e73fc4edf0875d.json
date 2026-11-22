@@ -22,5 +22,127 @@
   "tokens_in": 1180,
   "tokens_out": 65
  },
- "type": "schottky_bridge_rectifier"
+ "type": "schottky_bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:51:22+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "14"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Maximum Average Forward Output Current",
+    "symbol": "I F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2.0"
+   },
+   {
+    "name": "Peak Forward Surge Current 8.3 MS Single Half Sine-Wave Superimposed on Rated Lo",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage at 2.0A",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I=2.0A",
+    "example": "0.55"
+   },
+   {
+    "name": "Maximum DC Reverse Current at TA=25°C Rated DC Blocking Voltage per Leg TA=100°C",
+    "symbol": "IR",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "TA=25°C, V=V DC; TA=100°C",
+    "example": "0.5"
+   },
+   {
+    "name": "Operation Junction Temperature Range",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Molded plastic body over passivated junc"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "plated leads solderable per MIL-STD-750 "
+   },
+   {
+    "name": "Mounting Position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.22"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-269AA (MBS)"
+   }
+  ],
+  "seconds": 48.59,
+  "tokens_in": 1132,
+  "tokens_out": 642
+ }
 }

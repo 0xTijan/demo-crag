@@ -22,5 +22,815 @@
   "tokens_in": 1970,
   "tokens_out": 59
  },
- "type": "thin_film_chip_resistor"
+ "type": "thin_film_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:40:47+00:00",
+  "items": [
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Automotive Grade Thin Film Precision Chi"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402/0603/0805/1206/1210/2010/2512"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +155°C"
+   },
+   {
+    "name": "AEC-Q200",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Qualified"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Total Lead(Pb)-free without RoHS exempti"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AR02 (0402)",
+    "example": "1/16W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AR03 (0603)",
+    "example": "1/16W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AR05 (0805)",
+    "example": "1/10W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AR06 (1206)",
+    "example": "1/8W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AR13 (1210)",
+    "example": "1/4W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AR10 (2010)",
+    "example": "1/4W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AR12 (2512)",
+    "example": "1/2W"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR02 (0402)",
+    "example": "50"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR03 (0603)",
+    "example": "50"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR05 (0805)",
+    "example": "100"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR06 (1206)",
+    "example": "150"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR13 (1210)",
+    "example": "150"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR10 (2010)",
+    "example": "150"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR12 (2512)",
+    "example": "150"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR02 (0402)",
+    "example": "100"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR03 (0603)",
+    "example": "100"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR05 (0805)",
+    "example": "200"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR06 (1206)",
+    "example": "300"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR13 (1210)",
+    "example": "300"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR10 (2010)",
+    "example": "300"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AR12 (2512)",
+    "example": "300"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±0.05%",
+    "example": "10Ω - 49.9KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±0.1%",
+    "example": "10Ω - 221KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±0.25%",
+    "example": "10Ω - 221KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±0.5%",
+    "example": "10Ω - 221KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±1%",
+    "example": "10Ω - 221KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±0.05%",
+    "example": "10Ω - 49.9KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±0.1%",
+    "example": "10Ω - 680KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±0.25%",
+    "example": "10Ω - 680KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±0.5%",
+    "example": "10Ω - 680KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±1%",
+    "example": "10Ω - 680KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±0.05%",
+    "example": "10Ω - 100KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±0.1%",
+    "example": "10Ω – 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±0.25%",
+    "example": "10Ω – 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±0.5%",
+    "example": "10Ω – 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±1%",
+    "example": "10Ω – 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±0.05%",
+    "example": "10Ω - 200KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±0.1%",
+    "example": "10Ω – 1.5MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±0.25%",
+    "example": "10Ω – 1.5MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±0.5%",
+    "example": "10Ω – 1.5MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±1%",
+    "example": "10Ω – 1.5MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±0.05%",
+    "example": "10Ω - 499KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±0.1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±0.25%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±0.5%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±0.05%",
+    "example": "10Ω - 499KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±0.1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±0.25%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±0.5%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±0.05%",
+    "example": "10Ω - 499KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±0.1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±0.25%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±0.5%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±0.05%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±0.1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±0.25%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±0.5%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±0.05%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±0.1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±0.25%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±0.5%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±0.05%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±0.1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±0.25%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±0.5%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±0.05%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±0.1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±0.25%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±0.5%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±0.05%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±0.1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±0.25%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±0.5%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR13 (1210) ±1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±0.05%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±0.1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±0.25%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±0.5%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR10 (2010) ±1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±0.05%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±0.1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±0.25%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±0.5%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR12 (2512) ±1%",
+    "example": "±25 ±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR02 (0402) ±0.01%",
+    "example": "±5"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR03 (0603) ±0.01%",
+    "example": "±5"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR05 (0805) ±0.01%",
+    "example": "±5"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "AR06 (1206) ±0.01%",
+    "example": "±5"
+   }
+  ],
+  "seconds": 214.03,
+  "tokens_in": 12917,
+  "tokens_out": 7186
+ }
 }

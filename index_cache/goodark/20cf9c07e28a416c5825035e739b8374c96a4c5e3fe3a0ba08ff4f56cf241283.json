@@ -18,5 +18,303 @@
   "tokens_in": 1924,
   "tokens_out": 47
  },
- "type": "sic_mosfet_n"
+ "type": "sic_mosfet_n",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:24:31+00:00",
+  "items": [
+   {
+    "name": "DrainSourceVoltage",
+    "symbol": "V DS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "650"
+   },
+   {
+    "name": "GateSourceVoltage",
+    "symbol": "V GS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-8/+22"
+   },
+   {
+    "name": "RecommendGateSourceVoltage",
+    "symbol": "V GSop",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-4/+18"
+   },
+   {
+    "name": "DrainCurrentContinuous",
+    "symbol": "I D",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "V GS=18V, T C=25°C",
+    "example": "49"
+   },
+   {
+    "name": "DrainCurrentContinuous",
+    "symbol": "I D",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "V GS=18V, T C=125°C",
+    "example": "35"
+   },
+   {
+    "name": "PowerDissipation",
+    "symbol": "P D",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "T C=25°C",
+    "example": "85"
+   },
+   {
+    "name": "OperatingTemperatureandStorageTemperatureRange",
+    "symbol": "T J /T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55to+175"
+   },
+   {
+    "name": "ThermalResistanceJunctiontoCase",
+    "symbol": "R thJC",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.77"
+   },
+   {
+    "name": "ThermalResistanceJunctiontoAmbient",
+    "symbol": "R thJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "62"
+   },
+   {
+    "name": "DrainSourceBreakdownVoltage",
+    "symbol": "V (BR)DSS",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "V GS=0V, I D=100μA",
+    "example": "650"
+   },
+   {
+    "name": "GateLeakageCurrent",
+    "symbol": "I GSS",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V GS=18V, V DS=0V",
+    "example": "100"
+   },
+   {
+    "name": "ZeroGateVoltageDrainCurrent",
+    "symbol": "I DSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "V DS=650V, V GS=0V",
+    "example": "100"
+   },
+   {
+    "name": "GateThresholdVoltage",
+    "symbol": "V GS(TH)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V DS=V GS, I DS=7mA",
+    "example": "2 to 4"
+   },
+   {
+    "name": "GateThresholdVoltage",
+    "symbol": "V GS(TH)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V DS=V GS, I DS=7mA, T J=175°C",
+    "example": "1.8 to 1.8"
+   },
+   {
+    "name": "Drain-SourceOn-state Resistance",
+    "symbol": "R DS(on)",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "V GS=18V, I D=17.6A",
+    "example": "45 to 59"
+   },
+   {
+    "name": "Drain-SourceOn-state Resistance",
+    "symbol": "R DS(on)",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "V GS=18V, I D=17.6A, T J=175°C",
+    "example": "55 to 55"
+   },
+   {
+    "name": "Drain-SourceOn-state Resistance",
+    "symbol": "R DS(on)",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "V GS=15V, I D=17.6A",
+    "example": "56 to 68"
+   },
+   {
+    "name": "Drain-SourceOn-state Resistance",
+    "symbol": "R DS(on)",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "V GS=15V, I D=17.6A, T J=175°C",
+    "example": "60 to 60"
+   },
+   {
+    "name": "TotalGateCharge",
+    "symbol": "Q g",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "V GS(off)=-5V, V GS(on)=20V, V DD=400V, I D=17.6A",
+    "example": "96"
+   },
+   {
+    "name": "GateSourceCharge",
+    "symbol": "Q gs",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "V GS(off)=-5V, V GS(on)=20V, V DD=400V, I D=17.6A",
+    "example": "25"
+   },
+   {
+    "name": "GateDrainCharge",
+    "symbol": "Q gd",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "V GS(off)=-5V, V GS(on)=20V, V DD=400V, I D=17.6A",
+    "example": "26"
+   },
+   {
+    "name": "Turn-OnSwitchingEnergy",
+    "symbol": "E ON",
+    "unit": "mJ",
+    "stat": "typ",
+    "conditions": "V GS=-5/+20V, V DD=400V, I D=17.6A, R G=10Ω, L=100uH",
+    "example": "188"
+   },
+   {
+    "name": "Turn-OffSwitchingEnergy",
+    "symbol": "E OFF",
+    "unit": "mJ",
+    "stat": "typ",
+    "conditions": "V GS=-5/+20V, V DD=400V, I D=17.6A, R G=10Ω, L=100uH",
+    "example": "19"
+   },
+   {
+    "name": "Tum-onDelayTime",
+    "symbol": "t d(on)",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "V GS=-5/+20V, V DD=400V, I D=17.6A, R G=10Ω, L=100uH",
+    "example": "20"
+   },
+   {
+    "name": "Turn-onRiseTime",
+    "symbol": "t r",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "V GS=-5/+20V, V DD=400V, I D=17.6A, R G=10Ω, L=100uH",
+    "example": "26"
+   },
+   {
+    "name": "Turn-offDelayTime",
+    "symbol": "t d(off)",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "V GS=-5/+20V, V DD=400V, I D=17.6A, R G=10Ω, L=100uH",
+    "example": "48"
+   },
+   {
+    "name": "Turn-offFallTime",
+    "symbol": "t f",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "V GS=-5/+20V, V DD=400V, I D=17.6A, R G=10Ω, L=100uH",
+    "example": "15"
+   },
+   {
+    "name": "InputCapacitance",
+    "symbol": "C iss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V GS=0V, V DS=650V, V AC=25mV, f=1MHz",
+    "example": "1823"
+   },
+   {
+    "name": "OutputCapacitance",
+    "symbol": "C oss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V GS=0V, V DS=650V, V AC=25mV, f=1MHz",
+    "example": "190"
+   },
+   {
+    "name": "ReverseTransferCapacitance",
+    "symbol": "C rss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V GS=0V, V DS=650V, V AC=25mV, f=1MHz",
+    "example": "19"
+   },
+   {
+    "name": "Gateresistance",
+    "symbol": "R G",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "V AC=25mV, f=1MHz",
+    "example": "1.7"
+   },
+   {
+    "name": "DiodeForwardVoltage",
+    "symbol": "V SD",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I SD=8.8A, V GS=-4V",
+    "example": "3.2"
+   },
+   {
+    "name": "DiodeForwardVoltage",
+    "symbol": "V SD",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I SD=8.8A, V GS=-4V, T J=175°C",
+    "example": "2.6"
+   },
+   {
+    "name": "ContinuousDiodeForwardCurrent",
+    "symbol": "I SD",
+    "unit": "A",
+    "stat": "typ",
+    "conditions": "V GS=-4V",
+    "example": "49"
+   },
+   {
+    "name": "ReverseRecoveryTime",
+    "symbol": "t rr",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "V DD=400V, I D=17.6A, R F=10Ω, V GS=-4V, di/dt=1000A/μs",
+    "example": "40"
+   },
+   {
+    "name": "ReverseRecoveryCharge",
+    "symbol": "Q rr",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "V DD=400V, I D=17.6A, R F=10Ω, V GS=-4V, di/dt=1000A/μs",
+    "example": "156"
+   }
+  ],
+  "seconds": 65.1,
+  "tokens_in": 2276,
+  "tokens_out": 2288
+ }
 }

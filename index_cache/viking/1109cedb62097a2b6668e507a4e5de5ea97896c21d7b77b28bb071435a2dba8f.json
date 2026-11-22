@@ -22,5 +22,423 @@
   "tokens_in": 1616,
   "tokens_out": 76
  },
- "type": "thick_film_chip_resistor"
+ "type": "thick_film_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:08:10+00:00",
+  "items": [
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +155"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "20.0"
+   },
+   {
+    "name": "Power Rating at 70",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "",
+    "example": "1/2"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No Specified"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "No Specified"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "R0R0"
+   },
+   {
+    "name": "Dimensions (L×W)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "02: 0402 03: 0603 05: 0805 06: 1206 10: "
+   },
+   {
+    "name": "Variation of resistance with temperature",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Damp Heat",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Dry Heat",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Bending Strength",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "",
+    "example": "95"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Rapid Change of Temperature",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15~28"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "year",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Reflow Profiles",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Pb-Free Assembly"
+   },
+   {
+    "name": "Preheat Min. Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Preheat Max Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Preheating time",
+    "symbol": "",
+    "unit": "second",
+    "stat": "range",
+    "conditions": "",
+    "example": "60-120"
+   },
+   {
+    "name": "Ramp-up rate",
+    "symbol": "",
+    "unit": "°C/second",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Liquidous temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "217"
+   },
+   {
+    "name": "Time maintained above Liquidous temperature",
+    "symbol": "",
+    "unit": "second",
+    "stat": "range",
+    "conditions": "",
+    "example": "60-150"
+   },
+   {
+    "name": "Min. Peak temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "235"
+   },
+   {
+    "name": "Max. Peak temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Time within 5 °C of peak temperature",
+    "symbol": "",
+    "unit": "second",
+    "stat": "max",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Ramp-down rate",
+    "symbol": "",
+    "unit": "°C/second",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Time from 25 °C to peak temperature",
+    "symbol": "",
+    "unit": "minute",
+    "stat": "max",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Soldering Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ref. IPC/JEDEC J-STD-020 & J-STD-002"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "10K"
+   },
+   {
+    "name": "Tape Width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "inch",
+    "stat": "value",
+    "conditions": "",
+    "example": "7"
+   },
+   {
+    "name": "ΦA",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "178±1.0"
+   },
+   {
+    "name": "ΦB",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "60.0+1.0"
+   },
+   {
+    "name": "ΦC",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "13.5±0.7"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "9.5±1.0"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "11.5 ± 1.0"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.70±0.05"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.16±0.05"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.75±0.05"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.50±0.05"
+   },
+   {
+    "name": "P 0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P 1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.00±0.05"
+   },
+   {
+    "name": "P 2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.00±0.05"
+   },
+   {
+    "name": "ΦD 0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.55±0.05"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No marking"
+   },
+   {
+    "name": "Land Pattern",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Recommend Land Pattern"
+   }
+  ],
+  "seconds": 80.61,
+  "tokens_in": 5096,
+  "tokens_out": 2049
+ }
 }

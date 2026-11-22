@@ -18,5 +18,311 @@
   "tokens_in": 2103,
   "tokens_out": 43
  },
- "type": "mosfet_n"
+ "type": "mosfet_n",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:51:35+00:00",
+  "items": [
+   {
+    "name": "V (BR)DSS",
+    "symbol": "V(BR)DSS",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "VGS=0V, ID=250µA",
+    "example": "200"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "VGS=10V, ID=46A",
+    "example": "24"
+   },
+   {
+    "name": "I D",
+    "symbol": "ID",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TJ=25°C",
+    "example": "72"
+   },
+   {
+    "name": "I D",
+    "symbol": "ID",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TJ=100°C",
+    "example": "45"
+   },
+   {
+    "name": "I DM",
+    "symbol": "IDM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TJ=25°C",
+    "example": "288"
+   },
+   {
+    "name": "P D",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TJ=25°C",
+    "example": "240"
+   },
+   {
+    "name": "E AS",
+    "symbol": "EAS",
+    "unit": "mJ",
+    "stat": "max",
+    "conditions": "",
+    "example": "140"
+   },
+   {
+    "name": "I AS",
+    "symbol": "IAS",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "53"
+   },
+   {
+    "name": "RθJA",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "PCB Mounted, Steady-State",
+    "example": "60"
+   },
+   {
+    "name": "RθJC",
+    "symbol": "RθJC",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.63"
+   },
+   {
+    "name": "T J STG",
+    "symbol": "TJSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 175"
+   },
+   {
+    "name": "I DSS",
+    "symbol": "IDSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VDS=200V, VGS=0V, TJ=25°C",
+    "example": "1.0"
+   },
+   {
+    "name": "I DSS",
+    "symbol": "IDSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VDS=200V, VGS=0V, TJ=125°C",
+    "example": "10"
+   },
+   {
+    "name": "IGSS",
+    "symbol": "IGSS",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VDS=0V, VGS=20V",
+    "example": "100"
+   },
+   {
+    "name": "IGSS",
+    "symbol": "IGSS",
+    "unit": "nA",
+    "stat": "min",
+    "conditions": "VDS=0V, VGS=-20V",
+    "example": "-100"
+   },
+   {
+    "name": "VGS(th)",
+    "symbol": "VGS(th)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VDS=VGS, ID=250μA",
+    "example": "3.0 to 5.0"
+   },
+   {
+    "name": "Ciss",
+    "symbol": "Ciss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGS=0V, VDS=25V, f=1MHz",
+    "example": "2655"
+   },
+   {
+    "name": "Coss",
+    "symbol": "Coss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGS=0V, VDS=25V, f=1MHz",
+    "example": "1593"
+   },
+   {
+    "name": "Crss",
+    "symbol": "Crss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGS=0V, VDS=25V, f=1MHz",
+    "example": "37"
+   },
+   {
+    "name": "Qg",
+    "symbol": "Qg",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "ID=46A, VDD=100V, VGS=10V",
+    "example": "36"
+   },
+   {
+    "name": "Qgs",
+    "symbol": "Qgs",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "ID=46A, VDD=100V, VGS=10V",
+    "example": "22"
+   },
+   {
+    "name": "Qgd",
+    "symbol": "Qgd",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "ID=46A, VDD=100V, VGS=10V",
+    "example": "4.3"
+   },
+   {
+    "name": "V plateau",
+    "symbol": "Vplateau",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "ID=46A, VDD=100V, VGS=10V",
+    "example": "6.9"
+   },
+   {
+    "name": "td(on)",
+    "symbol": "td(on)",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=100V, VGS=10V, RG=2.5Ω, ID=46A",
+    "example": "22"
+   },
+   {
+    "name": "tr",
+    "symbol": "tr",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=100V, VGS=10V, RG=2.5Ω, ID=46A",
+    "example": "80"
+   },
+   {
+    "name": "td(off)",
+    "symbol": "td(off)",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=100V, VGS=10V, RG=2.5Ω, ID=46A",
+    "example": "34"
+   },
+   {
+    "name": "tf",
+    "symbol": "tf",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=100V, VGS=10V, RG=2.5Ω, ID=46A",
+    "example": "9.6"
+   },
+   {
+    "name": "R g",
+    "symbol": "Rg",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "f=1MHz",
+    "example": "4.4"
+   },
+   {
+    "name": "I S",
+    "symbol": "IS",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TJ=25°C",
+    "example": "72"
+   },
+   {
+    "name": "I S,pulse",
+    "symbol": "IS,pulse",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TJ=25°C",
+    "example": "288"
+   },
+   {
+    "name": "VSD",
+    "symbol": "VSD",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IS=46A, VGS=0V",
+    "example": "1.4"
+   },
+   {
+    "name": "T rr",
+    "symbol": "Trr",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "IS=46A, VGS=0V, dI/dt=100A/us",
+    "example": "128"
+   },
+   {
+    "name": "Q rr",
+    "symbol": "Qrr",
+    "unit": "μC",
+    "stat": "typ",
+    "conditions": "IS=46A, VGS=0V, dI/dt=100A/us",
+    "example": "0.59"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-263 (D2PAK)"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 175"
+   },
+   {
+    "name": "AEC-Q101",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Qualified"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   }
+  ],
+  "seconds": 56.63,
+  "tokens_in": 2673,
+  "tokens_out": 1922
+ }
 }

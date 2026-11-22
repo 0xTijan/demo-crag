@@ -22,5 +22,14 @@
   "tokens_in": 2021,
   "tokens_out": 62
  },
- "type": "multilayer_chip_inductor"
+ "type": "multilayer_chip_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:26:53+00:00",
+  "items": [],
+  "seconds": 109.73,
+  "tokens_in": 8194,
+  "tokens_out": 235
+ }
 }

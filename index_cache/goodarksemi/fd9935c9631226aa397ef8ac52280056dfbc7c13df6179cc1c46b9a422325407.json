@@ -22,5 +22,111 @@
   "tokens_in": 2062,
   "tokens_out": 85
  },
- "type": "fast_acting_chip_fuse"
+ "type": "fast_acting_chip_fuse",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:56:18+00:00",
+  "items": [
+   {
+    "name": "Ampere Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "range",
+    "conditions": "",
+    "example": "250-8000"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "min",
+    "conditions": "100% of Amp Rating",
+    "example": "4"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "max",
+    "conditions": "250% of Amp Rating",
+    "example": "5"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Voltage Rating",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AC",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "DC",
+    "example": "63"
+   },
+   {
+    "name": "Interrupting Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "AC/DC",
+    "example": "50"
+   },
+   {
+    "name": "Resistance (ohms)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "DC Cold Resistance (Measured at 10% of rated current)",
+    "example": "4.1"
+   },
+   {
+    "name": "Typical Melt I2t",
+    "symbol": "",
+    "unit": "A2s",
+    "stat": "typ",
+    "conditions": "DC (Measured with a battery bank at rated DC voltage, 10x-rated current, not to exceed IR, time constant of calibrated c",
+    "example": "0.0004"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "D"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1206"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   }
+  ],
+  "seconds": 68.06,
+  "tokens_in": 1824,
+  "tokens_out": 506
+ }
 }

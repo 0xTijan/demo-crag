@@ -20,5 +20,223 @@
   "tokens_in": 1782,
   "tokens_out": 56
  },
- "type": "power_inductor"
+ "type": "power_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:46:28+00:00",
+  "items": [
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Shielded SMD Power Inductor"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1608/3316/5022"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40～125°C"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "5℃～25℃"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "35%～65%"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Inductor Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "K: ±10% M: ±20%"
+   },
+   {
+    "name": "Packaging Style",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Tape and Reel"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "L",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.0～10000μH"
+   },
+   {
+    "name": "Rated current",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.02～20.0A"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "100KHz, 0.1V",
+    "example": "0.040"
+   },
+   {
+    "name": "SRF",
+    "symbol": "SRF",
+    "unit": "MHz",
+    "stat": "value",
+    "conditions": "100KHz, 0.1V",
+    "example": "250"
+   },
+   {
+    "name": "Q",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "min",
+    "conditions": "100KHz, 0.1V",
+    "example": "30"
+   },
+   {
+    "name": "Saturation Rated Current",
+    "symbol": "I sat",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "Ta=25℃",
+    "example": "1.40"
+   },
+   {
+    "name": "Temperature Rise Current",
+    "symbol": "I rms",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "Ta=25℃",
+    "example": "3.00"
+   },
+   {
+    "name": "Tape size W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "PS1608",
+    "example": "16"
+   },
+   {
+    "name": "Tape size P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "PS1608",
+    "example": "8"
+   },
+   {
+    "name": "Parts Per Reel",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "13″",
+    "example": "2000"
+   },
+   {
+    "name": "High temperature Storage test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature 85±2℃, Time: 48±2 hours",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Low temperature Storage test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature -25±2℃, Time: 48±2 hours",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Humidity test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature 40±2℃, 90~95% relative humidity, Time: 96±2 hours",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Thermal shock test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "First -25℃ 30minutes then 25℃ 10 minutes last 85℃ 30 minutes, as 1 cycle. Go through 5 cycles.",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Solderability test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product with Lead-free terminal: Dip pads in flux then dip in solder pot at 245±5℃ for 3 seconds.",
+    "example": "Terminal area must have 90% minimum sold"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Flux should cover the whole of the sample before heating, then be preheated for about 2 minutes over temperature of 130~",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Vibration test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Apply frequency 10~55Hz. 1.5mm amplitude in each of perpendicular direction for 2 hours.",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Shock resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Drop down with 981m/s2(100G) shock attitude upon a rubber block method shock testing machine, for 1 time. In each of thr",
+    "example": "No case deformation or change in appeara"
+   }
+  ],
+  "seconds": 231.99,
+  "tokens_in": 7239,
+  "tokens_out": 1381
+ }
 }

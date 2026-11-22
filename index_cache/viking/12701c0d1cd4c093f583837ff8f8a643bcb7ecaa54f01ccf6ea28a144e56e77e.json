@@ -18,5 +18,671 @@
   "tokens_in": 1682,
   "tokens_out": 39
  },
- "type": "thin_film_chip_resistor"
+ "type": "thin_film_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:37:12+00:00",
+  "items": [
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Automotive Grade Metal Thin Film Chip Re"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402/0603/0805/1206"
+   },
+   {
+    "name": "AEC-Q200",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Qualified"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.02%"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "ppm/℃",
+    "stat": "value",
+    "conditions": "",
+    "example": "±5"
+   },
+   {
+    "name": "Sulfur Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Advanced verified according to ASTM B 80"
+   },
+   {
+    "name": "Lead-Free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Total Lead(Pb)-free without RoHS exempti"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 155"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "Standard",
+    "example": "1/32"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "High",
+    "example": "1/16"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "Ultra high",
+    "example": "1/8"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "ARM02 (0402)",
+    "example": "75"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "ARM03 (0603)",
+    "example": "100"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "ARM05 (0805)",
+    "example": "150"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "ARM06 (1206)",
+    "example": "200"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "ARM02 (0402)",
+    "example": "100"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "ARM03 (0603)",
+    "example": "200"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "ARM05 (0805)",
+    "example": "300"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "ARM06 (1206)",
+    "example": "400"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM02 (0402), Standard, TCR ±5",
+    "example": "100 to 3000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM02 (0402), Standard, TCR ±10",
+    "example": "47 to 100000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM02 (0402), Standard, TCR ±25",
+    "example": "47 to 100000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM02 (0402), Standard, TCR ±100",
+    "example": "10 to 150000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM03 (0603), Standard, TCR ±5",
+    "example": "100 to 5100"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM03 (0603), Standard, TCR ±10",
+    "example": "47 to 270000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM03 (0603), Standard, TCR ±25",
+    "example": "47 to 332000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM03 (0603), Standard, TCR ±50",
+    "example": "47 to 1000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM05 (0805), Standard, TCR ±5",
+    "example": "100 to 10200"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM05 (0805), Standard, TCR ±10",
+    "example": "47 to 475000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM05 (0805), Standard, TCR ±25",
+    "example": "47 to 2700000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM05 (0805), Standard, TCR ±50",
+    "example": "47 to 2700000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM06 (1206), Standard, TCR ±5",
+    "example": "100 to 33200"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM06 (1206), Standard, TCR ±10",
+    "example": "47 to 1000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM06 (1206), Standard, TCR ±25",
+    "example": "47 to 5100000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "ARM06 (1206), Standard, TCR ±50",
+    "example": "47 to 5100000"
+   },
+   {
+    "name": "Temperature Coefficient of Resistance",
+    "symbol": "",
+    "unit": "ppm/℃",
+    "stat": "value",
+    "conditions": "",
+    "example": "±5"
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Standard and High power rating",
+    "example": "ΔR±0.1% for ≦47Ω, ΔR±0.05% for ≧47Ω"
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Ultra high power rating",
+    "example": "ΔR±0.1%"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Standard power rating at 85℃",
+    "example": "ΔR±0.1%"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "High power rating at 85℃",
+    "example": "ΔR±0.25%"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Ultra high power rating at 70℃",
+    "example": "ΔR±0.5%"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Standard power rating",
+    "example": "ΔR±0.1%"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "High power rating",
+    "example": "ΔR±0.25%"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Ultra high power rating",
+    "example": "ΔR±0.5%"
+   },
+   {
+    "name": "High Temperature Exposure",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "0603/0805/1206 size",
+    "example": "ΔR±0.25% for ≦47Ω, ΔR±0.1% for ≧47Ω"
+   },
+   {
+    "name": "High Temperature Exposure",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "0402 size",
+    "example": "ΔR±0.25% for ≦47Ω, ΔR±0.2% for ≧47Ω"
+   },
+   {
+    "name": "Temperature Cycling",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ΔR±0.25% for ≦47Ω, ΔR±0.1% for ≧47Ω"
+   },
+   {
+    "name": "Resistance to soldering heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ΔR±0.1%"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "MΩ",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000"
+   },
+   {
+    "name": "Bending Strength (Board Flex)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ΔR±0.1%"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "95% min. coverage"
+   },
+   {
+    "name": "Terminal strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No broken"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ΔR±0.1%"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ΔR±0.1%"
+   },
+   {
+    "name": "ESD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "ARM02、ARM03",
+    "example": "0.2KV"
+   },
+   {
+    "name": "ESD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "ARM05、ARM06",
+    "example": "1KV"
+   },
+   {
+    "name": "Resistance to solvents",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Marking Unsmeared"
+   },
+   {
+    "name": "Sulfur Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ΔR±1%"
+   },
+   {
+    "name": "Flammability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL-94 V-0 or V-1"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "06 F C 1001"
+   },
+   {
+    "name": "Dimensions (L×W)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "02: 0402",
+    "example": "1.00×0.50"
+   },
+   {
+    "name": "Dimensions (L×W)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "03: 0603",
+    "example": "1.55×0.80"
+   },
+   {
+    "name": "Dimensions (L×W)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "05: 0805",
+    "example": "2.00×1.25"
+   },
+   {
+    "name": "Dimensions (L×W)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "06: 1206",
+    "example": "3.05×1.55"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Q: ±0.02%",
+    "example": "±0.02%"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "A: ±0.05%",
+    "example": "±0.05%"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "B: ±0.1%",
+    "example": "±0.1%"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "D: ±0.5%",
+    "example": "±0.5%"
+   },
+   {
+    "name": "TCR (PPM/℃)",
+    "symbol": "",
+    "unit": "ppm/℃",
+    "stat": "value",
+    "conditions": "S: ±5",
+    "example": "±5"
+   },
+   {
+    "name": "TCR (PPM/℃)",
+    "symbol": "",
+    "unit": "ppm/℃",
+    "stat": "value",
+    "conditions": "B: ±10",
+    "example": "±10"
+   },
+   {
+    "name": "TCR (PPM/℃)",
+    "symbol": "",
+    "unit": "ppm/℃",
+    "stat": "value",
+    "conditions": "C: ±25",
+    "example": "±25"
+   },
+   {
+    "name": "TCR (PPM/℃)",
+    "symbol": "",
+    "unit": "ppm/℃",
+    "stat": "value",
+    "conditions": "D: ±50",
+    "example": "±50"
+   },
+   {
+    "name": "TCR (PPM/℃)",
+    "symbol": "",
+    "unit": "ppm/℃",
+    "stat": "value",
+    "conditions": "E: ±100",
+    "example": "±100"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "0100: 10Ω",
+    "example": "10"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "10R2: 10.2Ω",
+    "example": "10.2"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "1000: 100Ω",
+    "example": "100"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "1001: 1KΩ",
+    "example": "1000"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "1004: 1MΩ",
+    "example": "1000000"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "0603 3digit marking in E96",
+    "example": "3digit"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "0805~2512 4digit marking",
+    "example": "4digit"
+   }
+  ],
+  "seconds": 237.29,
+  "tokens_in": 8464,
+  "tokens_out": 4711
+ }
 }

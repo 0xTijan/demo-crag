@@ -18,5 +18,87 @@
   "tokens_in": 1152,
   "tokens_out": 49
  },
- "type": "polymer_esd_suppressor"
+ "type": "polymer_esd_suppressor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:05:49+00:00",
+  "items": [
+   {
+    "name": "Maximum Contact Discharge Voltage Per IEC61000-4-2",
+    "symbol": "-",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "15KV"
+   },
+   {
+    "name": "Maximum Air Discharge Voltage Per IEC61000-4-2",
+    "symbol": "-",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "25KV"
+   },
+   {
+    "name": "Maximum Operating Temperature",
+    "symbol": "T OPER",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Maximum Storage Temperature",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "V R",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "15"
+   },
+   {
+    "name": "Trigger Voltage",
+    "symbol": "V T",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "300"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "35"
+   },
+   {
+    "name": "Leakage Current",
+    "symbol": "I L",
+    "unit": "μA",
+    "stat": "range",
+    "conditions": "DC 15V shall be applied on component",
+    "example": "0.01 to 0.10"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "C P",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =0V, f=1MHz R",
+    "example": "0.05"
+   }
+  ],
+  "seconds": 39.4,
+  "tokens_in": 1211,
+  "tokens_out": 454
+ }
 }

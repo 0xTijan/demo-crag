@@ -18,5 +18,103 @@
   "tokens_in": 1129,
   "tokens_out": 46
  },
- "type": "esd_protection_diode"
+ "type": "esd_protection_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T11:11:49+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power (TP=8/20μS)",
+    "symbol": "PPP",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "60"
+   },
+   {
+    "name": "Peak Pulse Current (TP=8/20μS)",
+    "symbol": "IPP",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Electrostatic Discharge Voltage at IEC 61000-4-2; Contact Discharge at IEC 61000",
+    "symbol": "VESD",
+    "unit": "kV",
+    "stat": "value",
+    "conditions": "",
+    "example": "±25 ±25"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "TS",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Reverse stand-off Voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "5.0"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "VBR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "IT=1mA",
+    "example": "5.6 to 8.4"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "IR",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VR=5V",
+    "example": "0.1"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IPP=1A, Tp=8/20μs",
+    "example": "10"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IPP=5A, Tp=8/20μs",
+    "example": "12"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VR=0V,f=1MHz",
+    "example": "15"
+   }
+  ],
+  "seconds": 76.27,
+  "tokens_in": 1023,
+  "tokens_out": 551
+ }
 }

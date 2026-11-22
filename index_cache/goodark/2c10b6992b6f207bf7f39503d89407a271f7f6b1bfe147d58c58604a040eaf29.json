@@ -18,5 +18,191 @@
   "tokens_in": 1174,
   "tokens_out": 38
  },
- "type": "fast_recovery_rectifier"
+ "type": "fast_recovery_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:09:28+00:00",
+  "items": [
+   {
+    "name": "Peak Repetitive Reverse Voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Continuous Reverse Voltage",
+    "symbol": "VR",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Forward Current (DC)",
+    "symbol": "IF(AV)",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "215"
+   },
+   {
+    "name": "Repetitive Peak Forward Current",
+    "symbol": "IFRM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "450"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Surge Current",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t=1s",
+    "example": "0.5"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Surge Current",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t=1ms",
+    "example": "1"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Surge Current",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t=1µs",
+    "example": "4"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to 150"
+   },
+   {
+    "name": "Thermal Resistance from Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "Device mounted on FR-4 substrate PC board, with minimum recommended pad layout",
+    "example": "357"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "V(BR)R",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IR = 10 μA",
+    "example": "75"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "mV",
+    "stat": "max",
+    "conditions": "IF=1mA",
+    "example": "715"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "mV",
+    "stat": "max",
+    "conditions": "IF=10mA",
+    "example": "855"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=50mA",
+    "example": "1"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=150mA",
+    "example": "1.25"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VR=25V",
+    "example": "30"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "VR=75V",
+    "example": "1"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "VR=25V, TJ=150℃",
+    "example": "30"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "VR=75V,TJ=150℃",
+    "example": "50"
+   },
+   {
+    "name": "Diode Capacitance",
+    "symbol": "Cd",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VR = 0 V, f =1MHz",
+    "example": "2"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "trr",
+    "unit": "ns",
+    "stat": "max",
+    "conditions": "IF=10mA, VR=6V, Irr =0.1×IR, RL=100 Ω",
+    "example": "4"
+   }
+  ],
+  "seconds": 44.71,
+  "tokens_in": 1233,
+  "tokens_out": 1014
+ }
 }

@@ -21,5 +21,167 @@
   "tokens_in": 1212,
   "tokens_out": 71
  },
- "type": "switching_diode"
+ "type": "switching_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:29:44+00:00",
+  "items": [
+   {
+    "name": "Repetitive Peak Reverse Voltage",
+    "symbol": "V_RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Working Peak Reverse Voltage",
+    "symbol": "V_RWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "DC Blocking Voltage",
+    "symbol": "V_R",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "RMS Reverse Voltage",
+    "symbol": "V_R(RMS)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "212"
+   },
+   {
+    "name": "Continuous Forward Current",
+    "symbol": "I_F",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "225"
+   },
+   {
+    "name": "Peak Repetitive Forward Current",
+    "symbol": "I_FRM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "625"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Surge Current",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t=1.0μs",
+    "example": "4"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Surge Current",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t=1.0s",
+    "example": "1"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "P_D",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient",
+    "symbol": "R_θJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "357"
+   },
+   {
+    "name": "Operating and Storage Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to +150"
+   },
+   {
+    "name": "Reverse Breakdown Voltage",
+    "symbol": "V(BR)R",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I_R=100uA",
+    "example": "350"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "I_R",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V_R=240V",
+    "example": "100"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "I_R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "V_R=240V, T_J=150°C",
+    "example": "100"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I_F=20mA",
+    "example": "0.87"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I_F=100mA",
+    "example": "1.0"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I_F=200mA",
+    "example": "1.25"
+   },
+   {
+    "name": "Total Capacitance",
+    "symbol": "C_T",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V_R=0V, f=1MHz",
+    "example": "5.0"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "t_rr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "I_F=I_R=30mA, I_R=0.1xI_F, R_L=100Ω",
+    "example": "50"
+   }
+  ],
+  "seconds": 46.0,
+  "tokens_in": 1188,
+  "tokens_out": 896
+ }
 }

@@ -18,5 +18,183 @@
   "tokens_in": 1306,
   "tokens_out": 48
  },
- "type": "sic_schottky_diode"
+ "type": "sic_schottky_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:26:29+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1200"
+   },
+   {
+    "name": "Working peak reverse voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1200"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1200"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "54"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=135°C",
+    "example": "27"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=153°C",
+    "example": "20"
+   },
+   {
+    "name": "Peak forward surge current, tp=10ms, Half Sine Pulse",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "160"
+   },
+   {
+    "name": "Power dissipation",
+    "symbol": "Ptot",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "214"
+   },
+   {
+    "name": "Power dissipation",
+    "symbol": "Ptot",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=110°C",
+    "example": "93"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55to+175"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55to+175"
+   },
+   {
+    "name": "Forward drop voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IF=20A, TJ=25°C",
+    "example": "1.4"
+   },
+   {
+    "name": "Forward drop voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=20A, TJ=25°C",
+    "example": "1.7"
+   },
+   {
+    "name": "Forward drop voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=20A, TJ=175°C",
+    "example": "2.0"
+   },
+   {
+    "name": "Reverse leakage current @ rated VR",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V=1200V, TJ=25°C",
+    "example": "50"
+   },
+   {
+    "name": "Reverse leakage current @ rated VR",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "typ",
+    "conditions": "V=1200V, TJ=25°C",
+    "example": "5"
+   },
+   {
+    "name": "Reverse leakage current @ rated VR",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "VR=1200V, TJ=175°C",
+    "example": "100"
+   },
+   {
+    "name": "Reverse leakage current @ rated VR",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "typ",
+    "conditions": "VR=1200V, TJ=175°C",
+    "example": "15"
+   },
+   {
+    "name": "Total capacitive charge",
+    "symbol": "QC",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VR=800V, TJ=25°C",
+    "example": "97"
+   },
+   {
+    "name": "Total capacitance",
+    "symbol": "C",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VR=800V, TJ=25°C, f=1MHz",
+    "example": "70"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case",
+    "symbol": "RθJC",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.7"
+   }
+  ],
+  "seconds": 53.84,
+  "tokens_in": 1794,
+  "tokens_out": 1035
+ }
 }

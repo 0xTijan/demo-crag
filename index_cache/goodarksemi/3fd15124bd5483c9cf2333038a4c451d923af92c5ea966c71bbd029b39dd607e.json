@@ -22,5 +22,111 @@
   "tokens_in": 1523,
   "tokens_out": 87
  },
- "type": "fast_acting_chip_fuse"
+ "type": "fast_acting_chip_fuse",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:55:18+00:00",
+  "items": [
+   {
+    "name": "Ampere Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "range",
+    "conditions": "",
+    "example": "200-4000"
+   },
+   {
+    "name": "% of Amp Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "Hours",
+    "stat": "min",
+    "conditions": "",
+    "example": "4"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "Seconds",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Product Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "S0402F200"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Voltage Rating",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "24"
+   },
+   {
+    "name": "Interrupting Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "ohms",
+    "stat": "typ",
+    "conditions": "",
+    "example": "4.300"
+   },
+   {
+    "name": "Typical Melt I²t",
+    "symbol": "",
+    "unit": "DC (A²s)",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.0008"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Life Test: 30°C ±2°C, 75% rated current,"
+   }
+  ],
+  "seconds": 48.01,
+  "tokens_in": 1036,
+  "tokens_out": 613
+ }
 }

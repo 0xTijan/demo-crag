@@ -20,5 +20,199 @@
   "tokens_in": 1323,
   "tokens_out": 54
  },
- "type": "switching_diode"
+ "type": "switching_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:28:58+00:00",
+  "items": [
+   {
+    "name": "Reverse Voltage",
+    "symbol": "V R",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "120"
+   },
+   {
+    "name": "Peak Reverse Voltage",
+    "symbol": "V RM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "P D",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Operating Junction Temperature",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to +150"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient Air",
+    "symbol": "R θJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "500"
+   },
+   {
+    "name": "Working Inverse Voltage",
+    "symbol": "W IV",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Average Rectified Current",
+    "symbol": "I O",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Current",
+    "symbol": "I FM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Peak Forward Surge Current @T =1mS; T =25°C P A",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "T =1mS; T =25°C P A",
+    "example": "1.7"
+   },
+   {
+    "name": "Reverse Voltage",
+    "symbol": "V R",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =100uA B",
+    "example": "120"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "V =100V R",
+    "example": "0.1"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "V =150V R",
+    "example": "0.1"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "V =200V R",
+    "example": "0.1"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =100mA F",
+    "example": "1"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =200mA F",
+    "example": "1.25"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "t rr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "I =30mA, I =30mA, F R R =100Ω, I =3mA L RR",
+    "example": "50"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "C",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =0V, f=1MHz R",
+    "example": "5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-323"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "cathode band denotes cathode"
+   },
+   {
+    "name": "Mounting Position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "Epoxy UL",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "94V-0"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "BAV19WS"
+   }
+  ],
+  "seconds": 52.95,
+  "tokens_in": 1731,
+  "tokens_out": 1179
+ }
 }

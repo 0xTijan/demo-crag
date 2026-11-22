@@ -18,5 +18,111 @@
   "tokens_in": 1236,
   "tokens_out": 43
  },
- "type": "esd_tvs_array"
+ "type": "esd_tvs_array",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:35:44+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power (8/20µs)",
+    "symbol": "P pk",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "48"
+   },
+   {
+    "name": "Peak Pulse Current (8/20µs)",
+    "symbol": "I pp",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "4"
+   },
+   {
+    "name": "ESD per IEC 61000-4-2 (Air)",
+    "symbol": "V ESD",
+    "unit": "kV",
+    "stat": "max",
+    "conditions": "",
+    "example": "±25"
+   },
+   {
+    "name": "ESD per IEC 61000-4-2 (Contact)",
+    "symbol": "V ESD",
+    "unit": "kV",
+    "stat": "max",
+    "conditions": "",
+    "example": "±20"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Reverse Working Voltage",
+    "symbol": "V RWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Any I/O pin to ground",
+    "example": "5"
+   },
+   {
+    "name": "Breakdown Voltage",
+    "symbol": "V BR",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =1mA, any I/O pin to ground",
+    "example": "6"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =5V, any I/O pin to ground",
+    "example": "0.5"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I =4A (8/20µs pulse), any I/O pin to ground",
+    "example": "10"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "C J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =0V, f=1MHz, between I/O pins",
+    "example": "0.2"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "C J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =0V, f=1MHz, any I/O pin to ground",
+    "example": "0.3"
+   }
+  ],
+  "seconds": 65.33,
+  "tokens_in": 1140,
+  "tokens_out": 614
+ }
 }

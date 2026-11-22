@@ -22,5 +22,95 @@
   "tokens_in": 1668,
   "tokens_out": 101
  },
- "type": "standard_rectifier"
+ "type": "standard_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:17:05+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "V_RRM",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum RMS voltage",
+    "symbol": "V_RMS",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "V_DC",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "I_AV",
+    "unit": "Amps",
+    "stat": "max",
+    "conditions": "0.375\"(9.5mm) lead length@T=75°C",
+    "example": "3.0"
+   },
+   {
+    "name": "Peak forward surge current, 8.3ms single half-sine wave superimposed on rated lo",
+    "symbol": "I_FSM",
+    "unit": "Amps",
+    "stat": "max",
+    "conditions": "",
+    "example": "125.0"
+   },
+   {
+    "name": "Maximum instantaneous forward voltage",
+    "symbol": "V_F",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "@3.0A",
+    "example": "1.1"
+   },
+   {
+    "name": "Maximum DC reverse current",
+    "symbol": "I_R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "@T=25°C A at rated DC blocking voltage @T=125°C A",
+    "example": "5.0"
+   },
+   {
+    "name": "Typical junction capacitance",
+    "symbol": "C_J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "Note 1",
+    "example": "30"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "",
+    "unit": "oC",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "",
+    "unit": "oC",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   }
+  ],
+  "seconds": 20.85,
+  "tokens_in": 1665,
+  "tokens_out": 492
+ }
 }

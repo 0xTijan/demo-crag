@@ -22,5 +22,383 @@
   "tokens_in": 2007,
   "tokens_out": 63
  },
- "type": "pulse_withstanding_chip_resistor"
+ "type": "pulse_withstanding_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:33:05+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "155°C"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 155"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "",
+    "example": "1/5W"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96)",
+    "example": "1 to 20"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1% (E24,E96)",
+    "example": "1 to 20"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5% (E24)",
+    "example": "1 to 20"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±0.5% (E24,E96)",
+    "example": "±300"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±1% (E24,E96)",
+    "example": "±100"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±5% (E24)",
+    "example": "±200"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "PWR02",
+    "example": "0402"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "PWR03",
+    "example": "0603"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "PWR05",
+    "example": "0805"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "PWR06",
+    "example": "1206"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "PWR13",
+    "example": "1210"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "PWR10",
+    "example": "2010"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "PWR12",
+    "example": "2512"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±0.5%",
+    "example": "±0.5"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±1%",
+    "example": "±1"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "±5%",
+    "example": "±5"
+   },
+   {
+    "name": "AEC-Q200 Compliance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliance"
+   },
+   {
+    "name": "MSL",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Level 1"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliance"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Dimensions",
+    "example": "02"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Resistance Tolerance",
+    "example": "D"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Packaging Code",
+    "example": "T"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "TCR (PPM/°C)",
+    "example": "E"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Power Rating",
+    "example": "X"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Resistance",
+    "example": "1001"
+   },
+   {
+    "name": "Jumper Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.01"
+   },
+   {
+    "name": "Jumper Rated Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Jumper Overload Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "GΩ",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω)"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω)"
+   },
+   {
+    "name": "Dry Heat",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω)"
+   },
+   {
+    "name": "Bending Strength",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω)"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "",
+    "example": "95"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No breakdown or flashover"
+   },
+   {
+    "name": "Leaching",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "Individual leaching area",
+    "example": "5"
+   },
+   {
+    "name": "Leaching",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "Total leaching area",
+    "example": "10"
+   },
+   {
+    "name": "Rapid Change of Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 155"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   }
+  ],
+  "seconds": 92.72,
+  "tokens_in": 12119,
+  "tokens_out": 1861
+ }
 }

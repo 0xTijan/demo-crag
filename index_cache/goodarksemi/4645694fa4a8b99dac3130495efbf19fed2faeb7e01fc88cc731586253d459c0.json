@@ -18,5 +18,103 @@
   "tokens_in": 1430,
   "tokens_out": 49
  },
- "type": "polymer_esd_suppressor"
+ "type": "polymer_esd_suppressor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:06:11+00:00",
+  "items": [
+   {
+    "name": "Maximum Contact Discharge Voltage Per IEC61000-4-2",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "15KV"
+   },
+   {
+    "name": "Maximum Air Discharge Voltage Per IEC61000-4-2",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "25KV"
+   },
+   {
+    "name": "Maximum Operating Temperature",
+    "symbol": "T OPER",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to +90"
+   },
+   {
+    "name": "Maximum Storage Temperature",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Maximum Lead Temperature For Soldering During 10s",
+    "symbol": "T L",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Continuous Operating Voltage",
+    "symbol": "V DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "24"
+   },
+   {
+    "name": "Trigger Voltage",
+    "symbol": "V T",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "500"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "36"
+   },
+   {
+    "name": "Leakage Current",
+    "symbol": "I L",
+    "unit": "nA",
+    "stat": "typ",
+    "conditions": "DC 24V shall be applied on component",
+    "example": "0.10"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "C P",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V = 0V, f = 1MHz R",
+    "example": "0.05"
+   },
+   {
+    "name": "ESD Pulse Withstand",
+    "symbol": "Pulses",
+    "unit": "",
+    "stat": "min",
+    "conditions": "IEC61000-4-2 8KV contact discharge",
+    "example": "100"
+   }
+  ],
+  "seconds": 28.97,
+  "tokens_in": 1280,
+  "tokens_out": 555
+ }
 }

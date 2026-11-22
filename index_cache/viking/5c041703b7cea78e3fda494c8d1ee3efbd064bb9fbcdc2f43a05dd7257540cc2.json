@@ -19,5 +19,119 @@
   "tokens_in": 3601,
   "tokens_out": 41
  },
- "type": "multilayer_ceramic_capacitor"
+ "type": "multilayer_ceramic_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:23:45+00:00",
+  "items": [
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Multilayer Ceramic Chip Capacitor – MC S"
+   },
+   {
+    "name": "Sizes.",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0201/0402/0603/0805/1206/1210/1808/1812/"
+   },
+   {
+    "name": "Termination",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "NPO: Ag/Ni/Sn dielectric X7R, Y5V, X5R: "
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MC / MCRF"
+   },
+   {
+    "name": "Dielectric Material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "NPO, X7R, Y5V, X5R"
+   },
+   {
+    "name": "Size (Inch)",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "0201/0402/0603/0805/1206/1210/1808/1812"
+   },
+   {
+    "name": "L (mm)",
+    "symbol": "L",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.3±0.03 to 4.5+0.5/-0.3"
+   },
+   {
+    "name": "W (mm)",
+    "symbol": "W",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.1±0.03 to 2.5+0.4/-0.3"
+   },
+   {
+    "name": "T (mm)",
+    "symbol": "T",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.1±0.03 to 2.5+0.4/-0.3"
+   },
+   {
+    "name": "M (mm)",
+    "symbol": "M",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.15±0.05 to 0.75+0.2/-0.2"
+   },
+   {
+    "name": "B (mm)",
+    "symbol": "B",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.15±0.05 to 0.75+0.2/-0.2"
+   },
+   {
+    "name": "Packaging (Paper tape)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "15K, 10K, 4K, -"
+   },
+   {
+    "name": "Packaging (Plastic tape)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "- , 3K, 2K, 1K"
+   }
+  ],
+  "seconds": 291.73,
+  "tokens_in": 29446,
+  "tokens_out": 9030
+ }
 }

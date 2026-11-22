@@ -19,5 +19,359 @@
   "tokens_in": 1397,
   "tokens_out": 43
  },
- "type": "multilayer_chip_inductor"
+ "type": "multilayer_chip_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:30:16+00:00",
+  "items": [
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Thin Film Chip Inductor - AL Series"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0201/0402"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 125"
+   },
+   {
+    "name": "Test Equipment",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "HP4287A+Agilent 16196C"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "L",
+    "unit": "nH",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.1"
+   },
+   {
+    "name": "Inductance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.1nH"
+   },
+   {
+    "name": "Quality Factor",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "min",
+    "conditions": "500MHz",
+    "example": "8"
+   },
+   {
+    "name": "Self Resonant Frequency",
+    "symbol": "SRF",
+    "unit": "GHz",
+    "stat": "min",
+    "conditions": "",
+    "example": "9"
+   },
+   {
+    "name": "DC Resistance",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.20"
+   },
+   {
+    "name": "DC Current",
+    "symbol": "IDC",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AL01"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Standard"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "0.60"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "0.70"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "0.40"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "0.70"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "8.00"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "1.75"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "3.50"
+   },
+   {
+    "name": "P0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "4.00"
+   },
+   {
+    "name": "P1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "2.00"
+   },
+   {
+    "name": "P2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "2.00"
+   },
+   {
+    "name": "ψD0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "1.55"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "0.42"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "0.70"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "1.16"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "8.00"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "1.75"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "3.50"
+   },
+   {
+    "name": "P0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "4.00"
+   },
+   {
+    "name": "P1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "2.00"
+   },
+   {
+    "name": "P2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "2.00"
+   },
+   {
+    "name": "ψD0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "1.55"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "0.43"
+   },
+   {
+    "name": "Reflow Profile",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
+    "example": "Preheat Min. Temperature: 150 °C"
+   },
+   {
+    "name": "Reel Quantity",
+    "symbol": "",
+    "unit": "EA",
+    "stat": "value",
+    "conditions": "AL01",
+    "example": "10,000"
+   },
+   {
+    "name": "Reel Quantity",
+    "symbol": "",
+    "unit": "EA",
+    "stat": "value",
+    "conditions": "AL02",
+    "example": "10,000"
+   },
+   {
+    "name": "Land Pattern A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "0.30"
+   },
+   {
+    "name": "Land Pattern B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "0.25"
+   },
+   {
+    "name": "Land Pattern C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0201",
+    "example": "0.30"
+   },
+   {
+    "name": "Land Pattern A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "0.50"
+   },
+   {
+    "name": "Land Pattern B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "0.45"
+   },
+   {
+    "name": "Land Pattern C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Size: 0402",
+    "example": "0.60"
+   }
+  ],
+  "seconds": 211.08,
+  "tokens_in": 15605,
+  "tokens_out": 2616
+ }
 }

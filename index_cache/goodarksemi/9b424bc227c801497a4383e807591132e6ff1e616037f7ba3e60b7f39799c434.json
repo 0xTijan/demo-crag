@@ -21,5 +21,231 @@
   "tokens_in": 1862,
   "tokens_out": 77
  },
- "type": "esd_protection_diode"
+ "type": "esd_protection_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T11:11:20+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power (8/20µs)",
+    "symbol": "P PK",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "500"
+   },
+   {
+    "name": "ESD per IEC 61000-4-2 (Air)",
+    "symbol": "V ESD",
+    "unit": "kV",
+    "stat": "max",
+    "conditions": "",
+    "example": "±30"
+   },
+   {
+    "name": "ESD per IEC 61000-4-2 (Contact)",
+    "symbol": "V ESD",
+    "unit": "kV",
+    "stat": "max",
+    "conditions": "",
+    "example": "±30"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "T stg",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Reverse Working Voltage",
+    "symbol": "V RWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "3.3"
+   },
+   {
+    "name": "Breakdown Voltage",
+    "symbol": "V BR",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =1mA T",
+    "example": "3.8"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =3.3V RWM",
+    "example": "0.5"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I =10mA F",
+    "example": "0.8"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =1A (8 x 20µs pulse) PP",
+    "example": "5"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =40A (8 x 20µs pulse) PP",
+    "example": "12.5"
+   },
+   {
+    "name": "Peak Pulse Current",
+    "symbol": "I PP",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t =8/20μs p",
+    "example": "40"
+   },
+   {
+    "name": "Junction Capacitance",
+    "symbol": "C J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V =0V, f=1MHz R",
+    "example": "280"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =5V RWM",
+    "example": "0.5"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =5A (8 x 20µs pulse) PP",
+    "example": "9.5"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =36A (8 x 20µs pulse) PP",
+    "example": "14"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =8V RWM",
+    "example": "0.2"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =28A (8 x 20µs pulse) PP",
+    "example": "18"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =15V RWM",
+    "example": "0.2"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =17A (8 x 20µs pulse) PP",
+    "example": "30"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =18V RWM",
+    "example": "0.2"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =10A (8 x 20µs pulse) PP",
+    "example": "32"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =24V RWM",
+    "example": "0.2"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =36V RWM",
+    "example": "0.2"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =8A (8 x 20µs pulse) PP",
+    "example": "62.5"
+   },
+   {
+    "name": "Reverse Leakage Current",
+    "symbol": "I R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "V =40V RWM",
+    "example": "0.2"
+   },
+   {
+    "name": "Clamping Voltage",
+    "symbol": "V C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =6A (8 x 20µs pulse) PP",
+    "example": "83"
+   }
+  ],
+  "seconds": 72.33,
+  "tokens_in": 3106,
+  "tokens_out": 3335
+ }
 }

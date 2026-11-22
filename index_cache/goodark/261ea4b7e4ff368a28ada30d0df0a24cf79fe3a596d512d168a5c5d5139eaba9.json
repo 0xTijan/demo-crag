@@ -22,5 +22,183 @@
   "tokens_in": 3372,
   "tokens_out": 82
  },
- "type": "zener_diode"
+ "type": "zener_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:29:19+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TA=25°C unless otherwise noted"
+   },
+   {
+    "name": "Zener voltage",
+    "symbol": "VZ",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "See Next Table"
+   },
+   {
+    "name": "Power dissipation at TL=75℃",
+    "symbol": "Ptot",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "TL=75℃",
+    "example": "500"
+   },
+   {
+    "name": "Typical Thermal Resistance , Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "℃/mW",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.38"
+   },
+   {
+    "name": "Maximum junction temperature",
+    "symbol": "TJ",
+    "unit": "℃",
+    "stat": "max",
+    "conditions": "",
+    "example": "175"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "TSTG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to +175"
+   },
+   {
+    "name": "Moisture sensitivity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "level 1, per J-STD-020"
+   },
+   {
+    "name": "BZX55-C series zener voltage tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±5%"
+   },
+   {
+    "name": "BZX55-B series zener voltage tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±2%"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "BZX55-Y0V8"
+   },
+   {
+    "name": "VZ at IZT =5mA (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IZT=5mA",
+    "example": "0.8"
+   },
+   {
+    "name": "VZ at IZT =5mA (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IZT=5mA, Y=C",
+    "example": "0.76"
+   },
+   {
+    "name": "VZ at IZT =5mA (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IZT=5mA, Y=C",
+    "example": "0.84"
+   },
+   {
+    "name": "VZ at IZT =5mA (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IZT=5mA, Y=B",
+    "example": "0.78"
+   },
+   {
+    "name": "VZ at IZT =5mA (V)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IZT=5mA, Y=B",
+    "example": "0.82"
+   },
+   {
+    "name": "Maximum zener impedance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "IZT=5mA f=1KHZ",
+    "example": "8"
+   },
+   {
+    "name": "Maximum zener impedance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "IZT=1mA f=1KHZ",
+    "example": "600"
+   },
+   {
+    "name": "Test voltage VR",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "-"
+   },
+   {
+    "name": "Maximum reverse leakage at VR",
+    "symbol": "",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "TA=25℃",
+    "example": "50000"
+   },
+   {
+    "name": "Maximum reverse leakage at VR",
+    "symbol": "",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "TA=150℃",
+    "example": "100"
+   },
+   {
+    "name": "Maximu m Zener Current",
+    "symbol": "IZM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "145"
+   }
+  ],
+  "seconds": 47.15,
+  "tokens_in": 4633,
+  "tokens_out": 960
+ }
 }

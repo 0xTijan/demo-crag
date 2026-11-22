@@ -18,5 +18,487 @@
   "tokens_in": 1815,
   "tokens_out": 47
  },
- "type": "igbt_transistor"
+ "type": "igbt_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:20:33+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings (TJ=25°C unless otherwise noted)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "VCES",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "650"
+   },
+   {
+    "name": "Gate-Emitter Voltage",
+    "symbol": "VGES",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "±20"
+   },
+   {
+    "name": "Transient Gate-Emitter Voltage(tp≤10us, D<0.01)",
+    "symbol": "VGES",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "±30"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "IC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "150"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "IC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=100°C",
+    "example": "75"
+   },
+   {
+    "name": "Collector Current, Pulsed",
+    "symbol": "ICM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Diode Continuous Forward Current",
+    "symbol": "IF",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Diode Maximum Forward Current",
+    "symbol": "IFM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "395"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=100°C",
+    "example": "197"
+   },
+   {
+    "name": "Operating Junction/ Storage Temperature Range",
+    "symbol": "TJ/ TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +175"
+   },
+   {
+    "name": "Thermal Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Thermal Resistance Junction to Case for IGBT",
+    "symbol": "RthJC",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.38"
+   },
+   {
+    "name": "Thermal Resistance Junction to Case for Diode",
+    "symbol": "RthJC",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.49"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient (Note 1)",
+    "symbol": "RthJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "Device mounted on 1 square inch FR4 PCB board, with 2oz single-sided copper, in a 25°C still air environment.",
+    "example": "40"
+   },
+   {
+    "name": "Electrical Characteristics (TJ =25°C unless otherwise noted)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "V(BR)CES",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "VGE=0V, ICE=1mA",
+    "example": "650"
+   },
+   {
+    "name": "Collector-Emitter Leakage Current",
+    "symbol": "ICES",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "VCS=650V, VGE=0V",
+    "example": "5"
+   },
+   {
+    "name": "Gate Threshold Voltage",
+    "symbol": "VGE(TH)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VCS=VGE, IC=1mA",
+    "example": "4 to 6"
+   },
+   {
+    "name": "Gate to Emitter Leakage Current",
+    "symbol": "IGES",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VGE=±30V, VCE=0V",
+    "example": "±200"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "VCE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "VGE=15V, IC=75A",
+    "example": "1.8"
+   },
+   {
+    "name": "Total Gate Charge",
+    "symbol": "Qg",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VGE(off)=0V, VGE(on)=15V, VCC=480V, IC=75A",
+    "example": "128"
+   },
+   {
+    "name": "Gate-Emitter Charge",
+    "symbol": "Qge",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VGE(off)=0V, VGE(on)=15V, VCC=480V, IC=75A",
+    "example": "18"
+   },
+   {
+    "name": "Gate-Collector Charge",
+    "symbol": "Qgc",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VGE(off)=0V, VGE(on)=15V, VCC=480V, IC=75A",
+    "example": "32"
+   },
+   {
+    "name": "Turn-on Delay Time",
+    "symbol": "td(on)",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=75A, VGE=15V, RG=10Ω",
+    "example": "56"
+   },
+   {
+    "name": "Turn-on Rise Time",
+    "symbol": "tr",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=75A, VGE=15V, RG=10Ω",
+    "example": "109"
+   },
+   {
+    "name": "Turn-off Delay Time",
+    "symbol": "td(off)",
+    "unit": "",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=75A, VGE=15V, RG=10Ω",
+    "example": "220"
+   },
+   {
+    "name": "Turn-off Fall Time",
+    "symbol": "tf",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VCE=400V, IC=75A, VGE=15V, RG=10Ω",
+    "example": "102"
+   },
+   {
+    "name": "Input Capacitance",
+    "symbol": "Cies",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGE=0V, VCE=25V, f=1MHz",
+    "example": "3585"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "Coes",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGE=0V, VCE=25V, f=1MHz",
+    "example": "208"
+   },
+   {
+    "name": "Reverse Transfer Capacitance",
+    "symbol": "Cres",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGE=0V, VCE=25V, f=1MHz",
+    "example": "42"
+   },
+   {
+    "name": "Reverse Diode Characteristics (TJ =25°C unless otherwise noted)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Diode Forward Voltage",
+    "symbol": "VFM",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IF=75A, VGE=0V",
+    "example": "1.48"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "Trr",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "IF=75A, di/dt=360A/μs",
+    "example": "83"
+   },
+   {
+    "name": "Reverse Recovery Charge",
+    "symbol": "Qrr",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "IF=75A, di/dt=360A/μs",
+    "example": "590"
+   },
+   {
+    "name": "Package Outline Dimensions(Unit: millimeters)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "TO-247AD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-247AD"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.7 to 5.2"
+   },
+   {
+    "name": "A1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.3 to 2.5"
+   },
+   {
+    "name": "A2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.9 to 2.1"
+   },
+   {
+    "name": "A3",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "15.48 to 16.28"
+   },
+   {
+    "name": "A4",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "13.2 to 13.8"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "20.8 to 21.1"
+   },
+   {
+    "name": "B1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "19.8 to 20.32"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.5 to 0.7"
+   },
+   {
+    "name": "C1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "5.34 to 5.54"
+   },
+   {
+    "name": "C2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.8 to 2.2"
+   },
+   {
+    "name": "C3",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.1 to 1.3"
+   },
+   {
+    "name": "C4",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.04 to 6.30"
+   },
+   {
+    "name": "C5",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.8 to 3.2"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.5 to 3.7"
+   },
+   {
+    "name": "D1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "7 to 7.4"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.5 to 1.7"
+   },
+   {
+    "name": "E1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "16.25 to 16.85"
+   },
+   {
+    "name": "E2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.9 to 5.1"
+   },
+   {
+    "name": "E3",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.95 to 1.35"
+   },
+   {
+    "name": "E4",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.17 to 4.5"
+   },
+   {
+    "name": "Z",
+    "symbol": "",
+    "unit": "°",
+    "stat": "range",
+    "conditions": "",
+    "example": "30°"
+   }
+  ],
+  "seconds": 71.24,
+  "tokens_in": 2367,
+  "tokens_out": 2836
+ }
 }

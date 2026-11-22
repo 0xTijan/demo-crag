@@ -18,5 +18,175 @@
   "tokens_in": 1273,
   "tokens_out": 43
  },
- "type": "ultrafast_rectifier"
+ "type": "ultrafast_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:58:27+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "600"
+   },
+   {
+    "name": "Working Peak Reverse Voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "600"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "600"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current @ Tc=105°C",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "Tc=105°C",
+    "example": "10"
+   },
+   {
+    "name": "Peak Forward Surge Current 8.3ms Single Half Sine-wave Superimposed on Rated Loa",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "125"
+   },
+   {
+    "name": "Voltage Rate of Change (rated VR)",
+    "symbol": "DV/dt",
+    "unit": "V/μs",
+    "stat": "max",
+    "conditions": "",
+    "example": "10000"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "- 55 to+150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "- 55 to+150"
+   },
+   {
+    "name": "Maximum Reverse Recover Time (I =0.5A, I =1.0A,Irec=0.25A) F R",
+    "symbol": "Trr",
+    "unit": "ns",
+    "stat": "max",
+    "conditions": "I_F=0.5A, I_R=1.0A, Irec=0.25A",
+    "example": "50"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage per Leg",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=10A, TC=25°C",
+    "example": "1.60"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage per Leg",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=10A, TC=125°C",
+    "example": "1.50"
+   },
+   {
+    "name": "Maximum Reverse Current per Leg at Working Peak Reverse Voltage",
+    "symbol": "IR",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "TJ=25°C",
+    "example": "10"
+   },
+   {
+    "name": "Maximum Reverse Current per Leg at Working Peak Reverse Voltage",
+    "symbol": "IR",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "TJ=100°C",
+    "example": "500"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case per Leg",
+    "symbol": "RθJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "2.5"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Ambient per Leg",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Epoxy, molded"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "grams",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.1"
+   },
+   {
+    "name": "Lead Temperature for Soldering Purposes",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "10 sec",
+    "example": "260"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "POWER QFN5x6"
+   },
+   {
+    "name": "Flammability Classification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "94V-0"
+   }
+  ],
+  "seconds": 38.79,
+  "tokens_in": 1242,
+  "tokens_out": 975
+ }
 }

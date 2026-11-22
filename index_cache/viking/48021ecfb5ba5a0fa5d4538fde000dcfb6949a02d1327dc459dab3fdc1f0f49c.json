@@ -22,5 +22,815 @@
   "tokens_in": 1406,
   "tokens_out": 74
  },
- "type": "leaded_film_resistor"
+ "type": "leaded_film_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:12:38+00:00",
+  "items": [
+   {
+    "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Viking Tech Corporation"
+   },
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Metal Film Leaded Precision Resistor—MFR"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0318/0623/0932/1145/1550"
+   },
+   {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "31-Mar-25"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.C"
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Excellent overall stability"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Telecommunication"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "L",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.4±0.3"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.8±0.3"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "H",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "29±3.0"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "Weight",
+    "unit": "g (1000pcs)",
+    "stat": "value",
+    "conditions": "",
+    "example": "90"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MFR0318"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "0318",
+    "example": "1/8W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "0623",
+    "example": "1/4W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "0932",
+    "example": "1/2W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "1145",
+    "example": "1W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "1550",
+    "example": "2W"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +155"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0318",
+    "example": "150"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0623",
+    "example": "250"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0932",
+    "example": "350"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "1145",
+    "example": "500"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "1550",
+    "example": "500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0318",
+    "example": "300"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0623",
+    "example": "500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0932",
+    "example": "500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "1145",
+    "example": "700"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "1550",
+    "example": "1000"
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "10Ω-100KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "10Ω-100KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±5",
+    "example": "±5"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±10",
+    "example": "±10"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±15",
+    "example": "±15"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±25",
+    "example": "±25"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±50",
+    "example": "±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±100",
+    "example": "±100"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623",
+    "example": "100Ω-22KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "10Ω-4.99MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145",
+    "example": "10Ω-10MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "10Ω-4.99MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1550",
+    "example": "0.1Ω-10MΩ"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "0318 (High Power)",
+    "example": "1/4W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "0623 (High Power)",
+    "example": "1/2W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "0932 (High Power)",
+    "example": "1W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "1145 (High Power)",
+    "example": "2W"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "1550 (High Power)",
+    "example": "3W"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0318 (High Power)",
+    "example": "200"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0623 (High Power)",
+    "example": "300"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0932 (High Power)",
+    "example": "400"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "1145 (High Power)",
+    "example": "500"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "1550 (High Power)",
+    "example": "500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0318 (High Power)",
+    "example": "400"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0623 (High Power)",
+    "example": "500"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "0932 (High Power)",
+    "example": "600"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "1145 (High Power)",
+    "example": "700"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "1550 (High Power)",
+    "example": "1000"
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "High Power",
+    "example": "300"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0318 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0623 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "0932 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145 (High Power)",
+    "example": "10Ω-4.99MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1145 (High Power)",
+    "example": "10Ω-10MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.05%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1550 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.1%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1550 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.25%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1550 (High Power)",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "±0.5%",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "1550 (High Power)",
+    "example": "10Ω-4.99MΩ"
+   }
+  ],
+  "seconds": 165.83,
+  "tokens_in": 12513,
+  "tokens_out": 5745
+ }
 }

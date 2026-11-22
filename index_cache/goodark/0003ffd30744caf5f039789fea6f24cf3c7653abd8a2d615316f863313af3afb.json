@@ -22,5 +22,135 @@
   "tokens_in": 1174,
   "tokens_out": 68
  },
- "type": "ultrafast_rectifier"
+ "type": "ultrafast_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:58:02+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum RMS voltage",
+    "symbol": "VRMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Peak forward surge current,8.3ms single half sine-wave superimposed on rated loa",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "°C /W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "85"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case",
+    "symbol": "RθJC",
+    "unit": "°C /W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "15"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Lead",
+    "symbol": "RθJL",
+    "unit": "°C /W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "18"
+   },
+   {
+    "name": "Forward Drop Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IF=3A",
+    "example": "1.0"
+   },
+   {
+    "name": "Reverse leakage current @VR",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "TJ =25℃",
+    "example": "50"
+   },
+   {
+    "name": "Reverse leakage current @VR",
+    "symbol": "IR",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "TJ =125℃",
+    "example": "10"
+   },
+   {
+    "name": "Typical junction capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "4.0 V 1 MHZ",
+    "example": "69"
+   },
+   {
+    "name": "Maximum reverse recovery time",
+    "symbol": "trr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "I =0.5A, F I =1.0A, R I =0.25A RR",
+    "example": "35"
+   }
+  ],
+  "seconds": 13.77,
+  "tokens_in": 1233,
+  "tokens_out": 703
+ }
 }

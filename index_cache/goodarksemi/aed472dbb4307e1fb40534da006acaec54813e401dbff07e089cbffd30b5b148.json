@@ -22,5 +22,295 @@
   "tokens_in": 1582,
   "tokens_out": 79
  },
- "type": "fast_acting_chip_fuse"
+ "type": "fast_acting_chip_fuse",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:55:57+00:00",
+  "items": [
+   {
+    "name": "Ampere Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "",
+    "example": "1A-5A"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "% of Amp Rating=100%",
+    "example": "4 Hours Minimum"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "% of Amp Rating=200%",
+    "example": "1～60 Seconds"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "% of Amp Rating=1000%",
+    "example": "0.0002～0.02 Seconds"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "Product Code=S0603H1",
+    "example": "1"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "Product Code=S0603H1.5",
+    "example": "1.5"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "Product Code=S0603H2",
+    "example": "2"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "Product Code=S0603H2.5",
+    "example": "2.5"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "Product Code=S0603H3",
+    "example": "3"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "Product Code=S0603H3.5",
+    "example": "3.5"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "Product Code=S0603H4",
+    "example": "4"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "Product Code=S0603H4.5",
+    "example": "4.5"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "Product Code=S0603H5",
+    "example": "5"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "Product Code=S0603H1",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "Product Code=S0603H1.5",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "Product Code=S0603H2",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "Product Code=S0603H2.5",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "Product Code=S0603H3",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "Product Code=S0603H3.5",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "Product Code=S0603H4",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "Product Code=S0603H4.5",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating DC",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "Product Code=S0603H5",
+    "example": "32"
+   },
+   {
+    "name": "Interrupting Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Resistance (ohms)",
+    "symbol": "R",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "DC Cold Resistance (Measured at 10% of rated current)",
+    "example": "0.24"
+   },
+   {
+    "name": "Typical Melt I2t",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "typ",
+    "conditions": "Typical Melting I2t (Measured with a battery bank at rated DC voltage, 10x-rated current, not to exceed IR, time constan",
+    "example": "0.09"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product Code=S0603H1",
+    "example": "H"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product Code=S0603H1.5",
+    "example": "K"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product Code=S0603H2",
+    "example": "N"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product Code=S0603H2.5",
+    "example": "O"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product Code=S0603H3",
+    "example": "P"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product Code=S0603H3.5",
+    "example": "R"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product Code=S0603H4",
+    "example": "S"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product Code=S0603H4.5",
+    "example": "X"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product Code=S0603H5",
+    "example": "T"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0603"
+   }
+  ],
+  "seconds": 86.3,
+  "tokens_in": 1322,
+  "tokens_out": 2983
+ }
 }

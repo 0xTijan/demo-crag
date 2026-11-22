@@ -22,5 +22,127 @@
   "tokens_in": 1692,
   "tokens_out": 88
  },
- "type": "bridge_rectifier"
+ "type": "bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:24:29+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "V_RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum RMS voltage",
+    "symbol": "V_RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "V_DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Average rectified output current at 60Hz sinewave, R-load",
+    "symbol": "I_F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=110°C",
+    "example": "8.0"
+   },
+   {
+    "name": "Average rectified output current at 60Hz sinewave, R-load",
+    "symbol": "I_F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "3.2"
+   },
+   {
+    "name": "Peak forward surge current single sine-wave superimposed on rated load (JEDEC Me",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "175"
+   },
+   {
+    "name": "Rating for fusing (t≤8.3ms)",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "max",
+    "conditions": "",
+    "example": "128"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "T_J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "T_STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to150"
+   },
+   {
+    "name": "Maximum instantaneous forward voltage",
+    "symbol": "V_F",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "I_F=4.0A",
+    "example": "1.0"
+   },
+   {
+    "name": "Maximum DC reverse current at rated DC blocking voltage",
+    "symbol": "I_R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "T_A=25°C",
+    "example": "5.0"
+   },
+   {
+    "name": "Maximum DC reverse current at rated DC blocking voltage",
+    "symbol": "I_R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "T_A=125°C",
+    "example": "250"
+   },
+   {
+    "name": "Typical thermal resistance",
+    "symbol": "R_θJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "25"
+   },
+   {
+    "name": "Typical thermal resistance",
+    "symbol": "R_θJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "2.3"
+   }
+  ],
+  "seconds": 45.27,
+  "tokens_in": 1751,
+  "tokens_out": 681
+ }
 }

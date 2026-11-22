@@ -22,5 +22,159 @@
   "tokens_in": 1641,
   "tokens_out": 77
  },
- "type": "standard_rectifier"
+ "type": "standard_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:18:42+00:00",
+  "items": [
+   {
+    "name": "Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "100-1200"
+   },
+   {
+    "name": "Maximum Reverse Recovery Current",
+    "symbol": "I RRM",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "T=Maximum T J J",
+    "example": "9"
+   },
+   {
+    "name": "Average Forward Current",
+    "symbol": "I F(AV)",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "T =140°C, C 180° conduction, half sine wave",
+    "example": "85"
+   },
+   {
+    "name": "Average Forward Current",
+    "symbol": "I F(AV)",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "T =110°C, C 180° conduction, half sine wave",
+    "example": "85"
+   },
+   {
+    "name": "Surge Forward Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "t=10ms",
+    "example": "1700"
+   },
+   {
+    "name": "Surge Forward Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "t=8.3ms",
+    "example": "1800"
+   },
+   {
+    "name": "Surge Forward Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "t=10ms, 100% V RRM reapplied",
+    "example": "1450"
+   },
+   {
+    "name": "Surge Forward Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "t=8.3ms, 100% V RRM reapplied",
+    "example": "1500"
+   },
+   {
+    "name": "I2t for Fusing",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "value",
+    "conditions": "t=10ms",
+    "example": "14500"
+   },
+   {
+    "name": "I2t for Fusing",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "value",
+    "conditions": "t=8.3ms",
+    "example": "13500"
+   },
+   {
+    "name": "I2t for Fusing",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "value",
+    "conditions": "t=10ms, 100% V RRM reapplied",
+    "example": "10500"
+   },
+   {
+    "name": "I2t for Fusing",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "value",
+    "conditions": "t=8.3ms, 100% V RRM reapplied",
+    "example": "9400"
+   },
+   {
+    "name": "Max. Forward Voltage Drop",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "I =220A, T=25°C, t =400us F J P",
+    "example": ""
+   },
+   {
+    "name": "Max. Thermal Resistance, Junction to Case",
+    "symbol": "R THJ-C",
+    "unit": "°C/W",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.35"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to +180"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to +180"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DO-5"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GS85HF-10"
+   }
+  ],
+  "seconds": 53.73,
+  "tokens_in": 1700,
+  "tokens_out": 1227
+ }
 }

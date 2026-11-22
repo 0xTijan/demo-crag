@@ -22,5 +22,127 @@
   "tokens_in": 4802,
   "tokens_out": 80
  },
- "type": "bridge_rectifier"
+ "type": "bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:23:55+00:00",
+  "items": [
+   {
+    "name": "Maximum Rating (Reverse) Voltage",
+    "symbol": "V_RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Maximum Rating (Peak) Voltage",
+    "symbol": "V_RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "70"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V_DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Maximum Average Forward Current",
+    "symbol": "I_F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2.0"
+   },
+   {
+    "name": "Peak Forward Surge Current",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "60"
+   },
+   {
+    "name": "Fusing Time for Fuse (t=8.3ms)",
+    "symbol": "I^2t",
+    "unit": "A2s",
+    "stat": "max",
+    "conditions": "",
+    "example": "14.94"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage at 1.0A DC",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.95"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I_R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "T=25°C",
+    "example": "5"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I_R",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "T=125°C",
+    "example": "100"
+   },
+   {
+    "name": "Typical Junction Capacitance",
+    "symbol": "C_J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "",
+    "example": "22"
+   },
+   {
+    "name": "Typical Thermal Resistance (Junction to Ambient)",
+    "symbol": "R_thJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "45"
+   },
+   {
+    "name": "Typical Thermal Resistance (Junction to Case)",
+    "symbol": "R_thJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   }
+  ],
+  "seconds": 44.15,
+  "tokens_in": 4741,
+  "tokens_out": 636
+ }
 }

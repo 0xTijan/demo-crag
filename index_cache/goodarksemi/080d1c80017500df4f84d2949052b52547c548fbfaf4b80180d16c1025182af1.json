@@ -22,5 +22,143 @@
   "tokens_in": 3290,
   "tokens_out": 159
  },
- "type": "standard_rectifier"
+ "type": "standard_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:17:49+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "V_RRM",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum RMS voltage",
+    "symbol": "V_RMS",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "V_DC",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "I_AV",
+    "unit": "Amp",
+    "stat": "max",
+    "conditions": "0.375\"(9.5mm) lead length@T=50°C",
+    "example": "1.0"
+   },
+   {
+    "name": "Peak forward surge current, 8.3ms single half-sine-wave superimposed on rated lo",
+    "symbol": "I_FSM",
+    "unit": "Amps",
+    "stat": "max",
+    "conditions": "",
+    "example": "30.0"
+   },
+   {
+    "name": "Maximum instantaneous forward voltage",
+    "symbol": "V_F",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "@1.0A DC",
+    "example": "1.1"
+   },
+   {
+    "name": "Maximum DC reverse current",
+    "symbol": "I_R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "@T=25°C A at rated DC blocking voltage @T=125°C A",
+    "example": "5.0"
+   },
+   {
+    "name": "Typical junction capacitance",
+    "symbol": "C_J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "Note 1",
+    "example": "10"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "",
+    "unit": "oC",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "",
+    "unit": "oC",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Molded plastic A-405"
+   },
+   {
+    "name": "Epoxy",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL 94V-O rate flame retardant"
+   },
+   {
+    "name": "Lead",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Axial leads, solderable per MIL-STD-202,"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Color band denotes cathode end"
+   },
+   {
+    "name": "High temperature soldering guaranteed",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "250 o C/10 seconds .375\" (9.5mm) lead le"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "gram",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.235"
+   }
+  ],
+  "seconds": 43.89,
+  "tokens_in": 1633,
+  "tokens_out": 760
+ }
 }

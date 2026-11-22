@@ -1,0 +1,406 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: current_sensing_chip_resistor
+name: current sensing (shunt) chip resistor
+version: 1
+status: draft
+must_match:
+- size
+- resistance_range
+- power_rating
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T13:23:25+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - viking/csm-series_f5e8cbcf.md
+  - viking/csmw-series-data-sheet-edition-rev-a4_3a5af727.md
+  - viking/lra0340-a-series-data-sheet-edition-rev-a2_024a0667.md
+  - viking/lra0766-a-series-data-sheet-edition-rev-a2_9848a4c1.md
+  - viking/lrp-series_680c79e1.md
+  - viking/lrp12h-series-data-sheet-edition-rev-a_5dc59775.md
+  - viking/lrs-series-data-sheet-edition-rev-b4_358242ef.md
+  - viking/rs-series-data-sheet-edition-rev-b7_11f27b06.md
+  - viking/wmp12-series-data-sheet-edition-rev-a2_45996156.md
+  - viking/wmr-series-data-sheet-edition-rev-a8_e7524b23.md
+specs:
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: MΩ
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Insulation Resistance
+    - High temperature and humidity
+    - Land Pattern
+    - Solderability
+    - Vibration
+    - R_ins
+    found_in: 10/10
+  operating_temp_range:
+    label: Operating Temp. Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Temp. Range
+    - Operating Temperature
+    - T
+    - Operating Temperature range
+    found_in: 10/10
+  size:
+    label: Size
+    unit: null
+    stat: value
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Size
+    - Resistance
+    - Sizes.
+    - Sizes
+    found_in: 10/10
+  storage_temp_range:
+    label: Storage Temp. Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    - Packaging Quantity
+    - T
+    found_in: 10/10
+  flammability:
+    label: Flammability
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Flammability
+    - Temperature cycling
+    - AEC-Q200
+    - Low Temperature Storage
+    - Tape Width
+    - W
+    - Leaching
+    - Area
+    found_in: 9/10
+  l:
+    label: L
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - L
+    - Dimensions (WxL)
+    - Dimensions (L×W)
+    - A
+    found_in: 9/10
+  resistance_to_soldering_heat:
+    label: Resistance to Soldering Heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Resistance to Soldering Heat
+    - Resistance to solder heat
+    - Endurance
+    - ΔR
+    found_in: 9/10
+  shelf_life:
+    label: Shelf Life
+    unit: years
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Shelf Life
+    - T
+    found_in: 9/10
+  short_time_overload:
+    label: Short Time Overload
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Max. Overload Current
+    - Short Time Overload
+    - Endurance
+    - ΔR
+    found_in: 9/10
+  tc_r:
+    label: TCR
+    unit: PPM/°C
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - TCR
+    - Temperature Coefficient of Resistance
+    - TCR (PPM/°C)
+    found_in: 9/10
+  power_rating:
+    label: Power Rating
+    unit: W
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Power Rating
+    - Power Rating at 70°C
+    - P
+    found_in: 8/10
+  resistance_range:
+    label: Resistance Range
+    unit: mΩ
+    stat: range
+    conditions: null
+    rule: contains
+    critical: true
+    aliases:
+    - Resistance Range
+    - Resistance Range (mΩ)
+    - Resistance Range(mΩ)
+    - Resistance
+    - R
+    found_in: 8/10
+  bending_strength:
+    label: Bending Strength
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Bending Strength
+    - Bending Strength (Board Flex)
+    - Low temperature load
+    - ΔR
+    found_in: 8/10
+  high_temperature_exposure:
+    label: High Temperature Exposure
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Damp Heat with Load
+    - High Temperature Exposure
+    - Biased Humidity
+    - ΔR
+    - High temperature storage
+    - High temperature and humidity
+    found_in: 8/10
+  reel_diameter:
+    label: Reel Diameter
+    unit: inch
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Reel Diameter
+    - D
+    found_in: 8/10
+  a:
+    label: A
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - D1
+    - R
+    - A (mm)
+    - A
+    found_in: 7/10
+  packaging_quantity:
+    label: Packaging Quantity
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Packaging Quantity
+    - Emboss Plastic Tape (EA)
+    - Packaging Quantity(EA)
+    found_in: 7/10
+  resistance_tolerance:
+    label: Resistance Tolerance
+    unit: '%'
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Resistance Tolerance
+    - Tol
+    - Tolerance
+    found_in: 7/10
+  solderability:
+    label: Solderability
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Solderability
+    - Coverage
+    found_in: 7/10
+  t:
+    label: T
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - T
+    - E
+    found_in: 7/10
+  tape_width:
+    label: Tape Width
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Tape Width
+    found_in: 7/10
+  w:
+    label: W
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - W
+    - B
+    found_in: 7/10
+  b:
+    label: B
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - D2
+    - Weight (g) (1000pcs)
+    - B (mm)
+    - B
+    - Material
+    found_in: 6/10
+  marking:
+    label: Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - ESD
+    - Marking
+    - P 0 (mm)
+    - P 1 (mm)
+    - P 2 (mm)
+    - ΦD 0 (mm)
+    - Packaging Quantity
+    found_in: 6/10
+rare_specs:
+  e:
+    label: E
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - E (mm)
+    - E
+    - C
+    found_in: 4/10
+  f:
+    label: F
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - F (mm)
+    - F
+    - D
+    found_in: 4/10
+  p0:
+    label: P0
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - P0
+    found_in: 3/10
+  p1:
+    label: P1
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - P1
+    found_in: 3/10
+  p2:
+    label: P2
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - P2
+    found_in: 3/10
+  phi_d0:
+    label: ΦD0
+    unit: mm
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - ΦD0
+    found_in: 2/10

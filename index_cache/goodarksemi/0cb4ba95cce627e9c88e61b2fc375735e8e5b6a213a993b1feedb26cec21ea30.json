@@ -19,5 +19,135 @@
   "tokens_in": 1531,
   "tokens_out": 48
  },
- "type": "ultrafast_rectifier"
+ "type": "ultrafast_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:58:13+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Working Peak Reverse Voltage",
+    "symbol": "V RWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current",
+    "symbol": "I F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "See Figure 1",
+    "example": "4.0"
+   },
+   {
+    "name": "Peak Forward Surge Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "8.3 mS Single Half Sine-Wave Superimposed on Rated Load (JEDEC Method)",
+    "example": "125.0"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "at 3.0A, T=150°C J",
+    "example": "1.05"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "at 3.0A, T=25°C J",
+    "example": "1.25"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "at 4.0A, T=25°C J",
+    "example": "1.28"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "T=25°C J",
+    "example": "10.0"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "T=150°C J",
+    "example": "250"
+   },
+   {
+    "name": "Maximum Reverse Recovery Time",
+    "symbol": "t rr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "at I =0.5A, I =1.0A, I =0.25A F R rr",
+    "example": "50"
+   },
+   {
+    "name": "Maximum Reverse Recovery Time",
+    "symbol": "t rr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "at I =1.0A, di/dt=50A/uS, V =30V, F R I =10% I rr RM",
+    "example": "75"
+   },
+   {
+    "name": "Maximum Forward Recovery Time",
+    "symbol": "t rr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "at I =1.0A, di/dt=100A/uS, recovery to F 1.0V",
+    "example": "50"
+   },
+   {
+    "name": "Typical Thermal Resistance Junction to Ambient",
+    "symbol": "R θJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "28"
+   },
+   {
+    "name": "Operating Junction and Storage Temperature Range",
+    "symbol": "T, T J STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   }
+  ],
+  "seconds": 25.33,
+  "tokens_in": 1477,
+  "tokens_out": 819
+ }
 }

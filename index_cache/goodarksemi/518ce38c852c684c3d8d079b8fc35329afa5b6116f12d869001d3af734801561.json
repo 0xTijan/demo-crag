@@ -22,5 +22,159 @@
   "tokens_in": 1991,
   "tokens_out": 90
  },
- "type": "fast_recovery_bridge_rectifier"
+ "type": "fast_recovery_bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:45:51+00:00",
+  "items": [
+   {
+    "name": "Maximum Recurrent Peak Reverse Voltage",
+    "symbol": "V_RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V_RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V_DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Average Forward Current at T=25°C J",
+    "symbol": "I_F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "T=25°C J",
+    "example": "2.0"
+   },
+   {
+    "name": "Peak Forward Surge Current, 8.3ms, Half Sine",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "50.0"
+   },
+   {
+    "name": "Maximum Forward Voltage Drop Per Element at FM=2.0A, T=25°C1 J",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "FM=2.0A, T=25°C1 J",
+    "example": "1.3"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I_R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "T=25°C J",
+    "example": "10"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I_R",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "T=100°C J",
+    "example": "1"
+   },
+   {
+    "name": "Max. Reverse Recovery Time",
+    "symbol": "T_RR",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "GSR2W005-GSR2W04",
+    "example": "200"
+   },
+   {
+    "name": "Max. Reverse Recovery Time",
+    "symbol": "T_RR",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "GSR2W06",
+    "example": "350"
+   },
+   {
+    "name": "Max. Reverse Recovery Time",
+    "symbol": "T_RR",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "GSR2W08-GSR2W10",
+    "example": "500"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction To Ambient",
+    "symbol": "R_θJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "40"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "T_J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "T_STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "WOB"
+   },
+   {
+    "name": "Marking Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "R2W005"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1,000pcs / Box"
+   },
+   {
+    "name": "HSF Status",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS Compliant"
+   }
+  ],
+  "seconds": 45.39,
+  "tokens_in": 2050,
+  "tokens_out": 847
+ }
 }

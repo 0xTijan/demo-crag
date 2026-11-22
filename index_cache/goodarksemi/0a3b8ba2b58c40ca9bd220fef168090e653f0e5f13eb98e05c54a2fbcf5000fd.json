@@ -18,5 +18,207 @@
   "tokens_in": 1119,
   "tokens_out": 39
  },
- "type": "switching_diode"
+ "type": "switching_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:28:42+00:00",
+  "items": [
+   {
+    "name": "Non-Repetitive Peak Reverse Voltage",
+    "symbol": "V RSM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Repetitive Peak Forward Current",
+    "symbol": "I FRM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t=1μs",
+    "example": "4"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t=1ms",
+    "example": "1"
+   },
+   {
+    "name": "Non-Repetitive Peak Forward Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "t=1s",
+    "example": "0.5"
+   },
+   {
+    "name": "Continuous Forward Current",
+    "symbol": "I F",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "P D",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "℃",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T STG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Breakdown Voltage",
+    "symbol": "BVR",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =100μA R",
+    "example": "100"
+   },
+   {
+    "name": "Breakdown Voltage",
+    "symbol": "BVR",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "IR=5μA",
+    "example": "75"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VR=20V",
+    "example": "30"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "V =75V R",
+    "example": "1"
+   },
+   {
+    "name": "Reverse Current",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "VR=100V",
+    "example": "5"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=1mA",
+    "example": "0.715"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=10mA",
+    "example": "0.855"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =50mA F",
+    "example": "1"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=150mA",
+    "example": "1.25"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "C",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "VR=0V, F=1MHz",
+    "example": "2"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "trr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "IF=IR=10mA, Irr=0.1×IR",
+    "example": "4"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-323"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A6"
+   },
+   {
+    "name": "HSF Status",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS Compliant"
+   }
+  ],
+  "seconds": 49.2,
+  "tokens_in": 1553,
+  "tokens_out": 1039
+ }
 }

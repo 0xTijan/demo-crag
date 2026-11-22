@@ -20,5 +20,191 @@
   "tokens_in": 1363,
   "tokens_out": 54
  },
- "type": "multilayer_chip_inductor"
+ "type": "multilayer_chip_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:30:39+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Operating Temperature Range: -55 to 125°"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 125"
+   },
+   {
+    "name": "AEC-Q200 Compliance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliance"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "L",
+    "unit": "uH",
+    "stat": "value",
+    "conditions": "1MHz, 100mV",
+    "example": "1.0"
+   },
+   {
+    "name": "Inductance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "±20"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "±25%",
+    "example": "0.055"
+   },
+   {
+    "name": "IDC",
+    "symbol": "IDC",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "1600"
+   },
+   {
+    "name": "SRF",
+    "symbol": "SRF",
+    "unit": "MHz",
+    "stat": "value",
+    "conditions": "",
+    "example": "70"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0805"
+   },
+   {
+    "name": "Application",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Automotive Grade"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MLH05MT2R2A"
+   },
+   {
+    "name": "High Temperature Exposure",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: 125±5°C Test time: 1000 hrs",
+    "example": "Inductance within ±20% of initial value"
+   },
+   {
+    "name": "Temperature Cycle",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: -55~+125°C Cycle: 1000 cycles Dwell time: 30 minutes",
+    "example": "Inductance within ±20% of initial value"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: 85±2°C Humidity: 85% RH Test time: 1000 hrs Apply current: full rated current",
+    "example": "Inductance within ±20% of initial value"
+   },
+   {
+    "name": "Operational Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature: 125±5°C Test time: 1000 hrs Apply current: full rated current",
+    "example": "Inductance within ±20% of initial value"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Condition F: 1500g’s/0.5ms/Half sine",
+    "example": "No mechanical damage"
+   },
+   {
+    "name": "Vibration Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "5g’s for 20 minutes, 12 cycles each of 3 orientations Test from 10-2000Hz.",
+    "example": "No mechanical damage"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Solder Temperature: 260±5°C Flux: Rosin Dip time: 10±1 sec.",
+    "example": "More than 95% of terminal electrode cove"
+   },
+   {
+    "name": "ESD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Classification levels 1C 1000V(DC) to <2000V(DC)",
+    "example": "No mechanical damage"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Solder Temperature: 235±5°C Flux: Rosin Dip time: 5±1 sec.",
+    "example": "More than 95% of terminal electrode cove"
+   },
+   {
+    "name": "Board Flex",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Epoxy-PCB(1.6mm) Deflection 2mm(min) 60s minimum holding time",
+    "example": "No mechanical damage"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "N",
+    "stat": "value",
+    "conditions": "Size Apply Force(F) Test Time ≧0805 17.7N 60±1 sec",
+    "example": "17.7"
+   }
+  ],
+  "seconds": 225.47,
+  "tokens_in": 3134,
+  "tokens_out": 1524
+ }
 }

@@ -22,5 +22,159 @@
   "tokens_in": 2788,
   "tokens_out": 77
  },
- "type": "tvs_diode"
+ "type": "tvs_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:21:23+00:00",
+  "items": [
+   {
+    "name": "Peak power dissipation with a 10/1000us waveform",
+    "symbol": "PPPM",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Peak pulse current with a 10/1000us waveform",
+    "symbol": "IPPM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "See Next Table"
+   },
+   {
+    "name": "Power dissipation, on infinite heat sink at TL=75℃",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TL=75℃",
+    "example": "4"
+   },
+   {
+    "name": "Peak forward surge current, 8.3ms single half-sine wave",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "40"
+   },
+   {
+    "name": "Typical Thermal Resistance , Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "85"
+   },
+   {
+    "name": "Typical Thermal Resistance , Junction to Case",
+    "symbol": "RθJC",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "15"
+   },
+   {
+    "name": "Typical Thermal Resistance , Junction to Lead",
+    "symbol": "RθJL",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "18"
+   },
+   {
+    "name": "Operating junction and storage temperature range",
+    "symbol": "TJ, TSTG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Breakdown Voltage VBR",
+    "symbol": "VBR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "IT=1.0mA",
+    "example": "11.1 to 12.3"
+   },
+   {
+    "name": "Stand off Voltage VWM",
+    "symbol": "VWM",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Maximum reverse leakage at VWM ID",
+    "symbol": "ID",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "",
+    "example": "2.5"
+   },
+   {
+    "name": "Maximum Peak Pulse Current IppM",
+    "symbol": "IppM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "23.5"
+   },
+   {
+    "name": "Maximum Clamping Voltage at IPPM VC",
+    "symbol": "VC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "17.0"
+   },
+   {
+    "name": "Moisture sensitivity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "level 1, per J-STD-020"
+   },
+   {
+    "name": "Plastic package has underwriters Laboratory Flammability Classification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "94V-0"
+   },
+   {
+    "name": "Halogen-free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 61249-2-21"
+   },
+   {
+    "name": "AEC-Q101 qualified",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q101"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "eSGB (DO-221AC)"
+   }
+  ],
+  "seconds": 51.99,
+  "tokens_in": 3453,
+  "tokens_out": 841
+ }
 }

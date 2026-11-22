@@ -18,5 +18,207 @@
   "tokens_in": 1168,
   "tokens_out": 38
  },
- "type": "pnp_transistor"
+ "type": "pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:31:40+00:00",
+  "items": [
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "VCBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-300"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "VCEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-300"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "VEBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "IC",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "-200"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "PC",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Thermal Resistance from Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "417"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Collector-Emitter Breakdown Voltage",
+    "symbol": "VCEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Ic=-1.0mA, Ib=0",
+    "example": "-300"
+   },
+   {
+    "name": "Collector-Base Breakdown Voltage",
+    "symbol": "VCBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Ic=-100µA, Ie=0",
+    "example": "-300"
+   },
+   {
+    "name": "Emitter-Base Breakdown Voltage",
+    "symbol": "VEBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Ie=-100µA, Ic=0",
+    "example": "-5.0"
+   },
+   {
+    "name": "Collector Cut-Off Current",
+    "symbol": "ICBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "Vcb=-200V, Ie=0V",
+    "example": "-250"
+   },
+   {
+    "name": "Emitter Cut-Off Current",
+    "symbol": "IEBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "Veb=-5V, Ic=0V",
+    "example": "-100"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "hFE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "Ic=-1mA, Vce=-10V",
+    "example": "60"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "hFE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "Ic=-10mA, Vce=-10V",
+    "example": "100"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "hFE",
+    "unit": "-",
+    "stat": "min",
+    "conditions": "Ic=-30mA, Vce=-10V",
+    "example": "60"
+   },
+   {
+    "name": "Collector-Emitter Saturation Voltage",
+    "symbol": "VCE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Ic=-20mA, Ib=-2.0mA",
+    "example": "-0.2"
+   },
+   {
+    "name": "Base-Emitter Saturation Voltage",
+    "symbol": "VBE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Ic=-20mA, Ib=-2.0mA",
+    "example": "-0.9"
+   },
+   {
+    "name": "Current Gain-Bandwidth Product",
+    "symbol": "fT",
+    "unit": "MHZ",
+    "stat": "min",
+    "conditions": "Ic=-10mA, Vce=-20V, f=30MHz",
+    "example": "50"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
+   },
+   {
+    "name": "Pin Count",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "AEC-Q101",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Not Qualified"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   }
+  ],
+  "seconds": 64.81,
+  "tokens_in": 1550,
+  "tokens_out": 1100
+ }
 }

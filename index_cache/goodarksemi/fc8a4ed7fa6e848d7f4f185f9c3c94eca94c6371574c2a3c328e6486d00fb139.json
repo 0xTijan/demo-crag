@@ -22,5 +22,279 @@
   "tokens_in": 1827,
   "tokens_out": 82
  },
- "type": "complementary_npn_pnp_transistor"
+ "type": "complementary_npn_pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:02:28+00:00",
+  "items": [
+   {
+    "name": "Collector Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   },
+   {
+    "name": "Collector Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "65"
+   },
+   {
+    "name": "Emitter Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "I C",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Peak Collector Current",
+    "symbol": "I CM",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Total Power Dissipation",
+    "symbol": "P tot",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient",
+    "symbol": "R θJA",
+    "unit": "℃/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "625"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "℃",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "V =5V, I =2mA CE C",
+    "example": "110"
+   },
+   {
+    "name": "Collector Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =50µA C",
+    "example": "80"
+   },
+   {
+    "name": "Collector Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =10mA C",
+    "example": "65"
+   },
+   {
+    "name": "Emitter Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =50µA E",
+    "example": "6"
+   },
+   {
+    "name": "Collector Base Cutoff Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =30V CB",
+    "example": "15"
+   },
+   {
+    "name": "Emitter Base Cutoff Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =5V EB",
+    "example": "100"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =10mA, I =0.5mA C B",
+    "example": "0.25"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I =100mA, I =5mA C B",
+    "example": "0.6"
+   },
+   {
+    "name": "Base Emitter Voltage",
+    "symbol": "V BE",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V =5V, I =2mA CE C",
+    "example": "0.58"
+   },
+   {
+    "name": "Base Emitter Voltage",
+    "symbol": "V BE",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V =5V, I =10mA CE C",
+    "example": "0.77"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =5V, I =10mA, F=100MHz CE C",
+    "example": "100"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =10V, I =0, F=1MHz CB E",
+    "example": "4.5"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "V =-5V, I =-2mA CE C",
+    "example": "125"
+   },
+   {
+    "name": "Collector Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =-50µA C",
+    "example": "-80"
+   },
+   {
+    "name": "Collector Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =-10mA C",
+    "example": "-65"
+   },
+   {
+    "name": "Emitter Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =-50µA E",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Base Cutoff Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "min",
+    "conditions": "V =-30V CB",
+    "example": "-15"
+   },
+   {
+    "name": "Emitter Base Cutoff Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "min",
+    "conditions": "V =-5V EB",
+    "example": "-100"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =-10mA, I =-0.5mA C B",
+    "example": "-0.3"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =-100mA, I =-5mA C B",
+    "example": "-0.65"
+   },
+   {
+    "name": "Base Emitter Voltage",
+    "symbol": "V BE",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V =-5V, I =-2mA CE C",
+    "example": "-0.6"
+   },
+   {
+    "name": "Base Emitter Voltage",
+    "symbol": "V BE",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V =-5V, I =-10mA CE C",
+    "example": "-0.82"
+   },
+   {
+    "name": "Transition Frequency",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "V =-5V, I =-10mA, F=100MHz CE C",
+    "example": "100"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =-10V, I =0, F=1MHz CB E",
+    "example": "4.5"
+   }
+  ],
+  "seconds": 80.32,
+  "tokens_in": 2714,
+  "tokens_out": 2724
+ }
 }

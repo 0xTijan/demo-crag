@@ -1,0 +1,361 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: power_resistor
+name: power resistor (TO package)
+version: 1
+status: draft
+must_match:
+- package_value
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T13:53:31+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - viking/str35-series_70f075b7.md
+  - viking/str50-series-data-sheet-edition-rev-a3_d4b40f94.md
+  - viking/tr30-series-data-sheet-edition-rev-c2_90abb8a5.md
+  - viking/tr30-series_32f62760.md
+  - viking/tr35-series-data-sheet-edition-rev-c_0e809c40.md
+  - viking/tr35-series_bcdc6e3f.md
+  - viking/tr50-h-series-data-sheet-edition-rev-b3_7b77e6ac.md
+  - viking/tr50-h-series_33ba7af5.md
+  - viking/tr50-rf-series-data-sheet-edition-rev-a3_f192c149.md
+  - viking/tr50-series_89fe0e6b.md
+specs:
+  dielectric_strength_min:
+    label: Dielectric Strength min
+    unit: VAC
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Dielectric Strength
+    - Operating Voltage
+    found_in: 10/10
+  insulation_resistance_min:
+    label: Insulation Resistance min
+    unit: Ω
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Insulation Resistance
+    found_in: 10/10
+  operating_temp_range:
+    label: Operating Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: true
+    aliases:
+    - Operating Temperature Range
+    found_in: 10/10
+  power_rating_max:
+    label: Power Rating max
+    unit: W
+    stat: max
+    conditions: without heat sink, free air at 25°C
+    rule: '>='
+    critical: true
+    aliases:
+    - Power Rating (Without Heat Sink)
+    - Power
+    - Rated Power
+    - Power Rating
+    found_in: 10/10
+  vds_max:
+    label: VDS max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Absolute Maximum Ratings
+    found_in: 10/10
+  damp_heat_with_load_max:
+    label: Damp Heat with Load max
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Damp Heat with Load
+    - Part Number
+    - Terminal Strength
+    found_in: 10/10
+  load_life_max:
+    label: Load Life max
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Load Life
+    - Part Number
+    - Maximum Torque
+    found_in: 10/10
+  solderability_min:
+    label: Solderability min
+    unit: '%'
+    stat: min
+    conditions: 245±5°C for 3 seconds
+    rule: '>='
+    critical: false
+    aliases:
+    - Solderability
+    - Lead Material
+    found_in: 10/10
+  storage_temp_range:
+    label: Storage Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    - Temperature Coefficient of Resistance
+    - TCR
+    found_in: 10/10
+  temperature_cycling_max:
+    label: Temperature Cycling max
+    unit: '%'
+    stat: max
+    conditions: -65°C~+150°C, 100 cycles
+    rule: <=
+    critical: false
+    aliases:
+    - Temperature Cycling
+    - Thermal Shock
+    - Part Number
+    found_in: 10/10
+  vibration_high_freq_value:
+    label: Vibration, High Frequency value
+    unit: g
+    stat: value
+    conditions: 20g peak
+    rule: <=
+    critical: false
+    aliases:
+    - Vibration, High Frequency
+    - Part Number
+    found_in: 10/10
+  resistance_range:
+    label: Resistance Range
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Resistance Range
+    - Resistance
+    found_in: 9/10
+  resistance_tolerance_value:
+    label: Resistance Tolerance value
+    unit: '%'
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Resistance Tolerance
+    found_in: 9/10
+  short_time_overload_max:
+    label: Short Time Overload max
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Short Time Overload
+    - Lead Material
+    found_in: 9/10
+  tc_r_range:
+    label: TCR range
+    unit: PPM/°C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - TCR (PPM/°C)
+    - Temperature Coefficient of Resistance
+    - TCR
+    found_in: 9/10
+  terminal_strength_max:
+    label: Terminal Strength max
+    unit: N
+    stat: max
+    conditions: (Pull Test)2.4N
+    rule: <=
+    critical: false
+    aliases:
+    - Terminal Strength
+    found_in: 9/10
+  humidity_max:
+    label: Humidity max
+    unit: '%RH'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Storage Humidity
+    - Humidity
+    found_in: 8/10
+  lead_material_value:
+    label: Lead Material value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Lead Material
+    found_in: 7/10
+  max_torque_max:
+    label: Maximum Torque max
+    unit: Nm
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum Torque
+    found_in: 7/10
+  shelf_life_max:
+    label: Shelf Life max
+    unit: years
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum Torque
+    - Shelf life
+    - Power Rating
+    found_in: 7/10
+  package_value:
+    label: Package value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 6/10
+  derating_curve_slope_value:
+    label: Derating Curve Slope value
+    unit: W/°K
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Derating Curve Slope
+    found_in: 6/10
+  thermal_resistance_value:
+    label: Thermal Resistance value
+    unit: °K/W
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Thermal resistance
+    found_in: 5/10
+rare_specs:
+  operating_voltage_max:
+    label: Operating Voltage max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Operating Voltage
+    found_in: 4/10
+  pin_count_value:
+    label: Pin Count value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Pin Count
+    - Mounting Type
+    - Packing Tube
+    found_in: 4/10
+  power_rating_max_heat_sink:
+    label: Power Rating max (heat sink mounted)
+    unit: W
+    stat: max
+    conditions: case temperature 25°C
+    rule: '>='
+    critical: true
+    aliases:
+    - Power
+    - Power Rating
+    - Thermal resistance
+    found_in: 4/10
+  case_type_value:
+    label: Case Type value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Case Type
+    - Isolation
+    - Case Isolation
+    found_in: 4/10
+  construction_value:
+    label: Construction value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Construction
+    - Non-Inductive Design
+    found_in: 4/10
+  mounting_type_value:
+    label: Mounting Type value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Mounting Type
+    found_in: 3/10
+  non_inductive_design_value:
+    label: Non-Inductive Design value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Non-Inductive Design
+    found_in: 1/10

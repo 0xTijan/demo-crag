@@ -18,5 +18,447 @@
   "tokens_in": 2095,
   "tokens_out": 46
  },
- "type": "complementary_mosfet"
+ "type": "complementary_mosfet",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:52:35+00:00",
+  "items": [
+   {
+    "name": "V (BR)DSS",
+    "symbol": "V(BR)DSS",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "40, -40"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "VGS=10V, ID=6A",
+    "example": "26, 32"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "VGS=4.5V, ID=4A",
+    "example": "36, 42"
+   },
+   {
+    "name": "I D",
+    "symbol": "ID",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "T=25°C",
+    "example": "15, -12"
+   },
+   {
+    "name": "I D",
+    "symbol": "ID",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "T=100°C",
+    "example": "9.0, -7.0"
+   },
+   {
+    "name": "I DM",
+    "symbol": "IDM",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "60"
+   },
+   {
+    "name": "P D",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "T=25°C",
+    "example": "20, 20"
+   },
+   {
+    "name": "P D",
+    "symbol": "PD",
+    "unit": "W/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.16"
+   },
+   {
+    "name": "R θJC",
+    "symbol": "RθJC",
+    "unit": "°C/W",
+    "stat": "value",
+    "conditions": "",
+    "example": "6.0"
+   },
+   {
+    "name": "R θJA",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "value",
+    "conditions": "",
+    "example": "62.0"
+   },
+   {
+    "name": "T STG",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-50 To +150"
+   },
+   {
+    "name": "T J",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-50 To +150"
+   },
+   {
+    "name": "BV DSS",
+    "symbol": "BVDSS",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "VGS=0V, ID=250μA",
+    "example": "40"
+   },
+   {
+    "name": "△BV DSS /△T J",
+    "symbol": "△BV DSS/△TJ",
+    "unit": "V/°C",
+    "stat": "typ",
+    "conditions": "Reference to 25°C, ID=1mA",
+    "example": "0.04"
+   },
+   {
+    "name": "I DSS",
+    "symbol": "IDSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VDS=40V, VGS=0V, TJ=25°C",
+    "example": "1"
+   },
+   {
+    "name": "I DSS",
+    "symbol": "IDSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VDS=32V, VGS=0V, TJ=125°C",
+    "example": "10"
+   },
+   {
+    "name": "I GSS",
+    "symbol": "IGSS",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VGS=±20V, VDS=0V",
+    "example": "±100"
+   },
+   {
+    "name": "V GS(th)",
+    "symbol": "VGS(th)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VDS=VGS, ID=250μA",
+    "example": "1.2, 2.5"
+   },
+   {
+    "name": "△V GS(th)",
+    "symbol": "△VGS(th)",
+    "unit": "mV/°C",
+    "stat": "typ",
+    "conditions": "VDS=VGS, ID=250μA",
+    "example": "-3.0"
+   },
+   {
+    "name": "g FS",
+    "symbol": "gFS",
+    "unit": "S",
+    "stat": "typ",
+    "conditions": "VDS=10V, ID=3A",
+    "example": "6.5"
+   },
+   {
+    "name": "Q g",
+    "symbol": "Qg",
+    "unit": "nC",
+    "stat": "range",
+    "conditions": "VDS=20V, ID=6A, VGS=4.5V",
+    "example": "5.2, 10.0"
+   },
+   {
+    "name": "Q gs",
+    "symbol": "Qgs",
+    "unit": "nC",
+    "stat": "range",
+    "conditions": "VDS=20V, ID=6A, VGS=4.5V",
+    "example": "1.2, 2.4"
+   },
+   {
+    "name": "Q gd",
+    "symbol": "Qgd",
+    "unit": "nC",
+    "stat": "range",
+    "conditions": "VDS=20V, ID=6A, VGS=4.5V",
+    "example": "2.5, 5.0"
+   },
+   {
+    "name": "t d(on)",
+    "symbol": "td(on)",
+    "unit": "nS",
+    "stat": "range",
+    "conditions": "VDD=20V, RG=25Ω, VGS=4.5V, ID=1A",
+    "example": "3.2, 6.0"
+   },
+   {
+    "name": "t r",
+    "symbol": "tr",
+    "unit": "nS",
+    "stat": "range",
+    "conditions": "VDD=20V, RG=25Ω, VGS=4.5V, ID=1A",
+    "example": "8.6, 16"
+   },
+   {
+    "name": "t d(off)",
+    "symbol": "td(off)",
+    "unit": "nS",
+    "stat": "range",
+    "conditions": "VDD=20V, RG=25Ω, VGS=4.5V, ID=1A",
+    "example": "18.0, 36"
+   },
+   {
+    "name": "t f",
+    "symbol": "tf",
+    "unit": "nS",
+    "stat": "range",
+    "conditions": "VDD=20V, RG=25Ω, VGS=4.5V, ID=1A",
+    "example": "6.0, 12.0"
+   },
+   {
+    "name": "C lss",
+    "symbol": "Ciss",
+    "unit": "PF",
+    "stat": "range",
+    "conditions": "VDS=15V, VGS=0V, F=1MHz",
+    "example": "420, 800"
+   },
+   {
+    "name": "C oss",
+    "symbol": "Coss",
+    "unit": "PF",
+    "stat": "range",
+    "conditions": "VDS=15V, VGS=0V, F=1MHz",
+    "example": "65, 120"
+   },
+   {
+    "name": "C rss",
+    "symbol": "Crss",
+    "unit": "PF",
+    "stat": "range",
+    "conditions": "VDS=15V, VGS=0V, F=1MHz",
+    "example": "40, 80"
+   },
+   {
+    "name": "I S",
+    "symbol": "IS",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "VG=VD=0V, Force Current",
+    "example": "15"
+   },
+   {
+    "name": "I SM",
+    "symbol": "ISM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "VG=VD=0V, Force Current",
+    "example": "30"
+   },
+   {
+    "name": "V SD",
+    "symbol": "VSD",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "VGS=0V, IS=1A, TJ=25°C",
+    "example": "1"
+   },
+   {
+    "name": "BV DSS",
+    "symbol": "BV DSS",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "VGS=0V, ID=-250μA",
+    "example": "-40"
+   },
+   {
+    "name": "△BV DSS /△T J",
+    "symbol": "△BV DSS/△TJ",
+    "unit": "V/°C",
+    "stat": "typ",
+    "conditions": "Reference to 25°C, ID=-1mA",
+    "example": "-0.04"
+   },
+   {
+    "name": "I DSS",
+    "symbol": "IDSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VDS=-40V, VGS=0V, TJ=25°C",
+    "example": "-1"
+   },
+   {
+    "name": "I DSS",
+    "symbol": "IDSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "VDS=-32V, VGS=0V, TJ=125°C",
+    "example": "-10"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "VGS=-10V, ID=-5A",
+    "example": "30, 40"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "VGS=-4.5V, ID=-3A",
+    "example": "42, 52"
+   },
+   {
+    "name": "V GS(th)",
+    "symbol": "VGS(th)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VDS=VGS, ID=-250μA",
+    "example": "-1.2, -2.5"
+   },
+   {
+    "name": "△V GS(th)",
+    "symbol": "△VGS(th)",
+    "unit": "mV/°C",
+    "stat": "typ",
+    "conditions": "VDS=VGS, ID=-250μA",
+    "example": "3.0"
+   },
+   {
+    "name": "g FS",
+    "symbol": "gFS",
+    "unit": "S",
+    "stat": "typ",
+    "conditions": "VDS=-10V, ID=-3A",
+    "example": "9.0"
+   },
+   {
+    "name": "Q g",
+    "symbol": "Qg",
+    "unit": "nC",
+    "stat": "range",
+    "conditions": "VDS=-20V, ID=-5A, VGS=-4.5V",
+    "example": "9.0, 15.0"
+   },
+   {
+    "name": "Q gs",
+    "symbol": "Qgs",
+    "unit": "nC",
+    "stat": "range",
+    "conditions": "VDS=-20V, ID=-5A, VGS=-4.5V",
+    "example": "2.5, 5.0"
+   },
+   {
+    "name": "Q gd",
+    "symbol": "Qgd",
+    "unit": "nC",
+    "stat": "range",
+    "conditions": "VDS=-20V, ID=-5A, VGS=-4.5V",
+    "example": "3.2, 7.0"
+   },
+   {
+    "name": "t d(on)",
+    "symbol": "td(on)",
+    "unit": "nS",
+    "stat": "range",
+    "conditions": "VDD=-20V, RG=25Ω, VGS=-4.5V, ID=-1A",
+    "example": "20, 40"
+   },
+   {
+    "name": "t r",
+    "symbol": "tr",
+    "unit": "nS",
+    "stat": "range",
+    "conditions": "VDD=-20V, RG=25Ω, VGS=-4.5V, ID=-1A",
+    "example": "12, 24"
+   },
+   {
+    "name": "t d(off)",
+    "symbol": "td(off)",
+    "unit": "nS",
+    "stat": "range",
+    "conditions": "VDD=-20V, RG=25Ω, VGS=-4.5V, ID=-1A",
+    "example": "46, 80"
+   },
+   {
+    "name": "t f",
+    "symbol": "tf",
+    "unit": "nS",
+    "stat": "range",
+    "conditions": "VDD=-20V, RG=25Ω, VGS=-4.5V, ID=-1A",
+    "example": "6.0, 12.0"
+   },
+   {
+    "name": "C lss",
+    "symbol": "Ciss",
+    "unit": "PF",
+    "stat": "range",
+    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
+    "example": "1050, 1600"
+   },
+   {
+    "name": "C oss",
+    "symbol": "Coss",
+    "unit": "PF",
+    "stat": "range",
+    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
+    "example": "110, 160"
+   },
+   {
+    "name": "C rss",
+    "symbol": "Crss",
+    "unit": "PF",
+    "stat": "range",
+    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
+    "example": "80, 120"
+   },
+   {
+    "name": "V SD",
+    "symbol": "VSD",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "VGS=0V, IS=-1A, TJ=25°C",
+    "example": "-1"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-252-4L"
+   }
+  ],
+  "seconds": 197.62,
+  "tokens_in": 3957,
+  "tokens_out": 3352
+ }
 }

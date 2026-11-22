@@ -22,5 +22,231 @@
   "tokens_in": 2374,
   "tokens_out": 107
  },
- "type": "power_inductor"
+ "type": "power_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:46:54+00:00",
+  "items": [
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40～125°C"
+   },
+   {
+    "name": "Inductor Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "M: ±20%"
+   },
+   {
+    "name": "Packaging Style",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Tape and Reel"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "",
+    "unit": "μH",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "DCR",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "±20%",
+    "example": "0.024"
+   },
+   {
+    "name": "IDC",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "max.",
+    "example": "2.10"
+   },
+   {
+    "name": "Saturation Rated Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.90"
+   },
+   {
+    "name": "Temperature Rated Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "8.00"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.0±0.20"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.8±0.20"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.00"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.00"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.20"
+   },
+   {
+    "name": "I",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.50"
+   },
+   {
+    "name": "J",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.00"
+   },
+   {
+    "name": "Tape size W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "16"
+   },
+   {
+    "name": "Tape size P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "12"
+   },
+   {
+    "name": "Parts Per Reel",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "13\"",
+    "example": "1000"
+   },
+   {
+    "name": "Shelf Storage conditions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Temperature range: 15~28℃; Humidity: <80"
+   },
+   {
+    "name": "High temperature Storage test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Low temperature Storage test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Humidity test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Thermal shock test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Solderability test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Terminal area must have 90% minimum sold"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Vibration test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Shock resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   }
+  ],
+  "seconds": 222.24,
+  "tokens_in": 13133,
+  "tokens_out": 1361
+ }
 }

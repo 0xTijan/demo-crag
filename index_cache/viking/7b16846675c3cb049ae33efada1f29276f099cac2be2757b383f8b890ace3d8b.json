@@ -21,5 +21,391 @@
   "tokens_in": 1300,
   "tokens_out": 65
  },
- "type": "leaded_film_resistor"
+ "type": "leaded_film_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:13:14+00:00",
+  "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "250V"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +155℃"
+   },
+   {
+    "name": "Power Rating at 70℃",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1/4W"
+   },
+   {
+    "name": "Max. Working Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "250V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "500V"
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "350V"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TCR ±10",
+    "example": "100Ω-22KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TCR ±15",
+    "example": "10Ω-499KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TCR ±25",
+    "example": "10Ω-1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TCR ±50",
+    "example": "10Ω-10MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TCR ±100",
+    "example": "0.1Ω-10MΩ"
+   },
+   {
+    "name": "TCR (±PPM/℃)",
+    "symbol": "",
+    "unit": "PPM/℃",
+    "stat": "value",
+    "conditions": "",
+    "example": "±10"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.1%"
+   },
+   {
+    "name": "Package Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "FMR0623"
+   },
+   {
+    "name": "L (Length)",
+    "symbol": "L",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR0623",
+    "example": "6.3"
+   },
+   {
+    "name": "D (Diameter)",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR0623",
+    "example": "2.3"
+   },
+   {
+    "name": "H (Height)",
+    "symbol": "H",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR0623",
+    "example": "28"
+   },
+   {
+    "name": "d (Lead Diameter)",
+    "symbol": "d",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR0623",
+    "example": "0.55"
+   },
+   {
+    "name": "L (Length)",
+    "symbol": "L",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR0932",
+    "example": "9.0"
+   },
+   {
+    "name": "D (Diameter)",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR0932",
+    "example": "3.2"
+   },
+   {
+    "name": "H (Height)",
+    "symbol": "H",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR0932",
+    "example": "26"
+   },
+   {
+    "name": "d (Lead Diameter)",
+    "symbol": "d",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR0932",
+    "example": "0.65"
+   },
+   {
+    "name": "L (Length)",
+    "symbol": "L",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR1145",
+    "example": "11.5"
+   },
+   {
+    "name": "D (Diameter)",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR1145",
+    "example": "4.5"
+   },
+   {
+    "name": "H (Height)",
+    "symbol": "H",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR1145",
+    "example": "35"
+   },
+   {
+    "name": "d (Lead Diameter)",
+    "symbol": "d",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR1145",
+    "example": "0.78"
+   },
+   {
+    "name": "L (Length)",
+    "symbol": "L",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR1550",
+    "example": "15.5"
+   },
+   {
+    "name": "D (Diameter)",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR1550",
+    "example": "5.0"
+   },
+   {
+    "name": "H (Height)",
+    "symbol": "H",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR1550",
+    "example": "32"
+   },
+   {
+    "name": "d (Lead Diameter)",
+    "symbol": "d",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "FMR1550",
+    "example": "0.78"
+   },
+   {
+    "name": "Flameproof Coating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL94V-0"
+   },
+   {
+    "name": "Resistance Value",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "1Ω-10MΩ"
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.25%+0.05Ω)"
+   },
+   {
+    "name": "Temperature Coefficient",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "By Type"
+   },
+   {
+    "name": "Periodic-Pulse Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.75%+0.05Ω)"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "MΩ",
+    "stat": "min",
+    "conditions": "",
+    "example": "1000"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.5%+0.05Ω)"
+   },
+   {
+    "name": "Damp Heat (Steady State)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.5%+0.05Ω)"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "95%"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "0623 / 0932 sizes",
+    "example": "±(0.5%+0.05Ω)"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "1145 / 1550 sizes",
+    "example": "±(0.25%+0.05Ω)"
+   },
+   {
+    "name": "Solvent Resistance of Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No obvious deterioration"
+   },
+   {
+    "name": "Robustness of Terminations",
+    "symbol": "",
+    "unit": "N",
+    "stat": "min",
+    "conditions": "",
+    "example": "24.5"
+   },
+   {
+    "name": "Temperature Cycling",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.75%+0.05Ω)"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "25±10"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   }
+  ],
+  "seconds": 165.86,
+  "tokens_in": 10087,
+  "tokens_out": 2147
+ }
 }

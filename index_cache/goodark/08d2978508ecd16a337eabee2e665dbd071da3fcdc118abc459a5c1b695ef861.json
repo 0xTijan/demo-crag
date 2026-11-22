@@ -18,5 +18,215 @@
   "tokens_in": 1347,
   "tokens_out": 47
  },
- "type": "sic_schottky_diode"
+ "type": "sic_schottky_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:25:23+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "650"
+   },
+   {
+    "name": "Working peak reverse voltage",
+    "symbol": "VRWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "650"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "650"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "28/56"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=135°C",
+    "example": "13/26"
+   },
+   {
+    "name": "Maximum average forward rectified current",
+    "symbol": "IF(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=160°C",
+    "example": "8/16"
+   },
+   {
+    "name": "Peak forward surge current, tp=10ms, Half Sine Pulse (Per leg)",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "65"
+   },
+   {
+    "name": "Power dissipation",
+    "symbol": "Ptot",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "100/200"
+   },
+   {
+    "name": "Power dissipation",
+    "symbol": "Ptot",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=110°C",
+    "example": "43/86"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55to+175"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55to+175"
+   },
+   {
+    "name": "Forward drop voltage (Per leg)",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IF=8A, TJ=25°C",
+    "example": "1.3"
+   },
+   {
+    "name": "Forward drop voltage (Per leg)",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=8A, TJ=175°C",
+    "example": "1.55"
+   },
+   {
+    "name": "Reverse leakage current (Per leg)",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "typ",
+    "conditions": "VR=650V, TJ=25°C",
+    "example": "5"
+   },
+   {
+    "name": "Reverse leakage current (Per leg)",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "VR=650V, TJ=25°C",
+    "example": "50"
+   },
+   {
+    "name": "Reverse leakage current (Per leg)",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "typ",
+    "conditions": "VR=650V, TJ=175°C",
+    "example": "10"
+   },
+   {
+    "name": "Reverse leakage current (Per leg)",
+    "symbol": "IR",
+    "unit": "µA",
+    "stat": "max",
+    "conditions": "VR=650V, TJ=175°C",
+    "example": "200"
+   },
+   {
+    "name": "Total capacitive charge (Per leg)",
+    "symbol": "QC",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VR=400V, TJ=25°C",
+    "example": "22"
+   },
+   {
+    "name": "Total capacitance (Per leg)",
+    "symbol": "C",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VR=400V, TJ=25°C, f=1MHz",
+    "example": "34"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case",
+    "symbol": "RθJC",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "1.5/0.75"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Epoxy, Molded"
+   },
+   {
+    "name": "Finish",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "All External Surfaces Corrosion Resistan"
+   },
+   {
+    "name": "Lead Temperature for Soldering Purposes",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Shipped",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "30 units per plastic tube"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-247-3"
+   }
+  ],
+  "seconds": 62.0,
+  "tokens_in": 1744,
+  "tokens_out": 1200
+ }
 }

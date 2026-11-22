@@ -20,5 +20,591 @@
   "tokens_in": 2153,
   "tokens_out": 55
  },
- "type": "leaded_film_resistor"
+ "type": "leaded_film_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:14:25+00:00",
+  "items": [
+   {
+    "name": "Resistance range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.22Ω-1MΩ; 0Ω"
+   },
+   {
+    "name": "Resistance tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "±5%;±1%;±0.5%;±0.25%;±0.1%"
+   },
+   {
+    "name": "Temperature coefficient",
+    "symbol": "",
+    "unit": "ppm/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "±100ppm/℃; ±50ppm/℃; ±25ppm/℃; ±15ppm/℃"
+   },
+   {
+    "name": "Operation mode",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Standard"
+   },
+   {
+    "name": "Power rating P 70",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "",
+    "example": "1/5W"
+   },
+   {
+    "name": "Operating voltage U max.",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "200V"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55℃~155℃"
+   },
+   {
+    "name": "Max. resistance change at P70 for resistance range, ΔR/R max., after 1000 h",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "",
+    "example": "≦0.5%"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CSRA0102"
+   },
+   {
+    "name": "L (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.20±0.10"
+   },
+   {
+    "name": "L 1 min. (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "min",
+    "conditions": "",
+    "example": "1.1"
+   },
+   {
+    "name": "ΦD (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.10±0.10"
+   },
+   {
+    "name": "ΦD 1 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "D +0/-0.15"
+   },
+   {
+    "name": "K (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.45±0.05"
+   },
+   {
+    "name": "Weight 1,000EA (g)",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "7.7"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CSRA0204DTDV1001"
+   },
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CSRA"
+   },
+   {
+    "name": "Dimensions (L×ΦD)",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "0102: 2.2x1.1 0204: 3.5x1.4 0207: 5.9x2."
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "T: 7” Taping Reel S:7” Taping Reel, Anti"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "S: ±5 B: ±10 N: ±15 C: ±25 D: ±50 E: ±10"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "T: 1W U: 1/2W V: 1/4W G: 2/5W P: 1/5W L:"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "0010: 1Ω 0100: 10Ω 2201: 2200Ω 1001: 1KΩ"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +155°C"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "200V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "400V"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.1% (E24,E96)",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.25% (E24,E96)",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96)",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96)",
+    "example": "49.9Ω-56KΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24)",
+    "example": "-"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±15",
+    "example": "±15"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±25",
+    "example": "±25"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±50",
+    "example": "±50"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±100",
+    "example": "±100"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±5",
+    "example": "±5"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±10",
+    "example": "±10"
+   },
+   {
+    "name": "Jumper Specifications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0Ω(<15mΩ)"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "2A"
+   },
+   {
+    "name": "Temperature Coefficient of Resistance (T.C.R.)",
+    "symbol": "",
+    "unit": "ppm/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "As Spec"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "",
+    "example": "≥10G"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "10Ω-332KΩ: ±(0.1%+0.01Ω) >332KΩ-1MΩ: ±(0"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "10Ω-332KΩ:±(0.2%+0.01Ω) >332KΩ-1MΩ: ±(0."
+   },
+   {
+    "name": "High Temperature Exposure",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "10Ω-332KΩ:±(0.25%+0.01Ω) >332KΩ-1MΩ: ±(0"
+   },
+   {
+    "name": "Board Flex",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "10Ω-332KΩ: ±(0.1%+0.01Ω) <10Ω & >332KΩ: "
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "95% min. coverage"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "10Ω-332KΩ: ±(0.1%+0.01Ω) <10Ω & >332KΩ: "
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No breakdown or flashover"
+   },
+   {
+    "name": "Leaching",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "Individual leaching area ≦5% Total leach"
+   },
+   {
+    "name": "Temperature Cycling",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "≦332KΩ: ±(0.15%+0.01Ω) >332KΩ: ±(0.25%+0"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "±(0.25%+0.01Ω)"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "±(0.5%+0.01Ω)"
+   },
+   {
+    "name": "ESD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Human body, 0102/0204:2KV; 0207:4KV"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No broken"
+   },
+   {
+    "name": "Flammability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No ignition of the tissue paper or scorc"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15~28°C"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "",
+    "example": "< 80%RH"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "7 inch"
+   },
+   {
+    "name": "ΦA (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "178.5±1.5"
+   },
+   {
+    "name": "ΦB (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "60.0+1.0"
+   },
+   {
+    "name": "ΦC (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "13.0±0.2"
+   },
+   {
+    "name": "W (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "9.0±0.5"
+   },
+   {
+    "name": "T (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "12.5±0.5"
+   },
+   {
+    "name": "Emboss Plastic Tape (EA)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3,000"
+   },
+   {
+    "name": "A (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.30±0.20"
+   },
+   {
+    "name": "B (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.40±0.20"
+   },
+   {
+    "name": "E (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.75±0.10"
+   },
+   {
+    "name": "F (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.50±0.05"
+   },
+   {
+    "name": "P 0 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P 1 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P 2 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.00±0.05"
+   },
+   {
+    "name": "ΦD 0 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.50+0.10"
+   }
+  ],
+  "seconds": 219.25,
+  "tokens_in": 13992,
+  "tokens_out": 4509
+ }
 }

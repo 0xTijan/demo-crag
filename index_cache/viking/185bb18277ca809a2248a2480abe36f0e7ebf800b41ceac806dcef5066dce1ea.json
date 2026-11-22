@@ -20,5 +20,415 @@
   "tokens_in": 1632,
   "tokens_out": 59
  },
- "type": "power_inductor"
+ "type": "power_inductor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:42:36+00:00",
+  "items": [
+   {
+    "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Shielded SMD Power Inductor – SCDB Serie"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2D12/2D15/2D18"
+   },
+   {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "05-Jan-18"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.A8"
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "New designed terminal for low cost"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DSD, DVC, PDA Products"
+   },
+   {
+    "name": "Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Saturation Rated Current: The current wh"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "Type",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SCDB2D12"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "A",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.0±0.2"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "B",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.0"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "C max.",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.2"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.0"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "E",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "F",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "G",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.2"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "H",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.2"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "I",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.1"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "J",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.8"
+   },
+   {
+    "name": "Inductance and rated current ranges",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SCDB2D12 1.2～22μH 0.85～0.22A"
+   },
+   {
+    "name": "Test equipment",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "L: HP4284A Precision LCR meter"
+   },
+   {
+    "name": "Electrical specifications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Electrical specifications at 25°C"
+   },
+   {
+    "name": "Part No",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SCDB2D12□T1R2"
+   },
+   {
+    "name": "L",
+    "symbol": "L",
+    "unit": "μH",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.2"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "Tolerance",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "N"
+   },
+   {
+    "name": "Test Condition",
+    "symbol": "Test Condition",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100KHz, 0.1V"
+   },
+   {
+    "name": "DCR",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.117"
+   },
+   {
+    "name": "IDC",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "20°C",
+    "example": "0.85"
+   },
+   {
+    "name": "IDC",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "100°C",
+    "example": "0.70"
+   },
+   {
+    "name": "I rms",
+    "symbol": "I rms",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.05"
+   },
+   {
+    "name": "Tape size",
+    "symbol": "W",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "12"
+   },
+   {
+    "name": "Tape size",
+    "symbol": "P",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Parts Per Reel",
+    "symbol": "Parts Per Reel",
+    "unit": "",
+    "stat": "value",
+    "conditions": "13\"",
+    "example": "4000"
+   },
+   {
+    "name": "Shelf Storage conditions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Temperature range: 15~28℃; Humidity: <80"
+   },
+   {
+    "name": "High temperature Storage test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "High temperature Storage test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature 85±2℃, Time: 48±2 hours, Tested after 1hour at room temperature.",
+    "example": ""
+   },
+   {
+    "name": "Low temperature Storage test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Low temperature Storage test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature -25±2℃, Time: 48±2 hours, Tested after 1hour at room temperature.",
+    "example": ""
+   },
+   {
+    "name": "Humidity test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Humidity test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Temperature 40±2℃, 90~95% relative humidity Time: 96±2 hours Tested after 1hour at room temperature.",
+    "example": ""
+   },
+   {
+    "name": "Thermal shock test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Thermal shock test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "First -25℃ 30minutes then 25℃ 10 minutes last 85℃ 30 minutes, as 1 cycle. Go through 5 cycles. Tested after 1 hour at ro",
+    "example": ""
+   },
+   {
+    "name": "Solderability test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Terminal area must have 90% minimum sold"
+   },
+   {
+    "name": "Solderability test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Product with Lead-free terminal: Dip pads in flux then dip in solder pot at 245±5℃ for 3 seconds.",
+    "example": ""
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Flux should cover the whole of the sample before heating, then be preheated for about 2 minutes over temperature of 130~",
+    "example": ""
+   },
+   {
+    "name": "Vibration test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Vibration test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Apply frequency 10~55Hz. 1.5mm amplitude in each of perpendicular direction for 2 hours.",
+    "example": ""
+   },
+   {
+    "name": "Shock resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Shock resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Drop down with 981m/s2(100G) shock attitude upon a rubber block method shock testing machine, for 1 time. In each of thr",
+    "example": ""
+   }
+  ],
+  "seconds": 139.45,
+  "tokens_in": 4872,
+  "tokens_out": 3352
+ }
 }

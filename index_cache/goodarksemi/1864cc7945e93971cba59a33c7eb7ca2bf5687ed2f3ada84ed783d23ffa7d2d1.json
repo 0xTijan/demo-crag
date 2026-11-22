@@ -22,5 +22,215 @@
   "tokens_in": 2207,
   "tokens_out": 78
  },
- "type": "ultrafast_rectifier"
+ "type": "ultrafast_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:59:07+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "VRRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "VRMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "VDC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Average Rectified Output Current @ 60Hz Sine Wave, Resistance Load, T (Fig.1) L",
+    "symbol": "IO",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "3.0"
+   },
+   {
+    "name": "Forward Surge Current (Non-Repetitive) @ 60Hz Half-Sine Wave, 1 Cycle, T=25°C J",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Forward Surge Current (Non-Repetitive) @ 1ms, Square Wave, 1 Cycle, T=25°C J",
+    "symbol": "IFSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Current Squared Time @ 1ms ≤ t ≤ 8.3ms, T=25°C J",
+    "symbol": "I2t",
+    "unit": "A2s",
+    "stat": "max",
+    "conditions": "",
+    "example": "41.5"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction to Ambient",
+    "symbol": "RθJA",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "65.0"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction to Case",
+    "symbol": "RθJC",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "18.0"
+   },
+   {
+    "name": "Typical Thermal Resistance, Junction to Lead",
+    "symbol": "RθJL",
+    "unit": "℃/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "20.0"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "TJ",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I=3.0A FM",
+    "example": "0.95"
+   },
+   {
+    "name": "Maximum Reverse Recovery Time",
+    "symbol": "trr",
+    "unit": "nS",
+    "stat": "max",
+    "conditions": "I=0.5A, I=1.0A, FRI=0.25A rr",
+    "example": "35"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "IR",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "T=25°C J",
+    "example": "5"
+   },
+   {
+    "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "IR",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "T=125°C J",
+    "example": "100"
+   },
+   {
+    "name": "Typical Junction Capacitance",
+    "symbol": "CJ",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "Measured at 1MHz and Applied Reverse Voltage of 4.0V.D.C",
+    "example": "60"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DO-214AA (SMB)"
+   },
+   {
+    "name": "Molding compound",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL 94V-0"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tin plated leads"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Cathode line denotes the cathode end"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS-compliant"
+   },
+   {
+    "name": "Halogen-free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "halogen-free"
+   },
+   {
+    "name": "MSL level",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MSL level 1"
+   },
+   {
+    "name": "Solderable per",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "J-STD-002 and JESD22-B102"
+   }
+  ],
+  "seconds": 54.19,
+  "tokens_in": 2266,
+  "tokens_out": 1191
+ }
 }

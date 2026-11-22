@@ -1,0 +1,622 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: esd_tvs_array
+name: ESD / TVS diode array
+version: 1
+status: draft
+must_match:
+- package
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T12:37:50+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - goodark/ses5vt23-3u_cdcaebe8.md
+  - goodark/ses5vt236h-6u_d67b7cde.md
+  - goodark/seslc5vt236l-6u_4815a96e.md
+  - goodark/sesuc3v3d1610sn-6b_d6aad4ca.md
+  - goodark/sesuc5vd2510-10u_664a4678.md
+  - goodarksemi/gsec3b1000-gsec36b120_f9b70194.md
+  - goodarksemi/gsecl3b004_2f37a92b.md
+  - goodarksemi/gsecl5u002_e765ccce.md
+  - goodarksemi/gsecl5u006_d8bab9e2.md
+  - goodarksemi/gser3u015_2cc9bfbc.md
+specs:
+  v_rwm_max:
+    label: V_RWM max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Reverse stand-off Voltage
+    - V RWM
+    - Reversestand-off Voltage
+    - V_RWM
+    - VRWM
+    - Reverse Working Voltage
+    found_in: 10/10
+  p_pp_max:
+    label: P_PP max
+    unit: W
+    stat: max
+    conditions: tP=8/20μs
+    rule: '>='
+    critical: true
+    aliases:
+    - Peak Pulse Power
+    - P PP
+    - Peak Pulse Power (TP=8/20μS)
+    - P_PP
+    - Peak Pulse Current
+    - I_PP
+    - Peak Pulse Power (t =8/20μS)
+    - PPP
+    - Peak Pulse Power (8/20µs)
+    - P pk
+    found_in: 9/10
+  t_j_range:
+    label: T_J range
+    unit: ℃
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating temperature
+    - T J
+    - Junction Temperature
+    - T_J
+    - TJ
+    - Operating Temperature Range
+    found_in: 9/10
+  t_stg_range:
+    label: T_STG range
+    unit: ℃
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage temperature
+    - T STG
+    - T_STG
+    - TSTG
+    - Storage Temperature Range
+    found_in: 9/10
+  i_pp_max:
+    label: I_PP max
+    unit: A
+    stat: max
+    conditions: tP=8/20μs
+    rule: '>='
+    critical: true
+    aliases:
+    - Peak Pulse Current
+    - IPP
+    - Peak Pulse Current (TP=8/20μS)
+    - I PP
+    - I_PP
+    - Peak Pulse Current (t =8/20μS)
+    - Peak Pulse Current (8/20µs)
+    found_in: 8/10
+  c_j_typ_io_gnd:
+    label: C_J typ @ I/O to GND
+    unit: pF
+    stat: typ
+    conditions: V=0V,f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - Junction Capacitance
+    - C J
+    - C_J
+    - CJ
+    found_in: 7/10
+  c_j_typ_io_io:
+    label: C_J typ @ I/O to I/O
+    unit: pF
+    stat: typ
+    conditions: V=0V,f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - Junction Capacitance
+    - C J
+    - C_J
+    - CJ
+    found_in: 7/10
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 5/10
+  v_c_max:
+    label: V_C max
+    unit: V
+    stat: max
+    conditions: I_PP=10A, tP=8/20μs
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage
+    - V C
+    - Clamping Voltage(SURGE)
+    - V_C
+    - Clamping Voltage (IEC 61000-4-5)
+    - VC
+    found_in: 5/10
+  i_r_max:
+    label: I_R max
+    unit: μA
+    stat: max
+    conditions: V=5V
+    rule: <=
+    critical: false
+    aliases:
+    - Reverse Leakage Current
+    - I R
+    - ReverseLeakage Current
+    - I_R
+    - IR
+    found_in: 5/10
+  rohs:
+    label: RoHS
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - RoHS
+    - Environmental
+    - Carrier
+    found_in: 5/10
+  v_esd_contact_max:
+    label: VESD contact max
+    unit: kV
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - IEC 61000-4-2 Contact (ESD)
+    - VESD
+    - ESD per IEC61000-4-2 (Contact/Air)
+    - ESD per IEC 61000-4-2 (Air)
+    - V ESD
+    found_in: 5/10
+rare_specs:
+  esd_protection:
+    label: ESD Protection
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - ESD Protection
+    - Marking
+    found_in: 4/10
+  i_r_max_v5:
+    label: I_R max @ V=5V
+    unit: μA
+    stat: max
+    conditions: V=5V
+    rule: <=
+    critical: false
+    aliases:
+    - Reverse Leakage Current
+    - I_R
+    - I R
+    - IR
+    found_in: 4/10
+  v_esd_air_max:
+    label: VESD air max
+    unit: kV
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - IEC 61000-4-2 Air (ESD)
+    - VESD
+    - ESD per IEC 61000-4-2 (Contact)
+    - V ESD
+    found_in: 4/10
+  v_br_range:
+    label: V_BR range
+    unit: V
+    stat: range
+    conditions: I=1mA
+    rule: '>='
+    critical: true
+    aliases:
+    - Reverse Breakdown Voltage
+    - V BR
+    - V_BR
+    - VBR
+    found_in: 3/10
+  part_number:
+    label: Part Number
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Part Number
+    found_in: 3/10
+  v_br_min:
+    label: V_BR min
+    unit: V
+    stat: min
+    conditions: I=1mA
+    rule: '>='
+    critical: true
+    aliases:
+    - ReverseBreakdown Voltage
+    - V BR
+    - Breakdown Voltage
+    - V_BR
+    found_in: 2/10
+  trigger_voltage_range:
+    label: V_T range
+    unit: V
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Trigger Voltage(ESD)
+    - V_T
+    - Trigger Voltage
+    - VT
+    found_in: 2/10
+  v_c_typ:
+    label: V_C typ
+    unit: V
+    stat: typ
+    conditions: I_PP=10A, tP=8/20μs
+    rule: ≈
+    critical: false
+    aliases:
+    - Clamping Voltage(ESD)
+    - V_C
+    - Clamping Voltage (IEC 61000-4-2)
+    - VC
+    found_in: 2/10
+  v_c_max_12a:
+    label: V_C max @ I_PP=12A
+    unit: V
+    stat: max
+    conditions: I_PP=12A, tP=8/20μs
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage
+    - V_C
+    found_in: 1/10
+  v_c_max_1a:
+    label: V_C max @ I_PP=1A
+    unit: V
+    stat: max
+    conditions: I_PP=1A, tP=8/20μs
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage
+    - V C
+    found_in: 1/10
+  v_c_max_20a:
+    label: V_C max @ I_PP=20A
+    unit: V
+    stat: max
+    conditions: I_PP=20A, tP=8/20μs
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage
+    - V C
+    found_in: 1/10
+  v_c_max_4_5a:
+    label: V_C max @ I_PP=4.5A
+    unit: V
+    stat: max
+    conditions: I_PP=4.5A, tP=8/20μs
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage
+    - V_C
+    found_in: 1/10
+  v_c_max_4a:
+    label: V_C max @ I_PP=4A
+    unit: V
+    stat: max
+    conditions: I_PP=4A, tP=8/20μs
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage
+    - V_C
+    found_in: 1/10
+  v_c_max_5a:
+    label: V_C max @ I_PP=5A
+    unit: V
+    stat: max
+    conditions: I_PP=5A, tP=8/20μs
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage
+    - V_C
+    found_in: 1/10
+  v_c_max_8a:
+    label: V_C max @ I_PP=8A
+    unit: V
+    stat: max
+    conditions: I_PP=8A, tP=8/20μs
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage
+    - V_C
+    found_in: 1/10
+  ef_t_protection:
+    label: EFT Protection
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - EFT Protection
+    found_in: 1/10
+  i_h_min:
+    label: I_H min
+    unit: mA
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Holding Current
+    - IH
+    found_in: 1/10
+  i_r_max_v3_3:
+    label: I_R max @ V=3.3V
+    unit: μA
+    stat: max
+    conditions: V=3.3V
+    rule: <=
+    critical: false
+    aliases:
+    - Reverse Leakage Current
+    - IR
+    found_in: 1/10
+  lead_soldering_temp:
+    label: Lead Soldering Temperature
+    unit: ℃
+    stat: value
+    conditions: 10sec.
+    rule: info
+    critical: false
+    aliases:
+    - Lead Soldering Temperature
+    - TL
+    found_in: 1/10
+  lightning_protection:
+    label: Lightning Protection
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Lightning Protection
+    found_in: 1/10
+  quantity:
+    label: Quantity
+    unit: pcs
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Quantity
+    found_in: 1/10
+  r_dyn_typ:
+    label: R_dyn typ
+    unit: Ω
+    stat: typ
+    conditions: I=0~30A, tP=TLP
+    rule: ≈
+    critical: false
+    aliases:
+    - Dynamic Resistance
+    - R_dyn
+    found_in: 1/10
+  r_dyn_typ_tlp:
+    label: R_dyn typ @ TLP
+    unit: Ω
+    stat: typ
+    conditions: I=0~20A, tP=TLP
+    rule: ≈
+    critical: false
+    aliases:
+    - Dynamic Resistance
+    - Rdyn
+    found_in: 1/10
+  r_dyn_typ_tlp_16a:
+    label: R_dyn typ @ TLP
+    unit: Ω
+    stat: typ
+    conditions: I=0~20A, tP=TLP
+    rule: ≈
+    critical: false
+    aliases:
+    - Dynamic Resistance
+    - RDYN
+    found_in: 1/10
+  v_c_typ_16a:
+    label: V_C typ @ I_PP=16A
+    unit: V
+    stat: typ
+    conditions: I_PP=16A, tP=8/20μs
+    rule: ≈
+    critical: false
+    aliases:
+    - Clamping Voltage
+    - VC
+    found_in: 1/10
+  v_c_typ_1a:
+    label: V_C typ @ I_PP=1A
+    unit: V
+    stat: typ
+    conditions: I_PP=1A, tP=8/20μs
+    rule: ≈
+    critical: false
+    aliases:
+    - Clamping Voltage
+    - VC
+    found_in: 1/10
+  v_c_typ_4a:
+    label: V_C typ @ I_PP=4A
+    unit: V
+    stat: typ
+    conditions: I_PP=4A, tP=8/20μs
+    rule: ≈
+    critical: false
+    aliases:
+    - Clamping Voltage
+    - VC
+    found_in: 1/10
+  v_h_min:
+    label: V_H min
+    unit: V
+    stat: min
+    conditions: I=I_TH
+    rule: '>='
+    critical: false
+    aliases:
+    - Holding Voltage
+    - VH
+    found_in: 1/10
+  v_pt_min:
+    label: V_PT min
+    unit: V
+    stat: min
+    conditions: I=2μA
+    rule: '>='
+    critical: false
+    aliases:
+    - Breakdown Voltage
+    - VPT
+    found_in: 1/10
+  v_sb_min:
+    label: V_SB min
+    unit: V
+    stat: min
+    conditions: I=50mA
+    rule: '>='
+    critical: false
+    aliases:
+    - Snap-Back Voltage
+    - VSB
+    found_in: 1/10
+  v_c_max_15a:
+    label: V_C max @ I_PP=15A
+    unit: V
+    stat: max
+    conditions: I_PP=15A, tP=8/20μs
+    rule: <=
+    critical: true
+    aliases: []
+    found_in: 0/10
+  v_c_max_16a_tlp:
+    label: V_C max @ I_PP=16A (TLP)
+    unit: V
+    stat: max
+    conditions: I_PP=16A, tP=0.2/100ns
+    rule: <=
+    critical: true
+    aliases: []
+    found_in: 0/10
+  v_c_max_1a_tlp:
+    label: V_C max @ I_PP=1A (TLP)
+    unit: V
+    stat: max
+    conditions: I_PP=1A, tP=0.2/100ns
+    rule: <=
+    critical: true
+    aliases: []
+    found_in: 0/10
+  v_c_max_4a_tlp:
+    label: V_C max @ I_PP=4A (TLP)
+    unit: V
+    stat: max
+    conditions: I_PP=4A, tP=0.2/100ns
+    rule: <=
+    critical: true
+    aliases: []
+    found_in: 0/10
+  carrier:
+    label: Carrier
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/10
+  marking:
+    label: Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/10
+  v_c_typ_16a_tlp:
+    label: V_C typ @ I_PP=16A (TLP)
+    unit: V
+    stat: typ
+    conditions: I_PP=16A, tP=0.2/100ns
+    rule: ≈
+    critical: false
+    aliases: []
+    found_in: 0/10
+  v_c_typ_1a_tlp:
+    label: V_C typ @ I_PP=1A (TLP)
+    unit: V
+    stat: typ
+    conditions: I_PP=1A, tP=0.2/100ns
+    rule: ≈
+    critical: false
+    aliases: []
+    found_in: 0/10
+  v_c_typ_4a_tlp:
+    label: V_C typ @ I_PP=4A (TLP)
+    unit: V
+    stat: typ
+    conditions: I_PP=4A, tP=0.2/100ns
+    rule: ≈
+    critical: false
+    aliases: []
+    found_in: 0/10

@@ -18,5 +18,191 @@
   "tokens_in": 1320,
   "tokens_out": 43
  },
- "type": "standard_rectifier"
+ "type": "standard_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:18:16+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V_RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1600"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V_RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1130"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V_DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1600"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current (D=0.5 Rectangular Wave)",
+    "symbol": "I_F(AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "45"
+   },
+   {
+    "name": "Peak Forward Surge Current 8.3ms Single Half Sine-Wave Superimposed on Rated Loa",
+    "symbol": "I_FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "550"
+   },
+   {
+    "name": "Forward Voltage at 45A",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "I_F=45A",
+    "example": "1.20"
+   },
+   {
+    "name": "Forward Voltage at 45A",
+    "symbol": "V_F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "I_F=45A",
+    "example": "1.30"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I_R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "T_J=25°C",
+    "example": "5"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage",
+    "symbol": "I_R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "T_J=125°C",
+    "example": "250"
+   },
+   {
+    "name": "Typical Thermal Resistance",
+    "symbol": "R_θJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "0.35"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "T_J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "T_STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-247AC"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Lead solderable per MIL-STD-750, method "
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "As marked."
+   },
+   {
+    "name": "Mounting position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "Flammability Classification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "94V-0"
+   },
+   {
+    "name": "RoHS Compliance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS 2015/863/EU"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-247AC"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "STD45160P"
+   },
+   {
+    "name": "Carrier",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tube"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "30pcs / Tube"
+   }
+  ],
+  "seconds": 47.86,
+  "tokens_in": 1887,
+  "tokens_out": 959
+ }
 }

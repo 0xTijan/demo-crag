@@ -1,0 +1,269 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: wire_wound_chip_inductor
+name: wire wound chip inductor
+version: 1
+status: draft
+must_match:
+- package_type
+- size_inch
+- current_type
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T15:16:32+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - viking/nl-m-series-data-sheet-edition-rev-a5_3d3c27e4.md
+  - viking/nl-series-data-sheet-edition-rev-d1_817f778c.md
+  - viking/nl-series_e90f4779.md
+specs:
+  package_type:
+    label: Package Type
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package Type
+    - Construction
+    - Size (Inch)
+    found_in: 3/3
+  dcr_max:
+    label: DCR max
+    unit: Ω
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - DCR (max.)
+    - DCR
+    - DC Resistance
+    - DCR (Ω) max.
+    found_in: 3/3
+  idc_max:
+    label: IDC max
+    unit: mA
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - IDC (max.)
+    - IDC
+    - DC Current Rating
+    - IDC (mA) max.
+    found_in: 3/3
+  inductance:
+    label: Inductance
+    unit: μH
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Inductance
+    - Inductance (μH)
+    - L
+    found_in: 3/3
+  test_freq:
+    label: Test Freq.
+    unit: MHz
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Test Freq.
+    - f
+    - Test Frequency
+    - Test Freq. (MHz)
+    found_in: 3/3
+  tolerance:
+    label: Tolerance
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Inductance Tolerance
+    - Tolerance
+    - Tol
+    found_in: 3/3
+  size_inch:
+    label: Size (Inch)
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Size (Inch)
+    - Size Code
+    found_in: 2/3
+  current_type:
+    label: Current Type
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Current
+    - Type
+    found_in: 2/3
+  q_typ:
+    label: Q typ
+    unit: null
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Q Factor
+    - Q
+    - Q typ.
+    found_in: 2/3
+  srf_typ:
+    label: SRF typ
+    unit: MHz
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - SRF (typ.)
+    - SRF
+    - SRF (MHz) typ.
+    found_in: 2/3
+rare_specs:
+  size_mm:
+    label: Dimensions (LxW)
+    unit: mm
+    stat: range
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Dimensions (LxW)
+    found_in: 1/3
+  color_code:
+    label: Color Code
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Color Code
+    found_in: 1/3
+  humidity:
+    label: Humidity
+    unit: '%RH'
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Humidity
+    found_in: 1/3
+  material:
+    label: Material
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Material
+    found_in: 1/3
+  operating_temp_range:
+    label: Operating Temp Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Temperature Range
+    found_in: 1/3
+  q_min:
+    label: Q min
+    unit: null
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Q min.
+    - Q
+    found_in: 1/3
+  shelf_life:
+    label: Shelf life
+    unit: years
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Shelf life
+    found_in: 1/3
+  srf_min:
+    label: SRF min
+    unit: MHz
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - SRF (min.)
+    - SRF
+    found_in: 1/3
+  storage_temp:
+    label: Storage Temp
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 1/3
+  type:
+    label: Type
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Type
+    found_in: 1/3
+  construction:
+    label: Construction
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases: []
+    found_in: 0/3
+  inductance_tolerance:
+    label: Inductance Tolerance
+    unit: '%'
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases: []
+    found_in: 0/3

@@ -18,5 +18,319 @@
   "tokens_in": 1349,
   "tokens_out": 40
  },
- "type": "three_axis_accelerometer"
+ "type": "three_axis_accelerometer",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:29:44+00:00",
+  "items": [
+   {
+    "name": "Measurement range",
+    "symbol": "FS",
+    "unit": "g",
+    "stat": "range",
+    "conditions": "FS bit set to 00",
+    "example": "±2"
+   },
+   {
+    "name": "Measurement range",
+    "symbol": "FS",
+    "unit": "g",
+    "stat": "range",
+    "conditions": "FS bit set to 01",
+    "example": "±4"
+   },
+   {
+    "name": "Measurement range",
+    "symbol": "FS",
+    "unit": "g",
+    "stat": "range",
+    "conditions": "FS bit set to 10",
+    "example": "±8"
+   },
+   {
+    "name": "Measurement range",
+    "symbol": "FS",
+    "unit": "g",
+    "stat": "range",
+    "conditions": "FS bit set to 11",
+    "example": "±16"
+   },
+   {
+    "name": "Sensitivity",
+    "symbol": "So",
+    "unit": "LSB/g",
+    "stat": "value",
+    "conditions": "FS bit set to 00",
+    "example": "4096"
+   },
+   {
+    "name": "Sensitivity",
+    "symbol": "So",
+    "unit": "LSB/g",
+    "stat": "value",
+    "conditions": "FS bit set to 01",
+    "example": "2048"
+   },
+   {
+    "name": "Sensitivity",
+    "symbol": "So",
+    "unit": "LSB/g",
+    "stat": "value",
+    "conditions": "FS bit set to 10",
+    "example": "1024"
+   },
+   {
+    "name": "Sensitivity",
+    "symbol": "So",
+    "unit": "LSB/g",
+    "stat": "value",
+    "conditions": "FS bit set to 11",
+    "example": "512"
+   },
+   {
+    "name": "Sensitivity change vs. temperature",
+    "symbol": "TCSo",
+    "unit": "%/°C",
+    "stat": "range",
+    "conditions": "FS bit set to 00",
+    "example": "±0.01"
+   },
+   {
+    "name": "Typical zero-g level offset accuracy",
+    "symbol": "Tyoff",
+    "unit": "mg",
+    "stat": "range",
+    "conditions": "",
+    "example": "±70"
+   },
+   {
+    "name": "Zero-g level change vs. temperature",
+    "symbol": "Tcoff",
+    "unit": "mg/°C",
+    "stat": "range",
+    "conditions": "Max delta from 25°C",
+    "example": "±0.6"
+   },
+   {
+    "name": "Acceleration noise density",
+    "symbol": "An",
+    "unit": "ug/sqrt (Hz)",
+    "stat": "value",
+    "conditions": "FS bit set to 00, Normal Mode, ODR = 125Hz",
+    "example": "200"
+   },
+   {
+    "name": "XY STDEVA noise",
+    "symbol": "XY noise",
+    "unit": "mg",
+    "stat": "value",
+    "conditions": "FS bit set to 00, Normal Mode, ODR = 125Hz",
+    "example": "2.2"
+   },
+   {
+    "name": "Z STDEVA noise",
+    "symbol": "Z noise",
+    "unit": "mg",
+    "stat": "value",
+    "conditions": "FS bit set to 00, Normal Mode, ODR = 125Hz",
+    "example": "3.8"
+   },
+   {
+    "name": "Operation temperature range",
+    "symbol": "Top",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to 85"
+   },
+   {
+    "name": "Supply voltage",
+    "symbol": "VDD",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.62 to 3.6"
+   },
+   {
+    "name": "I/O Pins supply voltage",
+    "symbol": "VDD_IO",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.62 to 3.6"
+   },
+   {
+    "name": "current consumption in normal mode",
+    "symbol": "IDD",
+    "unit": "uA",
+    "stat": "value",
+    "conditions": "Top=25℃, ODR=1kHz",
+    "example": "180"
+   },
+   {
+    "name": "current consumption in low power mode",
+    "symbol": "IDD_LP",
+    "unit": "uA",
+    "stat": "value",
+    "conditions": "Top=25℃, ODR=62.5Hz, BW=500Hz",
+    "example": "40"
+   },
+   {
+    "name": "current consumption in suspend mode",
+    "symbol": "IDD_SM",
+    "unit": "uA",
+    "stat": "value",
+    "conditions": "Top=25℃",
+    "example": "0.7"
+   },
+   {
+    "name": "Digital high level input voltage",
+    "symbol": "VIH",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "SPI&I2C",
+    "example": "0.7*Vdd_IO"
+   },
+   {
+    "name": "Digital low level input voltage",
+    "symbol": "VIL",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "SPI&I2C",
+    "example": "0.3*Vdd_IO"
+   },
+   {
+    "name": "high level output voltage",
+    "symbol": "VOH",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.9*Vdd_IO"
+   },
+   {
+    "name": "Low level output voltage",
+    "symbol": "VOL",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.1*Vdd_IO"
+   },
+   {
+    "name": "System bandwidth",
+    "symbol": "BW",
+    "unit": "Hz",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.95 to 500"
+   },
+   {
+    "name": "Output data rate",
+    "symbol": "ODR",
+    "unit": "Hz",
+    "stat": "range",
+    "conditions": "",
+    "example": "1 to 1000"
+   },
+   {
+    "name": "Wake-up time",
+    "symbol": "TWU",
+    "unit": "ms",
+    "stat": "value",
+    "conditions": "From stand-by",
+    "example": "1"
+   },
+   {
+    "name": "Start-up time",
+    "symbol": "TSU",
+    "unit": "ms",
+    "stat": "value",
+    "conditions": "From power off",
+    "example": "3"
+   },
+   {
+    "name": "Power Supply Rejection Rate",
+    "symbol": "PSRR",
+    "unit": "mg/V",
+    "stat": "max",
+    "conditions": "Top=25℃",
+    "example": "20"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-45 to 125"
+   },
+   {
+    "name": "Supply Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "Supply Pins",
+    "example": "-0.3 to 4.25"
+   },
+   {
+    "name": "Supply Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "Logic Pins",
+    "example": "-0.3 to Vdd_IO+0.3"
+   },
+   {
+    "name": "ESD Rating",
+    "symbol": "",
+    "unit": "kV",
+    "stat": "max",
+    "conditions": "HMB, R=1.5k, C=100pF",
+    "example": "±2"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "g",
+    "stat": "max",
+    "conditions": "Duration<200us",
+    "example": "10,000"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "LGA-12 2 x 2 x 1.1 mm"
+   },
+   {
+    "name": "Pin count",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "12"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to 85"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   }
+  ],
+  "seconds": 28.24,
+  "tokens_in": 2674,
+  "tokens_out": 1794
+ }
 }

@@ -22,5 +22,127 @@
   "tokens_in": 1373,
   "tokens_out": 110
  },
- "type": "esd_protection_diode"
+ "type": "esd_protection_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T11:10:08+00:00",
+  "items": [
+   {
+    "name": "ESD Rating per IEC61000-4-2 (Air)",
+    "symbol": "V ESD",
+    "unit": "kV",
+    "stat": "max",
+    "conditions": "",
+    "example": "±15"
+   },
+   {
+    "name": "ESD Rating per IEC61000-4-2 (Contact)",
+    "symbol": "V ESD",
+    "unit": "kV",
+    "stat": "max",
+    "conditions": "",
+    "example": "±8"
+   },
+   {
+    "name": "Peak Pulse Power (tp=8/20μs)",
+    "symbol": "P PP",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "Operating Temperature",
+    "symbol": "T OPT",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Lead Soldering Temperature",
+    "symbol": "T L",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "V (V) RWM Max.",
+    "symbol": "V (V) RWM Max.",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "3.0"
+   },
+   {
+    "name": "V (V) B Min.",
+    "symbol": "V (V) B Min.",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "",
+    "example": "4.0"
+   },
+   {
+    "name": "I (mA) T",
+    "symbol": "I (mA) T",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "V @ 1A (V) C Max.",
+    "symbol": "V @ 1A (V) C Max.",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "7.0"
+   },
+   {
+    "name": "V (V) C",
+    "symbol": "V (V) C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "Max",
+    "example": "13.9"
+   },
+   {
+    "name": "V (V) C",
+    "symbol": "V (V) C",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "@A",
+    "example": "17.0"
+   },
+   {
+    "name": "I (uA) R Max.",
+    "symbol": "I (uA) R Max.",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "C (pF) T typ.",
+    "symbol": "C (pF) T typ.",
+    "unit": "pF",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.6"
+   }
+  ],
+  "seconds": 12.82,
+  "tokens_in": 1332,
+  "tokens_out": 672
+ }
 }

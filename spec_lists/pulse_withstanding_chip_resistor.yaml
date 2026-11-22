@@ -1,0 +1,380 @@
+# Spec list for one component type (plan v1, parts_alternatives_plan.md, "Spec lists").
+# Drafted by `python -m dataPipeline.index.spec_lists draft`. Review it, then set status: reviewed and run
+# `python -m dataPipeline.index.spec_lists check`. Raise `version` on every change after review.
+#
+# rule:      "=" must be equal | ">=" equal or higher is fine | "<=" equal or lower is fine
+#            "≈" about equal | "contains" the replacement's range must cover the requested one | "info" not compared
+# critical:  true = a part is unusable when this spec is worse
+# found_in:  in how many sample datasheets the draft found this spec (information only)
+# specs:     used for extraction and comparison; rare_specs: found in too few samples, not used (move up if needed)
+type: pulse_withstanding_chip_resistor
+name: pulse / surge withstanding chip resistor
+version: 1
+status: draft
+must_match:
+- package_size
+- aec_q200_compliance
+- flammability
+visual_check: pinout (G/D/S order)
+drafted:
+  at: '2026-11-22T14:44:28+00:00'
+  model: qwen3:30b-a3b
+  min_share: 0.5
+  samples:
+  - viking/pwr-a-series-data-sheet-edition-rev-b4_0535562e.md
+  - viking/pwr-a-series_e770f750.md
+  - viking/pwr-series-data-sheet-edition-rev-d7_8bf55f77.md
+  - viking/pwr-series_7aa631ba.md
+  - viking/swr-a-series-data-sheet-edition-rev-a8_609587dc.md
+  - viking/swr-a-series_c83bba2d.md
+  - viking/swr-series-data-sheet-edition-rev-c_0b682c18.md
+  - viking/swr-series_14cc59d2.md
+specs:
+  aec_q200_compliance:
+    label: AEC-Q200 Compliance
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - AEC-Q200 Qualified
+    - AEC-Q200 Compliance
+    found_in: 8/8
+  operating_temp_range:
+    label: Operating Temp Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Temperature Range
+    - Operating Temp. Range
+    found_in: 8/8
+  max_operating_voltage:
+    label: Max Operating Voltage
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Max. Operating Voltage
+    found_in: 6/8
+  max_overload_voltage:
+    label: Max Overload Voltage
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Max. Overload Voltage
+    found_in: 6/8
+  power_rating_at_70c:
+    label: Power Rating at 70°C
+    unit: W
+    stat: range
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Power Rating at 70°C
+    - Power Rating
+    - Power Rating at 70°C (PWR02)
+    found_in: 6/8
+  resistance_range:
+    label: Resistance Range
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance Range
+    - Resistance Range (±0.5% E24,E96)
+    found_in: 5/8
+  resistance_range_2:
+    label: Resistance Range (High Value)
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance Range
+    - Resistance Range (±1% E24,E96)
+    found_in: 5/8
+  resistance_range_3:
+    label: Resistance Range (Low Value)
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance Range
+    - Resistance Range (±5% E24)
+    found_in: 5/8
+  flammability:
+    label: Flammability
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Flammability
+    - Rapid Change of Temperature
+    found_in: 4/8
+  package_size:
+    label: Package Size
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    - Size
+    - Package Size
+    found_in: 4/8
+  msl:
+    label: MSL
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - MSL
+    found_in: 4/8
+  rohs_compliance:
+    label: RoHS Compliance
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - RoHS
+    - RoHS Compliance
+    found_in: 4/8
+  shelf_life_max:
+    label: Shelf Life Max
+    unit: years
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Shelf Life
+    found_in: 4/8
+  storage_temp_range:
+    label: Storage Temp Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 4/8
+  tolerance:
+    label: Tolerance
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Tolerance
+    found_in: 4/8
+rare_specs:
+  voltage_proof_value:
+    label: Voltage Proof Value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Voltage Proof
+    found_in: 3/8
+  humidity_max:
+    label: Humidity Max
+    unit: '%RH'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Humidity
+    found_in: 3/8
+  leaching_max:
+    label: Leaching Max
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Leaching
+    found_in: 3/8
+  resistance_range_4:
+    label: Resistance Range (High Value)
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - TCR (PPM/°C)
+    - Resistance Range
+    found_in: 3/8
+  resistance_range_5:
+    label: Resistance Range (High Value)
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Part Numbering
+    - TCR (PPM/°C)
+    - Resistance Range
+    found_in: 3/8
+  resistance_range_6:
+    label: Resistance Range (High Value)
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Size (Inch)
+    - TCR (PPM/°C)
+    - Resistance Range
+    found_in: 3/8
+  solderability_min:
+    label: Solderability Min
+    unit: '%'
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Solderability
+    found_in: 3/8
+  sulfur_test:
+    label: Sulfur Test
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Sulfuration Prevention
+    - Resistance to Soldering Heat
+    - Sulfur Test
+    found_in: 3/8
+  mechanical_shock_value:
+    label: Mechanical Shock Value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Mechanical Shock
+    found_in: 2/8
+  resistance_to_soldering_heat_max:
+    label: Resistance to Soldering Heat Max
+    unit: °C
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Resistance to Soldering Heat
+    found_in: 2/8
+  soldering_condition:
+    label: Soldering Condition
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Soldering Condition
+    - Soldering Temperature
+    found_in: 2/8
+  temperature_cycling_value:
+    label: Temperature Cycling Value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Temperature Cycling
+    found_in: 2/8
+  tolerance_2:
+    label: Tolerance
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Tolerance
+    found_in: 2/8
+  tolerance_3:
+    label: Tolerance
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Tolerance
+    found_in: 2/8
+  vibration_value:
+    label: Vibration Value
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Vibration
+    found_in: 2/8
+  tc_r_ppm_c:
+    label: TCR (PPM/°C)
+    unit: PPM/°C
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - TCR
+    found_in: 1/8
+  tc_r_ppm_c_2:
+    label: TCR (PPM/°C)
+    unit: PPM/°C
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases: []
+    found_in: 0/8
+  tc_r_ppm_c_3:
+    label: TCR (PPM/°C)
+    unit: PPM/°C
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases: []
+    found_in: 0/8

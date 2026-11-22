@@ -22,5 +22,311 @@
   "tokens_in": 1781,
   "tokens_out": 85
  },
- "type": "fast_acting_chip_fuse"
+ "type": "fast_acting_chip_fuse",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:55:10+00:00",
+  "items": [
+   {
+    "name": "Ampere Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "range",
+    "conditions": "",
+    "example": "250-6000"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "min",
+    "conditions": "% of Amp Rating=100",
+    "example": "4"
+   },
+   {
+    "name": "Opening Time",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "max",
+    "conditions": "% of Amp Rating=250",
+    "example": "5"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F250",
+    "example": "250"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F375",
+    "example": "375"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F500",
+    "example": "500"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F750",
+    "example": "750"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F1",
+    "example": "1000"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F1.25",
+    "example": "1250"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F1.5",
+    "example": "1500"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F1.75",
+    "example": "1750"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F2",
+    "example": "2000"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F2.5",
+    "example": "2500"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F3",
+    "example": "3000"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F3.5",
+    "example": "3500"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F4",
+    "example": "4000"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F5",
+    "example": "5000"
+   },
+   {
+    "name": "Current Rating",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "Product Code=S0603F6",
+    "example": "6000"
+   },
+   {
+    "name": "Voltage Rating",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AC",
+    "example": "32"
+   },
+   {
+    "name": "Voltage Rating",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "DC",
+    "example": "32"
+   },
+   {
+    "name": "Interrupting Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "AC/DC",
+    "example": "50"
+   },
+   {
+    "name": "Interrupting Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "AC",
+    "example": "50"
+   },
+   {
+    "name": "Interrupting Rating",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "DC",
+    "example": "35"
+   },
+   {
+    "name": "Resistance (ohms)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "DC Cold Resistance (Measured at ≤10% of rated current)",
+    "example": "5.1"
+   },
+   {
+    "name": "Typical Melt I2t",
+    "symbol": "",
+    "unit": "A2s",
+    "stat": "typ",
+    "conditions": "DC (Measured with a battery bank at rated DC voltage, 10x-rated current, not to exceed IR, time constant of calibrated c",
+    "example": "0.0004"
+   },
+   {
+    "name": "Alpha Code Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "D"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0603"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Life Test",
+    "example": "MIL-STD-202, Method 108A"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Humidity Bias",
+    "example": "MIL-STD-202, Method 103"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Moisture Resistance Test",
+    "example": "MIL-STD-202, Method 106G"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Thermal Shock",
+    "example": "MIL-STD-202, Method 107G"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Terminal Strength",
+    "example": "AEC-Q200-006"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Board Flex",
+    "example": "AEC-Q200-005 Appendix 2 Note: 1mm (Min)"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Vibration",
+    "example": "MIL-STD-202, Method 204D"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Mechanical Shock",
+    "example": "MIL-STD-202, Method 213B"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Solderability",
+    "example": "MIL-STD-202 Method 208H"
+   },
+   {
+    "name": "Environmental Data",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Resistance to Solder Heat",
+    "example": "MIL-STD-202, Method 210A"
+   }
+  ],
+  "seconds": 39.8,
+  "tokens_in": 1840,
+  "tokens_out": 2170
+ }
 }

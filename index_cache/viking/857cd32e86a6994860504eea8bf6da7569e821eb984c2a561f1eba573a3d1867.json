@@ -22,5 +22,287 @@
   "tokens_in": 1682,
   "tokens_out": 108
  },
- "type": "polymer_aluminum_capacitor"
+ "type": "polymer_aluminum_capacitor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:07:29+00:00",
+  "items": [
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0605/0608/0808/0812/0816/0820/1012/1016/"
+   },
+   {
+    "name": "Rated voltage",
+    "symbol": "WV",
+    "unit": "Vdc",
+    "stat": "range",
+    "conditions": "",
+    "example": "25~100"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "hours",
+    "stat": "value",
+    "conditions": "105°C",
+    "example": "5,000"
+   },
+   {
+    "name": "RoHS Compliant",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Yes"
+   },
+   {
+    "name": "Category temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55~+105"
+   },
+   {
+    "name": "Surge voltage",
+    "symbol": "",
+    "unit": "Vdc",
+    "stat": "value",
+    "conditions": "rated voltage*1.15",
+    "example": "28.8"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "120Hz≦f＜1KHz",
+    "example": "0.05"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "1KHz≦f＜10KHz",
+    "example": "0.03"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "10KHz≦f＜50KHz",
+    "example": "0.7"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "50KHz≦f＜100KHz",
+    "example": "0.85"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "100KHz≦f≦300KHz",
+    "example": "1"
+   },
+   {
+    "name": "Tolerance on Rated Capacitance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "120Hz±10% at 20±2°C",
+    "example": "±20"
+   },
+   {
+    "name": "Leakage current",
+    "symbol": "",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "DC rated voltage, 20±2°C",
+    "example": "410"
+   },
+   {
+    "name": "tanδ",
+    "symbol": "tanδ",
+    "unit": "",
+    "stat": "max",
+    "conditions": "120Hz±10% at 20±2°C",
+    "example": "0.12"
+   },
+   {
+    "name": "ESR",
+    "symbol": "ESR",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "20°C, 100K to 300KHz",
+    "example": "28"
+   },
+   {
+    "name": "Rated Ripple Current",
+    "symbol": "Rated Ripple Current",
+    "unit": "mArms",
+    "stat": "max",
+    "conditions": "105°C, 100KHz",
+    "example": "5300"
+   },
+   {
+    "name": "Impedance ratio",
+    "symbol": "Z",
+    "unit": "",
+    "stat": "max",
+    "conditions": "-55°C/20°C, 100kHz",
+    "example": "1.25"
+   },
+   {
+    "name": "Impedance ratio",
+    "symbol": "Z",
+    "unit": "",
+    "stat": "max",
+    "conditions": "-105°C/20°C, 100kHz",
+    "example": "1.25"
+   },
+   {
+    "name": "Pull Strength Load of Lead Wire Terminations",
+    "symbol": "",
+    "unit": "N",
+    "stat": "value",
+    "conditions": "Lead wire diameter 0.35<d≦0.5",
+    "example": "5"
+   },
+   {
+    "name": "Pull Strength Load of Lead Wire Terminations",
+    "symbol": "",
+    "unit": "N",
+    "stat": "value",
+    "conditions": "Lead wire diameter 0.35<d≦0.8",
+    "example": "10"
+   },
+   {
+    "name": "Bending Strength of Lead Wire Terminations",
+    "symbol": "",
+    "unit": "N",
+    "stat": "value",
+    "conditions": "Lead wire diameter 0.35<d≦0.5",
+    "example": "2.5"
+   },
+   {
+    "name": "Bending Strength of Lead Wire Terminations",
+    "symbol": "",
+    "unit": "N",
+    "stat": "value",
+    "conditions": "Lead wire diameter 0.35<d≦0.8",
+    "example": "5"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "",
+    "example": "95"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Capacitance change",
+    "example": "±5%"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "tanδ",
+    "example": "Not exceed standard ratings"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Leakage current",
+    "example": "Not exceed standard ratings"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Visual",
+    "example": "No remarkable abnormality"
+   },
+   {
+    "name": "Resistance to Solvent",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Marking",
+    "example": "easily readable"
+   },
+   {
+    "name": "Resistance to Solvent",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Appearance",
+    "example": "not appear any abnormality"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ARHA0608MB250820"
+   },
+   {
+    "name": "Capacitance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "±20"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "B"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "25"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "uF",
+    "stat": "value",
+    "conditions": "",
+    "example": "82"
+   }
+  ],
+  "seconds": 163.08,
+  "tokens_in": 6198,
+  "tokens_out": 8076
+ }
 }

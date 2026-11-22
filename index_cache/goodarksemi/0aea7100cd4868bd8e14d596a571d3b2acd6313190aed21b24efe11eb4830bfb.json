@@ -22,5 +22,175 @@
   "tokens_in": 1605,
   "tokens_out": 79
  },
- "type": "schottky_bridge_rectifier"
+ "type": "schottky_bridge_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T14:50:46+00:00",
+  "items": [
+   {
+    "name": "Maximum Repetitive Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "14"
+   },
+   {
+    "name": "Maximum DC Blocking Voltage",
+    "symbol": "V DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current",
+    "symbol": "I (AV)",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "See Fig. 1",
+    "example": "3"
+   },
+   {
+    "name": "Peak Forward Surge Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "8.3ms Single Half Sine-Wave Superimposed on Rated Load (JEDEC Method)",
+    "example": "70"
+   },
+   {
+    "name": "Maximum Instantaneous Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "at 3.0A",
+    "example": "0.55"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current",
+    "symbol": "I R",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "at Rated DC Blocking Voltage, T =25°C",
+    "example": "0.5"
+   },
+   {
+    "name": "Maximum Instantaneous Reverse Current",
+    "symbol": "I R",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "at Rated DC Blocking Voltage, T =125°C",
+    "example": "50"
+   },
+   {
+    "name": "Typical Thermal Resistance",
+    "symbol": "R θJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Typical Thermal Resistance",
+    "symbol": "R θJC",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Operating Junction Temperature Range",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage Temperature Range",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MBS molded plastic body"
+   },
+   {
+    "name": "Epoxy",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL94V-0 rate flame retardant"
+   },
+   {
+    "name": "Terminals",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Plated leads solderable per MIL-STD-750,"
+   },
+   {
+    "name": "Mounting position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MBS"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MS32"
+   },
+   {
+    "name": "Carrier",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape & Reel"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "Pcs",
+    "stat": "value",
+    "conditions": "",
+    "example": "3,000"
+   }
+  ],
+  "seconds": 23.99,
+  "tokens_in": 2222,
+  "tokens_out": 856
+ }
 }

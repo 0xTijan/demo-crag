@@ -18,5 +18,159 @@
   "tokens_in": 844,
   "tokens_out": 46
  },
- "type": "zener_diode"
+ "type": "zener_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:28:43+00:00",
+  "items": [
+   {
+    "name": "Wafer Size",
+    "symbol": "",
+    "unit": "5\"",
+    "stat": "value",
+    "conditions": "",
+    "example": "5\""
+   },
+   {
+    "name": "PDPW(pcs/Wafer)",
+    "symbol": "",
+    "unit": "10860 pcs/wafer",
+    "stat": "value",
+    "conditions": "",
+    "example": "10860 pcs/wafer"
+   },
+   {
+    "name": "Chip Size(La)",
+    "symbol": "",
+    "unit": "1000um*1000um",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000um*1000um"
+   },
+   {
+    "name": "Pad size(Lb)",
+    "symbol": "",
+    "unit": "830um*830um",
+    "stat": "value",
+    "conditions": "",
+    "example": "830um*830um"
+   },
+   {
+    "name": "Die Thickness",
+    "symbol": "",
+    "unit": "250±20um",
+    "stat": "range",
+    "conditions": "",
+    "example": "250±20um"
+   },
+   {
+    "name": "Top Side Metalization",
+    "symbol": "",
+    "unit": "Ag:3.0um",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ag:3.0um"
+   },
+   {
+    "name": "Back Side Metalization",
+    "symbol": "",
+    "unit": "Ag: 1.5um",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ag: 1.5um"
+   },
+   {
+    "name": "Passivation layer",
+    "symbol": "",
+    "unit": "SiO :1.0um 2",
+    "stat": "value",
+    "conditions": "",
+    "example": "SiO :1.0um 2"
+   },
+   {
+    "name": "Street Size",
+    "symbol": "",
+    "unit": "50um",
+    "stat": "value",
+    "conditions": "",
+    "example": "50um"
+   },
+   {
+    "name": "Operating Temperature",
+    "symbol": "T J",
+    "unit": "℃",
+    "stat": "max",
+    "conditions": "",
+    "example": "175"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T STG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-30 to 150"
+   },
+   {
+    "name": "V (V) Z",
+    "symbol": "V Z",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "19.00~21.00"
+   },
+   {
+    "name": "@I =mA ZT",
+    "symbol": "I ZT",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "65"
+   },
+   {
+    "name": "Z (Ω） ZK",
+    "symbol": "Z ZK",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Z (Ω ZT )",
+    "symbol": "Z ZT",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "3.5"
+   },
+   {
+    "name": "@I =m ZT A",
+    "symbol": "I ZT A",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "I (uA） R",
+    "symbol": "I R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "V (V) R",
+    "symbol": "V R",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "16.7"
+   }
+  ],
+  "seconds": 139.15,
+  "tokens_in": 897,
+  "tokens_out": 810
+ }
 }

@@ -19,5 +19,183 @@
   "tokens_in": 1521,
   "tokens_out": 49
  },
- "type": "tvs_diode"
+ "type": "tvs_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T12:20:47+00:00",
+  "items": [
+   {
+    "name": "Maximum Peak Pulse Power (W) (8/20 µs)",
+    "symbol": "P (8/20us) PPM",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "1120"
+   },
+   {
+    "name": "Maximum Peak Pulse Current Ipp (A)8/20us",
+    "symbol": "I (8/20us) PPM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "60"
+   },
+   {
+    "name": "Maximum Forward Peak Pulse Current Ipp (A)8/20uS",
+    "symbol": "I (8/20us) PPM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "T J",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to 150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "T STG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Ambient",
+    "symbol": "R thJA",
+    "unit": "/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "65"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Case",
+    "symbol": "R thJC",
+    "unit": "/W",
+    "stat": "typ",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Reverse Stand-off Voltage",
+    "symbol": "V RWM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "22"
+   },
+   {
+    "name": "Leakage Current",
+    "symbol": "I LEAK",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "Measured at V = V RWM",
+    "example": "110"
+   },
+   {
+    "name": "Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I = 1 mA from G to IN",
+    "example": "0.25 to 0.65"
+   },
+   {
+    "name": "Break-down Voltage",
+    "symbol": "V BR",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "I = 1 mA from I to G",
+    "example": "24.6 to 27.6"
+   },
+   {
+    "name": "Forward Clamp Voltage",
+    "symbol": "V CL",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "V = 5V, I = 200mA",
+    "example": "1 to 5"
+   },
+   {
+    "name": "Reverse Clamp Voltage",
+    "symbol": "V CL",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "25A (8/20us) from I to G, V =0 V before surge",
+    "example": "26 to 27"
+   },
+   {
+    "name": "Reverse Clamp Voltage",
+    "symbol": "V CL",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "35A (8/20us) from I to G, V =0 V before surge",
+    "example": "27 to 28"
+   },
+   {
+    "name": "Reverse Clamp Voltage",
+    "symbol": "V CL",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "45A (8/20us) from I to G, V =0 V before surge",
+    "example": "28 to 29"
+   },
+   {
+    "name": "8/20μs surge dynamic resistance",
+    "symbol": "R DYN",
+    "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "Calculated from VCLAMP at 0.5*lpp and Ipp surge current levels",
+    "example": "30"
+   },
+   {
+    "name": "Input pin capacitance",
+    "symbol": "C IN",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "V = V RWM, f= 1 MHz, 30 mVpp, I to G",
+    "example": "105"
+   },
+   {
+    "name": "Maximum Slew Rate",
+    "symbol": "S R",
+    "unit": "V/μs",
+    "stat": "typ",
+    "conditions": "0-V rising edge, sweep rise time and measure slew rate when I = 1 mA",
+    "example": "2.5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DFN2020-6"
+   },
+   {
+    "name": "Pin count",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Operating temperature range",
+    "symbol": "",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to 150"
+   }
+  ],
+  "seconds": 44.35,
+  "tokens_in": 2016,
+  "tokens_out": 1102
+ }
 }

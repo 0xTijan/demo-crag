@@ -20,5 +20,311 @@
   "tokens_in": 1523,
   "tokens_out": 50
  },
- "type": "ntc_thermistor"
+ "type": "ntc_thermistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:27:54+00:00",
+  "items": [
+   {
+    "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Automotive Grade High Reliability SMD NT"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402 / 0603 / 0805"
+   },
+   {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "15-Apr-25"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.A1"
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Excellent solderability and solder resis"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Rechargeable batteries and supporting sy"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "NTGH02"
+   },
+   {
+    "name": "L",
+    "symbol": "L",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.00±0.15"
+   },
+   {
+    "name": "W",
+    "symbol": "W",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.50±0.10"
+   },
+   {
+    "name": "T",
+    "symbol": "T",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.50±0.10"
+   },
+   {
+    "name": "M",
+    "symbol": "M",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.25±0.10"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "02: 0402 03: 0603 05: 0805"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T:Taping Reel"
+   },
+   {
+    "name": "Resistance (25℃)",
+    "symbol": "R25",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
+    "example": "5KΩ"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "ΔR",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "±1, 2, 3, 5"
+   },
+   {
+    "name": "B- Constant (25/50℃)",
+    "symbol": "B",
+    "unit": "K",
+    "stat": "value",
+    "conditions": "",
+    "example": "3380K"
+   },
+   {
+    "name": "B- Constant Tolerance",
+    "symbol": "ΔB",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "±1, 2, 3"
+   },
+   {
+    "name": "Maximum Operating Current @ 25℃",
+    "symbol": "Imax",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.1"
+   },
+   {
+    "name": "Maximum Voltage",
+    "symbol": "Vmax",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "5"
+   },
+   {
+    "name": "Typical Dissipation Constant @ 25℃",
+    "symbol": "D",
+    "unit": "mW/℃",
+    "stat": "value",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Rated Electric Power @25℃",
+    "symbol": "P",
+    "unit": "mW",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "High Temperature Exposure (Storage)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "Temperature Cycling",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "Biased Humidity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "Operational Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "ESD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "95% or more of electrode area shall be c"
+   },
+   {
+    "name": "Board flex",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No mechanical damage. R25 change shall b"
+   },
+   {
+    "name": "Operating Temperature",
+    "symbol": "Toper",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40~+150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "Tstorage",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-10 ~ 40"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "RH",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "30 ~ 70"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "AEC-Q200",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q200 certification"
+   }
+  ],
+  "seconds": 75.74,
+  "tokens_in": 5264,
+  "tokens_out": 3420
+ }
 }

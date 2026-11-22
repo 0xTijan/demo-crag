@@ -22,5 +22,159 @@
   "tokens_in": 1739,
   "tokens_out": 67
  },
- "type": "fast_recovery_rectifier"
+ "type": "fast_recovery_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:08:55+00:00",
+  "items": [
+   {
+    "name": "Maximum repetitive peak reverse voltage",
+    "symbol": "V_RRM",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum RMS voltage",
+    "symbol": "V_RMS",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "",
+    "example": "35"
+   },
+   {
+    "name": "Maximum DC blocking voltage",
+    "symbol": "V_DC",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Maximum average forward current",
+    "symbol": "I_F(AV)",
+    "unit": "Amps",
+    "stat": "max",
+    "conditions": "0.375\"(9.5mm) lead length T=50°C A",
+    "example": "2.0"
+   },
+   {
+    "name": "Peak forward surge current",
+    "symbol": "I_FSM",
+    "unit": "Amps",
+    "stat": "max",
+    "conditions": "8.3ms single half sine wave superimposed on rated load (JEDEC Method)",
+    "example": "50.0"
+   },
+   {
+    "name": "Maximum forward voltage",
+    "symbol": "V_F",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "at I_F=2.0 Amps.",
+    "example": "1.1"
+   },
+   {
+    "name": "Maximum DC reverse current",
+    "symbol": "I_R",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "@T=25°C A at rated DC blocking voltage @T=100°C A",
+    "example": "5.0"
+   },
+   {
+    "name": "Typical junction capacitance",
+    "symbol": "C_J",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "Note 1",
+    "example": "40"
+   },
+   {
+    "name": "Typical thermal resistance",
+    "symbol": "R_θJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "Note 2",
+    "example": "25"
+   },
+   {
+    "name": "Operating junction temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Molded plastic DO-204AC (DO-15)"
+   },
+   {
+    "name": "Epoxy",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL 94V-O rate flame retardant"
+   },
+   {
+    "name": "Lead",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Axial leads, solderable per MIL-STD-202,"
+   },
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Color band denotes cathode end"
+   },
+   {
+    "name": "Mounting position",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Any"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "gram",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.395"
+   },
+   {
+    "name": "Part number options",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DR200G, DR201G, DR202G, DR204G, DR206G, "
+   }
+  ],
+  "seconds": 47.49,
+  "tokens_in": 1684,
+  "tokens_out": 852
+ }
 }

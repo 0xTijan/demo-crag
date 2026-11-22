@@ -18,5 +18,127 @@
   "tokens_in": 1129,
   "tokens_out": 43
  },
- "type": "fast_recovery_rectifier"
+ "type": "fast_recovery_rectifier",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T10:09:38+00:00",
+  "items": [
+   {
+    "name": "Maximum Recurrent Peak Reverse Voltage",
+    "symbol": "V RRM",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "600"
+   },
+   {
+    "name": "Maximum RMS Voltage",
+    "symbol": "V RMS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "420"
+   },
+   {
+    "name": "Maximum DC blocking Voltage",
+    "symbol": "V DC",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "600"
+   },
+   {
+    "name": "Maximum Average Forward Rectified Current",
+    "symbol": "I FAV",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "3/8\"lead length at T =55°C",
+    "example": "1.5"
+   },
+   {
+    "name": "Peak Forward Surge Current",
+    "symbol": "I FSM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "8.3ms single half sine-wave superimposed on rated load",
+    "example": "50"
+   },
+   {
+    "name": "Maximum Forward Voltage",
+    "symbol": "V F",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "at rated Forward Current and 25°C",
+    "example": "1.1"
+   },
+   {
+    "name": "Maximum DC Reverse Current",
+    "symbol": "I R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "at V =600V and 25°C DC",
+    "example": "5.0"
+   },
+   {
+    "name": "Maximum DC Reverse Current",
+    "symbol": "I R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "at V =650V and 25°C DC",
+    "example": "5.0"
+   },
+   {
+    "name": "Maximum DC Reverse Current",
+    "symbol": "I R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "at V =700V and 25°C DC",
+    "example": "25.0"
+   },
+   {
+    "name": "Maximum DC Reverse Current",
+    "symbol": "I R",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "at V =600V and 150°C DC",
+    "example": "200"
+   },
+   {
+    "name": "Typical Reverse Recovery Time",
+    "symbol": "Trr",
+    "unit": "µs",
+    "stat": "typ",
+    "conditions": "If =0.5A, Ir =1.0A, Irr =0.25A",
+    "example": "2.0"
+   },
+   {
+    "name": "Typical Junction Capacitance",
+    "symbol": "Cj",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "Measured at 1.0 MHz and applied reverse voltage of 4.0Vdc",
+    "example": "25.0"
+   },
+   {
+    "name": "Typical Thermal Resistance",
+    "symbol": "Rth(ja)",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "Thermal Resistance from Junction to Ambient at 3/8\"lead length, P.C. Board Mounted",
+    "example": "45.0"
+   },
+   {
+    "name": "Storage and Operating Junction Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 to +175"
+   }
+  ],
+  "seconds": 42.94,
+  "tokens_in": 1071,
+  "tokens_out": 746
+ }
 }

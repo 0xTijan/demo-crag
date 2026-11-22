@@ -22,5 +22,87 @@
   "tokens_in": 1271,
   "tokens_out": 125
  },
- "type": "esd_protection_diode"
+ "type": "esd_protection_diode",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T11:10:14+00:00",
+  "items": [
+   {
+    "name": "Peak Pulse Power",
+    "symbol": "Ppp",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TP=8/20μS",
+    "example": "350"
+   },
+   {
+    "name": "Operating Temperature",
+    "symbol": "TJ",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55-+150"
+   },
+   {
+    "name": "Storage temperature",
+    "symbol": "TSTG",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65-+150"
+   },
+   {
+    "name": "V RWM",
+    "symbol": "V RWM",
+    "unit": "Volts",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.3"
+   },
+   {
+    "name": "IR @ V RWM",
+    "symbol": "IR @ V RWM",
+    "unit": "uA",
+    "stat": "value",
+    "conditions": "",
+    "example": "1"
+   },
+   {
+    "name": "Min Breakdown Voltage",
+    "symbol": "V BR @1mA",
+    "unit": "Volts",
+    "stat": "min",
+    "conditions": "",
+    "example": "4"
+   },
+   {
+    "name": "Max Clamping Voltage",
+    "symbol": "Vc @I=1A",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "I=1A",
+    "example": "7.0"
+   },
+   {
+    "name": "Max Clamping Voltage",
+    "symbol": "Vc @I PP",
+    "unit": "Volts",
+    "stat": "max",
+    "conditions": "I PP",
+    "example": "19 @ 20A"
+   },
+   {
+    "name": "Typ C J",
+    "symbol": "Typ C J @0V,1MHz",
+    "unit": "pF",
+    "stat": "value",
+    "conditions": "0V,1MHz",
+    "example": "1"
+   }
+  ],
+  "seconds": 19.03,
+  "tokens_in": 1330,
+  "tokens_out": 418
+ }
 }

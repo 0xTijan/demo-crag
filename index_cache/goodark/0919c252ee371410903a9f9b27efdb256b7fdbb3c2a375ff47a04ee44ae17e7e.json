@@ -18,5 +18,311 @@
   "tokens_in": 1925,
   "tokens_out": 43
  },
- "type": "mosfet_n"
+ "type": "mosfet_n",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T09:52:30+00:00",
+  "items": [
+   {
+    "name": "Drain Source Voltage",
+    "symbol": "VDS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Gate Source Voltage",
+    "symbol": "VGS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "±20"
+   },
+   {
+    "name": "Drain Current, Continuous VGS=10V",
+    "symbol": "ID",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "75"
+   },
+   {
+    "name": "Drain Current, Continuous VGS=10V",
+    "symbol": "ID",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=100°C",
+    "example": "47"
+   },
+   {
+    "name": "Drain Current, Pulsed (Note 1)",
+    "symbol": "IDM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "",
+    "example": "300"
+   },
+   {
+    "name": "Single Avalanche Energy (Note 2)",
+    "symbol": "EAS",
+    "unit": "mJ",
+    "stat": "max",
+    "conditions": "",
+    "example": "84"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "42"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "PD",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "TC=100°C",
+    "example": "17"
+   },
+   {
+    "name": "Operating Junction/ Storage Temperature Range",
+    "symbol": "TJ/ TSTG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "Thermal Resistance Junction to Case",
+    "symbol": "RthJC",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Thermal Resistance Junction to Ambient (Note 3)",
+    "symbol": "RthJA",
+    "unit": "°C/W",
+    "stat": "max",
+    "conditions": "",
+    "example": "62.5"
+   },
+   {
+    "name": "Drain Source Breakdown Voltage",
+    "symbol": "V(BR)DSS",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "VGS=0V, ID=250µA",
+    "example": "30"
+   },
+   {
+    "name": "Zero Gate Voltage Drain Current",
+    "symbol": "IDSS",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "VDS=30V, VGS=0V",
+    "example": "1"
+   },
+   {
+    "name": "Gate Threshold Voltage",
+    "symbol": "VGS(TH)",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "VDS=VGS, IDS=250uA",
+    "example": "1.2 to 1.8"
+   },
+   {
+    "name": "Gate Leakage Current",
+    "symbol": "IGSS",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "VGS=±20V, VDS=0V",
+    "example": "±100"
+   },
+   {
+    "name": "Drain-Source On-state Resistance",
+    "symbol": "RDS(on)",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "VGS=10V, ID=20A",
+    "example": "4.7"
+   },
+   {
+    "name": "Drain-Source On-state Resistance",
+    "symbol": "RDS(on)",
+    "unit": "mΩ",
+    "stat": "max",
+    "conditions": "VGS=4.5V, ID=10A",
+    "example": "6.4"
+   },
+   {
+    "name": "Total Gate Charge",
+    "symbol": "Qg",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VGS(off)=0V, VGS(on)=10V, VDD=15V, ID=20A",
+    "example": "40"
+   },
+   {
+    "name": "Gate-Source Charge",
+    "symbol": "Qgs",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VGS(off)=0V, VGS(on)=10V, VDD=15V, ID=20A",
+    "example": "5"
+   },
+   {
+    "name": "Gate-Drain Charge",
+    "symbol": "Qgd",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VGS(off)=0V, VGS(on)=10V, VDD=15V, ID=20A",
+    "example": "9"
+   },
+   {
+    "name": "Turn-on Delay Time",
+    "symbol": "td(on)",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VGS=10V, VDD=15V, RL=0.75Ω, RG=3Ω",
+    "example": "11"
+   },
+   {
+    "name": "Turn-on Rise Time",
+    "symbol": "tr",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VGS=10V, VDD=15V, RL=0.75Ω, RG=3Ω",
+    "example": "30"
+   },
+   {
+    "name": "Turn-off Delay Time",
+    "symbol": "td(off)",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VGS=10V, VDD=15V, RL=0.75Ω, RG=3Ω",
+    "example": "40"
+   },
+   {
+    "name": "Turn-off Fall Time",
+    "symbol": "tf",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VGS=10V, VDD=15V, RL=0.75Ω, RG=3Ω",
+    "example": "8.4"
+   },
+   {
+    "name": "Gate Resistance",
+    "symbol": "Rg",
+    "unit": "Ω",
+    "stat": "typ",
+    "conditions": "VGS=0V, f=1MHz, open drain",
+    "example": "2.5"
+   },
+   {
+    "name": "Input Capacitance",
+    "symbol": "Ciss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGS=0V, VDS=30V, f=1MHz",
+    "example": "1945"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "Coss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGS=0V, VDS=30V, f=1MHz",
+    "example": "183"
+   },
+   {
+    "name": "Reverse Transfer Capacitance",
+    "symbol": "Crss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VGS=0V, VDS=30V, f=1MHz",
+    "example": "158"
+   },
+   {
+    "name": "Forward Current, Continuous",
+    "symbol": "ISD",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TC=25°C",
+    "example": "33"
+   },
+   {
+    "name": "Diode Forward Voltage",
+    "symbol": "VSD",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=20A, VGS=0V",
+    "example": "1.2"
+   },
+   {
+    "name": "Reverse Recovery Time",
+    "symbol": "Trr",
+    "unit": "ns",
+    "stat": "typ",
+    "conditions": "VR =15V, IF =20A, di/dt = 100 A/μs",
+    "example": "16"
+   },
+   {
+    "name": "Reverse Recovery Charge",
+    "symbol": "Qrr",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VR =15V, IF =20A, di/dt = 100 A/μs",
+    "example": "7.6"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "PDFN3333"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   },
+   {
+    "name": "AEC-Q101",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Not Qualified"
+   },
+   {
+    "name": "MSL",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1"
+   }
+  ],
+  "seconds": 111.68,
+  "tokens_in": 3015,
+  "tokens_out": 1948
+ }
 }

@@ -21,5 +21,23 @@
   "tokens_in": 1651,
   "tokens_out": 58
  },
- "type": "thick_film_array_chip_resistor"
+ "type": "thick_film_array_chip_resistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T13:59:14+00:00",
+  "items": [
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402x4 / 0603x4 / 0201x2(Flat) / 0201x4("
+   }
+  ],
+  "seconds": 119.87,
+  "tokens_in": 6491,
+  "tokens_out": 71
+ }
 }

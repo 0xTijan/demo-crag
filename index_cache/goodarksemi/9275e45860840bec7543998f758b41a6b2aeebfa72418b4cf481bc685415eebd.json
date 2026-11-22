@@ -20,5 +20,167 @@
   "tokens_in": 1394,
   "tokens_out": 59
  },
- "type": "dual_pnp_transistor"
+ "type": "dual_pnp_transistor",
+ "spec_inventory": {
+  "version": "1",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-22T15:03:39+00:00",
+  "items": [
+   {
+    "name": "Collector Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-50"
+   },
+   {
+    "name": "Collector Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-45"
+   },
+   {
+    "name": "Emitter Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Current",
+    "symbol": "I C",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "-100"
+   },
+   {
+    "name": "Power Dissipation",
+    "symbol": "P tot",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Thermal Resistance from Junction Ambient",
+    "symbol": "R θJA",
+    "unit": "℃/W",
+    "stat": "max",
+    "conditions": "Device mounted on FR-4 substrate PC board, with minimum recommended pad layout.",
+    "example": "833"
+   },
+   {
+    "name": "Operating and Storage Temperature Range",
+    "symbol": "T, T J stg",
+    "unit": "℃",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "range",
+    "conditions": "V =-5V, I =-2mA",
+    "example": "125"
+   },
+   {
+    "name": "Collector Base Cutoff Current",
+    "symbol": "I CBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-30V",
+    "example": "-15"
+   },
+   {
+    "name": "Emitter Base Cutoff Current",
+    "symbol": "I EBO",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "V =-5V",
+    "example": "-100"
+   },
+   {
+    "name": "Collector Base Breakdown Voltage",
+    "symbol": "V (BR)CBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =-10μA",
+    "example": "-50"
+   },
+   {
+    "name": "Collector Emitter Breakdown Voltage",
+    "symbol": "V (BR)CEO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =-10mA",
+    "example": "-45"
+   },
+   {
+    "name": "Emitter Base Breakdown Voltage",
+    "symbol": "V (BR)EBO",
+    "unit": "V",
+    "stat": "min",
+    "conditions": "I =-1μA",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "mV",
+    "stat": "max",
+    "conditions": "I =-10mA, I =-0.5mA",
+    "example": "-100"
+   },
+   {
+    "name": "Collector Emitter Saturation Voltage",
+    "symbol": "V CE(sat)",
+    "unit": "mV",
+    "stat": "max",
+    "conditions": "I =-100mA, I =-5mA",
+    "example": "-400"
+   },
+   {
+    "name": "Base Emitter On Voltage",
+    "symbol": "V BE(ON)",
+    "unit": "mV",
+    "stat": "max",
+    "conditions": "V =-5V, I =-2mA",
+    "example": "-600"
+   },
+   {
+    "name": "Base Emitter On Voltage",
+    "symbol": "V BE(ON)",
+    "unit": "mV",
+    "stat": "max",
+    "conditions": "V =-5V, I =-10mA",
+    "example": "-820"
+   },
+   {
+    "name": "Gain Bandwidth Product",
+    "symbol": "f T",
+    "unit": "MHz",
+    "stat": "min",
+    "conditions": "I =-10mA, V =-5V, F=100MHz",
+    "example": "100"
+   },
+   {
+    "name": "Collector Output Capacitance",
+    "symbol": "C ob",
+    "unit": "pF",
+    "stat": "max",
+    "conditions": "V =-10V, F=1MHz",
+    "example": "4.5"
+   }
+  ],
+  "seconds": 82.19,
+  "tokens_in": 1325,
+  "tokens_out": 1055
+ }
 }
