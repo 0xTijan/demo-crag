@@ -21,17 +21,25 @@
  },
  "type": "current_sensing_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:21:53+00:00",
+  "at": "2026-11-23T07:27:18+00:00",
   "items": [
    {
-    "name": "Resistance",
+    "name": "Package",
     "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "LRS1050, LRS1575"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "R",
     "unit": "mΩ",
     "stat": "range",
     "conditions": "",
-    "example": "0.2, 0.3"
+    "example": "0.2, 0.3, 0.5, 1, 2, 3, 4, 5"
    },
    {
     "name": "Material",
@@ -39,7 +47,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Manganin"
+    "example": "Manganin, NiCr alloy"
    },
    {
     "name": "A",
@@ -47,7 +55,7 @@
     "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "10.50±0.30"
+    "example": "10.50±0.30, 15.00±0.30"
    },
    {
     "name": "B",
@@ -55,7 +63,7 @@
     "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "5.00±0.30"
+    "example": "5.00±0.30, 7.75±0.30"
    },
    {
     "name": "C",
@@ -63,7 +71,7 @@
     "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "2.00±0.30"
+    "example": "2.00±0.30, 4.00±0.30"
    },
    {
     "name": "D",
@@ -87,7 +95,7 @@
     "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "1.50±0.20"
+    "example": "0.43±0.10, 0.65±0.10, 0.95±0.10, 1.50±0."
    },
    {
     "name": "H2",
@@ -95,7 +103,7 @@
     "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "1.50±0.20"
+    "example": "0.43±0.10, 0.65±0.10, 0.95±0.10, 1.50±0."
    },
    {
     "name": "Resistance Tolerance",
@@ -103,31 +111,55 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "±1%"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T"
+    "example": "±1%, ±5%"
    },
    {
     "name": "TCR",
-    "symbol": "",
+    "symbol": "TCR",
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "",
-    "example": "±50"
+    "example": "±50, ±60, ±75, ±100, ±150"
    },
    {
     "name": "Power Rating",
-    "symbol": "",
+    "symbol": "P",
     "unit": "W",
     "stat": "range",
     "conditions": "",
-    "example": "2W"
+    "example": "2, 2.5, 3, 3.5, 4, 5, 6, 7"
+   },
+   {
+    "name": "Operating Temperature range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 125"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "5 to 40"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "range",
+    "conditions": "",
+    "example": "55 to 75"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "1"
    },
    {
     "name": "Short time overload",
@@ -166,7 +198,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "-55°C ,93±3%RH, 56d",
+    "conditions": "-55°C, 93±3%RH, 56d",
     "example": "△R≤±1.0%R"
    },
    {
@@ -182,148 +214,12 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "10～200Hz，98m/S2，6hours",
+    "conditions": "10～200Hz, 98m/S2, 6hours",
     "example": "△R≤±0.5%R"
-   },
-   {
-    "name": "Operating Temperature range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 ~ 125"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "5~40"
-   },
-   {
-    "name": "Humidity",
-    "symbol": "",
-    "unit": "%RH",
-    "stat": "range",
-    "conditions": "",
-    "example": "55~75"
-   },
-   {
-    "name": "Shelf life",
-    "symbol": "",
-    "unit": "years",
-    "stat": "value",
-    "conditions": "",
-    "example": "1"
-   },
-   {
-    "name": "Packaging Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3K"
-   },
-   {
-    "name": "Tape Width",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "24"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "inch",
-    "stat": "value",
-    "conditions": "",
-    "example": "13"
-   },
-   {
-    "name": "ΦA",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "330.5±1.0"
-   },
-   {
-    "name": "ΦB",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "99.5±0.5"
-   },
-   {
-    "name": "ΦC",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "13.2+0.3/-0.2"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "25.4±0.5"
-   },
-   {
-    "name": "F",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "11.5±0.15"
-   },
-   {
-    "name": "P0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "4.00±0.10"
-   },
-   {
-    "name": "P1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "8.00±0.10"
-   },
-   {
-    "name": "P2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.00±0.10"
-   },
-   {
-    "name": "ΦD0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.50+0.1, -0"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.05±0.10"
    }
   ],
-  "seconds": 173.82,
-  "tokens_in": 4451,
-  "tokens_out": 3319
+  "seconds": 68.45,
+  "tokens_in": 4551,
+  "tokens_out": 1221
  }
 }

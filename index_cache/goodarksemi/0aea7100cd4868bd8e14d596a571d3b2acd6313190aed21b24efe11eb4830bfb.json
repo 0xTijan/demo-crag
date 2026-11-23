@@ -24,9 +24,9 @@
  },
  "type": "schottky_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:50:46+00:00",
+  "at": "2026-11-23T08:34:27+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -125,72 +125,16 @@
     "example": "-55 to +150"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "MBS molded plastic body"
-   },
-   {
-    "name": "Epoxy",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "UL94V-0 rate flame retardant"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Plated leads solderable per MIL-STD-750,"
-   },
-   {
-    "name": "Mounting position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "MBS"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "MS32"
-   },
-   {
-    "name": "Carrier",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tape & Reel"
-   },
-   {
-    "name": "Quantity",
-    "symbol": "",
-    "unit": "Pcs",
-    "stat": "value",
-    "conditions": "",
-    "example": "3,000"
    }
   ],
-  "seconds": 23.99,
-  "tokens_in": 2222,
-  "tokens_out": 856
+  "seconds": 21.76,
+  "tokens_in": 2322,
+  "tokens_out": 595
  }
 }

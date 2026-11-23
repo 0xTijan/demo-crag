@@ -23,9 +23,9 @@
  },
  "type": "switching_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:29:44+00:00",
+  "at": "2026-11-23T06:43:13+00:00",
   "items": [
    {
     "name": "Repetitive Peak Reverse Voltage",
@@ -109,11 +109,11 @@
    },
    {
     "name": "Operating and Storage Temperature Range",
-    "symbol": "",
+    "symbol": "T, T_JSTG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-65 to +150"
+    "example": "-65 to 150"
    },
    {
     "name": "Reverse Breakdown Voltage",
@@ -178,10 +178,18 @@
     "stat": "max",
     "conditions": "I_F=I_R=30mA, I_R=0.1xI_F, R_L=100Ω",
     "example": "50"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
    }
   ],
-  "seconds": 46.0,
-  "tokens_in": 1188,
-  "tokens_out": 896
+  "seconds": 45.07,
+  "tokens_in": 1288,
+  "tokens_out": 937
  }
 }

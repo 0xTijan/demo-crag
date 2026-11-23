@@ -20,9 +20,9 @@
  },
  "type": "ultrafast_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:58:27+00:00",
+  "at": "2026-11-23T06:01:40+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -93,7 +93,7 @@
     "symbol": "Trr",
     "unit": "ns",
     "stat": "max",
-    "conditions": "I_F=0.5A, I_R=1.0A, Irec=0.25A",
+    "conditions": "I=0.5A, I=1.0A,Irec=0.25A",
     "example": "50"
    },
    {
@@ -101,32 +101,16 @@
     "symbol": "VF",
     "unit": "V",
     "stat": "max",
-    "conditions": "IF=10A, TC=25°C",
+    "conditions": "IF=10A, TC=25°C, TC=125°C",
     "example": "1.60"
    },
    {
-    "name": "Maximum Instantaneous Forward Voltage per Leg",
-    "symbol": "VF",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "IF=10A, TC=125°C",
-    "example": "1.50"
-   },
-   {
     "name": "Maximum Reverse Current per Leg at Working Peak Reverse Voltage",
     "symbol": "IR",
     "unit": "μA",
     "stat": "max",
-    "conditions": "TJ=25°C",
+    "conditions": "TJ=25°C, TJ=100°C",
     "example": "10"
-   },
-   {
-    "name": "Maximum Reverse Current per Leg at Working Peak Reverse Voltage",
-    "symbol": "IR",
-    "unit": "μA",
-    "stat": "max",
-    "conditions": "TJ=100°C",
-    "example": "500"
    },
    {
     "name": "Thermal Resistance, Junction to Case per Leg",
@@ -145,48 +129,16 @@
     "example": "50"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Epoxy, molded"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "grams",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.1"
-   },
-   {
-    "name": "Lead Temperature for Soldering Purposes",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "10 sec",
-    "example": "260"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "POWER QFN5x6"
-   },
-   {
-    "name": "Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
    }
   ],
-  "seconds": 38.79,
-  "tokens_in": 1242,
-  "tokens_out": 975
+  "seconds": 45.42,
+  "tokens_in": 1342,
+  "tokens_out": 725
  }
 }

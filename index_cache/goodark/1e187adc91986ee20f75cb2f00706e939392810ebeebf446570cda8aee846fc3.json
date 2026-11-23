@@ -20,9 +20,9 @@
  },
  "type": "sic_schottky_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:26:29+00:00",
+  "at": "2026-11-23T06:40:09+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -117,7 +117,7 @@
     "symbol": "VF",
     "unit": "V",
     "stat": "typ",
-    "conditions": "IF=20A, TJ=25°C",
+    "conditions": "IF=20A, TJ=25℃",
     "example": "1.4"
    },
    {
@@ -125,15 +125,7 @@
     "symbol": "VF",
     "unit": "V",
     "stat": "max",
-    "conditions": "IF=20A, TJ=25°C",
-    "example": "1.7"
-   },
-   {
-    "name": "Forward drop voltage",
-    "symbol": "VF",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "IF=20A, TJ=175°C",
+    "conditions": "IF=20A, TJ=175℃",
     "example": "2.0"
    },
    {
@@ -141,39 +133,23 @@
     "symbol": "IR",
     "unit": "µA",
     "stat": "max",
-    "conditions": "V=1200V, TJ=25°C",
+    "conditions": "V=1200V, TJ=25℃",
     "example": "50"
    },
    {
     "name": "Reverse leakage current @ rated VR",
     "symbol": "IR",
     "unit": "µA",
-    "stat": "typ",
-    "conditions": "V=1200V, TJ=25°C",
-    "example": "5"
-   },
-   {
-    "name": "Reverse leakage current @ rated VR",
-    "symbol": "IR",
-    "unit": "µA",
     "stat": "max",
-    "conditions": "VR=1200V, TJ=175°C",
+    "conditions": "VR=1200V, TJ=175℃",
     "example": "100"
-   },
-   {
-    "name": "Reverse leakage current @ rated VR",
-    "symbol": "IR",
-    "unit": "µA",
-    "stat": "typ",
-    "conditions": "VR=1200V, TJ=175°C",
-    "example": "15"
    },
    {
     "name": "Total capacitive charge",
     "symbol": "QC",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VR=800V, TJ=25°C",
+    "conditions": "VR=800V, TJ=25℃",
     "example": "97"
    },
    {
@@ -181,7 +157,7 @@
     "symbol": "C",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VR=800V, TJ=25°C, f=1MHz",
+    "conditions": "VR=800V, TJ=25℃, f=1MHz",
     "example": "70"
    },
    {
@@ -191,10 +167,18 @@
     "stat": "typ",
     "conditions": "",
     "example": "0.7"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-263-2"
    }
   ],
-  "seconds": 53.84,
-  "tokens_in": 1794,
-  "tokens_out": 1035
+  "seconds": 48.97,
+  "tokens_in": 1894,
+  "tokens_out": 911
  }
 }

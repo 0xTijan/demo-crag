@@ -22,12 +22,20 @@
  },
  "type": "thick_film_array_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:57:14+00:00",
+  "at": "2026-11-23T07:55:37+00:00",
   "items": [
    {
-    "name": "Product Type",
+    "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Viking Tech Corporation"
+   },
+   {
+    "name": "Product",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -43,12 +51,148 @@
     "example": "0402x2/0402x4/0603x4"
    },
    {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "08-Mar-23"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.A3"
+   },
+   {
+    "name": "Construction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Thick Film Flat Array Chip Resistor"
+   },
+   {
+    "name": "Scope",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "All sizes of rectangular-type fixed chip"
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Small size and light weight, Reduction o"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Entertainment, Computer & Related Produc"
+   },
+   {
     "name": "Dimensions",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0402x2/0402x4/0603x4"
+    "example": "CNF22, CNF42, CNF43"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CNF2, CNF4"
+   },
+   {
+    "name": "Number of Resistors",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2 2, 2 4, 3 4"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.20±0.10, 2.00±0.10, 3.20±0.10"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.00±0.10, 1.00±0.10, 1.55±0.10"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.35±0.10, 0.45±0.10, 0.55±0.10"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.43±0.1, 0.35±0.10, 0.45±0.15"
+   },
+   {
+    "name": "A1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "-, 0.45±0.10, 0.60±0.10"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.82±0.05, 0.5±0.10, 0.8±0.05"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.22±0.10, 0.20±0.10, 0.20±0.10"
+   },
+   {
+    "name": "Y",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.30±0.15, 0.35±0.15, 0.47±0.15"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g (1000pcs)",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.6, 3.2, 10.2"
    },
    {
     "name": "Part Numbering",
@@ -64,7 +208,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "±1%"
+    "example": "F: ±1% J: ±5% or Jumper"
    },
    {
     "name": "Packaging Code",
@@ -72,15 +216,15 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "T"
+    "example": "T: Taping Reel"
    },
    {
     "name": "TCR (PPM/°C)",
     "symbol": "",
-    "unit": "PPM/°C",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "±200"
+    "example": "F: ±200 -: No specified (For Jumper)"
    },
    {
     "name": "Power Rating",
@@ -88,7 +232,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1/16W"
+    "example": "Y: 1/16W X: 1/10W W: 1/8W"
    },
    {
     "name": "Resistance",
@@ -96,7 +240,23 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1002"
+    "example": "0030: 3Ω 1000: 100Ω 1002: 10KΩ 2201: 2.2"
+   },
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CNF"
+   },
+   {
+    "name": "Power Rating at 70°C",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1/16W, 1/10W 1/8W"
    },
    {
     "name": "Operating Temp. Range",
@@ -110,25 +270,17 @@
     "name": "Max. Operating Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
-    "example": "25"
+    "example": "25, 50"
    },
    {
     "name": "Max. Overload Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
-    "conditions": "",
-    "example": "50"
-   },
-   {
-    "name": "Number of Resistors",
-    "symbol": "",
-    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "2"
+    "example": "50, 100"
    },
    {
     "name": "Resistance Range",
@@ -136,7 +288,7 @@
     "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "1Ω - 1MΩ"
+    "example": "1Ω - 1MΩ, 10Ω - 1MΩ, 1Ω - 10MΩ"
    },
    {
     "name": "Temperature Coefficient of Resistance (T.C.R.)",
@@ -168,7 +320,7 @@
     "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "±(2.0%+0.10Ω)"
+    "example": "±(2.0%+0.10Ω), ±(3.0%+0.10Ω), <50mΩ"
    },
    {
     "name": "Damp Heat with Load",
@@ -176,7 +328,7 @@
     "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "±(2.0%+0.10Ω)"
+    "example": "±(2.0%+0.10Ω), ±(3.0%+0.10Ω), <50mΩ"
    },
    {
     "name": "Dry Heat",
@@ -184,7 +336,103 @@
     "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
+    "example": "±(1.0%+0.05Ω), ±(1.5%+0.10Ω), <50mΩ"
+   },
+   {
+    "name": "Soldering Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IPC/JEDEC J-STD-020 & J-STD-002"
+   },
+   {
+    "name": "Preheat Min. Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Preheat Max. Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Preheating time",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "range",
+    "conditions": "",
+    "example": "60-120"
+   },
+   {
+    "name": "Ramp-up rate",
+    "symbol": "",
+    "unit": "°C/second",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Liquidous temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "217"
+   },
+   {
+    "name": "Liquidous time",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "range",
+    "conditions": "",
+    "example": "60-150"
+   },
+   {
+    "name": "Min. Peak temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "min",
+    "conditions": "",
+    "example": "235"
+   },
+   {
+    "name": "Max. Peak temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Time within 5°C of peak temperature",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "max",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Ramp-down rate",
+    "symbol": "",
+    "unit": "°C/second",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Time from 25°C to peak temperature",
+    "symbol": "",
+    "unit": "minutes",
+    "stat": "max",
+    "conditions": "",
+    "example": "8"
    },
    {
     "name": "Bending Strength",
@@ -192,7 +440,7 @@
     "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
+    "example": "±(1.0%+0.05Ω), ±(1.0%+0.05Ω), <50mΩ"
    },
    {
     "name": "Solderability",
@@ -201,6 +449,14 @@
     "stat": "min",
     "conditions": "",
     "example": "95%"
+   },
+   {
+    "name": "Resistance to Soldering Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "260±5°C for 10 seconds"
    },
    {
     "name": "Voltage Proof",
@@ -214,7 +470,7 @@
     "name": "Leaching",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "Individual leaching area ≦5% Total leach"
    },
@@ -235,12 +491,52 @@
     "example": "15~28"
    },
    {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   },
+   {
     "name": "Shelf Life",
     "symbol": "",
     "unit": "years",
     "stat": "value",
     "conditions": "",
     "example": "2"
+   },
+   {
+    "name": "Land Pattern",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CNF42/CNF43"
+   },
+   {
+    "name": "I",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.35, 0.50, 0.80"
+   },
+   {
+    "name": "P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.80, 0.50, 0.80"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "10K, 5K"
    },
    {
     "name": "Tape Width",
@@ -259,12 +555,36 @@
     "example": "7"
    },
    {
-    "name": "Packaging Quantity",
+    "name": "ΦA",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
+    "unit": "mm",
+    "stat": "range",
     "conditions": "",
-    "example": "10K"
+    "example": "178.5±1.5"
+   },
+   {
+    "name": "ΦB",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "60+1/-0"
+   },
+   {
+    "name": "ΦC",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "13.0±0.2"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "12.5±0.5"
    },
    {
     "name": "Marking",
@@ -272,7 +592,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "No Marking for CNF22"
+    "example": "No Marking for CNF22, Jumper for CNF42/C"
    },
    {
     "name": "E24 code",
@@ -280,11 +600,43 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "10"
+    "example": "10, 11, 12, 13, 15, 16, 18, 20, 22, 24, "
+   },
+   {
+    "name": "Revision",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Version A, A1, A2, A3"
+   },
+   {
+    "name": "Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Jan 20, 2022, Feb 15, 2022, Jun 15, 2022"
+   },
+   {
+    "name": "Change Notification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "-"
+   },
+   {
+    "name": "Description",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "- New product release, - Derating Curve "
    }
   ],
-  "seconds": 123.24,
-  "tokens_in": 5205,
-  "tokens_out": 1354
+  "seconds": 140.28,
+  "tokens_in": 5305,
+  "tokens_out": 3913
  }
 }

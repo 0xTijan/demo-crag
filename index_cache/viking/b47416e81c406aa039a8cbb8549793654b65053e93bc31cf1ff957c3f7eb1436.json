@@ -20,169 +20,33 @@
  },
  "type": "four_terminal_current_sensing_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:17:37+00:00",
+  "at": "2026-11-23T08:54:35+00:00",
   "items": [
    {
-    "name": "Size",
+    "name": "Absolute Maximum Ratings",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "max",
     "conditions": "",
-    "example": "3637"
-   },
-   {
-    "name": "Issued Date",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "01-Apr-25"
-   },
-   {
-    "name": "Edition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "REV.A3"
-   },
-   {
-    "name": "Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "WMK37"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "R",
-    "unit": "mΩ",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.2, 0.3, 1, 2-30, 1-30"
-   },
-   {
-    "name": "Material",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Manganin, Kamar, FeCrAl"
-   },
-   {
-    "name": "L",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "9.10±0.25"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "9.40±0.25"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.80±0.25"
-   },
-   {
-    "name": "B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.60±0.25"
-   },
-   {
-    "name": "C",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.82±0.25"
-   },
-   {
-    "name": "A",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "3.50±0.25, 3.20±0.25, 2.40±0.25"
-   },
-   {
-    "name": "Product Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "WMK"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "37: 3637"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "D: ±0.5% F: ±1% J: ±5%"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T: Taping Reel"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "TCR",
-    "unit": "PPM/°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "±25, ±50, ±75"
-   },
-   {
-    "name": "Power Rating",
-    "symbol": "P",
-    "unit": "W",
-    "stat": "value",
-    "conditions": "",
-    "example": "5W"
+    "example": "170"
    },
    {
     "name": "Operating Temperature",
-    "symbol": "T",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 ~ +170"
+    "example": "-55 to 170"
    },
    {
     "name": "Storage Temperature",
-    "symbol": "T",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "5~35"
+    "example": "5 to 35"
    },
    {
     "name": "Humidity",
@@ -190,23 +54,47 @@
     "unit": "%",
     "stat": "range",
     "conditions": "",
-    "example": "40~75"
+    "example": "40 to 75"
    },
    {
-    "name": "Shelf life",
+    "name": "Shelf Life",
     "symbol": "",
     "unit": "years",
-    "stat": "value",
+    "stat": "max",
     "conditions": "",
     "example": "1"
    },
    {
-    "name": "Temperature Coefficient of Resistance",
-    "symbol": "TCR",
+    "name": "Material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Manganin"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.2 to 0.3"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
     "unit": "PPM/°C",
     "stat": "range",
-    "conditions": "Measured value -55℃ and +130℃, reference value +20℃",
-    "example": "Within the specified value"
+    "conditions": "",
+    "example": "±25"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "",
+    "example": "5"
    },
    {
     "name": "Solderability",
@@ -254,13 +142,13 @@
     "unit": "MΩ",
     "stat": "min",
     "conditions": "",
-    "example": ">1000"
+    "example": "1000"
    },
    {
     "name": "Dielectric Withstand Voltage",
     "symbol": "",
     "unit": "VAC",
-    "stat": "min",
+    "stat": "value",
     "conditions": "",
     "example": "100"
    },
@@ -313,12 +201,100 @@
     "example": "No visible damage, ΔR±1.0% maximum"
    },
    {
-    "name": "Packaging Quantity",
+    "name": "AEC-Q200",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "4K"
+    "example": "Passed"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3637"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.5%"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3637"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "9.10"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "9.40"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.80"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.60"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.82"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.50"
    },
    {
     "name": "Tape Width",
@@ -340,49 +316,25 @@
     "name": "ΦA",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
-    "example": "330.0±2.0"
+    "example": "330.0"
    },
    {
     "name": "ΦB",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
-    "example": "99.0±1.0"
+    "example": "99.0"
    },
    {
     "name": "ΦC",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "13.5±0.5"
-   },
-   {
-    "name": "A",
-    "symbol": "",
-    "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "9.4"
-   },
-   {
-    "name": "B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "9.8"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "16"
+    "example": "13.5"
    },
    {
     "name": "E",
@@ -433,22 +385,6 @@
     "example": "1.5"
    },
    {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.3"
-   },
-   {
-    "name": "c",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.8, 4.0"
-   },
-   {
     "name": "d",
     "symbol": "",
     "unit": "mm",
@@ -457,8 +393,8 @@
     "example": "1.8"
    }
   ],
-  "seconds": 64.4,
-  "tokens_in": 3183,
-  "tokens_out": 2280
+  "seconds": 87.05,
+  "tokens_in": 3283,
+  "tokens_out": 2392
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "switching_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:29:21+00:00",
+  "at": "2026-11-23T06:42:50+00:00",
   "items": [
    {
     "name": "Non-Repetitive Peak Reverse Voltage",
@@ -181,7 +181,7 @@
     "symbol": "trr",
     "unit": "ns",
     "stat": "max",
-    "conditions": "I =I =10mA F R Irr=0.1XI ,R =100",
+    "conditions": "I_F=I_R=10mA, I_rr=0.1*I_R, R_L=100Ω",
     "example": "4"
    },
    {
@@ -191,26 +191,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT-523"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "℃",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
    }
   ],
-  "seconds": 53.63,
-  "tokens_in": 1849,
-  "tokens_out": 998
+  "seconds": 45.03,
+  "tokens_in": 1949,
+  "tokens_out": 932
  }
 }

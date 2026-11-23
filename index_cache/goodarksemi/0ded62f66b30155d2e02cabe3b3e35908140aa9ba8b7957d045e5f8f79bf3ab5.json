@@ -20,9 +20,9 @@
  },
  "type": "esd_tvs_array",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:36:27+00:00",
+  "at": "2026-11-23T06:49:05+00:00",
   "items": [
    {
     "name": "Peak Pulse Power (8/20µs)",
@@ -85,7 +85,7 @@
     "symbol": "VBR",
     "unit": "V",
     "stat": "min",
-    "conditions": "I =1mA, any I/O pin to ground",
+    "conditions": "I =1mA, any I/O pin to ground T",
     "example": "6"
    },
    {
@@ -93,7 +93,7 @@
     "symbol": "IR",
     "unit": "µA",
     "stat": "max",
-    "conditions": "V =5V, any I/O pin to ground",
+    "conditions": "V =5V, any I/O pin to ground RWM",
     "example": "0.5"
    },
    {
@@ -101,7 +101,7 @@
     "symbol": "V C",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =1A (8 x 20µs pulse), any I/O pin to ground",
+    "conditions": "I =1A (8 x 20µs pulse), any I/O pin to PP ground",
     "example": "8.5"
    },
    {
@@ -109,7 +109,7 @@
     "symbol": "V C",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =5A (8 x 20µs pulse), any I/O pin to ground",
+    "conditions": "I =5A (8 x 20µs pulse), any I/O pin to PP ground",
     "example": "10"
    },
    {
@@ -117,7 +117,7 @@
     "symbol": "C J",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V =0V, f=1MHz, between I/O pins",
+    "conditions": "V =0V, f=1MHz, between I/O pins R",
     "example": "0.3"
    },
    {
@@ -125,12 +125,20 @@
     "symbol": "C J",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V =0V, f=1MHz, any I/O pin to ground",
+    "conditions": "V =0V, f=1MHz, any I/O pin to ground R",
     "example": "0.6"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DFN2510"
    }
   ],
-  "seconds": 43.18,
-  "tokens_in": 1168,
-  "tokens_out": 673
+  "seconds": 36.5,
+  "tokens_in": 1268,
+  "tokens_out": 715
  }
 }

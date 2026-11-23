@@ -24,9 +24,9 @@
  },
  "type": "leaded_film_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:11:11+00:00",
+  "at": "2026-11-23T08:09:08+00:00",
   "items": [
    {
     "name": "Sizes",
@@ -37,12 +37,20 @@
     "example": "0623/0932/1145/1550/1760"
    },
    {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MGR0623"
+   },
+   {
     "name": "Resistance Tolerance",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "F: ±1% J: ±5%"
+    "example": "F: ±1%"
    },
    {
     "name": "Packaging Code",
@@ -50,7 +58,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "A: Ammo B: Bulk T: Taping Reel"
+    "example": "A: Ammo"
    },
    {
     "name": "TCR (PPM/°C)",
@@ -58,23 +66,23 @@
     "unit": "PPM/°C",
     "stat": "value",
     "conditions": "",
-    "example": "F: ±200 I: ±500"
+    "example": "F: ±200"
    },
    {
     "name": "Power Rating",
     "symbol": "",
-    "unit": "",
+    "unit": "W",
     "stat": "value",
     "conditions": "",
-    "example": "V: 1/4W U: 1/2W T: 1W S: 2W R: 3W D: 5W"
+    "example": "V: 1/4W"
    },
    {
     "name": "Resistance",
     "symbol": "",
-    "unit": "",
+    "unit": "Ω",
     "stat": "value",
     "conditions": "",
-    "example": "1003: 100KΩ 1004: 1MΩ 1006: 100MΩ"
+    "example": "1003: 100KΩ"
    },
    {
     "name": "Special",
@@ -82,70 +90,70 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "S: Silicone Resin E: Epoxy Resin"
+    "example": "S: Silicone Resin"
    },
    {
-    "name": "Operating Temp. Range (Silicone Resin)",
+    "name": "Operating Temp. Range",
     "symbol": "",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
+    "conditions": "Silicone Resin",
     "example": "-55 ~ 225"
    },
    {
-    "name": "Operating Temp. Range (Epoxy Resin)",
+    "name": "Operating Temp. Range",
     "symbol": "",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
+    "conditions": "Epoxy Resin",
     "example": "-55 ~ 155"
    },
    {
-    "name": "Max. Working Voltage (DC)",
+    "name": "Max. Working Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "DC",
     "example": "DC1600V"
    },
    {
-    "name": "Max. Working Voltage (AC)",
+    "name": "Max. Working Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "AC",
     "example": "AC1150V"
    },
    {
-    "name": "Max. Overload Voltage (DC)",
+    "name": "Max. Overload Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "DC",
     "example": "DC2000V"
    },
    {
-    "name": "Max. Overload Voltage (AC)",
+    "name": "Max. Overload Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "AC",
     "example": "AC1500V"
    },
    {
-    "name": "Voltage Proof (Silicone Resin)",
+    "name": "Voltage Proof",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Silicone Resin",
     "example": "400V"
    },
    {
-    "name": "Voltage Proof (Epoxy Resin)",
+    "name": "Voltage Proof",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Epoxy Resin",
     "example": "500V"
    },
    {
@@ -153,8 +161,40 @@
     "symbol": "",
     "unit": "Ω",
     "stat": "range",
-    "conditions": "",
+    "conditions": "100K~10M",
     "example": "100K~10M"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "11M~500M",
+    "example": "11M~500M"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±200",
+    "example": "±200"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "±500",
+    "example": "±500"
+   },
+   {
+    "name": "Measured",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DC100V 100K≤R<1M DC1000V 1M≤R"
    },
    {
     "name": "Resistance Value",
@@ -165,9 +205,9 @@
     "example": "100KΩ~500MΩ"
    },
    {
-    "name": "Temperature Coefficient (T.C.R)",
+    "name": "Temperature Coefficient(T.C.R)",
     "symbol": "",
-    "unit": "",
+    "unit": "PPM/°C",
     "stat": "value",
     "conditions": "",
     "example": "As Spec"
@@ -176,7 +216,7 @@
     "name": "Short Time Overload",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "±(1.0%+0.05%)"
    },
@@ -200,7 +240,7 @@
     "name": "Endurance",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "±(5.0%+0.05%)"
    },
@@ -208,7 +248,7 @@
     "name": "Damp Heat, Steady State",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "±(3.0%+0.05%)"
    },
@@ -224,7 +264,7 @@
     "name": "Periodic-Pulse Overload Test",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "±(1.0%+0.05%)"
    },
@@ -232,17 +272,17 @@
     "name": "Resistance To Soldering Heat",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "±(1.0%+0.05%)"
    },
    {
-    "name": "Robustness of Terminations (Tensile)",
+    "name": "Robustness of Terminations",
     "symbol": "",
-    "unit": "kg",
+    "unit": "N",
     "stat": "min",
-    "conditions": "",
-    "example": "≧ 2.5"
+    "conditions": "Tensile",
+    "example": "≧ 2.5kg (24.5N)"
    },
    {
     "name": "Solvent Resistance of Marking",
@@ -256,7 +296,7 @@
     "name": "Temperature Cycling",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "±(1.0%+0.05%)"
    },
@@ -285,8 +325,8 @@
     "example": "1"
    }
   ],
-  "seconds": 143.57,
-  "tokens_in": 6757,
-  "tokens_out": 1493
+  "seconds": 77.53,
+  "tokens_in": 6857,
+  "tokens_out": 1592
  }
 }

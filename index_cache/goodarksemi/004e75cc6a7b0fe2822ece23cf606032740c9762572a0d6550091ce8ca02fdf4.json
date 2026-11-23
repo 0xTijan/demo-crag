@@ -20,9 +20,9 @@
  },
  "type": "mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:51:35+00:00",
+  "at": "2026-11-23T05:56:07+00:00",
   "items": [
    {
     "name": "V (BR)DSS",
@@ -295,34 +295,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-263 (D2PAK)"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 175"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Qualified"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 56.63,
-  "tokens_in": 2673,
-  "tokens_out": 1922
+  "seconds": 53.99,
+  "tokens_in": 2773,
+  "tokens_out": 1814
  }
 }

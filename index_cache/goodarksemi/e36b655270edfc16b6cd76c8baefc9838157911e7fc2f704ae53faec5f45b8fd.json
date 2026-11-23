@@ -20,9 +20,9 @@
  },
  "type": "dual_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:03:55+00:00",
+  "at": "2026-11-23T08:44:25+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -68,7 +68,7 @@
     "name": "Thermal Resistance from Junction to Ambient",
     "symbol": "RθJA",
     "unit": "℃/W",
-    "stat": "value",
+    "stat": "max",
     "conditions": "",
     "example": "417"
    },
@@ -183,42 +183,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT-363"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "6"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "℃",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 68.82,
-  "tokens_in": 2369,
-  "tokens_out": 1156
+  "seconds": 73.34,
+  "tokens_in": 2469,
+  "tokens_out": 1017
  }
 }

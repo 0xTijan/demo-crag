@@ -20,9 +20,9 @@
  },
  "type": "dual_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:03:25+00:00",
+  "at": "2026-11-23T08:43:35+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -66,7 +66,7 @@
    },
    {
     "name": "Junction Temperature",
-    "symbol": "",
+    "symbol": "TJ",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
@@ -74,7 +74,7 @@
    },
    {
     "name": "Storage Temperature",
-    "symbol": "",
+    "symbol": "TSTG",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
@@ -265,48 +265,32 @@
     "example": "SOT-363"
    },
    {
-    "name": "Pin Count",
+    "name": "Marking",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "6"
+    "example": "K2F"
    },
    {
-    "name": "Mounting Type",
+    "name": "Quantity",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Surface Mount"
+    "example": "3000pcs / Reel"
    },
    {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "℃",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
-   },
-   {
-    "name": "Qualifications",
+    "name": "HSF Status",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "RoHS Compliant"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "MMDT2907A"
    }
   ],
-  "seconds": 68.37,
-  "tokens_in": 2359,
-  "tokens_out": 1799
+  "seconds": 40.9,
+  "tokens_in": 2459,
+  "tokens_out": 1735
  }
 }

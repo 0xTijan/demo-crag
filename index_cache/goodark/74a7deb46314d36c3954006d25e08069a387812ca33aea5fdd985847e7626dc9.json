@@ -24,9 +24,9 @@
  },
  "type": "fast_recovery_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:46:09+00:00",
+  "at": "2026-11-23T07:45:48+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -82,7 +82,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "-55 to +150"
    },
    {
     "name": "Typical junction capacitance",
@@ -97,7 +97,7 @@
     "symbol": "V_F",
     "unit": "Volts",
     "stat": "max",
-    "conditions": "IF=2A TA=25°C",
+    "conditions": "IF=2A, TA=25°C",
     "example": "1.1"
    },
    {
@@ -139,10 +139,18 @@
     "stat": "typ",
     "conditions": "",
     "example": "23"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ABF"
    }
   ],
-  "seconds": 39.69,
-  "tokens_in": 1705,
-  "tokens_out": 664
+  "seconds": 42.9,
+  "tokens_in": 1805,
+  "tokens_out": 696
  }
 }

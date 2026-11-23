@@ -24,185 +24,17 @@
  },
  "type": "pulse_withstanding_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:36:38+00:00",
+  "at": "2026-11-23T08:28:15+00:00",
   "items": [
    {
-    "name": "Customer",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Viking Tech Corporation"
-   },
-   {
-    "name": "Product",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Surge Withstanding Chip Resistor - SWR S"
-   },
-   {
-    "name": "Size",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "0402/0603/0805/1206/1210/2010/2512"
-   },
-   {
-    "name": "Issued Date",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "26-Aug-25"
-   },
-   {
-    "name": "Edition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "REV. C"
-   },
-   {
-    "name": "Features",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "High power rating, Excellent surge withs"
-   },
-   {
-    "name": "Applications",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Metering (Testing/Measurement), Medical "
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0402/0603/0805/1206/1210/2010/2512"
-   },
-   {
-    "name": "Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "SWR02, SWR03, SWR05, SWR06, SWR13, SWR10"
-   },
-   {
-    "name": "Size (Inch)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0402, 0603, 0805, 1206, 1210, 2010, 2512"
-   },
-   {
-    "name": "L (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.00±0.05, 1.60±0.10, 2.00±0.10, 3.10±0."
-   },
-   {
-    "name": "W (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.50±0.05, 0.80±0.10, 1.25±0.10, 1.55±0."
-   },
-   {
-    "name": "T (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.35±0.05, 0.45±0.10, 0.50±0.10, 0.55±0."
-   },
-   {
-    "name": "D1 (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.20±0.10, 0.30±0.20, 0.35±0.20, 0.50±0."
-   },
-   {
-    "name": "D2 (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.25±0.10, 0.30±0.20, 0.40±0.20, 0.50±0."
-   },
-   {
-    "name": "Weight (g) (1000pcs)",
-    "symbol": "",
-    "unit": "g",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.64, 2.042, 4.368, 8.947, 15.959, 24.24"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "J: ±5%, K: ±10%, M: ±20%"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T: 7\"Taping Reel, V:10\"Taping Reel, W:13"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "",
-    "example": "E: ±100, F: ±200, G: ±300, 4: ±350"
-   },
-   {
-    "name": "Power Rating",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "A: 1.5W, T: 1W, Q: 3/4W, U: 1/2W, G: 2/5"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1001: 1KΩ, 1004: 1MΩ, 1005: 10MΩ"
-   },
-   {
-    "name": "Power Rating at 70°C",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1/5W, 1/8W, 1/4W, 1/3W, 1/2W, 3/4W, 1.5W"
    },
    {
     "name": "Operating Temp. Range",
@@ -210,143 +42,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 ~ +155"
-   },
-   {
-    "name": "Max. Operating Voltage",
-    "symbol": "",
-    "unit": "V",
-    "stat": "range",
-    "conditions": "",
-    "example": "50, 75, 150, 200, 400, 500"
-   },
-   {
-    "name": "Max. Overload Voltage",
-    "symbol": "",
-    "unit": "V",
-    "stat": "range",
-    "conditions": "",
-    "example": "100, 150, 300, 400, 800, 1000"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1Ω - 20Ω, 1Ω - 270Ω, 1Ω - 20Ω, 22Ω - 1MΩ"
-   },
-   {
-    "name": "Temperature Coefficient of Resistance (T.C.R.)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "As Spec."
-   },
-   {
-    "name": "Short Time Overload",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Insulation Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "≥10G"
-   },
-   {
-    "name": "Endurance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(3.0%+0.05Ω)"
-   },
-   {
-    "name": "Damp Heat with Load",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(3.0%+0.05Ω)"
-   },
-   {
-    "name": "Dry Heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(3.0%+0.05Ω)"
-   },
-   {
-    "name": "Bending Strength",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "95% min. coverage"
-   },
-   {
-    "name": "Resistance to Soldering Heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Voltage Proof",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No breakdown or flashover"
-   },
-   {
-    "name": "Leaching",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Individual leaching area ≦5% Total leach"
-   },
-   {
-    "name": "Rapid Change of Temperature",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "15~28"
-   },
-   {
-    "name": "Shelf Life",
-    "symbol": "",
-    "unit": "years",
-    "stat": "value",
-    "conditions": "",
-    "example": "2"
+    "example": "-55 to 155"
    },
    {
     "name": "AEC-Q200 Compliance",
@@ -365,6 +61,110 @@
     "example": "Level 1"
    },
    {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "at 70°C",
+    "example": "1/5W"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "1Ω - 20Ω"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "±100"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "GΩ",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Voltage Proof",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No breakdown or flashover"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "",
+    "example": "95"
+   },
+   {
+    "name": "Soldering Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "245"
+   },
+   {
+    "name": "Soldering Time",
+    "symbol": "",
+    "unit": "s",
+    "stat": "value",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "±5"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: 7\"Taping Reel"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "±300"
+   },
+   {
     "name": "Soldering Condition",
     "symbol": "",
     "unit": "",
@@ -376,7 +176,7 @@
     "name": "Preheat Min. Temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "150"
    },
@@ -384,14 +184,14 @@
     "name": "Preheat Max. Temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "200"
    },
    {
     "name": "Preheating time",
     "symbol": "",
-    "unit": "seconds",
+    "unit": "s",
     "stat": "range",
     "conditions": "",
     "example": "60-120"
@@ -399,8 +199,8 @@
    {
     "name": "Ramp-up rate",
     "symbol": "",
-    "unit": "°C/second",
-    "stat": "range",
+    "unit": "°C/s",
+    "stat": "max",
     "conditions": "",
     "example": "3"
    },
@@ -408,14 +208,14 @@
     "name": "Liquidous temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "217"
    },
    {
     "name": "Time maintained above Liquidous temperature",
     "symbol": "",
-    "unit": "seconds",
+    "unit": "s",
     "stat": "range",
     "conditions": "",
     "example": "60-150"
@@ -424,7 +224,7 @@
     "name": "Min. Peak temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "235"
    },
@@ -432,53 +232,61 @@
     "name": "Max. Peak temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "260"
    },
    {
-    "name": "Time within 5 °C of peak temperature",
+    "name": "Time within 5°C of peak temperature",
     "symbol": "",
-    "unit": "seconds",
-    "stat": "range",
+    "unit": "s",
+    "stat": "max",
     "conditions": "",
     "example": "30"
    },
    {
     "name": "Ramp-down rate",
     "symbol": "",
-    "unit": "°C/second",
-    "stat": "range",
+    "unit": "°C/s",
+    "stat": "max",
     "conditions": "",
     "example": "6"
    },
    {
-    "name": "Time 25 °C to peak temperature",
+    "name": "Time from 25°C to peak temperature",
     "symbol": "",
-    "unit": "minutes",
-    "stat": "range",
+    "unit": "min",
+    "stat": "max",
     "conditions": "",
     "example": "8"
    },
    {
-    "name": "Marking",
+    "name": "Storage Temperature",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
+    "unit": "°C",
+    "stat": "range",
     "conditions": "",
-    "example": "No Marking for 0402, 0805~2512 4 digits "
+    "example": "15 to 28"
    },
    {
-    "name": "Land Pattern",
+    "name": "Humidity",
     "symbol": "",
-    "unit": "",
+    "unit": "%",
+    "stat": "max",
+    "conditions": "",
+    "example": "80"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "year",
     "stat": "value",
     "conditions": "",
-    "example": "Recommended dimensions for PCB layout"
+    "example": "2"
    }
   ],
-  "seconds": 246.26,
-  "tokens_in": 8325,
-  "tokens_out": 3172
+  "seconds": 169.36,
+  "tokens_in": 8425,
+  "tokens_out": 2947
  }
 }

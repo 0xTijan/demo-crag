@@ -24,20 +24,28 @@
  },
  "type": "current_sensing_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:17:14+00:00",
+  "at": "2026-11-23T07:25:30+00:00",
   "items": [
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CSM02"
+   },
    {
     "name": "Size",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0402/0603/0805/1206/2010/2512"
+    "example": "0402"
    },
    {
-    "name": "Power Rating",
+    "name": "Power",
     "symbol": "",
     "unit": "W",
     "stat": "value",
@@ -97,7 +105,7 @@
     "symbol": "",
     "unit": "g",
     "stat": "range",
-    "conditions": "1000pcs",
+    "conditions": "",
     "example": "1.11"
    },
    {
@@ -117,20 +125,12 @@
     "example": "Power Management Applications"
    },
    {
-    "name": "Dimensions",
+    "name": "Part Numbering",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0402"
-   },
-   {
-    "name": "Power Rating",
-    "symbol": "",
-    "unit": "W",
-    "stat": "value",
-    "conditions": "at 70°C",
-    "example": "1/8"
+    "example": "06"
    },
    {
     "name": "Operating Temp. Range",
@@ -189,172 +189,20 @@
     "example": "11.2"
    },
    {
-    "name": "Temperature Coefficient of Resistance",
-    "symbol": "TCR",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "-55°C~+125°C, 25°C is the reference temperature",
-    "example": "As Spec."
-   },
-   {
-    "name": "Short Time Overload",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.5%+0.05Ω)"
-   },
-   {
     "name": "Insulation Resistance",
     "symbol": "",
-    "unit": "Ω",
+    "unit": "MΩ",
     "stat": "min",
     "conditions": "",
-    "example": "10G"
-   },
-   {
-    "name": "Endurance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Damp Heat with Load",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Dry Heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.5%+0.05Ω)"
-   },
-   {
-    "name": "Bending Strength",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
+    "example": "≧10"
    },
    {
     "name": "Solderability",
     "symbol": "",
-    "unit": "",
+    "unit": "%",
     "stat": "min",
     "conditions": "",
-    "example": "95% min. coverage"
-   },
-   {
-    "name": "Resistance to Soldering Heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.5%+0.05Ω)"
-   },
-   {
-    "name": "Voltage Proof",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No breakdown or flashover"
-   },
-   {
-    "name": "Leaching",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Individual leaching area ≦5% Total leach"
-   },
-   {
-    "name": "Rapid Change of Temperature",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.5%+0.05Ω)"
-   },
-   {
-    "name": "Operational Life",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "△R≤±1%R"
-   },
-   {
-    "name": "Biased Humidity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "△R≤±1%R"
-   },
-   {
-    "name": "High Temperature Exposure",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "△R≤±1%R"
-   },
-   {
-    "name": "Temperature Cycling",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "△R≤±1%R"
-   },
-   {
-    "name": "Bending Strength (Board Flex)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "△R≤±1%R"
-   },
-   {
-    "name": "Resistance to solvents",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Marking Unsmeared"
-   },
-   {
-    "name": "Mechanical Shock",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "△R≤±1%R"
-   },
-   {
-    "name": "Vibration",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "△R≤±1%R"
-   },
-   {
-    "name": "ESD",
-    "symbol": "",
-    "unit": "V",
-    "stat": "value",
-    "conditions": "0402 sizes: 1KV Other sizes: 2KV",
-    "example": "1KV"
+    "example": "95"
    },
    {
     "name": "Flammability",
@@ -362,163 +210,11 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "UL-94 V-0 or V-1 are acceptable"
-   },
-   {
-    "name": "Terminal strength",
-    "symbol": "",
-    "unit": "kg",
-    "stat": "min",
-    "conditions": "",
-    "example": "1.8"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "15~28"
-   },
-   {
-    "name": "Shelf Life",
-    "symbol": "",
-    "unit": "years",
-    "stat": "value",
-    "conditions": "",
-    "example": "2"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "06"
-   },
-   {
-    "name": "Soldering Condition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Pb-Free Assembly"
-   },
-   {
-    "name": "Preheat Min. Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "min",
-    "conditions": "",
-    "example": "150"
-   },
-   {
-    "name": "Preheat Max. Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "200"
-   },
-   {
-    "name": "Preheating time",
-    "symbol": "",
-    "unit": "seconds",
-    "stat": "range",
-    "conditions": "",
-    "example": "60-120"
-   },
-   {
-    "name": "Ramp-up rate",
-    "symbol": "",
-    "unit": "°C/second",
-    "stat": "max",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "Liquidous temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "value",
-    "conditions": "",
-    "example": "217"
-   },
-   {
-    "name": "Time maintained above Liquidous temperature",
-    "symbol": "",
-    "unit": "seconds",
-    "stat": "range",
-    "conditions": "",
-    "example": "60-150"
-   },
-   {
-    "name": "Min. Peak temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "min",
-    "conditions": "",
-    "example": "235"
-   },
-   {
-    "name": "Max. Peak temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "260"
-   },
-   {
-    "name": "Time within 5°C of peak temperature",
-    "symbol": "",
-    "unit": "seconds",
-    "stat": "max",
-    "conditions": "",
-    "example": "30"
-   },
-   {
-    "name": "Ramp-down rate",
-    "symbol": "",
-    "unit": "°C/second",
-    "stat": "max",
-    "conditions": "",
-    "example": "6"
-   },
-   {
-    "name": "Time from 25°C to peak temperature",
-    "symbol": "",
-    "unit": "minutes",
-    "stat": "max",
-    "conditions": "",
-    "example": "8"
-   },
-   {
-    "name": "Packaging Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "Paper Tape",
-    "example": "10,000"
-   },
-   {
-    "name": "Packaging Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "Emboss Plastic Tape",
-    "example": "4,000"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No Marking for 0402"
+    "example": "UL-94 V-0 or V-1"
    }
   ],
-  "seconds": 176.63,
-  "tokens_in": 9722,
-  "tokens_out": 4007
+  "seconds": 124.33,
+  "tokens_in": 9822,
+  "tokens_out": 1708
  }
 }

@@ -24,9 +24,9 @@
  },
  "type": "fast_acting_chip_fuse",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:54:42+00:00",
+  "at": "2026-11-23T08:38:16+00:00",
   "items": [
    {
     "name": "Ampere Rating",
@@ -34,13 +34,13 @@
     "unit": "mA",
     "stat": "range",
     "conditions": "",
-    "example": "500-10000"
+    "example": "500"
    },
    {
     "name": "% of Amp Rating",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "100"
    },
@@ -49,7 +49,7 @@
     "symbol": "",
     "unit": "Hours",
     "stat": "min",
-    "conditions": "% of Amp Rating=100%",
+    "conditions": "",
     "example": "4"
    },
    {
@@ -57,22 +57,30 @@
     "symbol": "",
     "unit": "Seconds",
     "stat": "max",
-    "conditions": "% of Amp Rating=250%",
+    "conditions": "",
     "example": "5"
+   },
+   {
+    "name": "Product Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "S6125F500"
    },
    {
     "name": "Current Rating",
     "symbol": "",
-    "unit": "A",
-    "stat": "value",
+    "unit": "mA",
+    "stat": "range",
     "conditions": "",
-    "example": "0.5"
+    "example": "500"
    },
    {
     "name": "Voltage Rating",
     "symbol": "",
     "unit": "V",
-    "stat": "value",
+    "stat": "range",
     "conditions": "AC",
     "example": "250"
    },
@@ -80,7 +88,7 @@
     "name": "Voltage Rating",
     "symbol": "",
     "unit": "V",
-    "stat": "value",
+    "stat": "range",
     "conditions": "DC",
     "example": "125"
    },
@@ -89,15 +97,15 @@
     "symbol": "",
     "unit": "A",
     "stat": "value",
-    "conditions": "DC",
+    "conditions": "",
     "example": "50"
    },
    {
-    "name": "Resistance",
+    "name": "Resistance (ohms)",
     "symbol": "",
-    "unit": "ohms",
+    "unit": "Ω",
     "stat": "typ",
-    "conditions": "DC Cold",
+    "conditions": "DC Cold Resistance (Measured at 10% of rated current)",
     "example": "0.900"
    },
    {
@@ -117,14 +125,6 @@
     "example": "F"
    },
    {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
     "name": "Case",
     "symbol": "",
     "unit": "",
@@ -133,16 +133,16 @@
     "example": "6125"
    },
    {
-    "name": "Operating Temperature Range",
+    "name": "RoHS",
     "symbol": "",
-    "unit": "°C",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "Compliant"
    }
   ],
-  "seconds": 11.38,
-  "tokens_in": 1558,
-  "tokens_out": 535
+  "seconds": 33.6,
+  "tokens_in": 1658,
+  "tokens_out": 594
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:49:04+00:00",
+  "at": "2026-11-23T05:49:17+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -91,7 +91,7 @@
    {
     "name": "Operating Junction Temperature Range",
     "symbol": "T J",
-    "unit": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to +150"
@@ -99,7 +99,7 @@
    {
     "name": "Storage Temperature Range",
     "symbol": "T STG",
-    "unit": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to +150"
@@ -145,46 +145,6 @@
     "example": "16"
    },
    {
-    "name": "Moisture Sensitivity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "level 1, per J-STD-020"
-   },
-   {
-    "name": "Plastic Package Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "Halogen-Free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Add suffix 'E' for halogen-free"
-   },
-   {
-    "name": "Halogen-Free Definition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61249-2-21"
-   },
-   {
-    "name": "AEC-Q101 Qualified",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "AEC-Q101 qualified"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
@@ -193,8 +153,8 @@
     "example": "DO-214AA (SMB)"
    }
   ],
-  "seconds": 50.33,
-  "tokens_in": 1061,
-  "tokens_out": 965
+  "seconds": 43.65,
+  "tokens_in": 1161,
+  "tokens_out": 759
  }
 }

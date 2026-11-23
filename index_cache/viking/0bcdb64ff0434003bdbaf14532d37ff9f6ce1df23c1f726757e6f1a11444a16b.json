@@ -23,9 +23,9 @@
  },
  "type": "thin_film_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:33:15+00:00",
+  "at": "2026-11-23T07:36:48+00:00",
   "items": [
    {
     "name": "Product",
@@ -44,7 +44,7 @@
     "example": "0805 /1206 /1210"
    },
    {
-    "name": "Operating Temperature Range",
+    "name": "Operating Temp. Range",
     "symbol": "",
     "unit": "",
     "stat": "range",
@@ -61,7 +61,7 @@
    },
    {
     "name": "Max. Operating Voltage",
-    "symbol": "Vmax",
+    "symbol": "",
     "unit": "V",
     "stat": "max",
     "conditions": "ARHV05 (0805)",
@@ -69,7 +69,7 @@
    },
    {
     "name": "Max. Operating Voltage",
-    "symbol": "Vmax",
+    "symbol": "",
     "unit": "V",
     "stat": "max",
     "conditions": "ARHV06 (1206)",
@@ -77,7 +77,7 @@
    },
    {
     "name": "Max. Operating Voltage",
-    "symbol": "Vmax",
+    "symbol": "",
     "unit": "V",
     "stat": "max",
     "conditions": "ARHV13 (1210)",
@@ -85,7 +85,7 @@
    },
    {
     "name": "Max. Overload Voltage",
-    "symbol": "Voverload",
+    "symbol": "",
     "unit": "V",
     "stat": "max",
     "conditions": "ARHV05 (0805)",
@@ -93,7 +93,7 @@
    },
    {
     "name": "Max. Overload Voltage",
-    "symbol": "Voverload",
+    "symbol": "",
     "unit": "V",
     "stat": "max",
     "conditions": "ARHV06 (1206)",
@@ -101,7 +101,7 @@
    },
    {
     "name": "Max. Overload Voltage",
-    "symbol": "Voverload",
+    "symbol": "",
     "unit": "V",
     "stat": "max",
     "conditions": "ARHV13 (1210)",
@@ -133,7 +133,7 @@
    },
    {
     "name": "TCR (PPM/°C)",
-    "symbol": "TCR",
+    "symbol": "",
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "",
@@ -141,7 +141,7 @@
    },
    {
     "name": "VCR (PPM/V)",
-    "symbol": "VCR",
+    "symbol": "",
     "unit": "PPM/V",
     "stat": "max",
     "conditions": "",
@@ -149,7 +149,7 @@
    },
    {
     "name": "Power Rating at 70°C",
-    "symbol": "P",
+    "symbol": "",
     "unit": "W",
     "stat": "value",
     "conditions": "ARHV05 (0805)",
@@ -157,7 +157,7 @@
    },
    {
     "name": "Power Rating at 70°C",
-    "symbol": "P",
+    "symbol": "",
     "unit": "W",
     "stat": "value",
     "conditions": "ARHV06 (1206)",
@@ -165,47 +165,31 @@
    },
    {
     "name": "Power Rating at 70°C",
-    "symbol": "P",
+    "symbol": "",
     "unit": "W",
     "stat": "value",
     "conditions": "ARHV13 (1210)",
     "example": "1/3"
    },
    {
-    "name": "Resistance Tolerance",
-    "symbol": "Tol",
-    "unit": "%",
-    "stat": "range",
-    "conditions": "B: ±0.1%",
-    "example": "±0.1"
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0805 /1206 /1210"
    },
    {
     "name": "Resistance Tolerance",
-    "symbol": "Tol",
-    "unit": "%",
+    "symbol": "",
+    "unit": "",
     "stat": "range",
-    "conditions": "C: ±0.25%",
-    "example": "±0.25"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "Tol",
-    "unit": "%",
-    "stat": "range",
-    "conditions": "D: ±0.5%",
-    "example": "±0.5"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "Tol",
-    "unit": "%",
-    "stat": "range",
-    "conditions": "F: ±1%",
-    "example": "±1"
+    "conditions": "",
+    "example": "±0.1% ±0.25% ±0.5% ±1%"
    },
    {
     "name": "TCR (PPM/°C)",
-    "symbol": "TCR",
+    "symbol": "",
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "B: ±10",
@@ -213,7 +197,7 @@
    },
    {
     "name": "TCR (PPM/°C)",
-    "symbol": "TCR",
+    "symbol": "",
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "N: ±15",
@@ -221,7 +205,7 @@
    },
    {
     "name": "TCR (PPM/°C)",
-    "symbol": "TCR",
+    "symbol": "",
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "C: ±25",
@@ -229,210 +213,58 @@
    },
    {
     "name": "TCR (PPM/°C)",
-    "symbol": "TCR",
+    "symbol": "",
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "D: ±50",
     "example": "±50"
    },
    {
-    "name": "Temperature Cycling",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.1%",
-    "example": "ΔR±0.1%"
-   },
-   {
-    "name": "Short Time Overload",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.05%",
-    "example": "ΔR±0.05%"
-   },
-   {
-    "name": "Endurance",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.1%",
-    "example": "ΔR±0.1%"
-   },
-   {
-    "name": "Damp Heat with Load",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.1%",
-    "example": "ΔR±0.1%"
-   },
-   {
-    "name": "Biased Humidity",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.25%",
-    "example": "ΔR±0.25%"
-   },
-   {
-    "name": "High Temperature Exposure",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.2%",
-    "example": "ΔR±0.2%"
-   },
-   {
-    "name": "Single pulse high voltage overload",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.1%",
-    "example": "ΔR±0.1%"
-   },
-   {
-    "name": "Periodic electric overload",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.1%",
-    "example": "ΔR±0.1%"
-   },
-   {
-    "name": "Bending Strength (Board Flex)",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.05%",
-    "example": "ΔR±0.05%"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "",
-    "stat": "min",
-    "conditions": "95% min. coverage",
-    "example": "95"
-   },
-   {
-    "name": "Resistance to Soldering Heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.02%",
-    "example": "ΔR±0.02%"
-   },
-   {
-    "name": "Terminal strength",
+    "name": "Resistance",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "No broken",
-    "example": "No broken"
+    "conditions": "0100: 10Ω",
+    "example": "10Ω"
    },
    {
-    "name": "Vibration",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.05%",
-    "example": "ΔR±0.05%"
-   },
-   {
-    "name": "ESD",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±0.5%",
-    "example": "ΔR±0.5%"
-   },
-   {
-    "name": "Dielectric Withstand Voltage",
+    "name": "Resistance",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "By Type",
-    "example": "By Type"
+    "conditions": "10R2: 10.2Ω",
+    "example": "10.2Ω"
    },
    {
-    "name": "Resistance to solvents",
+    "name": "Resistance",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Marking Unsmeared",
-    "example": "Marking Unsmeared"
+    "conditions": "1000: 100Ω",
+    "example": "100Ω"
    },
    {
-    "name": "Flammability",
+    "name": "Resistance",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "UL-94 V-0 or V-1",
-    "example": "UL-94 V-0 or V-1"
+    "conditions": "1001: 1KΩ",
+    "example": "1KΩ"
    },
    {
-    "name": "Sulfur Test",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "ΔR±1%",
-    "example": "ΔR±1%"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "15~28°C"
-   },
-   {
-    "name": "Shelf Life",
+    "name": "Resistance",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "2 years"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "Dimensions (L×W)",
-    "example": "05:0805 06:1206 13:1210"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "Resistance Tolerance",
-    "example": "B: ±0.1% C: ±0.25% D: ±0.5% F: ±1%"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "TCR (PPM/°C)",
-    "example": "B: ±10 N: ±15 C: ±25 D: ±50"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "Resistance",
-    "example": "0100: 10Ω 10R2: 10.2Ω 1000:100Ω 1001: 1K"
+    "conditions": "1004: 1MΩ",
+    "example": "1MΩ"
    },
    {
     "name": "Marking",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "4digit marking",
+    "conditions": "",
     "example": "4digit marking"
    },
    {
@@ -440,44 +272,60 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Paper Tape (EA)",
+    "conditions": "Paper Tape",
     "example": "5,000"
    },
    {
-    "name": "Packing Quantity",
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "",
+    "stat": "min",
+    "conditions": "",
+    "example": "95%"
+   },
+   {
+    "name": "Flammability",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Emboss Plastic Tape (EA)",
-    "example": "-"
+    "conditions": "",
+    "example": "UL-94 V-0 or V-1"
    },
    {
-    "name": "Land Pattern",
+    "name": "ESD",
     "symbol": "",
-    "unit": "mm",
+    "unit": "",
     "stat": "value",
-    "conditions": "ARHV05",
-    "example": "1.00"
+    "conditions": "0805 : 2KV",
+    "example": "2KV"
    },
    {
-    "name": "Land Pattern",
+    "name": "ESD",
     "symbol": "",
-    "unit": "mm",
+    "unit": "",
     "stat": "value",
-    "conditions": "ARHV06",
-    "example": "2.00"
+    "conditions": "1206.1210 : 6KV",
+    "example": "6KV"
    },
    {
-    "name": "Land Pattern",
+    "name": "Dielectric Withstand Voltage",
     "symbol": "",
-    "unit": "mm",
+    "unit": "V",
     "stat": "value",
-    "conditions": "ARHV13",
-    "example": "2.00"
+    "conditions": "",
+    "example": "Max. Operating voltage"
+   },
+   {
+    "name": "Sulfur Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "ΔR±1%"
    }
   ],
-  "seconds": 41.86,
-  "tokens_in": 4405,
-  "tokens_out": 2666
+  "seconds": 28.81,
+  "tokens_in": 4505,
+  "tokens_out": 1675
  }
 }

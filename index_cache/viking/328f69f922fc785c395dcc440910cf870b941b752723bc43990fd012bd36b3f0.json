@@ -20,9 +20,9 @@
  },
  "type": "power_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:48:13+00:00",
+  "at": "2026-11-23T07:48:00+00:00",
   "items": [
    {
     "name": "Absolute Maximum Ratings",
@@ -46,7 +46,7 @@
     "unit": "Ω",
     "stat": "min",
     "conditions": "",
-    "example": "10G"
+    "example": "10000000000"
    },
    {
     "name": "Operating Temperature Range",
@@ -57,6 +57,14 @@
     "example": "-65 to 150"
    },
    {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220"
+   },
+   {
     "name": "Resistance Range",
     "symbol": "",
     "unit": "Ω",
@@ -70,7 +78,7 @@
     "unit": "Ω",
     "stat": "range",
     "conditions": "±1%",
-    "example": "0.05 to 0.1"
+    "example": "0.1 to 1"
    },
    {
     "name": "Resistance Range",
@@ -78,7 +86,7 @@
     "unit": "Ω",
     "stat": "range",
     "conditions": "±5%",
-    "example": "0.05 to 0.1"
+    "example": "1 to 5"
    },
    {
     "name": "Resistance Range",
@@ -86,7 +94,15 @@
     "unit": "Ω",
     "stat": "range",
     "conditions": "±10%",
-    "example": "0.05 to 0.1"
+    "example": "5 to 10"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "≧10Ω - 100KΩ",
+    "example": "10 to 100000"
    },
    {
     "name": "TCR (PPM/°C)",
@@ -94,7 +110,7 @@
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "±0.5%",
-    "example": "±100 ±200 ±300"
+    "example": "No Specified"
    },
    {
     "name": "TCR (PPM/°C)",
@@ -102,7 +118,7 @@
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "±1%",
-    "example": "±100 ±200 ±300"
+    "example": "No Specified"
    },
    {
     "name": "TCR (PPM/°C)",
@@ -110,7 +126,7 @@
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "±5%",
-    "example": "±50 ±100 ±200"
+    "example": "±100 ±200 ±300"
    },
    {
     "name": "TCR (PPM/°C)",
@@ -118,7 +134,7 @@
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "±10%",
-    "example": "±50 ±100 ±200"
+    "example": "±100 ±200 ±300"
    },
    {
     "name": "Temperature Coefficient of Resistance (T.C.R.)",
@@ -209,32 +225,24 @@
     "example": "3"
    },
    {
-    "name": "Case Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "value",
-    "conditions": "Case Temperature Measurement must be made with a Thermocouple Contacting the Center of the Component mounted on the Desi",
-    "example": "25"
-   },
-   {
     "name": "Storage Temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "25±5"
    },
    {
     "name": "Humidity",
     "symbol": "",
-    "unit": "%RH",
+    "unit": "%",
     "stat": "max",
     "conditions": "",
     "example": "75"
    }
   ],
-  "seconds": 68.0,
-  "tokens_in": 2352,
-  "tokens_out": 1916
+  "seconds": 91.11,
+  "tokens_in": 2452,
+  "tokens_out": 1259
  }
 }

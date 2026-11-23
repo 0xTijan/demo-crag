@@ -24,9 +24,9 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:48:40+00:00",
+  "at": "2026-11-23T05:48:54+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -53,19 +53,19 @@
     "example": "35"
    },
    {
-    "name": "Maximum Average Forward Rectified Current (See Fig.1)",
+    "name": "Maximum Average Forward Rectified Current (See Fig.1) Per Leg",
     "symbol": "I (AV)",
     "unit": "A",
     "stat": "max",
-    "conditions": "Per Leg",
+    "conditions": "",
     "example": "20.0"
    },
    {
-    "name": "Maximum Average Forward Rectified Current (See Fig.1)",
+    "name": "Maximum Average Forward Rectified Current (See Fig.1) Total Device",
     "symbol": "I (AV)",
     "unit": "A",
     "stat": "max",
-    "conditions": "Total Device",
+    "conditions": "",
     "example": "40.0"
    },
    {
@@ -133,88 +133,16 @@
     "example": "-55 to +150"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "JEDEC TO-263 molded plastic body"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Solderable per MIL-STD-202, method 208"
-   },
-   {
-    "name": "Polarity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "As marked"
-   },
-   {
-    "name": "Mounting position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
-   },
-   {
-    "name": "Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "RoHS Compliance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS 2011/65/EU"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "TO-263"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "SR4035D1"
-   },
-   {
-    "name": "Carrier",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tape & Reel"
-   },
-   {
-    "name": "Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "800 Pcs / Reel"
    }
   ],
-  "seconds": 49.11,
-  "tokens_in": 2769,
-  "tokens_out": 1009
+  "seconds": 39.02,
+  "tokens_in": 2869,
+  "tokens_out": 671
  }
 }

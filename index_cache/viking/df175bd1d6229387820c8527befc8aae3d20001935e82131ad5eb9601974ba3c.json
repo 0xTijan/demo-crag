@@ -23,9 +23,9 @@
  },
  "type": "common_mode_filter",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:49:01+00:00",
+  "at": "2026-11-23T08:33:36+00:00",
   "items": [
    {
     "name": "Customer",
@@ -33,7 +33,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "VIKING TECH CORPORATION KAOHSIUNG BRANCH"
+    "example": "VIKING TECH CORPORATION"
    },
    {
     "name": "Product",
@@ -66,6 +66,126 @@
     "stat": "value",
     "conditions": "",
     "example": "REV.A2"
+   },
+   {
+    "name": "Company",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "VIKING TECH CORPORATION"
+   },
+   {
+    "name": "Address",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No.248-3, Sin-Sheng Rd., Cian-Jhen Dist."
+   },
+   {
+    "name": "TEL",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "886-3-5972931"
+   },
+   {
+    "name": "FAX",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "886-3-5972935·886-3-5973494"
+   },
+   {
+    "name": "E-mail",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "sales@viking.com.tw"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1206"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CMA06B"
+   },
+   {
+    "name": "Sizes (Inch)",
+    "symbol": "",
+    "unit": "Inch",
+    "stat": "value",
+    "conditions": "",
+    "example": "1206"
+   },
+   {
+    "name": "L (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.20±0.20"
+   },
+   {
+    "name": "W (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.60±0.20"
+   },
+   {
+    "name": "T (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.00±0.10"
+   },
+   {
+    "name": "P (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.80±0.10"
+   },
+   {
+    "name": "C1 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.45±0.15"
+   },
+   {
+    "name": "C2 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.30±0.20"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CMA06BYT900"
    },
    {
     "name": "Product Type",
@@ -104,19 +224,35 @@
     "symbol": "",
     "unit": "Ω",
     "stat": "value",
-    "conditions": "Test Condition (MHz)",
+    "conditions": "",
+    "example": "900: 90Ω 121: 120Ω 181: 80Ω"
+   },
+   {
+    "name": "Part No.",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CMA06BYT900"
+   },
+   {
+    "name": "Impedance (Ω)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "value",
+    "conditions": "",
     "example": "90"
    },
    {
     "name": "Tolerance",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "value",
-    "conditions": "Test Condition (MHz)",
+    "conditions": "",
     "example": "±25％"
    },
    {
-    "name": "Test Condition",
+    "name": "Test Condition (MHz)",
     "symbol": "",
     "unit": "MHz",
     "stat": "value",
@@ -124,7 +260,7 @@
     "example": "100"
    },
    {
-    "name": "DCR",
+    "name": "DCR (Ω) max.",
     "symbol": "",
     "unit": "Ω",
     "stat": "max",
@@ -132,7 +268,7 @@
     "example": "0.40"
    },
    {
-    "name": "Rated Current",
+    "name": "Rated Current (mA) max.",
     "symbol": "",
     "unit": "mA",
     "stat": "max",
@@ -140,7 +276,7 @@
     "example": "400"
    },
    {
-    "name": "Rated Voltage Vdc",
+    "name": "Rated Voltage Vdc (V)",
     "symbol": "",
     "unit": "V",
     "stat": "value",
@@ -148,7 +284,7 @@
     "example": "10"
    },
    {
-    "name": "Withstanding Voltage",
+    "name": "Withstanding Voltage (V)",
     "symbol": "",
     "unit": "V",
     "stat": "value",
@@ -156,7 +292,7 @@
     "example": "25"
    },
    {
-    "name": "Insulation Resistance",
+    "name": "Insulation Resistance (MΩ) min.",
     "symbol": "",
     "unit": "MΩ",
     "stat": "min",
@@ -164,52 +300,132 @@
     "example": "200"
    },
    {
+    "name": "Electrical Performance Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Agilent E4991A RF Impedance / Material A"
+   },
+   {
+    "name": "DCR",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "HP4338 Milliohmmeter"
+   },
+   {
     "name": "Temperature Cycle",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Temperature: -40~ +85℃ Cycle : 100cycles Dwell time: 30minutes",
+    "conditions": "",
     "example": "No mechanical damage Impedance should be"
+   },
+   {
+    "name": "Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40~ +85℃"
+   },
+   {
+    "name": "Cycle",
+    "symbol": "",
+    "unit": "cycles",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Dwell time",
+    "symbol": "",
+    "unit": "minutes",
+    "stat": "value",
+    "conditions": "",
+    "example": "30"
    },
    {
     "name": "Operational Life",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Temperature: 85℃± 5℃ Test time: 1000hrs Apply current : full rated current",
+    "conditions": "",
     "example": "No mechanical damage Impedance should be"
+   },
+   {
+    "name": "Test time",
+    "symbol": "",
+    "unit": "hrs",
+    "stat": "value",
+    "conditions": "",
+    "example": "1000"
    },
    {
     "name": "Biased Humidity",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Temperature: 40±2℃ Humidity : 90~95% RH Test time: 1000hrs Apply current : full rated current",
+    "conditions": "",
     "example": "No mechanical damage Impedance should be"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "90~95% RH"
    },
    {
     "name": "Resistance to Solder Heat",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Solder temperature: 260 ± 5℃ Flux: Rosin DIP time: 10 ±1 sec",
+    "conditions": "",
     "example": "Impedance should be within ±20% of the i"
+   },
+   {
+    "name": "Solder temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "260 ± 5℃"
+   },
+   {
+    "name": "Flux",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Rosin"
+   },
+   {
+    "name": "DIP time",
+    "symbol": "",
+    "unit": "sec",
+    "stat": "range",
+    "conditions": "",
+    "example": "10 ±1 sec"
    },
    {
     "name": "Steam Aging Test",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Temperature : 93 ± 2℃ Test time : 4 hrs Solder temperature : 235 ± 5℃ Flux : Rosin DIP time : 5 ± 1 sec",
+    "conditions": "",
     "example": "More than 95 % of terminal electrode sho"
    },
    {
     "name": "Storage Temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "max",
+    "stat": "range",
     "conditions": "",
-    "example": "<40"
+    "example": "<40°C"
    },
    {
     "name": "Operating Temperature",
@@ -217,7 +433,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-40~+85"
+    "example": "-40~+85°C"
    },
    {
     "name": "Shelf life",
@@ -228,63 +444,15 @@
     "example": "1"
    },
    {
-    "name": "Part Number",
+    "name": "Packaging Quantity & Reel Specifications",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "CMA06BYT900"
+    "example": "CMA06B"
    },
    {
-    "name": "L",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "3.20±0.20"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.60±0.20"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.00±0.10"
-   },
-   {
-    "name": "P",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.80±0.10"
-   },
-   {
-    "name": "C1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.45±0.15"
-   },
-   {
-    "name": "C2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.30±0.20"
-   },
-   {
-    "name": "ØA",
+    "name": "ØA (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -292,7 +460,7 @@
     "example": "178±1"
    },
    {
-    "name": "ØB",
+    "name": "ØB (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -300,7 +468,7 @@
     "example": "60+0.5/-0"
    },
    {
-    "name": "ØC",
+    "name": "ØC (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -308,7 +476,7 @@
     "example": "13.0±0.2"
    },
    {
-    "name": "Quantity",
+    "name": "Quantity (EA)",
     "symbol": "",
     "unit": "EA",
     "stat": "value",
@@ -316,7 +484,15 @@
     "example": "3000"
    },
    {
-    "name": "A0",
+    "name": "Emboss Plastic Tape Specifications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CMA06B"
+   },
+   {
+    "name": "A0 (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -324,7 +500,7 @@
     "example": "1.80±0.10"
    },
    {
-    "name": "B0",
+    "name": "B0 (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -332,7 +508,7 @@
     "example": "3.40±0.10"
    },
    {
-    "name": "E",
+    "name": "E (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -340,7 +516,7 @@
     "example": "1.75±0.10"
    },
    {
-    "name": "F",
+    "name": "F (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -348,7 +524,7 @@
     "example": "3.50±0.05"
    },
    {
-    "name": "P0",
+    "name": "P0 (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -356,7 +532,7 @@
     "example": "4.00±0.10"
    },
    {
-    "name": "P2",
+    "name": "P2 (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -364,7 +540,7 @@
     "example": "2.00±0.05"
    },
    {
-    "name": "D",
+    "name": "D (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -372,7 +548,7 @@
     "example": "1.55±0.05"
    },
    {
-    "name": "D1",
+    "name": "D1 (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -380,16 +556,24 @@
     "example": "1.00±0.05"
    },
    {
-    "name": "K0",
+    "name": "K0 (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
     "conditions": "",
     "example": "1.25±0.10"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CMA06B"
    }
   ],
-  "seconds": 184.93,
-  "tokens_in": 2405,
-  "tokens_out": 2226
+  "seconds": 177.53,
+  "tokens_in": 2505,
+  "tokens_out": 3371
  }
 }

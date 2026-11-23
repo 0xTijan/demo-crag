@@ -20,16 +20,48 @@
  },
  "type": "complementary_mosfet",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:51:48+00:00",
+  "at": "2026-11-23T06:59:09+00:00",
   "items": [
+   {
+    "name": "Polarity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "N-Ch"
+   },
+   {
+    "name": "V DSS",
+    "symbol": "VDS",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "20"
+   },
+   {
+    "name": "R DS(ON)(Max.)",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "",
+    "example": "40"
+   },
+   {
+    "name": "I D",
+    "symbol": "ID",
+    "unit": "A",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.8"
+   },
    {
     "name": "Drain-Source Voltage",
     "symbol": "VDS",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "20"
    },
    {
@@ -37,7 +69,7 @@
     "symbol": "VGS",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "±10"
    },
    {
@@ -86,7 +118,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to +150"
+    "example": "-55 to 150"
    },
    {
     "name": "Operating Junction Temperature Range",
@@ -94,7 +126,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to +150"
+    "example": "-55 to 150"
    },
    {
     "name": "Thermal Resistance Junction to Ambient",
@@ -148,6 +180,14 @@
     "name": "Static Drain-Source On-Resistance",
     "symbol": "RDS(ON)",
     "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "VGS=4.5V, ID=3A",
+    "example": "30"
+   },
+   {
+    "name": "Static Drain-Source On-Resistance",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
     "stat": "max",
     "conditions": "VGS=4.5V, ID=3A",
     "example": "40"
@@ -156,8 +196,24 @@
     "name": "Static Drain-Source On-Resistance",
     "symbol": "RDS(ON)",
     "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "VGS=2.5V, ID=2A",
+    "example": "42"
+   },
+   {
+    "name": "Static Drain-Source On-Resistance",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
     "stat": "max",
     "conditions": "VGS=2.5V, ID=2A",
+    "example": "55"
+   },
+   {
+    "name": "Static Drain-Source On-Resistance",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "VGS=1.8V, ID=1.5A",
     "example": "55"
    },
    {
@@ -175,6 +231,22 @@
     "stat": "min",
     "conditions": "VGS=VDS, ID =250uA",
     "example": "0.3"
+   },
+   {
+    "name": "Gate Threshold Voltage",
+    "symbol": "VGS(th)",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "VGS=VDS, ID =250uA",
+    "example": "0.6"
+   },
+   {
+    "name": "Gate Threshold Voltage",
+    "symbol": "VGS(th)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "VGS=VDS, ID =250uA",
+    "example": "1"
    },
    {
     "name": "VGS(th) Temperature Coefficient",
@@ -196,6 +268,14 @@
     "name": "Total Gate Charge",
     "symbol": "Qg",
     "unit": "nC",
+    "stat": "typ",
+    "conditions": "VDS=10V, VGS=4.5V, ID=3A",
+    "example": "5.8"
+   },
+   {
+    "name": "Total Gate Charge",
+    "symbol": "Qg",
+    "unit": "nC",
     "stat": "max",
     "conditions": "VDS=10V, VGS=4.5V, ID=3A",
     "example": "10"
@@ -204,7 +284,23 @@
     "name": "Gate-Source Charge",
     "symbol": "Qgs",
     "unit": "nC",
+    "stat": "typ",
+    "conditions": "VDS=10V, VGS=4.5V, ID=3A",
+    "example": "0.6"
+   },
+   {
+    "name": "Gate-Source Charge",
+    "symbol": "Qgs",
+    "unit": "nC",
     "stat": "max",
+    "conditions": "VDS=10V, VGS=4.5V, ID=3A",
+    "example": "1.5"
+   },
+   {
+    "name": "Gate-Drain Charge",
+    "symbol": "Qgd",
+    "unit": "nC",
+    "stat": "typ",
     "conditions": "VDS=10V, VGS=4.5V, ID=3A",
     "example": "1.5"
    },
@@ -220,9 +316,25 @@
     "name": "Turn-On Delay Time",
     "symbol": "Td(on)",
     "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=10V, VGS=4.5V, RG=25Ω, ID=1A",
+    "example": "2.9"
+   },
+   {
+    "name": "Turn-On Delay Time",
+    "symbol": "Td(on)",
+    "unit": "nS",
     "stat": "max",
     "conditions": "VDD=10V, VGS=4.5V, RG=25Ω, ID=1A",
     "example": "6"
+   },
+   {
+    "name": "Rise Time",
+    "symbol": "Tr",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=10V, VGS=4.5V, RG=25Ω, ID=1A",
+    "example": "8.4"
    },
    {
     "name": "Rise Time",
@@ -236,9 +348,25 @@
     "name": "Turn-Off Delay Time",
     "symbol": "Td(off)",
     "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=10V, VGS=4.5V, RG=25Ω, ID=1A",
+    "example": "19.2"
+   },
+   {
+    "name": "Turn-Off Delay Time",
+    "symbol": "Td(off)",
+    "unit": "nS",
     "stat": "max",
     "conditions": "VDD=10V, VGS=4.5V, RG=25Ω, ID=1A",
     "example": "38"
+   },
+   {
+    "name": "Fall Time",
+    "symbol": "Tf",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=10V, VGS=4.5V, RG=25Ω, ID=1A",
+    "example": "5.6"
    },
    {
     "name": "Fall Time",
@@ -252,6 +380,14 @@
     "name": "Input Capacitance",
     "symbol": "Ciss",
     "unit": "pF",
+    "stat": "typ",
+    "conditions": "VDS=15V, VGS=0V, F=1MHz",
+    "example": "315"
+   },
+   {
+    "name": "Input Capacitance",
+    "symbol": "Ciss",
+    "unit": "pF",
     "stat": "max",
     "conditions": "VDS=15V, VGS=0V, F=1MHz",
     "example": "600"
@@ -260,9 +396,25 @@
     "name": "Output Capacitance",
     "symbol": "Coss",
     "unit": "pF",
+    "stat": "typ",
+    "conditions": "VDS=15V, VGS=0V, F=1MHz",
+    "example": "50"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "Coss",
+    "unit": "pF",
     "stat": "max",
     "conditions": "VDS=15V, VGS=0V, F=1MHz",
     "example": "80"
+   },
+   {
+    "name": "Reverse Transfer Capacitance",
+    "symbol": "Crss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VDS=15V, VGS=0V, F=1MHz",
+    "example": "40"
    },
    {
     "name": "Reverse Transfer Capacitance",
@@ -332,6 +484,14 @@
     "name": "Static Drain-Source On-Resistance",
     "symbol": "RDS(ON)",
     "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "VGS=-4.5V, ID=-3A",
+    "example": "82"
+   },
+   {
+    "name": "Static Drain-Source On-Resistance",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
     "stat": "max",
     "conditions": "VGS=-4.5V, ID=-3A",
     "example": "100"
@@ -340,9 +500,25 @@
     "name": "Static Drain-Source On-Resistance",
     "symbol": "RDS(ON)",
     "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "VGS=-2.5V, ID=-2A",
+    "example": "125"
+   },
+   {
+    "name": "Static Drain-Source On-Resistance",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
     "stat": "max",
     "conditions": "VGS=-2.5V, ID=-2A",
     "example": "140"
+   },
+   {
+    "name": "Static Drain-Source On-Resistance",
+    "symbol": "RDS(ON)",
+    "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "VGS=-1.8V, ID=-1A",
+    "example": "197"
    },
    {
     "name": "Static Drain-Source On-Resistance",
@@ -359,6 +535,22 @@
     "stat": "min",
     "conditions": "VGS=VDS, ID =-250uA",
     "example": "-0.3"
+   },
+   {
+    "name": "Gate Threshold Voltage",
+    "symbol": "VGS(th)",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "VGS=VDS, ID =-250uA",
+    "example": "-0.6"
+   },
+   {
+    "name": "Gate Threshold Voltage",
+    "symbol": "VGS(th)",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "VGS=VDS, ID =-250uA",
+    "example": "-1.0"
    },
    {
     "name": "VGS(th) Temperature Coefficient",
@@ -380,9 +572,25 @@
     "name": "Total Gate Charge",
     "symbol": "Qg",
     "unit": "nC",
+    "stat": "typ",
+    "conditions": "VDS=-10V, VGS=-4.5V, ID=-2A",
+    "example": "4.8"
+   },
+   {
+    "name": "Total Gate Charge",
+    "symbol": "Qg",
+    "unit": "nC",
     "stat": "max",
     "conditions": "VDS=-10V, VGS=-4.5V, ID=-2A",
     "example": "10"
+   },
+   {
+    "name": "Gate-Source Charge",
+    "symbol": "Qgs",
+    "unit": "nC",
+    "stat": "typ",
+    "conditions": "VDS=-10V, VGS=-4.5V, ID=-2A",
+    "example": "0.5"
    },
    {
     "name": "Gate-Source Charge",
@@ -396,9 +604,25 @@
     "name": "Gate-Drain Charge",
     "symbol": "Qgd",
     "unit": "nC",
+    "stat": "typ",
+    "conditions": "VDS=-10V, VGS=-4.5V, ID=-2A",
+    "example": "1.9"
+   },
+   {
+    "name": "Gate-Drain Charge",
+    "symbol": "Qgd",
+    "unit": "nC",
     "stat": "max",
     "conditions": "VDS=-10V, VGS=-4.5V, ID=-2A",
     "example": "4"
+   },
+   {
+    "name": "Turn-On Delay Time",
+    "symbol": "Td(on)",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A",
+    "example": "3.5"
    },
    {
     "name": "Turn-On Delay Time",
@@ -412,9 +636,25 @@
     "name": "Rise Time",
     "symbol": "Tr",
     "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A",
+    "example": "12.6"
+   },
+   {
+    "name": "Rise Time",
+    "symbol": "Tr",
+    "unit": "nS",
     "stat": "max",
     "conditions": "VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A",
     "example": "24"
+   },
+   {
+    "name": "Turn-Off Delay Time",
+    "symbol": "Td(off)",
+    "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A",
+    "example": "32.6"
    },
    {
     "name": "Turn-Off Delay Time",
@@ -428,9 +668,25 @@
     "name": "Fall Time",
     "symbol": "Tf",
     "unit": "nS",
+    "stat": "typ",
+    "conditions": "VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A",
+    "example": "8.4"
+   },
+   {
+    "name": "Fall Time",
+    "symbol": "Tf",
+    "unit": "nS",
     "stat": "max",
     "conditions": "VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A",
     "example": "16"
+   },
+   {
+    "name": "Input Capacitance",
+    "symbol": "Ciss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
+    "example": "350"
    },
    {
     "name": "Input Capacitance",
@@ -444,9 +700,25 @@
     "name": "Output Capacitance",
     "symbol": "Coss",
     "unit": "pF",
+    "stat": "typ",
+    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
+    "example": "65"
+   },
+   {
+    "name": "Output Capacitance",
+    "symbol": "Coss",
+    "unit": "pF",
     "stat": "max",
     "conditions": "VDS=-15V, VGS=0V, F=1MHz",
     "example": "95"
+   },
+   {
+    "name": "Reverse Transfer Capacitance",
+    "symbol": "Crss",
+    "unit": "pF",
+    "stat": "typ",
+    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
+    "example": "50"
    },
    {
     "name": "Reverse Transfer Capacitance",
@@ -471,42 +743,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT-23-6L"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "6"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to +150"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 206.48,
-  "tokens_in": 3839,
-  "tokens_out": 3472
+  "seconds": 130.69,
+  "tokens_in": 3939,
+  "tokens_out": 5468
  }
 }

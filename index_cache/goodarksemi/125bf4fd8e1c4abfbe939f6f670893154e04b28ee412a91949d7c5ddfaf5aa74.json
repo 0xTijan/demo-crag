@@ -20,9 +20,9 @@
  },
  "type": "complementary_mosfet",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:50:12+00:00",
+  "at": "2026-11-23T06:57:54+00:00",
   "items": [
    {
     "name": "V (BR)DSS",
@@ -305,6 +305,30 @@
     "example": "6, 12"
    },
    {
+    "name": "Continuous Source Current",
+    "symbol": "IS",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "VG=VD=0V , Force Current",
+    "example": "0.8"
+   },
+   {
+    "name": "Pulsed Source Current",
+    "symbol": "ISM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "VG=VD=0V , Force Current",
+    "example": "1.6"
+   },
+   {
+    "name": "Diode Forward Voltage",
+    "symbol": "VSD",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "VGS=0V , IS=0.2A , TJ=25°C",
+    "example": "1"
+   },
+   {
     "name": "Drain-Source Breakdown Voltage",
     "symbol": "BVDSS",
     "unit": "V",
@@ -481,30 +505,6 @@
     "example": "6.5, 13"
    },
    {
-    "name": "Continuous Source Current",
-    "symbol": "IS",
-    "unit": "A",
-    "stat": "max",
-    "conditions": "VG=VD=0V , Force Current",
-    "example": "0.8"
-   },
-   {
-    "name": "Pulsed Source Current",
-    "symbol": "ISM",
-    "unit": "A",
-    "stat": "max",
-    "conditions": "VG=VD=0V , Force Current",
-    "example": "1.6"
-   },
-   {
-    "name": "Diode Forward Voltage",
-    "symbol": "VSD",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "VGS=0V , IS=0.2A , TJ=25°C",
-    "example": "1"
-   },
-   {
     "name": "Diode Forward Voltage",
     "symbol": "VSD",
     "unit": "V",
@@ -519,18 +519,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT-563"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "SOT-563"
    }
   ],
-  "seconds": 110.95,
-  "tokens_in": 3789,
-  "tokens_out": 3850
+  "seconds": 56.58,
+  "tokens_in": 3889,
+  "tokens_out": 3811
  }
 }

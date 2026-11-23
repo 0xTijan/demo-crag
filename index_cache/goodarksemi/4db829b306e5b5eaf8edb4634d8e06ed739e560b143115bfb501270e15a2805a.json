@@ -20,9 +20,9 @@
  },
  "type": "schottky_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:51:13+00:00",
+  "at": "2026-11-23T08:34:41+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -52,7 +52,7 @@
     "name": "Rating for Fusing (t=8.3ms)",
     "symbol": "I2t",
     "unit": "A2s",
-    "stat": "value",
+    "stat": "max",
     "conditions": "",
     "example": "10.375"
    },
@@ -75,18 +75,18 @@
    {
     "name": "Operating Junction Temperature Range",
     "symbol": "",
-    "unit": "°C",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "-55 to +150"
    },
    {
     "name": "Storage Temperature Range",
     "symbol": "",
-    "unit": "°C",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "-55 to +150"
    },
    {
     "name": "Breakdown Voltage",
@@ -183,10 +183,18 @@
     "stat": "typ",
     "conditions": "4V, 1MHz",
     "example": "60"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ABS molded plastic body"
    }
   ],
-  "seconds": 51.72,
-  "tokens_in": 1415,
-  "tokens_out": 1043
+  "seconds": 35.76,
+  "tokens_in": 1515,
+  "tokens_out": 1070
  }
 }

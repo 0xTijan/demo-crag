@@ -20,9 +20,9 @@
  },
  "type": "ptc_thermistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:58:53+00:00",
+  "at": "2026-11-23T08:40:57+00:00",
   "items": [
    {
     "name": "Rated voltage (RMS)",
@@ -54,7 +54,7 @@
     "unit": "g",
     "stat": "value",
     "conditions": "",
-    "example": "~1.557"
+    "example": "1.557"
    },
    {
     "name": "Resistance",
@@ -211,10 +211,10 @@
    {
     "name": "Humidity aging",
     "symbol": "",
-    "unit": "%",
+    "unit": "°C",
     "stat": "value",
     "conditions": "40°C, 95% RH, 0V,1000 hours",
-    "example": "95"
+    "example": "40"
    },
    {
     "name": "Thermal shock",
@@ -222,7 +222,7 @@
     "unit": "°C",
     "stat": "value",
     "conditions": "85°C, -40°C (10 times)",
-    "example": "85 to -40"
+    "example": "85, -40"
    },
    {
     "name": "Solvent resistance",
@@ -249,124 +249,84 @@
     "example": "IEC 68-1 40/125/56"
    },
    {
-    "name": "Compliant with ITU-T K21",
+    "name": "Compliant with ITU-T K.21",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "ITU-T K21"
+    "example": "Compliant"
    },
    {
-    "name": "Power Induction Test No. 1",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "A",
-    "example": "A"
-   },
-   {
-    "name": "Power Induction Test No. 2",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "B",
-    "example": "B"
-   },
-   {
-    "name": "Power Contact Test No. 3",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "D",
-    "example": "D"
-   },
-   {
-    "name": "Lightning Surge Test No. 4",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "F",
-    "example": "F"
-   },
-   {
-    "name": "Lightning Surge Test No. 5",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "H",
-    "example": "H"
-   },
-   {
-    "name": "Power Induction Test Condition A",
+    "name": "Power Induction Test Level A",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "600VAC,R=600 ohm,t=0,2S,criteria A",
-    "example": "600VAC,R=600 ohm,t=0,2S,criteria A"
+    "example": "A"
    },
    {
-    "name": "Power Induction Test Condition B",
+    "name": "Power Induction Test Level B",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "600VAC,R=600 ohm,t=1,0S,with GDT,criteria A",
-    "example": "600VAC,R=600 ohm,t=1,0S,with GDT,criteri"
+    "example": "B"
    },
    {
-    "name": "Power Induction Test Condition C",
+    "name": "Power Induction Test Level C",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "1500VAC,R=200 ohm,t=2,0S,with GDT,criteria A",
-    "example": "1500VAC,R=200 ohm,t=2,0S,with GDT,criter"
+    "example": "C"
    },
    {
-    "name": "Power contact Test Condition D",
+    "name": "Power contact Test Level D",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "230VAC,t=15 min,R=10-1000 Ohm,criteria B",
-    "example": "230VAC,t=15 min,R=10-1000 Ohm,criteria B"
+    "example": "D"
    },
    {
-    "name": "Power contact Test Condition E",
+    "name": "Power contact Test Level E",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "230VAC,t=15min,R=10,20,40,80,1000Ohm,criteriaB R=160,300,600Ohm,criteria A",
-    "example": "230VAC,t=15min,R=10,20,40,80,1000Ohm,cri"
+    "example": "E"
    },
    {
-    "name": "Lightning Surge Test Condition F",
+    "name": "Lightning Surge Test Level F",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "Uc(max)=1,0KVAC,R=25 Ohm,t=10/700 Gs,without GDT,Cruteria A",
-    "example": "Uc(max)=1,0KVAC,R=25 Ohm,t=10/700 Gs,wit"
+    "example": "F"
    },
    {
-    "name": "Lightning Surge Test Condition G",
+    "name": "Lightning Surge Test Level G",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "Uc(max)=1,5KVAC,R=25 Ohm,t=10/700 Gs,without GDT,Criteria A",
-    "example": "Uc(max)=1,5KVAC,R=25 Ohm,t=10/700 Gs,wit"
+    "example": "G"
    },
    {
-    "name": "Lightning Surge Test Condition H",
+    "name": "Lightning Surge Test Level H",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "Uc(max)=4,0KVAC,R=25 Ohm,t=10/700 Gs,with GDT,Criteria A",
-    "example": "Uc(max)=4,0KVAC,R=25 Ohm,t=10/700 Gs,wit"
+    "example": "H"
    },
    {
-    "name": "Lightning Surge Test Condition I",
+    "name": "Lightning Surge Test Level I",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "Uc(max)=6,0KVAC,R=25 Ohm,t=10/700 Gs,,with GDT,Criteria A",
-    "example": "Uc(max)=6,0KVAC,R=25 Ohm,t=10/700 Gs,,wi"
+    "example": "I"
    },
    {
     "name": "Criteria A",
@@ -374,7 +334,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "no damage, function must be fulfilled"
+    "example": "no damage, function must be fulfilled."
    },
    {
     "name": "Criteria B",
@@ -382,7 +342,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "no fire hazard"
+    "example": "no fire hazard."
    },
    {
     "name": "Reflow Solder Curve",
@@ -398,7 +358,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "From ambient to soak temperature and soak start",
-    "example": "150 to 180"
+    "example": "150 - 180"
    },
    {
     "name": "Soak time",
@@ -406,7 +366,7 @@
     "unit": "s",
     "stat": "range",
     "conditions": "Soak time",
-    "example": "60 to 120"
+    "example": "60 - 120"
    },
    {
     "name": "Soak end",
@@ -414,7 +374,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "Soak end",
-    "example": "180 to 200"
+    "example": "180 - 200"
    },
    {
     "name": "Peak Temp.",
@@ -430,7 +390,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "Main heating time",
-    "example": "230 to 260"
+    "example": "230 - 260"
    },
    {
     "name": "Cooling",
@@ -457,116 +417,36 @@
     "example": "85"
    },
    {
-    "name": "Tape Width",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "24"
-   },
-   {
-    "name": "Tape Pitch",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "16"
-   },
-   {
-    "name": "Tape Height",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.5"
-   },
-   {
-    "name": "Tape Lead Spacing",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.75"
-   },
-   {
-    "name": "Tape Lead Length",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "4"
-   },
-   {
-    "name": "Tape Lead Width",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "2"
-   },
-   {
-    "name": "Tape Lead Height",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "7.5"
-   },
-   {
-    "name": "Tape Lead Diameter",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.5"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "330"
-   },
-   {
-    "name": "Reel Width",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "24.4"
-   },
-   {
-    "name": "Reel Quantity",
-    "symbol": "",
-    "unit": "pcs",
-    "stat": "value",
-    "conditions": "min",
-    "example": "400"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Tape"
+    "example": "Twin SMD Ceramic PTC Thermistor"
    },
    {
-    "name": "Reel QTY",
+    "name": "Tape Width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "24±0.3"
+   },
+   {
+    "name": "Tape Pitch",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "16±0.1"
+   },
+   {
+    "name": "Quantity per reel",
     "symbol": "",
     "unit": "pcs",
     "stat": "value",
-    "conditions": "",
+    "conditions": "min",
     "example": "400"
-   },
-   {
-    "name": "Box QTY",
-    "symbol": "",
-    "unit": "pcs",
-    "stat": "value",
-    "conditions": "",
-    "example": "4000"
    },
    {
     "name": "Component Weight",
@@ -601,8 +481,8 @@
     "example": "405×360×370"
    }
   ],
-  "seconds": 123.46,
-  "tokens_in": 3121,
-  "tokens_out": 3967
+  "seconds": 121.28,
+  "tokens_in": 3221,
+  "tokens_out": 3007
  }
 }

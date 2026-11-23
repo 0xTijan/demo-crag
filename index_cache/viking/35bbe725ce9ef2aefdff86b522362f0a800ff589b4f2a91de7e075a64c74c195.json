@@ -20,9 +20,9 @@
  },
  "type": "power_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:47:27+00:00",
+  "at": "2026-11-23T07:47:22+00:00",
   "items": [
    {
     "name": "Absolute Maximum Ratings",
@@ -46,7 +46,7 @@
     "unit": "Ω",
     "stat": "min",
     "conditions": "",
-    "example": "10G"
+    "example": "10000000000"
    },
    {
     "name": "Operating Temperature Range",
@@ -108,7 +108,7 @@
     "name": "Terminal Strength",
     "symbol": "",
     "unit": "N",
-    "stat": "value",
+    "stat": "min",
     "conditions": "(Pull Test) 2.4N",
     "example": "2.4"
    },
@@ -145,12 +145,36 @@
     "example": "2.25"
    },
    {
-    "name": "Power",
+    "name": "Case Temperature",
     "symbol": "",
-    "unit": "W",
+    "unit": "°C",
     "stat": "value",
-    "conditions": "at 25°C case temperature heat sink mounted",
-    "example": "30"
+    "conditions": "The Case Temperature Measurement must be made with a Thermocouple Contacting the Center of the Component mounted on the ",
+    "example": "25"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "25±5°C",
+    "example": "25"
+   },
+   {
+    "name": "Storage Humidity",
+    "symbol": "",
+    "unit": "%RH",
+    "stat": "max",
+    "conditions": "",
+    "example": "75"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220"
    },
    {
     "name": "Resistance Tolerance",
@@ -161,17 +185,9 @@
     "example": "±0.5%"
    },
    {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "D"
-   },
-   {
     "name": "TCR (PPM/°C)",
     "symbol": "",
-    "unit": "PPM/°C",
+    "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "±50"
@@ -180,13 +196,13 @@
     "name": "Resistance",
     "symbol": "",
     "unit": "Ω",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "0.1"
+    "example": "0.05Ω – 0.1Ω"
    }
   ],
-  "seconds": 21.65,
-  "tokens_in": 2297,
-  "tokens_out": 1294
+  "seconds": 52.26,
+  "tokens_in": 2397,
+  "tokens_out": 1406
  }
 }

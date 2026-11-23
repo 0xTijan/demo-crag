@@ -24,9 +24,9 @@
  },
  "type": "fast_acting_chip_fuse",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:56:11+00:00",
+  "at": "2026-11-23T08:38:31+00:00",
   "items": [
    {
     "name": "Ampere Rating",
@@ -51,14 +51,6 @@
     "stat": "range",
     "conditions": "",
     "example": "4 Hours Minimum"
-   },
-   {
-    "name": "Product Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "S1206H1"
    },
    {
     "name": "Current Rating",
@@ -86,7 +78,7 @@
    },
    {
     "name": "Resistance (ohms)",
-    "symbol": "R",
+    "symbol": "",
     "unit": "Ω",
     "stat": "typ",
     "conditions": "",
@@ -94,7 +86,7 @@
    },
    {
     "name": "Typical Melt I2t",
-    "symbol": "I2t",
+    "symbol": "",
     "unit": "A2s",
     "stat": "typ",
     "conditions": "",
@@ -109,7 +101,7 @@
     "example": "H"
    },
    {
-    "name": "Case",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -117,8 +109,8 @@
     "example": "1206"
    }
   ],
-  "seconds": 89.11,
-  "tokens_in": 1070,
-  "tokens_out": 1091
+  "seconds": 30.81,
+  "tokens_in": 1170,
+  "tokens_out": 587
  }
 }

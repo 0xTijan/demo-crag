@@ -24,40 +24,88 @@
  },
  "type": "complementary_npn_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:02:28+00:00",
+  "at": "2026-11-23T08:01:19+00:00",
   "items": [
    {
     "name": "Collector Base Voltage",
     "symbol": "V CBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "GSBC8456xDE",
     "example": "80"
+   },
+   {
+    "name": "Collector Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "GSBC8457xDE",
+    "example": "50"
+   },
+   {
+    "name": "Collector Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "GSBC8458xDE",
+    "example": "30"
    },
    {
     "name": "Collector Emitter Voltage",
     "symbol": "V CEO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "GSBC8456xDE",
     "example": "65"
+   },
+   {
+    "name": "Collector Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "GSBC8457xDE",
+    "example": "45"
+   },
+   {
+    "name": "Collector Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "GSBC8458xDE",
+    "example": "30"
    },
    {
     "name": "Emitter Base Voltage",
     "symbol": "V EBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "GSBC8456xDE",
     "example": "6"
+   },
+   {
+    "name": "Emitter Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "GSBC8457xDE",
+    "example": "6"
+   },
+   {
+    "name": "Emitter Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "GSBC8458xDE",
+    "example": "5"
    },
    {
     "name": "Collector Current",
     "symbol": "I C",
     "unit": "mA",
     "stat": "max",
-    "conditions": "",
+    "conditions": "Collector Current",
     "example": "100"
    },
    {
@@ -65,7 +113,7 @@
     "symbol": "I CM",
     "unit": "mA",
     "stat": "max",
-    "conditions": "",
+    "conditions": "Peak Collector Current",
     "example": "200"
    },
    {
@@ -73,7 +121,7 @@
     "symbol": "P tot",
     "unit": "mW",
     "stat": "max",
-    "conditions": "",
+    "conditions": "Total Power Dissipation",
     "example": "200"
    },
    {
@@ -81,7 +129,7 @@
     "symbol": "R θJA",
     "unit": "℃/W",
     "stat": "max",
-    "conditions": "",
+    "conditions": "Thermal Resistance Junction to Ambient1",
     "example": "625"
    },
    {
@@ -89,7 +137,7 @@
     "symbol": "T J",
     "unit": "℃",
     "stat": "max",
-    "conditions": "",
+    "conditions": "Junction Temperature",
     "example": "150"
    },
    {
@@ -97,7 +145,7 @@
     "symbol": "",
     "unit": "℃",
     "stat": "range",
-    "conditions": "",
+    "conditions": "Storage Temperature Range",
     "example": "-55 to +150"
    },
    {
@@ -106,7 +154,7 @@
     "unit": "-",
     "stat": "range",
     "conditions": "V =5V, I =2mA CE C",
-    "example": "110"
+    "example": "110 to 220"
    },
    {
     "name": "Collector Base Breakdown Voltage",
@@ -170,13 +218,13 @@
     "unit": "V",
     "stat": "range",
     "conditions": "V =5V, I =2mA CE C",
-    "example": "0.58"
+    "example": "0.58 to 0.7"
    },
    {
     "name": "Base Emitter Voltage",
     "symbol": "V BE",
     "unit": "V",
-    "stat": "range",
+    "stat": "max",
     "conditions": "V =5V, I =10mA CE C",
     "example": "0.77"
    },
@@ -202,7 +250,7 @@
     "unit": "-",
     "stat": "range",
     "conditions": "V =-5V, I =-2mA CE C",
-    "example": "125"
+    "example": "125 to 250"
    },
    {
     "name": "Collector Base Breakdown Voltage",
@@ -266,13 +314,13 @@
     "unit": "V",
     "stat": "range",
     "conditions": "V =-5V, I =-2mA CE C",
-    "example": "-0.6"
+    "example": "-0.6 to -0.75"
    },
    {
     "name": "Base Emitter Voltage",
     "symbol": "V BE",
     "unit": "V",
-    "stat": "range",
+    "stat": "min",
     "conditions": "V =-5V, I =-10mA CE C",
     "example": "-0.82"
    },
@@ -291,10 +339,18 @@
     "stat": "max",
     "conditions": "V =-10V, I =0, F=1MHz CB E",
     "example": "4.5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-563"
    }
   ],
-  "seconds": 80.32,
-  "tokens_in": 2714,
-  "tokens_out": 2724
+  "seconds": 41.84,
+  "tokens_in": 2814,
+  "tokens_out": 2793
  }
 }

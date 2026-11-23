@@ -13,10 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-- pin_count
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-22T15:31:35+00:00'
+  at: '2026-11-23T09:05:48+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -24,18 +23,6 @@ drafted:
   - goodarksemi/gsda312-sds_adcbbee5.md
   - goodarksemi/gsda313-sds_23cab432.md
 specs:
-  io_pins_supply_voltage:
-    label: I/O Pins supply voltage
-    unit: V
-    stat: range
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - I/O Pins supply voltage
-    - VDD_IO
-    - V_I DD O
-    found_in: 3/3
   package:
     label: Package
     unit: null
@@ -46,33 +33,25 @@ specs:
     aliases:
     - Package
     found_in: 3/3
-  pin_count:
-    label: Pin count
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Pin count
-    - Operating Temperature Range
-    found_in: 3/3
   supply_voltage:
     label: Supply voltage
     unit: V
     stat: range
-    conditions: null
+    conditions: supply_pins
     rule: '>='
     critical: true
     aliases:
     - Supply voltage
     - VDD
+    - I/O Pins supply voltage
+    - VDD_IO
+    - V_I DD O
     found_in: 3/3
   acceleration_noise_density:
     label: Acceleration noise density
     unit: ug/sqrt(Hz)
-    stat: value
-    conditions: FS bit set to 00, Normal Mode, ODR = 125Hz
+    stat: range
+    conditions: fs_00_normal_mode_odr_1000hz
     rule: '='
     critical: false
     aliases:
@@ -83,7 +62,7 @@ specs:
     label: Current consumption in low power mode
     unit: uA
     stat: value
-    conditions: Top=25°C, ODR=62.5Hz, BW=500Hz
+    conditions: top_25c_odr_62_5hz_bw_500hz
     rule: <=
     critical: false
     aliases:
@@ -96,7 +75,7 @@ specs:
     label: Current consumption in normal mode
     unit: uA
     stat: value
-    conditions: Top=25°C, ODR=1kHz
+    conditions: top_25c_odr_1khz
     rule: <=
     critical: false
     aliases:
@@ -108,7 +87,7 @@ specs:
     label: Current consumption in suspend mode
     unit: uA
     stat: value
-    conditions: Top=25°C
+    conditions: top_25c
     rule: <=
     critical: false
     aliases:
@@ -120,7 +99,7 @@ specs:
     label: Digital high level input voltage
     unit: V
     stat: range
-    conditions: SPI&I2C
+    conditions: spi_i2c
     rule: '='
     critical: false
     aliases:
@@ -132,7 +111,7 @@ specs:
     label: Digital low level input voltage
     unit: V
     stat: range
-    conditions: SPI&I2C
+    conditions: spi_i2c
     rule: '='
     critical: false
     aliases:
@@ -140,16 +119,15 @@ specs:
     - VIL
     - V IL
     found_in: 3/3
-  fs_range:
-    label: FS range
-    unit: g
-    stat: range
-    conditions: FS bit set to 00
-    rule: '='
+  esd_rating:
+    label: ESD rating
+    unit: kV
+    stat: value
+    conditions: hmb_r_1_5k_c_100pf
+    rule: '>='
     critical: false
     aliases:
-    - Measurement range
-    - FS
+    - ESD Rating
     found_in: 3/3
   high_level_output_voltage:
     label: High level output voltage
@@ -174,6 +152,27 @@ specs:
     - Low level output voltage
     - VOL
     - V OL
+    found_in: 3/3
+  measurement_range:
+    label: Measurement range
+    unit: g
+    stat: range
+    conditions: fs_00
+    rule: '='
+    critical: false
+    aliases:
+    - Measurement range
+    - FS
+    found_in: 3/3
+  mechanical_shock:
+    label: Mechanical shock
+    unit: g
+    stat: value
+    conditions: duration_lt_200us
+    rule: '>='
+    critical: false
+    aliases:
+    - Mechanical Shock
     found_in: 3/3
   operation_temperature_range:
     label: Operation temperature range
@@ -200,30 +199,19 @@ specs:
   power_supply_rejection_rate:
     label: Power supply rejection rate
     unit: mg/V
-    stat: max
-    conditions: Top=25°C
+    stat: value
+    conditions: top_25c
     rule: '>='
     critical: false
     aliases:
     - Power Supply Rejection Rate
     - PSRR
     found_in: 3/3
-  rohs:
-    label: RoHS
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - RoHS
-    - Environmental Qualification
-    found_in: 3/3
   sensitivity:
     label: Sensitivity
     unit: LSB/g
-    stat: value
-    conditions: FS bit set to 00
+    stat: range
+    conditions: fs_00
     rule: '='
     critical: false
     aliases:
@@ -234,7 +222,7 @@ specs:
     label: Sensitivity change vs. temperature
     unit: '%/°C'
     stat: range
-    conditions: FS bit set to 00
+    conditions: fs_00
     rule: '='
     critical: false
     aliases:
@@ -245,12 +233,22 @@ specs:
     label: Start-up time
     unit: ms
     stat: value
-    conditions: From power off
+    conditions: from_power_off
     rule: <=
     critical: false
     aliases:
     - Start-up time
     - TSU
+    found_in: 3/3
+  storage_temperature:
+    label: Storage temperature
+    unit: °C
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Storage Temperature
     found_in: 3/3
   system_bandwidth:
     label: System bandwidth
@@ -263,11 +261,22 @@ specs:
     - System bandwidth
     - BW
     found_in: 3/3
+  typical_zero_g_level_offset_accuracy:
+    label: Typical zero-g level offset accuracy
+    unit: mg
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Typical zero-g level offset accuracy
+    - Tyoff
+    found_in: 3/3
   wake_up_time:
     label: Wake-up time
     unit: ms
     stat: value
-    conditions: From stand-by
+    conditions: from_standby
     rule: <=
     critical: false
     aliases:
@@ -278,93 +287,22 @@ specs:
     label: Zero-g level change vs. temperature
     unit: mg/°C
     stat: range
-    conditions: Max delta from 25°C
+    conditions: max_delta_from_25c
     rule: '='
     critical: false
     aliases:
     - Zero-g level change vs. temperature
     - Tcoff
     found_in: 3/3
-  zero_g_offset_accuracy:
-    label: Zero-g level offset accuracy
-    unit: mg
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Typical zero-g level offset accuracy
-    - Tyoff
-    found_in: 3/3
-  esd_rating:
-    label: ESD rating
-    unit: kV
-    stat: max
-    conditions: HMB, R=1.5k, C=100pF
-    rule: '>='
-    critical: false
-    aliases:
-    - ESD Rating
-    found_in: 2/3
-  mechanical_shock:
-    label: Mechanical shock
-    unit: g
-    stat: max
-    conditions: Duration<200us
-    rule: '>='
-    critical: false
-    aliases:
-    - Mechanical Shock
-    found_in: 2/3
-  operating_temperature_range:
-    label: Operating temperature range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Operating temperature range
-    found_in: 2/3
   self_test_output_change:
     label: Self-test output change
     unit: mg
-    stat: value
-    conditions: 'X: FS bit set to 00'
+    stat: typ
+    conditions: x_fs_00
     rule: '='
     critical: false
     aliases:
     - Self-test Output Change
     - Vst
     found_in: 2/3
-  storage_temperature:
-    label: Storage temperature
-    unit: °C
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Storage Temperature
-    found_in: 2/3
-rare_specs:
-  mounting_type:
-    label: Mounting type
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Mounting Type
-    found_in: 1/3
-  package_size:
-    label: Package size
-    unit: mm
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Package Size
-    found_in: 1/3
+rare_specs: {}

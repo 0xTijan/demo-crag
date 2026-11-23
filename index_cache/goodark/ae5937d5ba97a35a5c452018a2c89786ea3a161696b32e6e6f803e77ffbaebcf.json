@@ -20,9 +20,9 @@
  },
  "type": "esd_tvs_array",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:34:39+00:00",
+  "at": "2026-11-23T06:48:07+00:00",
   "items": [
    {
     "name": "Junction Temperature",
@@ -85,7 +85,7 @@
     "symbol": "VBR",
     "unit": "V",
     "stat": "range",
-    "conditions": "I =1mA",
+    "conditions": "I =1mA T",
     "example": "6 to 7.2"
    },
    {
@@ -93,7 +93,7 @@
     "symbol": "IR",
     "unit": "μA",
     "stat": "range",
-    "conditions": "V =5V",
+    "conditions": "V =5V R",
     "example": "0.01 to 1"
    },
    {
@@ -101,7 +101,7 @@
     "symbol": "VC",
     "unit": "V",
     "stat": "typ",
-    "conditions": "IPP =3A, tP =8/20μS",
+    "conditions": "I =3A，T =8/20μS PP P",
     "example": "10"
    },
    {
@@ -109,7 +109,7 @@
     "symbol": "VT",
     "unit": "V",
     "stat": "typ",
-    "conditions": "VESD =8kV",
+    "conditions": "V =8kV ESD",
     "example": "135"
    },
    {
@@ -125,7 +125,7 @@
     "symbol": "CJ",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V =0V, f=1MHz, I/O to I/O",
+    "conditions": "V =0V,f=1MHz, I/O to I/O R",
     "example": "0.15"
    },
    {
@@ -133,7 +133,7 @@
     "symbol": "CJ",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V =0V, f=1MHz, I/O to GND",
+    "conditions": "V =0V,f=1MHz, I/O to GND R",
     "example": "0.35"
    },
    {
@@ -143,58 +143,10 @@
     "stat": "value",
     "conditions": "",
     "example": "DFN2510"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "℃",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to +125"
-   },
-   {
-    "name": "Environmental",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS compliant"
-   },
-   {
-    "name": "ESD Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61000-4-2 ±10KV contact ±15KV air"
-   },
-   {
-    "name": "Capacitance",
-    "symbol": "",
-    "unit": "pF",
-    "stat": "typ",
-    "conditions": "I/O to I/O",
-    "example": "0.15"
-   },
-   {
-    "name": "Capacitance",
-    "symbol": "",
-    "unit": "pF",
-    "stat": "typ",
-    "conditions": "I/O to GND",
-    "example": "0.35"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "SESUC5VD2510-10U"
    }
   ],
-  "seconds": 17.5,
-  "tokens_in": 1753,
-  "tokens_out": 1012
+  "seconds": 40.41,
+  "tokens_in": 1853,
+  "tokens_out": 759
  }
 }

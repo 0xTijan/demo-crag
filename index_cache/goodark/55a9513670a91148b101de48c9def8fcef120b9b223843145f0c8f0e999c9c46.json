@@ -21,9 +21,9 @@
  },
  "type": "tvs_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:20:47+00:00",
+  "at": "2026-11-23T06:32:08+00:00",
   "items": [
    {
     "name": "Maximum Peak Pulse Power (W) (8/20 µs)",
@@ -55,7 +55,7 @@
     "unit": "℃",
     "stat": "range",
     "conditions": "",
-    "example": "-40 to 150"
+    "example": "- 40 to 150"
    },
    {
     "name": "Storage temperature range",
@@ -63,7 +63,7 @@
     "unit": "℃",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "- 55to 150"
    },
    {
     "name": "Thermal Resistance, Junction to Ambient",
@@ -93,16 +93,16 @@
     "name": "Leakage Current",
     "symbol": "I LEAK",
     "unit": "nA",
-    "stat": "max",
-    "conditions": "Measured at V = V RWM",
-    "example": "110"
+    "stat": "typ",
+    "conditions": "Measured at V = V IN RWM",
+    "example": "60"
    },
    {
     "name": "Forward Voltage",
     "symbol": "V F",
     "unit": "V",
     "stat": "range",
-    "conditions": "I = 1 mA from G to IN",
+    "conditions": "I = 1 mA from G to I IN ND O",
     "example": "0.25 to 0.65"
    },
    {
@@ -110,7 +110,7 @@
     "symbol": "V BR",
     "unit": "V",
     "stat": "range",
-    "conditions": "I = 1 mA from I to G",
+    "conditions": "I =1 mA from I to G IN O ND",
     "example": "24.6 to 27.6"
    },
    {
@@ -118,7 +118,7 @@
     "symbol": "V CL",
     "unit": "V",
     "stat": "range",
-    "conditions": "V = 5V, I = 200mA",
+    "conditions": "V = 5V,I = 200mA IN OUT",
     "example": "1 to 5"
    },
    {
@@ -126,7 +126,7 @@
     "symbol": "V CL",
     "unit": "V",
     "stat": "range",
-    "conditions": "25A (8/20us) from I to G, V =0 V before surge",
+    "conditions": "25A (8/20us) from I to G , O ND V =0 V before surge IN",
     "example": "26 to 27"
    },
    {
@@ -134,7 +134,7 @@
     "symbol": "V CL",
     "unit": "V",
     "stat": "range",
-    "conditions": "35A (8/20us) from I to G, V =0 V before surge",
+    "conditions": "35A (8/20us) from I to G , O ND V =0 V before surge IN",
     "example": "27 to 28"
    },
    {
@@ -142,13 +142,13 @@
     "symbol": "V CL",
     "unit": "V",
     "stat": "range",
-    "conditions": "45A (8/20us) from I to G, V =0 V before surge",
+    "conditions": "45A (8/20us) from I to G , O ND V =0 V before surge IN",
     "example": "28 to 29"
    },
    {
     "name": "8/20μs surge dynamic resistance",
     "symbol": "R DYN",
-    "unit": "mΩ",
+    "unit": "m",
     "stat": "typ",
     "conditions": "Calculated from VCLAMP at 0.5*lpp and Ipp surge current levels",
     "example": "30"
@@ -158,7 +158,7 @@
     "symbol": "C IN",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V = V RWM, f= 1 MHz, 30 mVpp, I to G",
+    "conditions": "V = V , f= 1 MHz , IN RWM 30 mVpp, I to G O ND",
     "example": "105"
    },
    {
@@ -166,7 +166,7 @@
     "symbol": "S R",
     "unit": "V/μs",
     "stat": "typ",
-    "conditions": "0-V rising edge, sweep rise time and measure slew rate when I = 1 mA",
+    "conditions": "0-V rising edge, sweep rise RWM time and measure slew rate when I = 1 mA PK",
     "example": "2.5"
    },
    {
@@ -176,26 +176,10 @@
     "stat": "value",
     "conditions": "",
     "example": "DFN2020-6"
-   },
-   {
-    "name": "Pin count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "6"
-   },
-   {
-    "name": "Operating temperature range",
-    "symbol": "",
-    "unit": "℃",
-    "stat": "range",
-    "conditions": "",
-    "example": "-40 to 150"
    }
   ],
-  "seconds": 44.35,
-  "tokens_in": 2016,
-  "tokens_out": 1102
+  "seconds": 50.71,
+  "tokens_in": 2116,
+  "tokens_out": 1053
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "mosfet_p",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:04:18+00:00",
+  "at": "2026-11-23T06:11:04+00:00",
   "items": [
    {
     "name": "BV DSS",
@@ -37,7 +37,7 @@
     "symbol": "R DS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "VGS=10 V, ID=500mA, TA=25°C",
+    "conditions": "VGS=-10V, ID=-4A",
     "example": "65"
    },
    {
@@ -47,6 +47,14 @@
     "stat": "max",
     "conditions": "TA=25°C",
     "example": "-4.1"
+   },
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Absolute Maximum Ratings (TC=25°C unless"
    },
    {
     "name": "Drain-Source Voltage",
@@ -127,6 +135,14 @@
     "stat": "range",
     "conditions": "",
     "example": "-55 To +150"
+   },
+   {
+    "name": "On / Off Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "On / Off Characteristics"
    },
    {
     "name": "Drain-Source Breakdown Voltage",
@@ -239,6 +255,14 @@
     "stat": "typ",
     "conditions": "VDS=-10V, ID=-3A",
     "example": "5.4"
+   },
+   {
+    "name": "Dynamic and Switching Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Dynamic and Switching Characteristics"
    },
    {
     "name": "Total Gate Charge",
@@ -401,6 +425,14 @@
     "example": "75"
    },
    {
+    "name": "Drain-Source Diode Characteristics and Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Drain-Source Diode Characteristics and M"
+   },
+   {
     "name": "Continuous Source Current",
     "symbol": "IS",
     "unit": "A",
@@ -429,7 +461,7 @@
     "symbol": "t rr",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "V =-30V, I =-2A R S di/dt=100A/μs T=25°C J",
+    "conditions": "V=-30V, I=-2A, R S di/dt=100A/μs T=25°C J",
     "example": "115"
    },
    {
@@ -437,12 +469,12 @@
     "symbol": "Q rr",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V =-30V, I =-2A R S di/dt=100A/μs T=25°C J",
+    "conditions": "V=-30V, I=-2A, R S di/dt=100A/μs T=25°C J",
     "example": "150"
    }
   ],
-  "seconds": 118.17,
-  "tokens_in": 2106,
-  "tokens_out": 2958
+  "seconds": 112.23,
+  "tokens_in": 2206,
+  "tokens_out": 3114
  }
 }

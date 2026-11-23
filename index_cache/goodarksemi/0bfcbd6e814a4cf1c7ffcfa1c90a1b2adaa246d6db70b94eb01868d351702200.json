@@ -20,9 +20,9 @@
  },
  "type": "fast_recovery_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:08:23+00:00",
+  "at": "2026-11-23T06:13:49+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -119,74 +119,10 @@
     "stat": "value",
     "conditions": "",
     "example": "eSGA (SOD-123FL)"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "- 55 to + 150"
-   },
-   {
-    "name": "Moisture Sensitivity Level",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1"
-   },
-   {
-    "name": "AEC-Q101 Qualified",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Yes"
-   },
-   {
-    "name": "High Temperature Soldering Guaranteed",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "value",
-    "conditions": "10 seconds",
-    "example": "260"
-   },
-   {
-    "name": "Halogen-Free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Yes"
-   },
-   {
-    "name": "Packing Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3000 pcs/Reel"
-   },
-   {
-    "name": "Tape Width",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "8"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "inch",
-    "stat": "value",
-    "conditions": "",
-    "example": "7"
    }
   ],
-  "seconds": 15.16,
-  "tokens_in": 1297,
-  "tokens_out": 882
+  "seconds": 12.13,
+  "tokens_in": 1397,
+  "tokens_out": 585
  }
 }

@@ -24,24 +24,24 @@
  },
  "type": "tvs_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:20:59+00:00",
+  "at": "2026-11-23T06:31:54+00:00",
   "items": [
    {
-    "name": "Peak Power Dissipation, With a 10/1000us Waveform",
+    "name": "Peak Power Dissipation, With a 10/1000us Waveform1,2 (Fig.1)",
     "symbol": "P_PPM",
     "unit": "W",
     "stat": "max",
-    "conditions": "10/1000us waveform",
+    "conditions": "",
     "example": "600"
    },
    {
-    "name": "Power Dissipation, On Infinite Heat Sink at T =75°C",
+    "name": "Power Dissipation, On Infinite Heat Sink at T =75°C L",
     "symbol": "P_D",
     "unit": "W",
     "stat": "max",
-    "conditions": "T =75°C",
+    "conditions": "",
     "example": "3.0"
    },
    {
@@ -49,7 +49,7 @@
     "symbol": "I_FSM",
     "unit": "A",
     "stat": "max",
-    "conditions": "8.3 ms Single Half Sine-Wave",
+    "conditions": "",
     "example": "60"
    },
    {
@@ -81,27 +81,27 @@
     "symbol": "V_F",
     "unit": "V",
     "stat": "max",
-    "conditions": "25A",
+    "conditions": "",
     "example": "3.5"
    },
    {
-    "name": "Breakdown Voltage V_BR @ I_T",
+    "name": "Breakdown Voltage V BR @ I T3",
     "symbol": "V_BR",
     "unit": "V",
     "stat": "range",
-    "conditions": "I_T = 1 mA",
+    "conditions": "I_T=1mA",
     "example": "6.40 to 7.07"
    },
    {
-    "name": "Maximum Reverse Leakage I_R @ V_RWM",
+    "name": "Maximum Reverse Leakage I @ V R RWM (μA)",
     "symbol": "I_R",
     "unit": "μA",
     "stat": "max",
-    "conditions": "V_RWM",
+    "conditions": "V_R=V_RWM",
     "example": "800"
    },
    {
-    "name": "Working Peak Reverse Voltage V_RWM",
+    "name": "Working Peak Reverse Voltage V RWM",
     "symbol": "V_RWM",
     "unit": "V",
     "stat": "value",
@@ -109,7 +109,7 @@
     "example": "5.0"
    },
    {
-    "name": "Maximum Reverse Surge Current I_PP",
+    "name": "Maximum Reverse Surge Current I PP (A)4",
     "symbol": "I_PP",
     "unit": "A",
     "stat": "max",
@@ -117,16 +117,24 @@
     "example": "65.22"
    },
    {
-    "name": "Maximum Clamping Voltage V_C @ I_PP",
+    "name": "Maximum Clamping Voltage Vc @ I PP (V)",
     "symbol": "V_C",
     "unit": "V",
     "stat": "max",
-    "conditions": "I_PP",
+    "conditions": "",
     "example": "9.2"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DO-214AC (SMA)"
    }
   ],
-  "seconds": 56.0,
-  "tokens_in": 4587,
-  "tokens_out": 638
+  "seconds": 36.33,
+  "tokens_in": 4687,
+  "tokens_out": 664
  }
 }

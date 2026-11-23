@@ -24,169 +24,17 @@
  },
  "type": "pulse_withstanding_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:37:41+00:00",
+  "at": "2026-11-23T08:28:45+00:00",
   "items": [
    {
-    "name": "Absolute Maximum Ratings",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Operating Temp. Range: -55 ~ +155°C"
-   },
-   {
-    "name": "Power Rating at 70°C",
-    "symbol": "",
-    "unit": "W",
-    "stat": "range",
-    "conditions": "",
-    "example": "1/5W"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 ~ +155"
-   },
-   {
-    "name": "Max. Operating Voltage",
-    "symbol": "",
-    "unit": "V",
-    "stat": "range",
-    "conditions": "",
-    "example": "50V"
-   },
-   {
-    "name": "Max. Overload Voltage",
-    "symbol": "",
-    "unit": "V",
-    "stat": "range",
-    "conditions": "",
-    "example": "100V"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±0.5% (E24,E96)",
-    "example": "1Ω-20Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±1% (E24,E96)",
-    "example": "1Ω-20Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±5% (E24)",
-    "example": "1Ω-20Ω"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "±100"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "PWR02"
-   },
-   {
-    "name": "Size (Inch)",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "0402"
-   },
-   {
-    "name": "L (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.00±0.05"
-   },
-   {
-    "name": "W (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.50±0.05"
-   },
-   {
-    "name": "T (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.35±0.05"
-   },
-   {
-    "name": "D1 (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.20±0.10"
-   },
-   {
-    "name": "D2 (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.25±0.10"
-   },
-   {
-    "name": "Weight (g) (1000pcs)",
-    "symbol": "",
-    "unit": "g",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.6"
-   },
-   {
-    "name": "AEC-Q200 Qualified",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "AEC-Q200"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS"
-   },
-   {
-    "name": "MSL",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Level 1"
    },
    {
     "name": "Tolerance",
@@ -197,194 +45,170 @@
     "example": "±0.5%~5%"
    },
    {
-    "name": "Pulse Withstanding Performance",
+    "name": "Power Rating",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Excellent"
-   },
-   {
-    "name": "Working Voltage Ratings",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Improved"
-   },
-   {
-    "name": "Package Sizes",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0402~2512"
-   },
-   {
-    "name": "Sulfuration Prevention",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Special construction"
-   },
-   {
-    "name": "100% CCD inspection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "100% CCD inspection"
-   },
-   {
-    "name": "Rated Terminal Part Temp.",
-    "symbol": "",
-    "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "105°C"
+    "example": "1/10W~2W"
    },
    {
-    "name": "Max. Operating Current",
+    "name": "Operating Temperature Range",
     "symbol": "",
-    "unit": "A",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "2.23A"
+    "example": "-55 to 155"
+   },
+   {
+    "name": "Max Operating Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "50V~500V"
+   },
+   {
+    "name": "Max Overload Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "100V~1000V"
    },
    {
     "name": "Resistance Range",
     "symbol": "",
     "unit": "",
     "stat": "range",
-    "conditions": "100 mΩ - 976 mΩ",
-    "example": "100 mΩ - 976 mΩ"
+    "conditions": "",
+    "example": "1Ω-20MΩ"
    },
    {
-    "name": "Power Rating",
+    "name": "TCR",
     "symbol": "",
-    "unit": "W",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "1/5W"
+    "example": "±100~±350"
+   },
+   {
+    "name": "AEC-Q200 Qualified",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Yes"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
+   },
+   {
+    "name": "MSL",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Level 1"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "PWR02"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "0402~2512"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "±0.5%~5%"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "±100~±350"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 155"
+   },
+   {
+    "name": "Jumper",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0Ω"
    },
    {
     "name": "Rated Current",
     "symbol": "",
-    "unit": "A",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "3A"
+    "example": "3A~16A"
    },
    {
     "name": "Overload Current",
     "symbol": "",
-    "unit": "A",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "6A"
+    "example": "6A~32A"
    },
    {
     "name": "Resistance",
     "symbol": "",
-    "unit": "Ω",
+    "unit": "",
     "stat": "range",
     "conditions": "",
     "example": "0Ω (≦10mΩ)"
    },
    {
-    "name": "Insulation Resistance",
-    "symbol": "",
-    "unit": "GΩ",
-    "stat": "min",
-    "conditions": "",
-    "example": "≥10G"
-   },
-   {
-    "name": "Operational Life",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "ΔR:±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Biased Humidity",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "ΔR:±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "High Temperature Exposure",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "ΔR:±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Board Flex",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "ΔR:±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "",
-    "stat": "min",
-    "conditions": "",
-    "example": "95% min. coverage"
-   },
-   {
-    "name": "Resistance to Soldering Heat",
+    "name": "Soldering Condition",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "260°C for 10 seconds"
+    "example": "Pb-Free Assembly"
    },
    {
-    "name": "Voltage Proof",
+    "name": "Reflow Profiles",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "No breakdown or flashover"
-   },
-   {
-    "name": "Leaching",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "Individual leaching area ≦5% Total leach"
+    "example": "217°C for 60-150 seconds"
    },
    {
     "name": "Temperature Cycling",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "ΔR:±(0.5%+0.05Ω)"
-   },
-   {
-    "name": "Mechanical Shock",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "ΔR:±(0.25%+0.05Ω)"
-   },
-   {
-    "name": "Vibration",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "ΔR:±(0.5%+0.05Ω)"
    },
@@ -392,25 +216,9 @@
     "name": "ESD",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "ΔR:±(3%+0.05Ω)"
-   },
-   {
-    "name": "Resistance to Solvents",
-    "symbol": "",
-    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "No visible damage on appearance and mark"
-   },
-   {
-    "name": "Terminal Strength",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No broken"
+    "example": "0402/0603: 1KV 0805 and above: 2KV"
    },
    {
     "name": "Flammability",
@@ -429,40 +237,16 @@
     "example": "EIA-977 (Condition B) 105±2°C, no power "
    },
    {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "15~28"
-   },
-   {
-    "name": "Humidity",
-    "symbol": "",
-    "unit": "%RH",
-    "stat": "max",
-    "conditions": "",
-    "example": "< 80"
-   },
-   {
     "name": "Shelf Life",
-    "symbol": "",
-    "unit": "years",
-    "stat": "max",
-    "conditions": "",
-    "example": "2"
-   },
-   {
-    "name": "Packaging Code",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "T: 7”Taping Reel"
+    "example": "2 years"
    }
   ],
-  "seconds": 275.38,
-  "tokens_in": 12531,
-  "tokens_out": 3922
+  "seconds": 163.48,
+  "tokens_in": 12631,
+  "tokens_out": 1586
  }
 }

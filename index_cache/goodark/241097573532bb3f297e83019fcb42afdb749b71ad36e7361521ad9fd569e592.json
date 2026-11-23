@@ -24,17 +24,25 @@
  },
  "type": "zener_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:28:53+00:00",
+  "at": "2026-11-23T06:30:08+00:00",
   "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA=25°C unless otherwise noted",
+    "example": "Zener voltage"
+   },
    {
     "name": "Zener voltage",
     "symbol": "VZ",
     "unit": "V",
     "stat": "range",
     "conditions": "",
-    "example": "8.65 to 9.56"
+    "example": "See Next Table"
    },
    {
     "name": "Power dissipation at TL=75℃",
@@ -61,6 +69,14 @@
     "example": "-55 to +150"
    },
    {
+    "name": "Thermal-Mechanical Specifications",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA=25℃ unless otherwise noted",
+    "example": "Thermal Resistance, Junction to Ambient"
+   },
+   {
     "name": "Thermal Resistance, Junction to Ambient",
     "symbol": "RthJA",
     "unit": "°C /W",
@@ -85,12 +101,84 @@
     "example": "20"
    },
    {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A1.5SMBZ"
+   },
+   {
+    "name": "Zener voltage tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±5%"
+   },
+   {
+    "name": "Total power dissipation",
+    "symbol": "",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "1.5"
+   },
+   {
+    "name": "Moisture sensitivity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "level 1, per J-STD-020"
+   },
+   {
+    "name": "Halogen-free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "according to IEC 61249-2-21 definition"
+   },
+   {
+    "name": "AEC-Q101 qualified",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q101 qualified"
+   },
+   {
+    "name": "Electrical Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA = 25 °C unless otherwise noted",
+    "example": "Part Number"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A1.5SMBZ9.1A"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A9V1A"
+   },
+   {
     "name": "VZ at IZT (V)",
     "symbol": "",
     "unit": "V",
     "stat": "range",
-    "conditions": "IZT",
-    "example": "8.65 to 9.56"
+    "conditions": "IZT (mA)",
+    "example": "8.65"
    },
    {
     "name": "IZT (mA)",
@@ -102,18 +190,18 @@
    },
    {
     "name": "Maximum zener impedance",
-    "symbol": "ZZT at IZT",
+    "symbol": "",
     "unit": "Ω",
     "stat": "max",
-    "conditions": "IZT",
+    "conditions": "ZZT at IZT",
     "example": "4"
    },
    {
     "name": "Maximum zener impedance",
-    "symbol": "ZZK at IZK",
+    "symbol": "",
     "unit": "Ω",
     "stat": "max",
-    "conditions": "IZK",
+    "conditions": "ZZK at IZK",
     "example": "500"
    },
    {
@@ -125,15 +213,15 @@
     "example": "0.5"
    },
    {
-    "name": "Maximum reverse leakage at VR",
-    "symbol": "Maximum reverse leakage at VR",
+    "name": "Maximum reverse leakage at VR (µA)",
+    "symbol": "",
     "unit": "µA",
     "stat": "max",
-    "conditions": "VR",
+    "conditions": "VR (V)",
     "example": "5"
    },
    {
-    "name": "Test voltage VR",
+    "name": "Test voltage VR (V)",
     "symbol": "VR",
     "unit": "V",
     "stat": "value",
@@ -149,8 +237,8 @@
     "example": "165"
    }
   ],
-  "seconds": 140.91,
-  "tokens_in": 2901,
-  "tokens_out": 678
+  "seconds": 141.56,
+  "tokens_in": 3001,
+  "tokens_out": 1116
  }
 }

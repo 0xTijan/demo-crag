@@ -20,16 +20,16 @@
  },
  "type": "complementary_npn_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:06:38+00:00",
+  "at": "2026-11-23T08:06:00+00:00",
   "items": [
    {
     "name": "Collect-Base Voltage",
     "symbol": "VCBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "60"
    },
    {
@@ -37,7 +37,7 @@
     "symbol": "VCEO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "50"
    },
    {
@@ -45,7 +45,7 @@
     "symbol": "VEBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "7"
    },
    {
@@ -53,7 +53,7 @@
     "symbol": "IC",
     "unit": "mA",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "150"
    },
    {
@@ -61,23 +61,23 @@
     "symbol": "PC",
     "unit": "mW",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "150"
    },
    {
     "name": "Junction Temperature",
-    "symbol": "",
+    "symbol": "TJ",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-55 to +150"
    },
    {
     "name": "Storage Temperature",
-    "symbol": "",
+    "symbol": "TSTG",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-55 to +150"
    },
    {
@@ -85,7 +85,7 @@
     "symbol": "VCBO",
     "unit": "V",
     "stat": "min",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-60"
    },
    {
@@ -93,7 +93,7 @@
     "symbol": "VCEO",
     "unit": "V",
     "stat": "min",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-50"
    },
    {
@@ -101,7 +101,7 @@
     "symbol": "VEBO",
     "unit": "V",
     "stat": "min",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-6"
    },
    {
@@ -109,7 +109,7 @@
     "symbol": "IC",
     "unit": "mA",
     "stat": "min",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-150"
    },
    {
@@ -212,7 +212,7 @@
     "name": "Collector Cut-off Current",
     "symbol": "I CBO",
     "unit": "µA",
-    "stat": "max",
+    "stat": "min",
     "conditions": "V =-60V, I =0 CB E",
     "example": "-0.1"
    },
@@ -220,7 +220,7 @@
     "name": "Emitter Cut-off Current",
     "symbol": "I EBO",
     "unit": "µA",
-    "stat": "max",
+    "stat": "min",
     "conditions": "V =-6V, I =0 EB C",
     "example": "-0.1"
    },
@@ -236,7 +236,7 @@
     "name": "Collector-emitter Saturation Voltage",
     "symbol": "V CE(sat)",
     "unit": "V",
-    "stat": "max",
+    "stat": "min",
     "conditions": "I =-50mA, I =-5mA C B",
     "example": "-0.5"
    },
@@ -255,10 +255,50 @@
     "stat": "max",
     "conditions": "V =-12V, I =0, f=1MHz CB E",
     "example": "5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-363"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Z2"
+   },
+   {
+    "name": "Carrier",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Tape & Reel"
+   },
+   {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "pcs",
+    "stat": "value",
+    "conditions": "",
+    "example": "3,000"
+   },
+   {
+    "name": "HSF Status",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS Compliant"
    }
   ],
-  "seconds": 110.98,
-  "tokens_in": 2175,
-  "tokens_out": 1570
+  "seconds": 112.73,
+  "tokens_in": 2275,
+  "tokens_out": 1840
  }
 }

@@ -24,177 +24,113 @@
  },
  "type": "pulse_withstanding_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:33:05+00:00",
+  "at": "2026-11-23T08:27:17+00:00",
   "items": [
    {
-    "name": "Absolute Maximum Ratings",
+    "name": "Package",
     "symbol": "",
     "unit": "",
-    "stat": "max",
-    "conditions": "",
-    "example": "155°C"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 155"
-   },
-   {
-    "name": "Power Rating at 70°C",
-    "symbol": "",
-    "unit": "W",
     "stat": "value",
     "conditions": "",
-    "example": "1/5W"
+    "example": "0402/0603/0805/1206/1210/2010/2512"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "±0.5%~5%"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "at 70°C",
+    "example": "1/10W"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +155°C"
    },
    {
     "name": "Max. Operating Voltage",
     "symbol": "",
-    "unit": "V",
-    "stat": "max",
+    "unit": "",
+    "stat": "range",
     "conditions": "",
-    "example": "500"
+    "example": "50V"
    },
    {
     "name": "Max. Overload Voltage",
     "symbol": "",
-    "unit": "V",
-    "stat": "max",
+    "unit": "",
+    "stat": "range",
     "conditions": "",
-    "example": "1000"
+    "example": "100V"
    },
    {
     "name": "Resistance Range",
     "symbol": "",
-    "unit": "Ω",
+    "unit": "",
     "stat": "range",
     "conditions": "±0.5% (E24,E96)",
-    "example": "1 to 20"
+    "example": "1Ω-20Ω"
    },
    {
     "name": "Resistance Range",
     "symbol": "",
-    "unit": "Ω",
+    "unit": "",
     "stat": "range",
     "conditions": "±1% (E24,E96)",
-    "example": "1 to 20"
+    "example": "1Ω-20Ω"
    },
    {
     "name": "Resistance Range",
     "symbol": "",
-    "unit": "Ω",
+    "unit": "",
     "stat": "range",
     "conditions": "±5% (E24)",
-    "example": "1 to 20"
+    "example": "1Ω-20Ω"
    },
    {
     "name": "TCR (PPM/°C)",
     "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±0.5% (E24,E96)",
-    "example": "±300"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±1% (E24,E96)",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
     "example": "±100"
    },
    {
     "name": "TCR (PPM/°C)",
     "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±5% (E24)",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±200",
     "example": "±200"
    },
    {
-    "name": "Size",
+    "name": "TCR (PPM/°C)",
     "symbol": "",
-    "unit": "Inch",
-    "stat": "value",
-    "conditions": "PWR02",
-    "example": "0402"
+    "unit": "",
+    "stat": "range",
+    "conditions": "±300",
+    "example": "±300"
    },
    {
-    "name": "Size",
+    "name": "TCR (PPM/°C)",
     "symbol": "",
-    "unit": "Inch",
-    "stat": "value",
-    "conditions": "PWR03",
-    "example": "0603"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "Inch",
-    "stat": "value",
-    "conditions": "PWR05",
-    "example": "0805"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "Inch",
-    "stat": "value",
-    "conditions": "PWR06",
-    "example": "1206"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "Inch",
-    "stat": "value",
-    "conditions": "PWR13",
-    "example": "1210"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "Inch",
-    "stat": "value",
-    "conditions": "PWR10",
-    "example": "2010"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "Inch",
-    "stat": "value",
-    "conditions": "PWR12",
-    "example": "2512"
-   },
-   {
-    "name": "Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±0.5%",
-    "example": "±0.5"
-   },
-   {
-    "name": "Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±1%",
-    "example": "±1"
-   },
-   {
-    "name": "Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±5%",
-    "example": "±5"
+    "unit": "",
+    "stat": "range",
+    "conditions": "±350",
+    "example": "±350"
    },
    {
     "name": "AEC-Q200 Compliance",
@@ -202,7 +138,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Compliance"
+    "example": "AEC-Q200"
    },
    {
     "name": "MSL",
@@ -218,187 +154,547 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Compliance"
+    "example": "Compliant"
    },
    {
     "name": "Part Numbering",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Dimensions",
-    "example": "02"
+    "conditions": "",
+    "example": "PWR"
    },
    {
-    "name": "Part Numbering",
+    "name": "Dimensions",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Resistance Tolerance",
-    "example": "D"
+    "conditions": "",
+    "example": "0402/0603/0805/1206/1210/2010/2512"
    },
    {
-    "name": "Part Numbering",
+    "name": "L (mm)",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "Packaging Code",
-    "example": "T"
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0402",
+    "example": "1.00±0.05"
    },
    {
-    "name": "Part Numbering",
+    "name": "W (mm)",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "TCR (PPM/°C)",
-    "example": "E"
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0402",
+    "example": "0.50±0.05"
    },
    {
-    "name": "Part Numbering",
+    "name": "T (mm)",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "Power Rating",
-    "example": "X"
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0402",
+    "example": "0.35±0.05"
    },
    {
-    "name": "Part Numbering",
+    "name": "D1 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0402",
+    "example": "0.20±0.10"
+   },
+   {
+    "name": "D2 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0402",
+    "example": "0.25±0.10"
+   },
+   {
+    "name": "Weight (g) (1000pcs)",
+    "symbol": "",
+    "unit": "g",
+    "stat": "range",
+    "conditions": "0402",
+    "example": "0.6"
+   },
+   {
+    "name": "Max. Operating Voltage",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "Resistance",
-    "example": "1001"
+    "stat": "range",
+    "conditions": "0805",
+    "example": "150V"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1206",
+    "example": "200V"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1210",
+    "example": "200V"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2010",
+    "example": "400V"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2512",
+    "example": "500V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "0805",
+    "example": "300V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1206",
+    "example": "400V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1210",
+    "example": "400V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2010",
+    "example": "800V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2512",
+    "example": "1000V"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96) for 0402",
+    "example": "1Ω-20Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96) for 0402",
+    "example": "1Ω-20Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24) for 0402",
+    "example": "1Ω-20Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96) for 0603",
+    "example": "10Ω - 294Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96) for 0603",
+    "example": "1Ω - 294Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24) for 0603",
+    "example": "1Ω - 294Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96) for 0805",
+    "example": "10Ω- 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96) for 0805",
+    "example": "10Ω- 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24) for 0805",
+    "example": "10Ω- 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96) for 1206",
+    "example": "10Ω- 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96) for 1206",
+    "example": "10Ω- 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24) for 1206",
+    "example": "10Ω- 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96) for 1210",
+    "example": "10Ω- 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96) for 1210",
+    "example": "10Ω- 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24) for 1210",
+    "example": "10Ω- 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96) for 2010",
+    "example": "10Ω - 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96) for 2010",
+    "example": "10Ω - 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24) for 2010",
+    "example": "10Ω - 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±0.5% (E24,E96) for 2512",
+    "example": "10Ω - 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96) for 2512",
+    "example": "10Ω - 20MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24) for 2512",
+    "example": "10Ω - 20MΩ"
+   },
+   {
+    "name": "Rated Terminal Part Temp.",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "Special High Power",
+    "example": "105°C"
    },
    {
     "name": "Jumper Resistance",
     "symbol": "",
-    "unit": "Ω",
-    "stat": "max",
-    "conditions": "",
-    "example": "0.01"
+    "unit": "",
+    "stat": "range",
+    "conditions": "0402",
+    "example": "0Ω (≦10mΩ)"
    },
    {
-    "name": "Jumper Rated Current",
+    "name": "Jumper Resistance",
     "symbol": "",
-    "unit": "A",
-    "stat": "value",
-    "conditions": "",
-    "example": "3"
+    "unit": "",
+    "stat": "range",
+    "conditions": "0603",
+    "example": "0Ω (≦8mΩ)"
    },
    {
-    "name": "Jumper Overload Current",
+    "name": "Jumper Resistance",
     "symbol": "",
-    "unit": "A",
-    "stat": "value",
-    "conditions": "",
-    "example": "6"
+    "unit": "",
+    "stat": "range",
+    "conditions": "0805",
+    "example": "0Ω (≦5mΩ)"
+   },
+   {
+    "name": "Jumper Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1206",
+    "example": "0Ω (≦5mΩ)"
+   },
+   {
+    "name": "Jumper Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1210",
+    "example": "0Ω (≦4mΩ)"
+   },
+   {
+    "name": "Jumper Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2010",
+    "example": "0Ω (≦5mΩ)"
+   },
+   {
+    "name": "Jumper Resistance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2512",
+    "example": "0Ω (≦5mΩ)"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "0402 Jumper",
+    "example": "3A"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "0603 Jumper",
+    "example": "5A"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "0805 Jumper",
+    "example": "1.5A"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1206 Jumper",
+    "example": "1.5A"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1210 Jumper",
+    "example": "1.5A"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2010 Jumper",
+    "example": "1.5A"
+   },
+   {
+    "name": "Rated Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2512 Jumper",
+    "example": "1.5A"
+   },
+   {
+    "name": "Overload Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "0402 Jumper",
+    "example": "3A"
+   },
+   {
+    "name": "Overload Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "0603 Jumper",
+    "example": "5A"
+   },
+   {
+    "name": "Overload Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "0805 Jumper",
+    "example": "1.5A"
+   },
+   {
+    "name": "Overload Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1206 Jumper",
+    "example": "1.5A"
+   },
+   {
+    "name": "Overload Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "1210 Jumper",
+    "example": "1.5A"
+   },
+   {
+    "name": "Overload Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2010 Jumper",
+    "example": "1.5A"
+   },
+   {
+    "name": "Overload Current",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "2512 Jumper",
+    "example": "1.5A"
    },
    {
     "name": "Insulation Resistance",
     "symbol": "",
-    "unit": "GΩ",
-    "stat": "min",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "10"
+    "example": "≥100MΩ"
    },
    {
-    "name": "Endurance",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Damp Heat with Load",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "",
-    "example": "±(0.5%+0.05Ω)"
-   },
-   {
-    "name": "Dry Heat",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "",
-    "example": "±(0.5%+0.05Ω)"
-   },
-   {
-    "name": "Bending Strength",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "%",
-    "stat": "min",
-    "conditions": "",
-    "example": "95"
-   },
-   {
-    "name": "Resistance to Soldering Heat",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "260"
-   },
-   {
-    "name": "Voltage Proof",
+    "name": "Dielectric Strength",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "No breakdown or flashover"
+    "example": "500V"
    },
    {
-    "name": "Leaching",
+    "name": "Soldering Temperature",
     "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "Individual leaching area",
-    "example": "5"
-   },
-   {
-    "name": "Leaching",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "Total leaching area",
-    "example": "10"
-   },
-   {
-    "name": "Rapid Change of Temperature",
-    "symbol": "",
-    "unit": "°C",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 155"
+    "example": "260°C"
+   },
+   {
+    "name": "Soldering Time",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "10s"
    },
    {
     "name": "Storage Temperature",
     "symbol": "",
-    "unit": "°C",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "15 to 28"
+    "example": "25°C"
    },
    {
     "name": "Shelf Life",
     "symbol": "",
-    "unit": "years",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "2"
+    "example": "2 years"
    }
   ],
-  "seconds": 92.72,
-  "tokens_in": 12119,
-  "tokens_out": 1861
+  "seconds": 153.28,
+  "tokens_in": 12219,
+  "tokens_out": 5011
  }
 }

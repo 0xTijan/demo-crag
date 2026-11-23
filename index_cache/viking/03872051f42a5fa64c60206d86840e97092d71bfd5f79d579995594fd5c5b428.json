@@ -24,9 +24,9 @@
  },
  "type": "power_inductor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:41:24+00:00",
+  "at": "2026-11-23T06:51:09+00:00",
   "items": [
    {
     "name": "Customer",
@@ -69,44 +69,36 @@
     "example": "REV.C3"
    },
    {
-    "name": "Operating temperature range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-40～125°C"
-   },
-   {
-    "name": "Storage temperature range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-40～85℃"
-   },
-   {
-    "name": "Humidity",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "25%∼80%"
-   },
-   {
-    "name": "Shelf life",
+    "name": "Features",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1 years Max"
+    "example": "Directly connected electrode on ferrite "
    },
    {
-    "name": "Rated DC Current",
+    "name": "Applications",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Ta=25°C",
-    "example": "The current when the inductance becomes "
+    "conditions": "",
+    "example": "Power Supply For VTRs"
+   },
+   {
+    "name": "Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Rated DC Current: The current when the i"
+   },
+   {
+    "name": "Product Identification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "5D28"
    },
    {
     "name": "Dimensions (AxAxB)",
@@ -197,27 +189,11 @@
     "example": "1.0"
    },
    {
-    "name": "Inductance and rated current ranges",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "SCDS3D18: 1.0～220μH, 2.40～0.13A"
-   },
-   {
-    "name": "Part No",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "SCDS3D18□T1R0"
-   },
-   {
     "name": "L (μH)",
-    "symbol": "",
+    "symbol": "L",
     "unit": "μH",
-    "stat": "value",
-    "conditions": "",
+    "stat": "range",
+    "conditions": "100KHz, 0.1V",
     "example": "1.0"
    },
    {
@@ -225,7 +201,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "100KHz, 0.1V",
     "example": "N"
    },
    {
@@ -238,19 +214,107 @@
    },
    {
     "name": "DCR (Ω) max.",
-    "symbol": "",
+    "symbol": "DCR",
     "unit": "Ω",
     "stat": "max",
-    "conditions": "",
+    "conditions": "100KHz, 0.1V",
     "example": "0.050"
    },
    {
     "name": "IDC (A) max.",
-    "symbol": "",
+    "symbol": "IDC",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "100KHz, 0.1V",
     "example": "2.40"
+   },
+   {
+    "name": "L (μH)",
+    "symbol": "L",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "10KHz, 0.1V",
+    "example": "2.2"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "10KHz, 0.1V",
+    "example": "M, N"
+   },
+   {
+    "name": "DCR (Ω) max.",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "10KHz, 0.1V",
+    "example": "0.039"
+   },
+   {
+    "name": "IDC (A) max.",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "10KHz, 0.1V",
+    "example": "2.30"
+   },
+   {
+    "name": "L (μH)",
+    "symbol": "L",
+    "unit": "μH",
+    "stat": "range",
+    "conditions": "1KHz, 0.25V",
+    "example": "47"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "1KHz, 0.25V",
+    "example": "M"
+   },
+   {
+    "name": "DCR (Ω) max.",
+    "symbol": "DCR",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "1KHz, 0.25V",
+    "example": "0.73"
+   },
+   {
+    "name": "IDC (A) max.",
+    "symbol": "IDC",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "1KHz, 0.25V",
+    "example": "0.35"
+   },
+   {
+    "name": "Tape size W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "12"
+   },
+   {
+    "name": "Tape size P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Parts Per Reel",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "13\"",
+    "example": "1000"
    },
    {
     "name": "Bending Test",
@@ -319,10 +383,10 @@
    {
     "name": "Insulation resistance",
     "symbol": "",
-    "unit": "MΩ",
-    "stat": "min",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "100"
+    "example": "100MΩ or more."
    },
    {
     "name": "Low temperature",
@@ -371,34 +435,10 @@
     "stat": "value",
     "conditions": "",
     "example": "Ambient temperature : 5℃ to 35℃, Relativ"
-   },
-   {
-    "name": "Tape size W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "12"
-   },
-   {
-    "name": "Tape size P",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "8"
-   },
-   {
-    "name": "Parts Per Reel",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "13\"",
-    "example": "1000"
    }
   ],
-  "seconds": 213.71,
-  "tokens_in": 13508,
-  "tokens_out": 2045
+  "seconds": 84.29,
+  "tokens_in": 13608,
+  "tokens_out": 3155
  }
 }

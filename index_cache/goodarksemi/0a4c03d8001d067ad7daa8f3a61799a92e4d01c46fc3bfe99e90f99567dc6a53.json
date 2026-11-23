@@ -20,17 +20,33 @@
  },
  "type": "complementary_mosfet",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:50:58+00:00",
+  "at": "2026-11-23T06:59:55+00:00",
   "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Absolute Maximum Ratings"
+   },
    {
     "name": "Drain-Source Voltage",
     "symbol": "VDS",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "N-Ch",
     "example": "30"
+   },
+   {
+    "name": "Drain-Source Voltage",
+    "symbol": "VDS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "P-Ch",
+    "example": "-30"
    },
    {
     "name": "Gate-Source Voltage",
@@ -38,14 +54,14 @@
     "unit": "V",
     "stat": "max",
     "conditions": "",
-    "example": "20"
+    "example": "±20"
    },
    {
     "name": "Drain Current – Continuous (TC=25°C)",
     "symbol": "ID",
     "unit": "A",
     "stat": "max",
-    "conditions": "TC=25°C",
+    "conditions": "N-Ch",
     "example": "12"
    },
    {
@@ -53,7 +69,7 @@
     "symbol": "ID",
     "unit": "A",
     "stat": "max",
-    "conditions": "TC=100°C",
+    "conditions": "N-Ch",
     "example": "7.6"
    },
    {
@@ -61,7 +77,7 @@
     "symbol": "IDM",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "N-Ch",
     "example": "48"
    },
    {
@@ -69,7 +85,7 @@
     "symbol": "E AS",
     "unit": "mJ",
     "stat": "max",
-    "conditions": "",
+    "conditions": "N-Ch",
     "example": "32"
    },
    {
@@ -77,7 +93,7 @@
     "symbol": "I AS",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "N-Ch",
     "example": "8"
    },
    {
@@ -85,7 +101,7 @@
     "symbol": "PD",
     "unit": "W",
     "stat": "max",
-    "conditions": "TC=25°C",
+    "conditions": "",
     "example": "20"
    },
    {
@@ -98,11 +114,11 @@
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "",
+    "symbol": "TSTG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "-55 to +150"
    },
    {
     "name": "Operating Junction Temperature Range",
@@ -110,7 +126,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "-55 to +150"
    },
    {
     "name": "Thermal Resistance Junction to Ambient",
@@ -133,7 +149,7 @@
     "symbol": "BVDSS",
     "unit": "V",
     "stat": "min",
-    "conditions": "VGS=0V, ID=250uA",
+    "conditions": "N-Ch",
     "example": "30"
    },
    {
@@ -141,7 +157,7 @@
     "symbol": "IDSS",
     "unit": "uA",
     "stat": "max",
-    "conditions": "VDS=30V, VGS=0V, TJ=25°C",
+    "conditions": "N-Ch, VDS=30V, VGS=0V, TJ=25°C",
     "example": "1"
    },
    {
@@ -149,7 +165,7 @@
     "symbol": "IDSS",
     "unit": "uA",
     "stat": "max",
-    "conditions": "VDS=24V, VGS=0V, TJ=125°C",
+    "conditions": "N-Ch, VDS=24V, VGS=0V, TJ=125°C",
     "example": "10"
    },
    {
@@ -157,15 +173,15 @@
     "symbol": "IGSS",
     "unit": "nA",
     "stat": "max",
-    "conditions": "VGS=±20V, VDS=0V",
-    "example": "100"
+    "conditions": "N-Ch, VGS=±20V, VDS=0V",
+    "example": "±100"
    },
    {
     "name": "Static Drain-Source On-Resistance",
     "symbol": "RDS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "VGS=10V, ID=8A",
+    "conditions": "N-Ch, VGS=10V, ID=8A",
     "example": "20"
    },
    {
@@ -173,7 +189,7 @@
     "symbol": "RDS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "VGS=4.5V, ID=5A",
+    "conditions": "N-Ch, VGS=4.5V, ID=5A",
     "example": "30"
    },
    {
@@ -181,7 +197,7 @@
     "symbol": "VGS(th)",
     "unit": "V",
     "stat": "range",
-    "conditions": "VGS=VDS, ID=250uA",
+    "conditions": "N-Ch",
     "example": "1.2 to 2.5"
    },
    {
@@ -189,7 +205,7 @@
     "symbol": "△VGS(th)",
     "unit": "mV/°C",
     "stat": "max",
-    "conditions": "VGS=VDS, ID=250uA",
+    "conditions": "N-Ch",
     "example": "-4"
    },
    {
@@ -197,7 +213,7 @@
     "symbol": "gfs",
     "unit": "S",
     "stat": "typ",
-    "conditions": "VDS=5V, ID=6A",
+    "conditions": "N-Ch, VDS=5V, ID=6A",
     "example": "13"
    },
    {
@@ -205,7 +221,7 @@
     "symbol": "Qg",
     "unit": "nC",
     "stat": "max",
-    "conditions": "VDS=15V, VGS=10V, ID=6A",
+    "conditions": "N-Ch, VDS=15V, VGS=10V, ID=6A",
     "example": "18"
    },
    {
@@ -213,7 +229,7 @@
     "symbol": "Qgs",
     "unit": "nC",
     "stat": "max",
-    "conditions": "VDS=15V, VGS=10V, ID=6A",
+    "conditions": "N-Ch, VDS=15V, VGS=10V, ID=6A",
     "example": "2"
    },
    {
@@ -221,7 +237,7 @@
     "symbol": "Qgd",
     "unit": "nC",
     "stat": "max",
-    "conditions": "VDS=15V, VGS=10V, ID=6A",
+    "conditions": "N-Ch, VDS=15V, VGS=10V, ID=6A",
     "example": "4"
    },
    {
@@ -229,7 +245,7 @@
     "symbol": "Td(on)",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VDD=15V, VGS=10V, RG=6Ω, ID=1A",
+    "conditions": "N-Ch, VDD=15V, VGS=10V, RG=6Ω, ID=1A",
     "example": "5"
    },
    {
@@ -237,7 +253,7 @@
     "symbol": "Tr",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VDD=15V, VGS=10V, RG=6Ω, ID=1A",
+    "conditions": "N-Ch, VDD=15V, VGS=10V, RG=6Ω, ID=1A",
     "example": "14"
    },
    {
@@ -245,7 +261,7 @@
     "symbol": "Td(off)",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VDD=15V, VGS=10V, RG=6Ω, ID=1A",
+    "conditions": "N-Ch, VDD=15V, VGS=10V, RG=6Ω, ID=1A",
     "example": "30"
    },
    {
@@ -253,7 +269,7 @@
     "symbol": "Tf",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VDD=15V, VGS=10V, RG=6Ω, ID=1A",
+    "conditions": "N-Ch, VDD=15V, VGS=10V, RG=6Ω, ID=1A",
     "example": "9"
    },
    {
@@ -261,7 +277,7 @@
     "symbol": "Ciss",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VDS=25V, VGS=0V, F=1MHz",
+    "conditions": "N-Ch, VDS=25V, VGS=0V, F=1MHz",
     "example": "500"
    },
    {
@@ -269,7 +285,7 @@
     "symbol": "Coss",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VDS=25V, VGS=0V, F=1MHz",
+    "conditions": "N-Ch, VDS=25V, VGS=0V, F=1MHz",
     "example": "80"
    },
    {
@@ -277,7 +293,7 @@
     "symbol": "Crss",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VDS=25V, VGS=0V, F=1MHz",
+    "conditions": "N-Ch, VDS=25V, VGS=0V, F=1MHz",
     "example": "55"
    },
    {
@@ -285,7 +301,7 @@
     "symbol": "Rg",
     "unit": "Ω",
     "stat": "max",
-    "conditions": "VGS=0V, VDS=0V, F=1MHz",
+    "conditions": "N-Ch, VGS=0V, VDS=0V, F=1MHz",
     "example": "6.4"
    },
    {
@@ -293,7 +309,7 @@
     "symbol": "IS",
     "unit": "A",
     "stat": "max",
-    "conditions": "VG=VD=0V, Force Current",
+    "conditions": "N-Ch, VG=VD=0V, Force Current",
     "example": "12"
    },
    {
@@ -301,7 +317,7 @@
     "symbol": "ISM",
     "unit": "A",
     "stat": "max",
-    "conditions": "VG=VD=0V, Force Current",
+    "conditions": "N-Ch, VG=VD=0V, Force Current",
     "example": "24"
    },
    {
@@ -309,15 +325,15 @@
     "symbol": "VSD",
     "unit": "V",
     "stat": "max",
-    "conditions": "VGS=0V, IS=1A, TJ=25°C",
+    "conditions": "N-Ch, VGS=0V, IS=1A, TJ=25°C",
     "example": "1"
    },
    {
     "name": "Drain-Source Breakdown Voltage",
     "symbol": "BVDSS",
     "unit": "V",
-    "stat": "max",
-    "conditions": "VGS=0V, ID=-250uA",
+    "stat": "min",
+    "conditions": "P-Ch",
     "example": "-30"
    },
    {
@@ -325,7 +341,7 @@
     "symbol": "△BVDSS/ △TJ",
     "unit": "V/°C",
     "stat": "max",
-    "conditions": "Reference to 25°C, ID=-1mA",
+    "conditions": "P-Ch",
     "example": "-0.03"
    },
    {
@@ -333,7 +349,7 @@
     "symbol": "IDSS",
     "unit": "uA",
     "stat": "max",
-    "conditions": "VDS=-30V, VGS=0V, TJ=25°C",
+    "conditions": "P-Ch, VDS=-30V, VGS=0V, TJ=25°C",
     "example": "-1"
    },
    {
@@ -341,15 +357,23 @@
     "symbol": "IDSS",
     "unit": "uA",
     "stat": "max",
-    "conditions": "VDS=-24V, VGS=0V, TJ=125°C",
+    "conditions": "P-Ch, VDS=-24V, VGS=0V, TJ=125°C",
     "example": "-10"
+   },
+   {
+    "name": "Gate-Source Leakage Current",
+    "symbol": "IGSS",
+    "unit": "nA",
+    "stat": "max",
+    "conditions": "P-Ch, VGS=±20V, VDS=0V",
+    "example": "±100"
    },
    {
     "name": "Static Drain-Source On-Resistance",
     "symbol": "RDS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "VGS=-10V, ID=-8A",
+    "conditions": "P-Ch, VGS=-10V, ID=-8A",
     "example": "18"
    },
    {
@@ -357,7 +381,7 @@
     "symbol": "RDS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "VGS=-4.5V, ID=-5A",
+    "conditions": "P-Ch, VGS=-4.5V, ID=-5A",
     "example": "30"
    },
    {
@@ -365,15 +389,15 @@
     "symbol": "VGS(th)",
     "unit": "V",
     "stat": "range",
-    "conditions": "VGS=VDS, ID=-250uA",
-    "example": "-2.5 to -1.2"
+    "conditions": "P-Ch",
+    "example": "-1.2 to -2.5"
    },
    {
     "name": "VGS(th) Temperature Coefficient",
     "symbol": "△VGS(th)",
     "unit": "mV/°C",
     "stat": "max",
-    "conditions": "VGS=VDS, ID=-250uA",
+    "conditions": "P-Ch",
     "example": "4"
    },
    {
@@ -381,7 +405,7 @@
     "symbol": "gfs",
     "unit": "S",
     "stat": "typ",
-    "conditions": "VDS=-10V, ID=-3A",
+    "conditions": "P-Ch, VDS=-10V, ID=-3A",
     "example": "6.8"
    },
    {
@@ -389,7 +413,7 @@
     "symbol": "Qg",
     "unit": "nC",
     "stat": "max",
-    "conditions": "VDS=-15V, VGS=-10V, ID=-5A",
+    "conditions": "P-Ch, VDS=-15V, VGS=-10V, ID=-5A",
     "example": "48"
    },
    {
@@ -397,7 +421,7 @@
     "symbol": "Qgs",
     "unit": "nC",
     "stat": "max",
-    "conditions": "VDS=-15V, VGS=-10V, ID=-5A",
+    "conditions": "P-Ch, VDS=-15V, VGS=-10V, ID=-5A",
     "example": "6"
    },
    {
@@ -405,7 +429,7 @@
     "symbol": "Qgd",
     "unit": "nC",
     "stat": "max",
-    "conditions": "VDS=-15V, VGS=-10V, ID=-5A",
+    "conditions": "P-Ch, VDS=-15V, VGS=-10V, ID=-5A",
     "example": "8"
    },
    {
@@ -413,7 +437,7 @@
     "symbol": "Td(on)",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VDD=-15V, VGS=-10V, RG=6Ω, ID=-1A",
+    "conditions": "P-Ch, VDD=-15V, VGS=-10V, RG=6Ω, ID=-1A",
     "example": "11"
    },
    {
@@ -421,7 +445,7 @@
     "symbol": "Tr",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VDD=-15V, VGS=-10V, RG=6Ω, ID=-1A",
+    "conditions": "P-Ch, VDD=-15V, VGS=-10V, RG=6Ω, ID=-1A",
     "example": "36"
    },
    {
@@ -429,7 +453,7 @@
     "symbol": "Td(off)",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VDD=-15V, VGS=-10V, RG=6Ω, ID=-1A",
+    "conditions": "P-Ch, VDD=-15V, VGS=-10V, RG=6Ω, ID=-1A",
     "example": "90"
    },
    {
@@ -437,7 +461,7 @@
     "symbol": "Tf",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VDD=-15V, VGS=-10V, RG=6Ω, ID=-1A",
+    "conditions": "P-Ch, VDD=-15V, VGS=-10V, RG=6Ω, ID=-1A",
     "example": "23"
    },
    {
@@ -445,7 +469,7 @@
     "symbol": "Ciss",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
+    "conditions": "P-Ch, VDS=-15V, VGS=0V, F=1MHz",
     "example": "2500"
    },
    {
@@ -453,7 +477,7 @@
     "symbol": "Coss",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
+    "conditions": "P-Ch, VDS=-15V, VGS=0V, F=1MHz",
     "example": "320"
    },
    {
@@ -461,20 +485,44 @@
     "symbol": "Crss",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
+    "conditions": "P-Ch, VDS=-15V, VGS=0V, F=1MHz",
     "example": "180"
+   },
+   {
+    "name": "Continuous Source Current",
+    "symbol": "IS",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "P-Ch, VG=VD=0V, Force Current",
+    "example": "-16"
+   },
+   {
+    "name": "Pulsed Source Current",
+    "symbol": "ISM",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "P-Ch, VG=VD=0V, Force Current",
+    "example": "-32"
    },
    {
     "name": "Diode Forward Voltage",
     "symbol": "VSD",
     "unit": "V",
     "stat": "max",
-    "conditions": "VGS=0V , IS=1A , TJ=25°C",
+    "conditions": "P-Ch, VGS=0V, IS=1A, TJ=25°C",
     "example": "-1"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "S2"
    }
   ],
-  "seconds": 156.93,
-  "tokens_in": 3414,
-  "tokens_out": 3259
+  "seconds": 177.3,
+  "tokens_in": 3514,
+  "tokens_out": 3415
  }
 }

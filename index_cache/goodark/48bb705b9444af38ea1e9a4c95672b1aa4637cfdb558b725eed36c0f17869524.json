@@ -20,9 +20,9 @@
  },
  "type": "esd_protection_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T11:12:38+00:00",
+  "at": "2026-11-23T06:18:28+00:00",
   "items": [
    {
     "name": "Peak Pulse Power (TP=8/20μS)",
@@ -143,90 +143,10 @@
     "stat": "value",
     "conditions": "",
     "example": "compliant"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "5C"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GOOD-ARK"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "A",
-    "example": "1.60-1.90"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "B",
-    "example": "1.15-1.45"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "C",
-    "example": "2.39-2.70"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "D",
-    "example": "0.80-1.10"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "E",
-    "example": "0.25-0.40"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "F",
-    "example": "0.10-0.20"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "max",
-    "conditions": "H",
-    "example": "0.10"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "min",
-    "conditions": "L",
-    "example": "0.20"
    }
   ],
-  "seconds": 66.52,
-  "tokens_in": 1427,
-  "tokens_out": 1168
+  "seconds": 58.1,
+  "tokens_in": 1527,
+  "tokens_out": 755
  }
 }

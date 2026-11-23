@@ -20,10 +20,18 @@
  },
  "type": "igbt_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:19:55+00:00",
+  "at": "2026-11-23T08:56:27+00:00",
   "items": [
+   {
+    "name": "Absolute Maximum Ratings (TJ=25°C unless otherwise noted)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Absolute Maximum Ratings (TJ=25°C unless"
+   },
    {
     "name": "Collector-Emitter Voltage",
     "symbol": "VCES",
@@ -38,15 +46,15 @@
     "unit": "V",
     "stat": "max",
     "conditions": "",
-    "example": "20"
+    "example": "±20"
    },
    {
-    "name": "Transient Gate-Emitter Voltage",
+    "name": "Transient Gate-Emitter Voltage(tp≤10us, D<0.01)",
     "symbol": "VGES",
     "unit": "V",
     "stat": "max",
-    "conditions": "tp≤10us, D<0.01",
-    "example": "30"
+    "conditions": "",
+    "example": "±30"
    },
    {
     "name": "Collector Current",
@@ -102,7 +110,15 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 175"
+    "example": "-55 to +175"
+   },
+   {
+    "name": "Thermal Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Thermal Characteristics"
    },
    {
     "name": "Thermal Resistance Junction to Case for IGBT",
@@ -121,12 +137,20 @@
     "example": "0.88"
    },
    {
-    "name": "Thermal Resistance Junction to Ambient",
+    "name": "Thermal Resistance Junction to Ambient (Note 1)",
     "symbol": "RthJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "Note 1",
+    "conditions": "Device mounted on 1 square inch FR4 PCB board, with 2oz single-sided copper, in a 25°C still air environment.",
     "example": "40"
+   },
+   {
+    "name": "Electrical Characteristics (TJ =25°C unless otherwise noted)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Electrical Characteristics (TJ =25°C unl"
    },
    {
     "name": "Collector-Emitter Breakdown Voltage",
@@ -158,23 +182,23 @@
     "unit": "nA",
     "stat": "max",
     "conditions": "VGE=±30V, VCE=0V",
-    "example": "200"
+    "example": "±200"
    },
    {
     "name": "Collector-Emitter Saturation Voltage",
     "symbol": "VCE(sat)",
     "unit": "V",
-    "stat": "range",
+    "stat": "typ",
     "conditions": "VGE=15V, IC=50A",
-    "example": "1.86 to 2.1"
+    "example": "1.86"
    },
    {
     "name": "Collector-Emitter Saturation Voltage",
     "symbol": "VCE(sat)",
     "unit": "V",
-    "stat": "range",
+    "stat": "typ",
     "conditions": "VGE=15V, IC=50A, TJ=175°C",
-    "example": "2.38 to 2.6"
+    "example": "2.38"
    },
    {
     "name": "Total Gate Charge",
@@ -281,6 +305,14 @@
     "example": "48.6"
    },
    {
+    "name": "Reverse Diode Characteristics (TJ =25°C unless otherwise noted)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Reverse Diode Characteristics (TJ =25°C "
+   },
+   {
     "name": "Diode Forward Voltage",
     "symbol": "VFM",
     "unit": "V",
@@ -327,26 +359,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-247AD"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 175"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GIT065N50E1C2"
    }
   ],
-  "seconds": 33.47,
-  "tokens_in": 2622,
-  "tokens_out": 2207
+  "seconds": 35.71,
+  "tokens_in": 2722,
+  "tokens_out": 2348
  }
 }

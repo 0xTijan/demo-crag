@@ -20,16 +20,16 @@
  },
  "type": "complementary_npn_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:07:15+00:00",
+  "at": "2026-11-23T08:06:38+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
     "symbol": "V CBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA= 25°C",
     "example": "50"
    },
    {
@@ -37,7 +37,7 @@
     "symbol": "V CEO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA= 25°C",
     "example": "45"
    },
    {
@@ -45,7 +45,7 @@
     "symbol": "V EBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA= 25°C",
     "example": "6"
    },
    {
@@ -53,7 +53,7 @@
     "symbol": "I C",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA= 25°C",
     "example": "0.1"
    },
    {
@@ -61,7 +61,7 @@
     "symbol": "P C",
     "unit": "mW",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA= 25°C",
     "example": "200"
    },
    {
@@ -69,16 +69,16 @@
     "symbol": "T J",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
+    "conditions": "TA= 25°C",
+    "example": "-55 to +150"
    },
    {
     "name": "Storage Temperature",
     "symbol": "T STG",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
+    "conditions": "TA= 25°C",
+    "example": "-55 to +150"
    },
    {
     "name": "Collector-Base Breakdown Voltage",
@@ -197,8 +197,64 @@
     "symbol": "NF",
     "unit": "dB",
     "stat": "max",
-    "conditions": "V.. (cid:32)(cid:24)(cid:57)(cid:15) (cid:44) (cid:32)0.(cid:21)(cid:80)(cid:36)(cid:15)(cid:3) C (cid:53) (cid:32)(cid:",
+    "conditions": "V.. (cid:32)(cid:24)(cid:57)(cid:15) (cid:44) (cid:32)0.(cid:21)(cid:80)(cid:36)(cid:15)(cid:3) C (cid:73)(cid:32)1(cid:",
     "example": "10"
+   },
+   {
+    "name": "Collector-Base Voltage",
+    "symbol": "V CBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "-50"
+   },
+   {
+    "name": "Collector-Emitter Voltage",
+    "symbol": "V CEO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "-45"
+   },
+   {
+    "name": "Emitter-Base Voltage",
+    "symbol": "V EBO",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "-5"
+   },
+   {
+    "name": "Collector Current-Continuous",
+    "symbol": "I C",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "-0.1"
+   },
+   {
+    "name": "Collector Power Dissipation",
+    "symbol": "P C",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "TA=25°C",
+    "example": "200"
+   },
+   {
+    "name": "Junction Temperature",
+    "symbol": "T J",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "TA=25°C",
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "T STG",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "TA=25°C",
+    "example": "-55 to +150"
    },
    {
     "name": "Collector-Base Breakdown Voltage",
@@ -353,8 +409,8 @@
     "example": "RoHS Compliant"
    }
   ],
-  "seconds": 106.29,
-  "tokens_in": 3098,
-  "tokens_out": 2654
+  "seconds": 110.28,
+  "tokens_in": 3198,
+  "tokens_out": 2777
  }
 }

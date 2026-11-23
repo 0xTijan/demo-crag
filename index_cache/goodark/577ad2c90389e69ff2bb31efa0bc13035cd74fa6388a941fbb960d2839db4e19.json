@@ -20,16 +20,16 @@
  },
  "type": "esd_tvs_array",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:36:18+00:00",
+  "at": "2026-11-23T06:48:55+00:00",
   "items": [
    {
     "name": "Peak Pulse Power",
     "symbol": "P_PP",
     "unit": "W",
     "stat": "max",
-    "conditions": "T =8/20μS",
+    "conditions": "tp = 8/20μs",
     "example": "80"
    },
    {
@@ -37,7 +37,7 @@
     "symbol": "I_PP",
     "unit": "A",
     "stat": "max",
-    "conditions": "tP = 8/20μS",
+    "conditions": "tp = 8/20μs",
     "example": "6"
    },
    {
@@ -69,7 +69,7 @@
     "symbol": "V_BR",
     "unit": "V",
     "stat": "range",
-    "conditions": "I =1mA T",
+    "conditions": "I = 1mA",
     "example": "6 to 8.5"
    },
    {
@@ -77,16 +77,16 @@
     "symbol": "I_R",
     "unit": "μA",
     "stat": "max",
-    "conditions": "V_R =5V",
+    "conditions": "V_R = 5V",
     "example": "1"
    },
    {
     "name": "Clamping Voltage(SURGE)",
     "symbol": "V_C",
     "unit": "V",
-    "stat": "max",
-    "conditions": "I_PP =6A，T_P =8/20μS",
-    "example": "16"
+    "stat": "typ",
+    "conditions": "I_PP = 6A, tp = 8/20μs",
+    "example": "14"
    },
    {
     "name": "Trigger Voltage(ESD)",
@@ -109,7 +109,7 @@
     "symbol": "C_J",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V_R =0V,f=1MHz, I/O to I/O",
+    "conditions": "V_R = 0V, f = 1MHz, I/O to I/O",
     "example": "0.2"
    },
    {
@@ -117,7 +117,7 @@
     "symbol": "C_J",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V_R =0V,f=1MHz, I/O to GND",
+    "conditions": "V_R = 0V, f = 1MHz, I/O to GND",
     "example": "0.4"
    },
    {
@@ -127,42 +127,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT23-6"
-   },
-   {
-    "name": "ESD Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61000-4-2 ±15KV contact ±15KV air"
-   },
-   {
-    "name": "EFT Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61000-4-4 (EFT) 40A (5/50ns)"
-   },
-   {
-    "name": "Lightning Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61000-4-5 (Lightning) 6A (8/20μs)"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "compliant"
    }
   ],
-  "seconds": 42.61,
-  "tokens_in": 1969,
-  "tokens_out": 827
+  "seconds": 35.75,
+  "tokens_in": 2069,
+  "tokens_out": 634
  }
 }

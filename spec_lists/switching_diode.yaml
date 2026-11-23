@@ -11,10 +11,11 @@ type: switching_diode
 name: small-signal switching diode
 version: 1
 status: draft
-must_match: []
-visual_check: pinout (G/D/S order)
+must_match:
+- package
+visual_check: diode cathode band / polarity mark (anode band for Schottky)
 drafted:
-  at: '2026-11-22T12:30:35+00:00'
+  at: '2026-11-23T06:44:06+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -29,8 +30,29 @@ drafted:
   - goodarksemi/gsmmbd3004a-c-s_91330772.md
   - goodarksemi/mmbd4448hxx_e9dbfa49.md
 specs:
-  p_d_max:
-    label: P D max
+  ifs_max:
+    label: IFSM max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Non-repetitive peak forward current
+    - IFM
+    - Peak forward surge current @tp=1us; TA=25°C
+    - IFSM
+    - Peak Forward Surge Current@tp=1us; TA=25℃
+    - I FSM
+    - Repetitive peak forward surge current
+    - I FRM
+    - I FM
+    - Peak Forward Surge Current
+    - Non-Repetitive Peak Forward Surge Current
+    - I_FSM
+    found_in: 10/10
+  pd_max:
+    label: PD max
     unit: mW
     stat: max
     conditions: null
@@ -42,44 +64,8 @@ specs:
     - P D
     - P_D
     found_in: 10/10
-  t_j_max:
-    label: T J max
-    unit: ℃
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Operating junction temperature
-    - TJ
-    - Operating junction temperature range
-    - T J
-    - Junction Temperature
-    - Operating and Storage Temperature Range
-    - Storage Temperature
-    found_in: 10/10
-  v_br_min:
-    label: V(BR) min
-    unit: V
-    stat: min
-    conditions: IR=100uA
-    rule: '>='
-    critical: true
-    aliases:
-    - Breakdown Voltage
-    - BV
-    - Reverse Voltage
-    - V (BR)
-    - V(BR)
-    - BVR
-    - V R
-    - Reverse Breakdown Voltage
-    - VBR
-    - V(BR)R
-    - VR
-    found_in: 10/10
-  v_r_max:
-    label: V R max
+  vrm_max:
+    label: VRM max
     unit: V
     stat: max
     conditions: null
@@ -87,9 +73,10 @@ specs:
     critical: true
     aliases:
     - Reverse voltage
-    - V R
+    - VR
     - Peak reverse voltage
-    - VR M
+    - VRM
+    - V R
     - Peak Repetitive Reverse Voltage
     - V RRM
     - Non-Repetitive Peak Reverse Voltage
@@ -97,14 +84,13 @@ specs:
     - Repetitive Peak Reverse Voltage
     - V RM
     - Maximum Repetitive Reverse Voltage
-    - VRRM
     found_in: 10/10
-  c_j_max:
-    label: C J max
+  cj_max:
+    label: CJ max
     unit: pF
     stat: max
-    conditions: VR=0V, f=1MHz
-    rule: ≈
+    conditions: vr_0v_f_1mhz
+    rule: <=
     critical: false
     aliases:
     - Capacitance
@@ -118,12 +104,28 @@ specs:
     - Capacitance Between Terminals
     - CT
     found_in: 10/10
+  ir_max:
+    label: IR max
+    unit: nA
+    stat: max
+    conditions: vr_20v
+    rule: <=
+    critical: false
+    aliases:
+    - Reverse Leakage Current
+    - IR
+    - I R
+    - Reverse Current
+    - IR2
+    - I_R
+    - IR1
+    found_in: 10/10
   trr_max:
     label: TRR max
     unit: nS
-    stat: value
-    conditions: null
-    rule: ≈
+    stat: max
+    conditions: if_ir_10ma_rl_100
+    rule: <=
     critical: false
     aliases:
     - Reverse Recovery Time
@@ -133,83 +135,88 @@ specs:
     - t rr
     - t_rr
     found_in: 10/10
-  i_fsm_max:
-    label: I FSM max
-    unit: A
-    stat: max
-    conditions: tp=1us; TA=25℃
-    rule: '>='
-    critical: true
-    aliases:
-    - Non-repetitive peak forward current
-    - IF M
-    - Peak forward surge current @tp=1us; TA=25 ℃
-    - IFS M
-    - Peak Forward Surge Current@tp=1us; TA=25℃
-    - I FSM
-    - Peak Forward Surge Current
-    - Peak Forward Surge Current @T =1mS; T =25°C P A
-    - Non-Repetitive Peak Forward Surge Current
-    - IFSM
-    - I_FSM
-    found_in: 9/10
-  i_o_max:
-    label: I O max
-    unit: mA
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Average rectified current
-    - I O
-    - Continuous Forward Current
-    - I F
-    - Average Recified Output Current
-    - IO
-    - I_F
-    - Average Rectified Output Current
-    found_in: 9/10
-  i_r_max:
-    label: I R max
-    unit: uA
-    stat: max
-    conditions: VR=75V
-    rule: <=
-    critical: false
-    aliases:
-    - Reverse Leakage Current
-    - IR
-    - I R
-    - Reverse Current
-    - I_R
-    found_in: 9/10
-  v_f_max:
-    label: V F max
+  vf_max:
+    label: VF max
     unit: V
     stat: max
-    conditions: IF=5mA
-    rule: ≈
+    conditions: if_5ma
+    rule: <=
     critical: false
     aliases:
     - Forward Voltage
     - VF
     - V F
     - V_F
+    - VF2
+    - VF3
+    - VF4
+    found_in: 10/10
+  tj_max:
+    label: TJ max
+    unit: °C
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Operating junction temperature
+    - TJ
+    - Operating junction temperature range
+    - T J
+    - Junction Temperature
+    - Operating and Storage Temperature Range
+    - T, T_JSTG
     found_in: 9/10
-  t_stg_range:
-    label: T STG range
-    unit: ℃
+  vbr_min:
+    label: VBR min
+    unit: V
+    stat: min
+    conditions: ir_100ua
+    rule: '>='
+    critical: true
+    aliases:
+    - Breakdown Voltage
+    - BV
+    - Reverse Voltage
+    - V (BR)
+    - V(BR)
+    - BVR
+    - Reverse Breakdown Voltage
+    - VBR
+    - V(BR)R
+    - VR
+    found_in: 9/10
+  io_max:
+    label: IO max
+    unit: mA
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Average rectified current
+    - IO
+    - I O
+    - Non-repetitive Peak Forward Current
+    - I FM
+    - Continuous Forward Current
+    - I F
+    - Average Recified Output Current
+    - I_F
+    found_in: 9/10
+  ts_range:
+    label: TS range
+    unit: °C
     stat: range
     conditions: null
     rule: contains
     critical: false
     aliases:
     - Storage temperature range
+    - TS
     - T STG
     - Storage Temperature
-    found_in: 8/10
-rare_specs:
+    found_in: 9/10
   package:
     label: Package
     unit: null
@@ -219,34 +226,5 @@ rare_specs:
     critical: true
     aliases:
     - Package
-    found_in: 3/10
-  pin_count:
-    label: Pin Count
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Pin Count
-    found_in: 1/10
-  polarity:
-    label: Polarity
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Polarity
-    found_in: 1/10
-  operating_temp_range:
-    label: Operating Temperature Range
-    unit: ℃
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating Temperature Range
-    found_in: 1/10
+    found_in: 8/10
+rare_specs: {}

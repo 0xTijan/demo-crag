@@ -21,121 +21,145 @@
  },
  "type": "leaded_film_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:09:52+00:00",
+  "at": "2026-11-23T08:08:15+00:00",
   "items": [
    {
-    "name": "Customer",
+    "name": "Absolute Maximum Ratings",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "max",
     "conditions": "",
-    "example": ""
+    "example": "250V"
    },
    {
-    "name": "Product",
+    "name": "Operating Temperature Range",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "High Precision Metal Film Leaded Resisto"
-   },
-   {
-    "name": "Sizes",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0727/1040"
-   },
-   {
-    "name": "Issued Date",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "31-Mar-25"
-   },
-   {
-    "name": "Edition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "REV.A6"
-   },
-   {
-    "name": "Company",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "VIKING TECH CORPORATION"
-   },
-   {
-    "name": "Features",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Very tight tolerance down to ±0.02%"
-   },
-   {
-    "name": "Applications",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Precision Equipment"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "L",
-    "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "7.0±0.3"
+    "example": "-55 ~ +125°C"
    },
    {
-    "name": "Dimensions",
-    "symbol": "D",
-    "unit": "mm",
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "70°C",
+    "example": "1/4W"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "2.7±0.4"
+    "example": "10Ω -500KΩ"
    },
    {
-    "name": "Dimensions",
-    "symbol": "H",
-    "unit": "mm",
-    "stat": "range",
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
     "conditions": "",
-    "example": "26±3"
+    "example": "±5"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "%",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.02%"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "250V"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "500V"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "MΩ",
+    "stat": "min",
+    "conditions": "500V, 1 minute",
+    "example": "> 1,000"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "245±5°C, 5 seconds",
+    "example": "95%"
+   },
+   {
+    "name": "Terminal Strength",
+    "symbol": "",
+    "unit": "kg",
+    "stat": "min",
+    "conditions": "Tensile",
+    "example": "2.5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MFD0727"
    },
    {
     "name": "Dimensions",
-    "symbol": "Weight (g) (1000pcs)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "L",
+    "example": "7.0"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "D",
+    "example": "2.7"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "H",
+    "example": "26"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
     "unit": "g",
     "stat": "value",
-    "conditions": "",
+    "conditions": "1000pcs",
     "example": "230"
    },
    {
-    "name": "Part Numbering",
+    "name": "Part Number",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0727"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Q: ±0.02%"
+    "example": "MFD0727"
    },
    {
     "name": "Packaging Code",
@@ -143,299 +167,19 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "A: Ammo"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "S: ±5"
-   },
-   {
-    "name": "Power Rating",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "U: 1/2W"
+    "example": "A"
    },
    {
     "name": "Resistance",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0100: 10Ω"
-   },
-   {
-    "name": "Power Rating",
-    "symbol": "70°C",
-    "unit": "W",
-    "stat": "value",
-    "conditions": "",
-    "example": "1/4W"
-   },
-   {
-    "name": "Operating Temp. Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 ~ +125"
-   },
-   {
-    "name": "Max. Operating Voltage",
-    "symbol": "",
-    "unit": "V",
-    "stat": "value",
-    "conditions": "",
-    "example": "250"
-   },
-   {
-    "name": "Max. Overload Voltage",
-    "symbol": "",
-    "unit": "V",
-    "stat": "value",
-    "conditions": "",
-    "example": "500"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
     "unit": "Ω",
-    "stat": "range",
-    "conditions": "",
-    "example": "10Ω -500KΩ"
-   },
-   {
-    "name": "Temperature Coefficient of Resistance (T.C.R.)",
-    "symbol": "",
-    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "As Spec."
-   },
-   {
-    "name": "Short Time Overload",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.05%+0.05Ω)"
-   },
-   {
-    "name": "Insulation Resistance",
-    "symbol": "",
-    "unit": "MΩ",
-    "stat": "value",
-    "conditions": "",
-    "example": "> 1,000"
-   },
-   {
-    "name": "Endurance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.2%+0.05Ω)"
-   },
-   {
-    "name": "Damp Heat with Load",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.2%+0.05Ω)"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "95% min. Coverage"
-   },
-   {
-    "name": "Resistance to Soldering Heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.05%+0.01Ω)"
-   },
-   {
-    "name": "Terminal Strength",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tensile: ≧2.5kg"
-   },
-   {
-    "name": "Pulse Overload",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.1%+0.01Ω)"
-   },
-   {
-    "name": "Temperature Cycle",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.05%+0.05Ω)"
-   },
-   {
-    "name": "Resistance to Solvent",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No deterioration of coatings and marking"
-   },
-   {
-    "name": "Shelf life",
-    "symbol": "",
-    "unit": "years",
-    "stat": "value",
-    "conditions": "",
-    "example": "1"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "15~28"
-   },
-   {
-    "name": "Humidity",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "",
-    "example": "< 80"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "L",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "7.0±0.3"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "W",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "52±1"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "P",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "5±0.3"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "L1-L2 Max.",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.0"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "T",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "6±0.5"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "Z Max.",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.8"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "R Max.",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "0"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "t Max.",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "2.5"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "e Max.",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.5"
-   },
-   {
-    "name": "Taping/Packing Specifications",
-    "symbol": "S Max.",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.5"
-   },
-   {
-    "name": "Ammo Packing",
-    "symbol": "A",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "74±1"
-   },
-   {
-    "name": "Ammo Packing",
-    "symbol": "B",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "47±1"
-   },
-   {
-    "name": "Ammo Packing",
-    "symbol": "C",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "260±1"
-   },
-   {
-    "name": "Ammo Packing",
-    "symbol": "Qty",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1,000"
+    "example": "10"
    }
   ],
-  "seconds": 65.1,
-  "tokens_in": 2877,
-  "tokens_out": 4533
+  "seconds": 24.6,
+  "tokens_in": 2977,
+  "tokens_out": 1472
  }
 }

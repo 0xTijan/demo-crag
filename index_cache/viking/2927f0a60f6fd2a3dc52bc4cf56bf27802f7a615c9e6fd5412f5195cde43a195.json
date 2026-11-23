@@ -20,9 +20,9 @@
  },
  "type": "multilayer_ceramic_capacitor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:19:27+00:00",
+  "at": "2026-11-23T08:16:13+00:00",
   "items": [
    {
     "name": "Product Type",
@@ -30,7 +30,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "MCRF: Ultra High Q and Low ESR (RF)"
+    "example": "Ultra High Q and Low ESR (RF)"
    },
    {
     "name": "Dimensions (L×W)",
@@ -38,7 +38,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "05: 0805"
+    "example": "0805"
    },
    {
     "name": "Capacitance Tolerance",
@@ -46,7 +46,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "B(±0.1pF)"
+    "example": "±0.1pF"
    },
    {
     "name": "Packaging",
@@ -54,7 +54,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "T: Taping Reel"
+    "example": "Taping Reel"
    },
    {
     "name": "Dielectric",
@@ -62,7 +62,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "N: NPO"
+    "example": "NPO"
    },
    {
     "name": "Voltage (VDCW)",
@@ -70,7 +70,7 @@
     "unit": "V",
     "stat": "value",
     "conditions": "",
-    "example": "251: 250V"
+    "example": "250"
    },
    {
     "name": "Capacitance",
@@ -78,23 +78,7 @@
     "unit": "pF",
     "stat": "value",
     "conditions": "",
-    "example": "6.8pF"
-   },
-   {
-    "name": "Capacitance tolerance",
-    "symbol": "",
-    "unit": "pF",
-    "stat": "range",
-    "conditions": "",
-    "example": "±0.1pF"
-   },
-   {
-    "name": "Rated voltage (VDCW)",
-    "symbol": "",
-    "unit": "V",
-    "stat": "value",
-    "conditions": "",
-    "example": "250"
+    "example": "6.8"
    },
    {
     "name": "Q",
@@ -102,7 +86,7 @@
     "unit": "",
     "stat": "range",
     "conditions": "Cap<30pF:Q≥800+20C; Cap≥30pF:Q≥1400",
-    "example": "Q≥800+20C"
+    "example": "≥800+20C"
    },
    {
     "name": "Insulation resistance at Ur",
@@ -149,7 +133,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Cap.≤1000pF, 1.0±0.2Vrms, 1MHz±10%. Cap.>1000pF, 1.0±0.2Vrms, 1KHz±10%. At 25°C ambient temperature.",
+    "conditions": "Cap.≤1000pF, 1.0±0.2Vrms, 1MHz±10%; Cap.>1000pF, 1.0±0.2Vrms, 1KHz±10%, 25°C",
     "example": "Shall not exceed the limits given in the"
    },
    {
@@ -158,14 +142,14 @@
     "unit": "",
     "stat": "range",
     "conditions": "Cap.<30pF : Q≥800+20C; Cap.≥30pF : Q≥1400",
-    "example": "Q≥800+20C"
+    "example": "≥800+20C"
    },
    {
     "name": "Temperature Coefficient",
     "symbol": "",
     "unit": "ppm/°C",
     "stat": "range",
-    "conditions": "With no electrical load NPO:-55~125°C at 25°C",
+    "conditions": "NPO:-55~125°C at 25°C",
     "example": "±30"
    },
    {
@@ -173,23 +157,23 @@
     "symbol": "",
     "unit": "Ω",
     "stat": "min",
-    "conditions": "≤100V : To apply rated voltage for max. 120 sec ≥200V :To apply rated voltage (500V max.) for 60 sec.",
-    "example": "≥10GΩ or RxC≥100Ω-F"
+    "conditions": "≤100V : To apply rated voltage for max. 120 sec; ≥200V : To apply rated voltage (500V max.) for 60 sec",
+    "example": "≥10G"
    },
    {
     "name": "Dielectric Strength",
     "symbol": "",
     "unit": "V",
     "stat": "value",
-    "conditions": "≤100V : 250% of rated voltage. 200V ~ 300V : 200% of rated voltage. 500V ~ 999V : 150% of rated voltage. 1000V ~ 3000V :",
-    "example": "250% of rated voltage"
+    "conditions": "≤100V : 250% of rated voltage; 200V ~ 300V : 200% of rated voltage; 500V ~ 999V : 150% of rated voltage; 1000V ~ 3000V :",
+    "example": "No evidence of damage or flash over"
    },
    {
     "name": "Solderability",
     "symbol": "",
     "unit": "%",
     "stat": "min",
-    "conditions": "Solder temperature : 235±5°C. Dipping time : 2±0.5 sec",
+    "conditions": "Solder temperature : 235±5°C; Dipping time : 2±0.5 sec",
     "example": "95"
    },
    {
@@ -197,16 +181,8 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Solder temperature : 260±5°C. Dipping time : 10±1 sec. Preheating : 120 to 150°C for 1 minute before immerse the capacit",
+    "conditions": "Solder temperature : 260±5°C; Dipping time : 10±1 sec; Preheating : 120 to 150°C for 1 minute before immerse the capacit",
     "example": "No remarkable damage"
-   },
-   {
-    "name": "Capacitance change",
-    "symbol": "",
-    "unit": "%",
-    "stat": "range",
-    "conditions": "Cap. change : Within ±2.5% or ±0.25pF whichever is larger.",
-    "example": "±2.5% or ±0.25pF"
    },
    {
     "name": "Temperature Cycle",
@@ -221,7 +197,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Test temp. : 40±2°C. Humidity : 90~95% RH. Test time : 500 +24/-0hrs.",
+    "conditions": "Test temp. : 40±2°C; Humidity : 90~95% RH; Test time : 500 +24/-0hrs; Cap./DF(Q) Measurement to be made after de-aging a",
     "example": "No remarkable damage"
    },
    {
@@ -229,7 +205,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Test temp. : 40±2°C. Humidity : 90~95%RH. Test time : 500 +24/-0hrs. To apply voltage : Rated voltage (500Vdc max.).",
+    "conditions": "Test temp. : 40±2°C; Humidity : 90~95%RH; Test time : 500 +24/-0hrs; To apply voltage : Rated voltage (500Vdc max.); Cap",
     "example": "No remarkable damage"
    },
    {
@@ -237,7 +213,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Test temp. : NP0: 125±3°C To apply voltage : (1) 10V≤Ur<500V : 200% of rated voltage. (2) ≤6.3V or 500V : 150% of rated ",
+    "conditions": "Test temp. : NP0: 125±3°C; To apply voltage : (1) 10V≤Ur<500V : 200% of rated voltage. (2) ≤6.3V or 500V : 150% of rated",
     "example": "No remarkable damage"
    },
    {
@@ -268,13 +244,13 @@
     "name": "ESR",
     "symbol": "",
     "unit": "mΩ",
-    "stat": "max",
-    "conditions": "The ESR should be measured at room temperature and tested at frequency 1±0.1 GHz.",
+    "stat": "range",
+    "conditions": "0805: 0.3pF≤Cap.≤1pF : <1500mΩ 1pF<Cap.≤10pF : <250mΩ Cap.>10pF : <200mΩ; Frequency 1±0.1 GHz",
     "example": "<1500"
    }
   ],
-  "seconds": 33.77,
-  "tokens_in": 4007,
-  "tokens_out": 2116
+  "seconds": 57.62,
+  "tokens_in": 4107,
+  "tokens_out": 2163
  }
 }

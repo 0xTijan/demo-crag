@@ -20,9 +20,9 @@
  },
  "type": "zener_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:26:03+00:00",
+  "at": "2026-11-23T06:27:19+00:00",
   "items": [
    {
     "name": "Junction Temperature",
@@ -53,7 +53,7 @@
     "symbol": "V",
     "unit": "V",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Zenner Test Current",
     "example": "6.4"
    },
    {
@@ -121,8 +121,8 @@
     "example": "A3-02B (B-4)"
    }
   ],
-  "seconds": 10.36,
-  "tokens_in": 1137,
-  "tokens_out": 489
+  "seconds": 19.6,
+  "tokens_in": 1237,
+  "tokens_out": 482
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "sic_schottky_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:25:23+00:00",
+  "at": "2026-11-23T06:38:43+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -54,7 +54,7 @@
     "unit": "A",
     "stat": "max",
     "conditions": "TC=25°C",
-    "example": "28/56"
+    "example": "28"
    },
    {
     "name": "Maximum average forward rectified current",
@@ -62,7 +62,7 @@
     "unit": "A",
     "stat": "max",
     "conditions": "TC=135°C",
-    "example": "13/26"
+    "example": "13"
    },
    {
     "name": "Maximum average forward rectified current",
@@ -70,7 +70,7 @@
     "unit": "A",
     "stat": "max",
     "conditions": "TC=160°C",
-    "example": "8/16"
+    "example": "8"
    },
    {
     "name": "Peak forward surge current, tp=10ms, Half Sine Pulse (Per leg)",
@@ -86,7 +86,7 @@
     "unit": "W",
     "stat": "max",
     "conditions": "TC=25°C",
-    "example": "100/200"
+    "example": "100"
    },
    {
     "name": "Power dissipation",
@@ -94,11 +94,11 @@
     "unit": "W",
     "stat": "max",
     "conditions": "TC=110°C",
-    "example": "43/86"
+    "example": "43"
    },
    {
     "name": "Operating junction temperature range",
-    "symbol": "",
+    "symbol": "TJ",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -106,7 +106,7 @@
    },
    {
     "name": "Storage temperature range",
-    "symbol": "",
+    "symbol": "TSTG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -182,39 +182,7 @@
     "unit": "℃/W",
     "stat": "typ",
     "conditions": "",
-    "example": "1.5/0.75"
-   },
-   {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Epoxy, Molded"
-   },
-   {
-    "name": "Finish",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "All External Surfaces Corrosion Resistan"
-   },
-   {
-    "name": "Lead Temperature for Soldering Purposes",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "260"
-   },
-   {
-    "name": "Shipped",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "30 units per plastic tube"
+    "example": "1.5"
    },
    {
     "name": "Package",
@@ -225,8 +193,8 @@
     "example": "TO-247-3"
    }
   ],
-  "seconds": 62.0,
-  "tokens_in": 1744,
-  "tokens_out": 1200
+  "seconds": 32.4,
+  "tokens_in": 1844,
+  "tokens_out": 1026
  }
 }

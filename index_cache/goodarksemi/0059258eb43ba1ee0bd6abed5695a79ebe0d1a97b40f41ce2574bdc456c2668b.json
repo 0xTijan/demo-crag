@@ -18,9 +18,9 @@
  },
  "type": "npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:20:36+00:00",
+  "at": "2026-11-23T06:22:21+00:00",
   "items": [
    {
     "name": "Collector-emitter sustaining voltage",
@@ -34,9 +34,9 @@
     "name": "DC current gain",
     "symbol": "hFE",
     "unit": "-",
-    "stat": "range",
+    "stat": "min",
     "conditions": "I C=-50mA",
-    "example": "30 to 240"
+    "example": "30"
    },
    {
     "name": "Low collector saturation voltage",
@@ -45,6 +45,22 @@
     "stat": "max",
     "conditions": "I C=-50mA, I B=-5mA",
     "example": "-1.0"
+   },
+   {
+    "name": "Complement to the NPN MJE340",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Complement to the NPN MJE340"
+   },
+   {
+    "name": "Minimum Lot-to-Lot variations",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Minimum Lot-to-Lot variations"
    },
    {
     "name": "Collector-Base Voltage",
@@ -96,8 +112,8 @@
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "",
-    "unit": "",
+    "symbol": "T stg",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-65 to 150"
@@ -162,9 +178,17 @@
     "name": "DC Current Gain",
     "symbol": "h FE",
     "unit": "-",
-    "stat": "range",
+    "stat": "min",
     "conditions": "I C=-50mA, V CE=-10V",
-    "example": "30 to 240"
+    "example": "30"
+   },
+   {
+    "name": "DC Current Gain",
+    "symbol": "h FE",
+    "unit": "-",
+    "stat": "max",
+    "conditions": "I C=-50mA, V CE=-10V",
+    "example": "240"
    },
    {
     "name": "Package",
@@ -173,18 +197,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-126"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "TO-126"
    }
   ],
-  "seconds": 59.13,
-  "tokens_in": 1459,
-  "tokens_out": 961
+  "seconds": 57.13,
+  "tokens_in": 1559,
+  "tokens_out": 1061
  }
 }

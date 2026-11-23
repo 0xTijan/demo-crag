@@ -20,9 +20,9 @@
  },
  "type": "sic_schottky_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:25:50+00:00",
+  "at": "2026-11-23T06:39:32+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -117,7 +117,7 @@
     "symbol": "VF",
     "unit": "V",
     "stat": "typ",
-    "conditions": "IF=10A, TJ=25℃",
+    "conditions": "IF=10A, TJ=25°C",
     "example": "1.3"
    },
    {
@@ -125,7 +125,7 @@
     "symbol": "VF",
     "unit": "V",
     "stat": "max",
-    "conditions": "IF=10A, TJ=175℃",
+    "conditions": "IF=10A, TJ=175°C",
     "example": "1.55"
    },
    {
@@ -133,7 +133,7 @@
     "symbol": "IR",
     "unit": "µA",
     "stat": "max",
-    "conditions": "V=650V, TJ=25℃",
+    "conditions": "V=650V, TJ=25°C",
     "example": "50"
    },
    {
@@ -141,7 +141,7 @@
     "symbol": "IR",
     "unit": "µA",
     "stat": "max",
-    "conditions": "VR=650V, TJ=175℃",
+    "conditions": "VR=650V, TJ=175°C",
     "example": "100"
    },
    {
@@ -149,7 +149,7 @@
     "symbol": "QC",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VR=400V, TJ=25℃",
+    "conditions": "VR=400V, TJ=25°C",
     "example": "27"
    },
    {
@@ -157,7 +157,7 @@
     "symbol": "C",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "VR=400V, TJ=25℃, f=1MHz",
+    "conditions": "VR=400V, TJ=25°C, f=1MHz",
     "example": "43"
    },
    {
@@ -169,48 +169,16 @@
     "example": "1.6"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Epoxy, Molded"
-   },
-   {
-    "name": "Lead Temperature for Soldering Purposes",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "260"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "DFN5*6"
-   },
-   {
-    "name": "Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "Halogen-free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61249-2-21"
    }
   ],
-  "seconds": 56.9,
-  "tokens_in": 1608,
-  "tokens_out": 1061
+  "seconds": 49.2,
+  "tokens_in": 1708,
+  "tokens_out": 903
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "sic_schottky_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:24:53+00:00",
+  "at": "2026-11-23T06:39:08+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -125,14 +125,6 @@
     "symbol": "VF",
     "unit": "V",
     "stat": "max",
-    "conditions": "IF=10A, TJ=25℃",
-    "example": "1.5"
-   },
-   {
-    "name": "Forward drop voltage",
-    "symbol": "VF",
-    "unit": "V",
-    "stat": "max",
     "conditions": "IF=10A, TJ=175℃",
     "example": "1.5"
    },
@@ -164,7 +156,7 @@
     "name": "Total capacitance",
     "symbol": "C",
     "unit": "pF",
-    "stat": "max",
+    "stat": "typ",
     "conditions": "VR=400V, TJ=25℃, f=1MHz",
     "example": "43"
    },
@@ -175,10 +167,18 @@
     "stat": "typ",
     "conditions": "",
     "example": "1.7"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220I-2"
    }
   ],
-  "seconds": 31.44,
-  "tokens_in": 1885,
-  "tokens_out": 918
+  "seconds": 57.56,
+  "tokens_in": 1985,
+  "tokens_out": 905
  }
 }

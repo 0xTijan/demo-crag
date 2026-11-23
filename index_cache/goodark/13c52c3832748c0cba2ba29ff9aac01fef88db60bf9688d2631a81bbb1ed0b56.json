@@ -20,9 +20,9 @@
  },
  "type": "switching_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:29:32+00:00",
+  "at": "2026-11-23T06:43:01+00:00",
   "items": [
    {
     "name": "Reverse Voltage",
@@ -57,7 +57,7 @@
     "example": "300"
    },
    {
-    "name": "Peak Forward Surge Current",
+    "name": "Peak Forward Surge Current@tp=1us; TA=25℃",
     "symbol": "I FSM",
     "unit": "A",
     "stat": "max",
@@ -85,7 +85,7 @@
     "symbol": "R θJA",
     "unit": "℃/W",
     "stat": "max",
-    "conditions": "Valid provided that electrodes are kept at ambient temperature.",
+    "conditions": "",
     "example": "357"
    },
    {
@@ -159,10 +159,18 @@
     "stat": "typ",
     "conditions": "IF=IR=1.0mA RL=100Ω IRR=0.1 X IR",
     "example": "4"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
    }
   ],
-  "seconds": 50.1,
-  "tokens_in": 1089,
-  "tokens_out": 793
+  "seconds": 42.95,
+  "tokens_in": 1189,
+  "tokens_out": 828
  }
 }

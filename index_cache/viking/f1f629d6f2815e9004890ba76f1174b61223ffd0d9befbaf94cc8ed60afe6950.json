@@ -21,17 +21,17 @@
  },
  "type": "multilayer_chip_inductor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:30:16+00:00",
+  "at": "2026-11-23T08:24:09+00:00",
   "items": [
    {
-    "name": "Product Type",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Thin Film Chip Inductor - AL Series"
+    "example": "AL01, AL02"
    },
    {
     "name": "Size",
@@ -42,28 +42,12 @@
     "example": "0201/0402"
    },
    {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 125"
-   },
-   {
-    "name": "Test Equipment",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "HP4287A+Agilent 16196C"
-   },
-   {
     "name": "Inductance",
     "symbol": "L",
     "unit": "nH",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "0.1"
+    "example": "0.1 to 10"
    },
    {
     "name": "Inductance Tolerance",
@@ -71,7 +55,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "±0.1nH"
+    "example": "±0.1nH, ±0.1, 0.2nH, ±2, ±3,±5%"
    },
    {
     "name": "Quality Factor",
@@ -82,67 +66,75 @@
     "example": "8"
    },
    {
-    "name": "Self Resonant Frequency",
+    "name": "SRF",
     "symbol": "SRF",
     "unit": "GHz",
     "stat": "min",
     "conditions": "",
-    "example": "9"
+    "example": "2"
    },
    {
-    "name": "DC Resistance",
+    "name": "DCR",
     "symbol": "DCR",
     "unit": "Ω",
     "stat": "max",
     "conditions": "",
-    "example": "0.20"
+    "example": "3.50"
    },
    {
-    "name": "DC Current",
+    "name": "IDC",
     "symbol": "IDC",
     "unit": "mA",
     "stat": "max",
     "conditions": "",
-    "example": "400"
+    "example": "850"
    },
    {
-    "name": "Package",
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to +125"
+   },
+   {
+    "name": "Test Equipment",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "AL01"
+    "example": "HP4287A+Agilent 16196C"
    },
    {
-    "name": "Type",
+    "name": "Part Numbering",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Standard"
+    "example": "AL02"
    },
    {
-    "name": "Dimensions",
+    "name": "Packaging Code",
     "symbol": "",
-    "unit": "mm",
+    "unit": "",
     "stat": "value",
-    "conditions": "Size: 0201",
-    "example": "0.60"
+    "conditions": "",
+    "example": "T"
    },
    {
-    "name": "Dimensions",
+    "name": "Weight",
     "symbol": "",
-    "unit": "mm",
+    "unit": "g",
     "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "0.70"
+    "conditions": "1000pcs",
+    "example": "0.23"
    },
    {
     "name": "A",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "0.40"
    },
    {
@@ -150,7 +142,7 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "0.70"
    },
    {
@@ -158,7 +150,7 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "8.00"
    },
    {
@@ -166,7 +158,7 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "1.75"
    },
    {
@@ -174,7 +166,7 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "3.50"
    },
    {
@@ -182,7 +174,7 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "4.00"
    },
    {
@@ -190,7 +182,7 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "2.00"
    },
    {
@@ -198,7 +190,7 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "2.00"
    },
    {
@@ -206,7 +198,7 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "1.55"
    },
    {
@@ -214,164 +206,116 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "Size: 0201",
+    "conditions": "",
     "example": "0.42"
    },
    {
-    "name": "A",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "0.70"
-   },
-   {
-    "name": "B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "1.16"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "8.00"
-   },
-   {
-    "name": "E",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "1.75"
-   },
-   {
-    "name": "F",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "3.50"
-   },
-   {
-    "name": "P0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "4.00"
-   },
-   {
-    "name": "P1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "2.00"
-   },
-   {
-    "name": "P2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "2.00"
-   },
-   {
-    "name": "ψD0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "1.55"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "0.43"
-   },
-   {
-    "name": "Reflow Profile",
+    "name": "Reflow Profiles",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Pb-Free Assembly",
-    "example": "Preheat Min. Temperature: 150 °C"
+    "conditions": "",
+    "example": "Pb-Free Assembly"
    },
    {
-    "name": "Reel Quantity",
+    "name": "Preheat Min. Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "150"
+   },
+   {
+    "name": "Preheat Max Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "200"
+   },
+   {
+    "name": "Preheating time",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "value",
+    "conditions": "",
+    "example": "60-120"
+   },
+   {
+    "name": "Ramp-up rate",
+    "symbol": "",
+    "unit": "°C/second",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Liquidous temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "217"
+   },
+   {
+    "name": "Time maintained above Liquidous temperature",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "value",
+    "conditions": "",
+    "example": "60-150"
+   },
+   {
+    "name": "Min. Peak temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "235"
+   },
+   {
+    "name": "Max. Peak temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Time within 5 °C of peak temperature",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "max",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Ramp-down rate",
+    "symbol": "",
+    "unit": "°C/second",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Time from 25 °C to peak temperature",
+    "symbol": "",
+    "unit": "minutes",
+    "stat": "max",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Quantity",
     "symbol": "",
     "unit": "EA",
     "stat": "value",
-    "conditions": "AL01",
+    "conditions": "",
     "example": "10,000"
-   },
-   {
-    "name": "Reel Quantity",
-    "symbol": "",
-    "unit": "EA",
-    "stat": "value",
-    "conditions": "AL02",
-    "example": "10,000"
-   },
-   {
-    "name": "Land Pattern A",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0201",
-    "example": "0.30"
-   },
-   {
-    "name": "Land Pattern B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0201",
-    "example": "0.25"
-   },
-   {
-    "name": "Land Pattern C",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0201",
-    "example": "0.30"
-   },
-   {
-    "name": "Land Pattern A",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "0.50"
-   },
-   {
-    "name": "Land Pattern B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "0.45"
-   },
-   {
-    "name": "Land Pattern C",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "Size: 0402",
-    "example": "0.60"
    }
   ],
-  "seconds": 211.08,
-  "tokens_in": 15605,
-  "tokens_out": 2616
+  "seconds": 89.05,
+  "tokens_in": 15705,
+  "tokens_out": 1749
  }
 }

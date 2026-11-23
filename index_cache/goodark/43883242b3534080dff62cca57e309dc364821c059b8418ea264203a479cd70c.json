@@ -20,9 +20,9 @@
  },
  "type": "sic_mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:27:46+00:00",
+  "at": "2026-11-23T07:32:23+00:00",
   "items": [
    {
     "name": "DrainSourceVoltage",
@@ -116,9 +116,9 @@
     "name": "ZeroGateVoltageDrainCurrent",
     "symbol": "I DSS",
     "unit": "μA",
-    "stat": "max",
+    "stat": "range",
     "conditions": "V DS=1500V, V GS=0V",
-    "example": "5"
+    "example": "1to5"
    },
    {
     "name": "GateThresholdVoltage",
@@ -126,7 +126,7 @@
     "unit": "V",
     "stat": "range",
     "conditions": "V DS=V GS, I DS=15mA, T J=25°C",
-    "example": "2/2.8/4"
+    "example": "2to4"
    },
    {
     "name": "GateThresholdVoltage",
@@ -142,7 +142,7 @@
     "unit": "mΩ",
     "stat": "range",
     "conditions": "V GS=18V, I D=30A, T J=25°C",
-    "example": "40/53"
+    "example": "40to53"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
@@ -158,7 +158,7 @@
     "unit": "mΩ",
     "stat": "range",
     "conditions": "V GS=15V, I D=30A, T J=25°C",
-    "example": "46/62"
+    "example": "46to62"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
@@ -399,34 +399,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-247-4L"
-   },
-   {
-    "name": "PinCount",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "4"
-   },
-   {
-    "name": "OperatingTemperatureRange",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55to+175"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 164.35,
-  "tokens_in": 3377,
-  "tokens_out": 3218
+  "seconds": 149.85,
+  "tokens_in": 3477,
+  "tokens_out": 3112
  }
 }

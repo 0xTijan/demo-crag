@@ -22,9 +22,9 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:49:15+00:00",
+  "at": "2026-11-23T05:49:27+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -68,7 +68,7 @@
    },
    {
     "name": "Operating junction temperature range",
-    "symbol": "",
+    "symbol": "TJ",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -76,7 +76,7 @@
    },
    {
     "name": "Storage temperature range",
-    "symbol": "",
+    "symbol": "TSTG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -153,10 +153,18 @@
     "stat": "typ",
     "conditions": "4.0 V 1 MHZ",
     "example": "220"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "eSGB (DO-221AC)"
    }
   ],
-  "seconds": 50.42,
-  "tokens_in": 1224,
-  "tokens_out": 738
+  "seconds": 44.2,
+  "tokens_in": 1324,
+  "tokens_out": 785
  }
 }

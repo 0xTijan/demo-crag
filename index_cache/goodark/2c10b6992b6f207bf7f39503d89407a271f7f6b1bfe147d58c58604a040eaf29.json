@@ -20,9 +20,9 @@
  },
  "type": "fast_recovery_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:09:28+00:00",
+  "at": "2026-11-23T06:14:52+00:00",
   "items": [
    {
     "name": "Peak Repetitive Reverse Voltage",
@@ -109,7 +109,7 @@
     "symbol": "RθJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "Device mounted on FR-4 substrate PC board, with minimum recommended pad layout",
+    "conditions": "Note 1",
     "example": "357"
    },
    {
@@ -139,18 +139,18 @@
    {
     "name": "Forward Voltage",
     "symbol": "VF",
-    "unit": "V",
+    "unit": "mV",
     "stat": "max",
     "conditions": "IF=50mA",
-    "example": "1"
+    "example": "1000"
    },
    {
     "name": "Forward Voltage",
     "symbol": "VF",
-    "unit": "V",
+    "unit": "mV",
     "stat": "max",
     "conditions": "IF=150mA",
-    "example": "1.25"
+    "example": "1250"
    },
    {
     "name": "Reverse Current",
@@ -199,10 +199,18 @@
     "stat": "max",
     "conditions": "IF=10mA, VR=6V, Irr =0.1×IR, RL=100 Ω",
     "example": "4"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
    }
   ],
-  "seconds": 44.71,
-  "tokens_in": 1233,
-  "tokens_out": 1014
+  "seconds": 43.39,
+  "tokens_in": 1333,
+  "tokens_out": 1041
  }
 }

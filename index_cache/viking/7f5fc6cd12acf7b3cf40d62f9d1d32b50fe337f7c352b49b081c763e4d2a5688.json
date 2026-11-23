@@ -23,13 +23,37 @@
  },
  "type": "multilayer_chip_inductor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:26:45+00:00",
+  "at": "2026-11-23T08:22:40+00:00",
   "items": [
    {
-    "name": "Inductance",
+    "name": "Product",
     "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Multilayer Chip Inductor – CL-S Series"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0201/0402/0603"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CL01-S, CL02-S, CL03-S"
+   },
+   {
+    "name": "Inductance",
+    "symbol": "L",
     "unit": "nH",
     "stat": "range",
     "conditions": "",
@@ -41,18 +65,18 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "±0.1nH, ±0.2nH, ±0.3nH"
+    "example": "±0.1nH, ±0.2nH, ±0.3nH, ±2%, ±3%, ±5%, ±"
    },
    {
-    "name": "Quality Factor /min.",
+    "name": "Quality Factor",
     "symbol": "Q",
     "unit": "",
     "stat": "min",
-    "conditions": "",
+    "conditions": "Test Freq. (MHz)",
     "example": "5"
    },
    {
-    "name": "Test Freq. (MHz)",
+    "name": "Test Freq.",
     "symbol": "",
     "unit": "MHz",
     "stat": "value",
@@ -60,7 +84,7 @@
     "example": "100"
    },
    {
-    "name": "Test Voltage (mV)",
+    "name": "Test Voltage",
     "symbol": "",
     "unit": "mV",
     "stat": "value",
@@ -68,7 +92,7 @@
     "example": "50"
    },
    {
-    "name": "SRF (GHz) Min.",
+    "name": "SRF",
     "symbol": "SRF",
     "unit": "GHz",
     "stat": "min",
@@ -76,7 +100,7 @@
     "example": "0.25"
    },
    {
-    "name": "RDC (Ω) Max.",
+    "name": "RDC",
     "symbol": "RDC",
     "unit": "Ω",
     "stat": "max",
@@ -84,7 +108,7 @@
     "example": "0.05"
    },
    {
-    "name": "IDC (mA) Max.",
+    "name": "IDC",
     "symbol": "IDC",
     "unit": "mA",
     "stat": "max",
@@ -92,25 +116,25 @@
     "example": "1000"
    },
    {
-    "name": "Size (Inch)",
+    "name": "L/Q Freq.",
     "symbol": "",
-    "unit": "",
+    "unit": "MHz",
     "stat": "value",
     "conditions": "",
-    "example": "0201"
+    "example": "100"
    },
    {
-    "name": "Package",
+    "name": "Q (Typical) Freq.",
     "symbol": "",
-    "unit": "",
+    "unit": "MHz",
     "stat": "value",
     "conditions": "",
-    "example": "CL01-S"
+    "example": "100"
    },
    {
-    "name": "Operating Temperature Range",
+    "name": "Operating Temperature",
     "symbol": "",
-    "unit": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to 125"
@@ -118,7 +142,7 @@
    {
     "name": "Storage Temperature",
     "symbol": "",
-    "unit": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "15 to 28"
@@ -126,54 +150,94 @@
    {
     "name": "Humidity",
     "symbol": "",
-    "unit": "",
-    "stat": "range",
+    "unit": "%RH",
+    "stat": "max",
     "conditions": "",
-    "example": "< 80%RH"
+    "example": "80"
    },
    {
-    "name": "Part Numbering",
+    "name": "Bending Strength",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "02, J, T, 1N0"
+    "example": "No mechanical damage"
    },
    {
-    "name": "Inductance Tolerance",
+    "name": "Solderability",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "B: ±0.1nH C: ±0.2nH S: ±0.3nH G: ±2% H: "
+    "example": "No visible mechanical damage, Wetting >7"
    },
    {
-    "name": "Packaging Type",
+    "name": "Resistance to Soldering Heat",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Type A, Type B"
+    "example": "No visible mechanical damage, Wetting >7"
    },
    {
-    "name": "Reel Dimension",
+    "name": "Dropping",
     "symbol": "",
-    "unit": "mm",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "178±1"
+    "example": "No visible mechanical damage, Inductance"
    },
    {
-    "name": "Tape Specifications",
+    "name": "Thermal Shock",
     "symbol": "",
-    "unit": "mm",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "A: 178±1, B: 60"
+    "example": "No visible damage, Inductance variation "
+   },
+   {
+    "name": "Resistance to Low Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No visible damage, Inductance variation "
+   },
+   {
+    "name": "Resistance to High Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No visible damage, Inductance variation "
+   },
+   {
+    "name": "Damp Heat (Steady States)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No visible damage, Inductance variation "
+   },
+   {
+    "name": "Loading Under Damp Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No visible damage, Inductance variation "
+   },
+   {
+    "name": "Loading at High Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "No visible damage, Inductance variation "
    }
   ],
-  "seconds": 101.84,
-  "tokens_in": 15603,
-  "tokens_out": 941
+  "seconds": 99.55,
+  "tokens_in": 15703,
+  "tokens_out": 1431
  }
 }

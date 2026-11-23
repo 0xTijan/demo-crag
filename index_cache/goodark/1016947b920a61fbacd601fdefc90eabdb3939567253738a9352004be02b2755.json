@@ -24,9 +24,9 @@
  },
  "type": "bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:24:56+00:00",
+  "at": "2026-11-23T06:26:24+00:00",
   "items": [
    {
     "name": "Reverse Voltage 100~1000V Output Current 4.0A",
@@ -90,7 +90,15 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "KBF, Molding compound meets UL 94V-0 fla"
+    "example": "KBF"
+   },
+   {
+    "name": "Molding compound meets UL 94V-0 flammability rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL 94V-0"
    },
    {
     "name": "Terminals",
@@ -98,7 +106,23 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Matte tin plated leads, solderable per M"
+    "example": "Matte tin plated leads"
+   },
+   {
+    "name": "Solderable per",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MIl-STD-750 Method 2026, J-STD-002 and J"
+   },
+   {
+    "name": "Meets JESD 201 class 1Awhisker test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "JESD 201 class 1A"
    },
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -141,7 +165,7 @@
     "example": "2.0"
    },
    {
-    "name": "Peak forward surge current 8.3 ms single half sine-wave superimposed on rated lo",
+    "name": "Peak forward surge current 8.3 ms single half sine wave superimposed on rated lo",
     "symbol": "I_FSM",
     "unit": "A",
     "stat": "max",
@@ -221,8 +245,8 @@
     "example": "8"
    }
   ],
-  "seconds": 50.92,
-  "tokens_in": 1737,
-  "tokens_out": 1173
+  "seconds": 46.52,
+  "tokens_in": 1837,
+  "tokens_out": 1259
  }
 }

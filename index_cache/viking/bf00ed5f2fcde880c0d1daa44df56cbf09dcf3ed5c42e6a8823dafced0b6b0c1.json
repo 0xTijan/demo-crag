@@ -24,16 +24,16 @@
  },
  "type": "polymer_aluminum_capacitor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:08:02+00:00",
+  "at": "2026-11-23T08:46:37+00:00",
   "items": [
    {
     "name": "Rated voltage",
-    "symbol": "",
+    "symbol": "WV",
     "unit": "Vdc",
     "stat": "range",
-    "conditions": "",
+    "conditions": "SV",
     "example": "2.5~16"
    },
    {
@@ -41,8 +41,8 @@
     "symbol": "",
     "unit": "hours",
     "stat": "value",
-    "conditions": "at 105°C",
-    "example": "5,000"
+    "conditions": "105°C",
+    "example": "5000"
    },
    {
     "name": "Suitable for",
@@ -70,71 +70,47 @@
    },
    {
     "name": "Dimensions",
-    "symbol": "D",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "4.0±0.5"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "L",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "5.0"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "α",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-0.5~1"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "F",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.5±0.4"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "H",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "3.2±0.3"
-   },
-   {
-    "name": "Part No.",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "AR5K0508MB2V5391"
+    "example": "D: 4.0±0.5, L: 5.0, α: -0.5~1, d: 0.45±0"
    },
    {
-    "name": "WV/Vdc (SV)",
-    "symbol": "WV",
-    "unit": "Vdc",
+    "name": "Capacitance Tolerance",
+    "symbol": "",
+    "unit": "%",
     "stat": "range",
     "conditions": "",
-    "example": "2.5 (2.9)"
+    "example": "±20"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "B: Bulk"
+   },
+   {
+    "name": "Rated Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.5, 3.0, 4.0, 6.3, 10, 16"
    },
    {
     "name": "Capacitance",
-    "symbol": "C",
+    "symbol": "",
     "unit": "uF",
     "stat": "range",
     "conditions": "",
-    "example": "390"
+    "example": "10, 47, 100, 270, 470, 820, 1000, 1200"
    },
    {
     "name": "Leakage Current",
-    "symbol": "I_L",
+    "symbol": "",
     "unit": "uA",
     "stat": "max",
     "conditions": "",
@@ -142,7 +118,7 @@
    },
    {
     "name": "tanδ",
-    "symbol": "tanδ",
+    "symbol": "",
     "unit": "",
     "stat": "max",
     "conditions": "",
@@ -150,7 +126,7 @@
    },
    {
     "name": "ESR",
-    "symbol": "ESR",
+    "symbol": "",
     "unit": "mΩ",
     "stat": "max",
     "conditions": "20℃, 100K to 300KHz",
@@ -158,19 +134,11 @@
    },
    {
     "name": "Rated Ripple Current",
-    "symbol": "I_R",
+    "symbol": "",
     "unit": "mArms",
     "stat": "max",
     "conditions": "105℃/100KHz",
-    "example": "4180"
-   },
-   {
-    "name": "Sizs Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0508"
+    "example": "6100"
    },
    {
     "name": "Category temperature range",
@@ -183,10 +151,10 @@
    {
     "name": "Surge voltage",
     "symbol": "",
-    "unit": "Vdc",
+    "unit": "V",
     "stat": "value",
     "conditions": "rated voltage*1.15",
-    "example": "2.825"
+    "example": "2.9"
    },
    {
     "name": "Frequency Correction Factor",
@@ -250,7 +218,7 @@
     "unit": "",
     "stat": "max",
     "conditions": "120Hz±10% at 20±2℃",
-    "example": "0.10"
+    "example": "0.1"
    },
    {
     "name": "ESR",
@@ -272,7 +240,7 @@
     "name": "Pull Strength Load of Lead Wire Terminations",
     "symbol": "",
     "unit": "N",
-    "stat": "max",
+    "stat": "range",
     "conditions": "Lead wire diameter (mm): 0.35<d≦0.5",
     "example": "5"
    },
@@ -280,7 +248,7 @@
     "name": "Pull Strength Load of Lead Wire Terminations",
     "symbol": "",
     "unit": "N",
-    "stat": "max",
+    "stat": "range",
     "conditions": "Lead wire diameter (mm): 0.35<d≦0.8",
     "example": "10"
    },
@@ -288,7 +256,7 @@
     "name": "Bending Strength of Lead Wire Terminations",
     "symbol": "",
     "unit": "N",
-    "stat": "max",
+    "stat": "range",
     "conditions": "Lead wire diameter (mm): 0.35<d≦0.5",
     "example": "2.5"
    },
@@ -296,7 +264,7 @@
     "name": "Bending Strength of Lead Wire Terminations",
     "symbol": "",
     "unit": "N",
-    "stat": "max",
+    "stat": "range",
     "conditions": "Lead wire diameter (mm): 0.35<d≦0.8",
     "example": "5"
    },
@@ -320,7 +288,7 @@
     "name": "Resistance to Soldering Heat",
     "symbol": "",
     "unit": "",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "Capacitance change: Within ±5%, tanδ: No"
    },
@@ -354,7 +322,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "The color of marking ink is cool gray"
+    "example": "cool gray"
    },
    {
     "name": "Polarity",
@@ -391,14 +359,22 @@
    {
     "name": "Rated Voltage",
     "symbol": "",
-    "unit": "Vdc",
+    "unit": "V",
     "stat": "value",
     "conditions": "",
     "example": "Rated Voltage"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AR5K0405, AR5K0508, AR5K0605, AR5K0608, "
    }
   ],
-  "seconds": 196.25,
-  "tokens_in": 5784,
-  "tokens_out": 2159
+  "seconds": 101.7,
+  "tokens_in": 5884,
+  "tokens_out": 2113
  }
 }

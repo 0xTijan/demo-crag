@@ -20,9 +20,9 @@
  },
  "type": "tvs_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:21:37+00:00",
+  "at": "2026-11-23T06:32:44+00:00",
   "items": [
    {
     "name": "Peak Pulse Power",
@@ -41,11 +41,11 @@
     "example": "12"
    },
    {
-    "name": "Lead Solder Temperature − Maximum",
+    "name": "Lead Solder Temperature − Maximum (10 Second Duration)",
     "symbol": "T_L",
     "unit": "℃",
     "stat": "max",
-    "conditions": "10 Second Duration",
+    "conditions": "",
     "example": "260"
    },
    {
@@ -119,10 +119,18 @@
     "stat": "typ",
     "conditions": "VR=0V,f=1MHz",
     "example": "45"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
    }
   ],
-  "seconds": 38.51,
-  "tokens_in": 1504,
-  "tokens_out": 582
+  "seconds": 35.96,
+  "tokens_in": 1604,
+  "tokens_out": 616
  }
 }

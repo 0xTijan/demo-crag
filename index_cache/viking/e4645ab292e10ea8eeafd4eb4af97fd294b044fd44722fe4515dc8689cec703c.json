@@ -23,12 +23,12 @@
  },
  "type": "ntc_thermistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:28:28+00:00",
+  "at": "2026-11-23T09:02:38+00:00",
   "items": [
    {
-    "name": "Size (Inch)",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -36,56 +36,8 @@
     "example": "0402"
    },
    {
-    "name": "L",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.00±0.15"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.50±0.10"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.50±0.10"
-   },
-   {
-    "name": "M",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.25±0.10"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "02: 0402 03: 0603 05: 0805 06: 1206"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T: Taping Reel"
-   },
-   {
     "name": "Resistance (25℃)",
-    "symbol": "",
+    "symbol": "R25",
     "unit": "Ω",
     "stat": "value",
     "conditions": "",
@@ -93,7 +45,7 @@
    },
    {
     "name": "Resistance Tolerance",
-    "symbol": "",
+    "symbol": "Tol",
     "unit": "%",
     "stat": "range",
     "conditions": "",
@@ -101,7 +53,7 @@
    },
    {
     "name": "B-Constant (25/50℃)",
-    "symbol": "",
+    "symbol": "B25/50",
     "unit": "K",
     "stat": "value",
     "conditions": "",
@@ -109,7 +61,7 @@
    },
    {
     "name": "B-Constant Tolerance",
-    "symbol": "",
+    "symbol": "B Tol",
     "unit": "%",
     "stat": "range",
     "conditions": "",
@@ -117,35 +69,35 @@
    },
    {
     "name": "B-Constant (25/85℃)",
-    "symbol": "",
+    "symbol": "B25/85",
     "unit": "K",
     "stat": "value",
     "conditions": "",
     "example": "3230K"
    },
    {
-    "name": "Force(N)",
-    "symbol": "",
-    "unit": "N",
+    "name": "Operating Temperature Range",
+    "symbol": "Toper",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "4"
+    "example": "-40 to 125"
    },
    {
-    "name": "Time(s)",
-    "symbol": "",
-    "unit": "s",
+    "name": "Storage Temperature Range",
+    "symbol": "Tstg",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "10±1"
+    "example": "-10 to 40"
    },
    {
-    "name": "Camber(mm)",
+    "name": "RoHS",
     "symbol": "",
-    "unit": "mm",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "0.7"
+    "example": "Compliant"
    },
    {
     "name": "Solderability Test",
@@ -177,7 +129,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Frequency : 10~55~10Hz Amplitude : 1.50m"
+    "example": "No mechanical damage R change shall be l"
    },
    {
     "name": "Resistance to Flexure",
@@ -185,7 +137,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Type Camber(mm) Time(s) 0402/0603 0.7 30"
+    "example": "No mechanical damage R change shall be l"
    },
    {
     "name": "High Temperature Resistance",
@@ -193,7 +145,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Temp: 125±2℃ Time: 1000+24/-0hrs"
+    "example": "No mechanical damage R change shall be l"
    },
    {
     "name": "Low Temperature Resistance",
@@ -201,7 +153,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Temp: -40±2℃ Time: 1000+24/-0hrs"
+    "example": "No mechanical damage R change shall be l"
    },
    {
     "name": "Static Humidity",
@@ -209,7 +161,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Temp: 60±2℃ Humidity: 90~95%RH Time: 100"
+    "example": "No mechanical damage R change shall be l"
    },
    {
     "name": "Thermal Shock",
@@ -220,136 +172,392 @@
     "example": "-40℃×30±3min→25℃×5±3min →125℃×30±3min→25"
    },
    {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "℃",
+    "name": "Force",
+    "symbol": "F",
+    "unit": "N",
     "stat": "range",
-    "conditions": "",
-    "example": "-10 ~ 40"
+    "conditions": "0402",
+    "example": "4"
    },
    {
-    "name": "Operating Temperature",
-    "symbol": "",
-    "unit": "℃",
+    "name": "Force",
+    "symbol": "F",
+    "unit": "N",
     "stat": "range",
-    "conditions": "",
-    "example": "-40 ~ +125"
+    "conditions": "0603",
+    "example": "5"
+   },
+   {
+    "name": "Force",
+    "symbol": "F",
+    "unit": "N",
+    "stat": "range",
+    "conditions": "0805",
+    "example": "6"
+   },
+   {
+    "name": "Force",
+    "symbol": "F",
+    "unit": "N",
+    "stat": "range",
+    "conditions": "1206",
+    "example": "10"
+   },
+   {
+    "name": "Camber",
+    "symbol": "C",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0402/0603",
+    "example": "0.7"
+   },
+   {
+    "name": "Camber",
+    "symbol": "C",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0805/1206",
+    "example": "1.0"
+   },
+   {
+    "name": "Time",
+    "symbol": "t",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "0402",
+    "example": "10±1"
+   },
+   {
+    "name": "Time",
+    "symbol": "t",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "0603",
+    "example": "10±1"
+   },
+   {
+    "name": "Time",
+    "symbol": "t",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "0805",
+    "example": "10±1"
+   },
+   {
+    "name": "Time",
+    "symbol": "t",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "1206",
+    "example": "10±1"
+   },
+   {
+    "name": "Time",
+    "symbol": "t",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "0402/0603",
+    "example": "30"
+   },
+   {
+    "name": "Time",
+    "symbol": "t",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "0805/1206",
+    "example": "30"
+   },
+   {
+    "name": "Soldering Temperature",
+    "symbol": "T",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "Solderability Test",
+    "example": "245±5"
+   },
+   {
+    "name": "Soldering Temperature",
+    "symbol": "T",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "Resistance to Soldering",
+    "example": "260±5"
+   },
+   {
+    "name": "Immersion Depth",
+    "symbol": "D",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "Solderability Test",
+    "example": "10"
+   },
+   {
+    "name": "Duration",
+    "symbol": "t",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "Solderability Test",
+    "example": "5±1"
+   },
+   {
+    "name": "Preheating Temperature",
+    "symbol": "T",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "Resistance to Soldering",
+    "example": "120~150"
+   },
+   {
+    "name": "Preheating Time",
+    "symbol": "t",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "Resistance to Soldering",
+    "example": "60"
+   },
+   {
+    "name": "Solder Composition",
+    "symbol": "S",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Solderability Test",
+    "example": "96.5%Sn/3.0%Ag/0.5%Cu"
+   },
+   {
+    "name": "Solder Composition",
+    "symbol": "S",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Resistance to Soldering",
+    "example": "96.5%Sn/3.0%Ag/0.5%Cu"
+   },
+   {
+    "name": "Dip Performance",
+    "symbol": "D",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "Solderability Test",
+    "example": "3~5"
+   },
+   {
+    "name": "Dip Performance",
+    "symbol": "D",
+    "unit": "s",
+    "stat": "range",
+    "conditions": "Resistance to Soldering",
+    "example": "3~5"
+   },
+   {
+    "name": "Frequency",
+    "symbol": "f",
+    "unit": "Hz",
+    "stat": "range",
+    "conditions": "Vibration",
+    "example": "10~55~10"
+   },
+   {
+    "name": "Amplitude",
+    "symbol": "A",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "Vibration",
+    "example": "1.50"
+   },
+   {
+    "name": "Applied Time",
+    "symbol": "t",
+    "unit": "hrs",
+    "stat": "range",
+    "conditions": "Vibration",
+    "example": "2"
+   },
+   {
+    "name": "Temperature",
+    "symbol": "T",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "High Temperature Resistance",
+    "example": "125±2"
+   },
+   {
+    "name": "Time",
+    "symbol": "t",
+    "unit": "hrs",
+    "stat": "range",
+    "conditions": "High Temperature Resistance",
+    "example": "1000+24/-0"
+   },
+   {
+    "name": "Temperature",
+    "symbol": "T",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "Low Temperature Resistance",
+    "example": "-40±2"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "RH",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "Static Humidity",
+    "example": "90~95"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "value",
+    "conditions": "NTG02",
+    "example": "10K"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "value",
+    "conditions": "NTG03",
+    "example": "4K"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "value",
+    "conditions": "NTG05",
+    "example": "4K"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "value",
+    "conditions": "NTG06",
+    "example": "4K"
    },
    {
     "name": "A",
-    "symbol": "",
+    "symbol": "A",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "178.0±2.0"
    },
    {
     "name": "B",
-    "symbol": "",
+    "symbol": "B",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "22.0±2.0"
    },
    {
     "name": "N",
-    "symbol": "",
+    "symbol": "N",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "57.0±2.0"
    },
    {
     "name": "C",
-    "symbol": "",
+    "symbol": "C",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "12.5±1.5"
    },
    {
     "name": "G",
-    "symbol": "",
+    "symbol": "G",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "8.0"
    },
    {
-    "name": "Packaging",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "10K"
-   },
-   {
     "name": "A0",
-    "symbol": "",
+    "symbol": "A0",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "0.65±0.1"
    },
    {
     "name": "B0",
-    "symbol": "",
+    "symbol": "B0",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "1.15±0.1"
    },
    {
-    "name": "F",
-    "symbol": "",
+    "name": "W",
+    "symbol": "W",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
+    "example": "8.0±0.2"
+   },
+   {
+    "name": "F",
+    "symbol": "F",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "NTG02",
     "example": "3.5±0.1"
    },
    {
     "name": "E",
-    "symbol": "",
+    "symbol": "E",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "1.75±0.2"
    },
    {
     "name": "P1",
-    "symbol": "",
+    "symbol": "P1",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "2.0±0.1"
    },
    {
     "name": "P2",
-    "symbol": "",
+    "symbol": "P2",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "2.0±0.1"
    },
    {
     "name": "P0",
-    "symbol": "",
+    "symbol": "P0",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "4.0±0.2"
    },
    {
     "name": "D0",
-    "symbol": "",
+    "symbol": "D0",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "NTG02",
     "example": "1.55±0.1"
+   },
+   {
+    "name": "T",
+    "symbol": "T",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "NTG02",
+    "example": "0.6±0.1"
    }
   ],
-  "seconds": 109.87,
-  "tokens_in": 13567,
-  "tokens_out": 1862
+  "seconds": 127.09,
+  "tokens_in": 13667,
+  "tokens_out": 3140
  }
 }

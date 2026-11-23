@@ -21,85 +21,157 @@
  },
  "type": "wire_wound_chip_inductor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:15:58+00:00",
+  "at": "2026-11-23T08:48:41+00:00",
   "items": [
    {
-    "name": "Part Number",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": ""
+    "example": "NL02, NL03, NL05, NL08, NL10, NL12, NL20"
    },
    {
     "name": "Size (Inch)",
     "symbol": "",
     "unit": "",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "0402, 0603, 0805, 1008, 1210, 1812, 2220"
    },
    {
-    "name": "Inductance (μH)",
-    "symbol": "",
+    "name": "Inductance",
+    "symbol": "L",
     "unit": "μH",
     "stat": "range",
     "conditions": "",
-    "example": "0.018 to 47"
+    "example": "0.047 to 100"
    },
    {
     "name": "Tolerance",
     "symbol": "",
     "unit": "%",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "+-5, +-10%, +-20%"
+    "example": "±5, ±10, ±20"
    },
    {
-    "name": "Q typ.",
-    "symbol": "",
+    "name": "Test Frequency",
+    "symbol": "f",
+    "unit": "MHz",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.0796 to 25.2"
+   },
+   {
+    "name": "Q Factor",
+    "symbol": "Q",
     "unit": "",
     "stat": "range",
     "conditions": "",
     "example": "7 to 50"
    },
    {
-    "name": "Test Freq. (MHz)",
-    "symbol": "",
+    "name": "Self-Resonant Frequency",
+    "symbol": "SRF",
     "unit": "MHz",
     "stat": "range",
     "conditions": "",
-    "example": "0.252, 0.796, 1, 2.52, 7.9, 25.2"
+    "example": "0.5 to 2950"
    },
    {
-    "name": "SRF (MHz) typ.",
-    "symbol": "",
-    "unit": "MHz",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.6 to 3100"
-   },
-   {
-    "name": "DCR (Ω) max.",
-    "symbol": "",
+    "name": "DC Resistance",
+    "symbol": "DCR",
     "unit": "Ω",
     "stat": "range",
     "conditions": "",
-    "example": "0.075 to 42.8"
+    "example": "0.075 to 35"
    },
    {
-    "name": "IDC (mA) max.",
-    "symbol": "",
+    "name": "DC Current Rating",
+    "symbol": "IDC",
     "unit": "mA",
     "stat": "range",
     "conditions": "",
-    "example": "30 to 2900"
+    "example": "25 to 2400"
+   },
+   {
+    "name": "Moisture Sensitivity Level",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MSL 3"
+   },
+   {
+    "name": "Operating Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to +125"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40 to +125"
+   },
+   {
+    "name": "Material",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ferrite"
+   },
+   {
+    "name": "Construction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Wire wound"
+   },
+   {
+    "name": "Termination",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SMD"
+   },
+   {
+    "name": "Color Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Black, Brown, Red, Orange, Yellow, Green"
+   },
+   {
+    "name": "Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Standard, Large Current"
+   },
+   {
+    "name": "Package Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Molding, Open"
    }
   ],
-  "seconds": 383.31,
-  "tokens_in": 32236,
-  "tokens_out": 8719
+  "seconds": 44.31,
+  "tokens_in": 16218,
+  "tokens_out": 1001
  }
 }

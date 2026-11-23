@@ -20,9 +20,9 @@
  },
  "type": "sic_mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:29:14+00:00",
+  "at": "2026-11-23T07:33:47+00:00",
   "items": [
    {
     "name": "DrainSourceVoltage",
@@ -74,7 +74,7 @@
    },
    {
     "name": "OperatingTemperatureandStorageTemperatureRange",
-    "symbol": "T /T J STG",
+    "symbol": "T J /T STG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -140,15 +140,15 @@
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "typ",
-    "conditions": "V GS=18V, I D=33A",
-    "example": "32"
+    "stat": "range",
+    "conditions": "V GS=18V, I D=33A, T J=25°C",
+    "example": "32 to 40"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "V GS=18V, I D=33A, T J=175°C",
     "example": "55"
    },
@@ -156,15 +156,15 @@
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "V GS=15V, I D=33A",
-    "example": "36"
+    "example": "36 to 50"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "V GS=15V, I D=33A, T J=175°C",
     "example": "70"
    },
@@ -197,7 +197,7 @@
     "symbol": "E ON",
     "unit": "mJ",
     "stat": "typ",
-    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH",
+    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120μH",
     "example": "0.29"
    },
    {
@@ -205,7 +205,7 @@
     "symbol": "E OFF",
     "unit": "mJ",
     "stat": "typ",
-    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH",
+    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120μH",
     "example": "0.08"
    },
    {
@@ -213,7 +213,7 @@
     "symbol": "t d(on)",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH",
+    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120μH",
     "example": "26.8"
    },
    {
@@ -221,7 +221,7 @@
     "symbol": "t r",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH",
+    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120μH",
     "example": "25"
    },
    {
@@ -229,7 +229,7 @@
     "symbol": "t d(off)",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH",
+    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120μH",
     "example": "29.6"
    },
    {
@@ -237,7 +237,7 @@
     "symbol": "t f",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120uH",
+    "conditions": "V GS=-4/+15V, V DD=800V, I D=20A, R G=3.8Ω, L=120μH",
     "example": "12.8"
    },
    {
@@ -399,42 +399,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-247-4L"
-   },
-   {
-    "name": "OperatingTemperatureRange",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 175"
-   },
-   {
-    "name": "StorageTemperatureRange",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 175"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
    }
   ],
-  "seconds": 177.1,
-  "tokens_in": 3371,
-  "tokens_out": 3236
+  "seconds": 168.29,
+  "tokens_in": 3471,
+  "tokens_out": 3101
  }
 }

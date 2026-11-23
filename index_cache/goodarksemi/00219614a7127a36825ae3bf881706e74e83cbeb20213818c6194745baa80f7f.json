@@ -20,9 +20,9 @@
  },
  "type": "esd_protection_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T11:10:33+00:00",
+  "at": "2026-11-23T06:16:11+00:00",
   "items": [
    {
     "name": "Maximum Contact Discharge Voltage Per IEC61000-4-2",
@@ -92,17 +92,17 @@
     "name": "Leakage Current",
     "symbol": "I L",
     "unit": "uA",
-    "stat": "range",
+    "stat": "typ",
     "conditions": "DC 15V Shall be Applied on Component",
-    "example": "0.01 to 0.1"
+    "example": "0.01"
    },
    {
     "name": "Capacitance",
     "symbol": "C P",
     "unit": "pF",
-    "stat": "range",
+    "stat": "typ",
     "conditions": "V =0V, F=1MHz R",
-    "example": "0.05 to 0.06"
+    "example": "0.05"
    },
    {
     "name": "ESD Pulse Withstand",
@@ -111,10 +111,18 @@
     "stat": "min",
     "conditions": "IEC61000-4-2 8KV Contact Discharge",
     "example": "1000"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0201"
    }
   ],
-  "seconds": 37.32,
-  "tokens_in": 1206,
-  "tokens_out": 570
+  "seconds": 12.31,
+  "tokens_in": 1306,
+  "tokens_out": 592
  }
 }

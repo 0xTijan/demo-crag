@@ -24,17 +24,89 @@
  },
  "type": "power_inductor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:46:54+00:00",
+  "at": "2026-11-23T06:56:15+00:00",
   "items": [
    {
-    "name": "Operating temperature range",
+    "name": "Customer",
     "symbol": "",
     "unit": "",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
-    "example": "-40～125°C"
+    "example": "Viking"
+   },
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Shielded SMD Power Inductor – PCDR Serie"
+   },
+   {
+    "name": "Sizes",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0628/0728/0730/0732/0745/1045/1255/1265/"
+   },
+   {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "02-Jul-20"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.B5"
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compact, low profile with low DCR and la"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Portable Telephones"
+   },
+   {
+    "name": "Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Saturation Rated Current (I sat): The cu"
+   },
+   {
+    "name": "Product Identification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0628"
+   },
+   {
+    "name": "Dimensions (AxC)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0628: 6.0×2.8 0728: 7.0×2.8 0730: 7.0×3."
    },
    {
     "name": "Inductor Tolerance",
@@ -42,7 +114,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "M: ±20%"
+    "example": "M: ±20% N: ±30%"
    },
    {
     "name": "Packaging Style",
@@ -55,114 +127,122 @@
    {
     "name": "Inductance",
     "symbol": "",
-    "unit": "μH",
+    "unit": "",
     "stat": "value",
     "conditions": "",
+    "example": "1R0: 1.0μH 470: 47μH 101: 100μH"
+   },
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Shielded SMD Power Inductor"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "A: 6.0±0.20, C: 2.8±0.20"
+   },
+   {
+    "name": "Inductance and rated current ranges",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "PCDR0628: 1.0～1000μH, 2.1～0.12A"
+   },
+   {
+    "name": "Test equipment",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "L: HP4284A LCR meter"
+   },
+   {
+    "name": "Electrical specifications at 25°C",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "25°C"
+   },
+   {
+    "name": "Part No",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "PCDR0628□T1R0"
+   },
+   {
+    "name": "L (μH)",
+    "symbol": "L",
+    "unit": "μH",
+    "stat": "value",
+    "conditions": "1KHz, 0.5V",
     "example": "1.0"
    },
    {
-    "name": "DCR",
+    "name": "Tolerance",
     "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "1KHz, 0.5V",
+    "example": "M"
+   },
+   {
+    "name": "Test Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1KHz, 0.5V"
+   },
+   {
+    "name": "DCR (Ω) ±20%",
+    "symbol": "DCR",
     "unit": "Ω",
     "stat": "value",
-    "conditions": "±20%",
+    "conditions": "1KHz, 0.5V",
     "example": "0.024"
    },
    {
-    "name": "IDC",
-    "symbol": "",
+    "name": "IDC (A) max.",
+    "symbol": "IDC",
     "unit": "A",
     "stat": "value",
-    "conditions": "max.",
+    "conditions": "1KHz, 0.5V",
     "example": "2.10"
    },
    {
-    "name": "Saturation Rated Current",
-    "symbol": "",
+    "name": "I sat",
+    "symbol": "I sat",
     "unit": "A",
     "stat": "value",
-    "conditions": "",
+    "conditions": "1KHz, 0.5V",
     "example": "4.90"
    },
    {
-    "name": "Temperature Rated Current",
-    "symbol": "",
+    "name": "I rms",
+    "symbol": "I rms",
     "unit": "A",
     "stat": "value",
-    "conditions": "",
+    "conditions": "1KHz, 0.5V",
     "example": "8.00"
    },
    {
-    "name": "A",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "6.0±0.20"
-   },
-   {
-    "name": "C",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.8±0.20"
-   },
-   {
-    "name": "D",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "4.00"
-   },
-   {
-    "name": "E",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "2.00"
-   },
-   {
-    "name": "H",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "2.20"
-   },
-   {
-    "name": "I",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.50"
-   },
-   {
-    "name": "J",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "4.00"
-   },
-   {
-    "name": "Tape size W",
+    "name": "Tape size",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
     "conditions": "",
     "example": "16"
-   },
-   {
-    "name": "Tape size P",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "12"
    },
    {
     "name": "Parts Per Reel",
@@ -185,7 +265,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Temperature 85±2℃, Time: 48±2 hours, Tested after 1hour at room temperature.",
     "example": "No case deformation or change in appeara"
    },
    {
@@ -193,7 +273,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Temperature -40±2℃, Time: 48±2 hours, Tested after 1hour at room temperature.",
     "example": "No case deformation or change in appeara"
    },
    {
@@ -201,7 +281,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Temperature 40±2℃, 90~95% relative humidity Time: 96±2 hours Tested after 1hour at room temperature.",
     "example": "No case deformation or change in appeara"
    },
    {
@@ -209,7 +289,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "First -25℃ 30minutes then 25℃ 10 minutes last 85℃ 30 minutes, as 1 cycle. Go through 5 cycles. Tested after 1 hour at ro",
     "example": "No case deformation or change in appeara"
    },
    {
@@ -217,7 +297,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Product with Lead-free terminal: Dip pads in flux then dip in solder pot at 245±5℃ for 3 seconds.",
     "example": "Terminal area must have 90% minimum sold"
    },
    {
@@ -225,7 +305,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Flux should cover the whole of the sample before heating, then be preheated for about 2 minutes over temperature of 130~",
     "example": "No case deformation or change in appeara"
    },
    {
@@ -233,7 +313,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Apply frequency 10~55Hz. 1.5mm amplitude in each of perpendicular direction for 2 hours.",
     "example": "No case deformation or change in appeara"
    },
    {
@@ -241,12 +321,20 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Drop down with 981m/s2(100G) shock attitude upon a rubber block method shock testing machine, for 1 time. In each of thr",
     "example": "No case deformation or change in appeara"
+   },
+   {
+    "name": "Reflow",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Recommendation"
    }
   ],
-  "seconds": 222.24,
-  "tokens_in": 13133,
-  "tokens_out": 1361
+  "seconds": 216.43,
+  "tokens_in": 13233,
+  "tokens_out": 2730
  }
 }

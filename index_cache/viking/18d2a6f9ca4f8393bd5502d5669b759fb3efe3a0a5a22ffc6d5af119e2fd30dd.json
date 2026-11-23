@@ -24,17 +24,17 @@
  },
  "type": "thin_film_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:37:31+00:00",
+  "at": "2026-11-23T07:40:13+00:00",
   "items": [
    {
-    "name": "Product",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Anti-Corrosive Thin Film Precision Chip "
+    "example": "0402/0603/0805/1206/2010/2512"
    },
    {
     "name": "Size",
@@ -45,20 +45,36 @@
     "example": "0402/0603/0805/1206/2010/2512"
    },
    {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.1%"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "±15"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "at 70°C",
+    "example": "1/16W"
+   },
+   {
     "name": "Operating Temp. Range",
     "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to 155"
-   },
-   {
-    "name": "Power Rating",
-    "symbol": "",
-    "unit": "W",
-    "stat": "value",
-    "conditions": "at 70°C",
-    "example": "1/16"
    },
    {
     "name": "Max. Operating Voltage",
@@ -79,82 +95,18 @@
    {
     "name": "Resistance Range",
     "symbol": "",
-    "unit": "Ω",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "49.9 to 12K"
+    "example": "49.9Ω - 12KΩ"
    },
    {
-    "name": "TCR",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "±15"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "range",
-    "conditions": "",
-    "example": "±0.1"
-   },
-   {
-    "name": "Package",
+    "name": "RoHS",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0402/0603/0805/1206/2010/2512"
-   },
-   {
-    "name": "L",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.00 to 6.30"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.50 to 3.10"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.30 to 0.55"
-   },
-   {
-    "name": "D1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.20 to 0.60"
-   },
-   {
-    "name": "D2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.20 to 0.50"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "g",
-    "stat": "value",
-    "conditions": "1000pcs",
-    "example": "0.55"
+    "example": "Pb-free without exemption"
    },
    {
     "name": "Marking Code",
@@ -167,26 +119,50 @@
    {
     "name": "Solderability",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "min",
     "conditions": "",
-    "example": "95"
+    "example": "95%"
    },
    {
     "name": "Resistance to Soldering Heat",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "max",
     "conditions": "",
-    "example": "±0.02"
+    "example": "±0.02%"
    },
    {
     "name": "Thermal Shock",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "max",
     "conditions": "",
-    "example": "±0.02"
+    "example": "±0.02%"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "±0.05%"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "±0.05%"
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "±0.02%"
    },
    {
     "name": "Storage Temperature",
@@ -203,34 +179,10 @@
     "stat": "value",
     "conditions": "",
     "example": "2"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Pb-free without exemption"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not qualified"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "03D T D X 1001 N"
    }
   ],
-  "seconds": 222.59,
-  "tokens_in": 7683,
-  "tokens_out": 1026
+  "seconds": 179.11,
+  "tokens_in": 7783,
+  "tokens_out": 1306
  }
 }

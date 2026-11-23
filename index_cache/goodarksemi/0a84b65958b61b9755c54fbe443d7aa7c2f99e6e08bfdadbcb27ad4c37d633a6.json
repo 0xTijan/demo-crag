@@ -24,13 +24,13 @@
  },
  "type": "standard_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:18:42+00:00",
+  "at": "2026-11-23T06:20:47+00:00",
   "items": [
    {
     "name": "Repetitive Peak Reverse Voltage",
-    "symbol": "V RRM",
+    "symbol": "V_RRM",
     "unit": "V",
     "stat": "range",
     "conditions": "",
@@ -38,31 +38,31 @@
    },
    {
     "name": "Maximum Reverse Recovery Current",
-    "symbol": "I RRM",
+    "symbol": "I_RRM",
     "unit": "mA",
     "stat": "value",
-    "conditions": "T=Maximum T J J",
+    "conditions": "T=Maximum T_J",
     "example": "9"
    },
    {
     "name": "Average Forward Current",
-    "symbol": "I F(AV)",
+    "symbol": "I_F(AV)",
     "unit": "A",
     "stat": "value",
-    "conditions": "T =140°C, C 180° conduction, half sine wave",
+    "conditions": "T=140°C, C 180° conduction, half sine wave",
     "example": "85"
    },
    {
     "name": "Average Forward Current",
-    "symbol": "I F(AV)",
+    "symbol": "I_F(AV)",
     "unit": "A",
     "stat": "value",
-    "conditions": "T =110°C, C 180° conduction, half sine wave",
+    "conditions": "T=110°C, C 180° conduction, half sine wave",
     "example": "85"
    },
    {
     "name": "Surge Forward Current",
-    "symbol": "I FSM",
+    "symbol": "I_FSM",
     "unit": "A",
     "stat": "value",
     "conditions": "t=10ms",
@@ -70,7 +70,7 @@
    },
    {
     "name": "Surge Forward Current",
-    "symbol": "I FSM",
+    "symbol": "I_FSM",
     "unit": "A",
     "stat": "value",
     "conditions": "t=8.3ms",
@@ -78,18 +78,18 @@
    },
    {
     "name": "Surge Forward Current",
-    "symbol": "I FSM",
+    "symbol": "I_FSM",
     "unit": "A",
     "stat": "value",
-    "conditions": "t=10ms, 100% V RRM reapplied",
+    "conditions": "t=10ms, 100% V_RRM reapplied",
     "example": "1450"
    },
    {
     "name": "Surge Forward Current",
-    "symbol": "I FSM",
+    "symbol": "I_FSM",
     "unit": "A",
     "stat": "value",
-    "conditions": "t=8.3ms, 100% V RRM reapplied",
+    "conditions": "t=8.3ms, 100% V_RRM reapplied",
     "example": "1500"
    },
    {
@@ -113,7 +113,7 @@
     "symbol": "I2t",
     "unit": "A2s",
     "stat": "value",
-    "conditions": "t=10ms, 100% V RRM reapplied",
+    "conditions": "t=10ms, 100% V_RRM reapplied",
     "example": "10500"
    },
    {
@@ -121,20 +121,20 @@
     "symbol": "I2t",
     "unit": "A2s",
     "stat": "value",
-    "conditions": "t=8.3ms, 100% V RRM reapplied",
+    "conditions": "t=8.3ms, 100% V_RRM reapplied",
     "example": "9400"
    },
    {
     "name": "Max. Forward Voltage Drop",
-    "symbol": "V F",
+    "symbol": "V_F",
     "unit": "V",
     "stat": "value",
-    "conditions": "I =220A, T=25°C, t =400us F J P",
+    "conditions": "I=220A, T=25°C, t=400us",
     "example": ""
    },
    {
     "name": "Max. Thermal Resistance, Junction to Case",
-    "symbol": "R THJ-C",
+    "symbol": "R_THJ-C",
     "unit": "°C/W",
     "stat": "value",
     "conditions": "",
@@ -163,18 +163,10 @@
     "stat": "value",
     "conditions": "",
     "example": "DO-5"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GS85HF-10"
    }
   ],
-  "seconds": 53.73,
-  "tokens_in": 1700,
-  "tokens_out": 1227
+  "seconds": 41.56,
+  "tokens_in": 1800,
+  "tokens_out": 890
  }
 }

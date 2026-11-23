@@ -20,9 +20,9 @@
  },
  "type": "multilayer_ceramic_capacitor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:19:48+00:00",
+  "at": "2026-11-23T08:15:42+00:00",
   "items": [
    {
     "name": "Product Type",
@@ -181,8 +181,8 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "No bias Shown in Rated value.",
-    "example": "Shown in Rated value"
+    "conditions": "No bias Shown in Rated value. The capacitance change should be measured after 5 min at each specified temp. stage. Capac",
+    "example": "No bias Shown in Rated value."
    },
    {
     "name": "Adhesive Strength of Termination",
@@ -247,10 +247,18 @@
     "stat": "value",
     "conditions": "",
     "example": "Appearance: No defects or abnormalities."
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1210"
    }
   ],
-  "seconds": 55.2,
-  "tokens_in": 3551,
-  "tokens_out": 1469
+  "seconds": 27.01,
+  "tokens_in": 3651,
+  "tokens_out": 1603
  }
 }

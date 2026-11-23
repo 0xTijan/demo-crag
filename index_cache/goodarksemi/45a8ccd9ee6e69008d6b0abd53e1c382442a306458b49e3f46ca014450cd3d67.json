@@ -22,9 +22,9 @@
  },
  "type": "fast_recovery_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:45:30+00:00",
+  "at": "2026-11-23T07:45:05+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -87,7 +87,7 @@
     "symbol": "I R",
     "unit": "μA",
     "stat": "max",
-    "conditions": "T =25°C A",
+    "conditions": "T =25°C",
     "example": "5"
    },
    {
@@ -95,7 +95,7 @@
     "symbol": "I R",
     "unit": "μA",
     "stat": "max",
-    "conditions": "T =125°C A",
+    "conditions": "T =125°C",
     "example": "200"
    },
    {
@@ -139,80 +139,16 @@
     "example": "-55 to +150"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "KBJ molded plastic body"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "plated leads solderable per MIL-STD-750,"
-   },
-   {
-    "name": "Mounting position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
-   },
-   {
-    "name": "Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "RoHS Compliance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS 2011/65/EU"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "KBJ"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "EKBJ402"
-   },
-   {
-    "name": "Carrier",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tube"
-   },
-   {
-    "name": "Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "20pcs / Tube"
    }
   ],
-  "seconds": 46.6,
-  "tokens_in": 2253,
-  "tokens_out": 1011
+  "seconds": 41.86,
+  "tokens_in": 2353,
+  "tokens_out": 713
  }
 }

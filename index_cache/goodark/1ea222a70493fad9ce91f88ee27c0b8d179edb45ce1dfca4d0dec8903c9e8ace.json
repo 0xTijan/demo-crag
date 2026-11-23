@@ -20,9 +20,9 @@
  },
  "type": "sic_mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:24:00+00:00",
+  "at": "2026-11-23T07:28:47+00:00",
   "items": [
    {
     "name": "DrainSourceVoltage",
@@ -36,7 +36,7 @@
     "name": "GateSourceVoltage",
     "symbol": "V GS",
     "unit": "V",
-    "stat": "max",
+    "stat": "range",
     "conditions": "",
     "example": "-8/+22"
    },
@@ -44,7 +44,7 @@
     "name": "RecommendGateSourceVoltage",
     "symbol": "V GSop",
     "unit": "V",
-    "stat": "max",
+    "stat": "range",
     "conditions": "",
     "example": "-4/+18"
    },
@@ -74,7 +74,7 @@
    },
    {
     "name": "OperatingTemperatureandStorageTemperatureRange",
-    "symbol": "T J/T STG",
+    "symbol": "T J /T STG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -126,7 +126,7 @@
     "unit": "V",
     "stat": "range",
     "conditions": "V DS=V GS, I DS=5mA",
-    "example": "2 to 4"
+    "example": "2/2.8/4"
    },
    {
     "name": "GateThresholdVoltage",
@@ -134,7 +134,7 @@
     "unit": "V",
     "stat": "range",
     "conditions": "V DS=V GS, I DS=5mA, T J=175°C",
-    "example": "1.9 to 4"
+    "example": "1.9"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
@@ -197,7 +197,7 @@
     "symbol": "E ON",
     "unit": "μJ",
     "stat": "typ",
-    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100uH",
+    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100μH",
     "example": "320"
    },
    {
@@ -205,7 +205,7 @@
     "symbol": "E OFF",
     "unit": "μJ",
     "stat": "typ",
-    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100uH",
+    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100μH",
     "example": "49"
    },
    {
@@ -213,7 +213,7 @@
     "symbol": "t d(on)",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100uH",
+    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100μH",
     "example": "19"
    },
    {
@@ -221,7 +221,7 @@
     "symbol": "t r",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100uH",
+    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100μH",
     "example": "21"
    },
    {
@@ -229,7 +229,7 @@
     "symbol": "t d(off)",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100uH",
+    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100μH",
     "example": "15"
    },
    {
@@ -237,7 +237,7 @@
     "symbol": "t f",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100uH",
+    "conditions": "V GS=-4/+18V, V DD=800V, I D=20A, R G=0Ω, L=100μH",
     "example": "17"
    },
    {
@@ -311,10 +311,18 @@
     "stat": "typ",
     "conditions": "V DD=800V, I D=20A, R F=0Ω, V GS=-4V, di/dt=700A/μs",
     "example": "405"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GMS080120W7"
    }
   ],
-  "seconds": 33.87,
-  "tokens_in": 2237,
-  "tokens_out": 2232
+  "seconds": 34.39,
+  "tokens_in": 2337,
+  "tokens_out": 2272
  }
 }

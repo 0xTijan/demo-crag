@@ -22,12 +22,20 @@
  },
  "type": "ntc_thermistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:27:54+00:00",
+  "at": "2026-11-23T09:01:47+00:00",
   "items": [
    {
     "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": ""
+   },
+   {
+    "name": "Product",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -59,12 +67,36 @@
     "example": "REV.A1"
    },
    {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402 / 0603 / 0805"
+   },
+   {
     "name": "Features",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "Excellent solderability and solder resis"
+   },
+   {
+    "name": "Maximum operating temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "125"
+   },
+   {
+    "name": "AEC-Q200 certification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q200"
    },
    {
     "name": "Applications",
@@ -83,8 +115,16 @@
     "example": "NTGH02"
    },
    {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402"
+   },
+   {
     "name": "L",
-    "symbol": "L",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
     "conditions": "",
@@ -92,7 +132,7 @@
    },
    {
     "name": "W",
-    "symbol": "W",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
     "conditions": "",
@@ -100,7 +140,7 @@
    },
    {
     "name": "T",
-    "symbol": "T",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
     "conditions": "",
@@ -108,11 +148,19 @@
    },
    {
     "name": "M",
-    "symbol": "M",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
     "conditions": "",
     "example": "0.25±0.10"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "03 T 103 F 338 H A A"
    },
    {
     "name": "Dimensions",
@@ -132,7 +180,7 @@
    },
    {
     "name": "Resistance (25℃)",
-    "symbol": "R25",
+    "symbol": "",
     "unit": "Ω",
     "stat": "value",
     "conditions": "",
@@ -140,7 +188,7 @@
    },
    {
     "name": "Resistance Tolerance",
-    "symbol": "ΔR",
+    "symbol": "",
     "unit": "%",
     "stat": "range",
     "conditions": "",
@@ -148,7 +196,7 @@
    },
    {
     "name": "B- Constant (25/50℃)",
-    "symbol": "B",
+    "symbol": "",
     "unit": "K",
     "stat": "value",
     "conditions": "",
@@ -156,7 +204,7 @@
    },
    {
     "name": "B- Constant Tolerance",
-    "symbol": "ΔB",
+    "symbol": "",
     "unit": "%",
     "stat": "range",
     "conditions": "",
@@ -164,23 +212,23 @@
    },
    {
     "name": "Maximum Operating Current @ 25℃",
-    "symbol": "Imax",
+    "symbol": "",
     "unit": "mA",
-    "stat": "value",
+    "stat": "max",
     "conditions": "",
-    "example": "0.1"
+    "example": "0.15"
    },
    {
     "name": "Maximum Voltage",
-    "symbol": "Vmax",
+    "symbol": "",
     "unit": "V",
-    "stat": "value",
+    "stat": "max",
     "conditions": "",
     "example": "5"
    },
    {
     "name": "Typical Dissipation Constant @ 25℃",
-    "symbol": "D",
+    "symbol": "",
     "unit": "mW/℃",
     "stat": "value",
     "conditions": "",
@@ -188,11 +236,43 @@
    },
    {
     "name": "Rated Electric Power @25℃",
-    "symbol": "P",
+    "symbol": "",
     "unit": "mW",
     "stat": "value",
     "conditions": "",
     "example": "100"
+   },
+   {
+    "name": "Operating Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-40~+150"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-10 ~ 40"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "30 ~ 70"
+   },
+   {
+    "name": "Shelf life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
    },
    {
     "name": "High Temperature Exposure (Storage)",
@@ -283,48 +363,136 @@
     "example": "No mechanical damage. R25 change shall b"
    },
    {
-    "name": "Operating Temperature",
-    "symbol": "Toper",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-40~+150"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "Tstorage",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-10 ~ 40"
-   },
-   {
-    "name": "Humidity",
-    "symbol": "RH",
-    "unit": "%",
-    "stat": "range",
-    "conditions": "",
-    "example": "30 ~ 70"
-   },
-   {
-    "name": "Shelf life",
+    "name": "A",
     "symbol": "",
-    "unit": "years",
-    "stat": "value",
+    "unit": "mm",
+    "stat": "range",
     "conditions": "",
-    "example": "1"
+    "example": "178.0±2.0"
    },
    {
-    "name": "AEC-Q200",
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "22.0±2.0"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "12.5±1.5"
+   },
+   {
+    "name": "N",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "57.0±2.0"
+   },
+   {
+    "name": "G",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "AEC-Q200 certification"
+    "example": "8"
+   },
+   {
+    "name": "Packaging",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "10,000"
+   },
+   {
+    "name": "A0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.65±0.1"
+   },
+   {
+    "name": "B0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.15±0.1"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.5±0.1"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.75±0.2"
+   },
+   {
+    "name": "P1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.0±0.2"
+   },
+   {
+    "name": "P2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.0±0.05"
+   },
+   {
+    "name": "P0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.0±0.2"
+   },
+   {
+    "name": "D0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.55±0.1"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.60"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.60"
    }
   ],
-  "seconds": 75.74,
-  "tokens_in": 5264,
-  "tokens_out": 3420
+  "seconds": 75.94,
+  "tokens_in": 5364,
+  "tokens_out": 3553
  }
 }

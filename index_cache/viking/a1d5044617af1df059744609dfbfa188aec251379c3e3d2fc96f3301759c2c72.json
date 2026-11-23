@@ -22,9 +22,9 @@
  },
  "type": "common_mode_filter",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:47:01+00:00",
+  "at": "2026-11-23T08:32:03+00:00",
   "items": [
    {
     "name": "Product Type",
@@ -78,7 +78,7 @@
     "name": "Inductance Tolerance",
     "symbol": "",
     "unit": "",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "+50/-30%"
    },
@@ -142,7 +142,7 @@
     "name": "Rated Voltage Vdc (V) typ.",
     "symbol": "",
     "unit": "V",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "",
     "example": "80"
    },
@@ -176,7 +176,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1000 hrs 85°C/85%RH 100% rated current M"
+    "example": "1000 hrs 85°C/85%RH 100% rated current"
    },
    {
     "name": "Operational Life",
@@ -185,6 +185,46 @@
     "stat": "value",
     "conditions": "",
     "example": "at +150℃ for 1000 hrs with 100% rated cu"
+   },
+   {
+    "name": "External Visual",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance：No damage"
+   },
+   {
+    "name": "Physical Dimension",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "According to the product specification s"
+   },
+   {
+    "name": "Resistance to Solvents",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No damage"
+   },
+   {
+    "name": "Mechanical Shock",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Wave form: sine shock Peak value is 100g"
+   },
+   {
+    "name": "Vibration",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Oscillation Frequency: 10～2K～10Hz for 20"
    },
    {
     "name": "Resistance to Soldering Heat",
@@ -200,7 +240,15 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "-55℃ to +150℃, 300 cycles Measured at ro"
+    "example": "-55℃ to +150℃, 300 cycles"
+   },
+   {
+    "name": "ESD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Appearance: No damage"
    },
    {
     "name": "Solderability",
@@ -208,7 +256,7 @@
     "unit": "",
     "stat": "min",
     "conditions": "",
-    "example": "95% min. coverage"
+    "example": "95%"
    },
    {
     "name": "Flammability",
@@ -217,6 +265,14 @@
     "stat": "value",
     "conditions": "",
     "example": "V-0 or V-1 are acceptable"
+   },
+   {
+    "name": "Board Flex",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Place the 100mm X 40mm board into a fixt"
    },
    {
     "name": "Terminal Strength(SMD)",
@@ -243,12 +299,12 @@
     "example": "1"
    },
    {
-    "name": "Packaging Quantity",
+    "name": "Package",
     "symbol": "",
-    "unit": "EA",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "2000"
+    "example": "CFH10"
    },
    {
     "name": "A",
@@ -256,7 +312,7 @@
     "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "2.88±0.10"
+    "example": "3.3±0.2"
    },
    {
     "name": "B",
@@ -264,7 +320,95 @@
     "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "3.65±0.10"
+    "example": "2.5±0.2"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.5 max"
+   },
+   {
+    "name": "D1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.55±0.15"
+   },
+   {
+    "name": "D2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.75±0.2"
+   },
+   {
+    "name": "D3",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "—"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.7"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.8"
+   },
+   {
+    "name": "G1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.4"
+   },
+   {
+    "name": "G2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.2"
+   },
+   {
+    "name": "ΦA",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "178±2.0"
+   },
+   {
+    "name": "ΦB",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "60±2.0"
+   },
+   {
+    "name": "ΦC",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "13.5±0.5"
    },
    {
     "name": "W",
@@ -272,7 +416,15 @@
     "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "8.0±0.10"
+    "example": "9±0.5"
+   },
+   {
+    "name": "Quantity (EA)",
+    "symbol": "",
+    "unit": "EA",
+    "stat": "value",
+    "conditions": "",
+    "example": "2000"
    },
    {
     "name": "E",
@@ -335,12 +487,44 @@
     "symbol": "",
     "unit": "g",
     "stat": "range",
-    "conditions": "Temperature: 5 ~ 35°C, Humidity: 45 ~ 85%, Atmospheric pressure: 860 ~ 1060hpa, Tearing speed: 300mm min",
+    "conditions": "",
     "example": "15~80"
+   },
+   {
+    "name": "Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "5 ~ 35"
+   },
+   {
+    "name": "Humidity",
+    "symbol": "",
+    "unit": "%",
+    "stat": "range",
+    "conditions": "",
+    "example": "45 ~ 85"
+   },
+   {
+    "name": "Atmospheric pressure",
+    "symbol": "",
+    "unit": "hpa",
+    "stat": "range",
+    "conditions": "",
+    "example": "860 ~ 1060"
+   },
+   {
+    "name": "Tearing speed",
+    "symbol": "",
+    "unit": "mm/min",
+    "stat": "min",
+    "conditions": "",
+    "example": "300"
    }
   ],
-  "seconds": 152.23,
-  "tokens_in": 4573,
-  "tokens_out": 4692
+  "seconds": 131.99,
+  "tokens_in": 4673,
+  "tokens_out": 6298
  }
 }

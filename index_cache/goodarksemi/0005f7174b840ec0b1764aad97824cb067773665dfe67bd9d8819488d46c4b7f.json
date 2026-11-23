@@ -20,9 +20,9 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:47:43+00:00",
+  "at": "2026-11-23T05:48:15+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -159,10 +159,18 @@
     "stat": "max",
     "conditions": "T=100°C",
     "example": "10"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-263 (D 2 PAK)"
    }
   ],
-  "seconds": 24.11,
-  "tokens_in": 1977,
-  "tokens_out": 804
+  "seconds": 32.41,
+  "tokens_in": 2077,
+  "tokens_out": 845
  }
 }

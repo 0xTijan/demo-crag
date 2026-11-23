@@ -22,16 +22,16 @@
  },
  "type": "switching_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:28:58+00:00",
+  "at": "2026-11-23T06:42:28+00:00",
   "items": [
    {
     "name": "Reverse Voltage",
     "symbol": "V R",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "I =100uA",
     "example": "120"
    },
    {
@@ -99,7 +99,7 @@
     "example": "400"
    },
    {
-    "name": "Peak Forward Surge Current @T =1mS; T =25°C P A",
+    "name": "Peak Forward Surge Current",
     "symbol": "I FSM",
     "unit": "A",
     "stat": "max",
@@ -107,35 +107,11 @@
     "example": "1.7"
    },
    {
-    "name": "Reverse Voltage",
-    "symbol": "V R",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "I =100uA B",
-    "example": "120"
-   },
-   {
     "name": "Reverse Leakage Current",
     "symbol": "I R",
     "unit": "uA",
     "stat": "max",
-    "conditions": "V =100V R",
-    "example": "0.1"
-   },
-   {
-    "name": "Reverse Leakage Current",
-    "symbol": "I R",
-    "unit": "uA",
-    "stat": "max",
-    "conditions": "V =150V R",
-    "example": "0.1"
-   },
-   {
-    "name": "Reverse Leakage Current",
-    "symbol": "I R",
-    "unit": "uA",
-    "stat": "max",
-    "conditions": "V =200V R",
+    "conditions": "V =100V",
     "example": "0.1"
    },
    {
@@ -143,7 +119,7 @@
     "symbol": "V F",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =100mA F",
+    "conditions": "I =100mA",
     "example": "1"
    },
    {
@@ -151,7 +127,7 @@
     "symbol": "V F",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =200mA F",
+    "conditions": "I =200mA",
     "example": "1.25"
    },
    {
@@ -159,7 +135,7 @@
     "symbol": "t rr",
     "unit": "nS",
     "stat": "max",
-    "conditions": "I =30mA, I =30mA, F R R =100Ω, I =3mA L RR",
+    "conditions": "I =30mA, I =30mA, R =100Ω, I =3mA",
     "example": "50"
    },
    {
@@ -167,7 +143,7 @@
     "symbol": "C",
     "unit": "pF",
     "stat": "max",
-    "conditions": "V =0V, f=1MHz R",
+    "conditions": "V =0V, f=1MHz",
     "example": "5"
    },
    {
@@ -177,42 +153,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOD-323"
-   },
-   {
-    "name": "Polarity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "cathode band denotes cathode"
-   },
-   {
-    "name": "Mounting Position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
-   },
-   {
-    "name": "Epoxy UL",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "BAV19WS"
    }
   ],
-  "seconds": 52.95,
-  "tokens_in": 1731,
-  "tokens_out": 1179
+  "seconds": 41.75,
+  "tokens_in": 1831,
+  "tokens_out": 717
  }
 }

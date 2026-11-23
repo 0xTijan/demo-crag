@@ -20,9 +20,9 @@
  },
  "type": "pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:31:40+00:00",
+  "at": "2026-11-23T06:44:35+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -183,42 +183,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT-23"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to +150"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 64.81,
-  "tokens_in": 1550,
-  "tokens_out": 1100
+  "seconds": 28.89,
+  "tokens_in": 1650,
+  "tokens_out": 963
  }
 }

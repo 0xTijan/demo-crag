@@ -24,17 +24,33 @@
  },
  "type": "power_inductor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:40:16+00:00",
+  "at": "2026-11-23T06:50:03+00:00",
   "items": [
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DRGH664"
+   },
    {
     "name": "Type",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "DRGH664"
+    "example": "DIP Power Inductor"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.0±0.5"
    },
    {
     "name": "A",
@@ -74,7 +90,7 @@
     "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "–"
+    "example": "4.0±0.3"
    },
    {
     "name": "E",
@@ -90,7 +106,7 @@
     "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "–"
+    "example": "6.40±0.5"
    },
    {
     "name": "Rated DC Current",
@@ -112,7 +128,7 @@
     "name": "Inductance",
     "symbol": "L",
     "unit": "μH",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "22"
    },
@@ -147,114 +163,10 @@
     "stat": "max",
     "conditions": "",
     "example": "1.27"
-   },
-   {
-    "name": "Package",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "DIP"
-   },
-   {
-    "name": "Mounting Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Through-hole"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "5～25"
-   },
-   {
-    "name": "Humidity",
-    "symbol": "",
-    "unit": "%",
-    "stat": "range",
-    "conditions": "",
-    "example": "25～80"
-   },
-   {
-    "name": "Shelf life",
-    "symbol": "",
-    "unit": "years",
-    "stat": "max",
-    "conditions": "",
-    "example": "1"
-   },
-   {
-    "name": "Vibration",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No damage"
-   },
-   {
-    "name": "Resistance to Soldering Heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No Damage"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "90% covered"
-   },
-   {
-    "name": "Temperature Shock",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No damage"
-   },
-   {
-    "name": "Temperature Cycle",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "100 cycles"
-   },
-   {
-    "name": "Humidity Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1000hrs"
-   },
-   {
-    "name": "Heat Temperature Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1000hrs"
-   },
-   {
-    "name": "Low Temperature Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1000hrs"
    }
   ],
-  "seconds": 146.13,
-  "tokens_in": 10262,
-  "tokens_out": 1820
+  "seconds": 19.0,
+  "tokens_in": 10362,
+  "tokens_out": 650
  }
 }

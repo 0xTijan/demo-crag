@@ -22,13 +22,13 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:47:51+00:00",
+  "at": "2026-11-23T05:48:23+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
-    "symbol": "V RRM",
+    "symbol": "V_RRM",
     "unit": "V",
     "stat": "max",
     "conditions": "",
@@ -36,7 +36,7 @@
    },
    {
     "name": "Maximum RMS Voltage",
-    "symbol": "V RMS",
+    "symbol": "V_RMS",
     "unit": "V",
     "stat": "max",
     "conditions": "",
@@ -44,7 +44,7 @@
    },
    {
     "name": "Maximum DC Blocking Voltage",
-    "symbol": "V DC",
+    "symbol": "V_DC",
     "unit": "V",
     "stat": "max",
     "conditions": "",
@@ -52,7 +52,7 @@
    },
    {
     "name": "Maximum Average Forward Rectified Current",
-    "symbol": "I F(AV)",
+    "symbol": "I_F(AV)",
     "unit": "A",
     "stat": "max",
     "conditions": "",
@@ -60,7 +60,7 @@
    },
    {
     "name": "Peak Forward Surge Current 8.3ms Single Half Sine-Wave Superimposed on Rated Loa",
-    "symbol": "I FSM",
+    "symbol": "I_FSM",
     "unit": "A",
     "stat": "max",
     "conditions": "",
@@ -68,7 +68,7 @@
    },
    {
     "name": "Operating Junction and Storage Temperature Range",
-    "symbol": "T, T J STG",
+    "symbol": "T_J, T_STG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -76,23 +76,23 @@
    },
    {
     "name": "Maximum Instantaneous Forward Voltage",
-    "symbol": "V F",
+    "symbol": "V_F",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =2A, T =25°C",
+    "conditions": "I_F=2A, T_A=25°C",
     "example": "0.60"
    },
    {
     "name": "Maximum DC Reverse Current at Rated DC Blocking Voltage",
-    "symbol": "I R",
+    "symbol": "I_R",
     "unit": "uA",
     "stat": "max",
-    "conditions": "T =25°C",
+    "conditions": "T_A=25°C",
     "example": "250"
    },
    {
     "name": "Typical Junction Capacitance",
-    "symbol": "C J",
+    "symbol": "C_J",
     "unit": "pF",
     "stat": "typ",
     "conditions": "4.0V, 1MHz",
@@ -100,7 +100,7 @@
    },
    {
     "name": "Typical Thermal Resistance",
-    "symbol": "R θJA",
+    "symbol": "R_θJA",
     "unit": "°C/W",
     "stat": "typ",
     "conditions": "Junction to Ambient",
@@ -108,15 +108,23 @@
    },
    {
     "name": "Typical Thermal Resistance",
-    "symbol": "R θJL",
+    "symbol": "R_θJL",
     "unit": "°C/W",
     "stat": "typ",
     "conditions": "Junction to Lead",
     "example": "24"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "iSGP (SOD-323HS)"
    }
   ],
-  "seconds": 31.88,
-  "tokens_in": 1284,
-  "tokens_out": 531
+  "seconds": 40.45,
+  "tokens_in": 1384,
+  "tokens_out": 577
  }
 }

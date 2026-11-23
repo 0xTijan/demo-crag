@@ -11,10 +11,11 @@ type: sic_schottky_diode
 name: SiC Schottky diode
 version: 1
 status: draft
-must_match: []
-visual_check: pinout (G/D/S order)
+must_match:
+- package
+visual_check: cathode band / polarity mark (for diode)
 drafted:
-  at: '2026-11-22T12:27:53+00:00'
+  at: '2026-11-23T06:41:29+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -29,6 +30,16 @@ drafted:
   - goodark/gs20d120sw1_75c2d37c.md
   - goodark/gs60d120cp_05bfd8ef.md
 specs:
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 10/10
   vdc_max:
     label: VDC max
     unit: V
@@ -62,7 +73,7 @@ specs:
     - Working peak reverse voltage
     - VRWM
     found_in: 10/10
-  if_av_max_tc_135c:
+  if_av_max@tc_135c:
     label: IF(AV) max @ TC=135°C
     unit: A
     stat: max
@@ -73,7 +84,18 @@ specs:
     - Maximum average forward rectified current
     - IF(AV)
     found_in: 10/10
-  if_av_max_tc_25c:
+  if_av_max@tc_155c:
+    label: IF(AV) max @ TC=155°C
+    unit: A
+    stat: max
+    conditions: TC=155°C
+    rule: '>='
+    critical: false
+    aliases:
+    - Maximum average forward rectified current
+    - IF(AV)
+    found_in: 10/10
+  if_av_max@tc_25c:
     label: IF(AV) max @ TC=25°C
     unit: A
     stat: max
@@ -96,7 +118,7 @@ specs:
     - IFSM
     - Peak forward surge current, tp=10ms, Half Sine Pulse (Per leg)
     found_in: 10/10
-  ptot_max_tc_110c:
+  ptot_max@tc_110c:
     label: Ptot max @ TC=110°C
     unit: W
     stat: max
@@ -107,7 +129,7 @@ specs:
     - Power dissipation
     - Ptot
     found_in: 10/10
-  ptot_max_tc_25c:
+  ptot_max@tc_25c:
     label: Ptot max @ TC=25°C
     unit: W
     stat: max
@@ -118,7 +140,7 @@ specs:
     - Power dissipation
     - Ptot
     found_in: 10/10
-  rthjc_typ:
+  r_jc_typ:
     label: RθJC typ
     unit: °C/W
     stat: typ
@@ -151,67 +173,7 @@ specs:
     - Storage temperature range
     - TSTG
     found_in: 10/10
-  vf_max_if_10a_tj_175c:
-    label: VF max @ IF=10A, TJ=175°C
-    unit: V
-    stat: max
-    conditions: IF=10A, TJ=175°C
-    rule: ≈
-    critical: false
-    aliases:
-    - Forward drop voltage
-    - VF
-    - Forward drop voltage (Per leg)
-    found_in: 9/10
-  vf_typ_if_10a_tj_25c:
-    label: VF typ @ IF=10A, TJ=25°C
-    unit: V
-    stat: typ
-    conditions: IF=10A, TJ=25°C
-    rule: ≈
-    critical: false
-    aliases:
-    - Forward drop voltage
-    - VF
-    - Forward drop voltage (Per leg)
-    found_in: 9/10
-  c_max_vr_400v_tj_25c_f_1mhz:
-    label: C max @ VR=400V, TJ=25°C, f=1MHz
-    unit: pF
-    stat: max
-    conditions: VR=400V, TJ=25°C, f=1MHz
-    rule: ≈
-    critical: false
-    aliases:
-    - Total capacitance
-    - C
-    - Total capacitance (Per leg)
-    found_in: 8/10
-  ir_max_v_650v_tj_175c:
-    label: IR max @ V=650V, TJ=175°C
-    unit: µA
-    stat: max
-    conditions: V=650V, TJ=175°C
-    rule: <=
-    critical: false
-    aliases:
-    - Reverse leakage current @ rated VR
-    - IR
-    - Reverse leakage current (Per leg)
-    found_in: 8/10
-  qc_typ_vr_400v_tj_25c:
-    label: QC typ @ VR=400V, TJ=25°C
-    unit: nC
-    stat: typ
-    conditions: VR=400V, TJ=25°C
-    rule: ≈
-    critical: false
-    aliases:
-    - Total capacitive charge
-    - QC
-    - Total capacitive charge (Per leg)
-    found_in: 8/10
-  ir_max_v_650v_tj_25c:
+  ir_max@v_650v_tj_25c:
     label: IR max @ V=650V, TJ=25°C
     unit: µA
     stat: max
@@ -222,120 +184,66 @@ specs:
     - Reverse leakage current @ rated VR
     - IR
     - Reverse leakage current (Per leg)
-    found_in: 7/10
-  vf_max_if_20a_tj_175c:
-    label: VF max @ IF=20A, TJ=175°C
-    unit: V
+    found_in: 9/10
+  ir_max@vr_650v_tj_175c:
+    label: IR max @ VR=650V, TJ=175°C
+    unit: µA
     stat: max
-    conditions: IF=20A, TJ=175°C
-    rule: ≈
+    conditions: VR=650V, TJ=175°C
+    rule: <=
     critical: false
     aliases:
-    - Forward drop voltage
-    - VF
     - Reverse leakage current @ rated VR
     - IR
     - Reverse leakage current (Per leg)
-    found_in: 7/10
-rare_specs:
-  package:
-    label: Package
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Package
-    found_in: 3/10
-  case:
-    label: Case
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Case
-    found_in: 3/10
-  flammability:
-    label: Flammability
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Flammability Classification
-    - Finish
-    found_in: 3/10
-  if_av_max_tc_155c:
-    label: IF(AV) max @ TC=155°C
-    unit: A
-    stat: max
-    conditions: TC=155°C
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum average forward rectified current
-    - IF(AV)
-    found_in: 3/10
-  lead_temp_max:
-    label: Lead Temp max
-    unit: °C
-    stat: max
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Lead Temperature for Soldering Purposes
-    found_in: 3/10
-  c_max_vr_800v_tj_25c_f_1mhz:
-    label: C max @ VR=800V, TJ=25°C, f=1MHz
+    found_in: 8/10
+  c_typ@vr_400v_tj_25c_f_1mhz:
+    label: C typ @ VR=400V, TJ=25°C, f=1MHz
     unit: pF
-    stat: max
-    conditions: VR=800V, TJ=25°C, f=1MHz
+    stat: typ
+    conditions: VR=400V, TJ=25°C, f=1MHz
     rule: ≈
     critical: false
     aliases:
     - Total capacitance
     - C
     - Total capacitance (Per leg)
-    found_in: 2/10
-  halogen_free:
-    label: Halogen-free
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
+    found_in: 6/10
+rare_specs:
+  qc_typ@vr_400v_tj_25c:
+    label: QC typ @ VR=400V, TJ=25°C
+    unit: nC
+    stat: typ
+    conditions: VR=400V, TJ=25°C
+    rule: ≈
     critical: false
     aliases:
-    - Environmental
-    - Halogen-free
-    found_in: 2/10
-  if_av_max_tc_153c:
-    label: IF(AV) max @ TC=153°C
-    unit: A
+    - Total capacitive charge
+    - QC
+    found_in: 3/10
+  vf_typ@if_10a_tj_25c:
+    label: VF typ @ IF=10A, TJ=25°C
+    unit: V
+    stat: typ
+    conditions: IF=10A, TJ=25°C
+    rule: ≈
+    critical: false
+    aliases:
+    - Forward drop voltage
+    - VF
+    found_in: 3/10
+  c_max@vr_400v_tj_25c_f_1mhz:
+    label: C max @ VR=400V, TJ=25°C, f=1MHz
+    unit: pF
     stat: max
-    conditions: TC=153°C
-    rule: '>='
+    conditions: VR=400V, TJ=25°C, f=1MHz
+    rule: ≈
     critical: false
     aliases:
-    - Maximum average forward rectified current
-    - IF(AV)
+    - Total capacitance
+    - C
     found_in: 2/10
-  if_av_max_tc_160c:
-    label: IF(AV) max @ TC=160°C
-    unit: A
-    stat: max
-    conditions: TC=160°C
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum average forward rectified current
-    - IF(AV)
-    found_in: 2/10
-  qc_typ_vr_800v_tj_25c:
+  qc_typ@vr_800v_tj_25c:
     label: QC typ @ VR=800V, TJ=25°C
     unit: nC
     stat: typ
@@ -347,21 +255,65 @@ rare_specs:
     - QC
     - Total capacitive charge (Per leg)
     found_in: 2/10
-  ir_max_v_1200v_tj_175c:
-    label: IR max @ V=1200V, TJ=175°C
+  vf_max@if_10a_tj_175c:
+    label: VF max @ IF=10A, TJ=175°C
+    unit: V
+    stat: max
+    conditions: IF=10A, TJ=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - Forward drop voltage
+    - VF
+    found_in: 2/10
+  vf_typ@if_20a_tj_25c:
+    label: VF typ @ IF=20A, TJ=25°C
+    unit: V
+    stat: typ
+    conditions: IF=20A, TJ=25°C
+    rule: ≈
+    critical: false
+    aliases:
+    - Forward drop voltage
+    - VF
+    found_in: 2/10
+  c_max@vr_800v_tj_25c_f_1mhz:
+    label: C max @ VR=800V, TJ=25°C, f=1MHz
+    unit: pF
+    stat: max
+    conditions: VR=800V, TJ=25°C, f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - Total capacitance
+    - C
+    found_in: 1/10
+  c_typ@vr_800v_tj_25c_f_1mhz:
+    label: C typ @ VR=800V, TJ=25°C, f=1MHz
+    unit: pF
+    stat: typ
+    conditions: VR=800V, TJ=25°C, f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - Total capacitance (Per leg)
+    - C
+    found_in: 1/10
+  ir_max@vr_1200v_tj_175c:
+    label: IR max @ VR=1200V, TJ=175°C
     unit: µA
     stat: max
-    conditions: V=1200V, TJ=175°C
+    conditions: VR=1200V, TJ=175°C
     rule: <=
     critical: false
     aliases:
-    - Reverse leakage current (Per leg)
+    - Reverse leakage current @ rated VR
     - IR
     found_in: 1/10
-  ir_max_v_1200v_tj_25c:
-    label: IR max @ V=1200V, TJ=25°C
+  ir_typ@v_1200v_tj_25c:
+    label: IR typ @ V=1200V, TJ=25°C
     unit: µA
-    stat: max
+    stat: typ
     conditions: V=1200V, TJ=25°C
     rule: <=
     critical: false
@@ -369,27 +321,62 @@ rare_specs:
     - Reverse leakage current (Per leg)
     - IR
     found_in: 1/10
-  operating_temp_range:
-    label: Operating Temp range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
+  ir_typ@v_650v_tj_25c:
+    label: IR typ @ V=650V, TJ=25°C
+    unit: µA
+    stat: typ
+    conditions: V=650V, TJ=25°C
+    rule: <=
     critical: false
     aliases:
-    - Operating temperature range
+    - Reverse leakage current (Per leg)
+    - IR
     found_in: 1/10
-  shipped:
-    label: Shipped
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
+  ir_typ@vr_1200v_tj_175c:
+    label: IR typ @ VR=1200V, TJ=175°C
+    unit: µA
+    stat: typ
+    conditions: VR=1200V, TJ=175°C
+    rule: <=
     critical: false
     aliases:
-    - Shipped
+    - Reverse leakage current (Per leg)
+    - IR
     found_in: 1/10
-  vf_max_if_6a_tj_175c:
+  ir_typ@vr_650v_tj_175c:
+    label: IR typ @ VR=650V, TJ=175°C
+    unit: µA
+    stat: typ
+    conditions: VR=650V, TJ=175°C
+    rule: <=
+    critical: false
+    aliases:
+    - Reverse leakage current (Per leg)
+    - IR
+    found_in: 1/10
+  vf_max@if_20a_tj_175c:
+    label: VF max @ IF=20A, TJ=175°C
+    unit: V
+    stat: max
+    conditions: IF=20A, TJ=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - Forward drop voltage
+    - VF
+    found_in: 1/10
+  vf_max@if_30a_tj_175c:
+    label: VF max @ IF=30A, TJ=175°C
+    unit: V
+    stat: max
+    conditions: IF=30A, TJ=175°C
+    rule: ≈
+    critical: false
+    aliases:
+    - Forward drop voltage (Per leg)
+    - VF
+    found_in: 1/10
+  vf_max@if_6a_tj_175c:
     label: VF max @ IF=6A, TJ=175°C
     unit: V
     stat: max
@@ -400,7 +387,18 @@ rare_specs:
     - Forward drop voltage
     - VF
     found_in: 1/10
-  vf_typ_if_6a_tj_25c:
+  vf_typ@if_30a_tj_25c:
+    label: VF typ @ IF=30A, TJ=25°C
+    unit: V
+    stat: typ
+    conditions: IF=30A, TJ=25°C
+    rule: ≈
+    critical: false
+    aliases:
+    - Forward drop voltage (Per leg)
+    - VF
+    found_in: 1/10
+  vf_typ@if_6a_tj_25c:
     label: VF typ @ IF=6A, TJ=25°C
     unit: V
     stat: typ
@@ -411,21 +409,12 @@ rare_specs:
     - Forward drop voltage
     - VF
     found_in: 1/10
-  environmental:
-    label: Environmental
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases: []
-    found_in: 0/10
-  vf_max_if_20a_tj_25c:
-    label: VF max @ IF=20A, TJ=25°C
-    unit: V
+  ir_max@v_1200v_tj_25c:
+    label: IR max @ V=1200V, TJ=25°C
+    unit: µA
     stat: max
-    conditions: IF=20A, TJ=25°C
-    rule: ≈
+    conditions: V=1200V, TJ=25°C
+    rule: <=
     critical: false
     aliases: []
     found_in: 0/10

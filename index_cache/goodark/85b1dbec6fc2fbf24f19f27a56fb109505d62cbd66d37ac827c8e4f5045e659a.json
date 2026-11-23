@@ -22,9 +22,9 @@
  },
  "type": "switching_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:29:08+00:00",
+  "at": "2026-11-23T06:42:38+00:00",
   "items": [
    {
     "name": "Reverse Voltage",
@@ -147,8 +147,8 @@
     "example": "5 0"
    }
   ],
-  "seconds": 52.27,
-  "tokens_in": 1137,
+  "seconds": 40.83,
+  "tokens_in": 1237,
   "tokens_out": 713
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "polymer_esd_suppressor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:05:02+00:00",
+  "at": "2026-11-23T07:16:30+00:00",
   "items": [
    {
     "name": "Maximum Contact Discharge Voltage Per IEC61000-4-2",
@@ -111,10 +111,18 @@
     "stat": "min",
     "conditions": "IEC61000-4-2 8KV Contact Discharge",
     "example": "3000"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402"
    }
   ],
-  "seconds": 19.08,
-  "tokens_in": 1217,
-  "tokens_out": 561
+  "seconds": 12.36,
+  "tokens_in": 1317,
+  "tokens_out": 594
  }
 }

@@ -24,9 +24,9 @@
  },
  "type": "ultrafast_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:59:07+00:00",
+  "at": "2026-11-23T06:02:03+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -87,7 +87,7 @@
    {
     "name": "Typical Thermal Resistance, Junction to Ambient",
     "symbol": "RθJA",
-    "unit": "℃/W",
+    "unit": "°C/W",
     "stat": "typ",
     "conditions": "",
     "example": "65.0"
@@ -95,7 +95,7 @@
    {
     "name": "Typical Thermal Resistance, Junction to Case",
     "symbol": "RθJC",
-    "unit": "℃/W",
+    "unit": "°C/W",
     "stat": "typ",
     "conditions": "",
     "example": "18.0"
@@ -103,7 +103,7 @@
    {
     "name": "Typical Thermal Resistance, Junction to Lead",
     "symbol": "RθJL",
-    "unit": "℃/W",
+    "unit": "°C/W",
     "stat": "typ",
     "conditions": "",
     "example": "20.0"
@@ -137,7 +137,7 @@
     "symbol": "trr",
     "unit": "nS",
     "stat": "max",
-    "conditions": "I=0.5A, I=1.0A, FRI=0.25A rr",
+    "conditions": "I=0.5A, I=1.0A, F R I=0.25A rr",
     "example": "35"
    },
    {
@@ -171,66 +171,10 @@
     "stat": "value",
     "conditions": "",
     "example": "DO-214AA (SMB)"
-   },
-   {
-    "name": "Molding compound",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "UL 94V-0"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tin plated leads"
-   },
-   {
-    "name": "Polarity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Cathode line denotes the cathode end"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS-compliant"
-   },
-   {
-    "name": "Halogen-free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "halogen-free"
-   },
-   {
-    "name": "MSL level",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "MSL level 1"
-   },
-   {
-    "name": "Solderable per",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "J-STD-002 and JESD22-B102"
    }
   ],
-  "seconds": 54.19,
-  "tokens_in": 2266,
-  "tokens_out": 1191
+  "seconds": 43.94,
+  "tokens_in": 2366,
+  "tokens_out": 928
  }
 }

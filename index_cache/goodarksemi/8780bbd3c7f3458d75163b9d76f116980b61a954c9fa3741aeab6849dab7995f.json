@@ -20,10 +20,18 @@
  },
  "type": "three_axis_accelerometer",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:29:44+00:00",
+  "at": "2026-11-23T09:04:13+00:00",
   "items": [
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "LGA-12"
+   },
    {
     "name": "Measurement range",
     "symbol": "FS",
@@ -252,7 +260,7 @@
     "name": "Power Supply Rejection Rate",
     "symbol": "PSRR",
     "unit": "mg/V",
-    "stat": "max",
+    "stat": "value",
     "conditions": "Top=25℃",
     "example": "20"
    },
@@ -284,7 +292,7 @@
     "name": "ESD Rating",
     "symbol": "",
     "unit": "kV",
-    "stat": "max",
+    "stat": "value",
     "conditions": "HMB, R=1.5k, C=100pF",
     "example": "±2"
    },
@@ -292,45 +300,13 @@
     "name": "Mechanical Shock",
     "symbol": "",
     "unit": "g",
-    "stat": "max",
+    "stat": "value",
     "conditions": "Duration<200us",
     "example": "10,000"
-   },
-   {
-    "name": "Package",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "LGA-12 2 x 2 x 1.1 mm"
-   },
-   {
-    "name": "Pin count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "12"
-   },
-   {
-    "name": "Operating temperature range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-40 to 85"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 28.24,
-  "tokens_in": 2674,
-  "tokens_out": 1794
+  "seconds": 27.19,
+  "tokens_in": 2774,
+  "tokens_out": 1679
  }
 }

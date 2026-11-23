@@ -14,10 +14,9 @@ status: draft
 must_match:
 - package
 - dielectric
-- size
-visual_check: pinout (G/D/S order)
+visual_check: Capacitor "polarity (none for ceramic)" or "marking" (e.g., 3.9pF, 100pF)
 drafted:
-  at: '2026-11-22T14:25:03+00:00'
+  at: '2026-11-23T08:21:01+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -37,10 +36,7 @@ specs:
     rule: '='
     critical: true
     aliases:
-    - Termination
-    - Dielectric Material
     - Dielectric
-    - Dielectric Type
     found_in: 7/7
   package:
     label: Package
@@ -50,58 +46,20 @@ specs:
     rule: '='
     critical: true
     aliases:
-    - Packaging (Paper tape)
-    - Packaging (Plastic tape)
-    - Packaging
-    - Mounting Method
-    - Packaging Code
-    found_in: 7/7
-  size:
-    label: Size
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Sizes.
+    - Package
     - Size (Inch)
     - Dimensions (L×W)
     - Size
-    - Sizes
     found_in: 7/7
-  voltage_rating:
-    label: Rated Voltage
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Voltage (VDCW)
-    - Rated voltage (DC)
-    - Voltage
-    - Rated voltage (VDCW)
-    found_in: 6/7
   capacitance:
     label: Capacitance
     unit: pF
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Capacitance
-    found_in: 6/7
-  capacitance_tolerance:
-    label: Capacitance Tolerance
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Capacitance Tolerance
     found_in: 6/7
   operating_temp_range:
     label: Operating Temperature Range
@@ -112,20 +70,87 @@ specs:
     critical: false
     aliases:
     - Operating temperature
+    - Operating Temperature Range
     - Operation Temperature Range
+    found_in: 6/7
+  rated_voltage:
+    label: Rated Voltage
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Voltage (VDCW)
+    - Rated voltage (DC)
+    - Voltage
     found_in: 5/7
-  temperature_coefficient:
-    label: Temperature Coefficient
-    unit: ppm/°C
+  capacitance_tolerance:
+    label: Capacitance Tolerance
+    unit: null
     stat: value
     conditions: null
     rule: '='
     critical: false
     aliases:
+    - Capacitance Tolerance
+    found_in: 5/7
+rare_specs:
+  temperature_coefficient:
+    label: Temperature Coefficient
+    unit: ppm/°C
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
     - Temperature Coefficient
     - Capacitance
-    found_in: 4/7
-rare_specs:
+    found_in: 3/7
+  bending_test:
+    label: Bending Test
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Substrate Bending test
+    - Bending Test
+    found_in: 2/7
+  damp_heat_load:
+    label: Damp Heat Load
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Temperature Sudden Change
+    - Humidity (Damp Heat) Load
+    found_in: 2/7
+  damp_heat_steady:
+    label: Damp Heat Steady
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - High Temperature High Humidity (Steady)
+    - Humidity (Damp Heat) Steady State
+    found_in: 2/7
+  endurance:
+    label: Endurance
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Durability
+    - High Temperature Load (Endurance)
+    found_in: 2/7
   insulation_resistance:
     label: Insulation Resistance
     unit: Ω
@@ -138,8 +163,8 @@ rare_specs:
     - Insulation resistance at Ur
     - Insulation Resistance
     found_in: 2/7
-  q_factor:
-    label: Q Factor
+  q:
+    label: Q
     unit: null
     stat: range
     conditions: null
@@ -170,96 +195,6 @@ rare_specs:
     aliases:
     - Solderability
     found_in: 2/7
-  adhesive_strength:
-    label: Adhesive Strength of Termination
-    unit: N
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Adhesive Strength of Termination
-    found_in: 1/7
-  aec_q200:
-    label: AEC-Q200
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - AEC-Q200
-    found_in: 1/7
-  bending_test:
-    label: Bending Test
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Bending Test
-    found_in: 1/7
-  capacitance_change:
-    label: Capacitance Change
-    unit: '%'
-    stat: range
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Capacitance change
-    found_in: 1/7
-  dielectric_withstanding_voltage:
-    label: Dielectric Withstanding Voltage
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Dielectric withstanding Voltage
-    found_in: 1/7
-  esr:
-    label: ESR
-    unit: mΩ
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - ESR
-    found_in: 1/7
-  high_temp_load:
-    label: High Temperature Load (Endurance)
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - High Temperature Load (Endurance)
-    found_in: 1/7
-  humidity_load:
-    label: Humidity (Damp Heat) Load
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Humidity (Damp Heat) Load
-    found_in: 1/7
-  humidity_steady:
-    label: Humidity (Damp Heat) Steady State
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Humidity (Damp Heat) Steady State
-    found_in: 1/7
   temperature_cycle:
     label: Temperature Cycle
     unit: null
@@ -268,8 +203,9 @@ rare_specs:
     rule: info
     critical: false
     aliases:
+    - Adhesive Strength of Termination
     - Temperature Cycle
-    found_in: 1/7
+    found_in: 2/7
   vibration_resistance:
     label: Vibration Resistance
     unit: null
@@ -278,14 +214,37 @@ rare_specs:
     rule: info
     critical: false
     aliases:
+    - Vibration
     - Vibration Resistance
+    found_in: 2/7
+  voltage_proof:
+    label: Voltage Proof
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Voltage proof
+    - Dielectric Strength
+    found_in: 2/7
+  adhesive_strength:
+    label: Adhesive Strength
+    unit: N
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Adhesive Strength of Termination
     found_in: 1/7
-  dissipation_factor:
-    label: Dissipation Factor
-    unit: null
-    stat: max
+  esr:
+    label: ESR
+    unit: mΩ
+    stat: range
     conditions: null
     rule: <=
     critical: false
-    aliases: []
-    found_in: 0/7
+    aliases:
+    - ESR
+    found_in: 1/7

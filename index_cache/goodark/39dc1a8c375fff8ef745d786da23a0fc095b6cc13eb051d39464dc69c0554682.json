@@ -20,13 +20,21 @@
  },
  "type": "esd_protection_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T11:11:31+00:00",
+  "at": "2026-11-23T06:17:30+00:00",
   "items": [
    {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA=25℃",
+    "example": "-55 to +150"
+   },
+   {
     "name": "Peak Pulse Power",
-    "symbol": "P_PP",
+    "symbol": "P PP",
     "unit": "W",
     "stat": "max",
     "conditions": "TP=8/20μS",
@@ -34,7 +42,7 @@
    },
    {
     "name": "Operating temperature",
-    "symbol": "T_J",
+    "symbol": "T J",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
@@ -42,7 +50,7 @@
    },
    {
     "name": "Storage temperature",
-    "symbol": "T_STG",
+    "symbol": "T STG",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
@@ -50,7 +58,7 @@
    },
    {
     "name": "Reverse stand-off Voltage",
-    "symbol": "V_RWM",
+    "symbol": "V RWM",
     "unit": "V",
     "stat": "max",
     "conditions": "",
@@ -58,42 +66,42 @@
    },
    {
     "name": "Reverse Breakdown Voltage",
-    "symbol": "V_BR",
+    "symbol": "V BR",
     "unit": "V",
     "stat": "min",
-    "conditions": "I=1mA",
+    "conditions": "I =1mA T",
     "example": "13.3"
    },
    {
     "name": "Reverse Leakage Current",
-    "symbol": "I_R",
+    "symbol": "I R",
     "unit": "μA",
     "stat": "max",
-    "conditions": "V_R=12V",
+    "conditions": "V =12V R",
     "example": "1"
    },
    {
     "name": "Clamping Voltage",
-    "symbol": "V_C",
+    "symbol": "V C",
     "unit": "V",
     "stat": "max",
-    "conditions": "I_PP=1A, t_P=8/20μS",
+    "conditions": "I =1A，T =8/20μS PP P",
     "example": "16"
    },
    {
     "name": "Clamping Voltage",
-    "symbol": "V_C",
+    "symbol": "V C",
     "unit": "V",
     "stat": "max",
-    "conditions": "I_PP=12A, t_P=8/20μS",
+    "conditions": "I =12A，T =8/20μS PP P",
     "example": "25"
    },
    {
     "name": "Junction Capacitance",
-    "symbol": "C_J",
+    "symbol": "C J",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V_R=0V, f=1MHz",
+    "conditions": "V =0V,f=1MHz R",
     "example": "50"
    },
    {
@@ -103,58 +111,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT-23"
-   },
-   {
-    "name": "ESD Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "IEC 61000-4-2 ±30kV (Air)",
-    "example": "±30kV"
-   },
-   {
-    "name": "ESD Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "IEC 61000-4-2 ±30kV (Contact)",
-    "example": "±30kV"
-   },
-   {
-    "name": "EFT Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "IEC 61000-4-4 40A (5/50ns)",
-    "example": "40A"
-   },
-   {
-    "name": "SURGE Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "IEC 61000-4-5 12A (8/20us)",
-    "example": "12A"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "compliant"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "AM2"
    }
   ],
-  "seconds": 77.08,
-  "tokens_in": 1495,
-  "tokens_out": 755
+  "seconds": 69.5,
+  "tokens_in": 1595,
+  "tokens_out": 509
  }
 }

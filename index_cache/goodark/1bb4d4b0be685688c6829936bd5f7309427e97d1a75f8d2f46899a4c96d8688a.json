@@ -24,10 +24,66 @@
  },
  "type": "fast_recovery_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:45:06+00:00",
+  "at": "2026-11-23T07:44:45+00:00",
   "items": [
+   {
+    "name": "Case",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ABF"
+   },
+   {
+    "name": "Glass passivated Fast Recovery bridge rectifiers",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Glass passivated Fast Recovery bridge re"
+   },
+   {
+    "name": "Ideal for automated placement",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ideal for automated placement"
+   },
+   {
+    "name": "Moisture sensitivity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "level 1, per J-STD-020"
+   },
+   {
+    "name": "Solder dip",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "260 °C, 10s"
+   },
+   {
+    "name": "Plastic package has Underwriters Laboratory Flammability Classification",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "94V-0"
+   },
+   {
+    "name": "Halogen-free",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "according to IEC 61249-2-21 definition"
+   },
    {
     "name": "Maximum repetitive peak reverse voltage",
     "symbol": "V_RRM",
@@ -82,14 +138,14 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "-55 to +150"
    },
    {
     "name": "Typical junction capacitance",
     "symbol": "C_J",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "4.0V, 1MHz",
+    "conditions": "4.0V, 1 MHz",
     "example": "25"
    },
    {
@@ -139,10 +195,18 @@
     "stat": "typ",
     "conditions": "",
     "example": "25"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ABF"
    }
   ],
-  "seconds": 54.44,
-  "tokens_in": 1711,
-  "tokens_out": 668
+  "seconds": 41.84,
+  "tokens_in": 1811,
+  "tokens_out": 986
  }
 }

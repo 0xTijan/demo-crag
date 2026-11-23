@@ -20,16 +20,16 @@
  },
  "type": "pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:32:17+00:00",
+  "at": "2026-11-23T06:45:38+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
     "symbol": "V CBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "T A =25°C",
     "example": "-160"
    },
    {
@@ -37,7 +37,7 @@
     "symbol": "V CEO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "T A =25°C",
     "example": "-150"
    },
    {
@@ -45,7 +45,7 @@
     "symbol": "V EBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "T A =25°C",
     "example": "-5"
    },
    {
@@ -53,7 +53,7 @@
     "symbol": "I C",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "T A =25°C",
     "example": "-0.5"
    },
    {
@@ -61,7 +61,7 @@
     "symbol": "P C",
     "unit": "W",
     "stat": "max",
-    "conditions": "",
+    "conditions": "T A =25°C",
     "example": "0.5"
    },
    {
@@ -69,15 +69,15 @@
     "symbol": "R θJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "",
+    "conditions": "T A =25°C",
     "example": "250"
    },
    {
     "name": "Operation Junction and Storage Temperature Range",
-    "symbol": "",
+    "symbol": "T J, Tstg",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
+    "conditions": "T A =25°C",
     "example": "-55 to +150"
    },
    {
@@ -124,7 +124,7 @@
     "name": "DC Current Gain",
     "symbol": "h FE(1)",
     "unit": "-",
-    "stat": "min",
+    "stat": "range",
     "conditions": "V =-5V, I =-1mA CE C",
     "example": "50"
    },
@@ -134,13 +134,13 @@
     "unit": "-",
     "stat": "range",
     "conditions": "V =-5V, I =-10mA CE C",
-    "example": "100 to 300"
+    "example": "100"
    },
    {
     "name": "DC Current Gain",
     "symbol": "h FE(3)",
     "unit": "-",
-    "stat": "min",
+    "stat": "range",
     "conditions": "V =-5V, I =-50mA CE C",
     "example": "50"
    },
@@ -182,7 +182,7 @@
     "unit": "MHz",
     "stat": "range",
     "conditions": "V =-10V, I =-10mA, f=100MHz CE C",
-    "example": "100 to 300"
+    "example": "100"
    },
    {
     "name": "Output Capacitance",
@@ -209,8 +209,8 @@
     "example": "SOT-89-3L"
    }
   ],
-  "seconds": 68.51,
-  "tokens_in": 1333,
-  "tokens_out": 1213
+  "seconds": 62.79,
+  "tokens_in": 1433,
+  "tokens_out": 1259
  }
 }

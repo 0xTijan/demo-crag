@@ -20,9 +20,9 @@
  },
  "type": "bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:24:19+00:00",
+  "at": "2026-11-23T06:25:47+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -77,7 +77,7 @@
     "symbol": "V F",
     "unit": "V",
     "stat": "max",
-    "conditions": "5.0A DC",
+    "conditions": "",
     "example": "1.1"
    },
    {
@@ -129,88 +129,16 @@
     "example": "-55 to +150"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GBJ molded plastic body"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Plated leads solderable per MIL-STD-750,"
-   },
-   {
-    "name": "Mounting position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "GBJ"
-   },
-   {
-    "name": "Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "RoHS Compliance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS 2015/863/EU"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GSGBJ1016"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GBJ1016"
-   },
-   {
-    "name": "Carrier",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tube"
-   },
-   {
-    "name": "Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "15 pcs / Tube"
    }
   ],
-  "seconds": 44.89,
-  "tokens_in": 1769,
-  "tokens_out": 1006
+  "seconds": 41.59,
+  "tokens_in": 1869,
+  "tokens_out": 666
  }
 }

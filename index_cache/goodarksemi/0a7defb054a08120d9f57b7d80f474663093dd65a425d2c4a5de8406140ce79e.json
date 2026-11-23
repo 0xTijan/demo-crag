@@ -20,9 +20,9 @@
  },
  "type": "esd_tvs_array",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:36:07+00:00",
+  "at": "2026-11-23T06:48:47+00:00",
   "items": [
    {
     "name": "Peak Pulse Power (t =8/20μS)",
@@ -44,7 +44,7 @@
     "name": "ESD per IEC61000-4-2 (Contact/Air)",
     "symbol": "VESD",
     "unit": "kV",
-    "stat": "range",
+    "stat": "max",
     "conditions": "",
     "example": "10/15"
    },
@@ -143,34 +143,10 @@
     "stat": "value",
     "conditions": "",
     "example": "DFN2510"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "324D"
-   },
-   {
-    "name": "Carrier",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tape & Reel"
-   },
-   {
-    "name": "Quantity",
-    "symbol": "",
-    "unit": "pcs",
-    "stat": "value",
-    "conditions": "",
-    "example": "3000"
    }
   ],
-  "seconds": 68.21,
-  "tokens_in": 1613,
-  "tokens_out": 853
+  "seconds": 39.77,
+  "tokens_in": 1713,
+  "tokens_out": 750
  }
 }

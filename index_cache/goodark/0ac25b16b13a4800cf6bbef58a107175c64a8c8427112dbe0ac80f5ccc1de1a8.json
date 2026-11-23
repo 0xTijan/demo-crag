@@ -24,10 +24,18 @@
  },
  "type": "tvs_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:21:23+00:00",
+  "at": "2026-11-23T06:32:30+00:00",
   "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA=25°C unless otherwise noted",
+    "example": "400 W"
+   },
    {
     "name": "Peak power dissipation with a 10/1000us waveform",
     "symbol": "PPPM",
@@ -40,7 +48,7 @@
     "name": "Peak pulse current with a 10/1000us waveform",
     "symbol": "IPPM",
     "unit": "A",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "See Next Table"
    },
@@ -93,11 +101,19 @@
     "example": "-55 to +150"
    },
    {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "eSGB (DO-221AC)"
+   },
+   {
     "name": "Breakdown Voltage VBR",
     "symbol": "VBR",
     "unit": "V",
     "stat": "range",
-    "conditions": "IT=1.0mA",
+    "conditions": "IT=1.0 mA",
     "example": "11.1 to 12.3"
    },
    {
@@ -131,50 +147,10 @@
     "stat": "max",
     "conditions": "",
     "example": "17.0"
-   },
-   {
-    "name": "Moisture sensitivity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "level 1, per J-STD-020"
-   },
-   {
-    "name": "Plastic package has underwriters Laboratory Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "Halogen-free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61249-2-21"
-   },
-   {
-    "name": "AEC-Q101 qualified",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "AEC-Q101"
-   },
-   {
-    "name": "Package",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "eSGB (DO-221AC)"
    }
   ],
-  "seconds": 51.99,
-  "tokens_in": 3453,
-  "tokens_out": 841
+  "seconds": 47.57,
+  "tokens_in": 3553,
+  "tokens_out": 712
  }
 }

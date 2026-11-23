@@ -20,101 +20,109 @@
  },
  "type": "four_terminal_current_sensing_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:17:05+00:00",
+  "at": "2026-11-23T08:54:03+00:00",
   "items": [
    {
     "name": "Size",
     "symbol": "",
-    "unit": "",
+    "unit": "mm",
     "stat": "value",
     "conditions": "",
     "example": "2512"
    },
    {
-    "name": "Issued Date",
+    "name": "Material",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "01-Apr-25"
+    "example": "Manganin"
    },
    {
-    "name": "Edition",
+    "name": "L",
     "symbol": "",
-    "unit": "",
+    "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "REV.A3"
+    "example": "6.40±0.20"
    },
    {
-    "name": "Product Type",
+    "name": "W",
     "symbol": "",
-    "unit": "",
+    "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "WMK"
+    "example": "3.20±0.20"
    },
    {
-    "name": "Dimensions",
+    "name": "T",
     "symbol": "",
-    "unit": "",
+    "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "12"
+    "example": "0.80±0.15"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.76±0.25"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.51±0.25"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.30±0.20"
+   },
+   {
+    "name": "Resistance",
+    "symbol": "R",
+    "unit": "mΩ",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.5"
    },
    {
     "name": "Resistance Tolerance",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
+    "unit": "%",
+    "stat": "range",
     "conditions": "",
-    "example": "D: ±0.5% F: ±1% J: ±5%"
+    "example": "±0.5"
    },
    {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T: Taping Reel"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
+    "name": "TCR",
+    "symbol": "TCR",
     "unit": "PPM/°C",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "C: ±25 E: ±100 K: ±150"
+    "example": "±150"
    },
    {
     "name": "Power Rating",
-    "symbol": "",
+    "symbol": "P",
     "unit": "W",
     "stat": "value",
     "conditions": "",
     "example": "3"
    },
    {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "mΩ",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.5"
-   },
-   {
-    "name": "Material Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "M: Manganin K: Kamar F: FeCrAl"
-   },
-   {
     "name": "Operating Temperature",
-    "symbol": "",
+    "symbol": "T",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -122,7 +130,7 @@
    },
    {
     "name": "Storage Temperature",
-    "symbol": "",
+    "symbol": "T",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -145,19 +153,27 @@
     "example": "1"
    },
    {
-    "name": "Temperature Coefficient of Resistance (T.C.R.)",
+    "name": "AEC-Q200",
     "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "range",
-    "conditions": "Measured value 20℃~ +130℃, reference value +25℃",
-    "example": "±150"
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Passed"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
    },
    {
     "name": "Solderability",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "245°C for 3 seconds",
+    "conditions": "",
     "example": "No visible damage, weldable area 95% min"
    },
    {
@@ -165,7 +181,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "5 times rated voltage, 5 sec",
+    "conditions": "",
     "example": "No visible damage, ΔR±1.0% maximum"
    },
    {
@@ -173,7 +189,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "260°C for 10 sec",
+    "conditions": "",
     "example": "No visible damage, ΔR±1.0% maximum"
    },
    {
@@ -181,7 +197,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "Bending amplitude 2 mm for 60 seconds",
+    "conditions": "",
     "example": "Within the specified value"
    },
    {
@@ -197,7 +213,7 @@
     "symbol": "",
     "unit": "MΩ",
     "stat": "min",
-    "conditions": "Apply 100VDC for 1 minute",
+    "conditions": "",
     "example": "1000"
    },
    {
@@ -205,7 +221,7 @@
     "symbol": "",
     "unit": "V",
     "stat": "value",
-    "conditions": "Apply 100VAC for 1 minute",
+    "conditions": "",
     "example": "100"
    },
    {
@@ -213,7 +229,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "IPA, 23±5°C, 5±0.5min",
+    "conditions": "",
     "example": "Marking Unsmeared"
    },
    {
@@ -221,7 +237,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "85°C, 85% humidity, 1000 hours",
+    "conditions": "",
     "example": "No visible damage, ΔR±1.0% maximum"
    },
    {
@@ -229,7 +245,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "1000 hrs @ 170°C, without load",
+    "conditions": "",
     "example": "No visible damage, ΔR±1.0% maximum"
    },
    {
@@ -237,7 +253,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "-55°C, No load for one hour, rated voltage load for 45 min, no load for 15 min",
+    "conditions": "",
     "example": "No visible damage, ΔR±1.0% maximum"
    },
    {
@@ -245,7 +261,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "-55°C @ 30 min ~ +155°C @ 30 min, 1000 cycles",
+    "conditions": "",
     "example": "No visible damage, ΔR±1.0% maximum"
    },
    {
@@ -253,148 +269,20 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "1000 h @ 70±2°C, rated current or component limit current (whichever is less), 90 min on, 30 min off",
+    "conditions": "",
     "example": "No visible damage, ΔR±1.0% maximum"
    },
    {
-    "name": "Packaging Quantity",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "4K"
-   },
-   {
-    "name": "Tape Width",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "12"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "inch",
-    "stat": "value",
-    "conditions": "",
-    "example": "7"
-   },
-   {
-    "name": "ΦA (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "178.0"
-   },
-   {
-    "name": "ΦB (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "60.0"
-   },
-   {
-    "name": "ΦC (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "13.5"
-   },
-   {
-    "name": "W (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "12.3"
-   },
-   {
-    "name": "A (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "3.5"
-   },
-   {
-    "name": "B (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "6.8"
-   },
-   {
-    "name": "E (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.75"
-   },
-   {
-    "name": "F (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "5.5"
-   },
-   {
-    "name": "P0 (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "4"
-   },
-   {
-    "name": "P1 (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "4"
-   },
-   {
-    "name": "P2 (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "2"
-   },
-   {
-    "name": "ΦD0 (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.5"
-   },
-   {
-    "name": "T (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.2"
-   },
-   {
-    "name": "c (mm)",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.66"
+    "example": "2512"
    }
   ],
-  "seconds": 32.65,
-  "tokens_in": 2982,
-  "tokens_out": 2105
+  "seconds": 54.1,
+  "tokens_in": 3082,
+  "tokens_out": 1251
  }
 }

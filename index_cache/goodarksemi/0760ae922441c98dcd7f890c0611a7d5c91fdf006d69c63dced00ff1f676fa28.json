@@ -20,9 +20,9 @@
  },
  "type": "esd_tvs_array",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:35:44+00:00",
+  "at": "2026-11-23T06:48:28+00:00",
   "items": [
    {
     "name": "Peak Pulse Power (8/20µs)",
@@ -101,7 +101,7 @@
     "symbol": "V C",
     "unit": "V",
     "stat": "typ",
-    "conditions": "I =4A (8/20µs pulse), any I/O pin to ground",
+    "conditions": "I =4A (8 x 20µs pulse), any I/O pin to ground",
     "example": "10"
    },
    {
@@ -119,10 +119,18 @@
     "stat": "typ",
     "conditions": "V =0V, f=1MHz, any I/O pin to ground",
     "example": "0.3"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DFN2510"
    }
   ],
-  "seconds": 65.33,
-  "tokens_in": 1140,
-  "tokens_out": 614
+  "seconds": 45.31,
+  "tokens_in": 1240,
+  "tokens_out": 650
  }
 }

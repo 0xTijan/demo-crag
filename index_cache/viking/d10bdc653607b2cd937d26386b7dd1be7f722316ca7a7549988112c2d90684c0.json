@@ -24,9 +24,9 @@
  },
  "type": "polymer_aluminum_capacitor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:08:31+00:00",
+  "at": "2026-11-23T08:47:01+00:00",
   "items": [
    {
     "name": "Product Type",
@@ -58,7 +58,7 @@
     "unit": "hours",
     "stat": "value",
     "conditions": "at 105°C",
-    "example": "3,000"
+    "example": "3000"
    },
    {
     "name": "RoHS Compliance",
@@ -82,13 +82,13 @@
     "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "D: 5.0±0.5, L: 7.0, α: -0.5~1, d: 0.50±0"
+    "example": "D: 5.0±0.5 to 10.0±0.5, L: 7.0 to 20.0"
    },
    {
     "name": "Capacitance Tolerance",
     "symbol": "",
     "unit": "%",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "±20"
    },
@@ -98,27 +98,27 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "B: Bulk"
+    "example": "B"
    },
    {
     "name": "Capacitance",
-    "symbol": "",
+    "symbol": "C",
     "unit": "uF",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
-    "example": "100~2200"
+    "example": "220"
    },
    {
     "name": "Leakage Current",
-    "symbol": "",
+    "symbol": "I_L",
     "unit": "uA",
     "stat": "max",
     "conditions": "",
-    "example": "7500"
+    "example": "1260"
    },
    {
     "name": "tanδ",
-    "symbol": "",
+    "symbol": "tanδ",
     "unit": "",
     "stat": "max",
     "conditions": "at 120Hz±10% at 20±2°C",
@@ -126,19 +126,27 @@
    },
    {
     "name": "ESR",
-    "symbol": "",
+    "symbol": "ESR",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "20°C, 100K to 300KHz",
+    "conditions": "at 20°C, 100K to 300KHz",
     "example": "35"
    },
    {
     "name": "Rated Ripple Current",
-    "symbol": "",
+    "symbol": "I_rms",
     "unit": "mArms",
     "stat": "max",
-    "conditions": "105°C, 100KHz",
+    "conditions": "at 105°C, 100KHz",
     "example": "8100"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "for 100KHz≦f≦300KHz",
+    "example": "1"
    },
    {
     "name": "Temperature Range",
@@ -154,62 +162,30 @@
     "unit": "Vdc",
     "stat": "value",
     "conditions": "rated voltage*1.15",
-    "example": "rated voltage*1.15"
+    "example": "7.2"
    },
    {
-    "name": "Frequency Correction Factor",
+    "name": "Tolerance on Rated Capacitance",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "120Hz≦f<1KHz",
-    "example": "0.05"
-   },
-   {
-    "name": "Frequency Correction Factor",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "1KHz≦f<10KHz",
-    "example": "0.3"
-   },
-   {
-    "name": "Frequency Correction Factor",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "10KHz≦f<50KHz",
-    "example": "0.7"
-   },
-   {
-    "name": "Frequency Correction Factor",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "50KHz≦f<100KHz",
-    "example": "0.85"
-   },
-   {
-    "name": "Frequency Correction Factor",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "100KHz≦f≦300KHz",
-    "example": "1"
+    "unit": "%",
+    "stat": "range",
+    "conditions": "at 120Hz±10% at 20±2°C",
+    "example": "±20"
    },
    {
     "name": "Pull Strength Load of Lead Wire Terminations",
     "symbol": "",
     "unit": "N",
-    "stat": "range",
-    "conditions": "Lead wire diameter (mm): 0.35<d≦0.5",
+    "stat": "value",
+    "conditions": "for lead wire diameter 0.35<d≦0.5",
     "example": "5"
    },
    {
     "name": "Bending Strength of Lead Wire Terminations",
     "symbol": "",
     "unit": "N",
-    "stat": "range",
-    "conditions": "Lead wire diameter (mm): 0.35<d≦0.5",
+    "stat": "value",
+    "conditions": "for lead wire diameter 0.35<d≦0.5",
     "example": "2.5"
    },
    {
@@ -218,15 +194,7 @@
     "unit": "Hz",
     "stat": "range",
     "conditions": "10 to 55Hz",
-    "example": "10 to 55"
-   },
-   {
-    "name": "Vibration",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "total amplitude",
-    "example": "1.5"
+    "example": "10-55"
    },
    {
     "name": "Solderability",
@@ -239,18 +207,18 @@
    {
     "name": "Resistance to Soldering Heat",
     "symbol": "",
-    "unit": "%",
-    "stat": "range",
-    "conditions": "Capacitance change",
-    "example": "±5"
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Within ±5% of the value before test"
    },
    {
     "name": "Resistance to Solvent",
     "symbol": "",
-    "unit": "°C",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "20 to 25"
+    "example": "Marking: easily readable, Appearance: no"
    },
    {
     "name": "Storage Temperature",
@@ -269,7 +237,7 @@
     "example": "75"
    },
    {
-    "name": "Storage Time",
+    "name": "Storage Duration",
     "symbol": "",
     "unit": "years",
     "stat": "max",
@@ -277,16 +245,16 @@
     "example": "3"
    },
    {
-    "name": "Marking Color",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "red"
+    "example": "Radial"
    }
   ],
-  "seconds": 197.73,
-  "tokens_in": 9671,
-  "tokens_out": 1720
+  "seconds": 106.85,
+  "tokens_in": 9771,
+  "tokens_out": 1381
  }
 }

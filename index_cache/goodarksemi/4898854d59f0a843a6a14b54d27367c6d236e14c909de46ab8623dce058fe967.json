@@ -20,9 +20,9 @@
  },
  "type": "dual_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:03:01+00:00",
+  "at": "2026-11-23T08:43:12+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -74,7 +74,7 @@
    },
    {
     "name": "Operating Junction Temperature Range",
-    "symbol": "",
+    "symbol": "TJ",
     "unit": "",
     "stat": "range",
     "conditions": "",
@@ -82,7 +82,7 @@
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "",
+    "symbol": "TSTG",
     "unit": "",
     "stat": "range",
     "conditions": "",
@@ -131,7 +131,7 @@
    {
     "name": "DC Current Gain",
     "symbol": "h FE",
-    "unit": "-",
+    "unit": "",
     "stat": "min",
     "conditions": "V =-5V, I =-2mA CE C",
     "example": "110"
@@ -158,7 +158,7 @@
     "unit": "V",
     "stat": "typ",
     "conditions": "I =-10mA, I =-0.5mA C B",
-    "example": "0.7"
+    "example": "-0.7"
    },
    {
     "name": "Output Capacitance",
@@ -183,26 +183,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT-363"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "6"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 To +150"
    }
   ],
-  "seconds": 44.2,
-  "tokens_in": 1688,
-  "tokens_out": 1100
+  "seconds": 17.71,
+  "tokens_in": 1788,
+  "tokens_out": 1000
  }
 }

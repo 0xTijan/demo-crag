@@ -20,9 +20,9 @@
  },
  "type": "sic_mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:24:31+00:00",
+  "at": "2026-11-23T07:29:53+00:00",
   "items": [
    {
     "name": "DrainSourceVoltage",
@@ -36,7 +36,7 @@
     "name": "GateSourceVoltage",
     "symbol": "V GS",
     "unit": "V",
-    "stat": "max",
+    "stat": "range",
     "conditions": "",
     "example": "-8/+22"
    },
@@ -44,7 +44,7 @@
     "name": "RecommendGateSourceVoltage",
     "symbol": "V GSop",
     "unit": "V",
-    "stat": "max",
+    "stat": "range",
     "conditions": "",
     "example": "-4/+18"
    },
@@ -126,7 +126,7 @@
     "unit": "V",
     "stat": "range",
     "conditions": "V DS=V GS, I DS=7mA",
-    "example": "2 to 4"
+    "example": "2/4"
    },
    {
     "name": "GateThresholdVoltage",
@@ -134,39 +134,39 @@
     "unit": "V",
     "stat": "range",
     "conditions": "V DS=V GS, I DS=7mA, T J=175°C",
-    "example": "1.8 to 1.8"
+    "example": "1.8"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "range",
+    "stat": "typ",
     "conditions": "V GS=18V, I D=17.6A",
-    "example": "45 to 59"
+    "example": "45"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "range",
+    "stat": "typ",
     "conditions": "V GS=18V, I D=17.6A, T J=175°C",
-    "example": "55 to 55"
+    "example": "55"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "range",
+    "stat": "typ",
     "conditions": "V GS=15V, I D=17.6A",
-    "example": "56 to 68"
+    "example": "56"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "range",
+    "stat": "typ",
     "conditions": "V GS=15V, I D=17.6A, T J=175°C",
-    "example": "60 to 60"
+    "example": "60"
    },
    {
     "name": "TotalGateCharge",
@@ -311,10 +311,18 @@
     "stat": "typ",
     "conditions": "V DD=400V, I D=17.6A, R F=10Ω, V GS=-4V, di/dt=1000A/μs",
     "example": "156"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GMS045065W7"
    }
   ],
-  "seconds": 65.1,
-  "tokens_in": 2276,
-  "tokens_out": 2288
+  "seconds": 100.22,
+  "tokens_in": 2376,
+  "tokens_out": 2305
  }
 }

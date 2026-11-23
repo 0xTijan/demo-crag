@@ -21,16 +21,16 @@
  },
  "type": "pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:30:51+00:00",
+  "at": "2026-11-23T06:44:22+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
     "symbol": "VCBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =-10uA, I =0 C E",
+    "conditions": "I =-10uA, I =0",
     "example": "-80"
    },
    {
@@ -38,7 +38,7 @@
     "symbol": "VCEO",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =-10mA, I =0 C B",
+    "conditions": "I =-10mA, I =0",
     "example": "-65"
    },
    {
@@ -46,7 +46,7 @@
     "symbol": "VEBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =-1uA, I =0 E C",
+    "conditions": "I =-1uA, I =0",
     "example": "-5"
    },
    {
@@ -87,14 +87,14 @@
     "unit": "℃",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to +150"
+    "example": "-55 to 150"
    },
    {
     "name": "Collector-Base Breakdown Voltage",
     "symbol": "VCBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =-10uA, I =0 C E",
+    "conditions": "I =-10uA, I =0",
     "example": "-80"
    },
    {
@@ -102,7 +102,7 @@
     "symbol": "VCEO",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =-10mA, I =0 C B",
+    "conditions": "I =-10mA, I =0",
     "example": "-65"
    },
    {
@@ -110,7 +110,7 @@
     "symbol": "VEBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =-1uA, I =0 E C",
+    "conditions": "I =-1uA, I =0",
     "example": "-5"
    },
    {
@@ -118,7 +118,7 @@
     "symbol": "ICBO",
     "unit": "nA",
     "stat": "max",
-    "conditions": "V =-30V, I =0 CB E",
+    "conditions": "V =-30V, I =0",
     "example": "-15"
    },
    {
@@ -126,15 +126,15 @@
     "symbol": "hFE",
     "unit": "-",
     "stat": "range",
-    "conditions": "V =-5V, I =-2mA CE C",
-    "example": "125 to 250"
+    "conditions": "V =-5V, I =-2mA",
+    "example": "125"
    },
    {
     "name": "Collector-Emitter Saturation Voltage",
     "symbol": "VCE(sat)",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =-100mA, I =-5mA C B",
+    "conditions": "I =-100mA, I =-5mA",
     "example": "-0.65"
    },
    {
@@ -142,7 +142,7 @@
     "symbol": "VBE(sat)",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =-100mA, I =-5mA C B",
+    "conditions": "I =-100mA, I =-5mA",
     "example": "-1.1"
    },
    {
@@ -150,7 +150,7 @@
     "symbol": "f T",
     "unit": "MHz",
     "stat": "min",
-    "conditions": "V =-5V, I =-10mA, CE C F=100MHz",
+    "conditions": "V =-5V, I =-10mA, F=100MHz",
     "example": "100"
    },
    {
@@ -158,12 +158,12 @@
     "symbol": "Cob",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V =-10V, F=1MHz CB",
+    "conditions": "V =-10V, F=1MHz",
     "example": "4.5"
    }
   ],
-  "seconds": 15.89,
-  "tokens_in": 1158,
-  "tokens_out": 927
+  "seconds": 15.96,
+  "tokens_in": 1258,
+  "tokens_out": 892
  }
 }

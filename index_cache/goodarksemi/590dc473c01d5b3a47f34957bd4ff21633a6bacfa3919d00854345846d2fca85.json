@@ -24,9 +24,9 @@
  },
  "type": "pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:33:01+00:00",
+  "at": "2026-11-23T06:46:21+00:00",
   "items": [
    {
     "name": "Collector Base Voltage",
@@ -48,7 +48,7 @@
     "name": "Input Voltage",
     "symbol": "V I",
     "unit": "V",
-    "stat": "range",
+    "stat": "max",
     "conditions": "",
     "example": "-20, 10"
    },
@@ -73,7 +73,7 @@
     "symbol": "R θJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
     "example": "625"
    },
    {
@@ -87,9 +87,9 @@
    {
     "name": "DC Current Gain",
     "symbol": "h FE",
-    "unit": "",
+    "unit": "-",
     "stat": "min",
-    "conditions": "V =-5V, I =-10mA CE C",
+    "conditions": "V =-5V, I =-10mA",
     "example": "30"
    },
    {
@@ -97,7 +97,7 @@
     "symbol": "I CEO",
     "unit": "nA",
     "stat": "max",
-    "conditions": "V =-50V CE",
+    "conditions": "V =-50V",
     "example": "-500"
    },
    {
@@ -105,7 +105,7 @@
     "symbol": "I EBO",
     "unit": "mA",
     "stat": "max",
-    "conditions": "V =-5V EB",
+    "conditions": "V =-5V",
     "example": "-1.8"
    },
    {
@@ -113,7 +113,7 @@
     "symbol": "V CE(sat)",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =-10mA, I =-0.5mA C B",
+    "conditions": "I =-10mA, I =-0.5mA",
     "example": "-0.3"
    },
    {
@@ -121,7 +121,7 @@
     "symbol": "V I(ON)",
     "unit": "V",
     "stat": "max",
-    "conditions": "V =-0.2V, I =-5mA CE C",
+    "conditions": "V =-0.2V, I =-5mA",
     "example": "-2"
    },
    {
@@ -129,7 +129,7 @@
     "symbol": "V I(OFF)",
     "unit": "V",
     "stat": "min",
-    "conditions": "V =-5V, I =-0.1mA CE C",
+    "conditions": "V =-5V, I =-0.1mA",
     "example": "-1"
    },
    {
@@ -137,7 +137,7 @@
     "symbol": "f T",
     "unit": "MHz",
     "stat": "typ",
-    "conditions": "V =-10V, I =-5mA CE C",
+    "conditions": "V =-10V, I =-5mA",
     "example": "200"
    },
    {
@@ -146,19 +146,19 @@
     "unit": "KΩ",
     "stat": "range",
     "conditions": "",
-    "example": "-30%"
+    "example": "-30% to +30%"
    },
    {
     "name": "Resistance Ratio",
     "symbol": "R2/R1",
-    "unit": "",
+    "unit": "-",
     "stat": "range",
     "conditions": "",
-    "example": "0.8"
+    "example": "0.8 to 1.2"
    }
   ],
-  "seconds": 59.83,
-  "tokens_in": 2550,
-  "tokens_out": 778
+  "seconds": 59.08,
+  "tokens_in": 2650,
+  "tokens_out": 776
  }
 }

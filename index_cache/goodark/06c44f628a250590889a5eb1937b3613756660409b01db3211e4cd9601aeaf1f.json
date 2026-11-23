@@ -24,9 +24,9 @@
  },
  "type": "standard_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:17:38+00:00",
+  "at": "2026-11-23T06:19:54+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -70,7 +70,7 @@
    },
    {
     "name": "Operating junction temperature range",
-    "symbol": "TJ",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -78,7 +78,7 @@
    },
    {
     "name": "Storage temperature range",
-    "symbol": "TSTG",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -147,10 +147,18 @@
     "stat": "typ",
     "conditions": "I =0.5A, F I =1.0A, R I =0.25A RR",
     "example": "2"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SMB (DO-214AA)"
    }
   ],
-  "seconds": 40.41,
-  "tokens_in": 1536,
-  "tokens_out": 705
+  "seconds": 41.12,
+  "tokens_in": 1636,
+  "tokens_out": 737
  }
 }

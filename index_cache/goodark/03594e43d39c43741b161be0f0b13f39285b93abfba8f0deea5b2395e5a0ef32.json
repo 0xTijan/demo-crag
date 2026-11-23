@@ -20,9 +20,9 @@
  },
  "type": "ultrafast_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:59:20+00:00",
+  "at": "2026-11-23T06:02:13+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -143,42 +143,10 @@
     "stat": "value",
     "conditions": "",
     "example": "eSGB (DO-221AC)"
-   },
-   {
-    "name": "Operating temperature range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to +175"
-   },
-   {
-    "name": "Moisture sensitivity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "level 1, per J-STD-020"
-   },
-   {
-    "name": "Halogen-free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61249-2-21"
-   },
-   {
-    "name": "High temperature soldering guaranteed",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "260℃/10 seconds"
    }
   ],
-  "seconds": 52.91,
-  "tokens_in": 1443,
-  "tokens_out": 871
+  "seconds": 42.07,
+  "tokens_in": 1543,
+  "tokens_out": 701
  }
 }

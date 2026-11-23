@@ -20,9 +20,9 @@
  },
  "type": "fast_recovery_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:08:33+00:00",
+  "at": "2026-11-23T06:14:00+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -159,10 +159,18 @@
     "stat": "max",
     "conditions": "I =0.5A, F I =1.0A, R I =0.25A RR",
     "example": "25"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MUR420"
    }
   ],
-  "seconds": 25.86,
-  "tokens_in": 1108,
-  "tokens_out": 816
+  "seconds": 23.18,
+  "tokens_in": 1208,
+  "tokens_out": 850
  }
 }

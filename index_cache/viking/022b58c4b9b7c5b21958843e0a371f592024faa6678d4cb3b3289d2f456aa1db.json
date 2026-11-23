@@ -20,9 +20,9 @@
  },
  "type": "power_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:47:47+00:00",
+  "at": "2026-11-23T07:47:03+00:00",
   "items": [
    {
     "name": "Absolute Maximum Ratings",
@@ -46,7 +46,7 @@
     "unit": "Ω",
     "stat": "min",
     "conditions": "",
-    "example": "10G"
+    "example": "10000000000"
    },
    {
     "name": "Operating Temperature Range",
@@ -57,12 +57,68 @@
     "example": "-65 to 150"
    },
    {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.5%"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "±50"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±0.5%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±10%",
+    "example": "0.05 to 0.1"
+   },
+   {
     "name": "Temperature Coefficient of Resistance",
-    "symbol": "TCR",
+    "symbol": "",
     "unit": "PPM/°C",
     "stat": "value",
     "conditions": "Referenced to 25°C, ∆R taken at +105°C",
-    "example": "±50 ±100 ±200"
+    "example": "±50"
    },
    {
     "name": "Short Time Overload",
@@ -85,7 +141,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs \"ON\" and 0.5 hrs \"OFF\"",
+    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs “ON” and 0.5 hrs “OFF”",
     "example": "∆R±0.5%"
    },
    {
@@ -107,10 +163,10 @@
    {
     "name": "Terminal Strength",
     "symbol": "",
-    "unit": "N",
+    "unit": "",
     "stat": "value",
     "conditions": "(Pull Test) 2.4N",
-    "example": "2.4"
+    "example": "∆R±0.2%"
    },
    {
     "name": "Vibration, High Frequency",
@@ -118,7 +174,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "20g peak",
-    "example": "20g"
+    "example": "∆R±0.2%"
    },
    {
     "name": "Lead Material",
@@ -145,88 +201,24 @@
     "example": "3"
    },
    {
-    "name": "Resistance Tolerance",
+    "name": "Storage Temperature",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "D: ±0.5% F: ±1% J: ±5% K: ±10%"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
+    "unit": "°C",
     "stat": "range",
-    "conditions": "±0.5%",
-    "example": "0.05Ω – 0.1Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±1%",
-    "example": "≧ 0.1Ω - 1Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±5%",
-    "example": "≧ 1Ω - 5Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±10%",
-    "example": "≧ 10Ω - 100KΩ"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
     "conditions": "",
-    "example": "±100 ±200 ±300"
+    "example": "25±5"
    },
    {
-    "name": "Part Number",
+    "name": "Storage Humidity",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
+    "unit": "%",
+    "stat": "max",
     "conditions": "",
-    "example": "J D 1001 -H"
-   },
-   {
-    "name": "Package",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "TO-220"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "g",
-    "stat": "value",
-    "conditions": "(1000pcs)",
-    "example": "1290"
-   },
-   {
-    "name": "Packaging",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tube"
+    "example": "75"
    }
   ],
-  "seconds": 42.21,
-  "tokens_in": 2201,
-  "tokens_out": 1515
+  "seconds": 33.17,
+  "tokens_in": 2301,
+  "tokens_out": 2186
  }
 }

@@ -21,9 +21,9 @@
  },
  "type": "switching_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:28:15+00:00",
+  "at": "2026-11-23T06:41:57+00:00",
   "items": [
    {
     "name": "Reverse Voltage",
@@ -94,7 +94,7 @@
     "symbol": "V (BR)",
     "unit": "V",
     "stat": "min",
-    "conditions": "IR =100uA",
+    "conditions": "IR=100uA",
     "example": "100"
    },
    {
@@ -102,7 +102,7 @@
     "symbol": "V F",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =100mA F",
+    "conditions": "I F=100mA",
     "example": "1.00"
    },
    {
@@ -110,7 +110,7 @@
     "symbol": "V F",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =200mA F",
+    "conditions": "I F=200mA",
     "example": "1.25"
    },
    {
@@ -118,7 +118,7 @@
     "symbol": "I R",
     "unit": "uA",
     "stat": "max",
-    "conditions": "BAS19; VR=100V",
+    "conditions": "VR=100V",
     "example": "0.1"
    },
    {
@@ -126,12 +126,12 @@
     "symbol": "I R",
     "unit": "uA",
     "stat": "max",
-    "conditions": "BAS20; VR=150V",
+    "conditions": "VR=150V",
     "example": "0.1"
    },
    {
     "name": "Typical junction capacitance",
-    "symbol": "C J",
+    "symbol": "",
     "unit": "pF",
     "stat": "typ",
     "conditions": "VR=0V, f=1MHZ",
@@ -144,10 +144,18 @@
     "stat": "typ",
     "conditions": "IF=IR=30mA RL=100Ω IRR=0.1 X IR",
     "example": "50"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
    }
   ],
-  "seconds": 22.61,
-  "tokens_in": 1227,
-  "tokens_out": 768
+  "seconds": 27.13,
+  "tokens_in": 1327,
+  "tokens_out": 789
  }
 }

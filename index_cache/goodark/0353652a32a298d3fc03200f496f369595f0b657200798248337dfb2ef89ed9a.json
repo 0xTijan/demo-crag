@@ -20,9 +20,9 @@
  },
  "type": "sic_schottky_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:24:40+00:00",
+  "at": "2026-11-23T06:38:55+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -99,7 +99,7 @@
    {
     "name": "Operating junction temperature range",
     "symbol": "TJ",
-    "unit": "°C",
+    "unit": "",
     "stat": "range",
     "conditions": "",
     "example": "-55to+175"
@@ -107,7 +107,7 @@
    {
     "name": "Storage temperature range",
     "symbol": "TSTG",
-    "unit": "°C",
+    "unit": "",
     "stat": "range",
     "conditions": "",
     "example": "-55to+175"
@@ -116,8 +116,8 @@
     "name": "Forward drop voltage",
     "symbol": "VF",
     "unit": "V",
-    "stat": "range",
-    "conditions": "IF=10A, TJ=25°C",
+    "stat": "typ",
+    "conditions": "IF=10A, TJ=25℃",
     "example": "1.3"
    },
    {
@@ -125,31 +125,39 @@
     "symbol": "VF",
     "unit": "V",
     "stat": "max",
-    "conditions": "IF=10A, TJ=175°C",
+    "conditions": "IF=10A, TJ=25℃",
+    "example": "1.5"
+   },
+   {
+    "name": "Forward drop voltage",
+    "symbol": "VF",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "IF=10A, TJ=175℃",
     "example": "1.5"
    },
    {
     "name": "Reverse leakage current @ rated VR",
     "symbol": "IR",
     "unit": "µA",
-    "stat": "range",
-    "conditions": "V=650V, TJ=25°C",
-    "example": "5"
+    "stat": "max",
+    "conditions": "V=650V, TJ=25℃",
+    "example": "50"
    },
    {
     "name": "Reverse leakage current @ rated VR",
     "symbol": "IR",
     "unit": "µA",
-    "stat": "range",
-    "conditions": "VR=650V, TJ=175°C",
-    "example": "10"
+    "stat": "max",
+    "conditions": "VR=650V, TJ=175℃",
+    "example": "100"
    },
    {
     "name": "Total capacitive charge",
     "symbol": "QC",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VR=400V, TJ=25°C",
+    "conditions": "VR=400V, TJ=25℃",
     "example": "27"
    },
    {
@@ -157,7 +165,7 @@
     "symbol": "C",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "VR=400V, TJ=25°C, f=1MHz",
+    "conditions": "VR=400V, TJ=25℃, f=1MHz",
     "example": "43"
    },
    {
@@ -169,56 +177,16 @@
     "example": "3.9"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Epoxy, Molded"
-   },
-   {
-    "name": "Lead Temperature for Soldering Purposes",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "260"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "TO-220F-2"
-   },
-   {
-    "name": "Operating temperature range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55to+175"
-   },
-   {
-    "name": "Environmental",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Halogen-free according to IEC 61249-2-21"
-   },
-   {
-    "name": "Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
    }
   ],
-  "seconds": 18.75,
-  "tokens_in": 1897,
-  "tokens_out": 1105
+  "seconds": 45.3,
+  "tokens_in": 1997,
+  "tokens_out": 949
  }
 }

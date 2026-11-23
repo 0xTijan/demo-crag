@@ -22,9 +22,9 @@
  },
  "type": "melf_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:23:07+00:00",
+  "at": "2026-11-23T08:59:12+00:00",
   "items": [
    {
     "name": "Resistance range",
@@ -83,10 +83,18 @@
     "example": "≦0.5"
    },
    {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CSRF0102"
+   },
+   {
     "name": "L",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "2.20±0.10"
    },
@@ -102,7 +110,7 @@
     "name": "ΦD",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "1.10±0.10"
    },
@@ -110,7 +118,7 @@
     "name": "ΦD 1",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "D +0/-0.15"
    },
@@ -118,7 +126,7 @@
     "name": "K",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "0.45±0.05"
    },
@@ -285,134 +293,14 @@
    {
     "name": "Shelf Life",
     "symbol": "",
-    "unit": "year",
+    "unit": "years",
     "stat": "value",
     "conditions": "",
     "example": "2"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "inch",
-    "stat": "value",
-    "conditions": "",
-    "example": "7"
-   },
-   {
-    "name": "ΦA",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "178.5±1.5"
-   },
-   {
-    "name": "ΦB",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "60.0+1.0"
-   },
-   {
-    "name": "ΦC",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "13.0±0.2"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "9.0±0.5"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "12.5±0.5"
-   },
-   {
-    "name": "Emboss Plastic Tape (EA)",
-    "symbol": "",
-    "unit": "EA",
-    "stat": "value",
-    "conditions": "",
-    "example": "3,000"
-   },
-   {
-    "name": "A",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.30±0.20"
-   },
-   {
-    "name": "B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.40±0.20"
-   },
-   {
-    "name": "E",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.75±0.10"
-   },
-   {
-    "name": "F",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "3.50±0.05"
-   },
-   {
-    "name": "P 0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "4.00±0.10"
-   },
-   {
-    "name": "P 1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "4.00±0.10"
-   },
-   {
-    "name": "P 2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.00±0.05"
-   },
-   {
-    "name": "ΦD 0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.50+0.10"
    }
   ],
-  "seconds": 67.51,
-  "tokens_in": 5654,
-  "tokens_out": 4551
+  "seconds": 38.4,
+  "tokens_in": 5754,
+  "tokens_out": 2275
  }
 }

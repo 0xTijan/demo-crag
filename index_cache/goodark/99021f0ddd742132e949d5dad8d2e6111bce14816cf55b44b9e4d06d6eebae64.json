@@ -24,12 +24,12 @@
  },
  "type": "esd_protection_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T11:10:14+00:00",
+  "at": "2026-11-23T06:16:26+00:00",
   "items": [
    {
-    "name": "Peak Pulse Power",
+    "name": "Peak Pulse Power (TP=8/20μS)",
     "symbol": "Ppp",
     "unit": "W",
     "stat": "max",
@@ -62,47 +62,55 @@
    },
    {
     "name": "IR @ V RWM",
-    "symbol": "IR @ V RWM",
+    "symbol": "IR",
     "unit": "uA",
     "stat": "value",
     "conditions": "",
     "example": "1"
    },
    {
-    "name": "Min Breakdown Voltage",
-    "symbol": "V BR @1mA",
+    "name": "Min Breakdown Voltage V BR @1mA",
+    "symbol": "V BR",
     "unit": "Volts",
     "stat": "min",
-    "conditions": "",
+    "conditions": "1mA",
     "example": "4"
    },
    {
-    "name": "Max Clamping Voltage",
-    "symbol": "Vc @I=1A",
+    "name": "Max Clamping Voltage Vc @I=1A P",
+    "symbol": "Vc",
     "unit": "Volts",
     "stat": "max",
     "conditions": "I=1A",
     "example": "7.0"
    },
    {
-    "name": "Max Clamping Voltage",
-    "symbol": "Vc @I PP",
+    "name": "Max Clamping Voltage Vc @I PP",
+    "symbol": "Vc",
     "unit": "Volts",
     "stat": "max",
     "conditions": "I PP",
     "example": "19 @ 20A"
    },
    {
-    "name": "Typ C J",
-    "symbol": "Typ C J @0V,1MHz",
+    "name": "Typ C J @0V,1MHz",
+    "symbol": "CJ",
     "unit": "pF",
     "stat": "value",
     "conditions": "0V,1MHz",
     "example": "1"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-323"
    }
   ],
-  "seconds": 19.03,
-  "tokens_in": 1330,
-  "tokens_out": 418
+  "seconds": 28.13,
+  "tokens_in": 1430,
+  "tokens_out": 467
  }
 }

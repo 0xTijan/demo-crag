@@ -20,9 +20,9 @@
  },
  "type": "esd_tvs_array",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:35:55+00:00",
+  "at": "2026-11-23T06:48:36+00:00",
   "items": [
    {
     "name": "Peak Pulse Power",
@@ -109,7 +109,7 @@
     "symbol": "C_J",
     "unit": "pF",
     "stat": "range",
-    "conditions": "V_R =0V, f=1MHz, I/O to GND",
+    "conditions": "V_R =0V, f=1MHz",
     "example": "0.4 to 0.50"
    },
    {
@@ -119,26 +119,10 @@
     "stat": "value",
     "conditions": "",
     "example": "DFN1610-6L"
-   },
-   {
-    "name": "ESD Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61000-4-2 ±16KV contact ±20KV air"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "compliant"
    }
   ],
-  "seconds": 69.2,
-  "tokens_in": 1148,
-  "tokens_out": 800
+  "seconds": 39.96,
+  "tokens_in": 1248,
+  "tokens_out": 592
  }
 }

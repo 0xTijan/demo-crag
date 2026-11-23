@@ -20,9 +20,9 @@
  },
  "type": "mosfet_p",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:05:35+00:00",
+  "at": "2026-11-23T06:12:14+00:00",
   "items": [
    {
     "name": "Drain Source Voltage",
@@ -269,7 +269,7 @@
     "symbol": "Trr",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "VR=-20V, IF=-15A, di/dt = 100 A/μs",
+    "conditions": "VR =-20V, IF =-15A, di/dt = 100 A/μs",
     "example": "46"
    },
    {
@@ -277,7 +277,7 @@
     "symbol": "Qrr",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VR=-20V, IF=-15A, di/dt = 100 A/μs",
+    "conditions": "VR =-20V, IF =-15A, di/dt = 100 A/μs",
     "example": "32"
    },
    {
@@ -287,50 +287,10 @@
     "stat": "value",
     "conditions": "",
     "example": "PDFN3333"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
-   },
-   {
-    "name": "MSL",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3"
    }
   ],
-  "seconds": 117.02,
-  "tokens_in": 2750,
-  "tokens_out": 1980
+  "seconds": 111.33,
+  "tokens_in": 2850,
+  "tokens_out": 1813
  }
 }

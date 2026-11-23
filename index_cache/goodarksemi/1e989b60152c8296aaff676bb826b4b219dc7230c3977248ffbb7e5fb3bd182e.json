@@ -20,9 +20,9 @@
  },
  "type": "fast_recovery_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:09:38+00:00",
+  "at": "2026-11-23T06:15:01+00:00",
   "items": [
    {
     "name": "Maximum Recurrent Peak Reverse Voltage",
@@ -53,7 +53,7 @@
     "symbol": "I FAV",
     "unit": "A",
     "stat": "max",
-    "conditions": "3/8\"lead length at T =55°C",
+    "conditions": "3/8\"lead length at T =55°C A",
     "example": "1.5"
    },
    {
@@ -109,7 +109,7 @@
     "symbol": "Trr",
     "unit": "µs",
     "stat": "typ",
-    "conditions": "If =0.5A, Ir =1.0A, Irr =0.25A",
+    "conditions": "Note 1",
     "example": "2.0"
    },
    {
@@ -117,7 +117,7 @@
     "symbol": "Cj",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "Measured at 1.0 MHz and applied reverse voltage of 4.0Vdc",
+    "conditions": "Note 2",
     "example": "25.0"
    },
    {
@@ -125,7 +125,7 @@
     "symbol": "Rth(ja)",
     "unit": "°C/W",
     "stat": "typ",
-    "conditions": "Thermal Resistance from Junction to Ambient at 3/8\"lead length, P.C. Board Mounted",
+    "conditions": "Note 3",
     "example": "45.0"
    },
    {
@@ -135,10 +135,18 @@
     "stat": "range",
     "conditions": "",
     "example": "-65 to +175"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-57"
    }
   ],
-  "seconds": 42.94,
-  "tokens_in": 1071,
-  "tokens_out": 746
+  "seconds": 43.3,
+  "tokens_in": 1171,
+  "tokens_out": 730
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "sic_mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:25:02+00:00",
+  "at": "2026-11-23T07:30:23+00:00",
   "items": [
    {
     "name": "DrainSourceVoltage",
@@ -36,7 +36,7 @@
     "name": "GateSourceVoltage",
     "symbol": "V GS",
     "unit": "V",
-    "stat": "max",
+    "stat": "range",
     "conditions": "",
     "example": "-8/+22"
    },
@@ -44,7 +44,7 @@
     "name": "RecommendGateSourceVoltage",
     "symbol": "V GSop",
     "unit": "V",
-    "stat": "max",
+    "stat": "range",
     "conditions": "",
     "example": "-4/+18"
    },
@@ -74,7 +74,7 @@
    },
    {
     "name": "OperatingTemperatureandStorageTemperatureRange",
-    "symbol": "T J/T STG",
+    "symbol": "T J /T STG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -124,15 +124,15 @@
     "name": "GateThresholdVoltage",
     "symbol": "V GS(TH)",
     "unit": "V",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "V DS=V GS, I DS=4.8mA",
-    "example": "3"
+    "example": "2/3/4"
    },
    {
     "name": "GateThresholdVoltage",
     "symbol": "V GS(TH)",
     "unit": "V",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "V DS=V GS, I DS=4.8mA, T J=175°C",
     "example": "2.1"
    },
@@ -140,15 +140,15 @@
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "V GS=18V, I D=17.6A",
-    "example": "45"
+    "example": "45/59"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "V GS=18V, I D=17.6A, T J=175°C",
     "example": "55"
    },
@@ -156,15 +156,15 @@
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "V GS=15V, I D=17.6A",
-    "example": "56"
+    "example": "56/68"
    },
    {
     "name": "Drain-SourceOn-state Resistance",
     "symbol": "R DS(on)",
     "unit": "mΩ",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "V GS=15V, I D=17.6A, T J=175°C",
     "example": "60"
    },
@@ -311,10 +311,18 @@
     "stat": "typ",
     "conditions": "V RF=400V, I D=17.6A, V GS=-4V, di/dt=1000A/μs",
     "example": "114.4"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-263"
    }
   ],
-  "seconds": 96.07,
-  "tokens_in": 2298,
-  "tokens_out": 2266
+  "seconds": 130.75,
+  "tokens_in": 2398,
+  "tokens_out": 2311
  }
 }

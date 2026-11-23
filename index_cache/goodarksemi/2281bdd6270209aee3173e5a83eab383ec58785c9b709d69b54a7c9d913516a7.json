@@ -21,9 +21,9 @@
  },
  "type": "ultrafast_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:59:59+00:00",
+  "at": "2026-11-23T06:02:46+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -118,7 +118,7 @@
     "symbol": "IR",
     "unit": "uA",
     "stat": "max",
-    "conditions": "V_R=0V, T_J=25°C",
+    "conditions": "V_R=25°C",
     "example": "10"
    },
    {
@@ -126,7 +126,7 @@
     "symbol": "IR",
     "unit": "uA",
     "stat": "max",
-    "conditions": "V_R=0V, T_J=125°C",
+    "conditions": "V_R=125°C",
     "example": "500"
    },
    {
@@ -136,6 +136,14 @@
     "stat": "typ",
     "conditions": "TO-220-AC",
     "example": "2.0"
+   },
+   {
+    "name": "Thermal Resistance, Junction to Ambient per Leg",
+    "symbol": "RθJA",
+    "unit": "°C/W",
+    "stat": "typ",
+    "conditions": "TO-220-AC",
+    "example": "62.5"
    },
    {
     "name": "Thermal Resistance, Junction to Case per Leg",
@@ -150,40 +158,8 @@
     "symbol": "RθJA",
     "unit": "°C/W",
     "stat": "typ",
-    "conditions": "TO-220-AC",
-    "example": "62.5"
-   },
-   {
-    "name": "Thermal Resistance, Junction to Ambient per Leg",
-    "symbol": "RθJA",
-    "unit": "°C/W",
-    "stat": "typ",
     "conditions": "ITO-220-AC",
     "example": "62.5"
-   },
-   {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Epoxy, Molded"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "grams",
-    "stat": "value",
-    "conditions": "",
-    "example": "1.9"
-   },
-   {
-    "name": "Lead Temperature for Soldering Purposes",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "260"
    },
    {
     "name": "Package",
@@ -192,26 +168,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-220-AC"
-   },
-   {
-    "name": "Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "Halogen-free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61249-2-21"
    }
   ],
-  "seconds": 51.76,
-  "tokens_in": 2543,
-  "tokens_out": 1240
+  "seconds": 43.29,
+  "tokens_in": 2643,
+  "tokens_out": 1036
  }
 }

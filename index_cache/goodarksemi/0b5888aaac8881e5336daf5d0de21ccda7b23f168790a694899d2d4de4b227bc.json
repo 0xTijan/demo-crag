@@ -20,16 +20,16 @@
  },
  "type": "complementary_npn_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:03:16+00:00",
+  "at": "2026-11-23T08:02:47+00:00",
   "items": [
    {
     "name": "Total Power Dissipation",
     "symbol": "Pd",
     "unit": "mW",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "200"
    },
    {
@@ -37,23 +37,23 @@
     "symbol": "RθJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "625"
    },
    {
-    "name": "Operating and Storage and Temperature Range",
+    "name": "Operating and Storage Temperature Range",
     "symbol": "T, TJSTG",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
+    "conditions": "TA=25°C",
+    "example": "-55 to +150"
    },
    {
     "name": "Collector to Base Voltage",
     "symbol": "VCBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "75"
    },
    {
@@ -61,7 +61,7 @@
     "symbol": "VCEO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "40"
    },
    {
@@ -69,7 +69,7 @@
     "symbol": "VEBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "6.0"
    },
    {
@@ -77,7 +77,7 @@
     "symbol": "IC",
     "unit": "mA",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "600"
    },
    {
@@ -85,7 +85,7 @@
     "symbol": "VCBO",
     "unit": "V",
     "stat": "min",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-60"
    },
    {
@@ -93,7 +93,7 @@
     "symbol": "VCEO",
     "unit": "V",
     "stat": "min",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-60"
    },
    {
@@ -101,7 +101,7 @@
     "symbol": "VEBO",
     "unit": "V",
     "stat": "min",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-5.0"
    },
    {
@@ -109,7 +109,7 @@
     "symbol": "IC",
     "unit": "mA",
     "stat": "min",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-600"
    },
    {
@@ -117,7 +117,7 @@
     "symbol": "VCBO",
     "unit": "V",
     "stat": "min",
-    "conditions": "I=10μA, IC=0",
+    "conditions": "Ic=10μA, Ie=0",
     "example": "75"
    },
    {
@@ -125,7 +125,7 @@
     "symbol": "VCEO",
     "unit": "V",
     "stat": "min",
-    "conditions": "I=10mA, IB=0",
+    "conditions": "Ic=10mA, Ib=0",
     "example": "40"
    },
    {
@@ -133,7 +133,7 @@
     "symbol": "VEBO",
     "unit": "V",
     "stat": "min",
-    "conditions": "I=10μA, IC=0",
+    "conditions": "Ie=10μA, Ic=0",
     "example": "6.0"
    },
    {
@@ -141,7 +141,7 @@
     "symbol": "ICEX",
     "unit": "nA",
     "stat": "max",
-    "conditions": "VCE=60V, VEB(off)=3V",
+    "conditions": "Vce=60V, Veb(off)=3V",
     "example": "10"
    },
    {
@@ -149,7 +149,7 @@
     "symbol": "ICBO",
     "unit": "μA",
     "stat": "max",
-    "conditions": "VCE=60V, IC=0",
+    "conditions": "Vcb=60V, Ie=0",
     "example": "0.01"
    },
    {
@@ -157,7 +157,7 @@
     "symbol": "ICBO",
     "unit": "μA",
     "stat": "max",
-    "conditions": "VCE=60V, IC=0, TA=125°C",
+    "conditions": "Vcb=60V, Ie=0, TA=125°C",
     "example": "10"
    },
    {
@@ -165,7 +165,7 @@
     "symbol": "IEBO",
     "unit": "nA",
     "stat": "max",
-    "conditions": "VEB=3.0V, IC=0",
+    "conditions": "Veb=3.0V, Ic=0",
     "example": "10"
    },
    {
@@ -173,7 +173,7 @@
     "symbol": "IBL",
     "unit": "nA",
     "stat": "max",
-    "conditions": "VCE=60V, VEB(off)=3V",
+    "conditions": "Vce=60V, Veb(off)=3V",
     "example": "20"
    },
    {
@@ -181,7 +181,7 @@
     "symbol": "hFE(1)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=10V, IC=0.1mA",
+    "conditions": "Vce=10V, Ic=0.1mA",
     "example": "35"
    },
    {
@@ -189,7 +189,7 @@
     "symbol": "hFE(2)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=10V, IC=1.0mA",
+    "conditions": "Vce=10V, Ic=1.0mA",
     "example": "50"
    },
    {
@@ -197,7 +197,7 @@
     "symbol": "hFE(3)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=10V, IC=10mA",
+    "conditions": "Vce=10V, Ic=10mA",
     "example": "75"
    },
    {
@@ -205,7 +205,7 @@
     "symbol": "hFE(4)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=10V, IC=10mA, TA=-55°C",
+    "conditions": "Vce=10V, Ic=10mA, TA=-55°C",
     "example": "50"
    },
    {
@@ -213,7 +213,7 @@
     "symbol": "hFE(5)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=10V, IC=150mA",
+    "conditions": "Vce=10V, Ic=150mA",
     "example": "100"
    },
    {
@@ -221,7 +221,7 @@
     "symbol": "hFE(6)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=1.0V, IC=150mA",
+    "conditions": "Vce=1.0V, Ic=150mA",
     "example": "35"
    },
    {
@@ -229,7 +229,7 @@
     "symbol": "hFE(7)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=10V, IC=500mA",
+    "conditions": "Vce=10V, Ic=500mA",
     "example": "40"
    },
    {
@@ -237,7 +237,7 @@
     "symbol": "VCE(sat)(1)",
     "unit": "V",
     "stat": "max",
-    "conditions": "IC=150mA, IB=15mA",
+    "conditions": "Ic=150mA, Ib=15mA",
     "example": "0.3"
    },
    {
@@ -245,7 +245,7 @@
     "symbol": "VCE(sat)(2)",
     "unit": "V",
     "stat": "max",
-    "conditions": "IC=500mA, IB=50mA",
+    "conditions": "Ic=500mA, Ib=50mA",
     "example": "1.0"
    },
    {
@@ -253,7 +253,7 @@
     "symbol": "VBE(sat)(1)",
     "unit": "V",
     "stat": "max",
-    "conditions": "IC=150mA, IB=15mA",
+    "conditions": "Ic=150mA, Ib=15mA",
     "example": "1.2"
    },
    {
@@ -261,7 +261,7 @@
     "symbol": "VBE(sat)(2)",
     "unit": "V",
     "stat": "max",
-    "conditions": "IC=500mA, IB=50mA",
+    "conditions": "Ic=500mA, Ib=50mA",
     "example": "2.0"
    },
    {
@@ -269,7 +269,7 @@
     "symbol": "fT",
     "unit": "MHz",
     "stat": "min",
-    "conditions": "VCE=20V, IC=20mA, f=100MHz",
+    "conditions": "Vce=20V, Ic=20mA, f=100MHz",
     "example": "300"
    },
    {
@@ -277,7 +277,7 @@
     "symbol": "Cobo",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VCB=10V, IC=0, f=1.0MHz",
+    "conditions": "Vcb=10V, Ie=0, f=1.0MHz",
     "example": "8.0"
    },
    {
@@ -285,7 +285,7 @@
     "symbol": "Cibo",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VEB=0.5V, IC=0, f=1.0MHz",
+    "conditions": "Veb=0.5V, Ic=0, f=1.0MHz",
     "example": "25"
    },
    {
@@ -293,7 +293,7 @@
     "symbol": "NF",
     "unit": "dB",
     "stat": "max",
-    "conditions": "IC=100μA, VCE=10V, RS=1.0kΩ, f=1.0 kHz",
+    "conditions": "Ic=100μA, Vce=10V, Rs=1.0kΩ, f=1.0 kHz",
     "example": "4.0"
    },
    {
@@ -301,7 +301,7 @@
     "symbol": "td",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VCC=30V, IC=150mA, VBE(OFF)=-0.5V, IB1=15mA",
+    "conditions": "Vcc=30V, Ic=150mA, Vbe(off)=-0.5V, Ib1=15mA",
     "example": "10"
    },
    {
@@ -309,7 +309,7 @@
     "symbol": "tr",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VCC=30V, IC=150mA, VBE(OFF)=-0.5V, IB1=15mA",
+    "conditions": "Vcc=30V, Ic=150mA, Vbe(off)=-0.5V, Ib1=15mA",
     "example": "25"
    },
    {
@@ -317,7 +317,7 @@
     "symbol": "ts",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VCC=30V, IC=150mA, IB1=IB2=15mA",
+    "conditions": "Vcc=30V, Ic=150mA, Ib1=Ib2=15mA",
     "example": "225"
    },
    {
@@ -325,31 +325,31 @@
     "symbol": "tf",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VCC=30V, IC=150mA, IB1=IB2=15mA",
+    "conditions": "Vcc=30V, Ic=150mA, Ib1=Ib2=15mA",
     "example": "60"
    },
    {
     "name": "Collector to Base Breakdown Voltage",
     "symbol": "VCBO",
     "unit": "V",
-    "stat": "min",
-    "conditions": "I=-10μA, IC=0",
+    "stat": "max",
+    "conditions": "Ic=-10μA, Ie=0",
     "example": "-60"
    },
    {
     "name": "Collector to Emitter Breakdown Voltage",
     "symbol": "VCEO",
     "unit": "V",
-    "stat": "min",
-    "conditions": "I=-10mA, IB=0",
+    "stat": "max",
+    "conditions": "Ic=-10mA, Ib=0",
     "example": "-60"
    },
    {
     "name": "Emitter to Base Breakdown Voltage",
     "symbol": "VEBO",
     "unit": "V",
-    "stat": "min",
-    "conditions": "I=-10μA, IC=0",
+    "stat": "max",
+    "conditions": "Ie=-10μA, Ic=0",
     "example": "-5.0"
    },
    {
@@ -357,23 +357,15 @@
     "symbol": "ICBO",
     "unit": "μA",
     "stat": "max",
-    "conditions": "VCB=-50V, IC=0",
+    "conditions": "Vcb=-50V, Ie=0",
     "example": "-0.01"
-   },
-   {
-    "name": "Collector Cut-Off Current",
-    "symbol": "ICBO",
-    "unit": "μA",
-    "stat": "max",
-    "conditions": "VCB=-50V, IC=0, TA=125°C",
-    "example": "10"
    },
    {
     "name": "Collector Cutoff Current",
     "symbol": "ICEX",
     "unit": "nA",
     "stat": "max",
-    "conditions": "VCE=-30V, VEB(OFF)=-0.5V",
+    "conditions": "Vce=-30V, Veb(off)=-0.5V",
     "example": "-50"
    },
    {
@@ -381,7 +373,7 @@
     "symbol": "IBL",
     "unit": "nA",
     "stat": "max",
-    "conditions": "VCE=-30V, VEB(OFF)=-0.5V",
+    "conditions": "Vce=-30V, Veb(off)=-0.5V",
     "example": "-50"
    },
    {
@@ -389,7 +381,7 @@
     "symbol": "hFE(1)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=-10V, IC=-150mA*",
+    "conditions": "Vce=-10V, Ic=-150mA*",
     "example": "100"
    },
    {
@@ -397,7 +389,7 @@
     "symbol": "hFE(2)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=-10V, IC=-500mA*",
+    "conditions": "Vce=-10V, Ic=-500mA*",
     "example": "50"
    },
    {
@@ -405,7 +397,7 @@
     "symbol": "hFE(3)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=-10V, IC=-10mA",
+    "conditions": "Vce=-10V, Ic=-10mA",
     "example": "100"
    },
    {
@@ -413,7 +405,7 @@
     "symbol": "hFE(4)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=-10V, IC=-1.0mA",
+    "conditions": "Vce=-10V, Ic=-1.0mA",
     "example": "100"
    },
    {
@@ -421,7 +413,7 @@
     "symbol": "hFE(5)",
     "unit": "",
     "stat": "min",
-    "conditions": "VCE=-10V, IC=-0.1mA",
+    "conditions": "Vce=-10V, Ic=-0.1mA",
     "example": "75"
    },
    {
@@ -429,7 +421,7 @@
     "symbol": "VCE(sat)(1)",
     "unit": "V",
     "stat": "max",
-    "conditions": "IC=-150mA, IB=-15mA",
+    "conditions": "Ic=-150mA, Ib=-15mA",
     "example": "-0.4"
    },
    {
@@ -437,7 +429,7 @@
     "symbol": "VCE(sat)(2)",
     "unit": "V",
     "stat": "max",
-    "conditions": "IC=-500mA, IB=-50mA",
+    "conditions": "Ic=-500mA, Ib=-50mA",
     "example": "-1.6"
    },
    {
@@ -445,7 +437,7 @@
     "symbol": "VBE(sat)(1)",
     "unit": "V",
     "stat": "max",
-    "conditions": "IC=-150mA, IB=-15mA",
+    "conditions": "Ic=-150mA, Ib=-15mA",
     "example": "-1.3"
    },
    {
@@ -453,7 +445,7 @@
     "symbol": "VBE(sat)(2)",
     "unit": "V",
     "stat": "max",
-    "conditions": "IC=-500mA, IB=-50mA",
+    "conditions": "Ic=-500mA, Ib=-50mA",
     "example": "-2.6"
    },
    {
@@ -461,7 +453,7 @@
     "symbol": "fT",
     "unit": "MHz",
     "stat": "min",
-    "conditions": "VCE=-20V, IC=-50mA, f=100MHz",
+    "conditions": "Vce=-20V, Ic=-50mA, f=100MHz",
     "example": "200"
    },
    {
@@ -469,7 +461,7 @@
     "symbol": "Cobo",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VCB=-10V, IC=0, f=1.0MHz",
+    "conditions": "Vcb=-10V, Ie=0, f=1.0MHz",
     "example": "8.0"
    },
    {
@@ -477,7 +469,7 @@
     "symbol": "Cibo",
     "unit": "pF",
     "stat": "max",
-    "conditions": "VEB=-2V, IC=0, f=1.0MHz",
+    "conditions": "Veb=-2V, Ic=0, f=1.0MHz",
     "example": "30"
    },
    {
@@ -493,7 +485,7 @@
     "symbol": "td",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VCC=-30V, IC=-150mA, IB1=-15mA",
+    "conditions": "Vcc=-30V, Ic=-150mA, Ib1=-15mA",
     "example": "10"
    },
    {
@@ -501,7 +493,7 @@
     "symbol": "tr",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VCC=-30V, IC=-150mA, IB1=-15mA",
+    "conditions": "Vcc=-30V, Ic=-150mA, Ib1=-15mA",
     "example": "40"
    },
    {
@@ -509,7 +501,7 @@
     "symbol": "ts",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VCC=-6V, IC=-150mA, IB1=IB2=-15mA",
+    "conditions": "Vcc=-6V, Ic=-150mA, Ib1=Ib2=-15mA",
     "example": "80"
    },
    {
@@ -517,7 +509,7 @@
     "symbol": "tr",
     "unit": "nS",
     "stat": "max",
-    "conditions": "VCC=-6V, IC=-150mA, IB1=IB2=-15mA",
+    "conditions": "Vcc=-6V, Ic=-150mA, Ib1=Ib2=-15mA",
     "example": "30"
    },
    {
@@ -545,6 +537,14 @@
     "example": "H27"
    },
    {
+    "name": "Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "3000pcs / Reel"
+   },
+   {
     "name": "HSF Status",
     "symbol": "",
     "unit": "",
@@ -553,8 +553,8 @@
     "example": "RoHS Compliant"
    }
   ],
-  "seconds": 128.27,
-  "tokens_in": 3395,
-  "tokens_out": 3479
+  "seconds": 130.3,
+  "tokens_in": 3495,
+  "tokens_out": 3571
  }
 }

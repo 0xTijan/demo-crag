@@ -24,9 +24,9 @@
  },
  "type": "standard_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:17:15+00:00",
+  "at": "2026-11-23T06:19:24+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -147,10 +147,18 @@
     "stat": "typ",
     "conditions": "I =0.5A, F I =1.0A, R I =0.25A RR",
     "example": "4"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "eSGC (TO-277B)"
    }
   ],
-  "seconds": 31.16,
-  "tokens_in": 2009,
-  "tokens_out": 714
+  "seconds": 22.45,
+  "tokens_in": 2109,
+  "tokens_out": 754
  }
 }

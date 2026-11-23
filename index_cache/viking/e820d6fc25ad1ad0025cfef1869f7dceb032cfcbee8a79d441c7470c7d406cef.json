@@ -20,9 +20,9 @@
  },
  "type": "power_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:52:01+00:00",
+  "at": "2026-11-23T07:50:47+00:00",
   "items": [
    {
     "name": "Absolute Maximum Ratings",
@@ -85,7 +85,7 @@
     "symbol": "",
     "unit": "W",
     "stat": "max",
-    "conditions": "Without a Heat Sink, when in Free Air at 25°C",
+    "conditions": "Without a Heat Sink, in Free Air at 25°C",
     "example": "2.5"
    },
    {
@@ -105,142 +105,6 @@
     "example": "0.333"
    },
    {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±0.5%",
-    "example": "0.5"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±1%",
-    "example": "1"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±5%",
-    "example": "5"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "range",
-    "conditions": "No Specified (±300~±700)",
-    "example": "±300 to ±700"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±300",
-    "example": "±300"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±100",
-    "example": "±100"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±200",
-    "example": "±200"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±0.5%, 0.05Ω – 0.1Ω",
-    "example": "0.05 to 0.1"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±1%, 0.05Ω – 0.1Ω",
-    "example": "0.05 to 0.1"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±5%, ≧ 0.1Ω - 1Ω",
-    "example": "0.1 to 1"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±10%, ≧ 0.1Ω - 1Ω",
-    "example": "0.1 to 1"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±5%, ≧ 1Ω - 5Ω",
-    "example": "1 to 5"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±10%, ≧ 1Ω - 5Ω",
-    "example": "1 to 5"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±5%, ≧ 5Ω - 10Ω",
-    "example": "5 to 10"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±10%, ≧ 5Ω - 10Ω",
-    "example": "5 to 10"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±5%, ≧ 10Ω - 100KΩ",
-    "example": "10 to 100000"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±10%, ≧ 10Ω - 100KΩ",
-    "example": "10 to 100000"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
@@ -249,124 +113,52 @@
     "example": "TO-220"
    },
    {
-    "name": "Size",
+    "name": "Resistance Tolerance",
     "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "W",
-    "example": "10.16"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "H",
-    "example": "15.00"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "H1",
-    "example": "2.9"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "B",
-    "example": "13.5"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "B1",
-    "example": "4"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "D",
-    "example": "1.27"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "D1",
-    "example": "0.78"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "C",
-    "example": "5.08"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "L",
-    "example": "3.65"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "T",
-    "example": "4.6"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "T1",
-    "example": "1.2"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "H2",
-    "example": "6.25"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "P",
-    "example": "0.6"
-   },
-   {
-    "name": "Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "P1",
-    "example": "2.3"
-   },
-   {
-    "name": "Packing Tube",
-    "symbol": "",
-    "unit": "pcs",
+    "unit": "%",
     "stat": "value",
     "conditions": "",
-    "example": "50"
+    "example": "±0.5"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "±50"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±0.5%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "0.05 to 0.1"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±10%",
+    "example": "0.05 to 0.1"
    },
    {
     "name": "Lead Material",
@@ -385,14 +177,6 @@
     "example": "0.9"
    },
    {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "%",
-    "stat": "min",
-    "conditions": "245±5°C for 3 seconds",
-    "example": "90"
-   },
-   {
     "name": "Terminal Strength",
     "symbol": "",
     "unit": "N",
@@ -401,48 +185,64 @@
     "example": "2.4"
    },
    {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "245±5°C for 3 seconds",
+    "example": "90"
+   },
+   {
     "name": "Vibration, High Frequency",
     "symbol": "",
     "unit": "g",
     "stat": "value",
-    "conditions": "",
+    "conditions": "20g peak",
     "example": "20"
-   },
-   {
-    "name": "Short Time Overload",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "2 times rated power with applied voltage not to exceed 1.5 times maximum continuous operating voltage for 5 seconds",
-    "example": "0.3"
-   },
-   {
-    "name": "Load Life",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "2,000 hours at rated power",
-    "example": "1.0"
-   },
-   {
-    "name": "Damp Heat with Load",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs “ON” and 0.5 hrs “OFF”",
-    "example": "0.5"
    },
    {
     "name": "Thermal Shock",
     "symbol": "",
-    "unit": "%",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "-65°C~150°C, 100 cycles",
-    "example": "0.3"
+    "example": "ΔR±0.3%"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs “ON” and 0.5 hrs “OFF”",
+    "example": "ΔR±0.5%"
+   },
+   {
+    "name": "Load Life",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "2,000 hours at rated power",
+    "example": "ΔR±1.0%"
+   },
+   {
+    "name": "Short Time Overload",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "2 times rated power with applied voltage not to exceed 1.5 times maximum continuous operating voltage for 5 seconds",
+    "example": "ΔR±0.3%"
+   },
+   {
+    "name": "Temperature Coefficient of Resistance (T.C.R.)",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Referenced to 25°C, ΔR taken at +105°C",
+    "example": "As Spec."
    }
   ],
-  "seconds": 121.4,
-  "tokens_in": 2768,
-  "tokens_out": 2340
+  "seconds": 109.14,
+  "tokens_in": 2868,
+  "tokens_out": 2165
  }
 }

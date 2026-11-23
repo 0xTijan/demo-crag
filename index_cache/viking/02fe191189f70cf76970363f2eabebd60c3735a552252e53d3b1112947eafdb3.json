@@ -24,9 +24,9 @@
  },
  "type": "leaded_film_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:10:46+00:00",
+  "at": "2026-11-23T08:09:42+00:00",
   "items": [
    {
     "name": "Part No.",
@@ -37,20 +37,28 @@
     "example": "0623/0932/1145/1550/1765/2485"
    },
    {
-    "name": "Operating Temp. Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 ~ +235°C"
-   },
-   {
-    "name": "Power Rating at 70°C",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
+    "example": "MOF0623, MOF0932, MOF1145, MOF1550, MOF1"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "at 70°C",
     "example": "1/4W"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +235"
    },
    {
     "name": "Max. Working Voltage",
@@ -79,13 +87,13 @@
    {
     "name": "Resistance Range",
     "symbol": "",
-    "unit": "",
+    "unit": "Ω",
     "stat": "range",
     "conditions": "",
     "example": "0.1Ω – 1MΩ"
    },
    {
-    "name": "TCR (PPM/°C)",
+    "name": "TCR",
     "symbol": "",
     "unit": "PPM/°C",
     "stat": "value",
@@ -95,7 +103,7 @@
    {
     "name": "Resistance Value",
     "symbol": "",
-    "unit": "",
+    "unit": "Ω",
     "stat": "range",
     "conditions": "",
     "example": "0.1Ω – 1MΩ"
@@ -224,13 +232,141 @@
     "name": "Resistance Tolerance",
     "symbol": "",
     "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "±5%, ±2%, ±1%"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "±5% (consult factory for ±2%, 1%)"
+    "example": "Color Code"
+   },
+   {
+    "name": "Construction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ceramic Rod, Tinned Iron Caps, Metal Oxi"
+   },
+   {
+    "name": "Flameproof Construction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL-94V0"
+   },
+   {
+    "name": "Resistance Standard Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±5%"
+   },
+   {
+    "name": "Coating",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Non-flame Paint With Sol Vent-proof"
+   },
+   {
+    "name": "Resistance Range (Standard Power Rating)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.1Ω – 1MΩ"
+   },
+   {
+    "name": "Resistance Range (High Power Rating)",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.1Ω – 1MΩ"
+   },
+   {
+    "name": "Power Rating (High Power Rating)",
+    "symbol": "",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "at 70°C",
+    "example": "1/2W"
+   },
+   {
+    "name": "Max. Working Voltage (High Power Rating)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "250"
+   },
+   {
+    "name": "Max. Overload Voltage (High Power Rating)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "400"
+   },
+   {
+    "name": "Dielectric Withstanding Voltage (High Power Rating)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
+   },
+   {
+    "name": "TCR (High Power Rating)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "±300"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "6.3±0.5"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.3±0.3"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "28±3.0"
+   },
+   {
+    "name": "Weight (g) (1000pcs)",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "156"
    }
   ],
-  "seconds": 118.96,
-  "tokens_in": 7792,
-  "tokens_out": 1027
+  "seconds": 111.13,
+  "tokens_in": 7892,
+  "tokens_out": 2212
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "power_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:50:54+00:00",
+  "at": "2026-11-23T07:49:48+00:00",
   "items": [
    {
     "name": "Absolute Maximum Ratings",
@@ -31,6 +31,14 @@
     "stat": "max",
     "conditions": "",
     "example": "350V"
+   },
+   {
+    "name": "Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "350"
    },
    {
     "name": "Dielectric Strength",
@@ -113,136 +121,88 @@
     "example": "0.333"
    },
    {
-    "name": "Resistance Tolerance",
+    "name": "Package",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "value",
-    "conditions": "±0.5%",
-    "example": "0.5"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±1%",
-    "example": "1"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±5%",
-    "example": "5"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±10%",
-    "example": "10"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "No Specified (±300~±700)",
-    "example": "300~700"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±300",
-    "example": "300"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±100 ±200 ±300",
-    "example": "100, 200, 300"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±50 ±100 ±200",
-    "example": "50, 100, 200"
-   },
-   {
-    "name": "Operating Voltage",
-    "symbol": "",
-    "unit": "V",
-    "stat": "max",
     "conditions": "",
-    "example": "350"
+    "example": "TO-263"
    },
    {
-    "name": "Short Time Overload",
+    "name": "Resistance Tolerance",
     "symbol": "",
     "unit": "%",
-    "stat": "max",
-    "conditions": "2 times rated power, applied voltage not to exceed 1.5 times maximum continuous operating voltage for 5 seconds",
-    "example": "0.3"
+    "stat": "value",
+    "conditions": "",
+    "example": "±0.5"
    },
    {
-    "name": "Load Life",
+    "name": "TCR (PPM/°C)",
     "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "2,000 hours at rated power",
-    "example": "1.0"
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "±50"
    },
    {
-    "name": "Damp Heat with Load",
+    "name": "Resistance Range",
     "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs \"ON\" and 0.5 hrs \"OFF\"",
-    "example": "0.5"
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±0.5%",
+    "example": "0.05 to 0.1"
    },
    {
-    "name": "Solderability",
+    "name": "Resistance Range",
     "symbol": "",
-    "unit": "%",
-    "stat": "min",
-    "conditions": "270±5°C for 3 seconds",
-    "example": "90"
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "0.05 to 0.1"
    },
    {
-    "name": "Temperature Cycling",
+    "name": "Resistance Range",
     "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "-65°C~+150°C, 100 cycles",
-    "example": "0.3"
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "0.05 to 0.1"
    },
    {
-    "name": "Terminal Strength",
+    "name": "Resistance Range",
     "symbol": "",
-    "unit": "N",
-    "stat": "max",
-    "conditions": "(Pull Test)2.4N",
-    "example": "2.4"
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±10%",
+    "example": "0.05 to 0.1"
    },
    {
-    "name": "Vibration, High Frequency",
+    "name": "Packaging Code",
     "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "20g peak",
-    "example": "0.2"
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "pcs",
+    "stat": "value",
+    "conditions": "Tape and Reel",
+    "example": "500"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "pcs",
+    "stat": "value",
+    "conditions": "Tube",
+    "example": "50"
    }
   ],
-  "seconds": 131.7,
-  "tokens_in": 2619,
-  "tokens_out": 1230
+  "seconds": 107.75,
+  "tokens_in": 2719,
+  "tokens_out": 1855
  }
 }

@@ -20,17 +20,33 @@
  },
  "type": "power_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:49:59+00:00",
+  "at": "2026-11-23T07:48:58+00:00",
   "items": [
    {
     "name": "Absolute Maximum Ratings",
     "symbol": "",
     "unit": "",
     "stat": "max",
-    "conditions": "Case Temperature",
-    "example": "150"
+    "conditions": "",
+    "example": "350V"
+   },
+   {
+    "name": "Dielectric Strength",
+    "symbol": "",
+    "unit": "VAC",
+    "stat": "min",
+    "conditions": "",
+    "example": "2000"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "min",
+    "conditions": "",
+    "example": "10000000000"
    },
    {
     "name": "Operating Temperature Range",
@@ -70,31 +86,7 @@
     "unit": "W",
     "stat": "max",
     "conditions": "Case Temperature 25°C",
-    "example": "50"
-   },
-   {
-    "name": "Operating Voltage",
-    "symbol": "",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "",
-    "example": "350"
-   },
-   {
-    "name": "Dielectric Strength",
-    "symbol": "",
-    "unit": "VAC",
-    "stat": "min",
-    "conditions": "",
-    "example": "2000"
-   },
-   {
-    "name": "Insulation Resistance",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "min",
-    "conditions": "",
-    "example": "10000000000"
+    "example": "2.25"
    },
    {
     "name": "Thermal Resistance",
@@ -113,116 +105,60 @@
     "example": "0.4"
    },
    {
-    "name": "Resistance Tolerance",
+    "name": "Package",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "value",
-    "conditions": "±0.5%",
-    "example": "0.5"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±1%",
-    "example": "1"
+    "conditions": "",
+    "example": "TO-220"
    },
    {
     "name": "Resistance Tolerance",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "value",
-    "conditions": "±5%",
-    "example": "5"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±10%",
-    "example": "10"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "range",
-    "conditions": "No Specified (±300~±700)",
-    "example": "300 to 700"
+    "conditions": "",
+    "example": "±0.5%"
    },
    {
     "name": "TCR (PPM/°C)",
     "symbol": "",
     "unit": "PPM/°C",
     "stat": "value",
-    "conditions": "±300",
-    "example": "300"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "range",
-    "conditions": "±50 ±100 ±200 ±300",
-    "example": "50 to 300"
+    "conditions": "Resistance Range 0.05Ω – 0.1Ω",
+    "example": "No Specified (±300~±700)"
    },
    {
     "name": "TCR (PPM/°C)",
     "symbol": "",
     "unit": "PPM/°C",
     "stat": "value",
-    "conditions": "±50",
-    "example": "50"
+    "conditions": "Resistance Range ≧ 0.1Ω - 1Ω",
+    "example": "±300"
    },
    {
     "name": "TCR (PPM/°C)",
     "symbol": "",
     "unit": "PPM/°C",
     "stat": "value",
-    "conditions": "±100",
-    "example": "100"
+    "conditions": "Resistance Range ≧ 1Ω - 5Ω",
+    "example": "±50 ±100 ±200 ±300"
    },
    {
     "name": "TCR (PPM/°C)",
     "symbol": "",
     "unit": "PPM/°C",
     "stat": "value",
-    "conditions": "±200",
-    "example": "200"
+    "conditions": "Resistance Range ≧ 5Ω - 10Ω",
+    "example": "±50 ±100 ±200 ±300"
    },
    {
-    "name": "Resistance Range",
+    "name": "TCR (PPM/°C)",
     "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±0.5%",
-    "example": "0.05 to 0.1"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±1%",
-    "example": "0.05 to 0.1"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±5%",
-    "example": "0.05 to 0.1"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±10%",
-    "example": "0.05 to 0.1"
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "Resistance Range ≧ 10Ω - 100KΩ",
+    "example": "±50 ±100 ±200"
    },
    {
     "name": "Lead Material",
@@ -273,44 +209,28 @@
     "example": "-65 to 150"
    },
    {
-    "name": "Package",
+    "name": "Short Time Overload",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "TO-220"
+    "conditions": "2 times rated power with applied voltage not to exceed 1.5 times maximum continuous operating voltage for 5 seconds",
+    "example": "ΔR±0.3%"
    },
    {
-    "name": "Mounting Type",
+    "name": "Load Life",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "Single screw mounting to heat sink"
+    "conditions": "2,000 hours at rated power",
+    "example": "ΔR±1.0%"
    },
    {
-    "name": "Case Isolation",
+    "name": "Damp Heat with Load",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "Electrically isolated"
-   },
-   {
-    "name": "Non-Inductive Design",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Yes"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "g",
-    "stat": "value",
-    "conditions": "1000pcs",
-    "example": "1290"
+    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs “ON” and 0.5 hrs “OFF”",
+    "example": "ΔR±0.5%"
    },
    {
     "name": "Dimensions",
@@ -409,24 +329,24 @@
     "example": "1.78"
    },
    {
-    "name": "Part Number",
+    "name": "Weight (g) (1000pcs)",
     "symbol": "",
-    "unit": "",
+    "unit": "g",
     "stat": "value",
-    "conditions": "Hole",
-    "example": "H"
+    "conditions": "",
+    "example": "1290"
    },
    {
-    "name": "Part Number",
+    "name": "Packaging",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "No Hole",
-    "example": "No Hole"
+    "conditions": "",
+    "example": "Tube"
    }
   ],
-  "seconds": 132.05,
-  "tokens_in": 2847,
-  "tokens_out": 2749
+  "seconds": 96.47,
+  "tokens_in": 2947,
+  "tokens_out": 1902
  }
 }

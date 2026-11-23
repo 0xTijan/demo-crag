@@ -20,9 +20,9 @@
  },
  "type": "igbt_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:20:33+00:00",
+  "at": "2026-11-23T08:57:25+00:00",
   "items": [
    {
     "name": "Absolute Maximum Ratings (TJ=25°C unless otherwise noted)",
@@ -30,7 +30,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": ""
+    "example": "Absolute Maximum Ratings (TJ=25°C unless"
    },
    {
     "name": "Collector-Emitter Voltage",
@@ -118,7 +118,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to +175"
+    "example": "-55 to 175"
    },
    {
     "name": "Thermal Characteristics",
@@ -126,7 +126,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": ""
+    "example": "Thermal Characteristics"
    },
    {
     "name": "Thermal Resistance Junction to Case for IGBT",
@@ -158,7 +158,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": ""
+    "example": "Electrical Characteristics (TJ =25°C unl"
    },
    {
     "name": "Collector-Emitter Breakdown Voltage",
@@ -196,9 +196,9 @@
     "name": "Collector-Emitter Saturation Voltage",
     "symbol": "VCE(sat)",
     "unit": "V",
-    "stat": "max",
+    "stat": "typ",
     "conditions": "VGE=15V, IC=75A",
-    "example": "1.8"
+    "example": "1.63"
    },
    {
     "name": "Total Gate Charge",
@@ -243,7 +243,7 @@
    {
     "name": "Turn-off Delay Time",
     "symbol": "td(off)",
-    "unit": "",
+    "unit": "ns",
     "stat": "typ",
     "conditions": "VCE=400V, IC=75A, VGE=15V, RG=10Ω",
     "example": "220"
@@ -286,7 +286,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": ""
+    "example": "Reverse Diode Characteristics (TJ =25°C "
    },
    {
     "name": "Diode Forward Voltage",
@@ -318,7 +318,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": ""
+    "example": "Package Outline Dimensions(Unit: millime"
    },
    {
     "name": "TO-247AD",
@@ -329,176 +329,16 @@
     "example": "TO-247AD"
    },
    {
-    "name": "A",
+    "name": "Package",
     "symbol": "",
-    "unit": "mm",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "4.7 to 5.2"
-   },
-   {
-    "name": "A1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.3 to 2.5"
-   },
-   {
-    "name": "A2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.9 to 2.1"
-   },
-   {
-    "name": "A3",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "15.48 to 16.28"
-   },
-   {
-    "name": "A4",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "13.2 to 13.8"
-   },
-   {
-    "name": "B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "20.8 to 21.1"
-   },
-   {
-    "name": "B1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "19.8 to 20.32"
-   },
-   {
-    "name": "C",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.5 to 0.7"
-   },
-   {
-    "name": "C1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "5.34 to 5.54"
-   },
-   {
-    "name": "C2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.8 to 2.2"
-   },
-   {
-    "name": "C3",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.1 to 1.3"
-   },
-   {
-    "name": "C4",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "6.04 to 6.30"
-   },
-   {
-    "name": "C5",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.8 to 3.2"
-   },
-   {
-    "name": "D",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "3.5 to 3.7"
-   },
-   {
-    "name": "D1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "7 to 7.4"
-   },
-   {
-    "name": "E",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.5 to 1.7"
-   },
-   {
-    "name": "E1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "16.25 to 16.85"
-   },
-   {
-    "name": "E2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "4.9 to 5.1"
-   },
-   {
-    "name": "E3",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.95 to 1.35"
-   },
-   {
-    "name": "E4",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "4.17 to 4.5"
-   },
-   {
-    "name": "Z",
-    "symbol": "",
-    "unit": "°",
-    "stat": "range",
-    "conditions": "",
-    "example": "30°"
+    "example": "TO-247AD"
    }
   ],
-  "seconds": 71.24,
-  "tokens_in": 2367,
-  "tokens_out": 2836
+  "seconds": 93.72,
+  "tokens_in": 2467,
+  "tokens_out": 2077
  }
 }

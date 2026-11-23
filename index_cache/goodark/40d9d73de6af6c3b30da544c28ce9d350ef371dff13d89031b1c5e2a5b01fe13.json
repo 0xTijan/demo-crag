@@ -20,9 +20,9 @@
  },
  "type": "esd_protection_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T11:11:49+00:00",
+  "at": "2026-11-23T06:17:47+00:00",
   "items": [
    {
     "name": "Peak Pulse Power (TP=8/20μS)",
@@ -108,13 +108,21 @@
     "name": "Junction Capacitance",
     "symbol": "CJ",
     "unit": "pF",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "VR=0V,f=1MHz",
-    "example": "15"
+    "example": "15 to 18"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DFN1006 plastic package"
    }
   ],
-  "seconds": 76.27,
-  "tokens_in": 1023,
-  "tokens_out": 551
+  "seconds": 70.4,
+  "tokens_in": 1123,
+  "tokens_out": 592
  }
 }

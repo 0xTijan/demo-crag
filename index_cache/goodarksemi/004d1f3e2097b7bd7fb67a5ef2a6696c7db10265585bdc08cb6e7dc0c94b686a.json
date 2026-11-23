@@ -24,9 +24,9 @@
  },
  "type": "fast_recovery_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:08:55+00:00",
+  "at": "2026-11-23T06:14:08+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -57,7 +57,7 @@
     "symbol": "I_F(AV)",
     "unit": "Amps",
     "stat": "max",
-    "conditions": "0.375\"(9.5mm) lead length T=50°C A",
+    "conditions": "0.375\"(9.5mm) lead length T=50°C",
     "example": "2.0"
    },
    {
@@ -106,7 +106,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "-55 to +150"
    },
    {
     "name": "Storage temperature range",
@@ -114,67 +114,19 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "-55 to +150"
    },
    {
-    "name": "Case",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Molded plastic DO-204AC (DO-15)"
-   },
-   {
-    "name": "Epoxy",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "UL 94V-O rate flame retardant"
-   },
-   {
-    "name": "Lead",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Axial leads, solderable per MIL-STD-202,"
-   },
-   {
-    "name": "Polarity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Color band denotes cathode end"
-   },
-   {
-    "name": "Mounting position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "gram",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.395"
-   },
-   {
-    "name": "Part number options",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "DR200G, DR201G, DR202G, DR204G, DR206G, "
+    "example": "DO-204AC (DO-15)"
    }
   ],
-  "seconds": 47.49,
-  "tokens_in": 1684,
-  "tokens_out": 852
+  "seconds": 31.35,
+  "tokens_in": 1784,
+  "tokens_out": 580
  }
 }

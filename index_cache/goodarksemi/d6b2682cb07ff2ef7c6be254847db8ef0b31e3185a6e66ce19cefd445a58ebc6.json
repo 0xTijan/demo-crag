@@ -20,9 +20,9 @@
  },
  "type": "three_axis_accelerometer",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:30:10+00:00",
+  "at": "2026-11-23T09:05:01+00:00",
   "items": [
    {
     "name": "Measurement Range",
@@ -60,7 +60,7 @@
     "name": "Sensitivity",
     "symbol": "So",
     "unit": "LSB/g",
-    "stat": "value",
+    "stat": "range",
     "conditions": "FS bit set to 00",
     "example": "4096"
    },
@@ -68,7 +68,7 @@
     "name": "Sensitivity",
     "symbol": "So",
     "unit": "LSB/g",
-    "stat": "value",
+    "stat": "range",
     "conditions": "FS bit set to 01",
     "example": "2048"
    },
@@ -76,7 +76,7 @@
     "name": "Sensitivity",
     "symbol": "So",
     "unit": "LSB/g",
-    "stat": "value",
+    "stat": "range",
     "conditions": "FS bit set to 10",
     "example": "1024"
    },
@@ -84,7 +84,7 @@
     "name": "Sensitivity",
     "symbol": "So",
     "unit": "LSB/g",
-    "stat": "value",
+    "stat": "range",
     "conditions": "FS bit set to 11",
     "example": "512"
    },
@@ -92,7 +92,7 @@
     "name": "Sensitivity Change vs. Temperature",
     "symbol": "TCSo",
     "unit": "%/°C",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "FS bit set to 00",
     "example": "0.01"
    },
@@ -100,7 +100,7 @@
     "name": "Typical Zero-g Level Offset Accuracy",
     "symbol": "Tyoff",
     "unit": "mg",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "",
     "example": "70"
    },
@@ -124,7 +124,7 @@
     "name": "Self-Test Output Change",
     "symbol": "Vst",
     "unit": "mg",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "X: FS bit set to 00",
     "example": "400"
    },
@@ -132,7 +132,7 @@
     "name": "Self-Test Output Change",
     "symbol": "Vst",
     "unit": "mg",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "Y: FS bit set to 00",
     "example": "400"
    },
@@ -140,7 +140,7 @@
     "name": "Self-Test Output Change",
     "symbol": "Vst",
     "unit": "mg",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "Z: FS bit set to 00",
     "example": "400"
    },
@@ -172,7 +172,7 @@
     "name": "Current Consumption in Normal Mode",
     "symbol": "I DD",
     "unit": "uA",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "Top=25°C, ODR=1kHz",
     "example": "180"
    },
@@ -180,7 +180,7 @@
     "name": "Current Consumption in Low Power Mode",
     "symbol": "I DD_lP",
     "unit": "uA",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "Top=25°C, ODR=62.5Hz, BW=500Hz",
     "example": "40"
    },
@@ -188,7 +188,7 @@
     "name": "Current Consumption in Suspend Mode",
     "symbol": "I DD_SM",
     "unit": "uA",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "Top=25°C",
     "example": "0.7"
    },
@@ -244,7 +244,7 @@
     "name": "Wake-up time",
     "symbol": "twu",
     "unit": "ms",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "From Stand-by",
     "example": "1"
    },
@@ -252,7 +252,7 @@
     "name": "Start-up time",
     "symbol": "tsu",
     "unit": "ms",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "From Power-off",
     "example": "3"
    },
@@ -260,13 +260,13 @@
     "name": "Power Supply Rejection Rate",
     "symbol": "PSRR",
     "unit": "mg/V",
-    "stat": "value",
+    "stat": "max",
     "conditions": "Top=25°C",
     "example": "20"
    },
    {
     "name": "Storage Temperature",
-    "symbol": "",
+    "symbol": "Storage Temperature",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -274,7 +274,7 @@
    },
    {
     "name": "Supply Voltage",
-    "symbol": "",
+    "symbol": "Supply Voltage",
     "unit": "V",
     "stat": "range",
     "conditions": "Supply Pins",
@@ -282,7 +282,7 @@
    },
    {
     "name": "Supply Voltage",
-    "symbol": "",
+    "symbol": "Supply Voltage",
     "unit": "V",
     "stat": "range",
     "conditions": "Logic Pins",
@@ -290,17 +290,17 @@
    },
    {
     "name": "ESD Rating",
-    "symbol": "",
+    "symbol": "ESD Rating",
     "unit": "kV",
-    "stat": "value",
+    "stat": "max",
     "conditions": "HMB, R=1.5k,C=100pF",
     "example": "±2"
    },
    {
     "name": "Mechanical Shock",
-    "symbol": "",
+    "symbol": "Mechanical Shock",
     "unit": "g",
-    "stat": "value",
+    "stat": "max",
     "conditions": "Duration<200us",
     "example": "10,000"
    },
@@ -310,51 +310,11 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "LGA-10"
-   },
-   {
-    "name": "Package Size",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "3x3x0.9"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "10"
-   },
-   {
-    "name": "Mounting Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "LGA"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-40 to 85"
-   },
-   {
-    "name": "Environmental Qualification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS"
+    "example": "LGA-10 3 x 3 x 0.9mm"
    }
   ],
-  "seconds": 54.36,
-  "tokens_in": 2745,
-  "tokens_out": 1898
+  "seconds": 74.8,
+  "tokens_in": 2845,
+  "tokens_out": 1749
  }
 }

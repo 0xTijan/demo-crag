@@ -24,9 +24,9 @@
  },
  "type": "schottky_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:51:22+00:00",
+  "at": "2026-11-23T08:34:56+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -101,38 +101,6 @@
     "example": "-55 to +150"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Molded plastic body over passivated junc"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "plated leads solderable per MIL-STD-750 "
-   },
-   {
-    "name": "Mounting Position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "g",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.22"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
@@ -141,8 +109,8 @@
     "example": "TO-269AA (MBS)"
    }
   ],
-  "seconds": 48.59,
-  "tokens_in": 1132,
-  "tokens_out": 642
+  "seconds": 38.38,
+  "tokens_in": 1232,
+  "tokens_out": 487
  }
 }

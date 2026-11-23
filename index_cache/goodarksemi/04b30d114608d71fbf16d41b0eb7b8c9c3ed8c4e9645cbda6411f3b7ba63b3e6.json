@@ -24,9 +24,9 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:49:22+00:00",
+  "at": "2026-11-23T05:49:35+00:00",
   "items": [
    {
     "name": "Repetitive Peak Reverse Voltage",
@@ -109,8 +109,8 @@
     "example": "10"
    }
   ],
-  "seconds": 42.64,
-  "tokens_in": 1680,
+  "seconds": 41.29,
+  "tokens_in": 1780,
   "tokens_out": 507
  }
 }

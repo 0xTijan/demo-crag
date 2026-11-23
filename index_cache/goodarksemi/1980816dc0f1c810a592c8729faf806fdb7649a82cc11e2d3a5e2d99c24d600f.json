@@ -24,16 +24,16 @@
  },
  "type": "tvs_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:21:10+00:00",
+  "at": "2026-11-23T06:32:19+00:00",
   "items": [
    {
     "name": "Peak Power Dissipation with a 10/1000μs Waveform",
     "symbol": "P_PPM",
     "unit": "W",
     "stat": "max",
-    "conditions": "",
+    "conditions": "10/1000μs Waveform",
     "example": "200"
    },
    {
@@ -41,15 +41,15 @@
     "symbol": "I_PPM",
     "unit": "A",
     "stat": "value",
-    "conditions": "",
+    "conditions": "10/1000μs Waveform",
     "example": "Next Page"
    },
    {
-    "name": "Power Dissipation, on Infinite Heat Sink, T =75°C L",
+    "name": "Power Dissipation, on Infinite Heat Sink, T=75°C",
     "symbol": "P_D",
     "unit": "W",
     "stat": "max",
-    "conditions": "",
+    "conditions": "T=75°C",
     "example": "0.4"
    },
    {
@@ -77,20 +77,12 @@
     "example": "-55 to +150"
    },
    {
-    "name": "Breakdown Voltage V @I_BR",
+    "name": "Breakdown Voltage",
     "symbol": "V",
     "unit": "V",
     "stat": "range",
-    "conditions": "I_1T=10mA",
+    "conditions": "I_BR=10mA",
     "example": "6.40 to 7.07"
-   },
-   {
-    "name": "Breakdown Voltage V @I_BR",
-    "symbol": "V",
-    "unit": "V",
-    "stat": "range",
-    "conditions": "I_1T=1mA",
-    "example": "6.67 to 7.37"
    },
    {
     "name": "Test Current",
@@ -109,7 +101,7 @@
     "example": "5.0"
    },
    {
-    "name": "Max. Reverse Leakage @V_RWM",
+    "name": "Max. Reverse Leakage",
     "symbol": "I_2R",
     "unit": "uA",
     "stat": "max",
@@ -125,16 +117,32 @@
     "example": "21.74"
    },
    {
-    "name": "Max. Clamping Voltage @I_PP",
+    "name": "Max. Clamping Voltage",
     "symbol": "V_C",
     "unit": "V",
     "stat": "max",
     "conditions": "",
     "example": "9.2"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-123FL"
+   },
+   {
+    "name": "Bi-directional",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Bi-directional"
    }
   ],
-  "seconds": 48.67,
-  "tokens_in": 3823,
-  "tokens_out": 644
+  "seconds": 46.87,
+  "tokens_in": 3923,
+  "tokens_out": 673
  }
 }

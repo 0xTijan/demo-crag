@@ -20,9 +20,9 @@
  },
  "type": "mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:53:43+00:00",
+  "at": "2026-11-23T05:57:52+00:00",
   "items": [
    {
     "name": "Drain Source Voltage",
@@ -287,34 +287,10 @@
     "stat": "value",
     "conditions": "",
     "example": "PDFN5060"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
    }
   ],
-  "seconds": 128.1,
-  "tokens_in": 2717,
-  "tokens_out": 1901
+  "seconds": 105.09,
+  "tokens_in": 2817,
+  "tokens_out": 1792
  }
 }

@@ -20,17 +20,33 @@
  },
  "type": "power_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:51:29+00:00",
+  "at": "2026-11-23T07:50:18+00:00",
   "items": [
    {
-    "name": "Absolute Maximum Ratings",
+    "name": "Product",
     "symbol": "",
     "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-263 SMD Power Resistors – STR35 Serie"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "35W"
+   },
+   {
+    "name": "Operating Voltage",
+    "symbol": "",
+    "unit": "V",
     "stat": "max",
     "conditions": "",
-    "example": "350V"
+    "example": "350"
    },
    {
     "name": "Dielectric Strength",
@@ -46,7 +62,7 @@
     "unit": "Ω",
     "stat": "min",
     "conditions": "",
-    "example": "10G"
+    "example": "10000000000"
    },
    {
     "name": "Operating Temperature Range",
@@ -57,121 +73,17 @@
     "example": "-65 to 150"
    },
    {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±0.5%",
-    "example": "D"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±1%",
-    "example": "F"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±5%",
-    "example": "J"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "±10%",
-    "example": "K"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±50",
-    "example": "D"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±100",
-    "example": "E"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±200",
-    "example": "F"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "±300",
-    "example": "G"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "No Specified",
-    "example": "-"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±0.5%",
-    "example": "0.05Ω - 0.1Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±1%",
-    "example": "0.1Ω - 1Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±5%",
-    "example": "0.1Ω - 1Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "range",
-    "conditions": "±10%",
-    "example": "0.1Ω - 1Ω"
-   },
-   {
-    "name": "Temperature Coefficient of Resistance (T.C.R.)",
-    "symbol": "",
+    "name": "Temperature Coefficient of Resistance",
+    "symbol": "TCR",
     "unit": "PPM/°C",
     "stat": "value",
     "conditions": "Referenced to 25°C, ∆R taken at +105°C",
-    "example": "As Spec."
+    "example": "±50, ±100, ±200, ±300"
    },
    {
     "name": "Short Time Overload",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "value",
     "conditions": "2 times rated power with applied voltage not to exceed 1.5 times maximum continuous operating voltage for 5 seconds",
     "example": "∆R±0.3%"
@@ -179,7 +91,7 @@
    {
     "name": "Load Life",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "value",
     "conditions": "2,000 hours at rated power",
     "example": "∆R±1.0%"
@@ -187,7 +99,7 @@
    {
     "name": "Damp Heat with Load",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "value",
     "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs “ON” and 0.5 hr “OFF”",
     "example": "∆R±0.5%"
@@ -195,15 +107,15 @@
    {
     "name": "Solderability",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "min",
     "conditions": "245±5°C for 3 seconds",
-    "example": "90"
+    "example": "90%"
    },
    {
     "name": "Temperature Cycling",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "value",
     "conditions": "-65°C~+150°C, 1000 cycles",
     "example": "∆R±0.3%"
@@ -211,15 +123,15 @@
    {
     "name": "Terminal Strength",
     "symbol": "",
-    "unit": "%",
+    "unit": "N",
     "stat": "value",
     "conditions": "(Pull Test)2.4N",
-    "example": "∆R±0.2%"
+    "example": "2.4"
    },
    {
     "name": "Vibration, High Frequency",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "value",
     "conditions": "20g peak",
     "example": "∆R±0.2%"
@@ -241,7 +153,7 @@
     "example": "0.9"
    },
    {
-    "name": "Power Rating (Without Heat Sink)",
+    "name": "Rated Power (Without Heat Sink)",
     "symbol": "",
     "unit": "W",
     "stat": "max",
@@ -249,36 +161,68 @@
     "example": "2.5"
    },
    {
-    "name": "Case Temperature",
+    "name": "Package",
     "symbol": "",
-    "unit": "°C",
-    "stat": "value",
-    "conditions": "The Case Temperature Measurement must be made with a Thermocouple Contacting the Center of the Component mounted on the ",
-    "example": "To be used for the Definition of the App"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "25±5"
+    "example": "TO-263"
    },
    {
-    "name": "Storage Humidity",
+    "name": "Resistance Tolerance",
     "symbol": "",
-    "unit": "%",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "75"
+    "example": "±0.5%, ±1%, ±5%, ±10%"
+   },
+   {
+    "name": "TCR (PPM/°C)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "±50, ±100, ±200, ±300"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±0.5%",
+    "example": "0.05Ω - 0.1Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "≧ 0.1Ω - 1Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "≧ 0.1Ω - 1Ω"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±10%",
+    "example": "≧ 0.1Ω - 1Ω"
    },
    {
     "name": "Packaging Code",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "T:Taping Reel D:Tube",
-    "example": "T"
+    "conditions": "",
+    "example": "T:Taping Reel D:Tube"
    },
    {
     "name": "Reel Diameter",
@@ -289,7 +233,7 @@
     "example": "13"
    },
    {
-    "name": "Reel Width",
+    "name": "ΦA",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
@@ -297,7 +241,7 @@
     "example": "330"
    },
    {
-    "name": "Reel Inner Diameter",
+    "name": "ΦB",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
@@ -305,7 +249,7 @@
     "example": "100"
    },
    {
-    "name": "Reel Outer Diameter",
+    "name": "ΦC",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
@@ -313,7 +257,7 @@
     "example": "13.5"
    },
    {
-    "name": "Tape Width",
+    "name": "W",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
@@ -321,7 +265,7 @@
     "example": "25.4"
    },
    {
-    "name": "Tape Thickness",
+    "name": "T",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
@@ -329,15 +273,15 @@
     "example": "30"
    },
    {
-    "name": "Tape A",
+    "name": "A",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "10.8"
+    "example": "10.80"
    },
    {
-    "name": "Tape B",
+    "name": "B",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
@@ -345,15 +289,7 @@
     "example": "16.13"
    },
    {
-    "name": "Tape W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "24"
-   },
-   {
-    "name": "Tape E",
+    "name": "E",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
@@ -361,7 +297,7 @@
     "example": "1.75"
    },
    {
-    "name": "Tape F",
+    "name": "F",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
@@ -369,31 +305,31 @@
     "example": "11.5"
    },
    {
-    "name": "Tape P0",
+    "name": "P 0",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "4"
+    "example": "4.0"
    },
    {
-    "name": "Tape P1",
+    "name": "P 1",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "16"
+    "example": "16.0"
    },
    {
-    "name": "Tape P2",
+    "name": "P 2",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "2"
+    "example": "2.0"
    },
    {
-    "name": "Tape ΦD0",
+    "name": "ΦD 0",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
@@ -401,32 +337,24 @@
     "example": "1.55"
    },
    {
-    "name": "Tape T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "5.25"
-   },
-   {
-    "name": "Packaging Quantity (Taping Reel)",
+    "name": "Packaging Quantity",
     "symbol": "",
     "unit": "pcs",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Reel",
     "example": "500"
    },
    {
-    "name": "Packaging Quantity (Tube)",
+    "name": "Packaging Quantity",
     "symbol": "",
     "unit": "pcs",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Tube",
     "example": "50"
    }
   ],
-  "seconds": 126.94,
-  "tokens_in": 2502,
-  "tokens_out": 2534
+  "seconds": 105.83,
+  "tokens_in": 2602,
+  "tokens_out": 2201
  }
 }

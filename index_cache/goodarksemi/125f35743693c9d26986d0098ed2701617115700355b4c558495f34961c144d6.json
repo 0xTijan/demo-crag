@@ -20,16 +20,16 @@
  },
  "type": "pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:32:49+00:00",
+  "at": "2026-11-23T06:46:09+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
     "symbol": "V CBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "V CBO",
     "example": "-100"
    },
    {
@@ -37,7 +37,7 @@
     "symbol": "V CEO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "V CEO",
     "example": "-60"
    },
    {
@@ -45,7 +45,7 @@
     "symbol": "V EBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "V EBO",
     "example": "-7"
    },
    {
@@ -53,7 +53,7 @@
     "symbol": "I C",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "I C",
     "example": "-6"
    },
    {
@@ -61,7 +61,7 @@
     "symbol": "P C",
     "unit": "W",
     "stat": "max",
-    "conditions": "1",
+    "conditions": "P C",
     "example": "2"
    },
    {
@@ -69,7 +69,7 @@
     "symbol": "R θJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "1",
+    "conditions": "R θJA",
     "example": "62.5"
    },
    {
@@ -77,7 +77,7 @@
     "symbol": "R θJC",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "2",
+    "conditions": "R θJC",
     "example": "15"
    },
    {
@@ -139,7 +139,7 @@
    {
     "name": "DC Current Gain",
     "symbol": "h FE",
-    "unit": "-",
+    "unit": "",
     "stat": "min",
     "conditions": "V =-1V, I =-10mA CE C",
     "example": "100"
@@ -147,7 +147,7 @@
    {
     "name": "DC Current Gain",
     "symbol": "h FE",
-    "unit": "-",
+    "unit": "",
     "stat": "min",
     "conditions": "V =-1V, I =-2A CE C",
     "example": "100"
@@ -155,15 +155,7 @@
    {
     "name": "DC Current Gain",
     "symbol": "h FE",
-    "unit": "-",
-    "stat": "max",
-    "conditions": "V =-1V, I =-2A CE C",
-    "example": "300"
-   },
-   {
-    "name": "DC Current Gain",
-    "symbol": "h FE",
-    "unit": "-",
+    "unit": "",
     "stat": "min",
     "conditions": "V =-1V, I =-5A CE C",
     "example": "45"
@@ -171,7 +163,7 @@
    {
     "name": "DC Current Gain",
     "symbol": "h FE",
-    "unit": "-",
+    "unit": "",
     "stat": "min",
     "conditions": "V =-1V, I =-10A CE C",
     "example": "10"
@@ -239,10 +231,18 @@
     "stat": "typ",
     "conditions": "V =-10V, I =-0.1A, CE C f=50MHz",
     "example": "30"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-223"
    }
   ],
-  "seconds": 69.58,
-  "tokens_in": 1446,
-  "tokens_out": 1409
+  "seconds": 61.31,
+  "tokens_in": 1546,
+  "tokens_out": 1414
  }
 }

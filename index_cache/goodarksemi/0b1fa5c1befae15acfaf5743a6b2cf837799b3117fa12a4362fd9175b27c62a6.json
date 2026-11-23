@@ -24,9 +24,9 @@
  },
  "type": "bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:23:44+00:00",
+  "at": "2026-11-23T06:24:56+00:00",
   "items": [
    {
     "name": "Maximum Recurrent Peak Reverse Voltage",
@@ -126,15 +126,23 @@
    },
    {
     "name": "Operating Junction and Storage Temperature Range",
-    "symbol": "",
+    "symbol": "T T J, STG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to +150"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ABS"
    }
   ],
-  "seconds": 47.41,
-  "tokens_in": 2057,
-  "tokens_out": 632
+  "seconds": 23.78,
+  "tokens_in": 2157,
+  "tokens_out": 669
  }
 }

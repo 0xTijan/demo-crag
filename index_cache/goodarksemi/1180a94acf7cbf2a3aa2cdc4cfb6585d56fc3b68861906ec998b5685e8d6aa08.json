@@ -20,9 +20,9 @@
  },
  "type": "complementary_npn_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:04:47+00:00",
+  "at": "2026-11-23T08:04:07+00:00",
   "items": [
    {
     "name": "Collector to Base Voltage",
@@ -423,10 +423,18 @@
     "stat": "max",
     "conditions": "V =-6V, I =-150mA, CC C I =I =-15mA B1 B2",
     "example": "30"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "MMDT2227M"
    }
   ],
-  "seconds": 176.09,
-  "tokens_in": 2493,
-  "tokens_out": 2939
+  "seconds": 168.82,
+  "tokens_in": 2593,
+  "tokens_out": 2976
  }
 }

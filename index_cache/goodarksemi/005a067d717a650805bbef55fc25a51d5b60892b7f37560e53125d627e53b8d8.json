@@ -20,9 +20,9 @@
  },
  "type": "npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:21:23+00:00",
+  "at": "2026-11-23T06:23:08+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -209,22 +209,6 @@
     "example": "TO-92"
    },
    {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
-   },
-   {
     "name": "Marking",
     "symbol": "",
     "unit": "",
@@ -246,11 +230,11 @@
     "unit": "Pcs",
     "stat": "value",
     "conditions": "",
-    "example": "2000"
+    "example": "2,000"
    }
   ],
-  "seconds": 60.26,
-  "tokens_in": 1827,
-  "tokens_out": 1390
+  "seconds": 60.45,
+  "tokens_in": 1927,
+  "tokens_out": 1319
  }
 }

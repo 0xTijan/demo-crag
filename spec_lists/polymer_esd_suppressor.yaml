@@ -11,10 +11,11 @@ type: polymer_esd_suppressor
 name: polymer ESD suppressor
 version: 1
 status: draft
-must_match: []
+must_match:
+- package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-22T13:06:49+00:00'
+  at: '2026-11-23T07:18:08+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -29,21 +30,32 @@ drafted:
   - goodarksemi/gspsm0402v6-3_ce960d4b.md
   - goodarksemi/mlsep30a-0603_ed1c0d80.md
 specs:
-  t_oper_range:
-    label: Operating Temperature range
-    unit: °C
-    stat: range
+  v_air_max:
+    label: Air Discharge Voltage max
+    unit: V
+    stat: max
     conditions: null
-    rule: contains
+    rule: '>='
     critical: true
     aliases:
-    - Maximum Operating Temperature
-    - TOPER
-    - T OPER
-    - Maximum Operating Temperature Range
+    - Maximum Air Discharge Voltage Per IEC61000-4-2
+    - '-'
+    - Maximum Air Discharge Voltage
     found_in: 10/10
-  vds_max:
-    label: VDS max
+  v_contact_max:
+    label: Contact Discharge Voltage max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum Contact Discharge Voltage Per IEC61000-4-2
+    - '-'
+    - Maximum Contact Discharge Voltage
+    found_in: 10/10
+  vr_max:
+    label: Rated Voltage max
     unit: V
     stat: max
     conditions: null
@@ -53,18 +65,44 @@ specs:
     - Rated Voltage
     - VR
     - V R
-    - Maximum Contact Discharge Voltage Per IEC61000-4-2
-    - '-'
-    - Maximum Air Discharge Voltage Per IEC61000-4-2
+    - Trigger Voltage
+    - V T
     - Continuous Operating Voltage
     - V DC
     found_in: 10/10
+  cp_typ:
+    label: Capacitance typ
+    unit: pF
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Capacitance
+    - CP
+    - C P
+    - Package
+    found_in: 10/10
+  il_range:
+    label: Leakage Current range
+    unit: uA
+    stat: range
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Leakage Current
+    - IL
+    - I L
+    - Capacitance
+    - C P
+    found_in: 10/10
   t_solder_max:
-    label: Soldering Temperature max
+    label: Lead Temperature max
     unit: °C
     stat: max
-    conditions: 10s
-    rule: <=
+    conditions: null
+    rule: '>='
     critical: false
     aliases:
     - Maximum Lead Temperature for Soldering During 10s
@@ -73,7 +111,20 @@ specs:
     - Rated Voltage
     - V R
     found_in: 10/10
-  t_stg_range:
+  toper_range:
+    label: Operating Temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Maximum Operating Temperature
+    - TOPER
+    - T OPER
+    - Maximum Operating Temperature Range
+    found_in: 10/10
+  tstg_range:
     label: Storage Temperature range
     unit: °C
     stat: range
@@ -86,92 +137,34 @@ specs:
     - T STG
     - Maximum Storage Temperature Range
     found_in: 10/10
-  v_clamp_typ:
+  vc_typ:
     label: Clamping Voltage typ
     unit: V
     stat: typ
-    conditions: IEC61000-4-2 8KV contact discharge
+    conditions: null
     rule: ≈
     critical: false
     aliases:
     - Clamping Voltage
     - VC
     - V C
+    - Leakage Current
+    - I L
     found_in: 10/10
-  v_trigger_typ:
+  vt_typ:
     label: Trigger Voltage typ
     unit: V
     stat: typ
-    conditions: IEC61000-4-2 8KV contact discharge
+    conditions: null
     rule: ≈
     critical: false
     aliases:
     - Trigger Voltage
     - VT
     - V T
+    - Clamping Voltage
+    - V C
     found_in: 10/10
-  v_air_max:
-    label: Air Discharge Voltage max
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Maximum Air Discharge Voltage Per IEC61000-4-2
-    - '-'
-    - Maximum Air Discharge Voltage
-    found_in: 9/10
-  v_contact_max:
-    label: Contact Discharge Voltage max
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Maximum Contact Discharge Voltage Per IEC61000-4-2
-    - '-'
-    - Maximum Contact Discharge Voltage
-    found_in: 9/10
-  c_cap_typ:
-    label: Capacitance typ
-    unit: pF
-    stat: typ
-    conditions: VR=0V, f=1MHz
-    rule: ≈
-    critical: false
-    aliases:
-    - Capacitance
-    - CP
-    - C P
-    found_in: 9/10
-  esd_pulse_min:
-    label: ESD Pulse Withstand min
-    unit: pulses
-    stat: min
-    conditions: IEC61000-4-2 8KV contact discharge
-    rule: '>='
-    critical: false
-    aliases:
-    - ESD Pulse Withstand
-    - '-'
-    - Capacitance
-    - CP
-    - Pulses
-    found_in: 7/10
-  i_leak_range:
-    label: Leakage Current range
-    unit: uA
-    stat: range
-    conditions: DC [VR]V applied
-    rule: <=
-    critical: false
-    aliases:
-    - Leakage Current
-    - I L
-    found_in: 5/10
-rare_specs:
   package:
     label: Package
     unit: null
@@ -180,59 +173,18 @@ rare_specs:
     rule: '='
     critical: true
     aliases:
-    - Case
     - Package
-    found_in: 2/10
-  carrier:
-    label: Carrier
-    unit: null
-    stat: value
+    found_in: 8/10
+  esd_pulse_min:
+    label: ESD Pulse Withstand min
+    unit: pulses
+    stat: min
     conditions: null
-    rule: info
+    rule: '>='
     critical: false
     aliases:
-    - Carrier
     - ESD Pulse Withstand
+    - '-'
     - Pulses
-    found_in: 2/10
-  hsf_status:
-    label: HSF Status
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - HSF Status
-    - D
-    found_in: 2/10
-  i_leak_typ:
-    label: Leakage Current typ
-    unit: nA
-    stat: typ
-    conditions: DC [VR]V applied
-    rule: <=
-    critical: false
-    aliases:
-    - Leakage Current
-    - IL
-    found_in: 1/10
-  quantity:
-    label: Quantity
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Quantity
-    found_in: 1/10
-  case:
-    label: Case
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases: []
-    found_in: 0/10
+    found_in: 6/10
+rare_specs: {}

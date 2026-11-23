@@ -24,9 +24,9 @@
  },
  "type": "fast_recovery_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:09:48+00:00",
+  "at": "2026-11-23T06:15:11+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -70,7 +70,7 @@
    },
    {
     "name": "Operating junction temperature range",
-    "symbol": "TJ",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -78,7 +78,7 @@
    },
    {
     "name": "Storage temperature range",
-    "symbol": "TSTG",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -149,8 +149,8 @@
     "example": "50"
    }
   ],
-  "seconds": 43.38,
-  "tokens_in": 1529,
-  "tokens_out": 716
+  "seconds": 43.37,
+  "tokens_in": 1629,
+  "tokens_out": 697
  }
 }

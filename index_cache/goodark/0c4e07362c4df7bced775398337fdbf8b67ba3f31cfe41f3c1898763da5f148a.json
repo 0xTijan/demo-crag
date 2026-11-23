@@ -20,13 +20,13 @@
  },
  "type": "switching_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:28:28+00:00",
+  "at": "2026-11-23T06:41:46+00:00",
   "items": [
    {
     "name": "Reverse voltage",
-    "symbol": "V R",
+    "symbol": "VR",
     "unit": "V",
     "stat": "max",
     "conditions": "",
@@ -34,7 +34,7 @@
    },
    {
     "name": "Peak reverse voltage",
-    "symbol": "VR M",
+    "symbol": "VRM",
     "unit": "V",
     "stat": "max",
     "conditions": "",
@@ -43,7 +43,7 @@
    {
     "name": "Power dissipation",
     "symbol": "PD",
-    "unit": "m W",
+    "unit": "mW",
     "stat": "max",
     "conditions": "",
     "example": "500"
@@ -58,15 +58,15 @@
    },
    {
     "name": "Storage temperature range",
-    "symbol": "",
+    "symbol": "TS",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
-    "example": "-55-+ 150"
+    "example": "-55-+150"
    },
    {
     "name": "Working Inverse voltage",
-    "symbol": "W IV",
+    "symbol": "WIV",
     "unit": "V",
     "stat": "max",
     "conditions": "",
@@ -74,7 +74,7 @@
    },
    {
     "name": "Average rectified current",
-    "symbol": "I O",
+    "symbol": "IO",
     "unit": "mA",
     "stat": "max",
     "conditions": "",
@@ -82,18 +82,18 @@
    },
    {
     "name": "Non-repetitive peak forward current",
-    "symbol": "IF M",
+    "symbol": "IFM",
     "unit": "mA",
     "stat": "max",
     "conditions": "",
-    "example": "5 00"
+    "example": "500"
    },
    {
-    "name": "Peak forward surge current @tp=1us; TA=25 ℃",
-    "symbol": "IFS M",
+    "name": "Peak forward surge current @tp=1us; TA=25°C",
+    "symbol": "IFSM",
     "unit": "A",
     "stat": "max",
-    "conditions": "tp=1us; TA=25 ℃",
+    "conditions": "tp=1us; TA=25°C",
     "example": "2.0"
    },
    {
@@ -191,10 +191,18 @@
     "stat": "max",
     "conditions": "VR=0V, f=1MHZ",
     "example": "4"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-123"
    }
   ],
-  "seconds": 35.05,
-  "tokens_in": 1193,
-  "tokens_out": 935
+  "seconds": 16.77,
+  "tokens_in": 1293,
+  "tokens_out": 966
  }
 }

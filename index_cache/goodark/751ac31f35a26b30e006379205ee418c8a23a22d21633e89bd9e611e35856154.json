@@ -20,9 +20,9 @@
  },
  "type": "mosfet_p",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:04:43+00:00",
+  "at": "2026-11-23T06:11:27+00:00",
   "items": [
    {
     "name": "Drain Source Voltage",
@@ -94,7 +94,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to +150"
+    "example": "-55 to 150"
    },
    {
     "name": "Thermal Resistance Junction to Case",
@@ -116,7 +116,7 @@
     "name": "Drain Source Breakdown Voltage",
     "symbol": "V(BR)DSS",
     "unit": "V",
-    "stat": "min",
+    "stat": "max",
     "conditions": "VGS=0V, ID=-250µA",
     "example": "-40"
    },
@@ -271,34 +271,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-252(D-PAK)"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to +150"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
    }
   ],
-  "seconds": 125.83,
-  "tokens_in": 2393,
-  "tokens_out": 1804
+  "seconds": 116.32,
+  "tokens_in": 2493,
+  "tokens_out": 1695
  }
 }

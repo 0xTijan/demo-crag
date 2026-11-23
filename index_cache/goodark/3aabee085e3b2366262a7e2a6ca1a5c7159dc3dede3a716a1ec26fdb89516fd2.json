@@ -20,9 +20,9 @@
  },
  "type": "mosfet_p",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:03:38+00:00",
+  "at": "2026-11-23T06:10:23+00:00",
   "items": [
    {
     "name": "Drain Source Voltage",
@@ -145,7 +145,7 @@
     "example": "±100"
    },
    {
-    "name": "Drain-Source On-state Resistance",
+    "name": "Drain-Source On-state Resistance (Note 4)",
     "symbol": "RDS(on)",
     "unit": "mΩ",
     "stat": "typ",
@@ -153,28 +153,12 @@
     "example": "5.7"
    },
    {
-    "name": "Drain-Source On-state Resistance",
-    "symbol": "RDS(on)",
-    "unit": "mΩ",
-    "stat": "max",
-    "conditions": "VGS=-10V, ID=-20A",
-    "example": "6"
-   },
-   {
-    "name": "Drain-Source On-state Resistance",
+    "name": "Drain-Source On-state Resistance (Note 4)",
     "symbol": "RDS(on)",
     "unit": "mΩ",
     "stat": "typ",
     "conditions": "VGS=-4.5V, ID=-10A",
     "example": "7.4"
-   },
-   {
-    "name": "Drain-Source On-state Resistance",
-    "symbol": "RDS(on)",
-    "unit": "mΩ",
-    "stat": "max",
-    "conditions": "VGS=-4.5V, ID=-10A",
-    "example": "8"
    },
    {
     "name": "Total Gate Charge",
@@ -273,7 +257,7 @@
     "example": "-97"
    },
    {
-    "name": "Diode Forward Voltage",
+    "name": "Diode Forward Voltage (Note 4)",
     "symbol": "VSD",
     "unit": "V",
     "stat": "max",
@@ -303,42 +287,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-252(D-PAK)"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
-   },
-   {
-    "name": "Qualification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "AEC-Q101"
-   },
-   {
-    "name": "RoHS Compliance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS Compliant"
-   },
-   {
-    "name": "MSL",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "MSL 1"
    }
   ],
-  "seconds": 103.22,
-  "tokens_in": 2879,
-  "tokens_out": 2082
+  "seconds": 88.31,
+  "tokens_in": 2979,
+  "tokens_out": 1835
  }
 }

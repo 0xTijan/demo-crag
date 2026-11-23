@@ -24,9 +24,9 @@
  },
  "type": "schottky_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:51:31+00:00",
+  "at": "2026-11-23T08:35:05+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -81,15 +81,15 @@
     "symbol": "V F",
     "unit": "V",
     "stat": "max",
-    "conditions": "I=1.0A",
+    "conditions": "",
     "example": "0.5"
    },
    {
-    "name": "Maximum DC Reverse Current at Rated T=25°C A DC Blocking Voltage per Leg T=125°C",
+    "name": "Maximum DC Reverse Current at Rated T =25°C A DC Blocking Voltage per Leg T =125",
     "symbol": "I R",
     "unit": "mA",
     "stat": "max",
-    "conditions": "T=25°C, V=V DC; T=125°C",
+    "conditions": "",
     "example": "0.5"
    },
    {
@@ -97,7 +97,7 @@
     "symbol": "C J",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V=4.0V, f=1.0MHz",
+    "conditions": "",
     "example": "13"
    },
    {
@@ -123,10 +123,18 @@
     "stat": "range",
     "conditions": "",
     "example": "-55 to 150"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-269AA (MBS)"
    }
   ],
-  "seconds": 44.81,
-  "tokens_in": 1274,
+  "seconds": 38.0,
+  "tokens_in": 1374,
   "tokens_out": 620
  }
 }

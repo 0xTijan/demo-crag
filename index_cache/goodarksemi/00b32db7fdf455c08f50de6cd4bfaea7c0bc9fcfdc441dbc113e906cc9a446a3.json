@@ -20,9 +20,9 @@
  },
  "type": "mosfet_p",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:01:35+00:00",
+  "at": "2026-11-23T06:08:32+00:00",
   "items": [
    {
     "name": "V (BR)DSS",
@@ -37,7 +37,7 @@
     "symbol": "RDS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "",
+    "conditions": "VGS=-10V, ID=-20A",
     "example": "15"
    },
    {
@@ -45,15 +45,23 @@
     "symbol": "ID",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TJ=25°C, VGS=-10V",
     "example": "-40"
+   },
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TA=25°C"
    },
    {
     "name": "Drain-Source Voltage",
     "symbol": "VDS",
     "unit": "V",
     "stat": "max",
-    "conditions": "TA=25°C",
+    "conditions": "",
     "example": "-40"
    },
    {
@@ -61,7 +69,7 @@
     "symbol": "VGS",
     "unit": "V",
     "stat": "max",
-    "conditions": "TA=25°C",
+    "conditions": "",
     "example": "±20"
    },
    {
@@ -69,7 +77,7 @@
     "symbol": "ID",
     "unit": "A",
     "stat": "max",
-    "conditions": "TA=25°C, VGS=10V",
+    "conditions": "TJ=25°C, VGS=-10V",
     "example": "-40"
    },
    {
@@ -77,7 +85,7 @@
     "symbol": "ID",
     "unit": "A",
     "stat": "max",
-    "conditions": "TA=100°C, VGS=10V",
+    "conditions": "TJ=100°C, VGS=-10V",
     "example": "-27"
    },
    {
@@ -101,7 +109,7 @@
     "symbol": "PD",
     "unit": "W",
     "stat": "max",
-    "conditions": "TA=25°C",
+    "conditions": "TJ=25°C",
     "example": "80"
    },
    {
@@ -139,7 +147,7 @@
    {
     "name": "Operating Junction Temperature Range",
     "symbol": "TJ",
-    "unit": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 To +150"
@@ -147,7 +155,7 @@
    {
     "name": "Storage Temperature Range",
     "symbol": "TSTG",
-    "unit": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 To +150"
@@ -156,7 +164,7 @@
     "name": "Drain-Source Breakdown Voltage",
     "symbol": "BV DSS",
     "unit": "V",
-    "stat": "min",
+    "stat": "max",
     "conditions": "VGS=0V, ID=-250uA",
     "example": "-40"
    },
@@ -206,7 +214,7 @@
     "unit": "V",
     "stat": "range",
     "conditions": "VGS=VDS, ID=-250uA",
-    "example": "-1.6"
+    "example": "-1 To -3"
    },
    {
     "name": "Total Gate Charge",
@@ -237,7 +245,7 @@
     "symbol": "td(on)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VDD=-30V, RG=3Ω, RL=1.5Ω, VGS=-10V, ID=-20A",
+    "conditions": "VDD=-30V, RG=3Ω, R_L=1.5Ω, VGS=-10V, ID=-20A",
     "example": "8"
    },
    {
@@ -245,7 +253,7 @@
     "symbol": "tr",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VDD=-30V, RG=3Ω, RL=1.5Ω, VGS=-10V, ID=-20A",
+    "conditions": "VDD=-30V, RG=3Ω, R_L=1.5Ω, VGS=-10V, ID=-20A",
     "example": "26.5"
    },
    {
@@ -253,7 +261,7 @@
     "symbol": "td(off)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VDD=-30V, RG=3Ω, RL=1.5Ω, VGS=-10V, ID=-20A",
+    "conditions": "VDD=-30V, RG=3Ω, R_L=1.5Ω, VGS=-10V, ID=-20A",
     "example": "105.2"
    },
    {
@@ -261,7 +269,7 @@
     "symbol": "tf",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VDD=-30V, RG=3Ω, RL=1.5Ω, VGS=-10V, ID=-20A",
+    "conditions": "VDD=-30V, RG=3Ω, R_L=1.5Ω, VGS=-10V, ID=-20A",
     "example": "142.1"
    },
    {
@@ -318,7 +326,7 @@
     "unit": "V",
     "stat": "range",
     "conditions": "VGS=0V, IS=-20A, TJ=25°C",
-    "example": "-0.8"
+    "example": "-0.8 To -1.2"
    },
    {
     "name": "Reverse Recovery Time",
@@ -343,42 +351,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-252 (DPAK)"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "Mounting Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Surface Mount"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "TJ",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 To +150"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GSFD4015"
    }
   ],
-  "seconds": 36.64,
-  "tokens_in": 2665,
-  "tokens_out": 2343
+  "seconds": 34.88,
+  "tokens_in": 2765,
+  "tokens_out": 2272
  }
 }

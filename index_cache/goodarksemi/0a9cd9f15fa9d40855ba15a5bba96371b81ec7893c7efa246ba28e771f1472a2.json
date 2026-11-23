@@ -24,16 +24,16 @@
  },
  "type": "zener_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:26:41+00:00",
+  "at": "2026-11-23T06:27:54+00:00",
   "items": [
    {
     "name": "Power Dissipation",
     "symbol": "PD",
     "unit": "mW",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "300"
    },
    {
@@ -41,7 +41,7 @@
     "symbol": "RθJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "417"
    },
    {
@@ -62,42 +62,26 @@
    },
    {
     "name": "Zener Voltage VZ (V)",
-    "symbol": "",
+    "symbol": "VZ",
     "unit": "V",
-    "stat": "min",
-    "conditions": "@ IZT (mA)",
-    "example": "2.28"
+    "stat": "range",
+    "conditions": "@ IZT=5mA",
+    "example": "2.28 to 2.52"
    },
    {
-    "name": "Zener Voltage VZ (V)",
-    "symbol": "",
-    "unit": "V",
-    "stat": "typ",
-    "conditions": "@ IZT (mA)",
-    "example": "2.40"
-   },
-   {
-    "name": "Zener Voltage VZ (V)",
-    "symbol": "",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "@ IZT (mA)",
-    "example": "2.52"
-   },
-   {
-    "name": "Maximum Zener Impedance",
+    "name": "Maximum Zener Impedance Z ZT (W)",
     "symbol": "ZZT",
     "unit": "W",
     "stat": "max",
-    "conditions": "@ IZT (mA)",
+    "conditions": "@ IZT=5mA",
     "example": "85"
    },
    {
-    "name": "Maximum Zener Impedance",
+    "name": "Maximum Zener Impedance Z ZK (W)",
     "symbol": "ZZK",
     "unit": "W",
     "stat": "max",
-    "conditions": "@ IZK (mA)",
+    "conditions": "@ IZK=1mA",
     "example": "600"
    },
    {
@@ -110,15 +94,23 @@
    },
    {
     "name": "Maximum Reverse Current",
+    "symbol": "IR",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "@ VR=1.0V",
+    "example": "100.00"
+   },
+   {
+    "name": "Package",
     "symbol": "",
     "unit": "",
-    "stat": "max",
-    "conditions": "@ VR (V)",
-    "example": "100.00"
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-323"
    }
   ],
-  "seconds": 37.93,
-  "tokens_in": 3454,
-  "tokens_out": 492
+  "seconds": 41.38,
+  "tokens_in": 3554,
+  "tokens_out": 474
  }
 }

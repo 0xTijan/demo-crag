@@ -20,9 +20,9 @@
  },
  "type": "mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:52:30+00:00",
+  "at": "2026-11-23T05:56:59+00:00",
   "items": [
    {
     "name": "Drain Source Voltage",
@@ -148,17 +148,17 @@
     "name": "Drain-Source On-state Resistance",
     "symbol": "RDS(on)",
     "unit": "mΩ",
-    "stat": "max",
+    "stat": "range",
     "conditions": "VGS=10V, ID=20A",
-    "example": "4.7"
+    "example": "4.2 to 4.7"
    },
    {
     "name": "Drain-Source On-state Resistance",
     "symbol": "RDS(on)",
     "unit": "mΩ",
-    "stat": "max",
+    "stat": "range",
     "conditions": "VGS=4.5V, ID=10A",
-    "example": "6.4"
+    "example": "5.7 to 6.4"
    },
    {
     "name": "Total Gate Charge",
@@ -287,42 +287,10 @@
     "stat": "value",
     "conditions": "",
     "example": "PDFN3333"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
-   },
-   {
-    "name": "MSL",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1"
    }
   ],
-  "seconds": 111.68,
-  "tokens_in": 3015,
-  "tokens_out": 1948
+  "seconds": 106.33,
+  "tokens_in": 3115,
+  "tokens_out": 1818
  }
 }

@@ -24,10 +24,18 @@
  },
  "type": "pulse_withstanding_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:33:51+00:00",
+  "at": "2026-11-23T08:26:02+00:00",
   "items": [
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "PWR02, PWR03, PWR05, PWR06, PWR13, PWR10"
+   },
    {
     "name": "Size",
     "symbol": "",
@@ -42,15 +50,15 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "±0.5%~5%"
+    "example": "±0.5%, ±1%, ±5%"
    },
    {
     "name": "Power Rating",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "at 70°C",
-    "example": "1/5W"
+    "conditions": "",
+    "example": "1/5W, 1/4W, 1/3W, 1/2W, 2/5W, 3/4W, 1W, "
    },
    {
     "name": "Operating Temp. Range",
@@ -66,7 +74,7 @@
     "unit": "V",
     "stat": "max",
     "conditions": "",
-    "example": "50"
+    "example": "500"
    },
    {
     "name": "Max. Overload Voltage",
@@ -74,39 +82,23 @@
     "unit": "V",
     "stat": "max",
     "conditions": "",
-    "example": "100"
+    "example": "1000"
    },
    {
     "name": "Resistance Range",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "±0.5% (E24,E96)",
-    "example": "1Ω-20Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "±1% (E24,E96)",
-    "example": "1Ω-20Ω"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "±5% (E24)",
+    "stat": "range",
+    "conditions": "",
     "example": "1Ω-20Ω"
    },
    {
     "name": "TCR",
     "symbol": "",
     "unit": "PPM/°C",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "±300"
+    "example": "±100"
    },
    {
     "name": "AEC-Q200 Compliance",
@@ -117,12 +109,20 @@
     "example": "Compliance"
    },
    {
-    "name": "Package",
+    "name": "100% CCD inspection",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0402"
+    "example": "100%"
+   },
+   {
+    "name": "Derating Curve",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ambient Temperature(℃)"
    },
    {
     "name": "Marking",
@@ -130,63 +130,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "4 digits"
-   },
-   {
-    "name": "Sulfur Test",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "EIA-977 (Condition A)"
-   },
-   {
-    "name": "ESD",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1KV"
-   },
-   {
-    "name": "Flammability",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "UL-94 V-0 or V-1"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliance"
-   },
-   {
-    "name": "Shelf Life",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "2 years"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "15 to 28"
-   },
-   {
-    "name": "Humidity",
-    "symbol": "",
-    "unit": "%RH",
-    "stat": "max",
-    "conditions": "",
-    "example": "80"
+    "example": "4 digits marking for 0805~2512, 3 digits"
    },
    {
     "name": "Soldering Condition",
@@ -197,100 +141,52 @@
     "example": "IPC/JEDEC J-STD-020 & J-STD-002"
    },
    {
-    "name": "Reflow Profiles",
+    "name": "Temperature Coefficient of Resistance (T.C.R.)",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Pb-Free Assembly"
+    "example": "As Spec."
    },
    {
-    "name": "Preheat Min. Temperature",
+    "name": "Short Time Overload",
     "symbol": "",
-    "unit": "°C",
-    "stat": "min",
-    "conditions": "",
-    "example": "150"
-   },
-   {
-    "name": "Preheat Max. Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "200"
-   },
-   {
-    "name": "Preheating time",
-    "symbol": "",
-    "unit": "seconds",
-    "stat": "range",
-    "conditions": "",
-    "example": "60 to 120"
-   },
-   {
-    "name": "Ramp-up rate",
-    "symbol": "",
-    "unit": "°C/second",
-    "stat": "max",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "Liquidous temperature",
-    "symbol": "",
-    "unit": "°C",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "217"
+    "example": "RCWV*2.5 or Max. Overload Voltage whiche"
    },
    {
-    "name": "Time maintained above Liquidous temperature",
+    "name": "Insulation Resistance",
     "symbol": "",
-    "unit": "seconds",
-    "stat": "range",
-    "conditions": "",
-    "example": "60 to 150"
-   },
-   {
-    "name": "Min. Peak temperature",
-    "symbol": "",
-    "unit": "°C",
+    "unit": "G",
     "stat": "min",
     "conditions": "",
-    "example": "235"
+    "example": "10"
    },
    {
-    "name": "Max. Peak temperature",
+    "name": "Operational Life",
     "symbol": "",
-    "unit": "°C",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "260"
+    "example": "±(1.0%+0.05Ω)"
    },
    {
-    "name": "Time within 5°C of peak temperature",
+    "name": "Biased Humidity",
     "symbol": "",
-    "unit": "seconds",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "30"
+    "example": "±(1.0%+0.05Ω)"
    },
    {
-    "name": "Ramp-down rate",
+    "name": "High Temperature Exposure",
     "symbol": "",
-    "unit": "°C/second",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "6"
-   },
-   {
-    "name": "Time from 25°C to peak temperature",
-    "symbol": "",
-    "unit": "minutes",
-    "stat": "max",
-    "conditions": "",
-    "example": "8"
+    "example": "±(1.0%+0.05Ω)"
    },
    {
     "name": "Board Flex",
@@ -298,7 +194,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "AEC-Q200-005"
+    "example": "±(1.0%+0.05Ω)"
    },
    {
     "name": "Solderability",
@@ -322,7 +218,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1.42 times Max. Operating Voltage"
+    "example": "No breakdown or flashover"
    },
    {
     "name": "Leaching",
@@ -338,7 +234,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "JESD22 Method JA-104 -55°C to +125°C, 10"
+    "example": "±(0.5%+0.05Ω)"
    },
    {
     "name": "Mechanical Shock",
@@ -346,7 +242,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "MIL-STD-202 Method 213 100g’s"
+    "example": "±(0.25%+0.05Ω)"
    },
    {
     "name": "Vibration",
@@ -354,7 +250,15 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "MIL-STD-202 Method 204 5 g’s for 20 min."
+    "example": "±(0.5%+0.05Ω)"
+   },
+   {
+    "name": "ESD",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402/0603: 1KV 0805 and above: 2KV"
    },
    {
     "name": "Resistance to Solvents",
@@ -362,7 +266,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "No visible damage"
+    "example": "No visible damage on appearance and mark"
    },
    {
     "name": "Terminal Strength",
@@ -370,11 +274,75 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1.8kg for 60 seconds"
+    "example": "No broken"
+   },
+   {
+    "name": "Flammability",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "UL-94 V-0 or V-1"
+   },
+   {
+    "name": "Sulfur Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "EIA-977 (Condition A) 60±2°C, no power r"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "10K, 20K, 40K, 5K, 10K, 20K, 4K, 8K"
+   },
+   {
+    "name": "Tape Width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8, 12"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "inch",
+    "stat": "value",
+    "conditions": "",
+    "example": "7, 10, 13"
+   },
+   {
+    "name": "Land Pattern",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.50, 0.45, 0.60 for PWR02"
    }
   ],
-  "seconds": 138.24,
-  "tokens_in": 11026,
-  "tokens_out": 2830
+  "seconds": 77.44,
+  "tokens_in": 11126,
+  "tokens_out": 2143
  }
 }

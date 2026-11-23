@@ -11,10 +11,11 @@ type: schottky_bridge_rectifier
 name: Schottky bridge rectifier
 version: 1
 status: draft
-must_match: []
-visual_check: pinout (G/D/S order)
+must_match:
+- package
+visual_check: pinout (bridge pin order)
 drafted:
-  at: '2026-11-22T14:52:29+00:00'
+  at: '2026-11-23T08:35:41+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -26,8 +27,34 @@ drafted:
   - goodarksemi/mb12s-mb110s_1f051331.md
   - goodarksemi/mb22s-mb210s_72f71910.md
 specs:
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 7/7
+  vrrm_max:
+    label: VRRM max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum Repetitive Peak Reverse Voltage
+    - VRRM
+    - Maximum DC Blocking Voltage
+    - VDC
+    - V RRM
+    - V DC
+    - Repetitive Peak Reverse Voltage
+    found_in: 7/7
   if_av_max:
-    label: IF(AV) max
+    label: I(AV) max
     unit: A
     stat: max
     conditions: null
@@ -59,6 +86,26 @@ specs:
     - Peak Forward Surge Current (8.3ms Single Half Sine-Wave)
     - Peak Forward Surge Current 8.3 MS Single Half Sine-Wave Superimposed on Rated Lo
     found_in: 7/7
+  ir_max@ta_25c:
+    label: IR max @ TA=25°C
+    unit: mA
+    stat: max
+    conditions: TA=25°C
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum Instantaneous Reverse Current
+    - IR
+    - I R
+    - Maximum DC Reverse Current at Rated DC Blocking Voltage Per Diode
+    - IRRM
+    - Reverse Current
+    - I 2 R
+    - Repetitive Peak Reverse Current
+    - I RRM
+    - Maximum DC Reverse Current at Rated T =25°C A DC Blocking Voltage per Leg T =125
+    - Maximum DC Reverse Current at TA=25°C Rated DC Blocking Voltage per Leg TA=100°C
+    found_in: 7/7
   tj_range:
     label: TJ range
     unit: °C
@@ -76,18 +123,21 @@ specs:
     - Operation Junction and Storage Temperature Range
     - Operation Junction Temperature Range
     found_in: 7/7
-  vrrm_max:
-    label: VRRM max
-    unit: V
-    stat: max
+  rthja_typ:
+    label: RθJA typ
+    unit: °C/W
+    stat: typ
     conditions: null
-    rule: '>='
-    critical: true
+    rule: <=
+    critical: false
     aliases:
-    - Maximum Repetitive Peak Reverse Voltage
-    - VRRM
-    - V RRM
-    - Repetitive Peak Reverse Voltage
+    - Typical Thermal Resistance
+    - RθJA
+    - R θJA
+    - Thermal Resistance Between Junction and Ambient, On Alumina Substrate
+    - RθJ-A
+    - Typical Thermal Resistance, Junction-Ambient
+    - Typical Thermal Resistance per Leg (Note1)
     found_in: 5/7
   tstg_range:
     label: TSTG range
@@ -102,31 +152,35 @@ specs:
     - T STG
     - Storage Temperature
     found_in: 5/7
-  vdc_max:
-    label: VDC max
-    unit: V
-    stat: max
+  c_j_typ:
+    label: CJ typ
+    unit: pF
+    stat: typ
     conditions: null
-    rule: '>='
-    critical: true
+    rule: ≈
+    critical: false
     aliases:
-    - Maximum DC Blocking Voltage
-    - VDC
-    - V DC
+    - Maximum Instantaneous Forward Voltage Drop Per Diode
+    - VF
+    - Junction Capacitance
+    - C J
+    - Typical Junction Capacitance per at 4.0 V, 1.0 MHz
     found_in: 4/7
-  ir_max_at_25c:
-    label: IR max @ T=25°C
+  ir_max@ta_100c:
+    label: IR max @ TA=100°C
     unit: mA
     stat: max
-    conditions: T=25°C
+    conditions: TA=100°C
     rule: <=
     critical: false
     aliases:
     - Maximum Instantaneous Reverse Current
     - IR
     - I R
-    - Maximum DC Reverse Current at Rated T=25°C A DC Blocking Voltage per Leg T=125°C
-    - Maximum DC Reverse Current at TA=25°C Rated DC Blocking Voltage per Leg TA=100°C
+    - Maximum DC Reverse Current at Rated DC Blocking Voltage Per Diode
+    - IRRM
+    - Reverse Current
+    - I 2 R
     found_in: 4/7
   vrm_max:
     label: VRMS max
@@ -141,50 +195,19 @@ specs:
     - V RMS
     found_in: 4/7
 rare_specs:
-  package:
-    label: Package
-    unit: null
-    stat: value
+  vdc_max:
+    label: VDC max
+    unit: V
+    stat: max
     conditions: null
-    rule: '='
+    rule: '>='
     critical: true
     aliases:
-    - Package
-    found_in: 3/7
-  case:
-    label: Case
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Case
-    found_in: 3/7
-  cj_typ:
-    label: CJ typ
-    unit: pF
-    stat: typ
-    conditions: V=4V, f=1MHz
-    rule: ≈
-    critical: false
-    aliases:
-    - Junction Capacitance
-    - C J
-    - Typical Junction Capacitance per at 4.0 V, 1.0 MHz
-    found_in: 3/7
-  mounting_position:
-    label: Mounting position
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Mounting position
-    found_in: 3/7
-  rja_typ:
-    label: RθJA typ
+    - Maximum DC Blocking Voltage
+    - V DC
+    found_in: 2/7
+  rthjc_typ:
+    label: RθJC typ
     unit: °C/W
     stat: typ
     conditions: null
@@ -192,99 +215,10 @@ rare_specs:
     critical: false
     aliases:
     - Typical Thermal Resistance
-    - RθJA
-    - R θJA
-    - Typical Thermal Resistance per Leg (Note1)
-    found_in: 3/7
-  terminals:
-    label: Terminals
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Terminals
-    found_in: 3/7
-  vf_max_at_2a:
-    label: VF max @ I=2A
-    unit: V
-    stat: max
-    conditions: I=2A
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Instantaneous Forward Voltage
-    - VF
-    - Maximum Instantaneous Forward Voltage at 2.0A
-    - Instaneous Forward Voltage
-    - V 1 F
-    found_in: 3/7
-  carrier:
-    label: Carrier
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Carrier
+    - R θJC
+    - Typical Thermal Resistance, Junction-Case
     found_in: 2/7
-  epoxy:
-    label: Epoxy
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Epoxy
-    found_in: 2/7
-  i2t_max:
-    label: I2t max
-    unit: A2s
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Current Squared Time @ 1ms ≤ t ≤8.3ms T=25°C, Rating of Per Diode J
-    - I2t
-    - Rating for Fusing (t≤8.3ms)
-    found_in: 2/7
-  ir_max_at_100c:
-    label: IR max @ T=100°C
-    unit: mA
-    stat: max
-    conditions: T=100°C
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Instantaneous Reverse Current
-    - IR
-    - I R
-    found_in: 2/7
-  marking:
-    label: Marking
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Marking
-    found_in: 2/7
-  quantity:
-    label: Quantity
-    unit: Pcs
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Quantity
-    found_in: 2/7
-  vf_max_at_1a:
+  vf_max@i_1a:
     label: VF max @ I=1A
     unit: V
     stat: max
@@ -297,186 +231,15 @@ rare_specs:
     - Maximum Instantaneous Forward Voltage at 1.0A
     - V F
     found_in: 2/7
-  vbr_min:
-    label: VBR min
+  vf_max@i_2a:
+    label: VF max @ I=2A
     unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Breakdown Voltage
-    - V BR
-    found_in: 1/7
-  vr_min:
-    label: VR min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Blocking Voltage
-    - V R
-    found_in: 1/7
-  flammability_classification:
-    label: Flammability Classification
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Flammability Classification
-    found_in: 1/7
-  ir_max_at_125c_100v:
-    label: IR max @ T=125°C, V=100V
-    unit: mA
     stat: max
-    conditions: T=125°C, V=100V
-    rule: <=
-    critical: false
-    aliases:
-    - Reverse Current
-    - I 2 R
-    found_in: 1/7
-  ir_max_at_25c_100v:
-    label: IR max @ T=25°C, V=100V
-    unit: μA
-    stat: max
-    conditions: T=25°C, V=100V
-    rule: <=
-    critical: false
-    aliases:
-    - Reverse Current
-    - I 2 R
-    found_in: 1/7
-  rja_max:
-    label: RθJA max
-    unit: °C/W
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal Resistance Between Junction and Ambient, On Alumina Substrate
-    - RθJ-A
-    found_in: 1/7
-  rjc_typ:
-    label: RθJC typ
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Typical Thermal Resistance
-    - R θJC
-    found_in: 1/7
-  rjl_max:
-    label: RθJL max
-    unit: °C/W
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal Resistance Between Junction and Lead
-    - RθJ-L
-    found_in: 1/7
-  rohs_compliance:
-    label: RoHS Compliance
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - RoHS Compliance
-    found_in: 1/7
-  vf_typ_at_0_5a:
-    label: VF typ @ I=0.5A
-    unit: V
-    stat: typ
-    conditions: I=0.5A
-    rule: <=
-    critical: false
-    aliases:
-    - Instaneous Forward Voltage
-    - V 1 F
-    found_in: 1/7
-  vf_typ_at_125c_0_5a:
-    label: VF typ @ T=125°C, I=0.5A
-    unit: V
-    stat: typ
-    conditions: T=125°C, I=0.5A
-    rule: <=
-    critical: false
-    aliases:
-    - Instaneous Forward Voltage
-    - V 1 F
-    found_in: 1/7
-  vf_typ_at_125c_1a:
-    label: VF typ @ T=125°C, I=1A
-    unit: V
-    stat: typ
-    conditions: T=125°C, I=1A
-    rule: <=
-    critical: false
-    aliases:
-    - Instaneous Forward Voltage
-    - V 1 F
-    found_in: 1/7
-  vf_typ_at_125c_2a:
-    label: VF typ @ T=125°C, I=2A
-    unit: V
-    stat: typ
-    conditions: T=125°C, I=2A
-    rule: <=
-    critical: false
-    aliases:
-    - Instaneous Forward Voltage
-    - V 1 F
-    found_in: 1/7
-  vf_typ_at_1a:
-    label: VF typ @ I=1A
-    unit: V
-    stat: typ
-    conditions: I=1A
-    rule: <=
-    critical: false
-    aliases:
-    - Instaneous Forward Voltage
-    - V 1 F
-    found_in: 1/7
-  vf_typ_at_2a:
-    label: VF typ @ I=2A
-    unit: V
-    stat: typ
     conditions: I=2A
     rule: <=
     critical: false
     aliases:
-    - Instaneous Forward Voltage
-    - V 1 F
-    found_in: 1/7
-  weee_compliance:
-    label: WEEE Compliance
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - WEEE Compliance
-    found_in: 1/7
-  weight:
-    label: Weight
-    unit: g
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Weight
-    found_in: 1/7
+    - Maximum Instantaneous Forward Voltage
+    - VF
+    - Maximum Instantaneous Forward Voltage at 2.0A
+    found_in: 2/7

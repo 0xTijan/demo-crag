@@ -20,9 +20,9 @@
  },
  "type": "esd_tvs_array",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:34:58+00:00",
+  "at": "2026-11-23T06:47:43+00:00",
   "items": [
    {
     "name": "Peak Pulse Power (8/20µs)",
@@ -109,7 +109,7 @@
     "symbol": "VC",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =22A (8 x 20µs pulse), any I/O pin to PP ground",
+    "conditions": "I =22A (8 x 20µs pulse), any I/O pin to ground PP",
     "example": "13.6"
    },
    {
@@ -156,13 +156,13 @@
     "name": "Junction Capacitance",
     "symbol": "CJ",
     "unit": "pF",
-    "stat": "max",
+    "stat": "range",
     "conditions": "V =0V, f=1MHz, any I/O pin to ground R",
-    "example": "5"
+    "example": "3 to 5"
    }
   ],
-  "seconds": 37.06,
-  "tokens_in": 1468,
-  "tokens_out": 940
+  "seconds": 16.8,
+  "tokens_in": 1568,
+  "tokens_out": 943
  }
 }

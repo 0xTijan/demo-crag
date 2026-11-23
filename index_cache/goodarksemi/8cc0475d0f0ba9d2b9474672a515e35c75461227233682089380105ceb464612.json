@@ -20,9 +20,9 @@
  },
  "type": "ptc_thermistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:57:23+00:00",
+  "at": "2026-11-23T08:39:24+00:00",
   "items": [
    {
     "name": "Maximum voltage (RMS)",
@@ -78,7 +78,7 @@
     "unit": "Ω",
     "stat": "range",
     "conditions": "",
-    "example": "40 50 60"
+    "example": "40 to 60"
    },
    {
     "name": "Hold current at 40±2℃",
@@ -149,7 +149,7 @@
     "symbol": "",
     "unit": "A",
     "stat": "min",
-    "conditions": "10/1000μs, 1KV, 25A, impulse 30 times",
+    "conditions": "",
     "example": "25"
    },
    {
@@ -157,7 +157,7 @@
     "symbol": "",
     "unit": "V",
     "stat": "max",
-    "conditions": "650VAC, Rs=600Ω, On 1s, Off 60s, 10 times",
+    "conditions": "",
     "example": "650"
    },
    {
@@ -165,7 +165,7 @@
     "symbol": "",
     "unit": "V",
     "stat": "max",
-    "conditions": "250 VAC, no current-limited resistance for 15min",
+    "conditions": "",
     "example": "250"
    },
    {
@@ -173,7 +173,7 @@
     "symbol": "",
     "unit": "V",
     "stat": "max",
-    "conditions": "250 VAC, 3A, on 1 min, off 10min",
+    "conditions": "",
     "example": "250"
    },
    {
@@ -181,7 +181,7 @@
     "symbol": "",
     "unit": "A",
     "stat": "max",
-    "conditions": "20times, ∆R/R≤20%",
+    "conditions": "",
     "example": "3"
    },
    {
@@ -189,7 +189,7 @@
     "symbol": "",
     "unit": "V",
     "stat": "max",
-    "conditions": "Ac600V, RL=0 , electrify 60min",
+    "conditions": "",
     "example": "600"
    },
    {
@@ -197,7 +197,7 @@
     "symbol": "",
     "unit": "℃",
     "stat": "range",
-    "conditions": "V=0",
+    "conditions": "",
     "example": "-40~+85"
    },
    {
@@ -205,7 +205,7 @@
     "symbol": "",
     "unit": "℃",
     "stat": "range",
-    "conditions": "V=Vmax",
+    "conditions": "",
     "example": "0~+70"
    },
    {
@@ -262,7 +262,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "70°C, 0V,1000 hours",
-    "example": "70°C, 0V,1000 hours"
+    "example": "Dry Hot"
    },
    {
     "name": "Dry Cold",
@@ -270,7 +270,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "0°C , 0V,1000 hours",
-    "example": "0°C , 0V,1000 hours"
+    "example": "Dry Cold"
    },
    {
     "name": "Humidity aging",
@@ -278,7 +278,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "40°C, 95% RH, 0V,1000 hours",
-    "example": "40°C, 95% RH, 0V,1000 hours"
+    "example": "Humidity aging"
    },
    {
     "name": "Thermal shock",
@@ -286,7 +286,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "70°C,0°C (5 times)",
-    "example": "70°C,0°C (5 times)"
+    "example": "Thermal shock"
    },
    {
     "name": "Solvent resistance",
@@ -294,7 +294,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "MIL-STD-202, Method 215F",
-    "example": "MIL-STD-202, Method 215F"
+    "example": "Solvent resistance"
    },
    {
     "name": "ITU-T K.20/21/45",
@@ -335,58 +335,10 @@
     "stat": "value",
     "conditions": "",
     "example": "Bulk"
-   },
-   {
-    "name": "Bag QTY",
-    "symbol": "",
-    "unit": "PCS",
-    "stat": "value",
-    "conditions": "",
-    "example": "640"
-   },
-   {
-    "name": "Box QTY",
-    "symbol": "",
-    "unit": "PCS",
-    "stat": "value",
-    "conditions": "",
-    "example": "10240"
-   },
-   {
-    "name": "Component Weight",
-    "symbol": "",
-    "unit": "g",
-    "stat": "typ",
-    "conditions": "",
-    "example": "1.0739"
-   },
-   {
-    "name": "Net Weight Per Box",
-    "symbol": "",
-    "unit": "Kg",
-    "stat": "typ",
-    "conditions": "",
-    "example": "11.00"
-   },
-   {
-    "name": "Gross Weight/Per Box",
-    "symbol": "",
-    "unit": "Kg",
-    "stat": "typ",
-    "conditions": "",
-    "example": "12.49"
-   },
-   {
-    "name": "Box Outline",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "380×250×290"
    }
   ],
-  "seconds": 33.26,
-  "tokens_in": 2070,
-  "tokens_out": 2231
+  "seconds": 28.32,
+  "tokens_in": 2170,
+  "tokens_out": 1806
  }
 }

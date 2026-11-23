@@ -23,20 +23,12 @@
  },
  "type": "thin_film_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:38:58+00:00",
+  "at": "2026-11-23T07:41:30+00:00",
   "items": [
    {
-    "name": "Product",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Automotive Grade Professional Thin Film "
-   },
-   {
-    "name": "Size",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -44,20 +36,12 @@
     "example": "0402/0603/0805/1206"
    },
    {
-    "name": "Operating temperature up to 175℃ for 1000 h",
+    "name": "Operating temperature range",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "175"
-   },
-   {
-    "name": "Rated dissipation P85 up to 0.4W for size 1206",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.4"
+    "example": "-55 ~ +175℃"
    },
    {
     "name": "AEC-Q200 Compliance",
@@ -65,47 +49,31 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "AEC-Q200"
+    "example": "Compliance"
    },
    {
-    "name": "Superior temperature cycling robustness",
+    "name": "Power Rating at 85℃",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Superior"
-   },
-   {
-    "name": "Advanced sulfur resistance verified according to ASTM B 809",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "ASTM B 809"
-   },
-   {
-    "name": "Operating Temp. Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 ~ +175"
+    "example": "1/10W"
    },
    {
     "name": "Max. Operating Voltage",
     "symbol": "",
-    "unit": "V",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "50"
+    "example": "50V"
    },
    {
     "name": "Max. Overload Voltage",
     "symbol": "",
-    "unit": "V",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "100"
+    "example": "100V"
    },
    {
     "name": "Resistance Range",
@@ -118,138 +86,34 @@
    {
     "name": "TCR (PPM/℃)",
     "symbol": "",
-    "unit": "PPM/℃",
+    "unit": "",
     "stat": "range",
     "conditions": "",
     "example": "±25,±50"
    },
    {
-    "name": "Power Rating at 85℃",
-    "symbol": "",
-    "unit": "W",
-    "stat": "value",
-    "conditions": "ART02",
-    "example": "1/10"
-   },
-   {
-    "name": "Power Rating at 85℃",
-    "symbol": "",
-    "unit": "W",
-    "stat": "value",
-    "conditions": "ART03",
-    "example": "3/20"
-   },
-   {
-    "name": "Power Rating at 85℃",
-    "symbol": "",
-    "unit": "W",
-    "stat": "value",
-    "conditions": "ART05",
-    "example": "1/5"
-   },
-   {
-    "name": "Power Rating at 85℃",
-    "symbol": "",
-    "unit": "W",
-    "stat": "value",
-    "conditions": "ART06",
-    "example": "2/5"
-   },
-   {
     "name": "Max. resistance change at rated dissipation for resistance range, |△R/R| after 1",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "ART02",
-    "example": "0.15"
-   },
-   {
-    "name": "Max. resistance change at rated dissipation for resistance range, |△R/R| after 1",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "ART03",
-    "example": "0.15"
-   },
-   {
-    "name": "Max. resistance change at rated dissipation for resistance range, |△R/R| after 1",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "ART05",
-    "example": "0.15"
-   },
-   {
-    "name": "Max. resistance change at rated dissipation for resistance range, |△R/R| after 1",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "ART06",
-    "example": "0.15"
-   },
-   {
-    "name": "Max. resistance change at rated dissipation for resistance range, |△R/R| after 8",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "ART02",
-    "example": "0.3"
-   },
-   {
-    "name": "Max. resistance change at rated dissipation for resistance range, |△R/R| after 8",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "ART03",
-    "example": "0.3"
-   },
-   {
-    "name": "Max. resistance change at rated dissipation for resistance range, |△R/R| after 8",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "ART05",
-    "example": "0.3"
-   },
-   {
-    "name": "Max. resistance change at rated dissipation for resistance range, |△R/R| after 8",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "ART06",
-    "example": "0.5"
-   },
-   {
-    "name": "Temperature Coefficient of Resistance (T.C.R.)",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "As Spec."
+    "example": "≦ 0.15%"
    },
    {
-    "name": "Short Time Overload (Standard operation mode)",
+    "name": "Max. resistance change at rated dissipation for resistance range, |△R/R| after 8",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "ΔR±0.10 %"
-   },
-   {
-    "name": "Short Time Overload (Power operation mode)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "ΔR±0.25%"
+    "example": "≦ 0.3%"
    },
    {
     "name": "Insulation Resistance",
     "symbol": "",
     "unit": "MΩ",
-    "stat": "min",
+    "stat": "value",
     "conditions": "",
-    "example": "1000"
+    "example": ">1000"
    },
    {
     "name": "Endurance Standard at 70℃ 1000hrs",
@@ -324,7 +188,7 @@
     "example": "ΔR±0.25%"
    },
    {
-    "name": "Biased Humidity Standard operation mode",
+    "name": "Biased Humidity",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -343,9 +207,9 @@
     "name": "Solderability",
     "symbol": "",
     "unit": "",
-    "stat": "min",
+    "stat": "value",
     "conditions": "",
-    "example": "95"
+    "example": "95% min. coverage"
    },
    {
     "name": "Resistance to Soldering Heat",
@@ -384,40 +248,8 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "0402",
-    "example": "0.2"
-   },
-   {
-    "name": "ESD",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "0603",
-    "example": "0.5"
-   },
-   {
-    "name": "ESD",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "0805",
-    "example": "1.5"
-   },
-   {
-    "name": "ESD",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "1206",
-    "example": "2.0"
-   },
-   {
-    "name": "Resistance to solvents",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
     "conditions": "",
-    "example": "Marking Unsmeared"
+    "example": "0.2 KV; 0.5 KV; 1.5 KV; 2.0 KV"
    },
    {
     "name": "Flammability",
@@ -426,234 +258,10 @@
     "stat": "value",
     "conditions": "",
     "example": "UL-94 V-0 or V-1"
-   },
-   {
-    "name": "External Visual",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "15~28"
-   },
-   {
-    "name": "Shelf Life",
-    "symbol": "",
-    "unit": "year",
-    "stat": "value",
-    "conditions": "",
-    "example": "2"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "03 F C 1001"
-   },
-   {
-    "name": "Dimensions (L×W)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "02: 0402 03: 0603 05: 0805 06: 1206",
-    "example": "0402"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "B: ±0.1% D: ±0.5% F: ±1%",
-    "example": "±0.1%"
-   },
-   {
-    "name": "TCR (PPM/℃)",
-    "symbol": "",
-    "unit": "PPM/℃",
-    "stat": "range",
-    "conditions": "C: ±25 D: ±50",
-    "example": "±25"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "0100: 10Ω 10R2: 10.2Ω 1000:100Ω 1001: 1KΩ 1002: 10 KΩ 1003: 100KΩ 1004: 1M Ω",
-    "example": "10Ω"
-   },
-   {
-    "name": "Physical Dimension",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "As Spec."
-   },
-   {
-    "name": "Soldering Condition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IPC/JEDEC J-STD-020"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0603 3digit marking"
-   },
-   {
-    "name": "E24",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "10"
-   },
-   {
-    "name": "E96",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "100"
-   },
-   {
-    "name": "Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "01"
-   },
-   {
-    "name": "Multiplier",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "100",
-    "example": "100"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "value",
-    "conditions": "100Ω",
-    "example": "100"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "value",
-    "conditions": "2.2KΩ",
-    "example": "2200"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "value",
-    "conditions": "10KΩ",
-    "example": "10000"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "value",
-    "conditions": "49.9KΩ",
-    "example": "49900"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "Ω",
-    "stat": "value",
-    "conditions": "100KΩ",
-    "example": "100000"
-   },
-   {
-    "name": "Packaging Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "ART02",
-    "example": "10,000"
-   },
-   {
-    "name": "Packaging Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "ART03",
-    "example": "5,000"
-   },
-   {
-    "name": "Packaging Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "ART05",
-    "example": "5,000"
-   },
-   {
-    "name": "Packaging Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "ART06",
-    "example": "5,000"
-   },
-   {
-    "name": "Land Pattern",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "ART02",
-    "example": "0.50"
-   },
-   {
-    "name": "Land Pattern",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "ART03",
-    "example": "0.80"
-   },
-   {
-    "name": "Land Pattern",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "ART05",
-    "example": "1.00"
-   },
-   {
-    "name": "Land Pattern",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "ART06",
-    "example": "2.00"
    }
   ],
-  "seconds": 173.51,
-  "tokens_in": 7694,
-  "tokens_out": 3478
+  "seconds": 176.27,
+  "tokens_in": 7794,
+  "tokens_out": 1534
  }
 }

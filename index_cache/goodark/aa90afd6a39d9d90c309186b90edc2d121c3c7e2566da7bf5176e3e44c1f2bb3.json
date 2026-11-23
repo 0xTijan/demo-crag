@@ -24,10 +24,18 @@
  },
  "type": "pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:31:09+00:00",
+  "at": "2026-11-23T06:44:53+00:00",
   "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA=25°C unless otherwise noted",
+    "example": "V CBO: -80 -50 -30"
+   },
    {
     "name": "Collector Base Voltage",
     "symbol": "V CBO",
@@ -97,7 +105,7 @@
     "symbol": "RthJA",
     "unit": "°C/W",
     "stat": "value",
-    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout",
     "example": "625"
    },
    {
@@ -121,7 +129,7 @@
     "symbol": "V (BR)CBO",
     "unit": "V",
     "stat": "range",
-    "conditions": "-I C = 10 µA ABC856 C ABC857, ABC860 ABC858, ABC859",
+    "conditions": "ABC856 ABC857, ABC860 ABC858, ABC859",
     "example": "-80 -50 -30"
    },
    {
@@ -129,7 +137,7 @@
     "symbol": "V (BR)CES",
     "unit": "V",
     "stat": "range",
-    "conditions": "-I C = 10 µA ABC856 C ABC857, ABC860 ABC858, ABC859",
+    "conditions": "ABC856 ABC857, ABC860 ABC858, ABC859",
     "example": "-80 -50 -30"
    },
    {
@@ -137,7 +145,7 @@
     "symbol": "V (BR)CEO",
     "unit": "V",
     "stat": "range",
-    "conditions": "-I C = 10 mA ABC856 ABC857, ABC860 ABC858, ABC859",
+    "conditions": "ABC856 ABC857, ABC860 ABC858, ABC859",
     "example": "-65 -45 -30"
    },
    {
@@ -152,7 +160,7 @@
     "name": "Collector Emitter Saturation Voltage",
     "symbol": "V CE(sat)",
     "unit": "V",
-    "stat": "range",
+    "stat": "max",
     "conditions": "-I C = 10 mA, -I B = 0.5 mA at -I C = 100 mA, -I B = 5 mA",
     "example": "-0.3 -0.65"
    },
@@ -160,7 +168,7 @@
     "name": "Base Emitter On Voltage",
     "symbol": "V BE(on)",
     "unit": "V",
-    "stat": "range",
+    "stat": "max",
     "conditions": "-I C = 2 mA, -V CE = 5 V at -I C = 10 mA, -V CE = 5 V",
     "example": "-0.6 -0.75 -0.82"
    },
@@ -205,7 +213,7 @@
     "example": "Halogen and Antimony Free(HAF), RoHS com"
    },
    {
-    "name": "Qualification",
+    "name": "AEC-Q101 Qualified",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -213,7 +221,7 @@
     "example": "AEC-Q101 Qualified"
    },
    {
-    "name": "Application",
+    "name": "For switching and amplifier",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -221,8 +229,8 @@
     "example": "For switching and amplifier"
    }
   ],
-  "seconds": 33.86,
-  "tokens_in": 1681,
-  "tokens_out": 1326
+  "seconds": 46.87,
+  "tokens_in": 1781,
+  "tokens_out": 1362
  }
 }

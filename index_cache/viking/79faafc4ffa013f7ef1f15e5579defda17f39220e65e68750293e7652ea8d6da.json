@@ -24,17 +24,25 @@
  },
  "type": "multilayer_ceramic_capacitor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:22:35+00:00",
+  "at": "2026-11-23T08:18:33+00:00",
   "items": [
    {
-    "name": "Size",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0201"
+    "example": "0201, 0402, 0603, 0805, 1206, 1210, 1808"
+   },
+   {
+    "name": "AEC-Q200 Compliance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "AEC-Q200"
    },
    {
     "name": "Dielectric",
@@ -42,23 +50,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "NPO"
-   },
-   {
-    "name": "Voltage",
-    "symbol": "",
-    "unit": "VDCW",
-    "stat": "value",
-    "conditions": "",
-    "example": "6.3V"
-   },
-   {
-    "name": "Capacitance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.1pF"
+    "example": "NPO, X7R, X5R, X7S"
    },
    {
     "name": "Capacitance Tolerance",
@@ -66,7 +58,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "±0.05pF"
+    "example": "A, B, C, D, F, G, J, K, M"
    },
    {
     "name": "Packaging Code",
@@ -77,6 +69,22 @@
     "example": "T"
    },
    {
+    "name": "Voltage (VDCW)",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "",
+    "example": "6.3, 10, 16, 25, 50, 100, 250, 500, 630"
+   },
+   {
+    "name": "Capacitance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.1pF, 1pF, 10pF, 100pF, 1nF, 10nF, 1uF"
+   },
+   {
     "name": "Function Code",
     "symbol": "",
     "unit": "",
@@ -85,16 +93,40 @@
     "example": "A"
    },
    {
-    "name": "AEC-Q200",
+    "name": "Product Type",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Compliant"
+    "example": "MCFA, MCF"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 150"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "RoHS"
+   },
+   {
+    "name": "Executive StanDA (0.8)rd",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GB/T 21041-2007; GB/T 21042-2007"
    }
   ],
-  "seconds": 222.21,
-  "tokens_in": 14366,
-  "tokens_out": 2523
+  "seconds": 197.96,
+  "tokens_in": 14466,
+  "tokens_out": 727
  }
 }

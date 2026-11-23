@@ -24,73 +24,33 @@
  },
  "type": "current_sensing_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:20:03+00:00",
+  "at": "2026-11-23T07:26:41+00:00",
   "items": [
    {
-    "name": "Customer",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Viking Tech Corporation"
+    "example": "WMR06"
    },
    {
-    "name": "Product",
+    "name": "Size",
     "symbol": "",
-    "unit": "",
+    "unit": "Inch",
     "stat": "value",
     "conditions": "",
-    "example": "Molding E-Beam Welded Metal Strip Resist"
-   },
-   {
-    "name": "Sizes",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1206/2010/2512/2725/2728/4527"
-   },
-   {
-    "name": "Issued Date",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "26-Mar-26"
-   },
-   {
-    "name": "Edition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "REV.A8"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Viking"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1206/2010/2512/2725/2728/4527"
+    "example": "1206"
    },
    {
     "name": "Resistance",
-    "symbol": "",
+    "symbol": "R",
     "unit": "mΩ",
     "stat": "range",
     "conditions": "",
-    "example": "0.2-0.25"
+    "example": "1"
    },
    {
     "name": "Material",
@@ -134,7 +94,7 @@
    },
    {
     "name": "TCR",
-    "symbol": "",
+    "symbol": "TCR",
     "unit": "PPM/°C",
     "stat": "range",
     "conditions": "",
@@ -144,7 +104,7 @@
     "name": "Power Rating",
     "symbol": "",
     "unit": "W",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "2W"
    },
@@ -152,9 +112,9 @@
     "name": "Tolerance",
     "symbol": "",
     "unit": "%",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
-    "example": "±0.5"
+    "example": "±0.5%"
    },
    {
     "name": "Packaging",
@@ -163,30 +123,6 @@
     "stat": "value",
     "conditions": "",
     "example": "Taping Reel"
-   },
-   {
-    "name": "TCR Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "C: ±25 D: ±50 W: ±75 E: ±100 K: ±150 12:"
-   },
-   {
-    "name": "Resistance Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0M50: 0.0005Ω R001: 0.001Ω R010: 0.01Ω R"
-   },
-   {
-    "name": "Material Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "M: Manganin K: Kamar F: FeCrAl"
    },
    {
     "name": "Operating Temperature",
@@ -264,9 +200,9 @@
     "name": "Insulation Resistance",
     "symbol": "",
     "unit": "MΩ",
-    "stat": "value",
+    "stat": "min",
     "conditions": "",
-    "example": ">1000"
+    "example": "1000"
    },
    {
     "name": "Dielectric Withstand Voltage",
@@ -339,106 +275,10 @@
     "stat": "value",
     "conditions": "",
     "example": "compliant"
-   },
-   {
-    "name": "Tape Width",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "8/12/24"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "178.0±2.0"
-   },
-   {
-    "name": "ΦA",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "178.0±2.0"
-   },
-   {
-    "name": "ΦB",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "60.0±1.0"
-   },
-   {
-    "name": "ΦC",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "13.5±0.5"
-   },
-   {
-    "name": "B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "3.50/5.40/6.80/7.20/7.20/11.80"
-   },
-   {
-    "name": "E",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.75"
-   },
-   {
-    "name": "F",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "3.50/5.50/11.50"
-   },
-   {
-    "name": "P0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "4.00"
-   },
-   {
-    "name": "P1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "4.00/8.00/12.00"
-   },
-   {
-    "name": "P2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.00"
-   },
-   {
-    "name": "ΦD0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.50"
    }
   ],
-  "seconds": 169.39,
-  "tokens_in": 7241,
-  "tokens_out": 2330
+  "seconds": 71.22,
+  "tokens_in": 7341,
+  "tokens_out": 1487
  }
 }

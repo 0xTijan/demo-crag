@@ -24,9 +24,9 @@
  },
  "type": "esd_protection_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T11:10:08+00:00",
+  "at": "2026-11-23T06:16:20+00:00",
   "items": [
    {
     "name": "ESD Rating per IEC61000-4-2 (Air)",
@@ -139,10 +139,18 @@
     "stat": "value",
     "conditions": "",
     "example": "0.6"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-323"
    }
   ],
-  "seconds": 12.82,
-  "tokens_in": 1332,
-  "tokens_out": 672
+  "seconds": 21.66,
+  "tokens_in": 1432,
+  "tokens_out": 707
  }
 }

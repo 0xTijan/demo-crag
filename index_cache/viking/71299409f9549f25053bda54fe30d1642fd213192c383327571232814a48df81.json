@@ -23,9 +23,9 @@
  },
  "type": "thick_film_array_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:57:38+00:00",
+  "at": "2026-11-23T07:56:18+00:00",
   "items": [
    {
     "name": "Size",
@@ -36,108 +36,212 @@
     "example": "0201x2(Flat)/0201x4(Flat)/0402x4/0603x4"
    },
    {
-    "name": "Part Numbering",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "42: 0201x2 41: 0201x4 42: 0402x4 43: 060"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "F: ±1% J: ±5%"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T: 7\"Taping Reel V:10\"Taping Reel W:13\"T"
-   },
-   {
-    "name": "TCR",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "F: ±200 G: ±300"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "10Ω - 1MΩ"
+    "example": "AS21/AS41/AS42/AS43"
    },
    {
     "name": "Operating Temperature Range",
     "symbol": "",
-    "unit": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 ~ +125°C"
+    "example": "-55 to 125"
    },
    {
     "name": "Power Rating",
     "symbol": "",
-    "unit": "",
+    "unit": "W",
     "stat": "value",
-    "conditions": "",
-    "example": "1/32W"
+    "conditions": "AS21",
+    "example": "1/32"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AS41",
+    "example": "1/32"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AS42",
+    "example": "1/16"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "AS43",
+    "example": "1/10"
    },
    {
     "name": "Max. Operating Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "AS21",
     "example": "12.5"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AS41",
+    "example": "12.5"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AS42",
+    "example": "25"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AS43",
+    "example": "50"
    },
    {
     "name": "Max. Overload Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "AS21",
     "example": "25"
    },
    {
-    "name": "Soldering Temperature",
+    "name": "Max. Overload Voltage",
     "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "Pb-Free Assembly",
-    "example": "217"
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AS41",
+    "example": "25"
    },
    {
-    "name": "Soldering Time",
+    "name": "Max. Overload Voltage",
     "symbol": "",
-    "unit": "seconds",
-    "stat": "range",
-    "conditions": "Pb-Free Assembly",
-    "example": "60-150"
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AS42",
+    "example": "50"
    },
    {
-    "name": "Peak Temperature",
+    "name": "Max. Overload Voltage",
     "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "Pb-Free Assembly",
-    "example": "235-260"
+    "unit": "V",
+    "stat": "value",
+    "conditions": "AS43",
+    "example": "100"
    },
    {
-    "name": "Soldering Time",
+    "name": "Resistance Range",
     "symbol": "",
-    "unit": "seconds",
-    "stat": "max",
-    "conditions": "Pb-Free Assembly",
-    "example": "30"
+    "unit": "",
+    "stat": "range",
+    "conditions": "AS21, ±1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AS21, ±5%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AS41, ±1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AS41, ±5%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AS42, ±1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AS42, ±5%",
+    "example": "1Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AS43, ±1%",
+    "example": "10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "AS43, ±5%",
+    "example": "1Ω - 1MΩ"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "AS21",
+    "example": "±300"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "AS41",
+    "example": "±200"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "AS42",
+    "example": "±200"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "AS43",
+    "example": "±200"
    },
    {
     "name": "Insulation Resistance",
@@ -151,31 +255,55 @@
     "name": "Endurance",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "±(2.0%+0.10Ω)"
+   },
+   {
+    "name": "Endurance",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "±(3.0%+0.10Ω)"
+   },
+   {
+    "name": "Damp Heat with Load",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1%",
     "example": "±(2.0%+0.10Ω)"
    },
    {
     "name": "Damp Heat with Load",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(2.0%+0.10Ω)"
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "±(3.0%+0.10Ω)"
    },
    {
     "name": "Dry Heat",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
+    "stat": "range",
+    "conditions": "±1%",
     "example": "±(1.0%+0.05Ω)"
+   },
+   {
+    "name": "Dry Heat",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "±(1.5%+0.10Ω)"
    },
    {
     "name": "Bending Strength",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "±(1.0%+0.05Ω)"
    },
@@ -193,7 +321,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": ""
+    "example": "260±5°C for 10 seconds"
    },
    {
     "name": "Voltage Proof",
@@ -207,7 +335,7 @@
     "name": "Leaching",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "Individual leaching area ≦5% Total leach"
    },
@@ -215,15 +343,23 @@
     "name": "Rapid Change of Temperature",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
+    "stat": "range",
+    "conditions": "±1%",
     "example": "±(0.5%+0.05Ω)"
+   },
+   {
+    "name": "Rapid Change of Temperature",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "±(1.0%+0.05Ω)"
    },
    {
     "name": "Sulfur Test",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "±(0.5%+0.05Ω)"
    },
@@ -233,7 +369,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "15~28"
+    "example": "15 to 28"
    },
    {
     "name": "Shelf Life",
@@ -242,10 +378,98 @@
     "stat": "value",
     "conditions": "",
     "example": "2"
+   },
+   {
+    "name": "Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±1% / ±5%"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1%: 4 digits marking (non-including E24 "
+   },
+   {
+    "name": "Tape Width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "inch",
+    "stat": "value",
+    "conditions": "7 inch",
+    "example": "7"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "inch",
+    "stat": "value",
+    "conditions": "10 inch",
+    "example": "10"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "inch",
+    "stat": "value",
+    "conditions": "13 inch",
+    "example": "13"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "10K",
+    "example": "10K"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "5K",
+    "example": "5K"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "20K",
+    "example": "20K"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "40K",
+    "example": "40K"
+   },
+   {
+    "name": "Soldering Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
+    "example": "Preheat Min. Temperature (Tsmin) Max Tem"
    }
   ],
-  "seconds": 115.83,
-  "tokens_in": 5963,
-  "tokens_out": 1500
+  "seconds": 147.18,
+  "tokens_in": 6063,
+  "tokens_out": 2828
  }
 }

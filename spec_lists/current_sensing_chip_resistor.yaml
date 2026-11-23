@@ -12,12 +12,11 @@ name: current sensing (shunt) chip resistor
 version: 1
 status: draft
 must_match:
+- package
 - size
-- resistance_range
-- power_rating
-visual_check: pinout (G/D/S order)
+visual_check: SMD Type designed for automatic insertion (D1.11)
 drafted:
-  at: '2026-11-22T13:23:25+00:00'
+  at: '2026-11-23T07:28:12+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -32,20 +31,29 @@ drafted:
   - viking/wmp12-series-data-sheet-edition-rev-a2_45996156.md
   - viking/wmr-series-data-sheet-edition-rev-a8_e7524b23.md
 specs:
-  insulation_resistance:
-    label: Insulation Resistance
-    unit: MΩ
-    stat: min
+  package:
+    label: Package
+    unit: null
+    stat: value
     conditions: null
-    rule: '>='
-    critical: false
+    rule: '='
+    critical: true
     aliases:
-    - Insulation Resistance
-    - High temperature and humidity
-    - Land Pattern
-    - Solderability
-    - Vibration
-    - R_ins
+    - Package
+    found_in: 10/10
+  size:
+    label: Size
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Size
+    - Resistance
+    - R
+    - A
+    - L
     found_in: 10/10
   operating_temp_range:
     label: Operating Temp. Range
@@ -58,21 +66,45 @@ specs:
     - Operating Temp. Range
     - Operating Temperature
     - T
-    - Operating Temperature range
+    - Operating Temperature Range
     found_in: 10/10
-  size:
-    label: Size
-    unit: null
-    stat: value
+  resistance_range:
+    label: Resistance Range
+    unit: mΩ
+    stat: range
     conditions: null
-    rule: contains
+    rule: ≈
     critical: false
     aliases:
-    - Size
+    - Resistance Range
     - Resistance
-    - Sizes.
-    - Sizes
-    found_in: 10/10
+    - R
+    - Resistance Range (mΩ)
+    found_in: 9/10
+  tcr:
+    label: TCR
+    unit: PPM/°C
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - TCR
+    - Temperature Coefficient of Resistance
+    found_in: 9/10
+  power_rating:
+    label: Power Rating
+    unit: W
+    stat: range
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Power
+    - Power Rating
+    - P
+    - Power Rating at 70°C
+    found_in: 8/10
   storage_temp_range:
     label: Storage Temp. Range
     unit: °C
@@ -82,39 +114,22 @@ specs:
     critical: false
     aliases:
     - Storage Temperature
-    - Packaging Quantity
-    - T
-    found_in: 10/10
-  flammability:
-    label: Flammability
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Flammability
-    - Temperature cycling
-    - AEC-Q200
-    - Low Temperature Storage
-    - Tape Width
-    - W
-    - Leaching
-    - Area
-    found_in: 9/10
-  l:
-    label: L
-    unit: mm
+    - Mechanical Shock
+    found_in: 8/10
+  tolerance:
+    label: Resistance Tolerance
+    unit: '%'
     stat: range
     conditions: null
     rule: ≈
     critical: false
     aliases:
-    - L
-    - Dimensions (WxL)
-    - Dimensions (L×W)
-    - A
-    found_in: 9/10
+    - Resistance Tolerance
+    - Tolerance
+    - Tol
+    - Storage Temperature
+    - T
+    found_in: 8/10
   resistance_to_soldering_heat:
     label: Resistance to Soldering Heat
     unit: null
@@ -124,21 +139,54 @@ specs:
     critical: false
     aliases:
     - Resistance to Soldering Heat
+    - R_heat
     - Resistance to solder heat
-    - Endurance
-    - ΔR
-    found_in: 9/10
-  shelf_life:
-    label: Shelf Life
-    unit: years
+    found_in: 7/10
+  tape_width:
+    label: Tape Width
+    unit: mm
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Shelf Life
-    - T
-    found_in: 9/10
+    - Pad Layout A
+    - Pad Layout B
+    - Pad Layout C
+    - Tape Width
+    - Tape Width (W)
+    - Material
+    - B
+    - C
+    - D
+    - E
+    - H1
+    - H2
+    found_in: 7/10
+  marking:
+    label: Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Features
+    - Marking
+    - Part Numbering
+    - Resistance to solvents
+    found_in: 6/10
+  rohs:
+    label: RoHS
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - RoHS
+    - RoHS Compliance
+    found_in: 6/10
   short_time_overload:
     label: Short Time Overload
     unit: null
@@ -149,75 +197,84 @@ specs:
     aliases:
     - Max. Overload Current
     - Short Time Overload
-    - Endurance
-    - ΔR
-    found_in: 9/10
-  tc_r:
-    label: TCR
-    unit: PPM/°C
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - TCR
-    - Temperature Coefficient of Resistance
-    - TCR (PPM/°C)
-    found_in: 9/10
-  power_rating:
-    label: Power Rating
-    unit: W
+    found_in: 6/10
+  aec_q200:
+    label: AEC-Q200
+    unit: null
     stat: value
     conditions: null
-    rule: '>='
-    critical: true
+    rule: '='
+    critical: false
     aliases:
-    - Power Rating
-    - Power Rating at 70°C
-    - P
-    found_in: 8/10
-  resistance_range:
-    label: Resistance Range
-    unit: mΩ
-    stat: range
+    - AEC-Q200
+    - AEC-Q200 Compliance
+    found_in: 5/10
+  solderability:
+    label: Solderability
+    unit: '%'
+    stat: min
     conditions: null
-    rule: contains
-    critical: true
+    rule: '>='
+    critical: false
     aliases:
-    - Resistance Range
-    - Resistance Range (mΩ)
-    - Resistance Range(mΩ)
-    - Resistance
-    - R
-    found_in: 8/10
+    - Solderability
+    found_in: 5/10
+rare_specs:
   bending_strength:
     label: Bending Strength
     unit: null
-    stat: value
+    stat: range
     conditions: null
     rule: info
     critical: false
     aliases:
     - Bending Strength
-    - Bending Strength (Board Flex)
-    - Low temperature load
-    - ΔR
-    found_in: 8/10
-  high_temperature_exposure:
-    label: High Temperature Exposure
+    found_in: 4/10
+  endurance:
+    label: Endurance
     unit: null
-    stat: value
+    stat: range
     conditions: null
     rule: info
     critical: false
     aliases:
+    - Operational Life
+    - Temperature Cycling
+    - Endurance
     - Damp Heat with Load
+    - Load life
+    found_in: 4/10
+  flammability:
+    label: Flammability
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Flammability
+    found_in: 4/10
+  high_temperature_exposure:
+    label: High Temperature Exposure
+    unit: null
+    stat: range
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
     - High Temperature Exposure
-    - Biased Humidity
-    - ΔR
     - High temperature storage
-    - High temperature and humidity
-    found_in: 8/10
+    found_in: 4/10
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: MΩ
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Insulation Resistance
+    found_in: 4/10
   reel_diameter:
     label: Reel Diameter
     unit: inch
@@ -226,181 +283,35 @@ specs:
     rule: info
     critical: false
     aliases:
-    - Reel Diameter
-    - D
-    found_in: 8/10
-  a:
-    label: A
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - D1
-    - R
-    - A (mm)
-    - A
-    found_in: 7/10
-  packaging_quantity:
-    label: Packaging Quantity
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Packaging Quantity
-    - Emboss Plastic Tape (EA)
-    - Packaging Quantity(EA)
-    found_in: 7/10
-  resistance_tolerance:
-    label: Resistance Tolerance
-    unit: '%'
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Resistance Tolerance
-    - Tol
-    - Tolerance
-    found_in: 7/10
-  solderability:
-    label: Solderability
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Solderability
-    - Coverage
-    found_in: 7/10
-  t:
-    label: T
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - T
-    - E
-    found_in: 7/10
-  tape_width:
-    label: Tape Width
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Tape Width
-    found_in: 7/10
-  w:
-    label: W
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - W
-    - B
-    found_in: 7/10
-  b:
-    label: B
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - D2
-    - Weight (g) (1000pcs)
-    - B (mm)
-    - B
-    - Material
-    found_in: 6/10
-  marking:
-    label: Marking
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
+    - Mechanical Shock
+    - Vibration
     - ESD
-    - Marking
-    - P 0 (mm)
-    - P 1 (mm)
-    - P 2 (mm)
-    - ΦD 0 (mm)
-    - Packaging Quantity
-    found_in: 6/10
-rare_specs:
-  e:
-    label: E
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - E (mm)
-    - E
-    - C
-    found_in: 4/10
-  f:
-    label: F
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - F (mm)
-    - F
-    - D
-    found_in: 4/10
-  p0:
-    label: P0
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - P0
+    - Terminal strength
+    - Rated Continuous Working Voltage
+    - Shelf Life
+    - Reflow Profiles
+    - Preheat Min. Temperature
+    - Preheat Max. Temperature
+    - Preheating time
+    - Ramp-up rate
+    - Liquidous temperature
     found_in: 3/10
-  p1:
-    label: P1
-    unit: mm
+  damp_heat_with_load:
+    label: Damp Heat with Load
+    unit: null
     stat: range
     conditions: null
-    rule: ≈
+    rule: info
     critical: false
     aliases:
-    - P1
-    found_in: 3/10
-  p2:
-    label: P2
+    - Biased Humidity
+    found_in: 1/10
+  land_pattern:
+    label: Land Pattern
     unit: mm
-    stat: range
+    stat: value
     conditions: null
-    rule: ≈
+    rule: info
     critical: false
-    aliases:
-    - P2
-    found_in: 3/10
-  phi_d0:
-    label: ΦD0
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - ΦD0
-    found_in: 2/10
+    aliases: []
+    found_in: 0/10

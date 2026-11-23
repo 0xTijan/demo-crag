@@ -18,12 +18,12 @@
  },
  "type": "igbt_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:21:04+00:00",
+  "at": "2026-11-23T08:56:58+00:00",
   "items": [
    {
-    "name": "Collector-Emitter Voltage",
+    "name": "R Collector-Emitter Voltage",
     "symbol": "V CES",
     "unit": "V",
     "stat": "max",
@@ -31,7 +31,7 @@
     "example": "650"
    },
    {
-    "name": "Gate-Emitter Voltage",
+    "name": "Gate- Emitter Voltage",
     "symbol": "V GES",
     "unit": "V",
     "stat": "max",
@@ -39,15 +39,15 @@
     "example": "±30"
    },
    {
-    "name": "Collector Current",
+    "name": "K Collector Current",
     "symbol": "I C",
     "unit": "A",
     "stat": "max",
-    "conditions": "T=25°C",
+    "conditions": "",
     "example": "12"
    },
    {
-    "name": "Collector Current",
+    "name": "Collector Current @TC = 100 °C",
     "symbol": "I C",
     "unit": "A",
     "stat": "max",
@@ -55,15 +55,15 @@
     "example": "6"
    },
    {
-    "name": "Pulsed Collector Current",
+    "name": "Pulsed Collector Current, tp limited by Tjmax",
     "symbol": "I Cpuls",
     "unit": "A",
     "stat": "max",
-    "conditions": "tp limited by Tjmax",
+    "conditions": "",
     "example": "35"
    },
    {
-    "name": "Diode Continuous Forward Current",
+    "name": "Diode Continuous Forward Current @T = 25 °C C",
     "symbol": "I F",
     "unit": "A",
     "stat": "max",
@@ -71,7 +71,7 @@
     "example": "12"
    },
    {
-    "name": "Diode Continuous Forward Current",
+    "name": "Diode Continuous Forward Current @T = 100 °C C",
     "symbol": "I F",
     "unit": "A",
     "stat": "max",
@@ -79,7 +79,7 @@
     "example": "6"
    },
    {
-    "name": "Power Dissipation",
+    "name": "Power Dissipation @ TC = 25°C",
     "symbol": "P D",
     "unit": "W",
     "stat": "max",
@@ -87,7 +87,7 @@
     "example": "69"
    },
    {
-    "name": "Power Dissipation",
+    "name": "Power Dissipation @ TC = 100°C",
     "symbol": "P D",
     "unit": "W",
     "stat": "max",
@@ -95,8 +95,8 @@
     "example": "28"
    },
    {
-    "name": "Operating Junction Temperature",
-    "symbol": "",
+    "name": "Operating Junction",
+    "symbol": "T J",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -104,14 +104,14 @@
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "",
+    "symbol": "T STG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to 150"
    },
    {
-    "name": "Thermal Resistance, Junction-to-Ambient",
+    "name": "Thermal Resistance ,Junction-to-Ambient",
     "symbol": "R θJA",
     "unit": "°C/W",
     "stat": "max",
@@ -127,7 +127,7 @@
     "example": "1.8"
    },
    {
-    "name": "Thermal Resistance Junction-to-Case for Diode",
+    "name": "G Thermal Resistance Junction-to-Case for Diode",
     "symbol": "R θJC",
     "unit": "°C/W",
     "stat": "max",
@@ -139,7 +139,7 @@
     "symbol": "V (BR)CES",
     "unit": "V",
     "stat": "min",
-    "conditions": "V GE=0V, I CE=1mA",
+    "conditions": "V GE=0V,I CE=1mA",
     "example": "650"
    },
    {
@@ -147,7 +147,7 @@
     "symbol": "V CE(sat)",
     "unit": "V",
     "stat": "typ",
-    "conditions": "I C=6A, V GE=15V",
+    "conditions": "I C=6A,V GE=15V",
     "example": "1.69"
    },
    {
@@ -155,7 +155,7 @@
     "symbol": "V GE(th)",
     "unit": "V",
     "stat": "range",
-    "conditions": "I C=1mA, V CE=5V",
+    "conditions": "I C=1mA,V CE=5V",
     "example": "4.5 to 6.5"
    },
    {
@@ -163,7 +163,7 @@
     "symbol": "I CES",
     "unit": "μA",
     "stat": "max",
-    "conditions": "V GE=0V, V CE=650V",
+    "conditions": "V GE=0V,V CE=650V",
     "example": "10"
    },
    {
@@ -171,7 +171,7 @@
     "symbol": "I GES",
     "unit": "nA",
     "stat": "max",
-    "conditions": "V GE=30V, V CE=0V",
+    "conditions": "V GE=30V,V CE=0V",
     "example": "100"
    },
    {
@@ -179,7 +179,7 @@
     "symbol": "I GES",
     "unit": "nA",
     "stat": "max",
-    "conditions": "V GE=-30V, V CE=0V",
+    "conditions": "V GE=-30V,V CE=0V",
     "example": "-100"
    },
    {
@@ -187,7 +187,7 @@
     "symbol": "C ies",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V GS=0V, V DS=25V, f=1MHz",
+    "conditions": "V GS=0V,V DS=25V, ƒ=1MHz",
     "example": "258"
    },
    {
@@ -195,7 +195,7 @@
     "symbol": "C oes",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V GS=0V, V DS=25V, f=1MHz",
+    "conditions": "V GS=0V,V DS=25V, ƒ=1MHz",
     "example": "18"
    },
    {
@@ -203,7 +203,7 @@
     "symbol": "C res",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V GS=0V, V DS=25V, f=1MHz",
+    "conditions": "V GS=0V,V DS=25V, ƒ=1MHz",
     "example": "5"
    },
    {
@@ -211,7 +211,7 @@
     "symbol": "t d(on)",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V CC=400V, I C=6A, V GE=0/15V, Rg=10Ω",
+    "conditions": "V CC=400V,I C=6A, V GE=0/15V, Rg=10Ω",
     "example": "5"
    },
    {
@@ -219,7 +219,7 @@
     "symbol": "t r",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V CC=400V, I C=6A, V GE=0/15V, Rg=10Ω",
+    "conditions": "V CC=400V,I C=6A, V GE=0/15V, Rg=10Ω",
     "example": "13"
    },
    {
@@ -227,7 +227,7 @@
     "symbol": "t d(off)",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V CC=400V, I C=6A, V GE=0/15V, Rg=10Ω",
+    "conditions": "V CC=400V,I C=6A, V GE=0/15V, Rg=10Ω",
     "example": "53"
    },
    {
@@ -235,7 +235,7 @@
     "symbol": "t f",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V CC=400V, I C=6A, V GE=0/15V, Rg=10Ω",
+    "conditions": "V CC=400V,I C=6A, V GE=0/15V, Rg=10Ω",
     "example": "90"
    },
    {
@@ -243,7 +243,7 @@
     "symbol": "E on",
     "unit": "mJ",
     "stat": "typ",
-    "conditions": "V CC=400V, I C=6A, V GE=0/15V, Rg=10Ω",
+    "conditions": "V CC=400V,I C=6A, V GE=0/15V, Rg=10Ω",
     "example": "0.19"
    },
    {
@@ -251,7 +251,7 @@
     "symbol": "E off",
     "unit": "mJ",
     "stat": "typ",
-    "conditions": "V CC=400V, I C=6A, V GE=0/15V, Rg=10Ω",
+    "conditions": "V CC=400V,I C=6A, V GE=0/15V, Rg=10Ω",
     "example": "0.11"
    },
    {
@@ -259,7 +259,7 @@
     "symbol": "E ts",
     "unit": "mJ",
     "stat": "typ",
-    "conditions": "V CC=400V, I C=6A, V GE=0/15V, Rg=10Ω",
+    "conditions": "V CC=400V,I C=6A, V GE=0/15V, Rg=10Ω",
     "example": "0.3"
    },
    {
@@ -267,7 +267,7 @@
     "symbol": "Q g",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V CC=520V, I C=6A, V GE=15V",
+    "conditions": "V CC=520V,I C=6A, V GE=15V",
     "example": "10"
    },
    {
@@ -275,7 +275,7 @@
     "symbol": "Q ge",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V CC=520V, I C=6A, V GE=15V",
+    "conditions": "V CC=520V,I C=6A, V GE=15V",
     "example": "3"
    },
    {
@@ -283,15 +283,15 @@
     "symbol": "Q gc",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V CC=520V, I C=6A, V GE=15V",
+    "conditions": "V CC=520V,I C=6A, V GE=15V",
     "example": "4"
    },
    {
-    "name": "Short circuit collector current",
+    "name": "Short circuit collector current Max.1000 short circuits Time between short circu",
     "symbol": "I C(SC)",
     "unit": "A",
     "stat": "typ",
-    "conditions": "V GE=15V, V CC≤400V, t sc≤5μs",
+    "conditions": "V GE=15V,V CC≤400V, t sc≤5μs",
     "example": "30"
    },
    {
@@ -333,34 +333,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-252(D-PAK)"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not qualified"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 102.87,
-  "tokens_in": 3206,
-  "tokens_out": 2286
+  "seconds": 66.14,
+  "tokens_in": 3306,
+  "tokens_out": 2225
  }
 }

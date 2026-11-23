@@ -20,9 +20,9 @@
  },
  "type": "dual_npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:52:59+00:00",
+  "at": "2026-11-23T08:36:12+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -175,10 +175,18 @@
     "stat": "min",
     "conditions": "V =-5V, CE I =-10mA,f=1MHz C",
     "example": "100"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-363"
    }
   ],
-  "seconds": 30.23,
-  "tokens_in": 1293,
-  "tokens_out": 952
+  "seconds": 31.18,
+  "tokens_in": 1393,
+  "tokens_out": 987
  }
 }

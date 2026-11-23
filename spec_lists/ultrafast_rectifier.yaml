@@ -13,9 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: pinout (G/D/S order)
+visual_check: null
 drafted:
-  at: '2026-11-22T10:00:59+00:00'
+  at: '2026-11-23T06:07:57+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,20 +30,6 @@ drafted:
   - goodarksemi/smur1060-smur1060f_721535ea.md
   - goodarksemi/smurp1060_e0f9efcf.md
 specs:
-  vdc_max:
-    label: VDC max
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Maximum DC blocking voltage
-    - VDC
-    - Peak Forward Surge Current 8.3mS Single Half Sine-wave Superimposed on Rated Loa
-    - I_FSM
-    - V DC
-    found_in: 10/10
   vrrm_max:
     label: VRRM max
     unit: V
@@ -54,72 +40,10 @@ specs:
     aliases:
     - Maximum repetitive peak reverse voltage
     - VRRM
-    - V_RRM
-    - V RRM
-    found_in: 10/10
-  rthja_typ:
-    label: RθJA typ
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal Resistance, Junction to Ambient
-    - RθJA
-    - RthJA
-    - Typical Thermal Resistance, Junction to Ambient
-    - Typical Thermal Resistance, Junction to Case
-    - R_θJC
-    - Typical Thermal Resistance Junction to Ambient
-    - R θJA
-    - Thermal Resistance, Junction to Ambient per Leg
-    found_in: 10/10
-  tj_range:
-    label: TJ range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating junction temperature range
-    - TJ
-    - Junction Temperature
-    - Operating Junction and Storage Temperature Range
-    - T, T J STG
-    found_in: 10/10
-  trr_max:
-    label: trr max
-    unit: nS
-    stat: max
-    conditions: IF=0.5A, IR=1.0A, IRR=0.25A
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum reverse recovery time
-    - trr
-    - Reverse recovery time
-    - t_rr
-    - t rr
-    - Maximum Reverse Recover Time (I =0.5Amp, I =1.0Amp, I =0.25A) F R RR
-    - Maximum Reverse Recover Time (I =0.5A, I =1.0A,Irec=0.25A) F R
-    found_in: 10/10
-  vrms_max:
-    label: VRMS max
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum RMS voltage
-    - VRMS
     - Working peak reverse voltage
     - VRWM
-    - Maximum Average Forward Rectified Current
-    - I_F(AV)
-    - V RWM
+    - V_RRM
+    - V RRM
     found_in: 10/10
   if_av_max:
     label: IF(AV) max
@@ -133,10 +57,11 @@ specs:
     - IF(AV)
     - Average Rectified Output Current @ 60Hz Sine Wave, Resistance Load, T (Fig.1) L
     - IO
+    - I_F(AV)
     - I F(AV)
     - Maximum Average Forward Rectified Current at Tc=105°C total device per diode
     - Maximum Average Forward Rectified Current @ Tc=105°C
-    found_in: 9/10
+    found_in: 10/10
   ifsm_max:
     label: IFSM max
     unit: A
@@ -148,14 +73,82 @@ specs:
     - Peak forward surge current,8.3ms single half sine-wave superimposed on rated loa
     - IFSM
     - Forward Surge Current (Non-Repetitive) @ 60Hz Half-Sine Wave, 1 Cycle, T=25°C J
-    - Forward Surge Current (Non-Repetitive) @ 1ms, Square Wave, 1 Cycle, T=25°C J
+    - Peak Forward Surge Current 8.3mS Single Half Sine-wave Superimposed on Rated Loa
+    - I_FSM
     - Peak Forward Surge Current
     - I FSM
     - Peak Forward Surge Current (8.3ms single half sine-wave superimposed on rated lo
-    - Peak Forward Surge Current 8.3ms Single Half Sine-wave Superimposed on Rated Loa
+    found_in: 10/10
+  tj_range:
+    label: TJ range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating junction temperature range
+    - TJ
+    - Junction Temperature
+    - T_J
+    - Operating Junction and Storage Temperature Range
+    - T, T J STG
+    found_in: 10/10
+  vdc_max:
+    label: VDC max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum DC blocking voltage
+    - VDC
+    - V DC
     found_in: 9/10
-  ir_max@vr_tj_125c:
-    label: IR max @ VR, TJ=125°C
+  tstg_range:
+    label: TSTG range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage temperature range
+    - TSTG
+    - Storage Temperature
+    - Storge Temperature Range
+    - T_stg
+    found_in: 9/10
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 8/10
+  rthja_typ:
+    label: RθJA typ
+    unit: °C/W
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Thermal Resistance, Junction to Ambient
+    - RθJA
+    - RthJA
+    - Typical Thermal Resistance, Junction to Ambient
+    - Reverse Current
+    - I_R
+    - Typical Thermal Resistance Junction to Ambient
+    - R θJA
+    found_in: 8/10
+  ir_max@tj_125c:
+    label: IR max @ TJ=125°C
     unit: uA
     stat: max
     conditions: TJ=125°C
@@ -170,44 +163,7 @@ specs:
     - Maximum DC Reverse Current at Rated DC Blocking Voltage
     - Reverse Current
     - I_R
-    - Maximum Instantaneous Reverse Current
-    - I R
-    - Reverse Leakage Current @V (T=125°C)2 R J
-    - Maximum Reverse Current per Leg at Working Peak Reverse Voltage
-    found_in: 9/10
-  ir_max@vr_tj_25c:
-    label: IR max @ VR, TJ=25°C
-    unit: uA
-    stat: max
-    conditions: TJ=25°C
-    rule: <=
-    critical: false
-    aliases:
-    - Reverse leakage current @VR
-    - IR
-    - Maximum reverse leakage current @VR
-    - Reverse leakage current @rated VR
-    - Maximum DC Reverse Current at Rated DC Blocking Voltage
-    - Reverse Current
-    - I_R
-    - Maximum Instantaneous Reverse Current
-    - I R
-    - Reverse Leakage Current @V (T=25°C)2 R J
-    - Maximum Reverse Current per Leg at Working Peak Reverse Voltage
-    found_in: 9/10
-  tstg_range:
-    label: TSTG range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Storage temperature range
-    - TSTG
-    - Storage Temperature
-    - Storge Temperature Range
-    found_in: 9/10
+    found_in: 7/10
   rthjc_typ:
     label: RθJC typ
     unit: °C/W
@@ -220,117 +176,125 @@ specs:
     - RθJC
     - RthJC
     - Typical Thermal Resistance, Junction to Case
-    - Thermal Resistance, Junction to Case per Leg
-    found_in: 8/10
-  package:
-    label: Package
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Package
-    - Case
-    found_in: 6/10
-  cj_typ:
-    label: CJ typ
-    unit: pF
-    stat: typ
-    conditions: 4.0V, 1MHz
-    rule: ≈
+    - Instaneous Forward Voltage
+    - V_F
+    found_in: 7/10
+  ir_max@tj_25c:
+    label: IR max @ TJ=25°C
+    unit: uA
+    stat: max
+    conditions: TJ=25°C
+    rule: <=
     critical: false
     aliases:
-    - Typical junction capacitance
-    - CJ
-    - C_J
+    - Reverse leakage current @VR
+    - IR
+    - Maximum reverse leakage current @VR
+    - Reverse leakage current @rated VR
+    - Maximum DC Reverse Current at Rated DC Blocking Voltage
+    found_in: 6/10
+  trr_max@if_0p5a_ir_1a_irr_0p25a:
+    label: trr max @ IF=0.5A, IR=1.0A, IRR=0.25A
+    unit: nS
+    stat: max
+    conditions: IF=0.5A, IR=1.0A, IRR=0.25A
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum reverse recovery time
+    - trr
     found_in: 5/10
 rare_specs:
-  halogen_free:
-    label: Halogen-free
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Halogen-free
-    found_in: 4/10
-  dv_dt_max:
-    label: dv/dt max
-    unit: V/μS
+  vrm_max:
+    label: VRMS max
+    unit: V
     stat: max
     conditions: null
     rule: '>='
     critical: false
+    aliases:
+    - Maximum RMS voltage
+    - VRMS
+    - Working Peak Reverse Voltage
+    found_in: 4/10
+  dv_dt_max:
+    label: dv/dt max
+    unit: V/μs
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
     aliases:
     - Voltage rate of change (rated VR)
     - dv/dt
     - Voltage Rate of Change(rated VR)
     found_in: 3/10
-  flammability:
-    label: Flammability Classification
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
+  cj_typ@v_4p0v_f_1mhz:
+    label: CJ typ @ 4.0V, 1MHz
+    unit: pF
+    stat: typ
+    conditions: 4.0V, 1MHz
+    rule: <=
     critical: false
     aliases:
-    - Flammability Classification
-    found_in: 3/10
-  lead_temp:
-    label: Lead Temperature for Soldering Purposes
-    unit: °C
+    - Typical junction capacitance
+    - CJ
+    found_in: 2/10
+  rthjl_typ:
+    label: RθJL typ
+    unit: °C/W
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Thermal Resistance, Junction to Lead
+    - RθJL
+    found_in: 2/10
+  cj_typ@v_4p0v_f_1mhz_other:
+    label: CJ typ @ 4.0V, 1MHz (other)
+    unit: pF
+    stat: typ
+    conditions: 4.0V, 1MHz
+    rule: <=
+    critical: false
+    aliases:
+    - Typical junction capacitance
+    - CJ
+    found_in: 1/10
+  cj_typ@v_4p0v_f_1mhz_other2:
+    label: CJ typ @ 4.0V, 1MHz (other)
+    unit: pF
+    stat: typ
+    conditions: 4.0V, 1MHz
+    rule: <=
+    critical: false
+    aliases:
+    - Typical Junction Capacitance
+    - CJ
+    found_in: 1/10
+  trr_max@if_0p5a_ir_1a_irr_0p25a_di_dt_50a_us_v_30v:
+    label: trr max @ IF=0.5A, IR=1.0A, IRR=0.25A, di/dt=50A/μs, V=30V
+    unit: nS
     stat: max
-    conditions: 10 sec
-    rule: info
+    conditions: IF=0.5A, IR=1.0A, IRR=0.25A, di/dt=50A/μs, V=30V
+    rule: <=
     critical: false
     aliases:
-    - Lead Temperature for Soldering Purposes
-    found_in: 3/10
-  i2t_max:
-    label: I2t max
-    unit: A2s
+    - Maximum Reverse Recovery Time
+    - t rr
+    found_in: 1/10
+  trr_max@if_1a_di_dt_100a_us_v_1v:
+    label: trr max @ IF=1A, di/dt=100A/μs, V=1V
+    unit: nS
     stat: max
-    conditions: null
-    rule: '>='
+    conditions: IF=1A, di/dt=100A/μs, V=1V
+    rule: <=
     critical: false
     aliases:
-    - Current Squared Time @ 1ms ≤ t ≤ 8.3ms, T=25°C J
-    - I2t
-    - Rating for Fusing (t=8.3ms)
-    found_in: 2/10
-  moisture_sensitivity:
-    label: Moisture sensitivity
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Moisture sensitivity
-    - MSL level
-    found_in: 2/10
-  polarity:
-    label: Polarity
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Polarity
-    found_in: 2/10
-  terminals:
-    label: Terminals
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Terminals
-    found_in: 2/10
+    - Maximum Forward Recovery Time
+    - t rr
+    found_in: 1/10
   vf_max@if_10a_tj_125c:
     label: VF max @ IF=10A, TJ=125°C
     unit: V
@@ -341,8 +305,7 @@ rare_specs:
     aliases:
     - Forward Drop Voltage (I =10A, T=125°C)1 F J
     - VF
-    - Maximum Instantaneous Forward Voltage per Leg
-    found_in: 2/10
+    found_in: 1/10
   vf_max@if_10a_tj_25c:
     label: VF max @ IF=10A, TJ=25°C
     unit: V
@@ -353,129 +316,48 @@ rare_specs:
     aliases:
     - Forward Drop Voltage (I =10A, T=25°C)1 F J
     - VF
-    - Maximum Instantaneous Forward Voltage per Leg
-    found_in: 2/10
-  vf_typ:
-    label: VF typ
-    unit: V
-    stat: typ
-    conditions: IF=1A
-    rule: <=
-    critical: false
-    aliases:
-    - Forward Drop Voltage
-    - VF
-    found_in: 2/10
-  weight:
-    label: Weight
-    unit: grams
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Weight
-    found_in: 2/10
-  high_temp_soldering:
-    label: High temperature soldering guaranteed
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - High temperature soldering guaranteed
     found_in: 1/10
-  molding_compound:
-    label: Molding compound
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Molding compound
-    found_in: 1/10
-  operating_temp_range:
-    label: Operating temperature range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating temperature range
-    found_in: 1/10
-  rohs:
-    label: RoHS
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - RoHS
-    found_in: 1/10
-  solderable_per:
-    label: Solderable per
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Solderable per
-    found_in: 1/10
-  vf_max:
-    label: VF max
+  vf_max@if_1a_tj_25c:
+    label: VF max @ IF=1A, TJ=25°C
     unit: V
     stat: max
-    conditions: IF=1A
+    conditions: IF=1A, TJ=25°C
     rule: <=
     critical: false
     aliases:
     - Maximum forward drop voltage
     - VF
     found_in: 1/10
-  vf_max@if_3a:
-    label: VF max @ IF=3A
+  vf_max@if_3a_tj_25c:
+    label: VF max @ IF=3A, TJ=25°C
     unit: V
     stat: max
-    conditions: IF=3A
+    conditions: IF=3A, TJ=25°C
     rule: <=
     critical: false
     aliases:
     - Forward Drop Voltage
     - VF
     found_in: 1/10
-  vf_range@if_3a_tj_125c:
-    label: VF range @ IF=3A, TJ=125°C
+  vf_max@if_40a_tj_125c:
+    label: VF max @ IF=40A, TJ=125°C
     unit: V
-    stat: range
-    conditions: IF=3A, TJ=125°C
+    stat: max
+    conditions: IF=40A, TJ=125°C
     rule: <=
     critical: false
     aliases:
-    - Instaneous Forward Voltage
-    - V_F
+    - Forward drop voltage
+    - VF
     found_in: 1/10
-  vf_range@if_3a_tj_25c:
-    label: VF range @ IF=3A, TJ=25°C
+  vf_max@if_40a_tj_25c:
+    label: VF max @ IF=40A, TJ=25°C
     unit: V
-    stat: range
-    conditions: IF=3A, TJ=25°C
+    stat: max
+    conditions: IF=40A, TJ=25°C
     rule: <=
     critical: false
     aliases:
-    - Instaneous Forward Voltage
-    - V_F
+    - Forward drop voltage
+    - VF
     found_in: 1/10
-  msl_level:
-    label: MSL level
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/10

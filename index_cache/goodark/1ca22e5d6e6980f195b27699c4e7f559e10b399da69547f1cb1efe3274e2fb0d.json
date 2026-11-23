@@ -22,9 +22,9 @@
  },
  "type": "npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:20:23+00:00",
+  "at": "2026-11-23T06:22:07+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -176,7 +176,7 @@
     "unit": "",
     "stat": "typ",
     "conditions": "VCB=10V, f=1MHz",
-    "example": "10"
+    "example": "10(Typ)"
    },
    {
     "name": "Delay time",
@@ -185,10 +185,18 @@
     "stat": "min",
     "conditions": "VCE=5V, IC=10mA,f=100MHz",
     "example": "100"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
    }
   ],
-  "seconds": 46.01,
-  "tokens_in": 1321,
-  "tokens_out": 982
+  "seconds": 43.24,
+  "tokens_in": 1421,
+  "tokens_out": 1019
  }
 }

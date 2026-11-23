@@ -23,73 +23,17 @@
  },
  "type": "multilayer_chip_inductor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:26:23+00:00",
+  "at": "2026-11-23T08:22:11+00:00",
   "items": [
    {
-    "name": "Inductance",
-    "symbol": "L",
-    "unit": "nH",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.3 to 120"
-   },
-   {
-    "name": "Tolerance",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "±0.1nH, ±0.2nH, ±0.3nH, ±2%, ±3%, ±5%"
-   },
-   {
-    "name": "Quality Factor",
-    "symbol": "Q",
-    "unit": "",
-    "stat": "min",
-    "conditions": "",
-    "example": "4, 5, 8, 10, 11, 12"
-   },
-   {
-    "name": "L/Q Freq",
-    "symbol": "",
-    "unit": "MHz",
-    "stat": "value",
-    "conditions": "",
-    "example": "100"
-   },
-   {
-    "name": "SRF min",
-    "symbol": "SRF",
-    "unit": "GHz",
-    "stat": "min",
-    "conditions": "",
-    "example": "0.60, 0.70, 0.80, 0.90, 1.00, 1.10, 1.20"
-   },
-   {
-    "name": "RDC max",
-    "symbol": "RDC",
-    "unit": "Ω",
-    "stat": "max",
-    "conditions": "",
-    "example": "0.05, 0.07, 0.08, 0.09, 0.10, 0.12, 0.13"
-   },
-   {
-    "name": "IDC max",
-    "symbol": "IDC",
-    "unit": "mA",
-    "stat": "max",
-    "conditions": "",
-    "example": "200, 250, 300, 350, 400, 450, 500, 550, "
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 125"
+    "example": "CL-SA"
    },
    {
     "name": "Size",
@@ -97,15 +41,15 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0201, 0402, 0603"
+    "example": "0201/0402/0603"
    },
    {
-    "name": "Part Numbering",
+    "name": "Operating Temperature Range",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "02, J, T, 1N0, -S, A"
+    "example": "-55 to 125"
    },
    {
     "name": "AEC-Q200 Compliance",
@@ -116,20 +60,108 @@
     "example": "Compliance"
    },
    {
-    "name": "Package Type",
-    "symbol": "",
-    "unit": "",
+    "name": "Inductance",
+    "symbol": "L",
+    "unit": "nH",
     "stat": "value",
     "conditions": "",
-    "example": "Multilayer Chip Inductor"
+    "example": "0.3"
    },
    {
-    "name": "Function Code",
+    "name": "Tolerance",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "A"
+    "example": "±0.1nH"
+   },
+   {
+    "name": "Quality Factor",
+    "symbol": "Q",
+    "unit": "",
+    "stat": "min",
+    "conditions": "L/Q Freq. (MHz)",
+    "example": "4"
+   },
+   {
+    "name": "L/Q Freq.",
+    "symbol": "",
+    "unit": "MHz",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "SRF min.",
+    "symbol": "",
+    "unit": "GHz",
+    "stat": "min",
+    "conditions": "",
+    "example": "10.00"
+   },
+   {
+    "name": "RDC max.",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "max",
+    "conditions": "",
+    "example": "0.07"
+   },
+   {
+    "name": "IDC max.",
+    "symbol": "",
+    "unit": "mA",
+    "stat": "max",
+    "conditions": "",
+    "example": "850"
+   },
+   {
+    "name": "Part Numbering",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "02 J T 1N0 -S A"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.60±0.03"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.60"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.30"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.30"
+   },
+   {
+    "name": "a",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.10~0.20"
    },
    {
     "name": "Inductance Tolerance",
@@ -151,45 +183,149 @@
     "name": "Inductance",
     "symbol": "",
     "unit": "nH",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
-    "example": "0.3 to 120"
+    "example": "0N3: 0.3nH 1N0: 1.0nH 10N: 10nH R10: 100"
    },
    {
-    "name": "Type",
+    "name": "Special",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "CL01-SA, CL02-SA, CL03-SA"
+    "example": ""
    },
    {
-    "name": "Reel Quantity",
+    "name": "Function Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A: Automotive Grade"
+   },
+   {
+    "name": "Reel Dimension A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "178±1"
+   },
+   {
+    "name": "Reel Dimension B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "60.0±0.5"
+   },
+   {
+    "name": "Reel Dimension C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "13.0±0.20"
+   },
+   {
+    "name": "Reel Dimension W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "9.00±0.5"
+   },
+   {
+    "name": "Reel Dimension T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "12.0±0.15"
+   },
+   {
+    "name": "Quantity",
     "symbol": "",
     "unit": "EA",
     "stat": "value",
     "conditions": "",
-    "example": "15,000, 10,000, 4,000"
+    "example": "15,000"
    },
    {
-    "name": "Tape Specifications",
+    "name": "Tape Specifications A",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "0.36, 0.66, 0.42, 8, 2, 3.5"
+    "example": "0.36"
    },
    {
-    "name": "Land Pattern",
+    "name": "Tape Specifications B",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "0.20-0.30, 0.80-0.90, 0.20-0.30"
+    "example": "0.66"
+   },
+   {
+    "name": "Tape Specifications T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.42"
+   },
+   {
+    "name": "Tape Specifications W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "8"
+   },
+   {
+    "name": "Tape Specifications P",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
+   },
+   {
+    "name": "Tape Specifications F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.5"
+   },
+   {
+    "name": "Land Pattern A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.20-0.30"
+   },
+   {
+    "name": "Land Pattern B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.80-0.90"
+   },
+   {
+    "name": "Land Pattern C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.20-030"
    }
   ],
-  "seconds": 79.11,
-  "tokens_in": 9990,
-  "tokens_out": 1596
+  "seconds": 70.29,
+  "tokens_in": 10090,
+  "tokens_out": 1857
  }
 }

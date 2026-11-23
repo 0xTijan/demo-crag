@@ -22,9 +22,9 @@
  },
  "type": "npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:22:02+00:00",
+  "at": "2026-11-23T06:23:46+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -86,7 +86,7 @@
     "name": "Thermal Resistance from Junction to Ambient",
     "symbol": "R θJA",
     "unit": "℃/W",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "417"
    },
@@ -142,9 +142,9 @@
     "name": "DC current gain",
     "symbol": "hFE(2)",
     "unit": "",
-    "stat": "range",
+    "stat": "min",
     "conditions": "VCE=-1V, IC=-500mA",
-    "example": "40-"
+    "example": "40"
    },
    {
     "name": "Collector-emitter saturation voltage",
@@ -169,10 +169,18 @@
     "stat": "min",
     "conditions": "VCE=-5V, IC=10mA,f=100 MHz",
     "example": "100"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
    }
   ],
-  "seconds": 58.26,
-  "tokens_in": 1262,
-  "tokens_out": 876
+  "seconds": 55.76,
+  "tokens_in": 1362,
+  "tokens_out": 909
  }
 }

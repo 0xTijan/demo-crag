@@ -24,85 +24,77 @@
  },
  "type": "zener_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:29:04+00:00",
+  "at": "2026-11-23T06:30:18+00:00",
   "items": [
    {
     "name": "Forward Voltage",
     "symbol": "VF",
     "unit": "V",
     "stat": "max",
-    "conditions": "I_F=10mA",
+    "conditions": "I =10mA F",
     "example": "0.9"
    },
    {
     "name": "Power Dissipation",
-    "symbol": "P_D",
+    "symbol": "P D",
     "unit": "mW",
     "stat": "max",
     "conditions": "",
     "example": "500"
    },
    {
-    "name": "Power Dissipation",
-    "symbol": "P_D",
-    "unit": "mW",
-    "stat": "max",
-    "conditions": "Device mounted on ceramic PCB: 7.6mm x 9.4mm x 0.87mm with pad areas 25mm²",
-    "example": "200"
-   },
-   {
     "name": "Thermal Resistance, Junction to Ambient",
-    "symbol": "R_θJA",
+    "symbol": "R θJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "Device mounted on FR4 PCB, recommended footprint",
+    "conditions": "",
     "example": "625"
    },
    {
     "name": "Operating Temperature Range",
-    "symbol": "T_J",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-65 to 150"
+    "example": "-65 to +150"
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "T_STG",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-65 to 150"
+    "example": "-65 to +150"
    },
    {
     "name": "Zener Voltage Range",
-    "symbol": "V_Z",
+    "symbol": "Vz",
     "unit": "V",
     "stat": "range",
-    "conditions": "I_ZT=5mA",
+    "conditions": "I ZT =5mA",
     "example": "1.8 to 2.15"
    },
    {
     "name": "Maximum Zener Impedance",
-    "symbol": "Z_ZT",
+    "symbol": "Z ZT",
     "unit": "Ω",
     "stat": "max",
-    "conditions": "I_ZT=5mA, f=1KHz",
+    "conditions": "I ZT =5mA, f=1KHz",
     "example": "150"
    },
    {
     "name": "Maximum Zener Impedance",
-    "symbol": "Z_ZK",
+    "symbol": "Z ZK",
     "unit": "Ω",
     "stat": "max",
-    "conditions": "I_ZK=1mA, f=1KHz",
+    "conditions": "I ZK =1mA, f=1KHz",
     "example": "600"
    },
    {
     "name": "Maximum Reverse Current",
-    "symbol": "I_R",
+    "symbol": "I R",
     "unit": "uA",
     "stat": "max",
     "conditions": "",
@@ -113,12 +105,20 @@
     "symbol": "ZTC",
     "unit": "mV/°C",
     "stat": "range",
-    "conditions": "I_Z=5mA",
+    "conditions": "I =5mA",
     "example": "-3.5 to 0"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-323"
    }
   ],
-  "seconds": 142.79,
-  "tokens_in": 4355,
-  "tokens_out": 570
+  "seconds": 143.39,
+  "tokens_in": 4455,
+  "tokens_out": 554
  }
 }

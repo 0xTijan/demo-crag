@@ -21,25 +21,17 @@
  },
  "type": "thick_film_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:10:15+00:00",
+  "at": "2026-11-23T07:20:51+00:00",
   "items": [
    {
-    "name": "Customer",
+    "name": "Product Type",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Viking Tech Corporation"
-   },
-   {
-    "name": "Product",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "High Ohmic Chip Resistor - HMR Series"
+    "example": "High Ohmic Chip Resistor"
    },
    {
     "name": "Size",
@@ -50,36 +42,12 @@
     "example": "0805/1206"
    },
    {
-    "name": "Issued Date",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "15-Jun-22"
-   },
-   {
-    "name": "Edition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "REV.A8"
-   },
-   {
-    "name": "Company",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Viking Tech Corporation"
-   },
-   {
-    "name": "Product Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "High Ohmic Chip Resistor"
+    "example": "HMR05/HMR06"
    },
    {
     "name": "Resistance Range",
@@ -186,100 +154,20 @@
     "example": "±1000"
    },
    {
-    "name": "Dimensions",
+    "name": "Insulation Resistance",
     "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05 (0805) L",
-    "example": "2.00±0.10"
+    "unit": "G",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
    },
    {
-    "name": "Dimensions",
+    "name": "Solderability",
     "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05 (0805) W",
-    "example": "1.25±0.10"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05 (0805) T",
-    "example": "0.50±0.10"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05 (0805) D1",
-    "example": "0.35±0.20"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05 (0805) D2",
-    "example": "0.40±0.20"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06 (1206) L",
-    "example": "3.10±0.10"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06 (1206) W",
-    "example": "1.55±0.10"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06 (1206) T",
-    "example": "0.55±0.10"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06 (1206) D1",
-    "example": "0.50±0.25"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06 (1206) D2",
-    "example": "0.50±0.20"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "g",
-    "stat": "value",
-    "conditions": "HMR05 (0805) 1000pcs",
-    "example": "4.368"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "g",
-    "stat": "value",
-    "conditions": "HMR06 (1206) 1000pcs",
-    "example": "8.947"
+    "unit": "%",
+    "stat": "min",
+    "conditions": "",
+    "example": "95"
    },
    {
     "name": "Resistance Tolerance",
@@ -290,392 +178,16 @@
     "example": "±5"
    },
    {
-    "name": "Function Code",
+    "name": "Marking",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "L"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "7: 7\" Reel 5Kpcs",
-    "example": "7"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "A: 10\" Reel 10Kpcs",
-    "example": "A"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "D: 13\" Reel 20Kpcs",
-    "example": "D"
-   },
-   {
-    "name": "Tape Width",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "8"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "inch",
-    "stat": "value",
-    "conditions": "7 inch",
-    "example": "7"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "inch",
-    "stat": "value",
-    "conditions": "10 inch",
-    "example": "10"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "inch",
-    "stat": "value",
-    "conditions": "13 inch",
-    "example": "13"
-   },
-   {
-    "name": "ΦA",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "7 inch",
-    "example": "178.5±1.5"
-   },
-   {
-    "name": "ΦB",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "7 inch",
-    "example": "60+1/-0"
-   },
-   {
-    "name": "ΦC",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "7 inch",
-    "example": "13.0±0.2"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "7 inch",
-    "example": "9.0±0.5"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "7 inch",
-    "example": "12.5±0.5"
-   },
-   {
-    "name": "ΦA",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "10 inch",
-    "example": "254±1.0"
-   },
-   {
-    "name": "ΦB",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "10 inch",
-    "example": "100±0.5"
-   },
-   {
-    "name": "ΦC",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "10 inch",
-    "example": "13.0±0.2"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "10 inch",
-    "example": "9.5±0.5"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "10 inch",
-    "example": "13.5±0.5"
-   },
-   {
-    "name": "ΦA",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "13 inch",
-    "example": "330±1.0"
-   },
-   {
-    "name": "ΦB",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "13 inch",
-    "example": "100±0.5"
-   },
-   {
-    "name": "ΦC",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "13 inch",
-    "example": "13.0±0.2"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "13 inch",
-    "example": "9.5±0.5"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "13 inch",
-    "example": "13.5±0.5"
-   },
-   {
-    "name": "A",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "1.60±0.10"
-   },
-   {
-    "name": "B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "2.40±0.20"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "8.0±0.20"
-   },
-   {
-    "name": "E",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "1.75±0.10"
-   },
-   {
-    "name": "F",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "3.50±0.05"
-   },
-   {
-    "name": "P0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "4.00±0.10"
-   },
-   {
-    "name": "P1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "4.00±0.05"
-   },
-   {
-    "name": "P2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "2.00±0.05"
-   },
-   {
-    "name": "ΦD0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "1.50+0.1,-0"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR05",
-    "example": "0.85±0.10"
-   },
-   {
-    "name": "A",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "1.90±0.10"
-   },
-   {
-    "name": "B",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "3.50±0.20"
-   },
-   {
-    "name": "W",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "8.0±0.20"
-   },
-   {
-    "name": "E",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "1.75±0.10"
-   },
-   {
-    "name": "F",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "3.50±0.05"
-   },
-   {
-    "name": "P0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "4.00±0.10"
-   },
-   {
-    "name": "P1",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "4.00±0.05"
-   },
-   {
-    "name": "P2",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "2.00±0.05"
-   },
-   {
-    "name": "ΦD0",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "1.50+0.1,-0"
-   },
-   {
-    "name": "T",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "HMR06",
-    "example": "0.85±0.10"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "",
-    "example": "95"
-   },
-   {
-    "name": "Resistance to Soldering Heat",
-    "symbol": "",
-    "unit": "%",
-    "stat": "range",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Voltage Proof",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No breakdown or flashover"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "15~28"
-   },
-   {
-    "name": "Shelf Life",
-    "symbol": "",
-    "unit": "years",
-    "stat": "value",
-    "conditions": "",
-    "example": "2"
+    "example": "3 digits marking in E24"
    }
   ],
-  "seconds": 155.98,
-  "tokens_in": 4208,
-  "tokens_out": 3766
+  "seconds": 100.15,
+  "tokens_in": 4308,
+  "tokens_out": 1049
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:48:01+00:00",
+  "at": "2026-11-23T05:48:33+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -69,15 +69,15 @@
     "symbol": "IRRM",
     "unit": "A",
     "stat": "max",
-    "conditions": "tp=4.0us ,1KHz",
+    "conditions": "",
     "example": "3"
    },
    {
     "name": "Junction Temperature in DC forward Current without reverse bias, t ≤1h",
-    "symbol": "TJ",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
-    "conditions": "t ≤1h",
+    "conditions": "",
     "example": "-55 to +200"
    },
    {
@@ -143,10 +143,18 @@
     "stat": "typ",
     "conditions": "",
     "example": "0.7"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Epoxy, Molded"
    }
   ],
-  "seconds": 42.35,
-  "tokens_in": 1235,
-  "tokens_out": 751
+  "seconds": 50.81,
+  "tokens_in": 1335,
+  "tokens_out": 767
  }
 }

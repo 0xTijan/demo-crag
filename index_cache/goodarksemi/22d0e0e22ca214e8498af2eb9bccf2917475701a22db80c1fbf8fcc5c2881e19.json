@@ -20,9 +20,9 @@
  },
  "type": "polymer_esd_suppressor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:05:43+00:00",
+  "at": "2026-11-23T07:17:10+00:00",
   "items": [
    {
     "name": "Maximum Contact Discharge Voltage Per IEC61000-4-2",
@@ -92,9 +92,9 @@
     "name": "Leakage Current",
     "symbol": "IL",
     "unit": "uA",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "DC 5V shall be applied on component",
-    "example": "0.01"
+    "example": "0.01 to 0.10"
    },
    {
     "name": "Capacitance",
@@ -105,36 +105,12 @@
     "example": "0.05"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0603"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "0603"
-   },
-   {
-    "name": "Carrier",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tape & Reel"
-   },
-   {
-    "name": "Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "5000/Reel"
    },
    {
     "name": "HSF Status",
@@ -145,8 +121,8 @@
     "example": "RoHS Compliant"
    }
   ],
-  "seconds": 40.7,
-  "tokens_in": 1792,
-  "tokens_out": 661
+  "seconds": 32.05,
+  "tokens_in": 1892,
+  "tokens_out": 564
  }
 }

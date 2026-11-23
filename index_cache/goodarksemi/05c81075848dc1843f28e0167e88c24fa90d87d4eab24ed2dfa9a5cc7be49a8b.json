@@ -20,9 +20,9 @@
  },
  "type": "ultrafast_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:59:31+00:00",
+  "at": "2026-11-23T06:02:22+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -52,13 +52,13 @@
     "name": "Rating for Fusing (t=8.3ms)",
     "symbol": "I2t",
     "unit": "A2S",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "14.94"
    },
    {
     "name": "Operating Junction Temperature Range",
-    "symbol": "",
+    "symbol": "T_J",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
@@ -66,7 +66,7 @@
    },
    {
     "name": "Storge Temperature Range",
-    "symbol": "",
+    "symbol": "T_stg",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
@@ -86,7 +86,7 @@
     "unit": "V",
     "stat": "range",
     "conditions": "I_F=3.0A, T_J=125℃",
-    "example": "0.68"
+    "example": "0.68 to 0.68"
    },
    {
     "name": "Reverse Current",
@@ -121,40 +121,16 @@
     "example": "17 to 25"
    },
    {
-    "name": "Typical Thermal Resistance, Junction to Case",
-    "symbol": "R_θJC",
-    "unit": "℃/W",
-    "stat": "value",
-    "conditions": "",
-    "example": "2.5"
-   },
-   {
-    "name": "Case",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "JEDEC TO-252(DPAK) molded plastic body"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Solderable per MIL-STD-202, method 208"
-   },
-   {
-    "name": "Polarity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "As marked"
+    "example": "TO-252"
    }
   ],
-  "seconds": 51.23,
-  "tokens_in": 1288,
-  "tokens_out": 812
+  "seconds": 41.64,
+  "tokens_in": 1388,
+  "tokens_out": 689
  }
 }

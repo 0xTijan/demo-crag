@@ -24,9 +24,9 @@
  },
  "type": "polymer_aluminum_capacitor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:05:13+00:00",
+  "at": "2026-11-23T08:45:40+00:00",
   "items": [
    {
     "name": "Part No.",
@@ -49,16 +49,8 @@
     "symbol": "",
     "unit": "hours",
     "stat": "value",
-    "conditions": "105°C",
+    "conditions": "at 105°C",
     "example": "5,000"
-   },
-   {
-    "name": "Suitable for",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "DC-DC converters, voltage regulators and"
    },
    {
     "name": "RoHS Compliant",
@@ -69,12 +61,12 @@
     "example": "Yes"
    },
    {
-    "name": "Type",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "AV5K0506"
+    "example": "SMD"
    },
    {
     "name": "D",
@@ -149,71 +141,95 @@
     "example": "1.4±0.3"
    },
    {
-    "name": "Frequency",
-    "symbol": "",
-    "unit": "Hz",
-    "stat": "range",
-    "conditions": "",
-    "example": "120Hz≦f<1KHz"
-   },
-   {
-    "name": "Coefficient",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.05"
-   },
-   {
     "name": "Tolerance on Rated Capacitance",
     "symbol": "",
-    "unit": "%",
+    "unit": "",
     "stat": "range",
-    "conditions": "120Hz±10% at 20±2°C",
-    "example": "±20"
+    "conditions": "at 120Hz±10% at 20±2°C",
+    "example": "±20%"
    },
    {
     "name": "Leakage current",
     "symbol": "",
-    "unit": "μA",
-    "stat": "max",
-    "conditions": "DC rated voltage, 20±2°C",
-    "example": "≤ value"
+    "unit": "",
+    "stat": "value",
+    "conditions": "after voltage treatment",
+    "example": "In accordance within standard ratings"
    },
    {
-    "name": "Tangent of loss angle (tanδ)",
-    "symbol": "tanδ",
+    "name": "tanδ",
+    "symbol": "",
     "unit": "",
     "stat": "max",
-    "conditions": "120Hz±10% at 20±2°C",
+    "conditions": "at 120Hz±10% at 20±2°C",
     "example": "0.12"
    },
    {
-    "name": "Equivalent Series Resistance (ESR)",
-    "symbol": "ESR",
+    "name": "ESR",
+    "symbol": "",
     "unit": "Ω",
     "stat": "max",
-    "conditions": "100kHz",
-    "example": "≤ value"
+    "conditions": "at 100kHz",
+    "example": "shall be less than or equal to the value"
    },
    {
-    "name": "Impedance ratio: Z(-55℃)/Z(+20℃)",
+    "name": "Impedance ratio Z(-55°C)/Z(+20°C)",
     "symbol": "",
     "unit": "",
     "stat": "max",
-    "conditions": "100kHz",
+    "conditions": "at -55±3°C, 100kHz",
     "example": "1.25"
    },
    {
-    "name": "Impedance ratio: Z(-105℃)/Z(+20℃)",
+    "name": "Impedance ratio Z(-105°C)/Z(+20°C)",
     "symbol": "",
     "unit": "",
     "stat": "max",
-    "conditions": "100kHz",
+    "conditions": "at -105±2°C, 100kHz",
     "example": "1.25"
    },
    {
-    "name": "a",
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "120Hz≦f<1KHz",
+    "example": "0.05"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "1KHz≦f<10KHz",
+    "example": "0.3"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "10KHz≦f<50KHz",
+    "example": "0.7"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "50KHz≦f<100KHz",
+    "example": "0.85"
+   },
+   {
+    "name": "Frequency Correction Factor",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "100KHz≦f≦300KHz",
+    "example": "1"
+   },
+   {
+    "name": "Soldering Pad a",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -221,7 +237,7 @@
     "example": "1.4"
    },
    {
-    "name": "b",
+    "name": "Soldering Pad b",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -229,7 +245,47 @@
     "example": "3.0"
    },
    {
-    "name": "T",
+    "name": "Soldering Pad c",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.6"
+   },
+   {
+    "name": "Reel A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "381±2"
+   },
+   {
+    "name": "Reel B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "100±0.5"
+   },
+   {
+    "name": "Reel C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "13±0.5"
+   },
+   {
+    "name": "Reel W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "13.5±0.8"
+   },
+   {
+    "name": "Reel T",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -245,6 +301,22 @@
     "example": "1,200"
    },
    {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 105"
+   },
+   {
+    "name": "Maximum Operating Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "105"
+   },
+   {
     "name": "Polarity",
     "symbol": "",
     "unit": "",
@@ -253,40 +325,32 @@
     "example": "Polarized"
    },
    {
-    "name": "Operating temperature range",
+    "name": "Ripple Current",
     "symbol": "",
-    "unit": "°C",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "-55 to 105"
+    "example": "Never make current larger than the rated"
    },
    {
-    "name": "Soldering temperature",
+    "name": "Leakage Current",
     "symbol": "",
-    "unit": "°C",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "Reflow soldering within recommended rang"
+    "example": "Leakage current may increase slightly de"
    },
    {
-    "name": "Ripple current",
+    "name": "Applied Voltage",
     "symbol": "",
-    "unit": "A",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "10"
-   },
-   {
-    "name": "Leakage current",
-    "symbol": "",
-    "unit": "μA",
-    "stat": "max",
-    "conditions": "After voltage treatment",
-    "example": "≤ value"
+    "example": "Do not apply voltages exceeding the full"
    }
   ],
-  "seconds": 27.47,
-  "tokens_in": 5371,
-  "tokens_out": 1515
+  "seconds": 44.93,
+  "tokens_in": 5471,
+  "tokens_out": 1701
  }
 }

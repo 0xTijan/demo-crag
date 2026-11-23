@@ -24,9 +24,9 @@
  },
  "type": "schottky_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:50:34+00:00",
+  "at": "2026-11-23T08:34:18+00:00",
   "items": [
    {
     "name": "Repetitive Peak Reverse Voltage",
@@ -78,7 +78,7 @@
    },
    {
     "name": "Storage Temperature",
-    "symbol": "TSTG",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -115,10 +115,18 @@
     "stat": "max",
     "conditions": "T=100°C A",
     "example": "10000"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ABS Molding compound meets UL 94 V-0 fla"
    }
   ],
-  "seconds": 11.8,
-  "tokens_in": 1395,
-  "tokens_out": 596
+  "seconds": 12.99,
+  "tokens_in": 1495,
+  "tokens_out": 646
  }
 }

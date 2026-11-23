@@ -20,17 +20,33 @@
  },
  "type": "complementary_mosfet",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:54:58+00:00",
+  "at": "2026-11-23T07:03:44+00:00",
   "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Absolute Maximum Ratings"
+   },
    {
     "name": "Drain-Source Voltage",
     "symbol": "VDS",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "N-Channel",
     "example": "20"
+   },
+   {
+    "name": "Drain-Source Voltage",
+    "symbol": "VDS",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "P-Channel",
+    "example": "-20"
    },
    {
     "name": "Gate-Source Voltage",
@@ -38,7 +54,7 @@
     "unit": "V",
     "stat": "max",
     "conditions": "",
-    "example": "10"
+    "example": "±10"
    },
    {
     "name": "Drain Current",
@@ -61,7 +77,7 @@
     "symbol": "IDM",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "1",
     "example": "2.7"
    },
    {
@@ -82,7 +98,7 @@
    },
    {
     "name": "Junction and Storage Temperature Range",
-    "symbol": "TJSTG",
+    "symbol": "TJ/STG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -93,7 +109,7 @@
     "symbol": "BV DSS",
     "unit": "V",
     "stat": "min",
-    "conditions": "VGS=0V, ID=250μA",
+    "conditions": "N-Channel",
     "example": "20"
    },
    {
@@ -101,7 +117,7 @@
     "symbol": "IDSS",
     "unit": "μA",
     "stat": "max",
-    "conditions": "VDS=20V, VGS=0V, TC=25°C",
+    "conditions": "N-Channel",
     "example": "1"
    },
    {
@@ -109,15 +125,15 @@
     "symbol": "IGSS",
     "unit": "μA",
     "stat": "max",
-    "conditions": "VGS=±10V, VDS=0V",
-    "example": "10"
+    "conditions": "N-Channel",
+    "example": "±10"
    },
    {
     "name": "Gate Threshold Voltage",
     "symbol": "VGS(th)",
     "unit": "V",
     "stat": "range",
-    "conditions": "VDS=VGS, ID=250μA",
+    "conditions": "N-Channel",
     "example": "0.4 to 1"
    },
    {
@@ -149,7 +165,7 @@
     "symbol": "Ciss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "VDS=10V, VGS=0V, f=1MHz",
+    "conditions": "N-Channel",
     "example": "20.3"
    },
    {
@@ -157,7 +173,7 @@
     "symbol": "Coss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "VDS=10V, VGS=0V, f=1MHz",
+    "conditions": "N-Channel",
     "example": "5.4"
    },
    {
@@ -165,7 +181,7 @@
     "symbol": "Crss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "VDS=10V, VGS=0V, f=1MHz",
+    "conditions": "N-Channel",
     "example": "2.4"
    },
    {
@@ -173,7 +189,7 @@
     "symbol": "Qg",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VGS=4.5V, VDS=10V, ID=0.7A",
+    "conditions": "N-Channel",
     "example": "0.28"
    },
    {
@@ -181,7 +197,7 @@
     "symbol": "Qgs",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VGS=4.5V, VDS=10V, ID=0.7A",
+    "conditions": "N-Channel",
     "example": "0.05"
    },
    {
@@ -189,7 +205,7 @@
     "symbol": "Qgd",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VGS=4.5V, VDS=10V, ID=0.7A",
+    "conditions": "N-Channel",
     "example": "0.11"
    },
    {
@@ -197,7 +213,7 @@
     "symbol": "td(on)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VGS=4.5V, VDS=10V, ID=0.7A, RG=2.5Ω",
+    "conditions": "N-Channel",
     "example": "3.7"
    },
    {
@@ -205,7 +221,7 @@
     "symbol": "tr",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VGS=4.5V, VDS=10V, ID=0.7A, RG=2.5Ω",
+    "conditions": "N-Channel",
     "example": "4.04"
    },
    {
@@ -213,7 +229,7 @@
     "symbol": "td(off)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VGS=4.5V, VDS=10V, ID=0.7A, RG=2.5Ω",
+    "conditions": "N-Channel",
     "example": "14.28"
    },
    {
@@ -221,7 +237,7 @@
     "symbol": "tf",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VGS=4.5V, VDS=10V, ID=0.7A, RG=2.5Ω",
+    "conditions": "N-Channel",
     "example": "3.62"
    },
    {
@@ -229,7 +245,7 @@
     "symbol": "IS",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "N-Channel",
     "example": "0.7"
    },
    {
@@ -237,7 +253,7 @@
     "symbol": "VSD",
     "unit": "V",
     "stat": "range",
-    "conditions": "IS=0.5A, VGS=0V",
+    "conditions": "N-Channel",
     "example": "0.8 to 1.2"
    },
    {
@@ -245,7 +261,7 @@
     "symbol": "BV DSS",
     "unit": "V",
     "stat": "min",
-    "conditions": "VGS=0V, ID=-250μA",
+    "conditions": "P-Channel",
     "example": "-20"
    },
    {
@@ -253,15 +269,23 @@
     "symbol": "IDSS",
     "unit": "μA",
     "stat": "max",
-    "conditions": "VDS=-20V, VGS=0V, TC=25°C",
+    "conditions": "P-Channel",
     "example": "-1"
+   },
+   {
+    "name": "Gate-Body Leakage Current",
+    "symbol": "IGSS",
+    "unit": "μA",
+    "stat": "max",
+    "conditions": "P-Channel",
+    "example": "±10"
    },
    {
     "name": "Gate Threshold Voltage",
     "symbol": "VGS(th)",
     "unit": "V",
     "stat": "range",
-    "conditions": "VDS=VGS, ID=-250μA",
+    "conditions": "P-Channel",
     "example": "-0.4 to -1"
    },
    {
@@ -285,7 +309,7 @@
     "symbol": "Ciss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "VDS=-10V, VGS=0V, f=1MHz",
+    "conditions": "P-Channel",
     "example": "31"
    },
    {
@@ -293,7 +317,7 @@
     "symbol": "Coss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "VDS=-10V, VGS=0V, f=1MHz",
+    "conditions": "P-Channel",
     "example": "12"
    },
    {
@@ -301,7 +325,7 @@
     "symbol": "Crss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "VDS=-10V, VGS=0V, f=1MHz",
+    "conditions": "P-Channel",
     "example": "7"
    },
    {
@@ -309,7 +333,7 @@
     "symbol": "Qg",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VGS=-4.5V, VDS=-10V, ID=-0.2A",
+    "conditions": "P-Channel",
     "example": "1.1"
    },
    {
@@ -317,7 +341,7 @@
     "symbol": "Qgs",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VGS=-4.5V, VDS=-10V, ID=-0.2A",
+    "conditions": "P-Channel",
     "example": "0.32"
    },
    {
@@ -325,7 +349,7 @@
     "symbol": "Qgd",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "VGS=-4.5V, VDS=-10V, ID=-0.2A",
+    "conditions": "P-Channel",
     "example": "0.22"
    },
    {
@@ -333,7 +357,7 @@
     "symbol": "td(on)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VGS=-4.5V, VDS=-10V, ID=-0.2A, RG=3Ω",
+    "conditions": "P-Channel",
     "example": "5"
    },
    {
@@ -341,7 +365,7 @@
     "symbol": "tr",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VGS=-4.5V, VDS=-10V, ID=-0.2A, RG=3Ω",
+    "conditions": "P-Channel",
     "example": "18"
    },
    {
@@ -349,7 +373,7 @@
     "symbol": "td(off)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VGS=-4.5V, VDS=-10V, ID=-0.2A, RG=3Ω",
+    "conditions": "P-Channel",
     "example": "14"
    },
    {
@@ -357,15 +381,23 @@
     "symbol": "tf",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "VGS=-4.5V, VDS=-10V, ID=-0.2A, RG=3Ω",
+    "conditions": "P-Channel",
     "example": "25"
+   },
+   {
+    "name": "Maximum Body-Diode Continuous Current",
+    "symbol": "IS",
+    "unit": "A",
+    "stat": "max",
+    "conditions": "P-Channel",
+    "example": "-0.4"
    },
    {
     "name": "Diode Forward Voltage",
     "symbol": "VSD",
     "unit": "V",
     "stat": "range",
-    "conditions": "IS=-0.2A, VGS=0V",
+    "conditions": "P-Channel",
     "example": "-0.85 to -1.2"
    },
    {
@@ -383,6 +415,14 @@
     "stat": "value",
     "conditions": "",
     "example": "10"
+   },
+   {
+    "name": "Mounting Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Surface Mount"
    },
    {
     "name": "Operating Temperature Range",
@@ -409,8 +449,8 @@
     "example": "Compliant"
    }
   ],
-  "seconds": 189.85,
-  "tokens_in": 3406,
-  "tokens_out": 2856
+  "seconds": 177.95,
+  "tokens_in": 3506,
+  "tokens_out": 2405
  }
 }

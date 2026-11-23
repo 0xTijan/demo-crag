@@ -22,9 +22,9 @@
  },
  "type": "dual_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:03:39+00:00",
+  "at": "2026-11-23T08:43:49+00:00",
   "items": [
    {
     "name": "Collector Base Voltage",
@@ -150,7 +150,7 @@
     "name": "Base Emitter On Voltage",
     "symbol": "V BE(ON)",
     "unit": "mV",
-    "stat": "max",
+    "stat": "range",
     "conditions": "V =-5V, I =-2mA",
     "example": "-600"
    },
@@ -177,10 +177,18 @@
     "stat": "max",
     "conditions": "V =-10V, F=1MHz",
     "example": "4.5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-563"
    }
   ],
-  "seconds": 82.19,
-  "tokens_in": 1325,
-  "tokens_out": 1055
+  "seconds": 55.16,
+  "tokens_in": 1425,
+  "tokens_out": 1090
  }
 }

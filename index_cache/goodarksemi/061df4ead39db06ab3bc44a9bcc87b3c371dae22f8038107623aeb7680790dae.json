@@ -21,9 +21,9 @@
  },
  "type": "npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:19:56+00:00",
+  "at": "2026-11-23T06:21:41+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -186,14 +186,6 @@
     "example": "38"
    },
    {
-    "name": "Classification of hFE(1)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GSBCP68-10"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
@@ -202,8 +194,8 @@
     "example": "SOT-223"
    }
   ],
-  "seconds": 18.96,
-  "tokens_in": 1246,
-  "tokens_out": 1139
+  "seconds": 17.54,
+  "tokens_in": 1346,
+  "tokens_out": 1013
  }
 }

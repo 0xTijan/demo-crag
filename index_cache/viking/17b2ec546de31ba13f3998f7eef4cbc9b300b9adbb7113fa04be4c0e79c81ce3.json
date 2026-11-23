@@ -20,61 +20,29 @@
  },
  "type": "wire_wound_chip_inductor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:11:21+00:00",
+  "at": "2026-11-23T08:48:17+00:00",
   "items": [
    {
-    "name": "Product Type",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Wire Wound Chip Inductor(Ferrite) –NL-M "
+    "example": "NL10-M, NL12-M"
    },
    {
-    "name": "Sizes",
+    "name": "Size",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1210/1812"
-   },
-   {
-    "name": "Dimensions (LxW)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "10: 1210 12: 1812"
-   },
-   {
-    "name": "Inductance Tolerance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "J: ±5% K: ±10% M: ±20%"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T: Taping Reel"
-   },
-   {
-    "name": "Current",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": ": Standard C: Large Current"
+    "example": "1210, 1812"
    },
    {
     "name": "Inductance",
-    "symbol": "",
+    "symbol": "L",
     "unit": "μH",
     "stat": "range",
     "conditions": "",
@@ -84,9 +52,9 @@
     "name": "Tolerance",
     "symbol": "",
     "unit": "",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
-    "example": "±5, ±10, ±20%"
+    "example": "±5%, ±10%, ±20%"
    },
    {
     "name": "Q min.",
@@ -102,26 +70,26 @@
     "unit": "MHz",
     "stat": "value",
     "conditions": "",
-    "example": "0.796"
+    "example": "0.796, 2.52, 7.96, 25.2, 100"
    },
    {
-    "name": "SRF (min.)",
+    "name": "SRF min.",
     "symbol": "SRF",
     "unit": "MHz",
     "stat": "min",
     "conditions": "",
-    "example": "7"
+    "example": "8"
    },
    {
-    "name": "SRF (typ.)",
+    "name": "SRF typ.",
     "symbol": "SRF",
     "unit": "MHz",
     "stat": "typ",
     "conditions": "",
-    "example": "8.5"
+    "example": "9.5"
    },
    {
-    "name": "DCR (max.)",
+    "name": "DCR max.",
     "symbol": "DCR",
     "unit": "Ω",
     "stat": "max",
@@ -129,7 +97,7 @@
     "example": "0.156"
    },
    {
-    "name": "IDC (max.)",
+    "name": "IDC max.",
     "symbol": "IDC",
     "unit": "mA",
     "stat": "max",
@@ -156,149 +124,21 @@
     "name": "Humidity",
     "symbol": "",
     "unit": "%RH",
-    "stat": "range",
+    "stat": "max",
     "conditions": "",
-    "example": "< 80"
+    "example": "80"
    },
    {
     "name": "Shelf life",
     "symbol": "",
     "unit": "years",
-    "stat": "value",
+    "stat": "max",
     "conditions": "",
     "example": "2"
-   },
-   {
-    "name": "Package Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Molding Type"
-   },
-   {
-    "name": "Size (Inch)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1210"
-   },
-   {
-    "name": "A",
-    "symbol": "A",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "3.2±0.4"
-   },
-   {
-    "name": "B",
-    "symbol": "B",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.5±0.2"
-   },
-   {
-    "name": "C",
-    "symbol": "C",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.2±0.2"
-   },
-   {
-    "name": "D",
-    "symbol": "D",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.9±0.3"
-   },
-   {
-    "name": "E",
-    "symbol": "E",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.0±0.2"
-   },
-   {
-    "name": "F",
-    "symbol": "F",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.6±0.2"
-   },
-   {
-    "name": "G",
-    "symbol": "G",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.2±0.2"
-   },
-   {
-    "name": "H",
-    "symbol": "H",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.4"
-   },
-   {
-    "name": "I",
-    "symbol": "I",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.0"
-   },
-   {
-    "name": "J",
-    "symbol": "J",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.8"
-   },
-   {
-    "name": "Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "NL10(C)-M"
-   },
-   {
-    "name": "Inductance (μH)",
-    "symbol": "L",
-    "unit": "μH",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.10, 0.12, 0.15, ..."
-   },
-   {
-    "name": "Q min.",
-    "symbol": "Q",
-    "unit": "",
-    "stat": "min",
-    "conditions": "Test Freq. (MHz)",
-    "example": "28"
-   },
-   {
-    "name": "Test Freq. (MHz)",
-    "symbol": "f",
-    "unit": "MHz",
-    "stat": "value",
-    "conditions": "",
-    "example": "100"
    }
   ],
-  "seconds": 106.06,
-  "tokens_in": 11644,
-  "tokens_out": 6946
+  "seconds": 20.72,
+  "tokens_in": 11744,
+  "tokens_out": 722
  }
 }

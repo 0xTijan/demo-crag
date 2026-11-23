@@ -24,111 +24,95 @@
  },
  "type": "thin_film_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:41:32+00:00",
+  "at": "2026-11-23T07:43:01+00:00",
   "items": [
    {
-    "name": "Operating Temp. Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 ~ +155°C"
-   },
-   {
-    "name": "Power Rating at 70°C",
+    "name": "Customer",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1/32W"
+    "example": "Viking Tech Corporation"
    },
    {
-    "name": "Max. Operating Voltage",
+    "name": "Product",
     "symbol": "",
-    "unit": "V",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "15"
+    "example": "Thin Film Precision Chip Resistor - AR S"
    },
    {
-    "name": "Max. Overload Voltage",
+    "name": "Size",
     "symbol": "",
-    "unit": "V",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "30"
+    "example": "0201/0402/0603/0805/1206/1210/2010/2512"
    },
    {
-    "name": "Resistance Range",
+    "name": "Issued Date",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "±0.05%",
-    "example": "49.9Ω - 12KΩ"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±0.1%",
-    "example": "4Ω - 511KΩ"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±0.25%",
-    "example": "4Ω - 511KΩ"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±0.5%",
-    "example": "4Ω - 511KΩ"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±1%",
-    "example": "1Ω - 3MΩ"
-   },
-   {
-    "name": "TCR(25°C/-55°C)",
-    "symbol": "",
-    "unit": "PPM",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
+    "example": "9-Sep-26"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.G1"
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Advanced thin film technology"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "High power applications"
+   },
+   {
+    "name": "Temperature Coefficient of Resistance (TCR)",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "25°C/-55°C",
     "example": "-15 ~ +10"
    },
    {
-    "name": "Temperature Coefficient of Resistance (T.C.R.)",
+    "name": "Short Time Overload",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "As Spec."
+    "example": "ΔR±0.2% for Ultra high power rating"
    },
    {
     "name": "Insulation Resistance",
     "symbol": "",
     "unit": "MΩ",
-    "stat": "min",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "100V for 1 minute DC",
     "example": ">9999"
    },
    {
     "name": "Endurance",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "ΔR±0.5% for Ultra high power rating"
    },
@@ -137,24 +121,24 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": ""
+    "conditions": "2010 2512 sizes: 2 mm Other sizes: 3 mm",
+    "example": "3 mm"
    },
    {
-    "name": "Damp Heat with Load",
+    "name": "Damp Heat with Load (for 0201 size)",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "for 0201 size",
+    "stat": "range",
+    "conditions": "",
     "example": "ΔR±0.3%"
    },
    {
     "name": "Solderability",
     "symbol": "",
     "unit": "",
-    "stat": "min",
+    "stat": "value",
     "conditions": "",
-    "example": "95%"
+    "example": "95% min. coverage"
    },
    {
     "name": "Resistance to Soldering Heat",
@@ -176,49 +160,49 @@
     "name": "Low Temperature Operation",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "ΔR±0.5% for high power & Ultra Power rat"
+    "example": "ΔR±0.5%"
    },
    {
     "name": "High Temperature Exposure",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "ΔR±0.5% 0402 ≧255.01K 0603 ≧402.01K 0805"
+    "example": "ΔR±0.5% (0402 ≧255.01K 0603 ≧402.01K 080"
    },
    {
     "name": "Temperature Cycling",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "ΔR±0.2% (0201 product is excluded)"
+    "stat": "range",
+    "conditions": "0201 product is excluded",
+    "example": "ΔR±0.2%"
    },
    {
     "name": "ESD",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "ΔR±0.5% (0201 product is excluded)"
+    "stat": "range",
+    "conditions": "0201 product is excluded",
+    "example": "ΔR±0.5%"
    },
    {
     "name": "Sulfur Test",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "ΔR±2% (0201 product is excluded)"
+    "stat": "range",
+    "conditions": "0201 product is excluded",
+    "example": "ΔR±2%"
    },
    {
     "name": "Biased Humidity",
     "symbol": "",
     "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "ΔR±0.1% (0201 product is excluded)"
+    "stat": "range",
+    "conditions": "0201 product is excluded",
+    "example": "ΔR±0.1%"
    },
    {
     "name": "Storage Temperature",
@@ -237,27 +221,19 @@
     "example": "2"
    },
    {
-    "name": "Reflow Profiles",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Pb-Free Assembly"
-   },
-   {
     "name": "Preheat Min. Temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "min",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
     "example": "150"
    },
    {
     "name": "Preheat Max. Temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
     "example": "200"
    },
    {
@@ -265,15 +241,15 @@
     "symbol": "",
     "unit": "seconds",
     "stat": "range",
-    "conditions": "",
+    "conditions": "Pb-Free Assembly",
     "example": "60-120"
    },
    {
     "name": "Ramp-up rate",
     "symbol": "",
     "unit": "°C/second",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
     "example": "3"
    },
    {
@@ -281,7 +257,7 @@
     "symbol": "",
     "unit": "°C",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Pb-Free Assembly",
     "example": "217"
    },
    {
@@ -289,47 +265,47 @@
     "symbol": "",
     "unit": "seconds",
     "stat": "range",
-    "conditions": "",
+    "conditions": "Pb-Free Assembly",
     "example": "60-150"
    },
    {
     "name": "Min. Peak temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "min",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
     "example": "235"
    },
    {
     "name": "Max. Peak temperature",
     "symbol": "",
     "unit": "°C",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
     "example": "260"
    },
    {
     "name": "Time within 5°C of peak temperature",
     "symbol": "",
     "unit": "seconds",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
     "example": "30"
    },
    {
     "name": "Ramp-down rate",
     "symbol": "",
     "unit": "°C/second",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
     "example": "6"
    },
    {
     "name": "Time from 25°C to peak temperature",
     "symbol": "",
     "unit": "minutes",
-    "stat": "max",
-    "conditions": "",
+    "stat": "value",
+    "conditions": "Pb-Free Assembly",
     "example": "8"
    },
    {
@@ -338,14 +314,14 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0603 3digit marking in E96"
+    "example": "3digit for 0603, 4digit for 0805~2512"
    },
    {
     "name": "Packaging Quantity",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Paper Tape",
     "example": "10K"
    },
    {
@@ -353,7 +329,7 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Paper Tape",
     "example": "8"
    },
    {
@@ -361,60 +337,140 @@
     "symbol": "",
     "unit": "inch",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Paper Tape",
     "example": "7"
    },
    {
-    "name": "ΦA",
+    "name": "ΦA (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Paper Tape",
     "example": "178.0±1.0"
    },
    {
-    "name": "ΦB",
+    "name": "ΦB (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Paper Tape",
     "example": "60.0+1.0"
    },
    {
-    "name": "ΦC",
+    "name": "ΦC (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Paper Tape",
     "example": "13.5±0.7"
    },
    {
-    "name": "W",
+    "name": "W (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Paper Tape",
     "example": "9.5±1.0"
    },
    {
-    "name": "T",
+    "name": "T (mm)",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "",
+    "conditions": "Paper Tape",
     "example": "11.5±1.0"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Embossed Tape",
+    "example": "4K"
+   },
+   {
+    "name": "Tape Width",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Embossed Tape",
+    "example": "12"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "inch",
+    "stat": "value",
+    "conditions": "Embossed Tape",
+    "example": "7"
+   },
+   {
+    "name": "ΦA (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Embossed Tape",
+    "example": "178.0±1.0"
+   },
+   {
+    "name": "ΦB (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Embossed Tape",
+    "example": "60.0+1.0"
+   },
+   {
+    "name": "ΦC (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Embossed Tape",
+    "example": "13.5±0.7"
+   },
+   {
+    "name": "W (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Embossed Tape",
+    "example": "13.5±1.0"
+   },
+   {
+    "name": "T (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Embossed Tape",
+    "example": "15.5±1.0"
    },
    {
     "name": "Peel force of top cover tape",
     "symbol": "",
     "unit": "gf",
     "stat": "range",
-    "conditions": "",
+    "conditions": "Paper Tape",
     "example": "8-60"
+   },
+   {
+    "name": "Peel force of top cover tape",
+    "symbol": "",
+    "unit": "gf",
+    "stat": "range",
+    "conditions": "Embossed Tape",
+    "example": "20-80"
+   },
+   {
+    "name": "Land Pattern",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Recommended"
    }
   ],
-  "seconds": 240.79,
-  "tokens_in": 15969,
-  "tokens_out": 2490
+  "seconds": 167.99,
+  "tokens_in": 16069,
+  "tokens_out": 2612
  }
 }

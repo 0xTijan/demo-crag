@@ -20,9 +20,9 @@
  },
  "type": "dual_npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:53:26+00:00",
+  "at": "2026-11-23T08:36:39+00:00",
   "items": [
    {
     "name": "Collector Base Voltage",
@@ -77,16 +77,8 @@
     "symbol": "R θJA",
     "unit": "℃/W",
     "stat": "max",
-    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
+    "conditions": "",
     "example": "500"
-   },
-   {
-    "name": "Thermal Resistance from Junction Ambient",
-    "symbol": "R θJA",
-    "unit": "℃/W",
-    "stat": "max",
-    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with 1-inch square copper plate in still air.",
-    "example": "335"
    },
    {
     "name": "Junction Temperature",
@@ -102,7 +94,7 @@
     "unit": "℃",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to +150"
+    "example": "-55 to 150"
    },
    {
     "name": "DC Current Gain",
@@ -110,13 +102,13 @@
     "unit": "-",
     "stat": "range",
     "conditions": "V =5V, I =2mA CE C",
-    "example": "200 to 450"
+    "example": "200"
    },
    {
     "name": "Collector Base Breakdown Voltage",
     "symbol": "V (BR)CBO",
     "unit": "V",
-    "stat": "min",
+    "stat": "max",
     "conditions": "I =10µA C",
     "example": "80"
    },
@@ -124,7 +116,7 @@
     "name": "Collector Emitter Breakdown Voltage",
     "symbol": "V (BR)CEO",
     "unit": "V",
-    "stat": "min",
+    "stat": "max",
     "conditions": "I =10mA C",
     "example": "65"
    },
@@ -132,7 +124,7 @@
     "name": "Emitter Base Breakdown Voltage",
     "symbol": "V (BR)EBO",
     "unit": "V",
-    "stat": "min",
+    "stat": "max",
     "conditions": "I =1µA E",
     "example": "6"
    },
@@ -174,7 +166,7 @@
     "unit": "V",
     "stat": "range",
     "conditions": "V =5V, I =2mA CE C",
-    "example": "0.58 to 0.7"
+    "example": "0.58"
    },
    {
     "name": "Base Emitter Turn-On Voltage",
@@ -199,10 +191,18 @@
     "stat": "max",
     "conditions": "V =10V, F=1MHz CB",
     "example": "4.5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-363"
    }
   ],
-  "seconds": 57.64,
-  "tokens_in": 1214,
-  "tokens_out": 1113
+  "seconds": 58.45,
+  "tokens_in": 1314,
+  "tokens_out": 1091
  }
 }

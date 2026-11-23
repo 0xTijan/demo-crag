@@ -24,9 +24,9 @@
  },
  "type": "bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:23:25+00:00",
+  "at": "2026-11-23T06:24:46+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -90,7 +90,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to150"
+    "example": "-55 to 150"
    },
    {
     "name": "Storage temperature range",
@@ -98,7 +98,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to150"
+    "example": "-55 to 150"
    },
    {
     "name": "Maximum instantaneous forward voltage",
@@ -141,56 +141,16 @@
     "example": "3.4"
    },
    {
-    "name": "Case",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "GBU"
-   },
-   {
-    "name": "Molding compound meets UL 94V-0 flammability rating",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "UL 94V-0"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tin plated leads"
-   },
-   {
-    "name": "Solderable per J-STD-002 and JESD22-B102",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "J-STD-002 and JESD22-B102"
-   },
-   {
-    "name": "Polarity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "As marked on body"
-   },
-   {
-    "name": "Solder dip 275 °C max. 7 s, per JESD 22-B106",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "275 °C max. 7 s"
    }
   ],
-  "seconds": 28.22,
-  "tokens_in": 1744,
-  "tokens_out": 957
+  "seconds": 14.1,
+  "tokens_in": 1844,
+  "tokens_out": 711
  }
 }

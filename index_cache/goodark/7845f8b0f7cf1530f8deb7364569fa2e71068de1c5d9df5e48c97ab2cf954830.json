@@ -20,9 +20,9 @@
  },
  "type": "esd_tvs_array",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:36:38+00:00",
+  "at": "2026-11-23T06:49:12+00:00",
   "items": [
    {
     "name": "Peak Pulse Power (TP=8/20μS)",
@@ -111,34 +111,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT23-6"
-   },
-   {
-    "name": "ESD Protection",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61000-4-2 ±30KV contact ±30KV air"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "compliant"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GOOD-ARK"
    }
   ],
-  "seconds": 42.92,
-  "tokens_in": 1471,
-  "tokens_out": 768
+  "seconds": 35.92,
+  "tokens_in": 1571,
+  "tokens_out": 533
  }
 }

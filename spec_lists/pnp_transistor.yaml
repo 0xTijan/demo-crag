@@ -11,10 +11,11 @@ type: pnp_transistor
 name: PNP bipolar transistor
 version: 1
 status: draft
-must_match: []
-visual_check: pinout (G/D/S order)
+must_match:
+- package
+visual_check: PNP transistor pinout (E/B/C order)
 drafted:
-  at: '2026-11-22T12:34:21+00:00'
+  at: '2026-11-23T06:47:26+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -29,12 +30,29 @@ drafted:
   - goodarksemi/mmbta92_0fc889a1.md
   - goodarksemi/pzt2907a_fad28d47.md
 specs:
+  ibrcebo_max:
+    label: V(BR)EBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: true
+    aliases:
+    - Emitter Base Breakdown Voltage
+    - V(BR)EBO
+    - Emitter-Base Breakdown Voltage
+    - V (BR)EBO
+    - VEBO
+    - Base-Emitter Breakdown Voltage
+    - Emitter Base Cutoff Current
+    - I EBO
+    found_in: 10/10
   ic_max:
-    label: I(C) max
+    label: IC max
     unit: A
     stat: max
     conditions: null
-    rule: '>='
+    rule: <=
     critical: true
     aliases:
     - Collector Current
@@ -45,11 +63,11 @@ specs:
     - Collector Current - Continuous
     found_in: 10/10
   pd_max:
-    label: P(D) max
+    label: PD max
     unit: W
     stat: max
     conditions: null
-    rule: '>='
+    rule: <=
     critical: true
     aliases:
     - Power Dissipation
@@ -60,12 +78,12 @@ specs:
     - P tot
     - PC
     found_in: 10/10
-  vcb_max:
-    label: V(CB) max
+  vcbo_max:
+    label: VCBO max
     unit: V
     stat: max
     conditions: null
-    rule: '>='
+    rule: <=
     critical: true
     aliases:
     - Collector Base Voltage
@@ -73,12 +91,12 @@ specs:
     - V CBO
     - Collector-Base Voltage
     found_in: 10/10
-  vce_max:
-    label: V(CE) max
+  vceo_max:
+    label: VCEO max
     unit: V
     stat: max
     conditions: null
-    rule: '>='
+    rule: <=
     critical: true
     aliases:
     - Collector Emitter Voltage
@@ -86,12 +104,12 @@ specs:
     - V CEO
     - Collector-Emitter Voltage
     found_in: 10/10
-  veb_max:
-    label: V(EB) max
+  vebo_max:
+    label: VEBO max
     unit: V
     stat: max
     conditions: null
-    rule: '>='
+    rule: <=
     critical: true
     aliases:
     - Emitter Base Voltage
@@ -105,7 +123,7 @@ specs:
     label: fT min
     unit: MHz
     stat: min
-    conditions: VCE=5V, IC=10mA
+    conditions: null
     rule: '>='
     critical: false
     aliases:
@@ -114,25 +132,11 @@ specs:
     - f T
     - Current Gain-Bandwidth Product
     found_in: 10/10
-  hfe_min:
-    label: hFE min
-    unit: '-'
-    stat: min
-    conditions: VCE=5V, IC=10mA
-    rule: '>='
-    critical: false
-    aliases:
-    - DC Current Gain
-    - hFE
-    - h FE
-    - h FE(1)
-    - hFE(1)
-    found_in: 10/10
   icbo_max:
-    label: I(CBO) max
+    label: ICBO max
     unit: nA
     stat: max
-    conditions: VCB=20V
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -145,7 +149,7 @@ specs:
     - I CEO
     found_in: 10/10
   rthja_max:
-    label: R(θJA) max
+    label: RthJA max
     unit: °C/W
     stat: max
     conditions: null
@@ -161,7 +165,7 @@ specs:
     - Thermal Resistance Junction−to−Ambient
     found_in: 10/10
   tj_range:
-    label: T(J) range
+    label: TJ range
     unit: °C
     stat: range
     conditions: null
@@ -171,77 +175,19 @@ specs:
     - Operating Junction Temperature Range
     - TJ
     - Operation Junction and Storage Temperature Range
+    - T J, Tstg
     - Junction Temperature
     - T J
     - T, T J stg
     - Operating Junction and Storage Temperature Range
     - Junction and Storage Temperature
+    - TJ, TSTG
     found_in: 10/10
-  vce_sat_max:
-    label: VCE(sat) max
-    unit: V
-    stat: max
-    conditions: IC=500mA, IB=50mA
-    rule: <=
-    critical: false
-    aliases:
-    - Collector Emitter Saturation Voltage
-    - VCE(sat)
-    - V CE(sat)
-    - Collector-Emitter Saturation Voltage
-    found_in: 10/10
-  vbr_ceo_max:
-    label: V(BR)CEO max
-    unit: V
-    stat: max
-    conditions: IC=10mA
-    rule: '>='
-    critical: true
-    aliases:
-    - Collector Emitter Breakdown Voltage
-    - V(BR)CEO
-    - V (BR)CES
-    - Collector-Emitter Breakdown Voltage
-    - V (BR)CEO
-    - VCEO
-    found_in: 9/10
-  vbr_ebo_max:
-    label: V(BR)EBO max
-    unit: V
-    stat: max
-    conditions: IE=10µA
-    rule: '>='
-    critical: true
-    aliases:
-    - Emitter Base Breakdown Voltage
-    - V(BR)EBO
-    - Emitter-Base Breakdown Voltage
-    - V (BR)EBO
-    - VEBO
-    - Base-Emitter Breakdown Voltage
-    found_in: 9/10
-  cob_typ:
-    label: Cob typ
-    unit: pF
-    stat: typ
-    conditions: VCB=10V, f=1MHz
-    rule: ≈
-    critical: false
-    aliases:
-    - Collector Output Capacitance
-    - Cob
-    - C ob
-    - Output Capacitance
-    - Classification of hFE(2)
-    - Package
-    - Collector Capacitance
-    - Cc
-    found_in: 9/10
   vbe_sat_max:
     label: VBE(sat) max
     unit: V
     stat: max
-    conditions: IC=500mA, IB=50mA
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -253,82 +199,54 @@ specs:
     - VBE(sat)
     - Base-Emitter Voltage
     - V BE
-    found_in: 9/10
-  vbr_cbo_max:
-    label: V(BR)CBO max
+    - Input Voltage (ON)
+    - V I(ON)
+    - Input Voltage (OFF)
+    - V I(OFF)
+    found_in: 10/10
+  vce_sat_max:
+    label: VCE(sat) max
     unit: V
     stat: max
-    conditions: IC=10µA
-    rule: '>='
-    critical: true
-    aliases:
-    - Collector Base Breakdown Voltage
-    - V(BR)CBO
-    - Collector-Base Breakdown Voltage
-    - V (BR)CBO
-    - VCBO
-    found_in: 8/10
-  iebo_max:
-    label: I(EBO) max
-    unit: nA
-    stat: max
-    conditions: VEB=5V
+    conditions: null
     rule: <=
     critical: false
     aliases:
-    - Emitter Base Cutoff Current
-    - IEBO
-    - Collector Base Breakdown Voltage
-    - V (BR)CBO
-    - Emitter Cut-Off Current
-    - I EBO
-    - Emitter-Base Cut-Off Current
-    found_in: 8/10
-  hfe_range:
-    label: hFE range
-    unit: '-'
-    stat: range
-    conditions: VCE=5V, IC=10mA
-    rule: contains
-    critical: false
-    aliases:
-    - DC Current Gain
-    - hFE
-    - h FE(2)
-    - h FE
-    - hFE(2)
-    - hFE(3)
-    - hFE(4)
-    found_in: 6/10
-  aec_q:
-    label: AEC-Q101
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - AEC-Q101 Qualified
-    - Qualification
-    - Classification of hFE(2)
-    - Collector-Emitter Saturation Voltage
+    - Collector Emitter Saturation Voltage
+    - VCE(sat)
     - V CE(sat)
-    - AEC-Q101
-    found_in: 5/10
-  tstg_range:
-    label: T(stg) range
-    unit: °C
-    stat: range
+    - Collector-Emitter Saturation Voltage
+    found_in: 10/10
+  ibrceo_max:
+    label: V(BR)CEO max
+    unit: V
+    stat: max
     conditions: null
-    rule: contains
+    rule: <=
+    critical: true
+    aliases:
+    - Collector Emitter Breakdown Voltage
+    - V(BR)CEO
+    - Collector Emitter Base Breakdown Voltage
+    - V (BR)CEO
+    - Collector-Emitter Breakdown Voltage
+    - VCEO
+    found_in: 9/10
+  cob_typ:
+    label: Cob typ
+    unit: pF
+    stat: typ
+    conditions: null
+    rule: ≈
     critical: false
     aliases:
-    - Storage Temperature Range
-    - Tstg
-    - Storage Temperature
-    - T STG
-    found_in: 5/10
-rare_specs:
+    - Collector Output Capacitance
+    - Cob
+    - C ob
+    - Output Capacitance
+    - Collector Capacitance
+    - Cc
+    found_in: 7/10
   package:
     label: Package
     unit: null
@@ -337,49 +255,6 @@ rare_specs:
     rule: '='
     critical: true
     aliases:
-    - Mechanical Data
     - Package
-    found_in: 4/10
-  rohs:
-    label: RoHS
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - RoHS compliant
-    - Features
-    - RoHS
-    - Emitter Capacitance
-    - CE
-    found_in: 4/10
-  pin_count:
-    label: Pin Count
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Pin Count
-    found_in: 1/10
-  operating_temp_range:
-    label: Operating Temp Range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating Temperature Range
-    found_in: 1/10
-  storage_temp_range:
-    label: Storage Temp Range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases: []
-    found_in: 0/10
+    found_in: 6/10
+rare_specs: {}

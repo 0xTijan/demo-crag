@@ -20,13 +20,13 @@
  },
  "type": "bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:23:11+00:00",
+  "at": "2026-11-23T06:25:17+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
-    "symbol": "V RRM",
+    "symbol": "V_RRM",
     "unit": "V",
     "stat": "max",
     "conditions": "",
@@ -34,7 +34,7 @@
    },
    {
     "name": "Maximum Average Forward Rectified Current",
-    "symbol": "I F(AV)",
+    "symbol": "I_F(AV)",
     "unit": "A",
     "stat": "max",
     "conditions": "",
@@ -42,7 +42,7 @@
    },
    {
     "name": "Peak Forward Surge Current 8.3mS Single Half Sine-Wave Superimposed on Rated Loa",
-    "symbol": "I FSM",
+    "symbol": "I_FSM",
     "unit": "A",
     "stat": "max",
     "conditions": "",
@@ -58,7 +58,7 @@
    },
    {
     "name": "Typical Thermal Resistance",
-    "symbol": "R θJC",
+    "symbol": "R_θJC",
     "unit": "℃/W",
     "stat": "typ",
     "conditions": "1",
@@ -82,79 +82,87 @@
    },
    {
     "name": "Breakdown Voltage",
-    "symbol": "V BR",
+    "symbol": "V_BR",
     "unit": "V",
     "stat": "min",
-    "conditions": "I =10μA R",
+    "conditions": "I_R=10μA",
     "example": "1050"
    },
    {
     "name": "Blocking Voltage",
-    "symbol": "V R",
+    "symbol": "V_R",
     "unit": "V",
     "stat": "min",
-    "conditions": "I =10μA R",
+    "conditions": "I_R=10μA",
     "example": "1050"
    },
    {
     "name": "Instaneous Forward Voltage",
-    "symbol": "VF",
+    "symbol": "V_F",
     "unit": "V",
     "stat": "typ",
-    "conditions": "T=25℃ J, I =1.0A F",
+    "conditions": "T_J=25℃, I_F=1.0A",
     "example": "0.85"
    },
    {
     "name": "Instaneous Forward Voltage",
-    "symbol": "VF",
+    "symbol": "V_F",
     "unit": "V",
     "stat": "typ",
-    "conditions": "T=25℃ J, I =3.0A F",
+    "conditions": "T_J=25℃, I_F=3.0A",
     "example": "0.93"
    },
    {
     "name": "Instaneous Forward Voltage",
-    "symbol": "VF",
+    "symbol": "V_F",
     "unit": "V",
     "stat": "typ",
-    "conditions": "T=125℃ J, I =1.0A F",
+    "conditions": "T_J=125℃, I_F=1.0A",
     "example": "0.72"
    },
    {
     "name": "Instaneous Forward Voltage",
-    "symbol": "VF",
+    "symbol": "V_F",
     "unit": "V",
     "stat": "typ",
-    "conditions": "T=125℃ J, I =3.0A F",
+    "conditions": "T_J=125℃, I_F=3.0A",
     "example": "0.81"
    },
    {
     "name": "Reverse Current",
-    "symbol": "I R",
+    "symbol": "I_R",
     "unit": "μA",
     "stat": "max",
-    "conditions": "T=25℃ J, V =1000V R",
+    "conditions": "T_J=25℃, V_R=1000V",
     "example": "5"
    },
    {
     "name": "Reverse Current",
-    "symbol": "I R",
+    "symbol": "I_R",
     "unit": "μA",
     "stat": "max",
-    "conditions": "T=125℃ J, V =1000V R",
+    "conditions": "T_J=125℃, V_R=1000V",
     "example": "250"
    },
    {
     "name": "Junction Capacitance",
-    "symbol": "C J",
+    "symbol": "C_J",
     "unit": "pF",
     "stat": "typ",
     "conditions": "4V, 1MHz",
     "example": "36"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "BF"
    }
   ],
-  "seconds": 14.77,
-  "tokens_in": 1389,
-  "tokens_out": 810
+  "seconds": 44.7,
+  "tokens_in": 1489,
+  "tokens_out": 845
  }
 }

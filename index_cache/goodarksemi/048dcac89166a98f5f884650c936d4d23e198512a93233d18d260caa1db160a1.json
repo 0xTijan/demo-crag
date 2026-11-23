@@ -24,9 +24,9 @@
  },
  "type": "standard_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:17:05+00:00",
+  "at": "2026-11-23T06:19:13+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -54,18 +54,18 @@
    },
    {
     "name": "Maximum average forward rectified current",
-    "symbol": "I_AV",
+    "symbol": "I(AV)",
     "unit": "Amps",
     "stat": "max",
     "conditions": "0.375\"(9.5mm) lead length@T=75°C",
     "example": "3.0"
    },
    {
-    "name": "Peak forward surge current, 8.3ms single half-sine wave superimposed on rated lo",
+    "name": "Peak forward surge current",
     "symbol": "I_FSM",
     "unit": "Amps",
     "stat": "max",
-    "conditions": "",
+    "conditions": "8.3ms single half-sine wave superimposed on rated load (JEDEC Method)",
     "example": "125.0"
    },
    {
@@ -107,10 +107,18 @@
     "stat": "range",
     "conditions": "",
     "example": "-55 to +150"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DO-201AD"
    }
   ],
-  "seconds": 20.85,
-  "tokens_in": 1665,
-  "tokens_out": 492
+  "seconds": 11.93,
+  "tokens_in": 1765,
+  "tokens_out": 527
  }
 }

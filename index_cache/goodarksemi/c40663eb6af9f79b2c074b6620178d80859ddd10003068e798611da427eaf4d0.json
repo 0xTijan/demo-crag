@@ -23,9 +23,9 @@
  },
  "type": "esd_protection_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T11:12:22+00:00",
+  "at": "2026-11-23T06:18:17+00:00",
   "items": [
    {
     "name": "Peak Pulse Power (8/20µs)",
@@ -220,8 +220,8 @@
     "example": "SOD-323"
    }
   ],
-  "seconds": 61.23,
-  "tokens_in": 2317,
+  "seconds": 55.2,
+  "tokens_in": 2417,
   "tokens_out": 2322
  }
 }

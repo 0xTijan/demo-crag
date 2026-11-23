@@ -24,41 +24,41 @@
  },
  "type": "fast_acting_chip_fuse",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:55:18+00:00",
+  "at": "2026-11-23T08:38:00+00:00",
   "items": [
    {
-    "name": "Ampere Rating",
-    "symbol": "",
-    "unit": "mA",
-    "stat": "range",
-    "conditions": "",
-    "example": "200-4000"
-   },
-   {
-    "name": "% of Amp Rating",
+    "name": "Description",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "100"
+    "example": "Fast acting for excessive current"
    },
    {
-    "name": "Opening Time",
+    "name": "Applications",
     "symbol": "",
-    "unit": "Hours",
-    "stat": "min",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "4"
+    "example": "Telecommunication: PDA / DSL/ Cell Phone"
    },
    {
-    "name": "Opening Time",
+    "name": "Environmental Data",
     "symbol": "",
-    "unit": "Seconds",
-    "stat": "max",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "5"
+    "example": "Life Test: 30°C ±2°C, 75% rated current,"
+   },
+   {
+    "name": "Electrical Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ampere Rating: 200mA-4A, % of Amp Rating"
    },
    {
     "name": "Product Code",
@@ -109,24 +109,16 @@
     "example": "0.0008"
    },
    {
-    "name": "Case",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "0402"
-   },
-   {
-    "name": "Environmental Data",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Life Test: 30°C ±2°C, 75% rated current,"
    }
   ],
-  "seconds": 48.01,
-  "tokens_in": 1036,
-  "tokens_out": 613
+  "seconds": 17.58,
+  "tokens_in": 1136,
+  "tokens_out": 1030
  }
 }

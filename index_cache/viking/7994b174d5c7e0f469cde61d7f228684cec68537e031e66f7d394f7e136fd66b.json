@@ -24,9 +24,9 @@
  },
  "type": "thick_film_array_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:58:11+00:00",
+  "at": "2026-11-23T07:56:49+00:00",
   "items": [
    {
     "name": "Product",
@@ -45,84 +45,156 @@
     "example": "0201x2(Flat) / 0201x4(Flat) / 0402x4 / 0"
    },
    {
-    "name": "Absolute Maximum Rating",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1/32W (CN-21), 1/16W (CN-42, CNA42, CNA4"
+    "example": "CN-21, CN-41, CN-42, CNA42, CNA43"
    },
    {
-    "name": "Operating Temperature Range",
+    "name": "Number of Resistors",
     "symbol": "",
     "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "2, 4"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
     "stat": "range",
     "conditions": "",
-    "example": "-55 ~ +125°C (CN-21, CN-41, CNA42), -55 "
+    "example": "0.80±0.10, 1.40±0.10, 2.00±0.10, 3.20±0."
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.60±0.10, 1.00±0.10, 1.60±0.15"
+   },
+   {
+    "name": "H",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.35±0.10, 0.45±0.10, 0.60±0.10"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.30±0.10, 0.20±0.10, 0.30±0.10, 0.60±0."
+   },
+   {
+    "name": "A1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "-, 0.40±0.10"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.50±0.10, 0.40±0.10, 0.50±0.05, 0.80±0."
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.15±0.10, 0.10±0.07, 0.22±0.15, 0.30±0."
+   },
+   {
+    "name": "Y",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.15±0.10, 0.15±0.05, 0.22±0.15"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.500, 0.833, 2.817, 3.003, 10.115"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "at 70°C",
+    "example": "1/32W, 1/16W"
+   },
+   {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +125, -55 ~ +155"
    },
    {
     "name": "Max. Operating Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
-    "example": "12.5 (CN-21, CN-41), 25 (CN-42), 50 (CNA"
+    "example": "12.5, 25, 50"
    },
    {
     "name": "Max. Overload Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
-    "example": "25 (CN-21, CN-41), 50 (CN-42), 100 (CNA4"
+    "example": "25, 50, 100"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±1% (E24,E96)",
+    "example": "3Ω – 9.1Ω, 10Ω - 1MΩ"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "±5% (E24)",
+    "example": "10Ω - 1MΩ, 1Ω - 1MΩ"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "±300, ±200"
    },
    {
     "name": "Jumper Rated Current",
     "symbol": "",
     "unit": "A",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
-    "example": "0.5 (CN-21, CN-41), 1 (CN-42, CNA42, CNA"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±1%",
-    "example": "10Ω - 1MΩ"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±5%",
-    "example": "10Ω - 1MΩ"
-   },
-   {
-    "name": "Resistance Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "Jumper",
-    "example": "0Ω (<50mΩ)"
-   },
-   {
-    "name": "TCR",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "max",
-    "conditions": "±1%",
-    "example": "±300"
-   },
-   {
-    "name": "TCR",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "max",
-    "conditions": "±5%",
-    "example": "±200"
+    "example": "0.5, 1"
    },
    {
     "name": "Insulation Resistance",
@@ -137,96 +209,40 @@
     "symbol": "",
     "unit": "",
     "stat": "range",
-    "conditions": "±1%",
-    "example": "±(2.0%+0.10Ω)"
-   },
-   {
-    "name": "Endurance",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±5%",
-    "example": "±(3.0%+0.10Ω)"
-   },
-   {
-    "name": "Endurance",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "Jumper",
-    "example": "<50mΩ CN-21/41 & CNA42/43: <100mΩ"
+    "conditions": "",
+    "example": "±(2.0%+0.10Ω), ±(3.0%+0.10Ω), <50mΩ"
    },
    {
     "name": "Damp Heat with Load",
     "symbol": "",
     "unit": "",
     "stat": "range",
-    "conditions": "±1%",
-    "example": "±(2.0%+0.10Ω)"
-   },
-   {
-    "name": "Damp Heat with Load",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±5%",
-    "example": "±(3.0%+0.10Ω)"
-   },
-   {
-    "name": "Damp Heat with Load",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "Jumper",
-    "example": "<50mΩ CNA42/43: <100mΩ"
+    "conditions": "",
+    "example": "±(2.0%+0.10Ω), ±(3.0%+0.10Ω), <50mΩ"
    },
    {
     "name": "Dry Heat",
     "symbol": "",
     "unit": "",
     "stat": "range",
-    "conditions": "±1%",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Dry Heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±5%",
-    "example": "±(1.5%+0.10Ω) CN-21/41: ±(3.0%+0.10Ω)"
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω), ±(1.5%+0.10Ω), <50mΩ"
    },
    {
     "name": "Bending Strength",
     "symbol": "",
     "unit": "",
     "stat": "range",
-    "conditions": "±1%",
+    "conditions": "",
     "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Bending Strength",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "±5%",
-    "example": "±(1.0%+0.05Ω)"
-   },
-   {
-    "name": "Bending Strength",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "Jumper",
-    "example": "<50mΩ"
    },
    {
     "name": "Solderability",
     "symbol": "",
-    "unit": "",
+    "unit": "%",
     "stat": "min",
     "conditions": "",
-    "example": "95% min. coverage"
+    "example": "95"
    },
    {
     "name": "Resistance to Soldering Heat",
@@ -248,7 +264,7 @@
     "name": "Leaching",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "Individual leaching area ≦5% Total leach"
    },
@@ -256,7 +272,7 @@
     "name": "Rapid Change of Temperature",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
     "example": "-55°C to +125/+155°C, 5 cycles"
    },
@@ -269,14 +285,6 @@
     "example": "15~28"
    },
    {
-    "name": "Humidity",
-    "symbol": "",
-    "unit": "RH",
-    "stat": "max",
-    "conditions": "",
-    "example": "< 80%"
-   },
-   {
     "name": "Shelf Life",
     "symbol": "",
     "unit": "years",
@@ -285,28 +293,20 @@
     "example": "2"
    },
    {
-    "name": "Part Numbering",
+    "name": "Tape Width",
     "symbol": "",
-    "unit": "",
+    "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "CN-42 J L 7"
+    "example": "8"
    },
    {
-    "name": "Product Type",
+    "name": "Reel Diameter",
     "symbol": "",
-    "unit": "",
+    "unit": "inch",
     "stat": "value",
     "conditions": "",
-    "example": "CN- (Flat/Convex) CNA (Concave)"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0201x2, 0201x4, 0402x4, 0603x4"
+    "example": "7, 10, 13"
    },
    {
     "name": "Resistance Tolerance",
@@ -314,7 +314,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "F: ±1% J: ±5%"
+    "example": "±1%, ±5%"
    },
    {
     "name": "Function Code",
@@ -330,27 +330,11 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "6: 7” Reel 10Kpcs 7: 7” Reel 5Kpcs A: 10"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No Marking for CN-21/CN-41/CNA42, Jumper"
-   },
-   {
-    "name": "E24 Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "10, 11, 12, 13, 15, 16, 18, 20, 22, 24, "
+    "example": "6: 7” Reel 10Kpcs, 7: 7” Reel 5Kpcs, A: "
    }
   ],
-  "seconds": 118.79,
-  "tokens_in": 6681,
-  "tokens_out": 2126
+  "seconds": 149.32,
+  "tokens_in": 6781,
+  "tokens_out": 2012
  }
 }

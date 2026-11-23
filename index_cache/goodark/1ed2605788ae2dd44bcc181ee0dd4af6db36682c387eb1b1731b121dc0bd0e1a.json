@@ -21,10 +21,18 @@
  },
  "type": "npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:21:04+00:00",
+  "at": "2026-11-23T06:22:50+00:00",
   "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA=25°C unless otherwise noted",
+    "example": "50 30"
+   },
    {
     "name": "Collector Base Voltage",
     "symbol": "VCBO",
@@ -62,7 +70,7 @@
     "symbol": "PD",
     "unit": "mW",
     "stat": "max",
-    "conditions": "1)",
+    "conditions": "1) Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
     "example": "300"
    },
    {
@@ -75,19 +83,35 @@
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "Tstg",
+    "symbol": "",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to 150"
+    "example": "-55 to + 150"
+   },
+   {
+    "name": "Thermal Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "",
+    "example": "Thermal Resistance Junction to Ambient"
    },
    {
     "name": "Thermal Resistance Junction to Ambient",
     "symbol": "RthJA",
     "unit": "°C/W",
     "stat": "value",
-    "conditions": "1)",
+    "conditions": "1) Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
     "example": "417"
+   },
+   {
+    "name": "Electrical Characteristics",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA =25°C unless otherwise noted",
+    "example": "DC Current Gain at VCE = 1 V, IC = 100 m"
    },
    {
     "name": "DC Current Gain",
@@ -117,7 +141,7 @@
     "name": "Collector Base Breakdown Voltage",
     "symbol": "V(BR)CBO",
     "unit": "V",
-    "stat": "range",
+    "stat": "min",
     "conditions": "ABC817 at IC = 10 µA ABC818",
     "example": "50 30"
    },
@@ -125,7 +149,7 @@
     "name": "Collector Emitter Breakdown Voltage",
     "symbol": "V(BR)CEO",
     "unit": "V",
-    "stat": "range",
+    "stat": "min",
     "conditions": "ABC817 at IC = 10 mA ABC818",
     "example": "45 25"
    },
@@ -178,7 +202,7 @@
     "example": "SOT-23"
    },
    {
-    "name": "Mounting Type",
+    "name": "Mounting position",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -194,32 +218,24 @@
     "example": "HAF"
    },
    {
-    "name": "RoHS Compliance",
+    "name": "RoHS compliant",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Compliant"
+    "example": "RoHS"
    },
    {
-    "name": "AEC-Q101 Qualification",
+    "name": "AEC-Q101 Qualified",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Qualified"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "℃",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
+    "example": "AEC-Q101"
    }
   ],
-  "seconds": 54.38,
-  "tokens_in": 1589,
-  "tokens_out": 1167
+  "seconds": 56.16,
+  "tokens_in": 1689,
+  "tokens_out": 1334
  }
 }

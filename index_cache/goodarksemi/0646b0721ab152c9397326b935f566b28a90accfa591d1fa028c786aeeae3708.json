@@ -20,9 +20,9 @@
  },
  "type": "complementary_npn_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:04:08+00:00",
+  "at": "2026-11-23T08:03:28+00:00",
   "items": [
    {
     "name": "Collector-Base Breakdown Voltage",
@@ -393,110 +393,6 @@
     "example": "75"
    },
    {
-    "name": "Absolute Maximum Rating",
-    "symbol": "V (BR)CBO",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "60"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "V (BR)CEO",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "40"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "V (BR)EBO",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "5"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "I CBO",
-    "unit": "nA",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "50"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "I CEO",
-    "unit": "nA",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHD",
-    "example": "500"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "I EBO",
-    "unit": "nA",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "50"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "I C",
-    "unit": "mA",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "100"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "P D",
-    "unit": "mW",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "500"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "R th(j-c)",
-    "unit": "°C/W",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "250"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "T j",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "150"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "T stg",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "150"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "T j",
-    "unit": "°C",
-    "stat": "min",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "-55"
-   },
-   {
-    "name": "Absolute Maximum Rating",
-    "symbol": "T stg",
-    "unit": "°C",
-    "stat": "min",
-    "conditions": "T$ ��& XQOHVV RWKHUZLVH QRWHG",
-    "example": "-55"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
@@ -529,8 +425,8 @@
     "example": "RoHS Compliant"
    }
   ],
-  "seconds": 179.75,
-  "tokens_in": 5919,
-  "tokens_out": 3603
+  "seconds": 171.2,
+  "tokens_in": 6019,
+  "tokens_out": 2804
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:21:36+00:00",
+  "at": "2026-11-23T06:23:20+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -84,7 +84,7 @@
     "name": "Thermal Resistance from Junction to Ambient",
     "symbol": "R θJA",
     "unit": "℃/W",
-    "stat": "max",
+    "stat": "typ",
     "conditions": "",
     "example": "625"
    },
@@ -164,21 +164,29 @@
     "name": "Collector output capacitance",
     "symbol": "Cob",
     "unit": "pF",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "VCB=10V,IE=0,f=1MHZ",
-    "example": "0.8"
+    "example": "0.8-1"
    },
    {
     "name": "Noise figure",
     "symbol": "NF",
     "unit": "dB",
-    "stat": "typ",
+    "stat": "range",
     "conditions": "VCE=10V,IC=7mA,Rg=10kΩ, f=1GHz",
-    "example": "1.65"
+    "example": "1.65-2"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
    }
   ],
-  "seconds": 59.94,
-  "tokens_in": 1263,
-  "tokens_out": 931
+  "seconds": 59.25,
+  "tokens_in": 1363,
+  "tokens_out": 969
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "sic_schottky_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:26:41+00:00",
+  "at": "2026-11-23T06:40:21+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -167,10 +167,18 @@
     "stat": "typ",
     "conditions": "",
     "example": "2.2"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220I-2"
    }
   ],
-  "seconds": 51.47,
-  "tokens_in": 1881,
-  "tokens_out": 865
+  "seconds": 49.33,
+  "tokens_in": 1981,
+  "tokens_out": 902
  }
 }

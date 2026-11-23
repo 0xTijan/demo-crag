@@ -24,9 +24,9 @@
  },
  "type": "zener_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:26:33+00:00",
+  "at": "2026-11-23T06:27:13+00:00",
   "items": [
    {
     "name": "Power Dissipation",
@@ -49,7 +49,7 @@
     "symbol": "",
     "unit": "",
     "stat": "range",
-    "conditions": "",
+    "conditions": "T A =25°C",
     "example": "-55 to +125"
    },
    {
@@ -61,63 +61,63 @@
     "example": "P /V D Z"
    },
    {
-    "name": "Vz",
-    "symbol": "V",
-    "unit": "V",
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
     "stat": "value",
-    "conditions": "I ZT = 20 mA",
-    "example": "2.4"
+    "conditions": "",
+    "example": "SOD-123"
    },
    {
-    "name": "Vz",
-    "symbol": "V",
+    "name": "V(V) @I 1 z ZT",
+    "symbol": "",
     "unit": "V",
-    "stat": "min",
+    "stat": "range",
     "conditions": "I ZT = 20 mA",
-    "example": "2.35"
+    "example": "2.35 to 2.45"
    },
    {
-    "name": "Vz",
-    "symbol": "V",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "I ZT = 20 mA",
-    "example": "2.45"
+    "name": "I ZT",
+    "symbol": "I ZT",
+    "unit": "mA",
+    "stat": "value",
+    "conditions": "",
+    "example": "20"
    },
    {
-    "name": "Zzt",
-    "symbol": "Z",
+    "name": "Z @I ZT ZT",
+    "symbol": "Z ZT",
     "unit": "Ω",
-    "stat": "max",
+    "stat": "value",
     "conditions": "I ZT = 20 mA",
     "example": "30"
    },
    {
-    "name": "Zzk",
-    "symbol": "Z",
+    "name": "Z @I ZK ZK",
+    "symbol": "Z ZK",
     "unit": "Ω",
-    "stat": "max",
+    "stat": "value",
     "conditions": "I ZK = 0.25 mA",
     "example": "1200"
    },
    {
-    "name": "Izk",
-    "symbol": "I zk",
+    "name": "I zk (mA)",
+    "symbol": "I ZK",
     "unit": "mA",
     "stat": "value",
     "conditions": "",
     "example": "0.25"
    },
    {
-    "name": "I R",
+    "name": "I R (uA)",
     "symbol": "I R",
     "unit": "uA",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "100"
    },
    {
-    "name": "V R",
+    "name": "V R (V)",
     "symbol": "V R",
     "unit": "V",
     "stat": "value",
@@ -125,8 +125,8 @@
     "example": "1.0"
    }
   ],
-  "seconds": 39.94,
-  "tokens_in": 3024,
-  "tokens_out": 530
+  "seconds": 13.03,
+  "tokens_in": 3124,
+  "tokens_out": 552
  }
 }

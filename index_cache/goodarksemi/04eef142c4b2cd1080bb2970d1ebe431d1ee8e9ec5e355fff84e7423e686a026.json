@@ -24,9 +24,9 @@
  },
  "type": "fast_recovery_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:09:15+00:00",
+  "at": "2026-11-23T06:14:38+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -70,7 +70,7 @@
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "",
+    "symbol": "T STG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -147,10 +147,18 @@
     "stat": "typ",
     "conditions": "Junction to Case",
     "example": "30"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "DO-214AC (SMA)"
    }
   ],
-  "seconds": 41.31,
-  "tokens_in": 1639,
-  "tokens_out": 726
+  "seconds": 38.02,
+  "tokens_in": 1739,
+  "tokens_out": 769
  }
 }

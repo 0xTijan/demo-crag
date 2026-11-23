@@ -20,9 +20,9 @@
  },
  "type": "ptc_thermistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:59:57+00:00",
+  "at": "2026-11-23T08:41:26+00:00",
   "items": [
    {
     "name": "Maximum voltage (RMS)",
@@ -37,7 +37,7 @@
     "symbol": "",
     "unit": "°C",
     "stat": "range",
-    "conditions": "V=Vmax",
+    "conditions": "",
     "example": "0 to +70"
    },
    {
@@ -53,7 +53,7 @@
     "symbol": "",
     "unit": "Ω",
     "stat": "typ",
-    "conditions": "25℃",
+    "conditions": "",
     "example": "25"
    },
    {
@@ -61,7 +61,7 @@
     "symbol": "",
     "unit": "Ω",
     "stat": "range",
-    "conditions": "25℃",
+    "conditions": "",
     "example": "20 to 30"
    },
    {
@@ -69,7 +69,7 @@
     "symbol": "",
     "unit": "mA",
     "stat": "min",
-    "conditions": "25±2℃",
+    "conditions": "",
     "example": "90"
    },
    {
@@ -108,7 +108,7 @@
     "name": "Max Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
+    "stat": "typ",
     "conditions": "",
     "example": "250"
    },
@@ -125,7 +125,7 @@
     "symbol": "",
     "unit": "A",
     "stat": "typ",
-    "conditions": "10/700μs, 1.5KV, 37.5A,30 Cycles",
+    "conditions": "",
     "example": "37.5"
    },
    {
@@ -133,7 +133,7 @@
     "symbol": "",
     "unit": "°C",
     "stat": "range",
-    "conditions": "V=0",
+    "conditions": "",
     "example": "-40 to 85"
    },
    {
@@ -141,7 +141,7 @@
     "symbol": "",
     "unit": "°C",
     "stat": "range",
-    "conditions": "V=Vmax",
+    "conditions": "",
     "example": "0 to 70"
    },
    {
@@ -313,28 +313,20 @@
     "example": "3.5 to 6.5"
    },
    {
-    "name": "Recommended wave soldering temperature",
+    "name": "A",
     "symbol": "",
-    "unit": "°C",
+    "unit": "mm",
     "stat": "value",
-    "conditions": "",
-    "example": "235"
+    "conditions": "5.0",
+    "example": "5.0"
    },
    {
-    "name": "Wave soldering time",
+    "name": "B",
     "symbol": "",
-    "unit": "s",
-    "stat": "value",
-    "conditions": "",
-    "example": "2±0.5"
-   },
-   {
-    "name": "Soldering heat time",
-    "symbol": "",
-    "unit": "s",
-    "stat": "value",
-    "conditions": "350℃",
-    "example": "3.5±0.5"
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "0.8-0.9",
+    "example": "0.8-0.9"
    },
    {
     "name": "Storage temperature",
@@ -380,7 +372,7 @@
     "name": "Component Weight",
     "symbol": "",
     "unit": "g",
-    "stat": "typ",
+    "stat": "value",
     "conditions": "",
     "example": "0.4921"
    },
@@ -388,7 +380,7 @@
     "name": "Net Weight Per Box",
     "symbol": "",
     "unit": "Kg",
-    "stat": "typ",
+    "stat": "value",
     "conditions": "",
     "example": "5.04"
    },
@@ -396,7 +388,7 @@
     "name": "Gross Weight/Per Box",
     "symbol": "",
     "unit": "Kg",
-    "stat": "typ",
+    "stat": "value",
     "conditions": "",
     "example": "6.54"
    },
@@ -409,8 +401,8 @@
     "example": "380×250×290"
    }
   ],
-  "seconds": 153.85,
-  "tokens_in": 2298,
-  "tokens_out": 2237
+  "seconds": 121.75,
+  "tokens_in": 2398,
+  "tokens_out": 2141
  }
 }

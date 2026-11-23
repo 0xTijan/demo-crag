@@ -20,9 +20,9 @@
  },
  "type": "sic_mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:26:17+00:00",
+  "at": "2026-11-23T07:30:58+00:00",
   "items": [
    {
     "name": "Drain-Source Voltage",
@@ -116,9 +116,9 @@
     "name": "Zero Gate Voltage Drain Current",
     "symbol": "I_DSS",
     "unit": "μA",
-    "stat": "range",
+    "stat": "max",
     "conditions": "V_DS=900V, V_GS=0V",
-    "example": "1 to 5"
+    "example": "5"
    },
    {
     "name": "Gate Threshold Voltage",
@@ -140,33 +140,33 @@
     "name": "Drain-Source On-state Resistance",
     "symbol": "R_DS(on)",
     "unit": "mΩ",
-    "stat": "range",
+    "stat": "max",
     "conditions": "V_GS=18V, I_D=7A",
-    "example": "110 to 140"
+    "example": "140"
    },
    {
     "name": "Drain-Source On-state Resistance",
     "symbol": "R_DS(on)",
     "unit": "mΩ",
-    "stat": "range",
+    "stat": "max",
     "conditions": "V_GS=18V, I_D=7A, T_J=175°C",
-    "example": "140 to 140"
+    "example": "140"
    },
    {
     "name": "Drain-Source On-state Resistance",
     "symbol": "R_DS(on)",
     "unit": "mΩ",
-    "stat": "range",
+    "stat": "max",
     "conditions": "V_GS=15V, I_D=7A",
-    "example": "150 to 200"
+    "example": "200"
    },
    {
     "name": "Drain-Source On-state Resistance",
     "symbol": "R_DS(on)",
     "unit": "mΩ",
-    "stat": "range",
+    "stat": "max",
     "conditions": "V_GS=15V, I_D=7A, T_J=175°C",
-    "example": "170 to 170"
+    "example": "170"
    },
    {
     "name": "Total Gate Charge",
@@ -177,7 +177,7 @@
     "example": "30.6"
    },
    {
-    "name": "Gate-Source Charge",
+    "name": "Gate Source Charge",
     "symbol": "Q_gs",
     "unit": "nC",
     "stat": "typ",
@@ -185,7 +185,7 @@
     "example": "2.76"
    },
    {
-    "name": "Gate-Drain Charge",
+    "name": "Gate Drain Charge",
     "symbol": "Q_gd",
     "unit": "nC",
     "stat": "typ",
@@ -351,26 +351,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-220F"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to +175"
-   },
-   {
-    "name": "RoHS Compliance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS"
    }
   ],
-  "seconds": 136.91,
-  "tokens_in": 2804,
-  "tokens_out": 2710
+  "seconds": 131.35,
+  "tokens_in": 2904,
+  "tokens_out": 2610
  }
 }

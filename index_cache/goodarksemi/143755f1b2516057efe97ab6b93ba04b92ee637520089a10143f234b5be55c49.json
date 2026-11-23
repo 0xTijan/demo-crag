@@ -20,9 +20,9 @@
  },
  "type": "standard_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:18:16+00:00",
+  "at": "2026-11-23T06:20:25+00:00",
   "items": [
    {
     "name": "Maximum Repetitive Peak Reverse Voltage",
@@ -68,24 +68,16 @@
     "name": "Forward Voltage at 45A",
     "symbol": "V_F",
     "unit": "V",
-    "stat": "typ",
-    "conditions": "I_F=45A",
+    "stat": "range",
+    "conditions": "Typ. 1.20, Max. 1.30",
     "example": "1.20"
-   },
-   {
-    "name": "Forward Voltage at 45A",
-    "symbol": "V_F",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "I_F=45A",
-    "example": "1.30"
    },
    {
     "name": "Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage",
     "symbol": "I_R",
     "unit": "uA",
     "stat": "max",
-    "conditions": "T_J=25°C",
+    "conditions": "T=25℃ J",
     "example": "5"
    },
    {
@@ -93,7 +85,7 @@
     "symbol": "I_R",
     "unit": "uA",
     "stat": "max",
-    "conditions": "T_J=125°C",
+    "conditions": "T=125℃ J",
     "example": "250"
    },
    {
@@ -106,7 +98,7 @@
    },
    {
     "name": "Operating Junction Temperature Range",
-    "symbol": "T_J",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -114,43 +106,19 @@
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "T_STG",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to +150"
    },
    {
-    "name": "Case",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "TO-247AC"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Lead solderable per MIL-STD-750, method "
-   },
-   {
-    "name": "Polarity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "As marked."
-   },
-   {
-    "name": "Mounting position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
    },
    {
     "name": "Flammability Classification",
@@ -166,43 +134,27 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "RoHS 2015/863/EU"
+    "example": "2015/863/EU"
    },
    {
-    "name": "Package",
+    "name": "Mounting Position",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "TO-247AC"
+    "example": "Any"
    },
    {
-    "name": "Marking",
+    "name": "Soldering Temperature",
     "symbol": "",
-    "unit": "",
+    "unit": "°C",
     "stat": "value",
-    "conditions": "",
-    "example": "STD45160P"
-   },
-   {
-    "name": "Carrier",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Tube"
-   },
-   {
-    "name": "Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "30pcs / Tube"
+    "conditions": "260°C/10s at terminals",
+    "example": "260"
    }
   ],
-  "seconds": 47.86,
-  "tokens_in": 1887,
-  "tokens_out": 959
+  "seconds": 40.82,
+  "tokens_in": 1987,
+  "tokens_out": 739
  }
 }

@@ -24,9 +24,9 @@
  },
  "type": "bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:24:29+00:00",
+  "at": "2026-11-23T06:25:57+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -139,10 +139,18 @@
     "stat": "typ",
     "conditions": "",
     "example": "2.3"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GBU"
    }
   ],
-  "seconds": 45.27,
-  "tokens_in": 1751,
-  "tokens_out": 681
+  "seconds": 40.33,
+  "tokens_in": 1851,
+  "tokens_out": 712
  }
 }

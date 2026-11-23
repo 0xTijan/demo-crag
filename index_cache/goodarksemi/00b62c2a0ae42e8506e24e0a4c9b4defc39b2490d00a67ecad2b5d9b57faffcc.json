@@ -20,16 +20,16 @@
  },
  "type": "mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:54:02+00:00",
+  "at": "2026-11-23T05:58:13+00:00",
   "items": [
    {
     "name": "BV DSS",
     "symbol": "BV DSS",
     "unit": "V",
     "stat": "min",
-    "conditions": "V =0V, I =250μA",
+    "conditions": "V GS=0V, I D=250μA",
     "example": "30"
    },
    {
@@ -37,7 +37,7 @@
     "symbol": "R DS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "V =4.5V, I =0.2A",
+    "conditions": "V GS=4.5V, I D=0.2A",
     "example": "650"
    },
    {
@@ -45,7 +45,7 @@
     "symbol": "R DS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "V =2.5V, I =0.15A",
+    "conditions": "V GS=2.5V, I D=0.15A",
     "example": "800"
    },
    {
@@ -53,7 +53,7 @@
     "symbol": "I D",
     "unit": "A",
     "stat": "max",
-    "conditions": "V =4.5V (T =25°C)",
+    "conditions": "V GS=4.5V, T A=25°C",
     "example": "0.6"
    },
    {
@@ -61,14 +61,14 @@
     "symbol": "I D",
     "unit": "A",
     "stat": "max",
-    "conditions": "V =4.5V (T =75°C)",
+    "conditions": "V GS=4.5V, T A=75°C",
     "example": "0.5"
    },
    {
     "name": "I DM",
     "symbol": "I DM",
     "unit": "A",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "2.4"
    },
@@ -77,7 +77,7 @@
     "symbol": "P D",
     "unit": "W",
     "stat": "max",
-    "conditions": "T =25°C",
+    "conditions": "T A=25°C",
     "example": "0.48"
    },
    {
@@ -89,9 +89,9 @@
     "example": "262"
    },
    {
-    "name": "T, T J STG",
-    "symbol": "T, T J STG",
-    "unit": "",
+    "name": "T J, T STG",
+    "symbol": "T J, T STG",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to 150"
@@ -101,7 +101,7 @@
     "symbol": "I DSS",
     "unit": "μA",
     "stat": "max",
-    "conditions": "V =30V, V =0V, T =25°C",
+    "conditions": "V DS=30V, V GS=0V, T C=25°C",
     "example": "1"
    },
    {
@@ -109,7 +109,7 @@
     "symbol": "I GSS",
     "unit": "μA",
     "stat": "max",
-    "conditions": "V =±10V, V =0V",
+    "conditions": "V GS=±10V, V DS=0V",
     "example": "±10"
    },
    {
@@ -117,15 +117,31 @@
     "symbol": "V GS(th)",
     "unit": "V",
     "stat": "range",
-    "conditions": "V =V , I =250μA",
+    "conditions": "V DS=V GS, I D=250μA",
     "example": "0.4 to 1.1"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "R DS(ON)",
+    "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "V GS=4.5V, I D=0.2A",
+    "example": "470"
+   },
+   {
+    "name": "R DS(ON)",
+    "symbol": "R DS(ON)",
+    "unit": "mΩ",
+    "stat": "typ",
+    "conditions": "V GS=2.5V, I D=0.15A",
+    "example": "650"
    },
    {
     "name": "C iss",
     "symbol": "C iss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V =15V, V =0V, f=1MHz",
+    "conditions": "V DS=15V, V GS=0V, f=1MHz",
     "example": "22"
    },
    {
@@ -133,7 +149,7 @@
     "symbol": "C oss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V =15V, V =0V, f=1MHz",
+    "conditions": "V DS=15V, V GS=0V, f=1MHz",
     "example": "4.2"
    },
    {
@@ -141,7 +157,7 @@
     "symbol": "C rss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V =15V, V =0V, f=1MHz",
+    "conditions": "V DS=15V, V GS=0V, f=1MHz",
     "example": "1.20"
    },
    {
@@ -149,7 +165,7 @@
     "symbol": "Q g",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V =4.5V, V =10V, I =0.3A",
+    "conditions": "V GS=4.5V, V DS=10V, I D=0.3A",
     "example": "0.31"
    },
    {
@@ -157,7 +173,7 @@
     "symbol": "Q gs",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V =4.5V, V =10V, I =0.3A",
+    "conditions": "V GS=4.5V, V DS=10V, I D=0.3A",
     "example": "0.04"
    },
    {
@@ -165,7 +181,7 @@
     "symbol": "Q gd",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V =4.5V, V =10V, I =0.3A",
+    "conditions": "V GS=4.5V, V DS=10V, I D=0.3A",
     "example": "0.12"
    },
    {
@@ -173,7 +189,7 @@
     "symbol": "t d(on)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "V =10V, V =30V, I =0.5A, R =10Ω",
+    "conditions": "V GS=10V, V DD=30V, I D=0.5A, R GEN=10Ω",
     "example": "1.23"
    },
    {
@@ -181,7 +197,7 @@
     "symbol": "t r",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "V =10V, V =30V, I =0.5A, R =10Ω",
+    "conditions": "V GS=10V, V DD=30V, I D=0.5A, R GEN=10Ω",
     "example": "2.17"
    },
    {
@@ -189,7 +205,7 @@
     "symbol": "t d(off)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "V =10V, V =30V, I =0.5A, R =10Ω",
+    "conditions": "V GS=10V, V DD=30V, I D=0.5A, R GEN=10Ω",
     "example": "9.77"
    },
    {
@@ -197,7 +213,7 @@
     "symbol": "t f",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "V =10V, V =30V, I =0.5A, R =10Ω",
+    "conditions": "V GS=10V, V DD=30V, I D=0.5A, R GEN=10Ω",
     "example": "2.77"
    },
    {
@@ -205,7 +221,7 @@
     "symbol": "V SD",
     "unit": "V",
     "stat": "range",
-    "conditions": "I =0.6A, V =0V",
+    "conditions": "I S=0.6A, V GS=0V",
     "example": "0.85 to 1.2"
    },
    {
@@ -215,10 +231,18 @@
     "stat": "max",
     "conditions": "",
     "example": "0.6"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-92"
    }
   ],
-  "seconds": 118.49,
-  "tokens_in": 1731,
-  "tokens_out": 1319
+  "seconds": 99.81,
+  "tokens_in": 1831,
+  "tokens_out": 1580
  }
 }

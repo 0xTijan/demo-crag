@@ -20,9 +20,9 @@
  },
  "type": "mosfet_p",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:02:20+00:00",
+  "at": "2026-11-23T06:08:55+00:00",
   "items": [
    {
     "name": "Drain Source Voltage",
@@ -148,9 +148,9 @@
     "name": "Drain-Source On-state Resistance (Note 4)",
     "symbol": "RDS(on)",
     "unit": "mΩ",
-    "stat": "max",
+    "stat": "range",
     "conditions": "VGS=-10V, ID=-15A",
-    "example": "30"
+    "example": "24 to 30"
    },
    {
     "name": "Total Gate Charge",
@@ -271,34 +271,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-252(D-PAK)"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 150"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
    }
   ],
-  "seconds": 81.09,
-  "tokens_in": 2399,
-  "tokens_out": 1810
+  "seconds": 57.77,
+  "tokens_in": 2499,
+  "tokens_out": 1705
  }
 }

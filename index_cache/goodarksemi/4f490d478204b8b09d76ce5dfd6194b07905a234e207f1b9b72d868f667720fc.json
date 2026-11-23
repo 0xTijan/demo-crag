@@ -20,9 +20,9 @@
  },
  "type": "tvs_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:21:29+00:00",
+  "at": "2026-11-23T06:32:36+00:00",
   "items": [
    {
     "name": "Maximum Operating Temperature",
@@ -79,10 +79,18 @@
     "stat": "typ",
     "conditions": "V =0V, f=1MHz R",
     "example": "0.05"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402"
    }
   ],
-  "seconds": 41.65,
-  "tokens_in": 1093,
-  "tokens_out": 355
+  "seconds": 41.82,
+  "tokens_in": 1193,
+  "tokens_out": 388
  }
 }

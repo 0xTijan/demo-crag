@@ -20,9 +20,9 @@
  },
  "type": "complementary_npn_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:05:48+00:00",
+  "at": "2026-11-23T08:05:06+00:00",
   "items": [
    {
     "name": "Collector Base Voltage",
@@ -33,14 +33,6 @@
     "example": "15"
    },
    {
-    "name": "Collector Base Voltage",
-    "symbol": "V CBO",
-    "unit": "V",
-    "stat": "min",
-    "conditions": "",
-    "example": "-15"
-   },
-   {
     "name": "Collector Emitter Voltage",
     "symbol": "V CEO",
     "unit": "V",
@@ -49,28 +41,12 @@
     "example": "12"
    },
    {
-    "name": "Collector Emitter Voltage",
-    "symbol": "V CEO",
-    "unit": "V",
-    "stat": "min",
-    "conditions": "",
-    "example": "-12"
-   },
-   {
     "name": "Emitter Base Voltage",
     "symbol": "V EBO",
     "unit": "V",
     "stat": "max",
     "conditions": "",
     "example": "6"
-   },
-   {
-    "name": "Emitter Base Voltage",
-    "symbol": "V EBO",
-    "unit": "V",
-    "stat": "min",
-    "conditions": "",
-    "example": "-6"
    },
    {
     "name": "Collector Current",
@@ -106,7 +82,7 @@
    },
    {
     "name": "Junction Temperature",
-    "symbol": "T J",
+    "symbol": "",
     "unit": "°C",
     "stat": "max",
     "conditions": "",
@@ -114,7 +90,7 @@
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "T stg",
+    "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -126,7 +102,7 @@
     "unit": "-",
     "stat": "range",
     "conditions": "V =2V, I =10mA CE C",
-    "example": "270 to 680"
+    "example": "270"
    },
    {
     "name": "Collector Base Breakdown Voltage",
@@ -198,7 +174,7 @@
     "unit": "-",
     "stat": "range",
     "conditions": "V =-2V, I =-10mA CE C",
-    "example": "270 to 680"
+    "example": "270"
    },
    {
     "name": "Collector Base Breakdown Voltage",
@@ -263,10 +239,18 @@
     "stat": "max",
     "conditions": "V =-10V, I =0, F=1MHz CB E",
     "example": "10"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GSMMBT5518DE"
    }
   ],
-  "seconds": 151.8,
-  "tokens_in": 1554,
-  "tokens_out": 1485
+  "seconds": 138.91,
+  "tokens_in": 1654,
+  "tokens_out": 1389
  }
 }

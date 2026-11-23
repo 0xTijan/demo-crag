@@ -20,9 +20,9 @@
  },
  "type": "ptc_thermistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:00:26+00:00",
+  "at": "2026-11-23T08:41:51+00:00",
   "items": [
    {
     "name": "Maximum voltage (RMS)",
@@ -265,36 +265,12 @@
     "example": "|(R2-R1)/R1|＜20%"
    },
    {
-    "name": "ITU-T K.20/21/45",
+    "name": "Telcom Standards",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "ITU-T K.20/21/45"
-   },
-   {
-    "name": "GR-1089-CORE",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GR-1089-CORE"
-   },
-   {
-    "name": "YD/741",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "YD/741"
-   },
-   {
-    "name": "Q/320581BJH302-2004",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Q/320581BJH302-2004"
+    "example": "ITU-T K.20/21/45, GR-1089-CORE, YD/741, "
    },
    {
     "name": "A",
@@ -349,15 +325,15 @@
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "5.0",
+    "conditions": "",
     "example": "5.0"
    },
    {
     "name": "B",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
-    "conditions": "0.8-0.9",
+    "stat": "value",
+    "conditions": "",
     "example": "0.8-0.9"
    },
    {
@@ -367,58 +343,10 @@
     "stat": "value",
     "conditions": "",
     "example": "Bulk"
-   },
-   {
-    "name": "Bag QTY",
-    "symbol": "",
-    "unit": "PCS",
-    "stat": "value",
-    "conditions": "",
-    "example": "640"
-   },
-   {
-    "name": "Box QTY",
-    "symbol": "",
-    "unit": "PCS",
-    "stat": "value",
-    "conditions": "",
-    "example": "10240"
-   },
-   {
-    "name": "Component Weight",
-    "symbol": "",
-    "unit": "g",
-    "stat": "typ",
-    "conditions": "",
-    "example": "1.0739"
-   },
-   {
-    "name": "Net Weight Per Box",
-    "symbol": "",
-    "unit": "Kg",
-    "stat": "value",
-    "conditions": "",
-    "example": "11.00"
-   },
-   {
-    "name": "Gross Weight/Per Box",
-    "symbol": "",
-    "unit": "Kg",
-    "stat": "value",
-    "conditions": "",
-    "example": "12.49"
-   },
-   {
-    "name": "Box Outline",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "380×250×290"
    }
   ],
-  "seconds": 147.85,
-  "tokens_in": 2335,
-  "tokens_out": 2212
+  "seconds": 113.03,
+  "tokens_in": 2435,
+  "tokens_out": 1841
  }
 }

@@ -11,10 +11,11 @@ type: tvs_diode
 name: TVS diode (power transient voltage suppressor)
 version: 1
 status: draft
-must_match: []
-visual_check: pinout (G/D/S order)
+must_match:
+- package
+visual_check: pinout (cathode band / polarity mark)
 drafted:
-  at: '2026-11-22T12:24:21+00:00'
+  at: '2026-11-23T06:38:10+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -29,107 +30,22 @@ drafted:
   - goodarksemi/gsma6txa_b373d030.md
   - goodarksemi/gsmfxxca_eb247c60.md
 specs:
-  tj_range:
-    label: Operating junction and storage temperature range
-    unit: ℃
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating junction and storage temperature range
-    - TJ, TSTG
-    - Maximum Operating Temperature
-    - T OPER
-    - Storage Temperature
-    - T STG
-    - Junction Temperature
-    - T_J
-    - T_STG
-    - T_J, T_STG
-    - T_J, STG
-    found_in: 8/10
-  id_max:
-    label: Maximum reverse leakage at VWM ID
-    unit: µA
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum reverse leakage at VWM ID
-    - ID
-    - Maximum Reverse Leakage
-    - I D
-    - Maximum Reverse Leakage I_R @ V_RWM
-    - I_R
-    - Max. Reverse Leakage @V_RWM
-    - I_2R
-    found_in: 6/10
-  ippm_max:
-    label: Maximum Peak Pulse Current IppM
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum Peak Pulse Current IppM
-    - IppM
-    - Maximum Peak Pulse Current
-    - I PPM
-    - Maximum Reverse Surge Current I_PP
-    - I_PP
-    - Max. Peak Pulse Current
-    - I_3PP
-    found_in: 6/10
   vbr_range:
-    label: Breakdown Voltage VBR
+    label: VBR range @ IT=1mA
     unit: V
     stat: range
-    conditions: IT=1mA
-    rule: ≈
-    critical: false
-    aliases:
-    - Breakdown Voltage VBR
-    - VBR
-    - Breakdown Voltage
-    - V BR
-    - Breakdown Voltage V_BR @ I_T
-    - V_BR
-    - Breakdown Voltage V @I_BR
-    - V
-    found_in: 6/10
-  vwm_value:
-    label: Stand off Voltage VWM
-    unit: V
-    stat: value
     conditions: null
     rule: '='
     critical: false
     aliases:
-    - Stand off Voltage VWM
-    - VWM
-    - Stand-off Voltage
-    - V WM
-    - Working Peak Reverse Voltage V_RWM
-    - V_RWM
-    - Reverse Standoff Voltage
-    found_in: 6/10
-rare_specs:
-  vc_max:
-    label: Maximum Clamping Voltage at IPPM VC
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Clamping Voltage at IPPM VC
-    - VC
-    - Maximum Clamping Voltage
-    - V C @I PPM
-    found_in: 4/10
+    - Breakdown Voltage VBR (Volts)
+    - VBR
+    - Breakdown Voltage VBR
+    - Breakdown Voltage
+    - V BR
+    - Breakdown Voltage V BR @ I T3
+    - V_BR
+    found_in: 5/10
   package:
     label: Package
     unit: null
@@ -139,9 +55,88 @@ rare_specs:
     critical: true
     aliases:
     - Package
+    found_in: 4/10
+rare_specs:
+  tj_range:
+    label: TJ range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Operating junction and storage temperature range
+    - TJ, TSTG
+    found_in: 4/10
+  vwm_value@vrwm:
+    label: VRWM value
+    unit: V
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Reverse Stand-off Voltage
+    - V RWM
+    - Reverse standoff voltage
+    - VRWM
+    - Rated Voltage
+    - V R
+    found_in: 4/10
+  vwm_value:
+    label: VWM value
+    unit: V
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Stand off Voltage VWM (Volts)
+    - VWM
+    - Stand off Voltage VWM
+    - Stand-off Voltage
+    - V WM
+    found_in: 4/10
+  vc_max:
+    label: VC max @ IPPM
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: true
+    aliases:
+    - Maximum Clamping Voltage at IPPM VC(Volts)
+    - VC
+    - Maximum Clamping Voltage at IPPM VC
     found_in: 3/10
-  ifsm_max:
-    label: Peak forward surge current, 8.3ms single half-sine wave
+  id_max:
+    label: ID max @ VWM
+    unit: µA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum reverse leakage at VWM ID (µA)
+    - ID
+    - Maximum reverse leakage at VWM ID
+    found_in: 3/10
+  vbr_range@it_1ma:
+    label: VBR range @ IT=1mA
+    unit: V
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Break-down Voltage
+    - V BR
+    - Breakdown voltage
+    - VBR
+    - Reverse Breakdown Voltage
+    found_in: 3/10
+  ifs_max:
+    label: IFSM max @ 8.3ms half-sine wave
     unit: A
     stat: max
     conditions: null
@@ -150,20 +145,31 @@ rare_specs:
     aliases:
     - Peak forward surge current, 8.3ms single half-sine wave
     - IFSM
-    found_in: 3/10
-  pd_max:
-    label: Power dissipation, on infinite heat sink at TL=75℃
+    found_in: 2/10
+  ippm_max:
+    label: IPP max @ 10/1000us waveform
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Peak pulse current with a 10/1000us waveform
+    - IPPM
+    found_in: 2/10
+  pd_max@tl_75c:
+    label: PD max @ TL=75°C
     unit: W
     stat: max
-    conditions: TL=75℃
+    conditions: null
     rule: '>='
     critical: false
     aliases:
     - Power dissipation, on infinite heat sink at TL=75℃
     - PD
-    found_in: 3/10
+    found_in: 2/10
   pppm_max:
-    label: Peak power dissipation with a 10/1000us waveform
+    label: PPPM max @ 10/1000us waveform
     unit: W
     stat: max
     conditions: null
@@ -172,10 +178,10 @@ rare_specs:
     aliases:
     - Peak power dissipation with a 10/1000us waveform
     - PPPM
-    found_in: 3/10
-  r_ja_typ:
-    label: Typical Thermal Resistance, Junction to Ambient
-    unit: ℃/W
+    found_in: 2/10
+  rthja_typ:
+    label: RθJA typ @ T=25°C
+    unit: °C/W
     stat: typ
     conditions: null
     rule: <=
@@ -183,10 +189,10 @@ rare_specs:
     aliases:
     - Typical Thermal Resistance , Junction to Ambient
     - RθJA
-    found_in: 3/10
-  r_jc_typ:
-    label: Typical Thermal Resistance, Junction to Case
-    unit: ℃/W
+    found_in: 2/10
+  rthjc_typ:
+    label: RθJC typ @ T=25°C
+    unit: °C/W
     stat: typ
     conditions: null
     rule: <=
@@ -194,10 +200,10 @@ rare_specs:
     aliases:
     - Typical Thermal Resistance , Junction to Case
     - RθJC
-    found_in: 3/10
-  r_jl_typ:
-    label: Typical Thermal Resistance, Junction to Lead
-    unit: ℃/W
+    found_in: 2/10
+  rthjl_typ:
+    label: RθJL typ @ T=25°C
+    unit: °C/W
     stat: typ
     conditions: null
     rule: <=
@@ -205,425 +211,147 @@ rare_specs:
     aliases:
     - Typical Thermal Resistance , Junction to Lead
     - RθJL
-    found_in: 3/10
-  v_rwm_max:
-    label: Reverse Stand-off Voltage
+    found_in: 2/10
+  vc_max@ippm_5a:
+    label: VC max @ IPPM=5A
     unit: V
     stat: max
     conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Reverse Stand-off Voltage
-    - V RWM
-    - Reverse standoff voltage
-    - VRWM
-    - V_RWM
-    found_in: 3/10
-  i_pp_max:
-    label: Peak Pulse Current (8/20us)
-    unit: A
-    stat: max
-    conditions: tp=8/20us
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum Peak Pulse Current Ipp (A)8/20us
-    - I (8/20us) PPM
-    - Maximum Forward Peak Pulse Current Ipp (A)8/20uS
-    - Peak Pulse Current
-    - I_PP
-    found_in: 2/10
-  p_ppm_max:
-    label: Peak Pulse Power (8/20us)
-    unit: W
-    stat: max
-    conditions: tp=8/20us
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum Peak Pulse Power (W) (8/20 µs)
-    - P (8/20us) PPM
-    - Peak Pulse Power
-    - P_PP
-    found_in: 2/10
-  t_stg_range:
-    label: Storage temperature range
-    unit: ℃
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Storage temperature range
-    - T STG
-    - Storage Temperature
-    - T_STG
-    found_in: 2/10
-  tj_range_2:
-    label: Operating junction temperature range
-    unit: ℃
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating junction temperature range
-    - T J
-    - Junction Temperature
-    - T_J
-    found_in: 2/10
-  pin_count:
-    label: Pin count
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
+    rule: <=
     critical: true
     aliases:
-    - Pin count
+    - Clamping voltage
+    - VC
     found_in: 1/10
-  a_range:
-    label: A
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - A
-    found_in: 1/10
-  b_range:
-    label: b
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - b
-    found_in: 1/10
-  c_in_typ:
-    label: Input pin capacitance
-    unit: pF
+  vc_typ@iec_61000_4_2_8kv_contact_discharge:
+    label: VC typ @ IEC 61000-4-2 8KV Contact Discharge
+    unit: V
     stat: typ
-    conditions: V=V_RWM, f=1MHz, 30mVpp, I to G
-    rule: ≈
+    conditions: null
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage
+    - V C
+    found_in: 1/10
+  vc_typ@ippm_5a_tlp_16a:
+    label: VC typ @ IPPM=5A,TLP 16A
+    unit: V
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage (TLP 16A)
+    - V C
+    found_in: 1/10
+  vc_typ@ippm_5a_tlp_8a:
+    label: VC typ @ IPPM=5A,TLP 8A
+    unit: V
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: true
+    aliases:
+    - Clamping Voltage (TLP 8A)
+    - V C
+    found_in: 1/10
+  c_j_max@vr_0v_f_1mhz:
+    label: CJ max @ VR=0V,f=1MHz
+    unit: pF
+    stat: max
+    conditions: null
+    rule: <=
     critical: false
     aliases:
-    - Input pin capacitance
-    - C IN
+    - Junction capacitance
+    - CJ
     found_in: 1/10
-  c_j_range:
-    label: Junction Capacitance
+  c_j_range@vr_0v_f_1mhz:
+    label: CJ range @ VR=0V,f=1MHz
     unit: pF
     stat: range
-    conditions: V=0V, f=1MHz, I/O to GND
-    rule: ≈
+    conditions: null
+    rule: <=
     critical: false
     aliases:
     - Junction Capacitance
-    - C_J
+    - C J
     found_in: 1/10
-  c_p_typ:
-    label: Capacitance
+  c_j_typ@vr_0v_f_1mhz:
+    label: CJ typ @ VR=0V,f=1MHz
     unit: pF
     stat: typ
-    conditions: V=0V, f=1MHz R
-    rule: ≈
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Junction capacitance
+    - CJ
+    found_in: 1/10
+  c_p_typ@vr_0v_f_1mhz:
+    label: CP typ @ VR=0V,f=1MHz
+    unit: pF
+    stat: typ
+    conditions: null
+    rule: <=
     critical: false
     aliases:
     - Capacitance
     - C P
     found_in: 1/10
-  d_range:
-    label: D
-    unit: mm
+  id_range@vr_3v3:
+    label: ID range @ VR=3.3V
+    unit: μA
     stat: range
     conditions: null
-    rule: ≈
+    rule: <=
     critical: false
     aliases:
-    - D
+    - Reverse Leakage Current
+    - I R
     found_in: 1/10
-  e_range:
-    label: E
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - E
-    found_in: 1/10
-  e_value:
-    label: e
-    unit: mm
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - e
-    found_in: 1/10
-  i_l_range:
-    label: Leakage Current
+  id_range@vr_6v:
+    label: ID range @ VR=6V
     unit: uA
     stat: range
-    conditions: DC 6V shall be applied on component
+    conditions: null
     rule: <=
     critical: false
     aliases:
     - Leakage Current
     - I L
     found_in: 1/10
-  i_leak_max:
-    label: Leakage Current
+  id_typ@vrwm:
+    label: ID typ @ VRWM
     unit: nA
-    stat: max
-    conditions: Measured at V=V_RWM
+    stat: typ
+    conditions: null
     rule: <=
     critical: false
     aliases:
     - Leakage Current
     - I LEAK
     found_in: 1/10
-  i_r_range:
-    label: Reverse Leakage Current
-    unit: μA
-    stat: range
-    conditions: V=3.3V
-    rule: <=
-    critical: false
-    aliases:
-    - Reverse Leakage Current
-    - I_R
-    found_in: 1/10
-  l_range:
-    label: L
-    unit: mm
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - L
-    found_in: 1/10
-  r_dyn_typ:
-    label: 8/20μs surge dynamic resistance
-    unit: mΩ
-    stat: typ
-    conditions: Calculated from VCLAMP at 0.5*lpp and Ipp surge current levels
-    rule: ≈
-    critical: false
-    aliases:
-    - 8/20μs surge dynamic resistance
-    - R DYN
-    found_in: 1/10
-  r_dyn_typ_2:
-    label: Dynamic Resistance
+  r_dyn_typ@i_0_to_30a_tlp:
+    label: Rdyn typ @ I=0-30A,TLP
     unit: Ω
     stat: typ
-    conditions: I=0 to 30A, T=TLP
-    rule: ≈
+    conditions: null
+    rule: <=
     critical: false
     aliases:
     - Dynamic Resistance
-    - R_dyn
+    - R dyn
     found_in: 1/10
-  r_ja_max:
-    label: Maximum Thermal Resistance, Junction to Ambient
-    unit: ℃/W
+  vc_max@ippm_12a:
+    label: VC max @ IPPM=12A
+    unit: V
     stat: max
     conditions: null
     rule: <=
     critical: false
     aliases:
-    - Maximum Thermal Resistance, Junction to Ambient
-    - R_θJA
+    - Clamping voltage
+    - VC
     found_in: 1/10
-  r_jl_max:
-    label: Maximum Thermal Resistance, Junction to Lead
-    unit: ℃/W
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Thermal Resistance, Junction to Lead
-    - R_θJL
-    found_in: 1/10
-  s_r_typ:
-    label: Maximum Slew Rate
-    unit: V/μs
-    stat: typ
-    conditions: 0-V rising edge, sweep rise time and measure slew rate when I=1mA
-    rule: ≈
-    critical: false
-    aliases:
-    - Maximum Slew Rate
-    - S R
-    found_in: 1/10
-  v_br_range_2:
-    label: Break-down Voltage
-    unit: V
-    stat: range
-    conditions: I=1mA from I to G
-    rule: ≈
-    critical: false
-    aliases:
-    - Break-down Voltage
-    - V BR
-    found_in: 1/10
-  v_br_range_3:
-    label: Reverse Breakdown Voltage
-    unit: V
-    stat: range
-    conditions: I=1mA
-    rule: ≈
-    critical: false
-    aliases:
-    - Reverse Breakdown Voltage
-    - V_BR
-    found_in: 1/10
-  v_c_max:
-    label: Maximum Clamping Voltage V_C @ I_PP
-    unit: V
-    stat: max
-    conditions: I_PP
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Clamping Voltage V_C @ I_PP
-    - V_C
-    found_in: 1/10
-  v_c_typ:
-    label: Clamping Voltage
-    unit: V
-    stat: typ
-    conditions: IEC 61000-4-2 8KV Contact Discharge
-    rule: ≈
-    critical: false
-    aliases:
-    - Clamping Voltage
-    - V C
-    found_in: 1/10
-  v_c_typ_2:
-    label: Clamping Voltage
-    unit: V
-    stat: typ
-    conditions: IEC 61000−4−2 Level 2 (±4 kV Contact, ±4 kV Air)
-    rule: ≈
-    critical: false
-    aliases:
-    - Clamping Voltage
-    - V_C
-    found_in: 1/10
-  v_c_typ_3:
-    label: Clamping Voltage
-    unit: V
-    stat: typ
-    conditions: IEC 61000−4−2 Level 4 (±8 kV Contact, ±8 kV Air)
-    rule: ≈
-    critical: false
-    aliases:
-    - Clamping Voltage
-    - V_C
-    found_in: 1/10
-  v_c_typ_4:
-    label: Clamping Voltage
-    unit: V
-    stat: typ
-    conditions: I=5A, T=8/20us
-    rule: ≈
-    critical: false
-    aliases:
-    - Clamping Voltage
-    - V_C
-    found_in: 1/10
-  v_cl_range:
-    label: Forward Clamp Voltage
-    unit: V
-    stat: range
-    conditions: V=5V, I=200mA
-    rule: ≈
-    critical: false
-    aliases:
-    - Forward Clamp Voltage
-    - V CL
-    found_in: 1/10
-  v_cl_range_2:
-    label: Reverse Clamp Voltage
-    unit: V
-    stat: range
-    conditions: 25A (8/20us) from I to G, V=0V before surge
-    rule: ≈
-    critical: false
-    aliases:
-    - Reverse Clamp Voltage
-    - V CL
-    found_in: 1/10
-  v_f_max:
-    label: Maximum Instantaneous Forward Voltage @ at 25A for Unidirectional Only
-    unit: V
-    stat: max
-    conditions: 25A
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Instantaneous Forward Voltage @ at 25A for Unidirectional Only
-    - V_F
-    found_in: 1/10
-  v_f_range:
-    label: Forward Voltage
-    unit: V
-    stat: range
-    conditions: I=1mA from G to IN
-    rule: ≈
-    critical: false
-    aliases:
-    - Forward Voltage
-    - V F
-    found_in: 1/10
-  v_r_max:
-    label: Rated Voltage
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Rated Voltage
-    - V R
-    found_in: 1/10
-  v_t_typ:
-    label: Trigger Voltage
-    unit: V
-    stat: typ
-    conditions: IEC 61000-4-2 8KV Contact Discharge
-    rule: ≈
-    critical: false
-    aliases:
-    - Trigger Voltage
-    - V T
-    found_in: 1/10
-  v_t_typ_2:
-    label: Trigger Voltage
-    unit: V
-    stat: typ
-    conditions: I=5A, T=8/20us
-    rule: ≈
-    critical: false
-    aliases:
-    - Trigger Voltage
-    - V_T
-    found_in: 1/10
-  v_rwm_value:
-    label: Working Peak Reverse Voltage V_RWM
-    unit: V
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases: []
-    found_in: 0/10

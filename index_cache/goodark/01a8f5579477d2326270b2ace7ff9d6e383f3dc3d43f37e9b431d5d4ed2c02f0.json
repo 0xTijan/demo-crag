@@ -20,9 +20,9 @@
  },
  "type": "ultrafast_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:58:40+00:00",
+  "at": "2026-11-23T06:01:19+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -145,48 +145,16 @@
     "example": "62.5"
    },
    {
-    "name": "Case",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Epoxy, Molded"
-   },
-   {
-    "name": "Lead Temperature for Soldering Purposes",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "260"
-   },
-   {
-    "name": "Shipped",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "30 units per plastic tube"
-   },
-   {
-    "name": "Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "Halogen-free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61249-2-21"
+    "example": "TO-247AC"
    }
   ],
-  "seconds": 51.77,
-  "tokens_in": 1774,
-  "tokens_out": 910
+  "seconds": 24.37,
+  "tokens_in": 1874,
+  "tokens_out": 751
  }
 }

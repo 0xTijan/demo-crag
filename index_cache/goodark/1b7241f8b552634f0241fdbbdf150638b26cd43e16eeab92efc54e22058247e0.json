@@ -24,9 +24,9 @@
  },
  "type": "ultrafast_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:59:41+00:00",
+  "at": "2026-11-23T06:02:32+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -147,10 +147,18 @@
     "stat": "max",
     "conditions": "I =0.5A, F I =1.0A, R I =0.25A RR",
     "example": "35"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220"
    }
   ],
-  "seconds": 50.86,
-  "tokens_in": 1387,
-  "tokens_out": 718
+  "seconds": 41.8,
+  "tokens_in": 1487,
+  "tokens_out": 752
  }
 }

@@ -21,20 +21,12 @@
  },
  "type": "current_sensing_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:15:32+00:00",
+  "at": "2026-11-23T07:24:22+00:00",
   "items": [
    {
-    "name": "Customer",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": ""
-   },
-   {
-    "name": "Product",
+    "name": "Product Type",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -50,142 +42,6 @@
     "example": "0340"
    },
    {
-    "name": "Issued Date",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "01-Apr-25"
-   },
-   {
-    "name": "Edition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "REV.A2"
-   },
-   {
-    "name": "Company",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "VIKING TECH CORPORATION KAOHSIUNG BRANCH"
-   },
-   {
-    "name": "Address",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No.248-3, Sin-Sheng Rd., Cian-Jhen Dist."
-   },
-   {
-    "name": "TEL",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "886-7-8217999"
-   },
-   {
-    "name": "FAX",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "886-7-8228229"
-   },
-   {
-    "name": "E-mail",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "sales@viking.com.tw"
-   },
-   {
-    "name": "Product Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "LRA"
-   },
-   {
-    "name": "Dimensions (WxL)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0340: 3.1x4.1"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "D: ±0.5% F: ±1% J: ±5%"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T: Taping Reel"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "E : ±100"
-   },
-   {
-    "name": "Power Rating",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "D: 5W E: 7W 9: 9W J: 10W"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0M30: 0.3mΩ 0M50: 0.5mΩ R001: 1mΩ R002: "
-   },
-   {
-    "name": "Material & Shape Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "MI: Manganin & Inward Fold KI: Kamar & I"
-   },
-   {
-    "name": "Function Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "A: Automotive Grade"
-   },
-   {
-    "name": "Power Rating P 70℃",
-    "symbol": "",
-    "unit": "W",
-    "stat": "range",
-    "conditions": "70℃",
-    "example": "5W"
-   },
-   {
     "name": "Material",
     "symbol": "",
     "unit": "",
@@ -194,20 +50,36 @@
     "example": "Manganin"
    },
    {
-    "name": "Resistance Range(mΩ)",
-    "symbol": "",
+    "name": "Resistance",
+    "symbol": "R",
     "unit": "mΩ",
     "stat": "range",
     "conditions": "",
-    "example": "0.3"
+    "example": "0.3, 0.5, 1, 2, 2.5"
    },
    {
-    "name": "TCR (PPM/°C)",
+    "name": "Resistance Tolerance",
     "symbol": "",
-    "unit": "PPM/°C",
+    "unit": "%",
     "stat": "range",
     "conditions": "",
+    "example": "±0.5, ±1, ±5"
+   },
+   {
+    "name": "TCR",
+    "symbol": "TCR",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
     "example": "±100"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "P",
+    "unit": "W",
+    "stat": "range",
+    "conditions": "70℃",
+    "example": "5, 7, 9, 10"
    },
    {
     "name": "Operating Temperature",
@@ -215,79 +87,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 ~ +175"
-   },
-   {
-    "name": "Thermal shock",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Within the specified value"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage, weldable area 95% min"
-   },
-   {
-    "name": "Short time overload",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage, ΔR±0.5% maximum"
-   },
-   {
-    "name": "Resistance to solder heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage, ΔR±0.5% maximum"
-   },
-   {
-    "name": "High temperature and humidity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage, ΔR±1.0% maximum"
-   },
-   {
-    "name": "High temperature storage",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage, ΔR±0.5% maximum"
-   },
-   {
-    "name": "Low temperature load",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage, ΔR±0.5% maximum"
-   },
-   {
-    "name": "Temperature cycling",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage, ΔR±0.5% maximum"
-   },
-   {
-    "name": "Load life",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage, ΔR±1.0% maximum"
+    "example": "-55 to 175"
    },
    {
     "name": "Storage Temperature",
@@ -295,31 +95,79 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "5~35"
+    "example": "5 to 35"
    },
    {
     "name": "Humidity",
     "symbol": "",
-    "unit": "RH",
+    "unit": "%",
     "stat": "range",
     "conditions": "",
-    "example": "40%~75%"
+    "example": "40 to 75"
    },
    {
     "name": "Shelf life",
     "symbol": "",
     "unit": "years",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "1"
    },
    {
-    "name": "Packaging Quantity(EA)",
+    "name": "Package",
     "symbol": "",
-    "unit": "EA",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1K"
+    "example": "LRA0340"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "L: 4.1+0/-0.3, W: 3.1+0/-0.35, H: 1.9+0/"
+   },
+   {
+    "name": "A",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "2.7±0.1"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.5±0.1"
+   },
+   {
+    "name": "C",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.8+0.35/-0"
+   },
+   {
+    "name": "D",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.1"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.6+0.15/-0"
    },
    {
     "name": "Tape Width",
@@ -338,7 +186,7 @@
     "example": "7"
    },
    {
-    "name": "ΦA (mm)",
+    "name": "ΦA",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -346,7 +194,7 @@
     "example": "178±2"
    },
    {
-    "name": "ΦB (mm)",
+    "name": "ΦB",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -354,7 +202,7 @@
     "example": "60±1"
    },
    {
-    "name": "ΦC (mm)",
+    "name": "ΦC",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -362,7 +210,7 @@
     "example": "13.5±0.5"
    },
    {
-    "name": "W (mm)",
+    "name": "W",
     "symbol": "",
     "unit": "mm",
     "stat": "range",
@@ -370,96 +218,120 @@
     "example": "12.3±1"
    },
    {
-    "name": "A (mm)",
+    "name": "A",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "3.4"
    },
    {
-    "name": "B (mm)",
+    "name": "B",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "4.2"
    },
    {
-    "name": "E (mm)",
+    "name": "W",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
+    "conditions": "",
+    "example": "12"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
     "conditions": "",
     "example": "1.75"
    },
    {
-    "name": "F (mm)",
+    "name": "F",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "5.5"
    },
    {
-    "name": "P0 (mm)",
+    "name": "P0",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "4"
    },
    {
-    "name": "P1 (mm)",
+    "name": "P1",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "8"
    },
    {
-    "name": "P2 (mm)",
+    "name": "P2",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "2"
    },
    {
-    "name": "ΦD0 (mm)",
+    "name": "ΦD0",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "1.5"
    },
    {
-    "name": "T (mm)",
+    "name": "T",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "2.3"
    },
    {
-    "name": "c (mm)",
+    "name": "c",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "0.6"
    },
    {
-    "name": "i (mm)",
+    "name": "i",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "0.5"
+   },
+   {
+    "name": "AEC-Q200",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Passed"
+   },
+   {
+    "name": "RoHS",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliant"
    }
   ],
-  "seconds": 75.1,
-  "tokens_in": 3103,
-  "tokens_out": 2305
+  "seconds": 57.12,
+  "tokens_in": 3203,
+  "tokens_out": 1540
  }
 }

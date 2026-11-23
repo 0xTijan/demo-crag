@@ -20,9 +20,9 @@
  },
  "type": "sic_mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:29:59+00:00",
+  "at": "2026-11-23T07:34:29+00:00",
   "items": [
    {
     "name": "DrainSourceVoltage",
@@ -36,7 +36,7 @@
     "name": "GateSourceVoltage",
     "symbol": "V GS",
     "unit": "V",
-    "stat": "range",
+    "stat": "max",
     "conditions": "",
     "example": "-8/+22"
    },
@@ -44,7 +44,7 @@
     "name": "RecommendGateSourceVoltage",
     "symbol": "V GSop",
     "unit": "V",
-    "stat": "range",
+    "stat": "max",
     "conditions": "",
     "example": "-4/+18"
    },
@@ -141,7 +141,7 @@
     "symbol": "R DS(on)",
     "unit": "mΩ",
     "stat": "range",
-    "conditions": "V GS=18V, I D=33A",
+    "conditions": "V GS=18V, I D=33A, T J=25°C",
     "example": "35 to 45"
    },
    {
@@ -301,7 +301,7 @@
     "symbol": "t rr",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs",
     "example": "18.8"
    },
    {
@@ -309,7 +309,7 @@
     "symbol": "Q rr",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs",
     "example": "120.4"
    },
    {
@@ -317,7 +317,7 @@
     "symbol": "E REC",
     "unit": "μJ",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs",
     "example": "0.9"
    },
    {
@@ -325,7 +325,7 @@
     "symbol": "I rrm",
     "unit": "A",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs",
     "example": "11"
    },
    {
@@ -333,7 +333,7 @@
     "symbol": "t A",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs",
     "example": "10"
    },
    {
@@ -341,7 +341,7 @@
     "symbol": "t B",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs",
     "example": "8.8"
    },
    {
@@ -349,7 +349,7 @@
     "symbol": "t rr",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
     "example": "53"
    },
    {
@@ -357,7 +357,7 @@
     "symbol": "Q rr",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
     "example": "662"
    },
    {
@@ -365,7 +365,7 @@
     "symbol": "E REC",
     "unit": "μJ",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
     "example": "161"
    },
    {
@@ -373,7 +373,7 @@
     "symbol": "I rrm",
     "unit": "A",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
     "example": "19"
    },
    {
@@ -381,7 +381,7 @@
     "symbol": "t A",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
     "example": "16.4"
    },
    {
@@ -389,7 +389,7 @@
     "symbol": "t B",
     "unit": "ns",
     "stat": "typ",
-    "conditions": "V RF=800V, I F=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
+    "conditions": "V RF=800V, I D=33A, V GS=-4V, di/dt=1011A/μs, T J=175°C",
     "example": "33.8"
    },
    {
@@ -399,42 +399,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TO-247-3L"
-   },
-   {
-    "name": "OperatingTemperatureRange",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 175"
-   },
-   {
-    "name": "StorageTemperatureRange",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 175"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
    }
   ],
-  "seconds": 177.73,
-  "tokens_in": 3368,
-  "tokens_out": 3244
+  "seconds": 168.74,
+  "tokens_in": 3468,
+  "tokens_out": 3101
  }
 }

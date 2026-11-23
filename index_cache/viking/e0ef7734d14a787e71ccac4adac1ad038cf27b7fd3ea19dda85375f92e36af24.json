@@ -24,41 +24,105 @@
  },
  "type": "multilayer_chip_inductor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:29:30+00:00",
+  "at": "2026-11-23T08:23:36+00:00",
   "items": [
    {
-    "name": "Operating Temperature Range",
+    "name": "Package",
     "symbol": "",
-    "unit": "°C",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "-40 to 125"
+    "example": "ML03"
    },
    {
-    "name": "Size",
+    "name": "Size (Inch)",
     "symbol": "",
-    "unit": "Inch",
+    "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "0603"
    },
    {
+    "name": "A mm",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "1.60±0.20"
+   },
+   {
+    "name": "B mm",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.80±0.20"
+   },
+   {
+    "name": "C mm",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.80±0.20"
+   },
+   {
+    "name": "D mm",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.30±0.20"
+   },
+   {
+    "name": "Weight (g) (1000pcs)",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "",
+    "example": "6.2"
+   },
+   {
+    "name": "Product Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "ML"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "03: 0603"
+   },
+   {
+    "name": "Inductance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "K: ±10%"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "T: Taping Reel"
+   },
+   {
     "name": "Inductance",
-    "symbol": "L",
+    "symbol": "",
     "unit": "nH",
     "stat": "value",
     "conditions": "",
     "example": "47"
-   },
-   {
-    "name": "Tolerance",
-    "symbol": "",
-    "unit": "%",
-    "stat": "value",
-    "conditions": "",
-    "example": "±10"
    },
    {
     "name": "L/Q Test Condition",
@@ -70,7 +134,7 @@
    },
    {
     "name": "Q min.",
-    "symbol": "Q",
+    "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
@@ -78,119 +142,103 @@
    },
    {
     "name": "SRF (MHz) min.",
-    "symbol": "SRF",
+    "symbol": "",
     "unit": "MHz",
     "stat": "value",
     "conditions": "",
     "example": "260"
    },
    {
-    "name": "DC Resistance",
-    "symbol": "RDC",
+    "name": "DCR (Ω) max.",
+    "symbol": "",
     "unit": "Ω",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
-    "example": "0.088"
+    "example": "0.30"
    },
    {
-    "name": "IDC",
-    "symbol": "IDC",
+    "name": "IDC (mA) max.",
+    "symbol": "",
     "unit": "mA",
-    "stat": "max",
-    "conditions": "",
-    "example": "1800"
-   },
-   {
-    "name": "Test Method",
-    "symbol": "",
-    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "HP4291B"
+    "example": "50"
    },
    {
-    "name": "Soldering Heat Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Appearance: No damage More than 75% of t"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "The electrodes shall be at least 90% cov"
-   },
-   {
-    "name": "Flexure Strength",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "The forces applied on the right conditio"
-   },
-   {
-    "name": "Vibration",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "The forces applied on the right conditio"
-   },
-   {
-    "name": "Damp Heat with Load",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Appearance: No damage L change: within±2"
-   },
-   {
-    "name": "Temperature Cycle",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Appearance: No damage L change: within±2"
-   },
-   {
-    "name": "High Temperature Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Appearance: No damage L change: within±2"
-   },
-   {
-    "name": "Low Temperature Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Appearance: No damage L change: within±2"
-   },
-   {
-    "name": "Storage Temperature",
+    "name": "Operating Temperature Range",
     "symbol": "",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "15 to 28"
+    "example": "-40~+125"
    },
    {
-    "name": "Storage Humidity",
+    "name": "Inductance (uH)",
     "symbol": "",
-    "unit": "%RH",
-    "stat": "max",
+    "unit": "uH",
+    "stat": "value",
     "conditions": "",
-    "example": "80"
+    "example": "0.47"
+   },
+   {
+    "name": "Test Condition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "1MHz, 250mV"
+   },
+   {
+    "name": "Tape Type",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "B"
+   },
+   {
+    "name": "W mm",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "8.0"
+   },
+   {
+    "name": "T mm",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.95"
+   },
+   {
+    "name": "P mm",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "4.0"
+   },
+   {
+    "name": "F mm",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "3.5"
+   },
+   {
+    "name": "K mm",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "",
+    "example": "0.22"
    }
   ],
-  "seconds": 187.17,
-  "tokens_in": 11834,
-  "tokens_out": 7861
+  "seconds": 84.68,
+  "tokens_in": 11934,
+  "tokens_out": 1210
  }
 }

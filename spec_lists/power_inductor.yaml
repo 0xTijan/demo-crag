@@ -13,10 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-- dimensions
-visual_check: pinout (G/D/S order)
+visual_check: Pinout (inductor leads)
 drafted:
-  at: '2026-11-22T12:48:21+00:00'
+  at: '2026-11-23T06:56:58+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,62 +29,6 @@ drafted:
   - viking/sdn-series-data-sheet-edition-rev-a4_53142179.md
   - viking/vlh-series-data-sheet-edition-rev-c8_a17b336e.md
 specs:
-  dc_current_max:
-    label: DC Current Max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Rated DC Current
-    - IDC
-    - Rated current
-    - Rated current range SCDB2D12
-    - Rated current range SCDB2D15
-    - Rated current range SCDB18
-    - IDC (A) max.
-    - Saturation Current
-    - I_sat
-    found_in: 9/9
-  dcr_max:
-    label: DCR Max
-    unit: Ω
-    stat: max
-    conditions: null
-    rule: <=
-    critical: true
-    aliases:
-    - DCR
-    - DCR max.
-    - DCR (Ω) max.
-    found_in: 9/9
-  inductance:
-    label: Inductance
-    unit: μH
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Inductance
-    - L
-    - Inductance range SCDB2D12
-    - Inductance range SCDB2D15
-    - Inductance range SCDB18
-    - Inductance and rated current ranges
-    found_in: 9/9
-  operating_temperature_range:
-    label: Operating Temperature Range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating temperature range
-    - Sizes
-    found_in: 9/9
   package:
     label: Package
     unit: null
@@ -95,161 +38,105 @@ specs:
     critical: true
     aliases:
     - Package
-    - Packaging Style
-    - Packaging Style T
-    - T
-    - Tape size
-    - W
-    found_in: 8/9
-  dimensions:
-    label: Dimensions
-    unit: mm
+    - Product Identification
+    - Dimensions
+    found_in: 9/9
+  inductance:
+    label: Inductance
+    unit: μH
     stat: range
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
-    - A
-    - B max.
-    - C
-    - D
-    - D1
-    - E
-    - P
-    - H
-    - I
-    - J
-    - Dimensions
-    - A max.
-    found_in: 8/9
-  inductance_tolerance:
-    label: Inductance Tolerance
+    - Inductance
+    - L
+    found_in: 9/9
+  test_condition:
+    label: Test Condition
     unit: null
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
+    critical: false
+    aliases:
+    - Test Condition
+    - Test Equipment
+    found_in: 9/9
+  tolerance:
+    label: Tolerance
+    unit: null
+    stat: value
+    conditions: null
+    rule: ≈
     critical: false
     aliases:
     - Tolerance
     - Inductor Tolerance
-    - Tolerance Type M
-    - M
-    - Tolerance Type N
-    - N
     - Inductance Tolerance
+    found_in: 9/9
+  dcr_max:
+    label: DCR max
+    unit: Ω
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - DCR
+    - DCR (Ω) ±20%
+    - DCR (Ω) max.
     found_in: 8/9
-  vibration:
-    label: Vibration
-    unit: null
-    stat: value
+  idc_max:
+    label: IDC max
+    unit: A
+    stat: max
     conditions: null
-    rule: info
+    rule: '>='
     critical: false
     aliases:
-    - Vibration
-    - Vibration test
-    - Vibration test Amplitude
-    found_in: 8/9
-  resistance_to_soldering_heat:
-    label: Resistance to Soldering Heat
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Resistance to Soldering Heat
-    - Solder heat proof
-    - Solder Heat Resistance
-    - High Temperature Resistance
-    - Low Temperature Store
-    - High Temperature Store
-    - Thermal Shock
-    - Humidity Resistance
+    - Rated DC Current
+    - IDC
+    - IDC (A) max.
+    - I rms
     found_in: 7/9
-  solderability:
-    label: Solderability
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Solderability
-    - Solderability test
-    - Solder ability
-    found_in: 7/9
-  storage_temperature_range:
-    label: Storage Temperature Range
+  operating_temp_range:
+    label: Operating temperature range
     unit: °C
     stat: range
     conditions: null
     rule: contains
     critical: false
     aliases:
-    - Storage Temperature
-    - Storage temperature range
-    found_in: 7/9
-  temperature_cycle:
-    label: Temperature Cycle
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Temperature Cycle
-    - Humidity test
-    - Thermal shock test
-    - Thermal Shock Cycles
-    found_in: 7/9
-  test_condition_frequency:
-    label: Test Condition Frequency
-    unit: Hz
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Test Condition
-    - Test Condition Frequency
-    - SRF
-    found_in: 7/9
-  humidity_range:
-    label: Humidity Range
-    unit: '%'
+    - Operating temperature range
+    - Characteristics
+    found_in: 6/9
+  storage_temp_range:
+    label: Storage temperature range
+    unit: °C
     stat: range
     conditions: null
     rule: contains
     critical: false
     aliases:
-    - Humidity
+    - Storage temperature range
+    - Storage Temperature
+    - Issued Date
     found_in: 6/9
-  humidity_resistance:
-    label: Humidity Resistance
-    unit: null
-    stat: value
+  i_sat_max:
+    label: I sat max
+    unit: A
+    stat: max
     conditions: null
-    rule: info
+    rule: '>='
     critical: false
     aliases:
-    - Humidity Resistance
-    - Humidity test
-    - Solderability Test Temperature
-    - Low temperature
+    - I sat
+    - Saturation Rated Current
     found_in: 5/9
-  parts_per_reel:
-    label: Parts Per Reel
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Parts Per Reel
-    found_in: 5/9
-  shelf_life:
-    label: Shelf Life
+rare_specs:
+  shelf_life_max:
+    label: Shelf life max
     unit: years
     stat: max
     conditions: null
@@ -257,86 +144,85 @@ specs:
     critical: false
     aliases:
     - Shelf life
-    found_in: 5/9
-  shock_resistance:
-    label: Shock Resistance
-    unit: null
-    stat: value
+    - Shelf Storage conditions
+    found_in: 4/9
+  humidity_max:
+    label: Humidity max
+    unit: '%'
+    stat: max
     conditions: null
-    rule: info
+    rule: <=
     critical: false
     aliases:
-    - Shock resistance
-    - Mechanical shock
-    - Shock
-    found_in: 5/9
-rare_specs:
-  temperature_rise_current_max:
-    label: Temperature Rise Current Max
+    - Humidity
+    found_in: 3/9
+  i_rms_max:
+    label: I rms max
     unit: A
     stat: max
     conditions: null
     rule: '>='
-    critical: true
+    critical: false
     aliases:
-    - Temperature Rise Current
     - I rms
-    - I rms (A) max.
-    - Irms
-    - I_rms
-    found_in: 4/9
-  tape_size_p:
-    label: Tape Size P
-    unit: mm
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Tape size P
-    - Tape size
-    - P
-    found_in: 4/9
-  tape_size_w:
-    label: Tape Size W
-    unit: mm
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Tape size W
-    - Type
-    found_in: 4/9
-  saturation_current_max:
-    label: Saturation Current Max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Saturation Rated Current
-    - I sat
     found_in: 3/9
-  thermal_shock:
-    label: Thermal Shock
+  core_material:
+    label: Core Material
     unit: null
     stat: value
     conditions: null
-    rule: info
+    rule: '='
     critical: false
     aliases:
-    - Temperature Shock
-    - Thermal shock test
-    found_in: 3/9
-  test_condition_voltage:
-    label: Test Condition Voltage
-    unit: V
+    - Core Material
+    found_in: 1/9
+  em_i:
+    label: EMI
+    unit: null
     stat: value
     conditions: null
     rule: '='
     critical: false
     aliases:
-    - Test Condition Voltage
+    - EMI
+    found_in: 1/9
+  frequency_range_max:
+    label: Frequency range max
+    unit: MHz
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Frequency Range
+    found_in: 1/9
+  halogen_free:
+    label: Halogen Free
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Halogen Free
+    found_in: 1/9
+  rohs:
+    label: RoHS
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - RoHS
+    found_in: 1/9
+  sr_f_min:
+    label: SRF min
+    unit: MHz
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - SRF
     found_in: 1/9

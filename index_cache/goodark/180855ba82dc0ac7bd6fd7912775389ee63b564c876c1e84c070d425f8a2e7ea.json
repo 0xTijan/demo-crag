@@ -18,9 +18,9 @@
  },
  "type": "mosfet_p",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:01:55+00:00",
+  "at": "2026-11-23T06:09:12+00:00",
   "items": [
    {
     "name": "Drain Source Voltage",
@@ -91,7 +91,7 @@
     "symbol": "V (BR)DSS",
     "unit": "V",
     "stat": "min",
-    "conditions": "V =0V, I =-250µA",
+    "conditions": "V GS=0V, I D=-250µA",
     "example": "-50"
    },
    {
@@ -213,34 +213,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT-23"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to +150"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
-    "name": "AEC-Q101",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Not Qualified"
    }
   ],
-  "seconds": 55.96,
-  "tokens_in": 1818,
-  "tokens_out": 1407
+  "seconds": 74.91,
+  "tokens_in": 1918,
+  "tokens_out": 1283
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:52:03+00:00",
+  "at": "2026-11-23T05:56:33+00:00",
   "items": [
    {
     "name": "Drain-Source Voltage",
@@ -94,7 +94,7 @@
     "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55 to +175"
+    "example": "-55 to 175"
    },
    {
     "name": "Thermal Resistance Junction to Case",
@@ -281,14 +281,6 @@
     "example": "LFPAK5060D"
    },
    {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to +175"
-   },
-   {
     "name": "AEC-Q101 Qualified",
     "symbol": "",
     "unit": "",
@@ -305,22 +297,6 @@
     "example": "RoHS Compliant"
    },
    {
-    "name": "Halogen Free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Halogen Free"
-   },
-   {
-    "name": "Pb-Free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Pb-Free"
-   },
-   {
     "name": "MSL 1",
     "symbol": "",
     "unit": "",
@@ -329,8 +305,8 @@
     "example": "MSL 1"
    }
   ],
-  "seconds": 84.43,
-  "tokens_in": 2973,
-  "tokens_out": 1993
+  "seconds": 80.6,
+  "tokens_in": 3073,
+  "tokens_out": 1884
  }
 }

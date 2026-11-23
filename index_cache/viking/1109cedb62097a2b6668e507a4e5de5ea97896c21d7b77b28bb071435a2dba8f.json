@@ -24,81 +24,217 @@
  },
  "type": "thick_film_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:08:10+00:00",
+  "at": "2026-11-23T07:18:56+00:00",
   "items": [
+   {
+    "name": "Customer",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Viking"
+   },
+   {
+    "name": "Product",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ultra-Low Chip Resistor Jumper – LRJ Ser"
+   },
+   {
+    "name": "Size",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402/0603/0805/1206/2010/2512"
+   },
+   {
+    "name": "Issued Date",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "05-Nov-26"
+   },
+   {
+    "name": "Edition",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "REV.B1"
+   },
+   {
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Ultra-Low resistance values Max. 0.5 mΩ"
+   },
+   {
+    "name": "Applications",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "NB"
+   },
+   {
+    "name": "Construction",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Alumina Substrate"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "0402"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "LRJ02"
+   },
    {
     "name": "Operating Temp. Range",
     "symbol": "",
-    "unit": "°C",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "-55 ~ +155"
+    "example": "-55 ~ +155°C"
    },
    {
     "name": "Resistance Range",
     "symbol": "",
-    "unit": "mΩ",
+    "unit": "",
     "stat": "max",
     "conditions": "",
-    "example": "0.5"
+    "example": "0.5 mΩ"
    },
    {
     "name": "Rated Current",
     "symbol": "",
-    "unit": "A",
-    "stat": "value",
+    "unit": "",
+    "stat": "max",
     "conditions": "",
-    "example": "20.0"
+    "example": "20.0 A"
    },
    {
     "name": "Power Rating at 70",
     "symbol": "",
-    "unit": "W",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1/2"
+    "example": "1/2W"
    },
    {
-    "name": "Resistance Tolerance",
+    "name": "Soldering Condition",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "No Specified"
+    "example": "Pb-Free Assembly"
    },
    {
-    "name": "Packaging Code",
+    "name": "Preheat Min. Temperature",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
+    "unit": "°C",
+    "stat": "min",
     "conditions": "",
-    "example": "T"
+    "example": "150"
    },
    {
-    "name": "TCR (PPM/°C)",
+    "name": "Preheat Max. Temperature",
     "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
+    "unit": "°C",
+    "stat": "max",
     "conditions": "",
-    "example": "No Specified"
+    "example": "200"
    },
    {
-    "name": "Resistance",
+    "name": "Preheating time",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
+    "unit": "seconds",
+    "stat": "range",
     "conditions": "",
-    "example": "R0R0"
+    "example": "60-120"
    },
    {
-    "name": "Dimensions (L×W)",
+    "name": "Ramp-up rate",
     "symbol": "",
-    "unit": "",
+    "unit": "°C/second",
+    "stat": "max",
+    "conditions": "",
+    "example": "3"
+   },
+   {
+    "name": "Liquidous temperature",
+    "symbol": "",
+    "unit": "°C",
     "stat": "value",
     "conditions": "",
-    "example": "02: 0402 03: 0603 05: 0805 06: 1206 10: "
+    "example": "217"
+   },
+   {
+    "name": "Time maintained above Liquidous temperature",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "range",
+    "conditions": "",
+    "example": "60-150"
+   },
+   {
+    "name": "Min. Peak temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "min",
+    "conditions": "",
+    "example": "235"
+   },
+   {
+    "name": "Max. Peak temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "max",
+    "conditions": "",
+    "example": "260"
+   },
+   {
+    "name": "Time within 5 °C of peak temperature",
+    "symbol": "",
+    "unit": "seconds",
+    "stat": "max",
+    "conditions": "",
+    "example": "30"
+   },
+   {
+    "name": "Ramp-down rate",
+    "symbol": "",
+    "unit": "°C/second",
+    "stat": "max",
+    "conditions": "",
+    "example": "6"
+   },
+   {
+    "name": "Time 25 °C to peak temperature",
+    "symbol": "",
+    "unit": "minutes",
+    "stat": "max",
+    "conditions": "",
+    "example": "8"
    },
    {
     "name": "Variation of resistance with temperature",
@@ -183,114 +319,10 @@
    {
     "name": "Shelf Life",
     "symbol": "",
-    "unit": "year",
+    "unit": "years",
     "stat": "value",
     "conditions": "",
     "example": "2"
-   },
-   {
-    "name": "Reflow Profiles",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Pb-Free Assembly"
-   },
-   {
-    "name": "Preheat Min. Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "value",
-    "conditions": "",
-    "example": "150"
-   },
-   {
-    "name": "Preheat Max Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "value",
-    "conditions": "",
-    "example": "200"
-   },
-   {
-    "name": "Preheating time",
-    "symbol": "",
-    "unit": "second",
-    "stat": "range",
-    "conditions": "",
-    "example": "60-120"
-   },
-   {
-    "name": "Ramp-up rate",
-    "symbol": "",
-    "unit": "°C/second",
-    "stat": "max",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "Liquidous temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "value",
-    "conditions": "",
-    "example": "217"
-   },
-   {
-    "name": "Time maintained above Liquidous temperature",
-    "symbol": "",
-    "unit": "second",
-    "stat": "range",
-    "conditions": "",
-    "example": "60-150"
-   },
-   {
-    "name": "Min. Peak temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "value",
-    "conditions": "",
-    "example": "235"
-   },
-   {
-    "name": "Max. Peak temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "value",
-    "conditions": "",
-    "example": "260"
-   },
-   {
-    "name": "Time within 5 °C of peak temperature",
-    "symbol": "",
-    "unit": "second",
-    "stat": "max",
-    "conditions": "",
-    "example": "30"
-   },
-   {
-    "name": "Ramp-down rate",
-    "symbol": "",
-    "unit": "°C/second",
-    "stat": "max",
-    "conditions": "",
-    "example": "6"
-   },
-   {
-    "name": "Time from 25 °C to peak temperature",
-    "symbol": "",
-    "unit": "minute",
-    "stat": "max",
-    "conditions": "",
-    "example": "8"
-   },
-   {
-    "name": "Soldering Condition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Ref. IPC/JEDEC J-STD-020 & J-STD-002"
    },
    {
     "name": "Packaging Quantity",
@@ -427,18 +459,10 @@
     "stat": "value",
     "conditions": "",
     "example": "No marking"
-   },
-   {
-    "name": "Land Pattern",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Recommend Land Pattern"
    }
   ],
-  "seconds": 80.61,
-  "tokens_in": 5096,
-  "tokens_out": 2049
+  "seconds": 47.6,
+  "tokens_in": 5196,
+  "tokens_out": 3009
  }
 }

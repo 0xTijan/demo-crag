@@ -20,16 +20,16 @@
  },
  "type": "esd_protection_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T11:11:41+00:00",
+  "at": "2026-11-23T06:17:39+00:00",
   "items": [
    {
     "name": "Peak Pulse Power (T =8/20μS)",
     "symbol": "PPP",
     "unit": "W",
     "stat": "max",
-    "conditions": "T =8/20μS",
+    "conditions": "tp = 8/20μS",
     "example": "60"
    },
    {
@@ -85,7 +85,7 @@
     "symbol": "VBR",
     "unit": "V",
     "stat": "range",
-    "conditions": "I =1mA T",
+    "conditions": "I =1mA",
     "example": "5.0 to 6.5"
    },
    {
@@ -93,7 +93,7 @@
     "symbol": "IR",
     "unit": "nA",
     "stat": "max",
-    "conditions": "V =5.0V R",
+    "conditions": "V =5.0V",
     "example": "100"
    },
    {
@@ -101,7 +101,7 @@
     "symbol": "VC",
     "unit": "V",
     "stat": "max",
-    "conditions": "I =3A PP",
+    "conditions": "IPP =3A",
     "example": "20.5"
    },
    {
@@ -109,7 +109,7 @@
     "symbol": "VT",
     "unit": "V",
     "stat": "typ",
-    "conditions": "V =8kV ESD",
+    "conditions": "VESD =8kV",
     "example": "135"
    },
    {
@@ -117,7 +117,7 @@
     "symbol": "VC",
     "unit": "V",
     "stat": "typ",
-    "conditions": "V =8kV ESD",
+    "conditions": "VESD =8kV",
     "example": "20"
    },
    {
@@ -125,12 +125,20 @@
     "symbol": "CJ",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V =0V, f=1MHz R",
+    "conditions": "V =0V, f=1MHz",
     "example": "0.3"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOD-882"
    }
   ],
-  "seconds": 76.7,
-  "tokens_in": 1251,
-  "tokens_out": 683
+  "seconds": 72.46,
+  "tokens_in": 1351,
+  "tokens_out": 713
  }
 }

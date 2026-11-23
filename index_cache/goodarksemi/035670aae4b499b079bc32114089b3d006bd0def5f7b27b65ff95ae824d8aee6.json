@@ -20,16 +20,16 @@
  },
  "type": "mosfet_p",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:03:09+00:00",
+  "at": "2026-11-23T06:09:58+00:00",
   "items": [
    {
     "name": "BV DSS",
     "symbol": "BV DSS",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "VGS=0V, ID=-250uA",
     "example": "-30"
    },
    {
@@ -37,35 +37,11 @@
     "symbol": "R DS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "",
+    "conditions": "VGS=-10V, ID=-5A",
     "example": "41"
    },
    {
     "name": "I D",
-    "symbol": "I D",
-    "unit": "A",
-    "stat": "max",
-    "conditions": "",
-    "example": "-5.6"
-   },
-   {
-    "name": "Drain-Source Voltage",
-    "symbol": "VDS",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "TA=25°C",
-    "example": "-30"
-   },
-   {
-    "name": "Gate-Source Voltage",
-    "symbol": "VGS",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "TA=25°C",
-    "example": "±20"
-   },
-   {
-    "name": "Drain Current-Continuous (TC=25°C)",
     "symbol": "ID",
     "unit": "A",
     "stat": "max",
@@ -73,7 +49,7 @@
     "example": "-5.6"
    },
    {
-    "name": "Drain Current-Continuous (TC=100°C)",
+    "name": "I D",
     "symbol": "ID",
     "unit": "A",
     "stat": "max",
@@ -81,7 +57,7 @@
     "example": "-3.6"
    },
    {
-    "name": "Drain Current-Pulsed",
+    "name": "I DM",
     "symbol": "IDM",
     "unit": "A",
     "stat": "max",
@@ -89,7 +65,7 @@
     "example": "-22.4"
    },
    {
-    "name": "Single Pulse Avalanche Energy",
+    "name": "E AS",
     "symbol": "EAS",
     "unit": "mJ",
     "stat": "max",
@@ -97,7 +73,7 @@
     "example": "30"
    },
    {
-    "name": "Single Pulse Avalanche Current",
+    "name": "I AS",
     "symbol": "IAS",
     "unit": "A",
     "stat": "max",
@@ -105,7 +81,7 @@
     "example": "-10.8"
    },
    {
-    "name": "Power Dissipation",
+    "name": "P D",
     "symbol": "PD",
     "unit": "W",
     "stat": "max",
@@ -113,15 +89,15 @@
     "example": "2.7"
    },
    {
-    "name": "Power Dissipation-Derate above 25°C",
+    "name": "P D",
     "symbol": "PD",
     "unit": "W/°C",
-    "stat": "value",
-    "conditions": "",
+    "stat": "max",
+    "conditions": "Derate above 25°C",
     "example": "0.022"
    },
    {
-    "name": "Thermal Resistance, Junction-to-Ambient",
+    "name": "R θJA",
     "symbol": "RθJA",
     "unit": "°C/W",
     "stat": "max",
@@ -129,7 +105,7 @@
     "example": "60"
    },
    {
-    "name": "Thermal Resistance, Junction-to-Case",
+    "name": "R θJC",
     "symbol": "RθJC",
     "unit": "°C/W",
     "stat": "max",
@@ -137,219 +113,203 @@
     "example": "47"
    },
    {
-    "name": "Operating Junction Temperature Range",
+    "name": "T J",
     "symbol": "TJ",
-    "unit": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 To +150"
    },
    {
-    "name": "Storage Temperature Range",
+    "name": "T STG",
     "symbol": "TSTG",
-    "unit": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 To +150"
    },
    {
-    "name": "Drain-Source Breakdown Voltage",
-    "symbol": "BV DSS",
-    "unit": "V",
-    "stat": "max",
-    "conditions": "V=0V, I=-250uA",
-    "example": "-30"
-   },
-   {
-    "name": "BV Temperature Coefficient DSS",
+    "name": "△BVDSS /△TJ",
     "symbol": "△BVDSS /△TJ",
     "unit": "V/°C",
     "stat": "typ",
-    "conditions": "Reference to 25°C, I=-1mA",
+    "conditions": "Reference to 25°C, ID=-1mA",
     "example": "-0.03"
    },
    {
-    "name": "Drain-Source Leakage Current",
+    "name": "I DSS",
     "symbol": "I DSS",
     "unit": "μA",
     "stat": "max",
-    "conditions": "V=-30V, V=0V, T=25°C",
+    "conditions": "VDS=-30V, VGS=0V, TJ=25°C",
     "example": "-1"
    },
    {
-    "name": "Drain-Source Leakage Current",
+    "name": "I DSS",
     "symbol": "I DSS",
     "unit": "μA",
     "stat": "max",
-    "conditions": "V=-24V, V=0V, T=125°C",
+    "conditions": "VDS=-24V, VGS=0V, TJ=125°C",
     "example": "-100"
    },
    {
-    "name": "Gate-Source Leakage Current",
+    "name": "I GSS",
     "symbol": "I GSS",
     "unit": "nA",
     "stat": "max",
-    "conditions": "V=±20V, V=0V",
+    "conditions": "VGS=±20V, VDS=0V",
     "example": "±100"
    },
    {
-    "name": "Static Drain-Source On-Resistance",
+    "name": "R DS(ON)",
     "symbol": "R DS(ON)",
     "unit": "mΩ",
     "stat": "typ",
-    "conditions": "V=-10V, I=-5A",
+    "conditions": "VGS=-10V, ID=-5A",
     "example": "30"
    },
    {
-    "name": "Static Drain-Source On-Resistance",
-    "symbol": "R DS(ON)",
-    "unit": "mΩ",
-    "stat": "max",
-    "conditions": "V=-10V, I=-5A",
-    "example": "41"
-   },
-   {
-    "name": "Static Drain-Source On-Resistance",
+    "name": "R DS(ON)",
     "symbol": "R DS(ON)",
     "unit": "mΩ",
     "stat": "typ",
-    "conditions": "V=-4.5V, I=-4A",
+    "conditions": "VGS=-4.5V, ID=-4A",
     "example": "41"
    },
    {
-    "name": "Static Drain-Source On-Resistance",
+    "name": "R DS(ON)",
     "symbol": "R DS(ON)",
     "unit": "mΩ",
     "stat": "max",
-    "conditions": "V=-4.5V, I=-4A",
+    "conditions": "VGS=-4.5V, ID=-4A",
     "example": "54"
    },
    {
-    "name": "Gate Threshold Voltage",
+    "name": "V GS(th)",
     "symbol": "VGS(th)",
     "unit": "V",
     "stat": "range",
-    "conditions": "V=V, I=-250uA",
+    "conditions": "VGS=VDS, ID=-250uA",
     "example": "-1.1 To -2.8"
    },
    {
-    "name": "V Temperature Coefficient GS(th)",
+    "name": "△VGS(th)",
     "symbol": "△VGS(th)",
     "unit": "mV/°C",
     "stat": "typ",
-    "conditions": "V=V, I=-250uA",
+    "conditions": "VGS=VDS, ID=-250uA",
     "example": "4"
    },
    {
-    "name": "Forward Transconductance",
+    "name": "g fs",
     "symbol": "gfs",
     "unit": "S",
     "stat": "typ",
-    "conditions": "V=-5V, I=-5A",
+    "conditions": "VDS=-5V, ID=-5A",
     "example": "8.1"
    },
    {
-    "name": "Total Gate Charge",
+    "name": "Q g",
     "symbol": "Qg",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V=-15V, I=-5A, V=-10V",
+    "conditions": "VDS=-15V, ID=-5A, VGS=-10V",
     "example": "15"
    },
    {
-    "name": "Gate-Source Charge",
+    "name": "Q gs",
     "symbol": "Qgs",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V=-15V, I=-5A, V=-10V",
+    "conditions": "VDS=-15V, ID=-5A, VGS=-10V",
     "example": "4"
    },
    {
-    "name": "Gate-Drain Charge",
+    "name": "Q gd",
     "symbol": "Qgd",
     "unit": "nC",
     "stat": "typ",
-    "conditions": "V=-15V, I=-5A, V=-10V",
+    "conditions": "VDS=-15V, ID=-5A, VGS=-10V",
     "example": "2"
    },
    {
-    "name": "Turn-On Delay Time",
+    "name": "t d(on)",
     "symbol": "td(on)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "V=-15V, R=3, V=-10V, I=-5A",
+    "conditions": "VDD=-25V, RG=25Ω, VGS=-10V, ID=-5A",
     "example": "13"
    },
    {
-    "name": "Rise Time",
+    "name": "t r",
     "symbol": "tr",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "V=-15V, R=3, V=-10V, I=-5A",
+    "conditions": "VDD=-25V, RG=25Ω, VGS=-10V, ID=-5A",
     "example": "3.4"
    },
    {
-    "name": "Turn-Off Delay Time",
+    "name": "t d(off)",
     "symbol": "td(off)",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "V=-15V, R=3, V=-10V, I=-5A",
+    "conditions": "VDD=-25V, RG=25Ω, VGS=-10V, ID=-5A",
     "example": "41"
    },
    {
-    "name": "Fall Time",
+    "name": "t f",
     "symbol": "tf",
     "unit": "nS",
     "stat": "typ",
-    "conditions": "V=-15V, R=3, V=-10V, I=-5A",
+    "conditions": "VDD=-25V, RG=25Ω, VGS=-10V, ID=-5A",
     "example": "9"
    },
    {
-    "name": "Input Capacitance",
+    "name": "C iss",
     "symbol": "Ciss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V=-15V, V=0V, F=1MHz",
+    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
     "example": "739"
    },
    {
-    "name": "Output Capacitance",
+    "name": "C oss",
     "symbol": "Coss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V=-15V, V=0V, F=1MHz",
+    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
     "example": "54"
    },
    {
-    "name": "Reverse Transfer Capacitance",
+    "name": "C rss",
     "symbol": "Crss",
     "unit": "pF",
     "stat": "typ",
-    "conditions": "V=-15V, V=0V, F=1MHz",
+    "conditions": "VDS=-15V, VGS=0V, F=1MHz",
     "example": "44"
    },
    {
-    "name": "Continuous Source Current",
-    "symbol": "I S",
+    "name": "I S",
+    "symbol": "IS",
     "unit": "A",
     "stat": "max",
-    "conditions": "V=V=0V, Force Current",
+    "conditions": "VGS=VDS=0V, Force Current",
     "example": "-5.6"
    },
    {
-    "name": "Pulsed Source Current",
-    "symbol": "I SM",
+    "name": "I SM",
+    "symbol": "ISM",
     "unit": "A",
     "stat": "max",
-    "conditions": "V=V=0V, Force Current",
+    "conditions": "VGS=VDS=0V, Force Current",
     "example": "-22.4"
    },
    {
-    "name": "Diode Forward Voltage",
+    "name": "V SD",
     "symbol": "VSD",
     "unit": "V",
     "stat": "max",
-    "conditions": "V=0V, I=-3A, T=25°C",
+    "conditions": "VGS=0V, IS=-3A, TJ=25°C",
     "example": "-1.2"
    },
    {
@@ -359,42 +319,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOP-8"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "8"
-   },
-   {
-    "name": "Mounting Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Surface Mount"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 To +150"
-   },
-   {
-    "name": "Part Number",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "GSFQ3041"
    }
   ],
-  "seconds": 93.39,
-  "tokens_in": 2507,
-  "tokens_out": 2313
+  "seconds": 86.07,
+  "tokens_in": 2607,
+  "tokens_out": 2035
  }
 }

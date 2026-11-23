@@ -22,9 +22,9 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:48:24+00:00",
+  "at": "2026-11-23T05:48:43+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -145,10 +145,18 @@
     "stat": "typ",
     "conditions": "VR=4.0V, f=1MHZ",
     "example": "46"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "eSGA (SOD-123FL)"
    }
   ],
-  "seconds": 41.4,
-  "tokens_in": 1502,
-  "tokens_out": 695
+  "seconds": 40.44,
+  "tokens_in": 1602,
+  "tokens_out": 736
  }
 }

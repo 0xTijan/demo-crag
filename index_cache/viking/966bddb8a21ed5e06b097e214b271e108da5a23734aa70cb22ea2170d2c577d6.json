@@ -23,21 +23,245 @@
  },
  "type": "thick_film_array_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:59:14+00:00",
+  "at": "2026-11-23T07:59:00+00:00",
   "items": [
    {
-    "name": "Size",
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "max",
+    "conditions": "",
+    "example": "12.5V"
+   },
+   {
+    "name": "Operating Temperature Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 to 125"
+   },
+   {
+    "name": "Power Rating",
+    "symbol": "",
+    "unit": "W",
+    "stat": "value",
+    "conditions": "at 70°C",
+    "example": "1/32"
+   },
+   {
+    "name": "Jumper Rated Current",
+    "symbol": "",
+    "unit": "A",
+    "stat": "value",
+    "conditions": "",
+    "example": "0.5"
+   },
+   {
+    "name": "Max. Operating Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "50"
+   },
+   {
+    "name": "Max. Overload Voltage",
+    "symbol": "",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "100"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±1%",
+    "example": "10 to 1000000"
+   },
+   {
+    "name": "Resistance Range",
+    "symbol": "",
+    "unit": "Ω",
+    "stat": "range",
+    "conditions": "±5%",
+    "example": "1 to 1000000"
+   },
+   {
+    "name": "TCR",
+    "symbol": "",
+    "unit": "PPM/°C",
+    "stat": "value",
+    "conditions": "",
+    "example": "±200"
+   },
+   {
+    "name": "Insulation Resistance",
+    "symbol": "",
+    "unit": "G",
+    "stat": "min",
+    "conditions": "",
+    "example": "10"
+   },
+   {
+    "name": "Solderability",
+    "symbol": "",
+    "unit": "%",
+    "stat": "min",
+    "conditions": "",
+    "example": "95"
+   },
+   {
+    "name": "Flammability",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0402x4 / 0603x4 / 0201x2(Flat) / 0201x4("
+    "example": "UL-94 V-0"
+   },
+   {
+    "name": "AEC-Q200 Compliance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Compliance"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CN-41"
+   },
+   {
+    "name": "Part Number",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "CN-41"
+   },
+   {
+    "name": "Resistance Tolerance",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "±5%"
+   },
+   {
+    "name": "Function Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "A"
+   },
+   {
+    "name": "Packaging Code",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "7"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "L",
+    "example": "1.40"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "W",
+    "example": "0.60"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "H",
+    "example": "0.35"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "A",
+    "example": "0.20"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "B",
+    "example": "0.40"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "C",
+    "example": "0.10"
+   },
+   {
+    "name": "Dimensions",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "Y",
+    "example": "0.15"
+   },
+   {
+    "name": "Weight",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "1000pcs",
+    "example": "0.833"
+   },
+   {
+    "name": "Sulfur Test",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "EIA-977 Condition A"
+   },
+   {
+    "name": "Storage Temperature",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "15 to 28"
+   },
+   {
+    "name": "Shelf Life",
+    "symbol": "",
+    "unit": "years",
+    "stat": "value",
+    "conditions": "",
+    "example": "2"
    }
   ],
-  "seconds": 119.87,
-  "tokens_in": 6491,
-  "tokens_out": 71
+  "seconds": 203.58,
+  "tokens_in": 6591,
+  "tokens_out": 1089
  }
 }

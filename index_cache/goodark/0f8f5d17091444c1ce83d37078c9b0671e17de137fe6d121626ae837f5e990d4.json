@@ -24,9 +24,9 @@
  },
  "type": "zener_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:26:24+00:00",
+  "at": "2026-11-23T06:27:46+00:00",
   "items": [
    {
     "name": "Zener voltage",
@@ -85,11 +85,27 @@
     "example": "-55 to +150"
    },
    {
-    "name": "VZ at IZT (V)",
+    "name": "Part Number",
     "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "L3N5924B"
+   },
+   {
+    "name": "Marking",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "5924B"
+   },
+   {
+    "name": "VZ at IZT (V)",
+    "symbol": "VZ",
     "unit": "V",
     "stat": "range",
-    "conditions": "IZT",
+    "conditions": "IZT (mA)",
     "example": "8.65 to 9.56"
    },
    {
@@ -125,15 +141,15 @@
     "example": "0.5"
    },
    {
-    "name": "Maximum reverse leakage at VR",
-    "symbol": "",
+    "name": "Maximum reverse leakage at VR (µA)",
+    "symbol": "IR",
     "unit": "µA",
     "stat": "max",
-    "conditions": "VR",
+    "conditions": "VR (V)",
     "example": "5"
    },
    {
-    "name": "Test voltage VR",
+    "name": "Test voltage VR (V)",
     "symbol": "VR",
     "unit": "V",
     "stat": "value",
@@ -149,8 +165,8 @@
     "example": "308"
    }
   ],
-  "seconds": 31.34,
-  "tokens_in": 3351,
-  "tokens_out": 662
+  "seconds": 46.43,
+  "tokens_in": 3451,
+  "tokens_out": 749
  }
 }

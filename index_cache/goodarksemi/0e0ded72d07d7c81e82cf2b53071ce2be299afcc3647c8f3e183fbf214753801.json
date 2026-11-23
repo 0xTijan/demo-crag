@@ -24,12 +24,12 @@
  },
  "type": "bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:23:55+00:00",
+  "at": "2026-11-23T06:25:28+00:00",
   "items": [
    {
-    "name": "Maximum Rating (Reverse) Voltage",
+    "name": "Maximum Reverse Voltage",
     "symbol": "V_RRM",
     "unit": "V",
     "stat": "max",
@@ -37,7 +37,7 @@
     "example": "100"
    },
    {
-    "name": "Maximum Rating (Peak) Voltage",
+    "name": "Maximum RMS Voltage",
     "symbol": "V_RMS",
     "unit": "V",
     "stat": "max",
@@ -53,7 +53,7 @@
     "example": "100"
    },
    {
-    "name": "Maximum Average Forward Current",
+    "name": "Average Forward Current",
     "symbol": "I_F(AV)",
     "unit": "A",
     "stat": "max",
@@ -69,7 +69,7 @@
     "example": "60"
    },
    {
-    "name": "Fusing Time for Fuse (t=8.3ms)",
+    "name": "Fusing Current",
     "symbol": "I^2t",
     "unit": "A2s",
     "stat": "max",
@@ -89,7 +89,7 @@
     "symbol": "I_R",
     "unit": "µA",
     "stat": "max",
-    "conditions": "T=25°C",
+    "conditions": "T = 25°C",
     "example": "5"
    },
    {
@@ -97,7 +97,7 @@
     "symbol": "I_R",
     "unit": "µA",
     "stat": "max",
-    "conditions": "T=125°C",
+    "conditions": "T = 125°C",
     "example": "100"
    },
    {
@@ -109,7 +109,7 @@
     "example": "22"
    },
    {
-    "name": "Typical Thermal Resistance (Junction to Ambient)",
+    "name": "Typical Thermal Resistance Junction to Ambient",
     "symbol": "R_thJA",
     "unit": "°C/W",
     "stat": "typ",
@@ -117,7 +117,7 @@
     "example": "45"
    },
    {
-    "name": "Typical Thermal Resistance (Junction to Case)",
+    "name": "Typical Thermal Resistance Junction to Case",
     "symbol": "R_thJC",
     "unit": "°C/W",
     "stat": "typ",
@@ -126,7 +126,7 @@
    },
    {
     "name": "Operating Temperature Range",
-    "symbol": "",
+    "symbol": "T_j",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
@@ -134,15 +134,23 @@
    },
    {
     "name": "Storage Temperature Range",
-    "symbol": "",
+    "symbol": "T_STG",
     "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to 150"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "KBP PROG plastic package"
    }
   ],
-  "seconds": 44.15,
-  "tokens_in": 4741,
-  "tokens_out": 636
+  "seconds": 41.95,
+  "tokens_in": 4841,
+  "tokens_out": 660
  }
 }

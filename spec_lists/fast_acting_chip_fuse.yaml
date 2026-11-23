@@ -12,13 +12,10 @@ name: fast acting chip fuse
 version: 1
 status: draft
 must_match:
-- case
-- voltage_rating_dc
-- interrupting_rating
-- current_rating
-visual_check: pinout (G/D/S order)
+- package
+visual_check: pinout (fuse type)
 drafted:
-  at: '2026-11-22T14:56:49+00:00'
+  at: '2026-11-23T08:38:56+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -29,36 +26,6 @@ drafted:
   - goodarksemi/s1206h_9d294369.md
   - goodarksemi/s6125f_2c40e17a.md
 specs:
-  ampere_rating_range:
-    label: Ampere Rating
-    unit: mA
-    stat: range
-    conditions: null
-    rule: contains
-    critical: true
-    aliases:
-    - Ampere Rating
-    found_in: 6/6
-  case:
-    label: Case
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Case
-    found_in: 6/6
-  current_rating:
-    label: Current Rating
-    unit: mA
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Current Rating
-    found_in: 6/6
   interrupting_rating:
     label: Interrupting Rating
     unit: A
@@ -69,23 +36,46 @@ specs:
     aliases:
     - Interrupting Rating
     found_in: 6/6
-  alpha_code_marking:
-    label: Alpha Code Marking
+  package:
+    label: Package
     unit: null
     stat: value
     conditions: null
     rule: '='
+    critical: true
+    aliases:
+    - Package
+    - Case
+    found_in: 6/6
+  voltage_rating:
+    label: Voltage Rating
+    unit: V
+    stat: range
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Voltage Rating
+    - Voltage Rating DC
+    found_in: 6/6
+  ampere_rating:
+    label: Ampere Rating
+    unit: mA
+    stat: range
+    conditions: null
+    rule: info
     critical: false
     aliases:
-    - Product Code
-    - Alpha Code Marking
+    - Electrical Characteristics
+    - Ampere Rating
+    - Current Rating
     found_in: 6/6
-  resistance_typ:
-    label: Resistance typ
+  resistance:
+    label: Resistance
     unit: ohms
     stat: typ
-    conditions: DC Cold Resistance (Measured at ≤10% of rated current)
-    rule: ≈
+    conditions: null
+    rule: <=
     critical: false
     aliases:
     - Resistance
@@ -96,8 +86,7 @@ specs:
     label: Typical Melt I²t
     unit: A2s
     stat: typ
-    conditions: DC (Measured with a battery bank at rated DC voltage, 10x-rated current, not to exceed IR, time
-      constant of calibrated c
+    conditions: null
     rule: ≈
     critical: false
     aliases:
@@ -106,86 +95,24 @@ specs:
     - I2t
     - Typical Melting I2t
     found_in: 6/6
-  voltage_rating_dc:
-    label: Voltage Rating DC
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Voltage Rating
-    - Voltage Rating DC
-    found_in: 5/6
-  percent_of_amp_rating:
-    label: '% of Amp Rating'
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - '% of Amp Rating'
-    - Opening Time
-    found_in: 5/6
-  opening_time_max:
-    label: Opening Time max
-    unit: Seconds
-    stat: max
-    conditions: '% of Amp Rating=250'
-    rule: <=
-    critical: false
-    aliases:
-    - Opening Time
-    found_in: 4/6
-rare_specs:
-  voltage_rating_ac:
-    label: Voltage Rating AC
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Voltage Rating
-    found_in: 2/6
-  environmental_data:
-    label: Environmental Data
+  alpha_code_marking:
+    label: Alpha Code Marking
     unit: null
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Environmental Data
-    found_in: 2/6
-  opening_time_min:
-    label: Opening Time min
-    unit: Hours
-    stat: min
-    conditions: '% of Amp Rating=100'
+    - Alpha Code Marking
+    found_in: 5/6
+  opening_time:
+    label: Opening Time
+    unit: s
+    stat: range
+    conditions: amp_rating_100
     rule: <=
     critical: false
     aliases:
     - Opening Time
-    found_in: 2/6
-  rohs:
-    label: RoHS
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - RoHS
-    found_in: 2/6
-  operating_temp_range:
-    label: Operating Temperature Range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating Temperature Range
-    found_in: 1/6
+    found_in: 5/6
+rare_specs: {}

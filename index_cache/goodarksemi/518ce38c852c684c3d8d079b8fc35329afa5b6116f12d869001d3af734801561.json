@@ -24,9 +24,9 @@
  },
  "type": "fast_recovery_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:45:51+00:00",
+  "at": "2026-11-23T07:45:26+00:00",
   "items": [
    {
     "name": "Maximum Recurrent Peak Reverse Voltage",
@@ -65,7 +65,7 @@
     "symbol": "I_FSM",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "8.3ms, Half Sine",
     "example": "50.0"
    },
    {
@@ -147,34 +147,10 @@
     "stat": "value",
     "conditions": "",
     "example": "WOB"
-   },
-   {
-    "name": "Marking Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "R2W005"
-   },
-   {
-    "name": "Quantity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1,000pcs / Box"
-   },
-   {
-    "name": "HSF Status",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS Compliant"
    }
   ],
-  "seconds": 45.39,
-  "tokens_in": 2050,
-  "tokens_out": 847
+  "seconds": 40.7,
+  "tokens_in": 2150,
+  "tokens_out": 747
  }
 }

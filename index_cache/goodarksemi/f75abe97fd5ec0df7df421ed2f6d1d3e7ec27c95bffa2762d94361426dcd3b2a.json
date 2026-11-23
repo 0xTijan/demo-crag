@@ -22,9 +22,9 @@
  },
  "type": "schottky_bridge_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:51:38+00:00",
+  "at": "2026-11-23T08:35:13+00:00",
   "items": [
    {
     "name": "Repetitive Peak Reverse Voltage",
@@ -97,10 +97,18 @@
     "stat": "typ",
     "conditions": "V =4V, F=1.0MHz R",
     "example": "250"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Packed with FRP substrate and epoxy unde"
    }
   ],
-  "seconds": 38.83,
-  "tokens_in": 1225,
-  "tokens_out": 584
+  "seconds": 32.4,
+  "tokens_in": 1325,
+  "tokens_out": 623
  }
 }

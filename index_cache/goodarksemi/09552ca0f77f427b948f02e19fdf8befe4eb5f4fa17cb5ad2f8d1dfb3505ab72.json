@@ -20,9 +20,9 @@
  },
  "type": "dual_npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:52:47+00:00",
+  "at": "2026-11-23T08:35:59+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -61,7 +61,7 @@
     "symbol": "Ptot",
     "unit": "mW",
     "stat": "max",
-    "conditions": "Device mounted on FR-4 substrate PC board, with minimum recommended pad layout",
+    "conditions": "Device mounted on FR-4 substrate PC board, with minimum recommended pad layout.",
     "example": "150"
    },
    {
@@ -85,7 +85,7 @@
     "symbol": "RθJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "Device mounted on FR-4 substrate PC board, with minimum recommended pad layout",
+    "conditions": "Device mounted on FR-4 substrate PC board, with minimum recommended pad layout.",
     "example": "833"
    },
    {
@@ -126,7 +126,7 @@
     "unit": "-",
     "stat": "range",
     "conditions": "VCE=5V, IC=2mA",
-    "example": "200 to 450"
+    "example": "200"
    },
    {
     "name": "Collector-Emitter Saturation Voltage",
@@ -164,7 +164,7 @@
     "name": "Base-Emitter Voltage",
     "symbol": "VBE",
     "unit": "mV",
-    "stat": "min",
+    "stat": "range",
     "conditions": "VCE=5V, IC=2mA",
     "example": "580"
    },
@@ -191,10 +191,18 @@
     "stat": "max",
     "conditions": "VCB=10V, f=1MHz",
     "example": "4.5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-563"
    }
   ],
-  "seconds": 17.73,
-  "tokens_in": 1206,
-  "tokens_out": 1066
+  "seconds": 18.36,
+  "tokens_in": 1306,
+  "tokens_out": 1096
  }
 }

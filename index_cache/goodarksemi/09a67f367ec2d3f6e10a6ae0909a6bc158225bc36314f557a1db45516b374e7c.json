@@ -22,9 +22,9 @@
  },
  "type": "pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:32:01+00:00",
+  "at": "2026-11-23T06:45:22+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -150,17 +150,9 @@
     "name": "DC Current Gain",
     "symbol": "h FE(2)",
     "unit": "-",
-    "stat": "min",
+    "stat": "range",
     "conditions": "V =-2V, I =-150mA CE C",
-    "example": "63"
-   },
-   {
-    "name": "DC Current Gain",
-    "symbol": "h FE(2)",
-    "unit": "-",
-    "stat": "max",
-    "conditions": "V =-2V, I =-150mA CE C",
-    "example": "250"
+    "example": "63-160"
    },
    {
     "name": "DC Current Gain",
@@ -193,26 +185,10 @@
     "stat": "min",
     "conditions": "V =-10V, I =-50mA, f=100MHz CE C",
     "example": "100"
-   },
-   {
-    "name": "Classification of hFE(2)",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "GSBCP51-10, GSBCP52-10, GSBCP53-10",
-    "example": "63-160"
-   },
-   {
-    "name": "Classification of hFE(2)",
-    "symbol": "",
-    "unit": "",
-    "stat": "range",
-    "conditions": "GSBCP51-16, GSBCP52-16, GSBCP53-16",
-    "example": "100-250"
    }
   ],
-  "seconds": 70.36,
-  "tokens_in": 1597,
-  "tokens_out": 1592
+  "seconds": 59.37,
+  "tokens_in": 1697,
+  "tokens_out": 1014
  }
 }

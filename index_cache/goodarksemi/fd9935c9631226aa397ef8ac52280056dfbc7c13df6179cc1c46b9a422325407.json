@@ -24,9 +24,9 @@
  },
  "type": "fast_acting_chip_fuse",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:56:18+00:00",
+  "at": "2026-11-23T08:38:39+00:00",
   "items": [
    {
     "name": "Ampere Rating",
@@ -37,51 +37,43 @@
     "example": "250-8000"
    },
    {
-    "name": "Opening Time",
+    "name": "% of Amp Rating",
     "symbol": "",
-    "unit": "hours",
-    "stat": "min",
-    "conditions": "100% of Amp Rating",
-    "example": "4"
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "100"
    },
    {
     "name": "Opening Time",
     "symbol": "",
-    "unit": "seconds",
-    "stat": "max",
-    "conditions": "250% of Amp Rating",
-    "example": "5"
+    "unit": "Hours",
+    "stat": "range",
+    "conditions": "",
+    "example": "4"
    },
    {
     "name": "Current Rating",
     "symbol": "",
     "unit": "mA",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "250"
+    "example": "250-8000"
    },
    {
     "name": "Voltage Rating",
     "symbol": "",
     "unit": "V",
-    "stat": "value",
-    "conditions": "AC",
-    "example": "32"
-   },
-   {
-    "name": "Voltage Rating",
-    "symbol": "",
-    "unit": "V",
-    "stat": "value",
-    "conditions": "DC",
-    "example": "63"
+    "stat": "range",
+    "conditions": "",
+    "example": "32-63"
    },
    {
     "name": "Interrupting Rating",
     "symbol": "",
     "unit": "A",
     "stat": "value",
-    "conditions": "AC/DC",
+    "conditions": "",
     "example": "50"
    },
    {
@@ -97,7 +89,7 @@
     "symbol": "",
     "unit": "A2s",
     "stat": "typ",
-    "conditions": "DC (Measured with a battery bank at rated DC voltage, 10x-rated current, not to exceed IR, time constant of calibrated c",
+    "conditions": "Measured with a battery bank at rated DC voltage, 10x-rated current, not to exceed IR, time constant of calibrated circu",
     "example": "0.0004"
    },
    {
@@ -109,24 +101,16 @@
     "example": "D"
    },
    {
-    "name": "Case",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "1206"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 68.06,
-  "tokens_in": 1824,
-  "tokens_out": 506
+  "seconds": 30.8,
+  "tokens_in": 1924,
+  "tokens_out": 532
  }
 }

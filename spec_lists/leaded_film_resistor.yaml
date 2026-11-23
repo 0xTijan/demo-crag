@@ -12,58 +12,24 @@ name: leaded film resistor (metal, carbon, oxide)
 version: 1
 status: draft
 must_match:
-- dimensions_ld
-- resistance_tolerance
-- tcr
-- resistance_range
-visual_check: pinout (G/D/S order)
+- package
+- operating_temp_range
+visual_check: Resistor color code or marking
 drafted:
-  at: '2026-11-22T14:18:53+00:00'
+  at: '2026-11-23T08:15:15+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
   - viking/cfr-series-data-sheet-edition-rev-b3_8b2b39ff.md
   - viking/csra-series-data-sheet-edition-rev-b4_46ccef10.md
   - viking/csra-series_fd8dac94.md
+  - viking/csrp-series-data-sheet-edition-rev-b1_b2aa0b86.md
   - viking/fmr-series-data-sheet-edition-rev-b1_9321321b.md
   - viking/mfd-series-data-sheet-edition-rev-a6_a257a655.md
   - viking/mfr-series-data-sheet-edition-rev-c_148ec9a9.md
   - viking/mgr-series-data-sheet-edition-rev-b1_69fe7182.md
   - viking/mof-series-data-sheet-edition-rev-b3_7e1cf4bb.md
 specs:
-  dimensions_ld:
-    label: Dimensions (L×D)
-    unit: mm
-    stat: range
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Dimensions (L×D)
-    - L (mm)
-    - ΦD (mm)
-    - ΦD 1 (mm)
-    - L
-    - ΦD
-    - ΦD 1
-    - L (Length)
-    - D (Diameter)
-    - D
-    - Dimensions
-    - Sizes
-    found_in: 8/8
-  max_overload_voltage:
-    label: Max. Overload Voltage
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Max. Overload Voltage
-    - Max. Overload Voltage (DC)
-    - Max. Overload Voltage (AC)
-    found_in: 8/8
   max_working_voltage:
     label: Max. Working Voltage
     unit: V
@@ -73,206 +39,45 @@ specs:
     critical: true
     aliases:
     - Max. Working Voltage
+    - Max. Overload Voltage
+    - Dielectric Withstanding Voltage
     - Operating voltage U max.
-    - Max. Operating Voltage
-    - Absolute Maximum Ratings
-    - Max. Working Voltage (DC)
-    - Max. Working Voltage (AC)
-    found_in: 8/8
+    - Max. operating voltage
+    - Operating Voltage
+    - U max.
+    found_in: 9/9
   operating_temp_range:
     label: Operating Temp. Range
     unit: °C
     stat: range
     conditions: null
-    rule: contains
+    rule: '='
     critical: true
     aliases:
     - Operating Temp. Range
     - Operating temperature range
-    - Operating Temp. Range (Silicone Resin)
-    - Operating Temp. Range (Epoxy Resin)
-    found_in: 8/8
-  resistance_range:
-    label: Resistance Range
-    unit: Ω
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Resistance Range
-    - Resistance Value
-    - ±0.05%
-    - ±0.1%
-    - ±0.25%
-    - ±0.5%
-    - ±1%
-    found_in: 8/8
-  tcr:
-    label: TCR
-    unit: ppm/°C
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Temperature Coefficient
-    - TCR (PPM/°C)
-    - TCR (±PPM/℃)
-    found_in: 8/8
-  damp_heat_steady_state:
-    label: Damp Heat, Steady State
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Damp Heat, Steady State
-    - Biased Humidity
-    - Damp Heat (Steady State)
-    - Damp Heat with Load
-    found_in: 7/8
-  endurance:
-    label: Endurance
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Endurance
-    - Operational Life (Endurance)
-    found_in: 7/8
-  humidity:
-    label: Humidity
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Humidity
-    - Shelf Life
-    found_in: 7/8
-  insulation_resistance:
-    label: Insulation Resistance
-    unit: MΩ
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Insulation Resistance
-    found_in: 7/8
-  resistance_to_soldering_heat:
-    label: Resistance to Soldering Heat
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Resistance to Soldering Heat
-    found_in: 7/8
-  solderability:
-    label: Solderability
-    unit: '%'
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Solderability
-    found_in: 7/8
-  storage_temp_range:
-    label: Storage Temperature
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Storage Temperature
-    found_in: 7/8
-  temperature_cycling:
-    label: Temperature Cycling
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Temperature Cycling
-    - Temperature Cycle
-    found_in: 7/8
-  voltage_proof:
-    label: Voltage Proof
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Voltage Proof
-    found_in: 6/8
-  shelf_life:
-    label: Shelf Life
-    unit: years
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Shelf life
-    - AEC-Q200 Compliance
-    found_in: 6/8
-  resistance_tolerance:
-    label: Resistance Tolerance
+    found_in: 9/9
+  package:
+    label: Package
     unit: null
     stat: value
     conditions: null
     rule: '='
-    critical: false
-    aliases:
-    - Resistance Tolerance
-    found_in: 5/8
-  dielectric_withstanding_voltage:
-    label: Dielectric Withstanding Voltage
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
     critical: true
     aliases:
-    - Dielectric Withstanding Voltage
-    - Voltage Proof
-    - Voltage Proof (Silicone Resin)
-    - Voltage Proof (Epoxy Resin)
-    found_in: 4/8
-  solvent_resistance_of_marking:
-    label: Solvent Resistance of Marking
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Solvent Resistance of Marking
-    found_in: 4/8
-  terminal_strength:
-    label: Terminal Strength
-    unit: kg
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Robustness of Terminations
-    - Terminal Strength
-    - Robustness of Terminations (Tensile)
-    found_in: 4/8
-rare_specs:
+    - Product
+    - Sizes
+    - Package
+    - L (mm)
+    - L 1 min. (mm)
+    - ΦD (mm)
+    - ΦD 1 (mm)
+    - K (mm)
+    - Weight 1,000EA (g)
+    - Reel Diameter
+    - ΦA (mm)
+    - ΦB (mm)
+    found_in: 9/9
   power_rating_at_70c:
     label: Power Rating at 70°C
     unit: W
@@ -282,4 +87,193 @@ rare_specs:
     critical: true
     aliases:
     - Power Rating at 70°C
-    found_in: 2/8
+    - Power rating P 70
+    - Power rating
+    - P
+    found_in: 9/9
+  resistance_range:
+    label: Resistance Range
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Resistance Range (±5%)
+    - Resistance Range (E6)
+    - Resistance Range (E24)
+    - Resistance Value
+    - Resistance range
+    - Resistance Range (Standard Power Rating)
+    - Resistance Range (High Power Rating)
+    found_in: 9/9
+  tc_r:
+    label: TCR
+    unit: PPM/°C
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Temperature Coefficient
+    - TCR (PPM/°C)
+    - TCR
+    - TCR (High Power Rating)
+    found_in: 9/9
+  max_overload_voltage:
+    label: Max. Overload Voltage
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Max. overload voltage
+    - Overload Voltage
+    found_in: 7/9
+  resistance_tolerance:
+    label: Resistance Tolerance
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance tolerance
+    - Tolerance
+    - Resistance Standard Tolerance
+    found_in: 7/9
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: MΩ
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Insulation Resistance
+    - Environmental Characteristics
+    found_in: 6/9
+  robustness_of_terminations:
+    label: Robustness of Terminations
+    unit: N
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Robustness of Terminations
+    - Terminal Strength
+    - Environmental Characteristics
+    found_in: 6/9
+  solderability:
+    label: Solderability
+    unit: '%'
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Solderability
+    - Environmental Characteristics
+    found_in: 6/9
+  resistance_to_soldering_heat:
+    label: Resistance to Soldering Heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Resistance to Soldering Heat
+    - Environmental Characteristics
+    found_in: 5/9
+  solvent_resistance_of_marking:
+    label: Solvent Resistance of Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Solvent Resistance of Marking
+    - Environmental Characteristics
+    found_in: 5/9
+  temperature_cycling:
+    label: Temperature Cycling
+    unit: null
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Temperature Cycling
+    - Environmental Characteristics
+    found_in: 5/9
+  voltage_proof:
+    label: Voltage Proof
+    unit: V
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Voltage Proof
+    - Environmental Characteristics
+    found_in: 5/9
+rare_specs:
+  damp_heat_steady_state:
+    label: Damp Heat, Steady State
+    unit: null
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Damp Heat, Steady State
+    - Environmental Characteristics
+    found_in: 4/9
+  endurance:
+    label: Endurance
+    unit: null
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Endurance
+    - Environmental Characteristics
+    found_in: 4/9
+  periodic_pulse_overload_test:
+    label: Periodic-Pulse Overload Test
+    unit: null
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Periodic-Pulse Overload Test
+    - Environmental Characteristics
+    found_in: 4/9
+  short_time_overload:
+    label: Short Time Overload
+    unit: null
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Short Time Overload
+    - Environmental Characteristics
+    found_in: 4/9
+  dielectric_withstanding_voltage:
+    label: Dielectric Withstanding Voltage
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Voltage Proof
+    - Dielectric Withstanding Voltage
+    found_in: 2/9

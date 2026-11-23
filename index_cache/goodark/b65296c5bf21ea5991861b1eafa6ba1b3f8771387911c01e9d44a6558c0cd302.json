@@ -21,10 +21,18 @@
  },
  "type": "pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:31:25+00:00",
+  "at": "2026-11-23T06:45:08+00:00",
   "items": [
+   {
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA=25°C unless otherwise noted",
+    "example": "VCBO: -50 -30 V, VCEO: -45 -25 V, VEBO: "
+   },
    {
     "name": "Collector Base Voltage",
     "symbol": "VCBO",
@@ -86,7 +94,7 @@
     "symbol": "RthJA",
     "unit": "°C/W",
     "stat": "value",
-    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout.",
+    "conditions": "Device mounted on FR-4 substrate PC board, 2oz copper, with minimum recommended pad layout",
     "example": "417"
    },
    {
@@ -94,16 +102,8 @@
     "symbol": "hFE",
     "unit": "-",
     "stat": "range",
-    "conditions": "-VCE = 1 V, -IC = 100 mA -16 -25 -40",
+    "conditions": "-VCE = 1 V, -IC = 100 mA -16 -25 -40 at -VCE = 1 V, -IC = 500 mA",
     "example": "100 - 250"
-   },
-   {
-    "name": "DC Current Gain",
-    "symbol": "hFE",
-    "unit": "-",
-    "stat": "range",
-    "conditions": "-VCE = 1 V, -IC = 500 mA -16 -25 -40",
-    "example": "160 - 400"
    },
    {
     "name": "Collector Base Cutoff Current",
@@ -178,40 +178,16 @@
     "example": "9"
    },
    {
-    "name": "Mechanical Data",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "SOT-23 Plastic Package",
+    "conditions": "",
     "example": "SOT-23"
-   },
-   {
-    "name": "Mounting position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
-   },
-   {
-    "name": "AEC-Q101 Qualified",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "AEC-Q101"
-   },
-   {
-    "name": "RoHS compliant",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "RoHS"
    }
   ],
-  "seconds": 49.77,
-  "tokens_in": 1614,
-  "tokens_out": 1168
+  "seconds": 61.69,
+  "tokens_in": 1714,
+  "tokens_out": 1115
  }
 }

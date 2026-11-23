@@ -20,9 +20,9 @@
  },
  "type": "mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:54:26+00:00",
+  "at": "2026-11-23T05:58:38+00:00",
   "items": [
    {
     "name": "DrainSourceVoltage",
@@ -279,10 +279,18 @@
     "stat": "typ",
     "conditions": "I F=20A, di/dt=100A/μs",
     "example": "37"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "GMN01803LK"
    }
   ],
-  "seconds": 115.78,
-  "tokens_in": 2223,
-  "tokens_out": 1790
+  "seconds": 99.12,
+  "tokens_in": 2323,
+  "tokens_out": 1827
  }
 }

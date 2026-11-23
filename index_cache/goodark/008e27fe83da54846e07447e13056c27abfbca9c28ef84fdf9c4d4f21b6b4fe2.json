@@ -22,9 +22,9 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:48:14+00:00",
+  "at": "2026-11-23T05:48:03+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -145,50 +145,10 @@
     "stat": "value",
     "conditions": "",
     "example": "eSGA (SOD-123FL)"
-   },
-   {
-    "name": "Pin count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "Operating temperature range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to +150"
-   },
-   {
-    "name": "Moisture sensitivity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "level 1, per J-STD-020"
-   },
-   {
-    "name": "Halogen-free",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "according to IEC 61249-2-21 definition"
-   },
-   {
-    "name": "High temperature soldering guaranteed",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "260℃/10 seconds"
    }
   ],
-  "seconds": 55.28,
-  "tokens_in": 1518,
-  "tokens_out": 894
+  "seconds": 20.56,
+  "tokens_in": 1618,
+  "tokens_out": 690
  }
 }

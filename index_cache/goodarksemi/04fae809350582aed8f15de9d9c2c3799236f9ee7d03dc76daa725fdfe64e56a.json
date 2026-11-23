@@ -24,133 +24,13 @@
  },
  "type": "fast_recovery_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:10:07+00:00",
+  "at": "2026-11-23T06:15:20+00:00",
   "items": [
    {
-    "name": "Plastic package has Underwriters Laboratories Flammability Classification 94V-0",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "High temperature metallurgically bonded construction",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": ""
-   },
-   {
-    "name": "Capable of meeting environmental standards of MIL-S-19500",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "MIL-S-19500"
-   },
-   {
-    "name": "For use in high frequency rectifier circuits",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": ""
-   },
-   {
-    "name": "Fast switching for high efficiency",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": ""
-   },
-   {
-    "name": "Cavity-free glass passivated junction",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": ""
-   },
-   {
-    "name": "1.0 Ampere operation at T A =75 o C with no thernal runaway",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "T A =75 o C",
-    "example": "1.0"
-   },
-   {
-    "name": "High temperature soldering guaranteed: 300 o C/10 seconds, 0.375\" (9.5mm) lead l",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "300 o C/10 seconds, 0.375\" (9.5mm) lead "
-   },
-   {
-    "name": "Typical I R less than 0.1mA",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.1mA"
-   },
-   {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "JEDEC DO-204AL(DO-41)/A-405, molded plas"
-   },
-   {
-    "name": "Terminals",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Plated axial leads, solderable per MIL-S"
-   },
-   {
-    "name": "Polarity",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Color band denotes cathode end"
-   },
-   {
-    "name": "Mounting Position",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Any"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "DO-41",
-    "example": "0.012 ounce, 0.335 gram"
-   },
-   {
-    "name": "Weight",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "A-405",
-    "example": "0.008 ounce, 0.22 gram"
-   },
-   {
     "name": "Maximum repetitive peak reverse voltage",
-    "symbol": "V RRM",
+    "symbol": "V_RRM",
     "unit": "Volts",
     "stat": "max",
     "conditions": "",
@@ -158,7 +38,7 @@
    },
    {
     "name": "Maximum RMS voltage",
-    "symbol": "V RMS",
+    "symbol": "V_RMS",
     "unit": "Volts",
     "stat": "max",
     "conditions": "",
@@ -166,87 +46,95 @@
    },
    {
     "name": "Maximum DC blocking voltage",
-    "symbol": "V DC",
+    "symbol": "V_DC",
     "unit": "Volts",
     "stat": "max",
     "conditions": "",
     "example": "50"
    },
    {
-    "name": "Maximum average forward rectified current 0.375\"(9.5mm) lead length at T=75oC A",
-    "symbol": "I F(AV)",
+    "name": "Maximum average forward rectified current",
+    "symbol": "I_F(AV)",
     "unit": "Amp",
     "stat": "max",
-    "conditions": "0.375\"(9.5mm) lead length at T=75oC",
+    "conditions": "0.375\"(9.5mm) lead length at T=75°C",
     "example": "1.0"
    },
    {
-    "name": "Peak forward surge current 8.3ms single half sine wave superimposed on rated loa",
-    "symbol": "I FSM",
+    "name": "Peak forward surge current",
+    "symbol": "I_FSM",
     "unit": "Amps",
     "stat": "max",
-    "conditions": "",
+    "conditions": "8.3ms single half-sine wave superimposed on rated load (JEDEC Method)",
     "example": "30.0"
    },
    {
-    "name": "Maximum instantaneous forward voltage at 1.0A",
-    "symbol": "V F",
+    "name": "Maximum instantaneous forward voltage",
+    "symbol": "V_F",
     "unit": "Volts",
     "stat": "max",
     "conditions": "at 1.0A",
     "example": "1.2"
    },
    {
-    "name": "Maximum DC reverse current @T=25oC A at rated DC blocking voltage @T=125oC A",
-    "symbol": "I R",
+    "name": "Maximum DC reverse current",
+    "symbol": "I_R",
     "unit": "uA",
     "stat": "max",
-    "conditions": "@T=25oC A at rated DC blocking voltage @T=125oC A",
+    "conditions": "at T=25°C A at rated DC blocking voltage @ T=125°C A",
     "example": "5.0"
    },
    {
-    "name": "Maximum reverse recovery time at I=0.5A, I=1.0A, F R I=0.25A rr",
-    "symbol": "t rr",
+    "name": "Maximum reverse recovery time",
+    "symbol": "t_rr",
     "unit": "nS",
     "stat": "max",
-    "conditions": "at I=0.5A, I=1.0A, F R I=0.25A rr",
+    "conditions": "at I=0.5A, I=1.0A, F_R I=0.25A",
     "example": "200"
    },
    {
-    "name": "Typical junction capacitance at 4.0V, 1MHz",
-    "symbol": "C J",
+    "name": "Typical junction capacitance",
+    "symbol": "C_J",
     "unit": "pF",
     "stat": "typ",
     "conditions": "at 4.0V, 1MHz",
     "example": "15"
    },
    {
-    "name": "Typical thermal resistance (Note 1)",
-    "symbol": "R θJA",
-    "unit": "oC/W",
+    "name": "Typical thermal resistance",
+    "symbol": "R_θJA",
+    "unit": "°C/W",
     "stat": "typ",
     "conditions": "Note 1",
     "example": "55"
    },
    {
     "name": "Operating junction temperature range",
-    "symbol": "T J",
-    "unit": "oC",
+    "symbol": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55to+150"
+    "example": "-55 to +150"
    },
    {
     "name": "Storage temperature range",
-    "symbol": "T STG",
-    "unit": "oC",
+    "symbol": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
-    "example": "-55to+150"
+    "example": "-55 to +150"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "JEDEC DO-204AL (DO-41)/A-405, molded pla"
    }
   ],
-  "seconds": 52.4,
-  "tokens_in": 1760,
-  "tokens_out": 1433
+  "seconds": 42.13,
+  "tokens_in": 1860,
+  "tokens_out": 669
  }
 }

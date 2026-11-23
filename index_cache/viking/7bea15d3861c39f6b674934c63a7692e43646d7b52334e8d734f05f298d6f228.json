@@ -21,9 +21,9 @@
  },
  "type": "four_terminal_current_sensing_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:18:07+00:00",
+  "at": "2026-11-23T08:53:45+00:00",
   "items": [
    {
     "name": "Size",
@@ -32,62 +32,6 @@
     "stat": "value",
     "conditions": "",
     "example": "1206/2010"
-   },
-   {
-    "name": "Issued Date",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "9-Jul-26"
-   },
-   {
-    "name": "Edition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "REV. A4"
-   },
-   {
-    "name": "Features",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "SMD Type designed for automatic insertio"
-   },
-   {
-    "name": "Applications",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Power Management Applications"
-   },
-   {
-    "name": "Construction",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Metal foil construction ensures high rel"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "L: 3.0±0.2, W: 1.6±0.2, T: 0.5±0.15"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "4T06 D T W U R010 N"
    },
    {
     "name": "Product Type",
@@ -165,25 +109,17 @@
     "name": "Operating Temp. Range",
     "symbol": "",
     "unit": "",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "-55 ~ +155°C"
    },
    {
     "name": "Resistance Range (mΩ)",
     "symbol": "",
-    "unit": "mΩ",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
     "example": "10 – 20"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "±50 ±75 ±100"
    },
    {
     "name": "Temperature Coefficient of Resistance (T.C.R.)",
@@ -204,10 +140,10 @@
    {
     "name": "Insulation Resistance",
     "symbol": "",
-    "unit": "MΩ",
-    "stat": "min",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": ">1000"
+    "example": ">1000MΩ"
    },
    {
     "name": "Endurance",
@@ -237,7 +173,7 @@
     "name": "Solderability",
     "symbol": "",
     "unit": "",
-    "stat": "min",
+    "stat": "value",
     "conditions": "",
     "example": "95% min. coverage"
    },
@@ -266,79 +202,55 @@
     "example": "±(0.5%+0.0005Ω)"
    },
    {
-    "name": "Reference Standards",
+    "name": "Storage Temperature",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "MIL-STD-202, JIS-C 5201"
-   },
-   {
-    "name": "Storage Temperature",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "15~28"
-   },
-   {
-    "name": "Humidity",
-    "symbol": "",
-    "unit": "%RH",
-    "stat": "max",
-    "conditions": "",
-    "example": "< 80"
+    "example": "15~28°C"
    },
    {
     "name": "Shelf Life",
     "symbol": "",
-    "unit": "years",
-    "stat": "value",
-    "conditions": "",
-    "example": "2"
-   },
-   {
-    "name": "Reflow Profiles",
-    "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "Pb-Free Assembly"
+    "example": "2 years from production date."
    },
    {
-    "name": "Preheat Min. Temperature",
+    "name": "Preheat Min. Temperature (Tsmin)",
     "symbol": "",
     "unit": "°C",
-    "stat": "min",
+    "stat": "value",
     "conditions": "",
     "example": "150"
    },
    {
-    "name": "Preheat Max. Temperature",
+    "name": "Preheat Max Temperature (Tsmax)",
     "symbol": "",
     "unit": "°C",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "200"
    },
    {
-    "name": "Preheating time",
+    "name": "Preheating time (ts)",
     "symbol": "",
     "unit": "seconds",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "60-120"
    },
    {
-    "name": "Ramp-up rate",
+    "name": "Ramp-up rate (T to Tp)",
     "symbol": "",
     "unit": "°C/second",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "3"
    },
    {
-    "name": "Liquidous temperature",
+    "name": "Liquidous temperature (T L)",
     "symbol": "",
     "unit": "°C",
     "stat": "value",
@@ -346,60 +258,92 @@
     "example": "217"
    },
    {
-    "name": "Time maintained above Liquidous temperature",
+    "name": "Time (t L) maintained above T L",
     "symbol": "",
     "unit": "seconds",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
     "example": "60-150"
    },
    {
-    "name": "Min. Peak temperature",
+    "name": "Min. Peak temperature (Tp min)",
     "symbol": "",
     "unit": "°C",
-    "stat": "min",
+    "stat": "value",
     "conditions": "",
     "example": "235"
    },
    {
-    "name": "Max. Peak temperature",
+    "name": "Max. Peak temperature (Tp max)",
     "symbol": "",
     "unit": "°C",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "260"
    },
    {
-    "name": "Time within 5°C of peak temperature",
+    "name": "Time (tp) within 5 °C of the specified classification temperature (Tc)",
     "symbol": "",
     "unit": "seconds",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "30"
    },
    {
-    "name": "Ramp-down rate",
+    "name": "Ramp-down rate (Tp to T L)",
     "symbol": "",
     "unit": "°C/second",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "6"
    },
    {
-    "name": "Time from 25°C to peak temperature",
+    "name": "Time 25 °C to peak temperature",
     "symbol": "",
     "unit": "minutes",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "8"
    },
    {
-    "name": "Packing Quantity",
+    "name": "ØA",
     "symbol": "",
-    "unit": "",
+    "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "5,000"
+    "example": "178.0±1.0"
+   },
+   {
+    "name": "ØB",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "60.0+1.0"
+   },
+   {
+    "name": "ØC",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "13.5±0.7"
+   },
+   {
+    "name": "W",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "9.5±1.0"
+   },
+   {
+    "name": "T",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "11.5±1.0"
    },
    {
     "name": "Paper Tape (EA)",
@@ -418,32 +362,80 @@
     "example": "4,000"
    },
    {
-    "name": "Peel force of top cover tape",
-    "symbol": "",
-    "unit": "gf",
-    "stat": "range",
-    "conditions": "",
-    "example": "8gf to 60gf"
-   },
-   {
-    "name": "Peel speed",
-    "symbol": "",
-    "unit": "mm/min",
-    "stat": "value",
-    "conditions": "",
-    "example": "300"
-   },
-   {
-    "name": "Land Pattern",
+    "name": "A",
     "symbol": "",
     "unit": "mm",
-    "stat": "range",
+    "stat": "value",
     "conditions": "",
-    "example": "L: 1.75, W: 1.10, A: 1.00, B: 0.30"
+    "example": "2.00±0.05"
+   },
+   {
+    "name": "B",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.55±0.05"
+   },
+   {
+    "name": "E",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.75±0.05"
+   },
+   {
+    "name": "F",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "3.5±0.05"
+   },
+   {
+    "name": "P 0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P 1",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "4.00±0.10"
+   },
+   {
+    "name": "P 2",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "2.00±0.05"
+   },
+   {
+    "name": "ΦD 0",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.55±0.05"
+   },
+   {
+    "name": "L",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "",
+    "example": "1.75"
    }
   ],
-  "seconds": 94.78,
-  "tokens_in": 3381,
-  "tokens_out": 2162
+  "seconds": 36.26,
+  "tokens_in": 3481,
+  "tokens_out": 2311
  }
 }

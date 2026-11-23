@@ -22,9 +22,9 @@
  },
  "type": "npn_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:21:50+00:00",
+  "at": "2026-11-23T06:23:34+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -84,7 +84,7 @@
    },
    {
     "name": "Storage Temperature",
-    "symbol": "",
+    "symbol": "T stg",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
@@ -144,7 +144,7 @@
     "unit": "-",
     "stat": "range",
     "conditions": "V =5V, I =2mA CE C",
-    "example": "110 to 220"
+    "example": "110"
    },
    {
     "name": "Collector-Emitter Saturation Voltage",
@@ -179,8 +179,8 @@
     "example": "4.5"
    }
   ],
-  "seconds": 62.43,
-  "tokens_in": 1308,
-  "tokens_out": 1056
+  "seconds": 61.43,
+  "tokens_in": 1408,
+  "tokens_out": 1045
  }
 }

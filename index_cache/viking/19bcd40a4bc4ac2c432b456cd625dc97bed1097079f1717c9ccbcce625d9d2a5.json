@@ -24,17 +24,17 @@
  },
  "type": "thick_film_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:09:20+00:00",
+  "at": "2026-11-23T07:20:34+00:00",
   "items": [
    {
-    "name": "Size",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "0201/0402/0603/0805/1206/1210/2010/2512"
+    "example": "0201, 0402, 0603, 0805, 1206, 1210, 2010"
    },
    {
     "name": "AEC-Q200 Qualified",
@@ -61,212 +61,84 @@
     "example": "Compliant"
    },
    {
-    "name": "Part Numbering",
+    "name": "Operating Temp. Range",
     "symbol": "",
     "unit": "",
-    "stat": "value",
+    "stat": "range",
     "conditions": "",
-    "example": "06 F T E U 1002 A"
-   },
-   {
-    "name": "Resistance Tolerance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±0.5% F: ±1% J: ±5% or Jumper"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T: 7\"Taping Reel V:10\"Taping Reel W:13\"T"
-   },
-   {
-    "name": "TCR (PPM/°C)",
-    "symbol": "",
-    "unit": "PPM/°C",
-    "stat": "value",
-    "conditions": "",
-    "example": "±200 ±100"
+    "example": "-55 to 155"
    },
    {
     "name": "Power Rating",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "1/20W 1/16W 1/10W 1/8W 1/4W 1/3W 3/4W 1W"
-   },
-   {
-    "name": "Operating Temp. Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 155"
+    "conditions": "at 70°C",
+    "example": "1/20W"
    },
    {
     "name": "Max. Operating Voltage",
     "symbol": "",
-    "unit": "V",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "25 to 500"
+    "example": "25V"
    },
    {
     "name": "Max. Overload Voltage",
     "symbol": "",
-    "unit": "V",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "50 to 500"
+    "example": "50V"
    },
    {
     "name": "Resistance Range",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
+    "conditions": "±0.5% (E24,E96)",
     "example": "1Ω - 10MΩ"
    },
    {
-    "name": "Temperature Coefficient of Resistance",
+    "name": "Resistance Range",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "As Spec."
+    "conditions": "±1% (E24,E96)",
+    "example": "1Ω - 10MΩ"
    },
    {
-    "name": "Short Time Overload",
+    "name": "Resistance Range",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "2.5 times RCWV or Max. Overload Voltage "
+    "conditions": "±5% (E24)",
+    "example": "1Ω - 10MΩ"
    },
    {
-    "name": "Insulation Resistance",
-    "symbol": "",
-    "unit": "G",
-    "stat": "min",
-    "conditions": "",
-    "example": "10"
-   },
-   {
-    "name": "Operational Life",
+    "name": "TCR",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.10Ω) ±(3.0%+0.10Ω) <100mΩ"
+    "conditions": "±0.5% (E24,E96)",
+    "example": "±200"
    },
    {
-    "name": "Biased Humidity",
+    "name": "TCR",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.10Ω) ±(3.0%+0.10Ω) <100mΩ"
+    "conditions": "±1% (E24,E96)",
+    "example": "±100"
    },
    {
-    "name": "High Temperature Exposure",
+    "name": "TCR",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω) ±(1.5%+0.10Ω) <50mΩ"
-   },
-   {
-    "name": "Board Flex",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(1.0%+0.05Ω) ±(1.0%+0.05Ω) <50mΩ"
-   },
-   {
-    "name": "Solderability",
-    "symbol": "",
-    "unit": "",
-    "stat": "min",
-    "conditions": "",
-    "example": "95%"
-   },
-   {
-    "name": "Resistance to Soldering Heat",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "260±5°C for 10 seconds"
-   },
-   {
-    "name": "Voltage Proof",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No breakdown or flashover"
-   },
-   {
-    "name": "Temperature Cycling",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.5%+0.05Ω) ±(1.5%+0.05Ω) <50mΩ"
-   },
-   {
-    "name": "Mechanical Shock",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.25%+0.05Ω) ±(1.0%+0.05Ω) <50mΩ"
-   },
-   {
-    "name": "Vibration",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "±(0.5%+0.05Ω) ±(1.0%+0.05Ω) <50mΩ"
-   },
-   {
-    "name": "ESD",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0.5KV 1KV 2KV"
-   },
-   {
-    "name": "Resistance to Solvents",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No visible damage on appearance and mark"
-   },
-   {
-    "name": "Terminal Strength",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No broken"
-   },
-   {
-    "name": "Flammability",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "UL-94 V-0 or V-1"
+    "conditions": "±5% (E24)",
+    "example": "±200"
    },
    {
     "name": "Sulfur Test",
@@ -279,7 +151,7 @@
    {
     "name": "Storage Temperature",
     "symbol": "",
-    "unit": "°C",
+    "unit": "",
     "stat": "range",
     "conditions": "",
     "example": "15 to 28"
@@ -287,38 +159,14 @@
    {
     "name": "Shelf Life",
     "symbol": "",
-    "unit": "years",
-    "stat": "value",
-    "conditions": "",
-    "example": "2"
-   },
-   {
-    "name": "Tape Width",
-    "symbol": "",
-    "unit": "mm",
-    "stat": "value",
-    "conditions": "",
-    "example": "8"
-   },
-   {
-    "name": "Reel Diameter",
-    "symbol": "",
-    "unit": "inch",
-    "stat": "value",
-    "conditions": "",
-    "example": "7/10/13"
-   },
-   {
-    "name": "Marking",
-    "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "1000 2201 1002 4992 1003"
+    "example": "2 years"
    }
   ],
-  "seconds": 129.34,
-  "tokens_in": 11226,
-  "tokens_out": 2060
+  "seconds": 98.5,
+  "tokens_in": 11326,
+  "tokens_out": 920
  }
 }

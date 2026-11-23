@@ -24,25 +24,25 @@
  },
  "type": "pulse_withstanding_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:32:32+00:00",
+  "at": "2026-11-23T08:25:14+00:00",
   "items": [
    {
-    "name": "Absolute Maximum Ratings",
+    "name": "Package",
     "symbol": "",
     "unit": "",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
-    "example": "100V"
+    "example": "SWR02"
    },
    {
-    "name": "Operating Temperature Range",
+    "name": "Size",
     "symbol": "",
-    "unit": "°C",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "-55 to 155"
+    "example": "0402"
    },
    {
     "name": "Power Rating at 70°C",
@@ -53,28 +53,36 @@
     "example": "1/5W"
    },
    {
+    "name": "Operating Temp. Range",
+    "symbol": "",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-55 ~ +155"
+   },
+   {
     "name": "Max. Operating Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
-    "example": "500"
+    "example": "50"
    },
    {
     "name": "Max. Overload Voltage",
     "symbol": "",
     "unit": "V",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
-    "example": "1000"
+    "example": "100"
    },
    {
     "name": "Resistance Range (E24)",
     "symbol": "",
-    "unit": "Ω",
+    "unit": "",
     "stat": "range",
     "conditions": "",
-    "example": "1 to 20"
+    "example": "1Ω - 20Ω"
    },
    {
     "name": "TCR (PPM/°C)",
@@ -85,20 +93,20 @@
     "example": "±100"
    },
    {
-    "name": "Soldering Temperature",
+    "name": "AEC-Q200 Compliance",
     "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "Peak",
-    "example": "260"
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "Yes"
    },
    {
-    "name": "Soldering Time",
+    "name": "Sulfur Test",
     "symbol": "",
-    "unit": "seconds",
-    "stat": "max",
-    "conditions": "Peak",
-    "example": "10"
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "△R±5%"
    },
    {
     "name": "Flammability",
@@ -106,15 +114,7 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "UL-94 V-0"
-   },
-   {
-    "name": "Sulfur Test",
-    "symbol": "",
-    "unit": "%",
-    "stat": "max",
-    "conditions": "△R",
-    "example": "5"
+    "example": "UL-94 V-0 or V-1"
    },
    {
     "name": "Marking",
@@ -122,31 +122,15 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "4 digits"
+    "example": "4 digits for 0805~2512"
    },
    {
-    "name": "Package Size",
+    "name": "Land Pattern",
     "symbol": "",
-    "unit": "",
+    "unit": "mm",
     "stat": "value",
     "conditions": "",
-    "example": "0402"
-   },
-   {
-    "name": "AEC-Q200 Compliance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
-   },
-   {
-    "name": "RoHS Compliance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
+    "example": "0.50"
    },
    {
     "name": "Tolerance",
@@ -155,26 +139,10 @@
     "stat": "value",
     "conditions": "",
     "example": "±5"
-   },
-   {
-    "name": "Packaging Code",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "T"
-   },
-   {
-    "name": "Power Rating",
-    "symbol": "",
-    "unit": "W",
-    "stat": "value",
-    "conditions": "",
-    "example": "1/8"
    }
   ],
-  "seconds": 59.49,
-  "tokens_in": 8058,
-  "tokens_out": 1599
+  "seconds": 30.25,
+  "tokens_in": 8158,
+  "tokens_out": 1632
  }
 }

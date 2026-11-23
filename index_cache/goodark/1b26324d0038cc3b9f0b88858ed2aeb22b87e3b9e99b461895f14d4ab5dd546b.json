@@ -20,24 +20,32 @@
  },
  "type": "esd_tvs_array",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:34:46+00:00",
+  "at": "2026-11-23T06:47:56+00:00",
   "items": [
    {
-    "name": "Peak Pulse Power",
-    "symbol": "P PP",
-    "unit": "W",
-    "stat": "max",
-    "conditions": "TP=8/20μS",
+    "name": "Absolute Maximum Ratings",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA=25℃ unless otherwise noted",
     "example": "320"
    },
    {
-    "name": "Peak Pulse Current",
+    "name": "Peak Pulse Power (TP=8/20μS)",
+    "symbol": "P PP",
+    "unit": "W",
+    "stat": "max",
+    "conditions": "",
+    "example": "320"
+   },
+   {
+    "name": "Peak Pulse Current (tp=8/20μS)",
     "symbol": "IPP",
     "unit": "A",
     "stat": "max",
-    "conditions": "tp=8/20μS",
+    "conditions": "",
     "example": "20"
    },
    {
@@ -57,7 +65,23 @@
     "example": "-50 to +150"
    },
    {
-    "name": "Reverse stand-off Voltage",
+    "name": "Features",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23 package"
+   },
+   {
+    "name": "Electrical Specifications",
+    "symbol": "",
+    "unit": "",
+    "stat": "range",
+    "conditions": "TA=25℃ unless otherwise noted",
+    "example": "5"
+   },
+   {
+    "name": "Reversestand-off Voltage",
     "symbol": "V RWM",
     "unit": "V",
     "stat": "max",
@@ -65,7 +89,7 @@
     "example": "5"
    },
    {
-    "name": "Reverse Breakdown Voltage",
+    "name": "ReverseBreakdown Voltage",
     "symbol": "V BR",
     "unit": "V",
     "stat": "range",
@@ -73,7 +97,7 @@
     "example": "6 to 7.4"
    },
    {
-    "name": "Reverse Leakage Current",
+    "name": "ReverseLeakage Current",
     "symbol": "I R",
     "unit": "μA",
     "stat": "max",
@@ -103,10 +127,18 @@
     "stat": "typ",
     "conditions": "V =0V,f=1MHz R",
     "example": "70"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-23"
    }
   ],
-  "seconds": 24.32,
-  "tokens_in": 1203,
-  "tokens_out": 484
+  "seconds": 30.03,
+  "tokens_in": 1303,
+  "tokens_out": 1021
  }
 }

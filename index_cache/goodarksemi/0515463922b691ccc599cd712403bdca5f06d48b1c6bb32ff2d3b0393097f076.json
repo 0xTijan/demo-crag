@@ -20,15 +20,15 @@
  },
  "type": "mosfet_p",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:05:07+00:00",
+  "at": "2026-11-23T06:11:50+00:00",
   "items": [
    {
     "name": "BV DSS",
-    "symbol": "BVDSS",
+    "symbol": "",
     "unit": "V",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "-20"
    },
@@ -52,7 +52,7 @@
     "name": "I D",
     "symbol": "ID",
     "unit": "A",
-    "stat": "max",
+    "stat": "value",
     "conditions": "",
     "example": "-4"
    },
@@ -279,26 +279,10 @@
     "stat": "value",
     "conditions": "",
     "example": "SOT-23"
-   },
-   {
-    "name": "Pin Count",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 To +150"
    }
   ],
-  "seconds": 118.45,
-  "tokens_in": 2510,
-  "tokens_out": 1748
+  "seconds": 111.72,
+  "tokens_in": 2610,
+  "tokens_out": 1672
  }
 }

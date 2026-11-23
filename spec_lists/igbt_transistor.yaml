@@ -13,9 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: pinout (G/D/S order)
+visual_check: IGBT pinout (G/D/S order)
 drafted:
-  at: '2026-11-22T15:21:59+00:00'
+  at: '2026-11-23T08:58:34+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -23,53 +23,57 @@ drafted:
   - goodark/git065n50e1c2_dadef1a6.md
   - goodark/git065n75e1c2_f6b4d291.md
 specs:
-  ic_max_tc100:
-    label: IC max @ TC=100°C
+  ic_max:
+    label: IC(max)
     unit: A
     stat: max
-    conditions: TC=100°C
+    conditions: tc_25c
     rule: '>='
     critical: true
     aliases:
-    - Collector Current
+    - K Collector Current
     - I C
+    - Collector Current
     - IC
     found_in: 3/3
-  ic_max_tc25:
-    label: IC max @ TC=25°C
+  ic_max@tc_100c:
+    label: IC(max) @ TC=100°C
     unit: A
     stat: max
-    conditions: TC=25°C
+    conditions: tc_100c
     rule: '>='
     critical: true
     aliases:
-    - Collector Current
+    - Collector Current @TC = 100 °C
     - I C
+    - Collector Current
     - IC
     found_in: 3/3
-  ic_puls_max:
-    label: IC pulsed max
+  ic_pulsed_max:
+    label: IC(pulsed) max
     unit: A
     stat: max
     conditions: null
     rule: '>='
     critical: true
     aliases:
-    - Pulsed Collector Current
+    - Pulsed Collector Current, tp limited by Tjmax
     - I Cpuls
     - Collector Current, Pulsed
     - ICM
     found_in: 3/3
   if_max:
-    label: IF max
+    label: IF(max)
     unit: A
     stat: max
     conditions: null
     rule: '>='
     critical: true
     aliases:
-    - Diode Continuous Forward Current
+    - Diode Continuous Forward Current @T = 25 °C C
     - I F
+    - Diode Continuous Forward Current @T = 100 °C C
+    - Diode Continuous Forward Current
     - IF
     found_in: 3/3
   package:
@@ -83,35 +87,37 @@ specs:
     - Package
     - TO-247AD
     found_in: 3/3
-  pd_max_tc100:
-    label: PD max @ TC=100°C
-    unit: null
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Power Dissipation
-    - P D
-    - PD
-    found_in: 3/3
-  pd_max_tc25:
-    label: PD max @ TC=25°C
+  pd_max:
+    label: PD(max)
     unit: W
     stat: max
-    conditions: TC=25°C
+    conditions: tc_25c
     rule: '>='
     critical: true
     aliases:
-    - Power Dissipation
+    - Power Dissipation @ TC = 25°C
     - P D
+    - Power Dissipation
+    - PD
+    found_in: 3/3
+  pd_max@tc_100c:
+    label: PD(max) @ TC=100°C
+    unit: W
+    stat: max
+    conditions: tc_100c
+    rule: '>='
+    critical: true
+    aliases:
+    - Power Dissipation @ TC = 100°C
+    - P D
+    - Power Dissipation
     - PD
     found_in: 3/3
   vbrces_min:
     label: V(BR)CES min
     unit: V
     stat: min
-    conditions: VGE=0V, ICE=1mA
+    conditions: null
     rule: '>='
     critical: true
     aliases:
@@ -120,22 +126,36 @@ specs:
     - V(BR)CES
     found_in: 3/3
   vces_max:
-    label: VCE max
+    label: VCE(max)
     unit: V
     stat: max
     conditions: null
     rule: '>='
     critical: true
     aliases:
-    - Collector-Emitter Voltage
+    - R Collector-Emitter Voltage
     - V CES
+    - Collector-Emitter Voltage
     - VCES
+    found_in: 3/3
+  vges_max:
+    label: VGE(max)
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Gate- Emitter Voltage
+    - V GES
+    - Gate-Emitter Voltage
+    - VGES
     found_in: 3/3
   cies_typ:
     label: Cies typ
     unit: pF
     stat: typ
-    conditions: VGE=0V, VCE=25V, f=1MHz
+    conditions: vge_0v_vce_25v_f_1mhz
     rule: ≈
     critical: false
     aliases:
@@ -147,7 +167,7 @@ specs:
     label: Coes typ
     unit: pF
     stat: typ
-    conditions: VGE=0V, VCE=25V, f=1MHz
+    conditions: vge_0v_vce_25v_f_1mhz
     rule: ≈
     critical: false
     aliases:
@@ -159,7 +179,7 @@ specs:
     label: Cres typ
     unit: pF
     stat: typ
-    conditions: VGE=0V, VCE=25V, f=1MHz
+    conditions: vge_0v_vce_25v_f_1mhz
     rule: ≈
     critical: false
     aliases:
@@ -171,7 +191,7 @@ specs:
     label: ICES max
     unit: μA
     stat: max
-    conditions: VGE=0V, VCE=650V
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -183,7 +203,7 @@ specs:
     label: IGES max
     unit: nA
     stat: max
-    conditions: VGE=±30V, VCE=0V
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -192,30 +212,43 @@ specs:
     - Gate to Emitter Leakage Current
     - IGES
     found_in: 3/3
-  rthjc_diode_max:
-    label: RθJC max (Diode)
+  rthja_max:
+    label: RθJA max
     unit: °C/W
     stat: max
-    conditions: Diode
+    conditions: null
     rule: <=
     critical: false
     aliases:
-    - Thermal Resistance Junction-to-Case for Diode
-    - R θJC
-    - Thermal Resistance Junction to Case for Diode
-    - RthJC
+    - Thermal Resistance ,Junction-to-Ambient
+    - R θJA
+    - Thermal Resistance Junction to Ambient (Note 1)
+    - RthJA
     found_in: 3/3
-  rthjc_igbt_max:
-    label: RθJC max (IGBT)
+  rthjc_max:
+    label: RθJC max
     unit: °C/W
     stat: max
-    conditions: IGBT
+    conditions: igbt
     rule: <=
     critical: false
     aliases:
     - Thermal Resistance Junction-to-Case for IGBT
     - R θJC
     - Thermal Resistance Junction to Case for IGBT
+    - RthJC
+    found_in: 3/3
+  rthjc_max_diode:
+    label: RθJC max (diode)
+    unit: °C/W
+    stat: max
+    conditions: diode
+    rule: <=
+    critical: false
+    aliases:
+    - G Thermal Resistance Junction-to-Case for Diode
+    - R θJC
+    - Thermal Resistance Junction to Case for Diode
     - RthJC
     found_in: 3/3
   tj_range:
@@ -226,74 +259,51 @@ specs:
     rule: contains
     critical: false
     aliases:
-    - Operating Junction Temperature
-    - Storage Temperature Range
+    - Operating Junction
+    - T J
     - Operating Junction/ Storage Temperature Range
     - TJ/ TSTG
     found_in: 3/3
-  vges_max:
-    label: VGE max
+  vge_th_range:
+    label: VGE(th) range
     unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Gate-Emitter Voltage
-    - V GES
-    - VGES
-    found_in: 2/3
-  vges_transient_max:
-    label: VGE transient max
-    unit: V
-    stat: max
-    conditions: tp≤10us, D<0.01
-    rule: '>='
-    critical: true
-    aliases:
-    - Transient Gate-Emitter Voltage
-    - VGES
-    - Transient Gate-Emitter Voltage(tp≤10us, D<0.01)
-    found_in: 2/3
-  operating_temp_range:
-    label: Operating temperature range
-    unit: °C
     stat: range
     conditions: null
-    rule: contains
+    rule: ≈
     critical: false
     aliases:
-    - Operating Temperature Range
-    found_in: 2/3
-  rthja_max:
-    label: RθJA max
-    unit: °C/W
+    - Gate Threshold Voltage
+    - V GE(th)
+    - VGE(TH)
+    found_in: 3/3
+rare_specs:
+  if_max_pulsed:
+    label: IF(pulsed) max
+    unit: A
     stat: max
     conditions: null
-    rule: <=
-    critical: false
+    rule: '>='
+    critical: true
     aliases:
-    - Thermal Resistance, Junction-to-Ambient
-    - R θJA
-    - Thermal Resistance Junction to Ambient
-    - RthJA
-    found_in: 2/3
-rare_specs:
-  aec_q:
-    label: AEC-Q101
-    unit: null
-    stat: value
+    - Diode Maximum Forward Current
+    - IFM
+    found_in: 1/3
+  vges_transient_max:
+    label: VGE(transient max)
+    unit: V
+    stat: max
     conditions: null
-    rule: '='
-    critical: false
+    rule: '>='
+    critical: true
     aliases:
-    - AEC-Q101
+    - Transient Gate-Emitter Voltage(tp≤10us, D<0.01)
+    - VGES
     found_in: 1/3
   e_off_typ:
     label: Eoff typ
     unit: mJ
     stat: typ
-    conditions: VCC=400V, IC=6A, VGE=0/15V, Rg=10Ω
+    conditions: vce_400v_ic_6a_vge_15v_rg_10ohm
     rule: ≈
     critical: false
     aliases:
@@ -304,7 +314,7 @@ rare_specs:
     label: Eon typ
     unit: mJ
     stat: typ
-    conditions: VCC=400V, IC=6A, VGE=0/15V, Rg=10Ω
+    conditions: vce_400v_ic_6a_vge_15v_rg_10ohm
     rule: ≈
     critical: false
     aliases:
@@ -315,94 +325,117 @@ rare_specs:
     label: Ets typ
     unit: mJ
     stat: typ
-    conditions: VCC=400V, IC=6A, VGE=0/15V, Rg=10Ω
+    conditions: vce_400v_ic_6a_vge_15v_rg_10ohm
     rule: ≈
     critical: false
     aliases:
     - Total Switching Loss
     - E ts
     found_in: 1/3
+  ic_sc_typ:
+    label: IC(SC) typ
+    unit: A
+    stat: typ
+    conditions: vge_15v_vcc_400v_t_sc_5us
+    rule: ≈
+    critical: false
+    aliases:
+    - Short circuit collector current Max.1000 short circuits Time between short circu
+    - I C(SC)
+    found_in: 1/3
   irrm_typ:
     label: IRRM typ
     unit: A
     stat: typ
-    conditions: IF=6A, V R=400V, V GE=0.0/15.0V
+    conditions: if_6a_didt_500a_us
     rule: ≈
     critical: false
     aliases:
     - Diode Peak Reverse Recovery Current
     - IRRM
     found_in: 1/3
-  q_rr_typ:
+  irrm_typ@if_50a_didt_500a_us:
+    label: IRRM typ @ IF=50A, di/dt=500A/μs
+    unit: A
+    stat: typ
+    conditions: if_50a_didt_500a_us
+    rule: ≈
+    critical: false
+    aliases:
+    - Peak Reverse Recovery Current
+    - Irrm
+    found_in: 1/3
+  qg_typ:
+    label: Qg typ
+    unit: nC
+    stat: typ
+    conditions: vge_0v_vge_15v_vcc_480v_ic_6a
+    rule: ≈
+    critical: false
+    aliases:
+    - Total Gate Charge
+    - Q g
+    found_in: 1/3
+  qgc_typ:
+    label: Qgc typ
+    unit: nC
+    stat: typ
+    conditions: vge_0v_vge_15v_vcc_480v_ic_6a
+    rule: ≈
+    critical: false
+    aliases:
+    - Gate to Collector Charge
+    - Q gc
+    found_in: 1/3
+  qge_typ:
+    label: Qge typ
+    unit: nC
+    stat: typ
+    conditions: vge_0v_vge_15v_vcc_480v_ic_6a
+    rule: ≈
+    critical: false
+    aliases:
+    - Gate to Emitter Charge
+    - Q ge
+    found_in: 1/3
+  qrr_typ:
     label: Qrr typ
     unit: μC
     stat: typ
-    conditions: IF=6A, V R=400V, V GE=0.0/15.0V
+    conditions: if_6a_didt_500a_us
     rule: ≈
     critical: false
     aliases:
     - Reverse Recovery Charge
     - Q rr
     found_in: 1/3
-  qg_typ:
-    label: Qg typ
+  qrr_typ@if_50a_didt_500a_us:
+    label: Qrr typ @ IF=50A, di/dt=500A/μs
     unit: nC
     stat: typ
-    conditions: VGE(off)=0V, VGE(on)=15V, VCC=480V, IC=50A
+    conditions: if_50a_didt_500a_us
     rule: ≈
     critical: false
     aliases:
-    - Total Gate Charge
-    - Qg
+    - Reverse Recovery Charge
+    - Qrr
     found_in: 1/3
-  qgc_typ:
-    label: Qgc typ
+  qrr_typ@if_75a_didt_360a_us:
+    label: Qrr typ @ IF=75A, di/dt=360A/μs
     unit: nC
     stat: typ
-    conditions: VGE(off)=0V, VGE(on)=15V, VCC=480V, IC=50A
+    conditions: if_75a_didt_360a_us
     rule: ≈
     critical: false
     aliases:
-    - Gate-Collector Charge
-    - Qgc
-    found_in: 1/3
-  qge_typ:
-    label: Qge typ
-    unit: nC
-    stat: typ
-    conditions: VGE(off)=0V, VGE(on)=15V, VCC=480V, IC=50A
-    rule: ≈
-    critical: false
-    aliases:
-    - Gate-Emitter Charge
-    - Qge
-    found_in: 1/3
-  rohs:
-    label: RoHS
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - RoHS
-    found_in: 1/3
-  t_rr_typ:
-    label: Trr typ
-    unit: ns
-    stat: typ
-    conditions: IF=6A, V R=400V, V GE=0.0/15.0V
-    rule: ≈
-    critical: false
-    aliases:
-    - Reverse Recovery Time
-    - t rr
+    - Reverse Recovery Charge
+    - Qrr
     found_in: 1/3
   td_off_typ:
     label: td(off) typ
     unit: ns
     stat: typ
-    conditions: VCC=400V, IC=6A, VGE=0/15V, Rg=10Ω
+    conditions: vce_400v_ic_6a_vge_15v_rg_10ohm
     rule: ≈
     critical: false
     aliases:
@@ -413,7 +446,7 @@ rare_specs:
     label: td(on) typ
     unit: ns
     stat: typ
-    conditions: VCC=400V, IC=6A, VGE=0/15V, Rg=10Ω
+    conditions: vce_400v_ic_6a_vge_15v_rg_10ohm
     rule: ≈
     critical: false
     aliases:
@@ -424,7 +457,7 @@ rare_specs:
     label: tf typ
     unit: ns
     stat: typ
-    conditions: VCC=400V, IC=6A, VGE=0/15V, Rg=10Ω
+    conditions: vce_400v_ic_6a_vge_15v_rg_10ohm
     rule: ≈
     critical: false
     aliases:
@@ -435,43 +468,142 @@ rare_specs:
     label: tr typ
     unit: ns
     stat: typ
-    conditions: VCC=400V, IC=6A, VGE=0/15V, Rg=10Ω
+    conditions: vce_400v_ic_6a_vge_15v_rg_10ohm
     rule: ≈
     critical: false
     aliases:
     - Rise time
     - t r
     found_in: 1/3
+  trr_typ:
+    label: Trr typ
+    unit: ns
+    stat: typ
+    conditions: if_6a_didt_500a_us
+    rule: ≈
+    critical: false
+    aliases:
+    - Reverse Recovery Time
+    - t rr
+    found_in: 1/3
+  trr_typ@if_50a_didt_500a_us:
+    label: Trr typ @ IF=50A, di/dt=500A/μs
+    unit: ns
+    stat: typ
+    conditions: if_50a_didt_500a_us
+    rule: ≈
+    critical: false
+    aliases:
+    - Reverse Recovery Time
+    - Trr
+    found_in: 1/3
+  trr_typ@if_75a_didt_360a_us:
+    label: Trr typ @ IF=75A, di/dt=360A/μs
+    unit: ns
+    stat: typ
+    conditions: if_75a_didt_360a_us
+    rule: ≈
+    critical: false
+    aliases:
+    - Reverse Recovery Time
+    - Trr
+    found_in: 1/3
+  tstg_range:
+    label: TSTG range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature Range
+    - T STG
+    found_in: 1/3
   vce_sat_typ:
     label: VCE(sat) typ
     unit: V
     stat: typ
-    conditions: IC=6A, VGE=15V
+    conditions: ic_6a_vge_15v
     rule: ≈
     critical: false
     aliases:
     - Collector-Emitter Saturation Voltage
     - V CE(sat)
     found_in: 1/3
+  vce_sat_typ@ic_50a_vge_15v:
+    label: VCE(sat) typ @ IC=50A, VGE=15V
+    unit: V
+    stat: typ
+    conditions: ic_50a_vge_15v
+    rule: ≈
+    critical: false
+    aliases:
+    - Collector-Emitter Saturation Voltage
+    - VCE(sat)
+    found_in: 1/3
+  vce_sat_typ@ic_50a_vge_15v_tj_175c:
+    label: VCE(sat) typ @ IC=50A, VGE=15V, TJ=175°C
+    unit: V
+    stat: typ
+    conditions: ic_50a_vge_15v_tj_175c
+    rule: ≈
+    critical: false
+    aliases:
+    - Collector-Emitter Saturation Voltage
+    - VCE(sat)
+    found_in: 1/3
+  vce_sat_typ@ic_75a_vge_15v:
+    label: VCE(sat) typ @ IC=75A, VGE=15V
+    unit: V
+    stat: typ
+    conditions: ic_75a_vge_15v
+    rule: ≈
+    critical: false
+    aliases:
+    - Collector-Emitter Saturation Voltage
+    - VCE(sat)
+    found_in: 1/3
   vfm_typ:
     label: VFM typ
     unit: V
     stat: typ
-    conditions: IF=6A
+    conditions: if_6a
     rule: ≈
     critical: false
     aliases:
     - Diode Forward Voltage
     - V FM
     found_in: 1/3
-  vge_th_range:
-    label: VGE(th) range
+  vfm_typ@if_50a:
+    label: VFM typ @ IF=50A
     unit: V
-    stat: range
-    conditions: IC=1mA, VCE=5V
+    stat: typ
+    conditions: if_50a
     rule: ≈
     critical: false
     aliases:
-    - Gate Threshold Voltage
-    - V GE(th)
+    - Diode Forward Voltage
+    - VFM
+    found_in: 1/3
+  vfm_typ@if_50a_tj_175c:
+    label: VFM typ @ IF=50A, TJ=175°C
+    unit: V
+    stat: typ
+    conditions: if_50a_tj_175c
+    rule: ≈
+    critical: false
+    aliases:
+    - Diode Forward Voltage
+    - VFM
+    found_in: 1/3
+  vfm_typ@if_75a:
+    label: VFM typ @ IF=75A
+    unit: V
+    stat: typ
+    conditions: if_75a
+    rule: ≈
+    critical: false
+    aliases:
+    - Diode Forward Voltage
+    - VFM
     found_in: 1/3

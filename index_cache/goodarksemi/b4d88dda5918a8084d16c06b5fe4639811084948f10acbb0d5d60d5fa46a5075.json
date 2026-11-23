@@ -20,16 +20,16 @@
  },
  "type": "complementary_npn_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:06:17+00:00",
+  "at": "2026-11-23T08:05:35+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
     "symbol": "VCBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "180"
    },
    {
@@ -37,7 +37,7 @@
     "symbol": "VCEO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "160"
    },
    {
@@ -45,7 +45,7 @@
     "symbol": "VEBO",
     "unit": "V",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "6"
    },
    {
@@ -53,7 +53,7 @@
     "symbol": "IC",
     "unit": "A",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "0.2"
    },
    {
@@ -61,7 +61,7 @@
     "symbol": "PD",
     "unit": "W",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "0.2"
    },
    {
@@ -69,7 +69,7 @@
     "symbol": "RθJA",
     "unit": "°C/W",
     "stat": "max",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "625"
    },
    {
@@ -77,7 +77,7 @@
     "symbol": "",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-55 to 150"
    },
    {
@@ -85,7 +85,7 @@
     "symbol": "",
     "unit": "°C",
     "stat": "range",
-    "conditions": "",
+    "conditions": "TA=25°C",
     "example": "-55 to 150"
    },
    {
@@ -132,7 +132,7 @@
     "name": "DC Current Gain",
     "symbol": "hFE",
     "unit": "-",
-    "stat": "min",
+    "stat": "range",
     "conditions": "VCE=5V, IC=1mA",
     "example": "80"
    },
@@ -252,7 +252,7 @@
     "name": "DC Current Gain",
     "symbol": "hFE",
     "unit": "-",
-    "stat": "min",
+    "stat": "range",
     "conditions": "VCE=-5V, IC=-1mA",
     "example": "50"
    },
@@ -361,8 +361,8 @@
     "example": "RoHS Compliant"
    }
   ],
-  "seconds": 129.2,
-  "tokens_in": 2634,
-  "tokens_out": 2125
+  "seconds": 127.47,
+  "tokens_in": 2734,
+  "tokens_out": 2173
  }
 }

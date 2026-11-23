@@ -11,10 +11,11 @@ type: dual_npn_transistor
 name: dual NPN transistor
 version: 1
 status: draft
-must_match: []
+must_match:
+- package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-22T14:54:30+00:00'
+  at: '2026-11-23T08:37:43+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -54,9 +55,19 @@ specs:
     - Ptot
     - PD
     found_in: 6/6
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 6/6
   t_j_max:
     label: T J max
-    unit: ℃
+    unit: °C
     stat: max
     conditions: null
     rule: '>='
@@ -66,45 +77,6 @@ specs:
     - T J
     - Operating Junction Temperature Range
     - TJ
-    found_in: 6/6
-  v_br_cbo_min:
-    label: V (BR)CBO min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Collector-base breakdown voltage
-    - V (BR)CBO
-    - Collector Base Breakdown Voltage
-    - V(BR)CBO
-    found_in: 6/6
-  v_br_ceo_min:
-    label: V (BR)CEO min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Collector-emitter breakdown voltage
-    - V (BR)CEO
-    - Collector Emitter Breakdown Voltage
-    - V(BR)CEO
-    found_in: 6/6
-  v_br_ebo_min:
-    label: V (BR)EBO min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Emitter-base breakdown voltage
-    - V (BR)EBO
-    - Emitter Base Breakdown Voltage
-    - V(BR)EBO
     found_in: 6/6
   v_cbo_max:
     label: V CBO max
@@ -116,8 +88,12 @@ specs:
     aliases:
     - Collector-Base Voltage
     - V CBO
+    - Collector-base breakdown voltage
+    - V (BR)CBO
     - Collector Base Voltage
+    - Collector Base Breakdown Voltage
     - VCBO
+    - V(BR)CBO
     found_in: 6/6
   v_ceo_max:
     label: V CEO max
@@ -129,8 +105,12 @@ specs:
     aliases:
     - Collector-Emitter Voltage
     - V CEO
+    - Collector-emitter breakdown voltage
+    - V (BR)CEO
     - Collector Emitter Voltage
+    - Collector Emitter Breakdown Voltage
     - VCEO
+    - V(BR)CEO
     found_in: 6/6
   v_ebo_max:
     label: V EBO max
@@ -142,9 +122,40 @@ specs:
     aliases:
     - Emitter -Base Voltage
     - V EBO
+    - Emitter-base breakdown voltage
+    - V (BR)EBO
     - Emitter Base Voltage
+    - Emitter Base Breakdown Voltage
     - Emitter-Base Voltage
     - VEBO
+    - V(BR)EBO
+    found_in: 6/6
+  c_ob_max:
+    label: C ob max
+    unit: pF
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Output Capacitance
+    - C obo
+    - Collector Output Capacitance
+    - C ob
+    - COB
+    found_in: 6/6
+  f_t_min:
+    label: f T min
+    unit: MHz
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Current Gain-Bandwidth product
+    - f T
+    - Transition Frequency
+    - fT
     found_in: 6/6
   i_cbo_max:
     label: I CBO max
@@ -177,7 +188,7 @@ specs:
     found_in: 6/6
   r_ja_max:
     label: R θJA max
-    unit: ℃/W
+    unit: °C/W
     stat: max
     conditions: null
     rule: <=
@@ -191,7 +202,7 @@ specs:
     found_in: 6/6
   t_stg_range:
     label: Tstg range
-    unit: ℃
+    unit: °C
     stat: range
     conditions: null
     rule: contains
@@ -202,11 +213,28 @@ specs:
     - Storage Temperature Range
     - T stg
     found_in: 6/6
+  v_be_on_range:
+    label: V BEON range
+    unit: V
+    stat: range
+    conditions: vce_5v_ic_2ma
+    rule: ≈
+    critical: false
+    aliases:
+    - Base-emitter saturation voltage
+    - V BE(sat)
+    - Base Emitter Turn-On Voltage
+    - V BE(on)
+    - Base-Emitter Voltage
+    - VBE
+    - V BEON
+    - VBE(1)
+    found_in: 6/6
   v_ce_sat_max:
     label: V CE(sat) max
     unit: V
     stat: max
-    conditions: Ic=10mA, Ib=0.5mA
+    conditions: ic_10ma_ib_0_5ma
     rule: <=
     critical: false
     aliases:
@@ -216,11 +244,11 @@ specs:
     - VCE(SAT)
     - VCE(sat)(1)
     found_in: 6/6
-  v_ce_sat_max_100ma:
-    label: V CE(sat) max
+  v_ce_sat_max@ic_100ma_ib_5ma:
+    label: V CE(sat) max @ IC=100mA, IB=5mA
     unit: V
     stat: max
-    conditions: Ic=100mA, Ib=5mA
+    conditions: ic_100ma_ib_5ma
     rule: <=
     critical: false
     aliases:
@@ -230,20 +258,6 @@ specs:
     - VCE(SAT)
     - VCE(sat)(2)
     found_in: 6/6
-  c_ob_max:
-    label: C ob max
-    unit: pF
-    stat: max
-    conditions: Vcb=10V, f=1MHz
-    rule: <=
-    critical: false
-    aliases:
-    - Output Capacitance
-    - C obo
-    - Collector Output Capacitance
-    - C ob
-    - COB
-    found_in: 5/6
   h_fe_range:
     label: h FE range
     unit: null
@@ -259,7 +273,7 @@ specs:
     label: V BEON max
     unit: V
     stat: max
-    conditions: Vce=5V, Ic=10mA
+    conditions: vce_5v_ic_2ma
     rule: ≈
     critical: false
     aliases:
@@ -270,46 +284,4 @@ specs:
     - V BEON
     - VBE(2)
     found_in: 5/6
-  v_be_on_range:
-    label: V BEON range
-    unit: V
-    stat: range
-    conditions: Vce=5V, Ic=2mA
-    rule: ≈
-    critical: false
-    aliases:
-    - Base Emitter Turn-On Voltage
-    - V BE(on)
-    - Base-Emitter Voltage
-    - VBE
-    - V BEON
-    - VBE(1)
-    found_in: 5/6
-  f_t_min:
-    label: f T min
-    unit: MHz
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Current Gain-Bandwidth product
-    - f T
-    - Transition Frequency
-    - fT
-    found_in: 3/6
-  f_t_typ:
-    label: f T typ
-    unit: MHz
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Current Gain-Bandwidth Product
-    - f T
-    - Transition Frequency
-    - Output Capacitance
-    - C obo
-    found_in: 3/6
 rare_specs: {}

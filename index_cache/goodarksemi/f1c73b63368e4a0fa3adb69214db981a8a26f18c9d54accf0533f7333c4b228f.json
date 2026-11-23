@@ -20,10 +20,18 @@
  },
  "type": "three_axis_accelerometer",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T15:30:35+00:00",
+  "at": "2026-11-23T09:04:37+00:00",
   "items": [
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "LGA-16 3x3x0.9mm"
+   },
    {
     "name": "Measurement Range",
     "symbol": "FS",
@@ -60,7 +68,7 @@
     "name": "Sensitivity",
     "symbol": "So",
     "unit": "LSB/g",
-    "stat": "value",
+    "stat": "range",
     "conditions": "FS bit set to 00",
     "example": "4096"
    },
@@ -68,7 +76,7 @@
     "name": "Sensitivity",
     "symbol": "So",
     "unit": "LSB/g",
-    "stat": "value",
+    "stat": "range",
     "conditions": "FS bit set to 01",
     "example": "2048"
    },
@@ -76,7 +84,7 @@
     "name": "Sensitivity",
     "symbol": "So",
     "unit": "LSB/g",
-    "stat": "value",
+    "stat": "range",
     "conditions": "FS bit set to 10",
     "example": "1024"
    },
@@ -84,7 +92,7 @@
     "name": "Sensitivity",
     "symbol": "So",
     "unit": "LSB/g",
-    "stat": "value",
+    "stat": "range",
     "conditions": "FS bit set to 11",
     "example": "512"
    },
@@ -92,7 +100,7 @@
     "name": "Sensitivity Change vs. Temperature",
     "symbol": "TCSo",
     "unit": "%/°C",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "FS bit set to 00",
     "example": "0.01"
    },
@@ -100,7 +108,7 @@
     "name": "Typical Zero-g Level Offset Accuracy",
     "symbol": "Tyoff",
     "unit": "mg",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "",
     "example": "70"
    },
@@ -124,7 +132,7 @@
     "name": "Self-test Output Change",
     "symbol": "Vst",
     "unit": "mg",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "X: FS bit set to 00",
     "example": "400"
    },
@@ -132,7 +140,7 @@
     "name": "Self-test Output Change",
     "symbol": "Vst",
     "unit": "mg",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "Y: FS bit set to 00",
     "example": "400"
    },
@@ -140,7 +148,7 @@
     "name": "Self-test Output Change",
     "symbol": "Vst",
     "unit": "mg",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "Z: FS bit set to 00",
     "example": "400"
    },
@@ -172,7 +180,7 @@
     "name": "Current Consumption in Normal Mode",
     "symbol": "IDD",
     "unit": "uA",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "Top=25°C, ODR=1kHz",
     "example": "180"
    },
@@ -180,7 +188,7 @@
     "name": "Current Consumption in Low Power Mode",
     "symbol": "I_l DD P",
     "unit": "uA",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "Top=25°C, ODR=62.5Hz, BW=500Hz",
     "example": "40"
    },
@@ -194,7 +202,7 @@
    },
    {
     "name": "Digital High Level Input Voltage",
-    "symbol": "V IH",
+    "symbol": "VIH",
     "unit": "V",
     "stat": "range",
     "conditions": "SPI & I2C",
@@ -202,7 +210,7 @@
    },
    {
     "name": "Digital Low Level Input Voltage",
-    "symbol": "V IL",
+    "symbol": "VIL",
     "unit": "V",
     "stat": "range",
     "conditions": "SPI & I2C",
@@ -210,7 +218,7 @@
    },
    {
     "name": "High Level Output Voltage",
-    "symbol": "V OH",
+    "symbol": "VOH",
     "unit": "V",
     "stat": "range",
     "conditions": "",
@@ -218,7 +226,7 @@
    },
    {
     "name": "Low Level Output Voltage",
-    "symbol": "V OL",
+    "symbol": "VOL",
     "unit": "V",
     "stat": "range",
     "conditions": "",
@@ -244,7 +252,7 @@
     "name": "Wake-up Time",
     "symbol": "twu",
     "unit": "ms",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "From Stand-by",
     "example": "1"
    },
@@ -252,7 +260,7 @@
     "name": "Start-up Time",
     "symbol": "tsu",
     "unit": "ms",
-    "stat": "value",
+    "stat": "typ",
     "conditions": "From Power-off",
     "example": "3"
    },
@@ -260,13 +268,13 @@
     "name": "Power Supply Rejection Rate",
     "symbol": "PSRR",
     "unit": "mg/V",
-    "stat": "value",
+    "stat": "max",
     "conditions": "Top=25°C",
     "example": "20"
    },
    {
     "name": "Storage Temperature",
-    "symbol": "Storage Temperature",
+    "symbol": "",
     "unit": "℃",
     "stat": "range",
     "conditions": "",
@@ -274,7 +282,7 @@
    },
    {
     "name": "Supply Voltage",
-    "symbol": "Supply Voltage",
+    "symbol": "",
     "unit": "V",
     "stat": "range",
     "conditions": "Supply Pins",
@@ -282,55 +290,31 @@
    },
    {
     "name": "Supply Voltage",
-    "symbol": "Supply Voltage",
+    "symbol": "",
     "unit": "V",
     "stat": "range",
     "conditions": "Logic Pins",
-    "example": "-0.3 to Vdd_I +0.3 O"
+    "example": "-0.3 to Vdd_I +0.3"
    },
    {
     "name": "ESD Rating",
-    "symbol": "ESD Rating",
+    "symbol": "",
     "unit": "kV",
-    "stat": "value",
+    "stat": "max",
     "conditions": "HMB,R=1.5k,C=100pF",
     "example": "±2"
    },
    {
     "name": "Mechanical Shock",
-    "symbol": "Mechanical Shock",
+    "symbol": "",
     "unit": "g",
-    "stat": "value",
+    "stat": "max",
     "conditions": "Duration<200us",
     "example": "10,000"
-   },
-   {
-    "name": "Package",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "LGA-16 3x3x0.9mm"
-   },
-   {
-    "name": "Operating Temperature Range",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-40 to 85"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 79.54,
-  "tokens_in": 2866,
-  "tokens_out": 1814
+  "seconds": 50.87,
+  "tokens_in": 2966,
+  "tokens_out": 1724
  }
 }

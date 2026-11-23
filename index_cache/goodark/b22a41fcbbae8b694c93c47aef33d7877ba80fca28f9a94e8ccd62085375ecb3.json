@@ -21,9 +21,9 @@
  },
  "type": "complementary_npn_pnp_transistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T14:01:51+00:00",
+  "at": "2026-11-23T08:01:58+00:00",
   "items": [
    {
     "name": "Collector-Base Voltage",
@@ -85,7 +85,7 @@
     "name": "Thermal resistance From junction to ambient",
     "symbol": "R θJA",
     "unit": "℃/W",
-    "stat": "value",
+    "stat": "max",
     "conditions": "",
     "example": "625"
    },
@@ -408,10 +408,18 @@
     "stat": "max",
     "conditions": "VCC=-3V, IC=- 10mA IB1=-IB2=- 1mA",
     "example": "75"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "SOT-363"
    }
   ],
-  "seconds": 43.2,
-  "tokens_in": 2713,
-  "tokens_out": 2928
+  "seconds": 81.64,
+  "tokens_in": 2813,
+  "tokens_out": 2963
  }
 }

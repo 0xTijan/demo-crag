@@ -20,9 +20,9 @@
  },
  "type": "schottky_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T09:48:51+00:00",
+  "at": "2026-11-23T05:49:06+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -66,22 +66,22 @@
    },
    {
     "name": "Operating junction temperature range",
-    "symbol": "TJ",
-    "unit": "",
+    "symbol": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to +150"
    },
    {
     "name": "Storage temperature range",
-    "symbol": "TSTG",
-    "unit": "",
+    "symbol": "",
+    "unit": "°C",
     "stat": "range",
     "conditions": "",
     "example": "-55 to +150"
    },
    {
-    "name": "Forward drop voltage",
+    "name": "Forward drop voltage (Note1)",
     "symbol": "VF",
     "unit": "V",
     "stat": "max",
@@ -89,7 +89,7 @@
     "example": "0.90"
    },
    {
-    "name": "Forward drop voltage",
+    "name": "Forward drop voltage (Note1)",
     "symbol": "VF",
     "unit": "V",
     "stat": "max",
@@ -97,7 +97,7 @@
     "example": "0.80"
    },
    {
-    "name": "Reverse leakage current @VR",
+    "name": "Reverse leakage current @VR (Note2)",
     "symbol": "IR",
     "unit": "uA",
     "stat": "max",
@@ -105,7 +105,7 @@
     "example": "200"
    },
    {
-    "name": "Reverse leakage current @VR",
+    "name": "Reverse leakage current @VR (Note2)",
     "symbol": "IR",
     "unit": "mA",
     "stat": "max",
@@ -127,6 +127,14 @@
     "stat": "typ",
     "conditions": "",
     "example": "62.5"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-220AB"
    },
    {
     "name": "Case",
@@ -161,16 +169,24 @@
     "example": "50 units per plastic tube"
    },
    {
-    "name": "Package",
+    "name": "Plastic package has underwriters Laboratory Flammability Classification",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "TO-220AB"
+    "example": "94V-0"
+   },
+   {
+    "name": "Halogen-free according to IEC 61249-2-21",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "IEC 61249-2-21"
    }
   ],
-  "seconds": 50.07,
-  "tokens_in": 1645,
-  "tokens_out": 796
+  "seconds": 43.67,
+  "tokens_in": 1745,
+  "tokens_out": 910
  }
 }

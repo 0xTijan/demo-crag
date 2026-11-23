@@ -22,5 +22,63 @@
   "tokens_in": 2541,
   "tokens_out": 77
  },
- "type": "zener_diode"
+ "type": "zener_diode",
+ "spec_inventory": {
+  "version": "2",
+  "model": "qwen3:30b-a3b",
+  "at": "2026-11-23T06:30:23+00:00",
+  "items": [
+   {
+    "name": "Power dissipation",
+    "symbol": "P D",
+    "unit": "mW",
+    "stat": "max",
+    "conditions": "",
+    "example": "500"
+   },
+   {
+    "name": "Forward voltage @IF=10mA",
+    "symbol": "V f",
+    "unit": "V",
+    "stat": "typ",
+    "conditions": "IF=10mA",
+    "example": "0.9"
+   },
+   {
+    "name": "Storage temperature range",
+    "symbol": "T s",
+    "unit": "°C",
+    "stat": "range",
+    "conditions": "",
+    "example": "-65 +150"
+   },
+   {
+    "name": "Zener Voltage Range (Vz@Izt)",
+    "symbol": "Vz@Izt",
+    "unit": "V",
+    "stat": "range",
+    "conditions": "Izt=50μA",
+    "example": "1.71 to 1.89"
+   },
+   {
+    "name": "Maximum Reverse Current",
+    "symbol": "IR",
+    "unit": "uA",
+    "stat": "max",
+    "conditions": "",
+    "example": "7.5"
+   },
+   {
+    "name": "Maximum Reverse Voltage",
+    "symbol": "VR",
+    "unit": "V",
+    "stat": "max",
+    "conditions": "",
+    "example": "1"
+   }
+  ],
+  "seconds": 183.37,
+  "tokens_in": 5400,
+  "tokens_out": 8470
+ }
 }

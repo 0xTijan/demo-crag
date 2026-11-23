@@ -20,9 +20,9 @@
  },
  "type": "standard_rectifier",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T10:18:02+00:00",
+  "at": "2026-11-23T06:20:15+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -137,72 +137,16 @@
     "example": "62.5"
    },
    {
-    "name": "Case",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Epoxy, Molded"
-   },
-   {
-    "name": "Finish",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "All External Surfaces Corrosion Resistan"
-   },
-   {
-    "name": "Lead Temperature for Soldering Purposes",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "max",
-    "conditions": "",
-    "example": "260"
-   },
-   {
-    "name": "Shipped",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "30 units per plastic tube"
-   },
-   {
-    "name": "Plastic package has underwriters Laboratory Flammability Classification",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "94V-0"
-   },
-   {
-    "name": "Halogen-free according to IEC 61249-2-21",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "IEC 61249-2-21"
-   },
-   {
     "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
     "example": "TO-247AC"
-   },
-   {
-    "name": "Package Outline Dimensions",
-    "symbol": "",
-    "unit": "millimeters",
-    "stat": "value",
-    "conditions": "",
-    "example": "TO-247AC"
    }
   ],
-  "seconds": 47.31,
-  "tokens_in": 1603,
-  "tokens_out": 999
+  "seconds": 40.64,
+  "tokens_in": 1703,
+  "tokens_out": 696
  }
 }

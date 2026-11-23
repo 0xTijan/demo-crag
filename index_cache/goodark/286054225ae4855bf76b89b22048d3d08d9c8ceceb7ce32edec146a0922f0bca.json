@@ -20,9 +20,9 @@
  },
  "type": "sic_mosfet_n",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:27:01+00:00",
+  "at": "2026-11-23T07:31:40+00:00",
   "items": [
    {
     "name": "DrainSourceVoltage",
@@ -399,34 +399,10 @@
     "stat": "value",
     "conditions": "",
     "example": "TOLL"
-   },
-   {
-    "name": "PinCount",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "3"
-   },
-   {
-    "name": "OperatingTemperatureRange",
-    "symbol": "",
-    "unit": "°C",
-    "stat": "range",
-    "conditions": "",
-    "example": "-55 to 175"
-   },
-   {
-    "name": "RoHS",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Compliant"
    }
   ],
-  "seconds": 150.3,
-  "tokens_in": 3335,
-  "tokens_out": 3189
+  "seconds": 138.05,
+  "tokens_in": 3435,
+  "tokens_out": 3085
  }
 }

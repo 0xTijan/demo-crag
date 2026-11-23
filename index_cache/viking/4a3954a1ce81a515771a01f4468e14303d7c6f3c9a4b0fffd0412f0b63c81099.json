@@ -21,9 +21,9 @@
  },
  "type": "thick_film_array_chip_resistor",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T13:54:31+00:00",
+  "at": "2026-11-23T07:53:16+00:00",
   "items": [
    {
     "name": "Product",
@@ -42,95 +42,7 @@
     "example": "0402x4 0603x4"
    },
    {
-    "name": "Issued Date",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "26-Nov-25"
-   },
-   {
-    "name": "Edition",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "REV.A1"
-   },
-   {
-    "name": "Company",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "VIKING TECH CORPORATION"
-   },
-   {
-    "name": "Company Address",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "No.70 Guangfu N. Rd., Hukou Township, Hs"
-   },
-   {
-    "name": "Company Phone",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "TEL:886-3-5972931"
-   },
-   {
-    "name": "Company Fax",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "FAX:886-3-5972935·886-3-5973494"
-   },
-   {
-    "name": "Company Email",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "sales@viking.com.tw"
-   },
-   {
-    "name": "Scope",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "All sizes of rectangular-type fixed chip"
-   },
-   {
-    "name": "Features",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Special construction to prevent sulfurat"
-   },
-   {
-    "name": "Construction",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Alumina Substrate, Edge Electrode, Resis"
-   },
-   {
-    "name": "Applications",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "High-end Computer, Industrial Equipment,"
-   },
-   {
-    "name": "Type",
+    "name": "Package",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -138,108 +50,12 @@
     "example": "ASF42, ASF43"
    },
    {
-    "name": "Number of Resistors",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "4"
-   },
-   {
-    "name": "L",
-    "symbol": "L",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "2.00±0.10, 3.20±0.10"
-   },
-   {
-    "name": "W",
-    "symbol": "W",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "1.00±0.10, 1.55±0.10"
-   },
-   {
-    "name": "H",
-    "symbol": "H",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.45±0.10, 0.55±0.10"
-   },
-   {
-    "name": "A",
-    "symbol": "A",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.30±0.10, 0.50±0.15"
-   },
-   {
-    "name": "A1",
-    "symbol": "A1",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.40±0.10, 0.65±0.10"
-   },
-   {
-    "name": "B",
-    "symbol": "B",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.5±0.10, 0.8±0.05"
-   },
-   {
-    "name": "C",
-    "symbol": "C",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.20±0.10, 0.23±0.15"
-   },
-   {
-    "name": "Y",
-    "symbol": "Y",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
-    "example": "0.30±0.10, 0.40±0.10"
-   },
-   {
-    "name": "Weight",
-    "symbol": "Weight",
-    "unit": "g",
-    "stat": "range",
-    "conditions": "1000pcs",
-    "example": "3.3, 9.0"
-   },
-   {
-    "name": "Part Numbering",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "43 F T F X 1002"
-   },
-   {
-    "name": "Dimensions",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "42: 0402x4 43: 0603x4"
-   },
-   {
     "name": "Resistance Tolerance",
     "symbol": "",
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "F: ±1% J: ±5% or Jumper"
+    "example": "±1%, ±5% or Jumper"
    },
    {
     "name": "Packaging Code",
@@ -247,42 +63,18 @@
     "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "T: 7\"Taping Reel V:10\"Taping Reel W:13\"T"
+    "example": "T: 7\"Taping Reel, V:10\"Taping Reel, W:13"
    },
    {
     "name": "TCR (PPM/°C)",
-    "symbol": "TCR",
-    "unit": "PPM/°C",
+    "symbol": "",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "F: ±200 -: No specified (For Jumper)"
+    "example": "±200"
    },
    {
     "name": "Power Rating",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "Y: 1/16W X: 1/10W"
-   },
-   {
-    "name": "Resistance",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "0030: 3Ω 1000: 100Ω 1002: 10KΩ 2201: 2.2"
-   },
-   {
-    "name": "Product Type",
-    "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "ASF"
-   },
-   {
-    "name": "Power Rating at 70°C",
     "symbol": "",
     "unit": "",
     "stat": "value",
@@ -300,18 +92,26 @@
    {
     "name": "Max. Operating Voltage",
     "symbol": "",
-    "unit": "V",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "50"
+    "example": "50V"
    },
    {
     "name": "Max. Overload Voltage",
     "symbol": "",
-    "unit": "V",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "100"
+    "example": "100V"
+   },
+   {
+    "name": "Number of Resistors",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "4"
    },
    {
     "name": "Resistance Range (±1%)",
@@ -339,10 +139,10 @@
    },
    {
     "name": "Temperature Coefficient of Resistance (T.C.R.)",
-    "symbol": "T.C.R.",
+    "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "At 25°C/-55°C and 25°C/+125°C, 25°C is the reference temperature",
+    "conditions": "",
     "example": "As Spec."
    },
    {
@@ -350,55 +150,55 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "RCWV*2.5 or Max. Overload Voltage whichever is lower for 5 seconds",
-    "example": ""
+    "conditions": "",
+    "example": "RCWV*2.5 or Max. Overload Voltage whiche"
    },
    {
     "name": "Insulation Resistance",
     "symbol": "",
-    "unit": "G",
-    "stat": "min",
-    "conditions": "Max. Overload Voltage for 1 minute",
-    "example": "10"
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "≥10G"
    },
    {
     "name": "Endurance",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "70±2°C, RCWV for 1000 hrs with 1.5 hrs \"ON\" and 0.5 hr \"OFF\"",
-    "example": "±(2.0%+0.10Ω), ±(3.0%+0.10Ω), <50mΩ"
+    "stat": "value",
+    "conditions": "",
+    "example": "±(2.0%+0.10Ω) for ±1%, ±(3.0%+0.10Ω) for"
    },
    {
     "name": "Damp Heat with Load",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "40±2°C, 90~95% R.H., RCWV for 1000 hrs with 1.5 hrs \"ON\" and 0.5 hr \"OFF\"",
-    "example": "±(2.0%+0.10Ω), ±(3.0%+0.10Ω), <50mΩ"
+    "stat": "value",
+    "conditions": "",
+    "example": "±(2.0%+0.10Ω) for ±1%, ±(3.0%+0.10Ω) for"
    },
    {
     "name": "Dry Heat",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "+155°C for 1000 hrs",
-    "example": "±(1.0%+0.05Ω), ±(1.5%+0.10Ω), <50mΩ"
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω) for ±1%, ±(1.5%+0.10Ω) for"
    },
    {
     "name": "Bending Strength",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "Bending once for 60 seconds with 3mm",
-    "example": "±(1.0%+0.05Ω), ±(1.0%+0.05Ω), <50mΩ"
+    "stat": "value",
+    "conditions": "",
+    "example": "±(1.0%+0.05Ω) for ±1%, ±(1.0%+0.05Ω) for"
    },
    {
     "name": "Solderability",
     "symbol": "",
     "unit": "",
-    "stat": "min",
-    "conditions": "245±5°C for 3 seconds",
+    "stat": "value",
+    "conditions": "",
     "example": "95% min. coverage"
    },
    {
@@ -406,7 +206,7 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "260±5°C for 10 seconds",
+    "conditions": "",
     "example": ""
    },
    {
@@ -414,180 +214,564 @@
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "1.42 times Max. Operating Voltage for 1 minute",
+    "conditions": "",
     "example": "No breakdown or flashover"
    },
    {
     "name": "Leaching",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "260±5°C for 30 seconds",
+    "stat": "value",
+    "conditions": "",
     "example": "Individual leaching area ≦5% Total leach"
    },
    {
     "name": "Rapid Change of Temperature",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "-55°C to +155°C, 5 cycles",
-    "example": "±(0.5%+0.05Ω), ±(1.0%+0.05Ω), <50mΩ"
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω) for ±1%, ±(1.0%+0.05Ω) for"
    },
    {
     "name": "Sulfur Test",
     "symbol": "",
     "unit": "",
-    "stat": "range",
-    "conditions": "H S, 50±2°C, 91~93% R.H., no power rating for 2 1000 hrs",
-    "example": "±(0.5%+0.05Ω), ±(0.5%+0.05Ω), <50mΩ"
+    "stat": "value",
+    "conditions": "",
+    "example": "±(0.5%+0.05Ω) for ±1%, ±(0.5%+0.05Ω) for"
    },
    {
     "name": "Storage Temperature",
     "symbol": "",
-    "unit": "°C",
-    "stat": "range",
+    "unit": "",
+    "stat": "value",
     "conditions": "",
-    "example": "15~28"
-   },
-   {
-    "name": "Humidity",
-    "symbol": "",
-    "unit": "%RH",
-    "stat": "max",
-    "conditions": "",
-    "example": "80"
+    "example": "15~28°C"
    },
    {
     "name": "Shelf Life",
     "symbol": "",
-    "unit": "years",
+    "unit": "",
     "stat": "value",
     "conditions": "",
-    "example": "2"
+    "example": "2 years from production date"
+   },
+   {
+    "name": "L (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
+    "example": "2.00±0.10"
+   },
+   {
+    "name": "W (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
+    "example": "1.00±0.10"
+   },
+   {
+    "name": "H (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
+    "example": "0.45±0.10"
+   },
+   {
+    "name": "A (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
+    "example": "0.30±0.10"
+   },
+   {
+    "name": "A1 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
+    "example": "0.40±0.10"
+   },
+   {
+    "name": "B (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
+    "example": "0.5±0.10"
+   },
+   {
+    "name": "C (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
+    "example": "0.20±0.10"
+   },
+   {
+    "name": "Y (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
+    "example": "0.30±0.10"
+   },
+   {
+    "name": "Weight (g) (1000pcs)",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "ASF42",
+    "example": "3.3"
+   },
+   {
+    "name": "L (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "3.20±0.10"
+   },
+   {
+    "name": "W (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "1.55±0.10"
+   },
+   {
+    "name": "H (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "0.55±0.10"
+   },
+   {
+    "name": "A (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "0.50±0.15"
+   },
+   {
+    "name": "A1 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "0.65±0.10"
+   },
+   {
+    "name": "B (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "0.8±0.05"
+   },
+   {
+    "name": "C (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "0.23±0.15"
+   },
+   {
+    "name": "Y (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "0.40±0.10"
+   },
+   {
+    "name": "Weight (g) (1000pcs)",
+    "symbol": "",
+    "unit": "g",
+    "stat": "value",
+    "conditions": "ASF43",
+    "example": "9.0"
+   },
+   {
+    "name": "A (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF42",
+    "example": "2.10"
+   },
+   {
+    "name": "B (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF42",
+    "example": "1.80"
+   },
+   {
+    "name": "C (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF42",
+    "example": "0.30"
+   },
+   {
+    "name": "I (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF42",
+    "example": "0.50"
+   },
+   {
+    "name": "P (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF42",
+    "example": "0.50"
+   },
+   {
+    "name": "A (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF43",
+    "example": "3.10"
+   },
+   {
+    "name": "B (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF43",
+    "example": "2.85"
+   },
+   {
+    "name": "C (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF43",
+    "example": "0.45"
+   },
+   {
+    "name": "I (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF43",
+    "example": "0.80"
+   },
+   {
+    "name": "P (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "ASF43",
+    "example": "0.80"
    },
    {
     "name": "Packaging Quantity",
     "symbol": "",
     "unit": "",
     "stat": "value",
-    "conditions": "",
-    "example": "5K, 10K, 20K"
+    "conditions": "Paper, 5K",
+    "example": "5K"
    },
    {
     "name": "Tape Width",
     "symbol": "",
     "unit": "mm",
     "stat": "value",
-    "conditions": "",
-    "example": "8"
+    "conditions": "Paper",
+    "example": "8mm"
    },
    {
     "name": "Reel Diameter",
     "symbol": "",
-    "unit": "",
+    "unit": "mm",
     "stat": "value",
-    "conditions": "",
-    "example": "7 inch, 10 inch, 13 inch"
+    "conditions": "7 inch",
+    "example": "7 inch"
    },
    {
-    "name": "ΦA",
-    "symbol": "ΦA",
+    "name": "ΦA (mm)",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
-    "example": "178.5±1.5, 254±1.0, 330±1.0"
+    "conditions": "7 inch",
+    "example": "178.5±1.5"
    },
    {
-    "name": "ΦB",
-    "symbol": "ΦB",
+    "name": "ΦB (mm)",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
-    "example": "60+1/-0, 100±0.5"
+    "conditions": "7 inch",
+    "example": "60+1/-0"
    },
    {
-    "name": "ΦC",
-    "symbol": "ΦC",
+    "name": "ΦC (mm)",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "7 inch",
     "example": "13.0±0.2"
    },
    {
-    "name": "T",
-    "symbol": "T",
+    "name": "W (mm)",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
-    "example": "12.5±0.5, 13.5±0.5"
+    "conditions": "7 inch",
+    "example": "9.0±0.5"
    },
    {
-    "name": "E",
-    "symbol": "E",
+    "name": "T (mm)",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "7 inch",
+    "example": "12.5±0.5"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Paper, 10K",
+    "example": "10K"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "10 inch",
+    "example": "10 inch"
+   },
+   {
+    "name": "ΦA (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "10 inch",
+    "example": "254±1.0"
+   },
+   {
+    "name": "ΦB (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "10 inch",
+    "example": "100±0.5"
+   },
+   {
+    "name": "ΦC (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "10 inch",
+    "example": "13.0±0.2"
+   },
+   {
+    "name": "W (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "10 inch",
+    "example": "9.5±0.5"
+   },
+   {
+    "name": "T (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "10 inch",
+    "example": "13.5±0.5"
+   },
+   {
+    "name": "Packaging Quantity",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "Paper, 20K",
+    "example": "20K"
+   },
+   {
+    "name": "Reel Diameter",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "value",
+    "conditions": "13 inch",
+    "example": "13 inch"
+   },
+   {
+    "name": "ΦA (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "13 inch",
+    "example": "330±1.0"
+   },
+   {
+    "name": "ΦB (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "13 inch",
+    "example": "100±0.5"
+   },
+   {
+    "name": "ΦC (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "13 inch",
+    "example": "13.0±0.2"
+   },
+   {
+    "name": "W (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "13 inch",
+    "example": "9.5±0.5"
+   },
+   {
+    "name": "T (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "13 inch",
+    "example": "13.5±0.5"
+   },
+   {
+    "name": "E (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
     "example": "1.75±0.1"
    },
    {
-    "name": "F",
-    "symbol": "F",
+    "name": "F (mm)",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "ASF42",
     "example": "3.5±0.05"
    },
    {
-    "name": "P0",
-    "symbol": "P0",
+    "name": "P0 (mm)",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "ASF42",
     "example": "4.0±0.1"
    },
    {
-    "name": "P1",
-    "symbol": "P1",
+    "name": "P1 (mm)",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
-    "example": "2.0±0.05, 4.0±0.05"
-   },
-   {
-    "name": "P2",
-    "symbol": "P2",
-    "unit": "mm",
-    "stat": "range",
-    "conditions": "",
+    "conditions": "ASF42",
     "example": "2.0±0.05"
    },
    {
-    "name": "ΦD0",
-    "symbol": "ΦD0",
+    "name": "P2 (mm)",
+    "symbol": "",
     "unit": "mm",
     "stat": "range",
-    "conditions": "",
+    "conditions": "ASF42",
+    "example": "2.0±0.05"
+   },
+   {
+    "name": "ΦD0 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
     "example": "1.50+0.1,-0"
    },
    {
-    "name": "Marking",
+    "name": "T (mm)",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "1% for ASF42/ASF43 : 4 digits marking (n"
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF42",
+    "example": "0.70±0.1"
    },
    {
-    "name": "E24 code",
+    "name": "E (mm)",
     "symbol": "",
-    "unit": "",
-    "stat": "value",
-    "conditions": "",
-    "example": "10, 11, 12, 13, 15, 16, 18, 20, 22, 24, "
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "1.75±0.1"
+   },
+   {
+    "name": "F (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "3.5±0.05"
+   },
+   {
+    "name": "P0 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "4.0±0.1"
+   },
+   {
+    "name": "P1 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "4.0±0.05"
+   },
+   {
+    "name": "P2 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "2.0±0.05"
+   },
+   {
+    "name": "ΦD0 (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "1.50+0.1,-0"
+   },
+   {
+    "name": "T (mm)",
+    "symbol": "",
+    "unit": "mm",
+    "stat": "range",
+    "conditions": "ASF43",
+    "example": "0.85±0.1"
    }
   ],
-  "seconds": 59.42,
-  "tokens_in": 4829,
-  "tokens_out": 3931
+  "seconds": 81.22,
+  "tokens_in": 4929,
+  "tokens_out": 4424
  }
 }

@@ -20,9 +20,9 @@
  },
  "type": "sic_schottky_diode",
  "spec_inventory": {
-  "version": "1",
+  "version": "2",
   "model": "qwen3:30b-a3b",
-  "at": "2026-11-22T12:25:07+00:00",
+  "at": "2026-11-23T06:38:29+00:00",
   "items": [
    {
     "name": "Maximum repetitive peak reverse voltage",
@@ -133,7 +133,7 @@
     "symbol": "IR",
     "unit": "µA",
     "stat": "typ",
-    "conditions": "V R=1200V, TJ=25°C",
+    "conditions": "V=1200V, TJ=25°C",
     "example": "15"
    },
    {
@@ -141,7 +141,7 @@
     "symbol": "IR",
     "unit": "µA",
     "stat": "max",
-    "conditions": "V R=1200V, TJ=25°C",
+    "conditions": "V=1200V, TJ=25°C",
     "example": "50"
    },
    {
@@ -149,7 +149,7 @@
     "symbol": "IR",
     "unit": "µA",
     "stat": "typ",
-    "conditions": "V R=1200V, TJ=175°C",
+    "conditions": "VR=1200V, TJ=175°C",
     "example": "30"
    },
    {
@@ -157,7 +157,7 @@
     "symbol": "IR",
     "unit": "µA",
     "stat": "max",
-    "conditions": "V R=1200V, TJ=175°C",
+    "conditions": "VR=1200V, TJ=175°C",
     "example": "100"
    },
    {
@@ -183,10 +183,18 @@
     "stat": "typ",
     "conditions": "",
     "example": "0.52/0.26"
+   },
+   {
+    "name": "Package",
+    "symbol": "",
+    "unit": "",
+    "stat": "value",
+    "conditions": "",
+    "example": "TO-247-3"
    }
   ],
-  "seconds": 45.63,
-  "tokens_in": 1788,
-  "tokens_out": 1032
+  "seconds": 18.59,
+  "tokens_in": 1888,
+  "tokens_out": 1064
  }
 }
