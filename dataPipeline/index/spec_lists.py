@@ -169,6 +169,53 @@ def norm_rule(rule) -> str:
     return r if r in RULES else RULE_ALIASES.get(r, "info")
 
 
+# Condition variables that define a different specification, the same for every part of a type: gate drive
+# (RDS(on) at VGS=10 V vs 4.5 V), temperature (leakage at TJ=25 vs 125 °C), frequency, pulse width. Any other
+# condition in a key (IF=20 A, ID=10 A, VR=40 V, IPP=5 A, IT=1 mA) follows the part's own rating and differs
+# between datasheets; left in the key, it splits one spec into one key per datasheet.
+DEFINING_CONDITIONS = {"vgs", "vge", "tj", "tc", "ta", "tl", "f", "tp"}
+
+
+def canonical_key(key: str) -> str:
+    """Drop per-part conditions (and unit suffixes) from a key, keep defining ones:
+    vf_max@if_20a_tj_125c -> vf_max@tj_125c; rds_on_max@vgs_10v_id_20a -> rds_on_max@vgs_10v;
+    vc_max@ippm_5a -> vc_max; vwm_value@vrwm -> vwm_value; ir_max@tj_25c_ua -> ir_max@tj_25c."""
+    base, _, cond = key.partition("@")
+    if not cond:
+        return key
+    tokens, kept, i = cond.split("_"), [], 0
+    while i < len(tokens):
+        if tokens[i] in DEFINING_CONDITIONS and i + 1 < len(tokens) and tokens[i + 1][:1].isdigit():
+            group = [tokens[i]]
+            i += 1
+            while i < len(tokens) and tokens[i][:1].isdigit():
+                group.append(tokens[i])
+                i += 1
+                if re.search(r"[a-z]", group[-1]):  # "10v", "125c", "1mhz", "20us": the value ends here
+                    break
+            kept.append("_".join(group))
+        else:
+            i += 1
+    return f"{base}@{'_'.join(kept)}" if kept else base
+
+
+def _norm_name(text: str) -> str:
+    return re.sub(r"[\s_()\[\].,:-]+", "", str(text or "").lower())
+
+
+def _defining_ok(key: str, conditions: str) -> bool:
+    """An item matches a key's defining conditions (vgs_4_5v -> 'vgs=4.5v' in 'VGS = 4.5 V, ID=10A')."""
+    cond = str(conditions or "").lower().replace(" ", "").replace("°", "").replace("℃", "c").replace(",", ".")
+    defining = key.partition("@")[2]
+    if not defining:
+        return True
+    for m in re.finditer(r"(?:^|_)([a-z]+)_((?:\d+_)*\d+[a-z]*)", defining):
+        var, value = m.group(1), m.group(2).replace("_", ".")
+        if f"{var}={value}" not in cond:
+            return False
+    return True
+
+
 def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_share: float = 0.5) -> dict:
     """One LLM call groups the samples' items into specifications; code counts coverage and builds the
     spec-list dict (not yet written). Returns {"spec_list": ..., "stats": ...}."""
@@ -182,7 +229,7 @@ def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_sha
     for raw in data.get("specs") or []:
         if not isinstance(raw, dict):
             continue
-        key = norm_key(raw.get("key") or raw.get("label"))
+        key = canonical_key(norm_key(raw.get("key") or raw.get("label")))
         if not key:
             continue
         members = [m for m in (str(x).strip() for x in raw.get("members") or []) if m in valid and m not in used]
@@ -201,7 +248,21 @@ def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_sha
     needed = max(1, math.ceil(min_share * n))
     common_specs, rare = {}, {}
     for key, spec in specs.items():
-        found = sorted({valid[m][0] for m in spec["_members"]})
+        found = {valid[m][0] for m in spec["_members"]}
+        # The merge often leaves items of some samples out of a spec. Count a sample also when one of its items
+        # has the name or symbol of a member, the same statistic and the key's defining conditions, so a spec
+        # every datasheet has is not filed as rare because the merge missed a few items.
+        names = {_norm_name(x) for m in spec["_members"] for x in (valid[m][1]["name"], valid[m][1]["symbol"])}
+        names.discard("")
+        stats = {valid[m][1]["stat"] for m in spec["_members"]} | {spec["stat"]}
+        for ident, (d, it) in valid.items():
+            if d in found:
+                continue
+            if (_norm_name(it["symbol"]) in names or _norm_name(it["name"]) in names) and \
+                    (it["stat"] in stats or "value" in (it["stat"], spec["stat"])) and \
+                    _defining_ok(key, it["conditions"]):
+                found.add(d)
+        found = sorted(found)
         aliases = []
         for m in spec["_members"]:
             it = valid[m][1]

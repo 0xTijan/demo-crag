@@ -233,3 +233,36 @@ def test_package_is_always_in_the_spec_list():
             "specs": {"vrrm_max": {"label": "VRRM", "unit": "V", "rule": ">=", "critical": True}}}
     errors, warnings = sl.validate(good)
     assert not errors and any("must_match" in w for w in warnings) and any("package" in w for w in warnings)
+
+
+def test_canonical_key_drops_per_part_conditions():
+    c = sl.canonical_key
+    assert c("vf_max@if_20a_tj_125c") == "vf_max@tj_125c"
+    assert c("rds_on_max@vgs_10v_id_20a") == "rds_on_max@vgs_10v"
+    assert c("rds_on_max@vgs_4_5v_id_10a") == "rds_on_max@vgs_4_5v"
+    assert c("vc_max@ippm_5a") == "vc_max" and c("vwm_value@vrwm") == "vwm_value"
+    assert c("ir_max@tj_25c_ua") == "ir_max@tj_25c" and c("ir_max@vr_40v_tj_100c") == "ir_max@tj_100c"
+    assert c("c_j_max@vr_0v_f_1mhz") == "c_j_max@f_1mhz" and c("vds_max") == "vds_max"
+
+
+def test_merge_joins_split_keys_and_counts_samples_the_merge_missed():
+    item = lambda name, sym, stat="max", cond="": {"name": name, "symbol": sym, "unit": "V", "stat": stat,
+                                                  "conditions": cond, "example": "1"}
+    samples = [{"file": f"s{i}.md", "supplier": "x", "family": False, "items": items} for i, items in enumerate([
+        [item("Forward voltage", "VF", cond="IF=20A, TJ=25°C"), item("Clamping voltage", "VC", cond="IPP=5A")],
+        [item("Forward voltage", "VF", cond="IF=5A, TJ=25°C"), item("Clamping voltage", "VC", cond="IPP=12A")],
+        [item("Max forward voltage", "VF", cond="IF=1A, TJ = 25 ℃"), item("Clamp voltage", "VC")],
+        [item("Forward voltage", "VF", cond="IF=3A, TJ=125°C")]], 1)]
+
+    def fake(system, user):  # one key per test current, and D3's VC item left out
+        return LLMAnswer({"specs": [
+            {"key": "vf_max@if_20a_tj_25c", "rule": "<=", "unit": "V", "stat": "max", "members": ["D1.1"]},
+            {"key": "vf_max@if_5a_tj_25c", "rule": "<=", "unit": "V", "stat": "max", "members": ["D2.1"]},
+            {"key": "vf_max@if_1a_tj_25c", "rule": "<=", "unit": "V", "stat": "max", "members": ["D3.1"]},
+            {"key": "vf_max@if_3a_tj_125c", "rule": "<=", "unit": "V", "stat": "max", "members": ["D4.1"]},
+            {"key": "vc_max@ippm_5a", "rule": "<=", "unit": "V", "stat": "max", "members": ["D1.2"]},
+            {"key": "vc_max@ippm_12a", "rule": "<=", "unit": "V", "stat": "max", "members": ["D2.2"]}]}, 1, 1, 1)
+    out = sl.merge_specs("x_type", "x type", samples, fake)["spec_list"]
+    assert out["specs"]["vf_max@tj_25c"]["found_in"] == "3/4"   # three keys joined, 125 °C kept apart
+    assert out["rare_specs"]["vf_max@tj_125c"]["found_in"] == "1/4"
+    assert out["specs"]["vc_max"]["found_in"] == "3/4"          # D3's "VC" counted though the merge left it out
