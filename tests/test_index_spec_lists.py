@@ -266,3 +266,27 @@ def test_merge_joins_split_keys_and_counts_samples_the_merge_missed():
     assert out["specs"]["vf_max@tj_25c"]["found_in"] == "3/4"   # three keys joined, 125 °C kept apart
     assert out["rare_specs"]["vf_max@tj_125c"]["found_in"] == "1/4"
     assert out["specs"]["vc_max"]["found_in"] == "3/4"          # D3's "VC" counted though the merge left it out
+
+
+def test_merge_repairs_package_members_duplicates_rules_and_non_specs():
+    item = lambda name, sym, unit="", stat="max": {"name": name, "symbol": sym, "unit": unit, "stat": stat,
+                                                  "conditions": "", "example": "1"}
+    samples = [{"file": f"s{i}.md", "supplier": "x", "family": False, "items": [
+        item("Package", "", stat="value"), item("Forward voltage", "VF", "V"),
+        item("Junction temperature", "TJ", "°C", "range"), item("Solderability", "", "%", "min")]} for i in (1, 2)]
+
+    def fake(system, user):
+        return LLMAnswer({"specs": [
+            {"key": "package", "rule": "=", "members": ["D1.1", "D2.1", "D1.2"]},   # VF wrongly under package
+            {"key": "vf_max", "rule": "<=", "unit": "V", "stat": "max", "members": ["D2.2"]},
+            {"key": "tj_range", "rule": "=", "unit": "°C", "stat": "range", "members": ["D1.3"]},
+            {"key": "tj_range_2", "rule": "=", "unit": "°C", "stat": "range", "members": ["D2.3"]},
+            {"key": "solderability", "rule": ">=", "unit": "%", "stat": "min", "members": ["D1.4", "D2.4"],
+             "critical": True}],
+            "must_match": ["package", "tj_range", "solderability"]}, 1, 1, 1)
+    out = sl.merge_specs("x_type", "x type", samples, fake)["spec_list"]
+    assert "Forward voltage" not in out["specs"]["package"]["aliases"]
+    assert out["specs"]["vf_max"]["found_in"] == "2/2"              # D1's VF counted by name
+    assert "tj_range_2" not in out["specs"] and out["specs"]["tj_range"]["rule"] == "contains"
+    assert "solderability" in out["rare_specs"] and not out["rare_specs"]["solderability"]["critical"]
+    assert out["must_match"] == ["package"]

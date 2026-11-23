@@ -216,6 +216,44 @@ def _defining_ok(key: str, conditions: str) -> bool:
     return True
 
 
+# Keys that are not specifications to compare: reliability and environmental test results, storage and shelf
+# life, materials, packing, tape-and-reel and outline-drawing dimensions (a, b, p0, phi_d, ...).
+NOT_A_SPEC_RE = re.compile(
+    r"solderab|endurance|damp_heat|humidity|temperature_cycl|temp_cycl|thermal_shock|sulfur|bending|vibration"
+    r"|mechanical_shock|load_life|soldering_heat|voltage_proof|leaching|terminal_strength|shelf_life|storage_temp"
+    r"|flammab|dry_heat|high_temp_exposure|board_flex|adhesi|drop_test|salt_spray|tape|reel|packing|packaging"
+    r"|material|weight|^(?:[a-h]|[a-h]\d|l|w|t|h|p\d|w\d|phi_[a-z0-9]+|d\d|e\d)(?:_(?:range|max|min|typ|value))?$")
+PACKAGE_WORD_RE = re.compile(r"package|case|outline|footprint|size|style|type|mount|pin|lead|dimension", re.I)
+
+
+def clean_specs(specs: dict, valid: dict, used: set) -> None:
+    """Repair common merge mistakes in place, before coverage is counted.
+    1. Items the merge put under `package` that are not about the package (e.g. "VF") are released, so they are
+       counted for the spec they belong to by name.
+    2. Duplicate keys with a number suffix (tj_range_2 next to tj_range) are joined."""
+    pkg = specs.get("package")
+    if pkg:
+        keep = [m for m in pkg["_members"]
+                if PACKAGE_WORD_RE.search(f"{valid[m][1]['name']} {valid[m][1]['symbol']}")]
+        used.difference_update(set(pkg["_members"]) - set(keep))
+        pkg["_members"] = keep
+    for key in list(specs):
+        m = re.fullmatch(r"(.+)_\d", key)
+        if m and m.group(1) in specs:
+            specs[m.group(1)]["_members"] += specs.pop(key)["_members"]
+
+
+def fix_rule(key: str, spec: dict) -> None:
+    """Rules that cannot be right: "=" on a number range (temperature ranges) -> contains; "=" on any other
+    number with a unit (stand-off voltage, test current) -> ≈. "=" stays for text: package, dielectric, polarity."""
+    if spec.get("rule") != "=":
+        return
+    if spec.get("stat") == "range" or key.endswith("_range"):
+        spec["rule"] = "contains"
+    elif spec.get("unit"):
+        spec["rule"] = "≈"
+
+
 def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_share: float = 0.5) -> dict:
     """One LLM call groups the samples' items into specifications; code counts coverage and builds the
     spec-list dict (not yet written). Returns {"spec_list": ..., "stats": ...}."""
@@ -244,6 +282,7 @@ def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_sha
                 "_members": []}
         spec["_members"] += members
 
+    clean_specs(specs, valid, used)
     n = len(samples)
     needed = max(1, math.ceil(min_share * n))
     common_specs, rare = {}, {}
@@ -272,6 +311,11 @@ def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_sha
         out = {k: v for k, v in spec.items() if not k.startswith("_")}
         out["aliases"] = aliases[:12]
         out["found_in"] = f"{len(found)}/{n}"
+        fix_rule(key, out)
+        if NOT_A_SPEC_RE.search(key):  # test results, storage, tape and drawing dimensions: kept apart, unused
+            out["critical"] = False
+            rare[key] = (len(found), out)
+            continue
         (common_specs if len(found) >= needed else rare)[key] = (len(found), out)
 
     def ordered(d):
@@ -282,7 +326,7 @@ def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_sha
     # must_match is for equal-or-nothing keys (package, pin count, polarity); a rating there would turn every
     # higher-rated part into a mismatch, so keys whose rule is not "=" are left out
     must = [k for k in dict.fromkeys(norm_key(x) for x in data.get("must_match") or [])
-            if k in common_specs and common_specs[k]["rule"] == "="]
+            if k in common_specs and common_specs[k]["rule"] == "=" and not common_specs[k].get("unit")]
     if "package" in common_specs and "package" not in must:
         must.insert(0, "package")
     spec_list = {
