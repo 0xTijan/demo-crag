@@ -165,7 +165,6 @@ specs:
     - Emitter Cut-Off Current
     - I EBO
     - DC Current Gain
-    - hFE
     - Emitter-Base Cut-Off Current
     - Base-Emitter Breakdown Voltage
     - V (BR)EBO

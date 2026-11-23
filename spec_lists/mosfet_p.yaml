@@ -90,7 +90,6 @@ specs:
     - RDS(on)
     - Drain-Source On-state Resistance
     - Total Gate Charge
-    - Qg
     - Drain-Source On-state Resistance (Note 3)
     - R DS(on)
     - Drain-Source On-Resistance
@@ -125,8 +124,6 @@ specs:
     - VDS
     - V DS
     - Drain-Source Voltage
-    - V (BR)DSS
-    - V(BR)DSS
     - BV DSS
     found_in: 10/10
   vgs_max:
@@ -142,8 +139,6 @@ specs:
     - V GS
     - Gate-Source Voltage
     - Typical Gate-Source Voltage
-    - R θJA
-    - RθJA
     found_in: 10/10
   vsd_max:
     label: VSD max
@@ -207,7 +202,6 @@ specs:
     - Single Avalanche Energy (Note 2)
     - EAS
     - Power Dissipation
-    - P D
     - Single Pulse Avalanche Energy, (L=0.3mH)
     found_in: 10/10
   idss_max:
@@ -250,9 +244,7 @@ specs:
     - Total Gate Charge
     - Qg
     - Turn-on Delay Time
-    - t d(on)
     - Turn-Off Fall Time
-    - tf
     - Q g
     found_in: 10/10
   qgd_typ:
@@ -266,8 +258,6 @@ specs:
     - Gate-Drain Charge
     - Qgd
     - Turn-off Delay Time
-    - t d(off)
-    - Package
     - Gate-to-Drain Charge
     - Q gd
     found_in: 10/10
@@ -282,9 +272,7 @@ specs:
     - Gate-Source Charge
     - Qgs
     - Turn-on Rise Time
-    - t r
     - Diode Forward Voltage
-    - VSD
     - Q gs
     found_in: 10/10
   qrr_typ:
@@ -297,7 +285,6 @@ specs:
     aliases:
     - Reverse Recovery Charge
     - Qrr
-    - Package
     - Q rr
     found_in: 10/10
   rthja_max:
@@ -324,9 +311,7 @@ specs:
     - Thermal Resistance Junction to Case
     - RthJC
     - Thermal Resistance Junction to Ambient (Note 2)
-    - R thJA
     - Thermal Resistance, Junction-to-Ambient
-    - RθJA
     - Thermal Resistance from Junction to Ambient
     - Thermal Resistance Junction-to-Case
     - RθJC
@@ -412,7 +397,6 @@ specs:
     aliases:
     - Reverse Recovery Time
     - Trr
-    - Package
     - Diode Forward Current
     - IS
     - t rr
@@ -443,7 +427,6 @@ specs:
     - Drain Current, Continuous
     - I D
     - Pulsed Drain Current (t =10μs) p
-    - IDM
     - Drain Current-Continuous (TA=70°C)
     - Drain Current-Continuous, T =100°C, V =10V
     found_in: 9/10

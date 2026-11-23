@@ -83,6 +83,7 @@ specs:
     - Zener Voltage VZ (V)
     - V(V) @I 1 z ZT
     - V (V) Z
+    - VZ at IZT (V)
     found_in: 9/10
   p_tot_max:
     label: Ptot max
@@ -166,17 +167,6 @@ specs:
     - Typical Thermal Resistance , Junction to Ambient
     - RθJA
     - R θJA
-    found_in: 6/10
-  vz_at_izt:
-    label: VZ at IZT
-    unit: V
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - VZ at IZT (V)
-    - VZ
     found_in: 6/10
   zzk_max:
     label: ZZK max

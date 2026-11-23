@@ -105,28 +105,7 @@ specs:
     critical: false
     aliases:
     - Temperature Coefficient
-    - Capacitance
     found_in: 6/7
-  executive_standard:
-    label: Executive Standard
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Executive Standard
-    - Rated Voltage Range
-    - Measuring Method
-    - Resistance to Soldering Heat
-    - Temperature Cycle
-    - Humidity (Damp Heat) Steady State
-    - Humidity (Damp Heat) Load
-    - High Temperature Load (Endurance)
-    - Adhesive Strength of Termination
-    - Bending Test
-    - Vibration Resistance
-    found_in: 4/7
 rare_specs:
   packaging:
     label: Packaging
@@ -215,3 +194,23 @@ rare_specs:
     aliases:
     - RoHS
     found_in: 1/7
+  executive_standard:
+    label: Executive Standard
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Executive Standard
+    - Rated Voltage Range
+    - Measuring Method
+    - Resistance to Soldering Heat
+    - Temperature Cycle
+    - Humidity (Damp Heat) Steady State
+    - Humidity (Damp Heat) Load
+    - High Temperature Load (Endurance)
+    - Adhesive Strength of Termination
+    - Bending Test
+    - Vibration Resistance
+    found_in: 4/7

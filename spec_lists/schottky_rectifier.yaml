@@ -41,8 +41,6 @@ specs:
     - Maximum DC blocking voltage
     - VDC
     - V DC
-    - Surge (Non-Repetitive) Forward Current @ 60Hz Half-Sine Wave, 1 Cycle, T =25°C A
-    - IFSM
     - V_DC
     found_in: 10/10
   vrrm_max:
@@ -85,8 +83,6 @@ specs:
     - Thermal Resistance, Junction to Ambient
     - RthJA
     - RθJA
-    - Typical Thermal Resistance, Junction to Case
-    - R θJC
     - Thermal Resistance
     - RθJ-A
     - Typical Thermal Resistance
@@ -105,7 +101,6 @@ specs:
     - RthJC
     - RθJC
     - Typical Thermal Resistance
-    - R_θJL
     - R θJC
     found_in: 10/10
   tj_range:
@@ -118,8 +113,6 @@ specs:
     aliases:
     - Operating junction temperature range
     - TJ
-    - Peak repetitive reverse current per leg at tp=4.0us ,1KHz
-    - IRRM
     - T J
     - Junction Temperature
     - Operating Junction and Storage Temperature Range

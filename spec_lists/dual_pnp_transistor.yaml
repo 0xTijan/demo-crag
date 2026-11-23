@@ -210,7 +210,6 @@ specs:
     - Emitter Cut-off Current
     - I EBO
     - DC Current Gain
-    - hFE
     - Emitter Base Cutoff Current
     - Base Cut-off Current
     found_in: 5/5
@@ -228,7 +227,6 @@ specs:
     - Thermal Resistance from Junction Ambient
     - R θJA
     - Junction Temperature
-    - TJ
     - Thermal Resistance from Junction to Ambient Air
     found_in: 5/5
   tj_range:

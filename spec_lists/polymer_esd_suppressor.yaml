@@ -52,7 +52,6 @@ specs:
     aliases:
     - Maximum Contact Discharge Voltage Per IEC61000-4-2
     - Maximum Storage Temperature
-    - TSTG
     - '-'
     - Maximum Contact Discharge Voltage
     found_in: 10/10
@@ -68,7 +67,6 @@ specs:
     - VR
     - V R
     - Trigger Voltage
-    - V T
     - Continuous Operating Voltage
     - V DC
     found_in: 10/10
@@ -83,7 +81,6 @@ specs:
     - Capacitance
     - CP
     - C P
-    - Package
     found_in: 10/10
   il_range:
     label: Leakage Current range
@@ -97,7 +94,6 @@ specs:
     - IL
     - I L
     - Capacitance
-    - C P
     found_in: 10/10
   t_lead_max:
     label: Lead Temperature max
@@ -111,7 +107,6 @@ specs:
     - TL
     - T L
     - Rated Voltage
-    - V R
     found_in: 10/10
   t_oper_range:
     label: Operating Temperature range
@@ -151,7 +146,6 @@ specs:
     - VC
     - V C
     - Leakage Current
-    - I L
     found_in: 10/10
   vt_typ:
     label: Trigger Voltage typ
@@ -165,7 +159,6 @@ specs:
     - VT
     - V T
     - Clamping Voltage
-    - V C
     found_in: 10/10
   package:
     label: Package

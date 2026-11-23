@@ -104,7 +104,6 @@ specs:
     critical: false
     aliases:
     - Temperature coefficient
-    - Package
     - TCR (PPM/°C)
     found_in: 3/3
   aec_q200:

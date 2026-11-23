@@ -41,7 +41,6 @@ specs:
     - Maximum DC blocking voltage
     - VDC
     - Maximum Average Forward Rectified Current
-    - I_F(AV)
     - Working Peak Reverse Voltage
     - V RWM
     found_in: 10/10
@@ -112,7 +111,6 @@ specs:
     - Reverse Leakage Current @V (T=25°C)2 R J
     - Maximum Reverse Current per Leg at Working Peak Reverse Voltage
     - Typical junction capacitance
-    - CJ
     - Reverse Current
     found_in: 10/10
   rthja_typ:
@@ -128,7 +126,6 @@ specs:
     - RthJA
     - Typical Thermal Resistance, Junction to Ambient
     - Reverse Current
-    - I_R
     - Typical Thermal Resistance Junction to Ambient
     - R θJA
     - Thermal Resistance, Junction to Ambient per Leg

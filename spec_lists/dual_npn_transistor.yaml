@@ -194,7 +194,6 @@ specs:
     - I EBO
     - Emitter Base Cutoff Current
     - DC Current Gain
-    - hFE
     - IEBO
     found_in: 6/6
   r_ja_max:

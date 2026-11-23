@@ -116,7 +116,6 @@ specs:
     - V_RMS
     - V RMS
     - Maximum Average Forward Rectified Current
-    - I_F(AV)
     found_in: 10/10
   vrrm_max:
     label: V_RRM max
@@ -159,7 +158,6 @@ specs:
     - R θJA
     - Typical Thermal Resistance, Junction-Ambient
     - Typical Thermal Resistance Between Junction and Ambient, Without Heatsink
-    - R_θJC
     - Typical Thermal Resistance Junction to Ambient
     - R_thJA
     found_in: 10/10

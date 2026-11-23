@@ -74,7 +74,6 @@ specs:
     - T/T J STG
     - Junction Temperature
     - Thermal Resistance Junction to Ambient
-    - R θJA
     - T J
     found_in: 10/10
   v_br_cbo_min:
@@ -129,7 +128,6 @@ specs:
     - Collector-Base Voltage
     - V CBO
     - Collector-base breakdown voltage
-    - V(BR)CBO
     - Collector Base Voltage
     - VCBO
     found_in: 10/10
@@ -144,7 +142,6 @@ specs:
     - Collector-Emitter Voltage
     - V CEO
     - Collector-emitter breakdown voltage
-    - V(BR)CEO
     - Collector Emitter Voltage
     - VCEO
     found_in: 10/10
@@ -159,7 +156,6 @@ specs:
     - Emitter -Base Voltage
     - V EBO
     - Emitter-base breakdown voltage
-    - V(BR)EBO
     - Emitter Base Voltage
     - VEBO
     - Emitter-Base Voltage
@@ -174,7 +170,6 @@ specs:
     aliases:
     - Collector output capacitance
     - Cob
-    - Package
     - Transition frequency
     - C ob
     - Delay Time
@@ -222,7 +217,6 @@ specs:
     - IEBO
     - Emitter Base Cutoff Current
     - Collector cut-off current
-    - I CBO
     - I EBO
     - Collector-Emitter Cutoff Current
     - I CEO
@@ -246,7 +240,6 @@ specs:
     - Base-Emitter Voltage
     - VBE1
     - VBE2
-    - V CE(sat)
     found_in: 10/10
   v_ce_sat_max:
     label: VCE(sat) max

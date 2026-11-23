@@ -134,8 +134,6 @@ specs:
     - R thJC
     - R θJC
     - RθJC
-    - RθJA
-    - R θJA
     found_in: 10/10
   tj_range:
     label: TJ range
@@ -173,8 +171,6 @@ specs:
     - Drain Source Voltage
     - V_DS
     - BV DSS
-    - V (BR)DSS
-    - V(BR)DSS
     found_in: 10/10
   vgs_max:
     label: VGS max
@@ -190,8 +186,6 @@ specs:
     - V GS
     - Gate Source Voltage
     - V_GS
-    - I GSS
-    - IGSS
     found_in: 10/10
   ciss_typ:
     label: Ciss typ
@@ -443,7 +437,6 @@ specs:
     - Qrr
     - ReverseRecoveryCharge
     - Q rr
-    - Source-Drain Ratings and Characteristics
     found_in: 9/10
   rg_typ:
     label: Rg typ
@@ -457,7 +450,6 @@ specs:
     - Rg
     - GateResistance
     - R g
-    - V SD
     found_in: 9/10
   pd_max@tc_100c:
     label: PD max @ TC=100°C
@@ -471,8 +463,6 @@ specs:
     - PD
     - PowerDissipation
     - P D
-    - I AS
-    - IAS
     found_in: 8/10
   vbrdss_min:
     label: V(BR)DSS min

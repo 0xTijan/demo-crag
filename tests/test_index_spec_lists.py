@@ -290,3 +290,14 @@ def test_merge_repairs_package_members_duplicates_rules_and_non_specs():
     assert "tj_range_2" not in out["specs"] and out["specs"]["tj_range"]["rule"] == "contains"
     assert "solderability" in out["rare_specs"] and not out["rare_specs"]["solderability"]["critical"]
     assert out["must_match"] == ["package"]
+
+
+def test_alias_conflicts_are_found_and_removed():
+    specs = {"vdc_max": {"aliases": ["VDC", "IFSM", "Maximum DC blocking voltage"]},
+             "ifsm_max": {"aliases": ["IFSM"]},
+             "rthja_typ": {"aliases": ["RθJA", "R θJC"]}, "rthjc_typ": {"aliases": ["RθJC"]},
+             "rds_on_max@vgs_10v": {"aliases": ["RDS(on)"]}, "rds_on_max@vgs_4_5v": {"aliases": ["RDS(on)"]}}
+    assert sorted(sl.alias_conflicts(specs)) == [("rthja_typ", "R θJC", "rthjc_typ"), ("vdc_max", "IFSM", "ifsm_max")]
+    assert sl.drop_alias_conflicts(specs) == 2
+    assert specs["vdc_max"]["aliases"] == ["VDC", "Maximum DC blocking voltage"]
+    assert specs["rds_on_max@vgs_4_5v"]["aliases"] == ["RDS(on)"]       # same symbol, other condition: kept

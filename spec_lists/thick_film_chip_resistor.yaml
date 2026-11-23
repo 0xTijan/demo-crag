@@ -123,9 +123,6 @@ specs:
     critical: false
     aliases:
     - Marking
-    - Function Code
-    - Packaging Code
-    - Packaging Quantity
     found_in: 7/10
   aec_q200:
     label: AEC-Q200

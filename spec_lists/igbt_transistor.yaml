@@ -200,7 +200,6 @@ specs:
     critical: true
     aliases:
     - Transient Gate-Emitter Voltage(tp≤10us, D<0.01)
-    - VGES
     found_in: 3/3
   cies_typ:
     label: Cies typ

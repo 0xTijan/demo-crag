@@ -41,7 +41,6 @@ specs:
     - I2t
     - 2 I t
     - Maximum Forward Voltage Drop Per Element at FM=2.0A, T=25°C1 J
-    - V_F
     - I2t Rating for Fusing (t=8.3ms)
     - I²t
     found_in: 9/9

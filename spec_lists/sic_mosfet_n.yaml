@@ -235,7 +235,6 @@ specs:
     - ReverseRecoveryEnergy
     - E REC
     - Reverse Recovery Energy
-    - Package
     - E_REC
     found_in: 10/10
   idss_max:
@@ -286,7 +285,6 @@ specs:
     critical: false
     aliases:
     - ReverseRecoveryCharge
-    - Q rr
     - Reverse Recovery Charge
     found_in: 10/10
   qg_typ:
@@ -363,9 +361,7 @@ specs:
     critical: false
     aliases:
     - ReverseRecoveryTime
-    - t rr
     - Reverse Recovery Time
-    - Package
     found_in: 10/10
   td_off_typ:
     label: t d(off) typ
@@ -455,9 +451,7 @@ specs:
     critical: false
     aliases:
     - DiodeForwardVoltage
-    - V SD
     - Diode Forward Voltage
-    - V_SD
     found_in: 10/10
   vgs_max:
     label: V GS max
@@ -522,7 +516,6 @@ specs:
     critical: false
     aliases:
     - ReverseRecoveryEnergy
-    - E REC
     - Reverse Recovery Energy
     found_in: 7/10
   irrm_typ:
@@ -547,7 +540,6 @@ specs:
     critical: false
     aliases:
     - PeakReverseRecoveryCurrent
-    - I rrm
     - Peak Reverse Recovery Current
     found_in: 7/10
   t_a_typ:
@@ -572,7 +564,6 @@ specs:
     critical: false
     aliases:
     - ChargeTime
-    - t A
     - Charge Time
     found_in: 7/10
   t_b_typ:
@@ -597,7 +588,6 @@ specs:
     critical: false
     aliases:
     - DisChargeTime
-    - t B
     - DisCharge Time
     found_in: 7/10
   rds_on_range_vgs15_id33:

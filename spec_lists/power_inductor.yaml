@@ -52,11 +52,8 @@ specs:
     - Rated DC Current
     - IDC
     - IDC (A) max.
-    - I rms
     - Saturation Current
-    - Isat
     - Temperature Rise Current
-    - Irms
     found_in: 9/9
   inductance:
     label: Inductance
@@ -90,7 +87,6 @@ specs:
     critical: false
     aliases:
     - Test Condition
-    - Tolerance
     - Test equipment
     found_in: 9/9
   tolerance:

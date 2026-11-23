@@ -79,7 +79,6 @@ specs:
     aliases:
     - Electrical Characteristics
     - Ampere Rating
-    - Current Rating
     found_in: 6/6
   current_rating:
     label: Current Rating

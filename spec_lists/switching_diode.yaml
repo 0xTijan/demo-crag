@@ -185,7 +185,6 @@ specs:
     - V_F
     - VF3
     - Reverse Leakage Current
-    - I R
     - VF4
     found_in: 10/10
   vbr_min:
@@ -205,7 +204,6 @@ specs:
     - Reverse Breakdown Voltage
     - VBR
     - V(BR)R
-    - VR
     found_in: 9/10
   ts_range:
     label: TS range

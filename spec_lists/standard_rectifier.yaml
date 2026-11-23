@@ -93,10 +93,7 @@ specs:
     - Thermal Resistance, Junction to Ambient
     - RθJA
     - RthJA
-    - Package
     - Typical Thermal Resistance1)
-    - Max. Thermal Resistance, Junction to Case
-    - R_THJ-C
     found_in: 10/10
   tj_range:
     label: Operating junction temperature range
@@ -209,7 +206,6 @@ specs:
     - Reverse leakage current @rated VR
     - Reverse leakage current @ rated VR
     - Typical Reverse Recovery Time Irr=0.25A
-    - t rr
     - Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage
     - I_R
     found_in: 7/10

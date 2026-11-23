@@ -50,7 +50,6 @@ specs:
     critical: true
     aliases:
     - Size
-    - Resistance
     - R
     - A
     - L

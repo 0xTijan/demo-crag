@@ -214,7 +214,6 @@ specs:
     - Thermal Resistance, Junction to Case
     - R thJC
     - Thermal Resistance Junction to Leads
-    - R θJL
     found_in: 6/10
   ifs_max:
     label: IFSM max

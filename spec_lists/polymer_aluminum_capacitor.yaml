@@ -100,8 +100,7 @@ specs:
     conditions: null
     rule: info
     critical: false
-    aliases:
-    - Leakage Current
+    aliases: []
     found_in: 5/5
   polarity:
     label: Polarity
@@ -112,7 +111,6 @@ specs:
     critical: false
     aliases:
     - Polarity
-    - Package
     found_in: 5/5
   rohs_compliant:
     label: RoHS Compliant

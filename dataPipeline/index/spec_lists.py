@@ -243,6 +243,38 @@ def clean_specs(specs: dict, valid: dict, used: set) -> None:
             specs[m.group(1)]["_members"] += specs.pop(key)["_members"]
 
 
+def _symbol(text) -> str:
+    return re.sub(r"[\s_()\[\],.:\-]+", "", str(text or "").lower().replace("θ", "th").replace("ϑ", "th"))
+
+
+def _key_symbol(key: str) -> str:
+    """vds_max -> 'vds', rthjc_typ -> 'rthjc', id_max@tc_25c -> 'id'."""
+    return _symbol(re.sub(r"_(max|min|typ|range|value)$", "", key.partition("@")[0]))
+
+
+def alias_conflicts(specs: dict) -> list[tuple[str, str, str]]:
+    """(key, alias, other key): an alias of one spec that is the symbol of another spec in the same list, e.g.
+    "IFSM" under vdc_max while ifsm_max exists. The merge put an item of the other spec into this one; shown to
+    the extraction model, such an alias makes it read the wrong value."""
+    by_symbol = {_key_symbol(k): k for k in specs}
+    out = []
+    for key, spec in specs.items():
+        if not isinstance(spec, dict):
+            continue
+        for alias in spec.get("aliases") or []:
+            other = by_symbol.get(_symbol(alias))
+            if other and other != key and _key_symbol(other) != _key_symbol(key):
+                out.append((key, alias, other))
+    return out
+
+
+def drop_alias_conflicts(specs: dict) -> int:
+    conflicts = alias_conflicts(specs)
+    for key, alias, _ in conflicts:
+        specs[key]["aliases"] = [a for a in specs[key]["aliases"] if a != alias]
+    return len(conflicts)
+
+
 def fix_rule(key: str, spec: dict) -> None:
     """Rules that cannot be right: "=" on a number range (temperature ranges) -> contains; "=" on any other
     number with a unit (stand-off voltage, test current) -> ≈. "=" stays for text: package, dielectric, polarity."""
@@ -323,6 +355,7 @@ def merge_specs(type_key: str, type_name: str, samples: list[dict], llm, min_sha
 
     common_specs, rare = ordered(common_specs), ordered(rare)
     ensure_package(common_specs, rare)
+    drop_alias_conflicts(common_specs)
     # must_match is for equal-or-nothing keys (package, pin count, polarity); a rating there would turn every
     # higher-rated part into a mismatch, so keys whose rule is not "=" are left out
     must = [k for k in dict.fromkeys(norm_key(x) for x in data.get("must_match") or [])
@@ -444,6 +477,8 @@ def validate(spec_list: dict, type_keys: set | None = None) -> tuple[list[str], 
                             f"must be equal (package, pin count, polarity)")
     if specs and "package" not in specs:
         warnings.append("no `package` spec: drop-in replacements cannot be recognised")
+    for key, alias, other in alias_conflicts(specs) if isinstance(specs, dict) else []:
+        warnings.append(f"specs.{key}: alias {alias!r} is the symbol of {other} (run `check --fix` to remove it)")
     if specs and not any(s.get("critical") for s in specs.values() if isinstance(s, dict)):
         warnings.append("no spec is critical")
     if specs and all(s.get("rule") == "info" for s in specs.values() if isinstance(s, dict)):
@@ -608,6 +643,11 @@ def cmd_check(args) -> int:
             print(f"{path.name}: not valid YAML ({exc})")
             bad += 1
             continue
+        if getattr(args, "fix", False) and isinstance(sl.get("specs"), dict):
+            removed = drop_alias_conflicts(sl["specs"])
+            if removed:
+                save_spec_list(sl, path)
+                print(f"{path.name}: removed {removed} alias(es) that belong to another spec")
         errors, warnings = validate(sl, type_keys)
         if path.stem != sl.get("type"):
             errors.append(f"file name {path.name} does not match type {sl.get('type')!r}")
@@ -653,6 +693,7 @@ def main(argv=None) -> int:
     p.add_argument("--force-inventory", action="store_true", help="list the samples' specs again (no cache)")
     p.add_argument("-v", "--verbose", action="store_true", help="print every sample")
     p = sub.add_parser("check", help="validate spec lists")
+    p.add_argument("--fix", action="store_true", help="remove aliases that are the symbol of another spec, and save")
     p.add_argument("types", nargs="*", help="only these types (default: every spec_lists/*.yaml)")
     p.add_argument("-v", "--verbose", action="store_true", help="print every spec")
     args = parser.parse_args(argv)
