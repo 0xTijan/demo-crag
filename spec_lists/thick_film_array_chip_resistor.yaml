@@ -13,10 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-- number_of_resistors
-visual_check: Pinout (resistor array order)
+visual_check: Pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T08:00:37+00:00'
+  at: '2026-11-23T15:22:15+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -31,39 +30,6 @@ drafted:
   - viking/cn-series_df7b9752.md
   - viking/cnf-series_d8bdc1d5.md
 specs:
-  max_operating_voltage:
-    label: Max. Operating Voltage
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Max. Operating Voltage
-    - Max Operating Voltage
-    found_in: 10/10
-  max_overload_voltage:
-    label: Max. Overload Voltage
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Max. Overload Voltage
-    - Max Overload Voltage
-    found_in: 10/10
-  operating_temp_range:
-    label: Operating Temperature Range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Operating Temperature Range
-    - Operating Temp. Range
-    found_in: 10/10
   package:
     label: Package
     unit: null
@@ -86,7 +52,7 @@ specs:
     - Resistance to Soldering Heat
     - Flammability
     - A (mm)
-    - Voltage Proof
+    - Soldering Condition
     found_in: 10/10
   insulation_resistance:
     label: Insulation Resistance
@@ -97,6 +63,50 @@ specs:
     critical: false
     aliases:
     - Insulation Resistance
+    found_in: 10/10
+  max_operating_voltage:
+    label: Max. Operating Voltage
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Max. Operating Voltage
+    - Max Operating Voltage
+    found_in: 10/10
+  max_overload_voltage:
+    label: Max. Overload Voltage
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Max. Overload Voltage
+    - Max Overload Voltage
+    found_in: 10/10
+  operating_temp_range:
+    label: Operating Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Operating Temperature Range
+    - Operating Temp. Range
+    found_in: 10/10
+  power_rating:
+    label: Power Rating
+    unit: W
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Power Rating
+    - Power Rating at 70°C
     found_in: 10/10
   resistance_range:
     label: Resistance Range
@@ -140,8 +150,10 @@ specs:
     rule: '='
     critical: false
     aliases:
-    - Leaching
+    - Voltage Proof
     - Sulfur Test
+    - A1 (mm)
+    - Leaching
     found_in: 10/10
   tcr:
     label: TCR
@@ -155,8 +167,8 @@ specs:
     - TCR (PPM/°C)
     - Temperature Coefficient of Resistance (T.C.R.)
     found_in: 10/10
-  resistance_tolerance:
-    label: Resistance Tolerance
+  tolerance:
+    label: Tolerance
     unit: null
     stat: value
     conditions: null
@@ -165,6 +177,19 @@ specs:
     aliases:
     - Tolerance
     - Resistance Tolerance
+    found_in: 10/10
+  marking:
+    label: Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Marking
+    - Y (mm)
+    - Part Number
+    - Function Code
     found_in: 9/10
   shelf_life:
     label: Shelf Life
@@ -176,19 +201,6 @@ specs:
     aliases:
     - Shelf Life
     found_in: 9/10
-  marking:
-    label: Marking
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Marking
-    - Y (mm)
-    - Function Code
-    - E24 code
-    found_in: 8/10
   number_of_resistors:
     label: Number of Resistors
     unit: null
@@ -199,16 +211,31 @@ specs:
     aliases:
     - Number of Resistors
     found_in: 8/10
-  power_rating:
-    label: Power Rating
-    unit: W
-    stat: value
+  endurance:
+    label: Endurance
+    unit: null
+    stat: range
     conditions: null
-    rule: '>='
-    critical: true
+    rule: contains
+    critical: false
     aliases:
-    - Power Rating
-    - Power Rating at 70°C
+    - Endurance
+    - Operational Life
+    - Biased Humidity
+    - Damp Heat with Load
+    - Dimensions
+    found_in: 7/10
+  damp_heat_with_load:
+    label: Damp Heat with Load
+    unit: null
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Damp Heat with Load
+    - High Temperature Exposure
+    - Dry Heat
     found_in: 6/10
   dry_heat:
     label: Dry Heat
@@ -222,30 +249,28 @@ specs:
     - Board Flex
     - Bending Strength
     found_in: 6/10
-  endurance:
-    label: Endurance
+  leaching:
+    label: Leaching
     unit: null
     stat: range
     conditions: null
-    rule: contains
+    rule: '='
     critical: false
     aliases:
-    - Endurance
-    - Operational Life
-    - Biased Humidity
-    - Damp Heat with Load
+    - Leaching
     found_in: 6/10
   rapid_change_of_temperature:
     label: Rapid Change of Temperature
     unit: null
     stat: value
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Rapid Change of Temperature
     - Temperature Cycling
     - Mechanical Shock
+    - Vibration
     found_in: 6/10
   resistance_to_soldering_heat:
     label: Resistance to Soldering Heat
@@ -256,8 +281,17 @@ specs:
     critical: false
     aliases:
     - Resistance to Soldering Heat
-    found_in: 5/10
-rare_specs:
+    found_in: 6/10
+  voltage_proof:
+    label: Voltage Proof
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Voltage Proof
+    found_in: 6/10
   bending_strength:
     label: Bending Strength
     unit: null
@@ -267,39 +301,34 @@ rare_specs:
     critical: false
     aliases:
     - Bending Strength
-    found_in: 4/10
-  damp_heat_with_load:
-    label: Damp Heat with Load
-    unit: null
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Damp Heat with Load
-    - High Temperature Exposure
-    - Dry Heat
-    found_in: 4/10
-  reel_diameter:
-    label: Reel Diameter
-    unit: inch
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Reel Diameter
-    - Packaging Quantity
-    found_in: 4/10
+    found_in: 5/10
   tape_width:
     label: Tape Width
     unit: mm
     stat: value
     conditions: null
-    rule: info
+    rule: '='
     critical: false
     aliases:
     - Tape Width
+    - Reel Packaging
+    found_in: 5/10
+rare_specs:
+  reel_diameter:
+    label: Reel Diameter
+    unit: inch
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Reel Diameter
+    - Packaging Quantity
+    - ΦA (mm)
+    - ΦB (mm)
+    - ΦC (mm)
+    - W (mm)
+    - T (mm)
     found_in: 4/10
   packaging_quantity:
     label: Packaging Quantity
@@ -332,23 +361,3 @@ rare_specs:
     - Ramp-down rate
     - Time from 25°C to peak temperature
     found_in: 3/10
-  voltage_proof:
-    label: Voltage Proof
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Voltage Proof
-    found_in: 3/10
-  leaching:
-    label: Leaching
-    unit: null
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Leaching
-    found_in: 2/10

@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T06:27:00+00:00'
+  at: '2026-11-23T14:59:23+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -44,6 +44,24 @@ specs:
     - Rating for Fusing (t=8.3ms)
     - Fusing Current
     - I^2t
+    found_in: 10/10
+  if_av_max:
+    label: I_F(AV) max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum average forward rectified current
+    - I_F(AV)
+    - Average rectified output current at 60Hz sinewave, R-load
+    - Maximum average output rectified current
+    - I_1F(AV)
+    - Maximum Average Forward Output Rectified Current
+    - I F(AV)
+    - I (AV)
+    - Average Forward Current
     found_in: 10/10
   ifsm_max:
     label: I_FSM max
@@ -114,6 +132,22 @@ specs:
     - Maximum Recurrent Peak Reverse Voltage
     - Maximum Reverse Voltage
     found_in: 10/10
+  c_j_typ:
+    label: C_J typ
+    unit: pF
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Typical junction capacitance
+    - C_J
+    - Typical Junction Capacitance at 4.0V, 1MHz
+    - C J
+    - Typical Thermal Resistance Between Junction and Ambient, Without Heatsink
+    - R θJA
+    - Junction Capacitance
+    found_in: 10/10
   ir_max:
     label: I_R max
     unit: µA
@@ -140,10 +174,26 @@ specs:
     - Typical Thermal Resistance, Junction to Ambient
     - R θJA
     - Typical Thermal Resistance, Junction-Ambient
-    - Typical Thermal Resistance Between Junction and Ambient, Without Heatsink
     - R_θJC
     - Typical Thermal Resistance Junction to Ambient
     - R_thJA
+    found_in: 10/10
+  r_thjc_typ:
+    label: R_θJC typ
+    unit: °C/W
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Typical thermal resistance
+    - R_θJC
+    - Typical Thermal Resistance, Junction to Case
+    - R θJC
+    - Typical Thermal Resistance, Junction-Case
+    - Typical Thermal Resistance Between Junction and Case, With Heatsink
+    - Typical Thermal Resistance Junction to Case
+    - R_thJC
     found_in: 10/10
   tj_range:
     label: T_J range
@@ -161,41 +211,6 @@ specs:
     - Operating Temperature Range
     - T J
     found_in: 10/10
-  if_av_max:
-    label: I_F(AV) max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Maximum average forward rectified current
-    - I_F(AV)
-    - Average rectified output current at 60Hz sinewave, R-load
-    - Maximum average output rectified current
-    - I_1F(AV)
-    - Maximum Average Forward Output Rectified Current
-    - I F(AV)
-    - I (AV)
-    - Average Forward Current
-    found_in: 9/10
-  r_thjc_typ:
-    label: R_θJC typ
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Typical thermal resistance
-    - R_θJC
-    - Typical Thermal Resistance, Junction to Case
-    - R θJC
-    - Typical Thermal Resistance, Junction-Case
-    - Typical Thermal Resistance Between Junction and Case, With Heatsink
-    - Typical Thermal Resistance Junction to Case
-    - R_thJC
-    found_in: 9/10
   vf_max:
     label: V_F max
     unit: V
@@ -211,20 +226,6 @@ specs:
     - Maximum Instantaneous Forward Voltage at 5.0A DC
     - Maximum Instantaneous Forward Voltage at 1.0A DC
     found_in: 9/10
-  cj_typ:
-    label: C_J typ
-    unit: pF
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Typical junction capacitance
-    - C_J
-    - Typical Junction Capacitance at 4.0V, 1MHz
-    - C J
-    - Junction Capacitance
-    found_in: 7/10
   tstg_range:
     label: T_STG range
     unit: °C

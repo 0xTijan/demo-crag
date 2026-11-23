@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: diode "cathode band / polarity mark"
 drafted:
-  at: '2026-11-23T06:19:01+00:00'
+  at: '2026-11-23T14:57:33+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,42 +30,6 @@ drafted:
   - goodarksemi/gslcxxb006_4a026dee.md
   - goodarksemi/gspsm0201v15_48a87dd6.md
 specs:
-  c_j_typ:
-    label: C_J typ
-    unit: pF
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Junction Capacitance
-    - C J
-    - CJ
-    - Typ C J @0V,1MHz
-    - C_J
-    - C (pF) T typ.
-    - Capacitance
-    - C P
-    found_in: 10/10
-  t_j_range:
-    label: T_J range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Absolute Maximum Ratings
-    - Junction Temperature
-    - TJ
-    - Operating Temperature
-    - T_J
-    - Operating Temperature Range
-    - T J
-    - T OPT
-    - Maximum Operating Temperature Range
-    - T OPER
-    found_in: 10/10
   t_stg_range:
     label: T_STG range
     unit: °C
@@ -80,7 +44,25 @@ specs:
     - TSTG
     - T_STG
     - Storage Temperature Range
-    - Maximum Storage Temperature Range
+    found_in: 10/10
+  v_c_max:
+    label: V_C max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Clamping Voltage
+    - V C
+    - VC
+    - Max Clamping Voltage Vc @I=1A P
+    - Max Clamping Voltage Vc @I PP
+    - Clamping Voltage (IEC 61000-4-5)
+    - V_C
+    - Clamping Voltage (IEC 61000-4-2)
+    - V @ 1A (V) C Max.
+    - V (V) C
     found_in: 10/10
   package:
     label: Package
@@ -106,6 +88,21 @@ specs:
     - V_RWM
     - Reverse Working Voltage
     - V (V) RWM Max.
+    found_in: 9/10
+  c_j_typ:
+    label: C_J typ
+    unit: pF
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Junction Capacitance
+    - C J
+    - CJ
+    - Typ C J @0V,1MHz
+    - C_J
+    - C (pF) T typ.
     found_in: 9/10
   i_r_max:
     label: I_R max
@@ -139,6 +136,23 @@ specs:
     - P PK
     - Peak Pulse Power (T =8/20μS)
     found_in: 9/10
+  t_j_range:
+    label: T_J range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Absolute Maximum Ratings
+    - Junction Temperature
+    - TJ
+    - Operating Temperature
+    - T_J
+    - Operating Temperature Range
+    - T J
+    - T OPT
+    found_in: 9/10
   v_br_min:
     label: V_BR min
     unit: V
@@ -154,23 +168,6 @@ specs:
     - V_BR
     - Breakdown Voltage
     found_in: 8/10
-  v_c_max:
-    label: V_C max
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Clamping Voltage
-    - V C
-    - VC
-    - Max Clamping Voltage Vc @I=1A P
-    - Max Clamping Voltage Vc @I PP
-    - Clamping Voltage (IEC 61000-4-5)
-    - V_C
-    - Clamping Voltage (IEC 61000-4-2)
-    found_in: 8/10
   i_pp_max:
     label: I_PP max
     unit: A
@@ -185,22 +182,8 @@ specs:
     - I_PP
     - Peak Pulse Current
     - I PP
-    found_in: 5/10
-rare_specs:
-  t_l_max:
-    label: T_L max
-    unit: °C
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Lead Solder Temperature(10 second duration)
-    - TL
-    - Lead Soldering Temperature
-    - T L
-    - Maximum Lead Temperature for Soldering During 10s
-    found_in: 4/10
+    - Peak Pulse Current ( tP = 8/20μS )
+    found_in: 6/10
   v_esd_max:
     label: V_ESD max
     unit: kV
@@ -216,36 +199,5 @@ rare_specs:
     - ESD per IEC 61000-4-2 (Contact)
     - ESD Rating per IEC61000-4-2 (Air)
     - ESD Rating per IEC61000-4-2 (Contact)
-    found_in: 4/10
-  v_t_typ:
-    label: V_T typ
-    unit: V
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Trigger Voltage (IEC 61000-4-2)
-    - V_T
-    - VT
-    found_in: 2/10
-  i_l_typ:
-    label: I_L typ
-    unit: μA
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Leakage Current
-    - I L
-    found_in: 1/10
-  c_p_typ:
-    label: C_P typ
-    unit: pF
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases: []
-    found_in: 0/10
+    found_in: 6/10
+rare_specs: {}

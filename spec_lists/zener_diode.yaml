@@ -13,9 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: Zener diode polarity mark (cathode band)
+visual_check: cathode band / polarity mark (Zener diode)
 drafted:
-  at: '2026-11-23T06:31:17+00:00'
+  at: '2026-11-23T14:59:54+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,24 +30,21 @@ drafted:
   - goodarksemi/mmsz52xxc_f6139978.md
   - goodarksemi/zener-wafer-5w-20v-1n5357_e9e03808.md
 specs:
-  vz_range:
-    label: VZ range
-    unit: V
-    stat: range
+  ir_max:
+    label: IR max
+    unit: µA
+    stat: max
     conditions: null
-    rule: ≈
+    rule: <=
     critical: false
     aliases:
-    - Zener voltage
-    - VZ
-    - Zener Voltage Range (Vz@Izt)
-    - Vz@Izt
-    - Zener Voltage Range
-    - Typical Zener Voltage
-    - V
-    - Zener Voltage VZ (V)
-    - V(V) @I 1 z ZT
-    - V (V) Z
+    - Maximum reverse leakage at VR (µA)
+    - Maximum Reverse Current
+    - IR
+    - I R
+    - Reverse Leakage Current
+    - I R (uA)
+    - I (uA） R
     found_in: 10/10
   tj_range:
     label: TJ range
@@ -69,6 +66,23 @@ specs:
     - Operating Temperature
     - T J
     - T STG
+    found_in: 10/10
+  vz_range:
+    label: VZ range
+    unit: V
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Zener voltage
+    - VZ
+    - Zener Voltage Range (Vz@Izt)
+    - Vz@Izt
+    - Zener Voltage Range
+    - Zener Voltage VZ (V)
+    - V(V) @I 1 z ZT
+    - V (V) Z
     found_in: 9/10
   package:
     label: Package
@@ -96,21 +110,19 @@ specs:
     - P D
     - PD
     found_in: 8/10
-  ir_max:
-    label: IR max
-    unit: µA
-    stat: max
+  vr_value:
+    label: VR value
+    unit: V
+    stat: value
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
-    - Maximum reverse leakage at VR (µA)
-    - Maximum Reverse Current
-    - IR
-    - I R
-    - Reverse Leakage Current
-    - I R (uA)
-    - I (uA） R
+    - Test voltage VR (V)
+    - VR
+    - V R (V)
+    - V R
+    - V (V) R
     found_in: 7/10
   zzt_max:
     label: ZZT max
@@ -133,7 +145,7 @@ specs:
     unit: mA
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - IZT (mA)
@@ -142,19 +154,30 @@ specs:
     - I ZT
     - I =mA ZT
     found_in: 6/10
-  vr_value:
-    label: VR value
-    unit: V
-    stat: value
+  rthja_typ:
+    label: RthJA typ
+    unit: °C/W
+    stat: typ
     conditions: null
-    rule: '='
+    rule: <=
     critical: false
     aliases:
-    - Test voltage VR (V)
-    - VR
-    - V R (V)
-    - V R
-    - V (V) R
+    - Thermal Resistance, Junction to Ambient
+    - RthJA
+    - Typical Thermal Resistance , Junction to Ambient
+    - RθJA
+    - R θJA
+    found_in: 6/10
+  vz_at_izt:
+    label: VZ at IZT
+    unit: V
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - VZ at IZT (V)
+    - VZ
     found_in: 6/10
   zzk_max:
     label: ZZK max
@@ -171,34 +194,6 @@ specs:
     - Maximum Zener Impedance Z ZK (W)
     - Z @I ZK ZK
     found_in: 6/10
-  rthja_typ:
-    label: RthJA typ
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal Resistance, Junction to Ambient
-    - RthJA
-    - Typical Thermal Resistance , Junction to Ambient
-    - RθJA
-    - R θJA
-    found_in: 5/10
-rare_specs:
-  izk_value:
-    label: IZK value
-    unit: mA
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - IZK (mA)
-    - IZK
-    - I zk (mA)
-    - I ZK
-    found_in: 4/10
   izm_max:
     label: IZM max
     unit: mA
@@ -211,6 +206,31 @@ rare_specs:
     - IZM
     - Maximum Regulator Current
     - I ZM
+    found_in: 5/10
+rare_specs:
+  izk_value:
+    label: IZK value
+    unit: mA
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - IZK (mA)
+    - IZK
+    - I zk (mA)
+    - I ZK
+    found_in: 4/10
+  vf_max:
+    label: VF max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum instantaneous forward voltage at 200mA
+    - VF
     found_in: 4/10
   vz_tolerance:
     label: VZ tolerance
@@ -251,40 +271,8 @@ rare_specs:
     - Typical Thermal Resistance , Junction to Lead
     - RθJL
     found_in: 3/10
-  vf_max:
-    label: VF max
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum instantaneous forward voltage at 200mA
-    - VF
-    found_in: 3/10
-  vz_at_izt_range:
-    label: VZ at IZT range
-    unit: V
-    stat: range
-    conditions: izt
-    rule: ≈
-    critical: false
-    aliases:
-    - VZ at IZT (V)
-    - VZ
-    found_in: 3/10
-  ir_at_vr_max:
-    label: IR at VR max
-    unit: µA
-    stat: max
-    conditions: vr
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum reverse leakage at VR (µA)
-    found_in: 1/10
-  temperature_coefficient:
-    label: Temperature coefficient
+  ztc_range:
+    label: ZTC range
     unit: mV/°C
     stat: range
     conditions: null
@@ -293,44 +281,4 @@ rare_specs:
     aliases:
     - Temperature Coefficient of Zener Voltage
     - ZTC
-    found_in: 1/10
-  vz_at_izt_max:
-    label: VZ at IZT max
-    unit: V
-    stat: max
-    conditions: izt
-    rule: ≈
-    critical: false
-    aliases:
-    - VZ at IZT =5mA (V)
-    found_in: 1/10
-  vz_at_izt_min:
-    label: VZ at IZT min
-    unit: V
-    stat: min
-    conditions: izt
-    rule: ≈
-    critical: false
-    aliases:
-    - VZ at IZT =5mA (V)
-    found_in: 1/10
-  zzk_at_izk_max:
-    label: ZZK at IZK max
-    unit: Ω
-    stat: max
-    conditions: izk
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum zener impedance(Ω)
-    found_in: 1/10
-  zzt_at_izt_max:
-    label: ZZT at IZT max
-    unit: Ω
-    stat: max
-    conditions: izt
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum zener impedance(Ω)
     found_in: 1/10

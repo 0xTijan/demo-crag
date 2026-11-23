@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: pin order (~ ~ + -)
 drafted:
-  at: '2026-11-23T07:46:29+00:00'
+  at: '2026-11-23T15:19:50+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -29,6 +29,58 @@ drafted:
   - goodarksemi/gsr2wxx_6fb325bb.md
   - goodarksemi/gsrubf610_a4df89b4.md
 specs:
+  i2t_max:
+    label: I2t max
+    unit: A2sec
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Rating for fusing (t<8.3ms)
+    - I2t
+    - 2 I t
+    - Maximum Forward Voltage Drop Per Element at FM=2.0A, T=25°C1 J
+    - V_F
+    - I2t Rating for Fusing (t=8.3ms)
+    - I²t
+    found_in: 9/9
+  ifsm_max:
+    label: I_FSM max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Peak forward surge current 8.3ms single half sine-wave superimposed on rated loa
+    - I_FSM
+    - Peak forward surge current 8.3 ms single half sine-wave superimposed on rated lo
+    - Peak forward surge current 8.3ms single half sine wave superimposed on rated loa
+    - IFSM
+    - I FSM
+    - Peak Forward Surge Current, 8.3ms, Half Sine
+    - Peak Forward Surge Current, 8.3ms Single Half Sine-Wave Superimposed on Rated Lo
+    found_in: 9/9
+  io_av_max:
+    label: I_o(AV) max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Average forward rectified output current at 60Hz sine wave, R-load, On Glass-epo
+    - I_o(AV)
+    - Maximum average output rectified current
+    - Io(AV)
+    - Maximum Average Forward Rectified Current
+    - I (AV)
+    - Average Forward Current at T=25°C J
+    - I_F(AV)
+    - Average Rectified Output Current at T =80°C
+    - I_O
+    found_in: 9/9
   package:
     label: Package
     unit: null
@@ -40,7 +92,7 @@ specs:
     - Package
     - Case
     found_in: 9/9
-  v_dc_max:
+  vdc_max:
     label: V_DC max
     unit: V
     stat: max
@@ -53,7 +105,7 @@ specs:
     - VDC
     - V DC
     found_in: 9/9
-  v_rms_max:
+  vrms_max:
     label: V_RMS max
     unit: V
     stat: max
@@ -81,7 +133,22 @@ specs:
     - Maximum Recurrent Peak Reverse Voltage
     - V_R
     found_in: 9/9
-  t_j_range:
+  r_ja_typ:
+    label: R_θJA typ
+    unit: °C/W
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Typical thermal resistance
+    - R_θJA
+    - R θJA
+    - Typical Thermal Resistance, Junction-Ambient
+    - Typical Thermal Resistance, Junction To Ambient
+    - R_th(ja)
+    found_in: 9/9
+  tj_range:
     label: T_J range
     unit: °C
     stat: range
@@ -97,46 +164,7 @@ specs:
     - T_J
     - Operating and Storage Temperature Range
     found_in: 9/9
-  i2t_max:
-    label: I2t max
-    unit: A2sec
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Rating for fusing (t<8.3ms)
-    - I2t
-    - 2 I t
-    found_in: 6/9
-  i_fsm_max:
-    label: I_FSM max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Peak forward surge current 8.3ms single half sine-wave superimposed on rated loa
-    - I_FSM
-    - Peak forward surge current 8.3 ms single half sine-wave superimposed on rated lo
-    - Peak forward surge current 8.3ms single half sine wave superimposed on rated loa
-    - IFSM
-    found_in: 6/9
-  i_o_av_max:
-    label: I_o(AV) max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Average forward rectified output current at 60Hz sine wave, R-load, On Glass-epo
-    - I_o(AV)
-    - Maximum average output rectified current
-    - Io(AV)
-    found_in: 6/9
-  c_j_typ:
+  cj_typ:
     label: C_J typ
     unit: pF
     stat: typ
@@ -147,21 +175,11 @@ specs:
     - Typical junction capacitance
     - C_J
     - CJ
-    found_in: 6/9
-  i_r_max@ta_125c:
-    label: I_R max @ TA=125°C
-    unit: µA
-    stat: max
-    conditions: TA=125°C
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum DC reverse current at rated DC blocking voltage
-    - I_R
-    - IR
-    found_in: 6/9
-  i_r_max@ta_25c:
-    label: I_R max @ TA=25°C
+    - Maximum Reverse Recovery Time
+    - T rr
+    found_in: 8/9
+  ir_max:
+    label: I_R max
     unit: µA
     stat: max
     conditions: TA=25°C
@@ -171,31 +189,7 @@ specs:
     - Maximum DC reverse current at rated DC blocking voltage
     - I_R
     - IR
-    found_in: 6/9
-  r_ja_typ:
-    label: R_θJA typ
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Typical thermal resistance
-    - R_θJA
-    - R θJA
-    found_in: 6/9
-  r_jl_typ:
-    label: R_θJL typ
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Typical thermal resistance
-    - R_θJL
-    - R θJL
-    found_in: 6/9
+    found_in: 8/9
   r_jc_typ:
     label: R_θJC typ
     unit: °C/W
@@ -206,77 +200,24 @@ specs:
     aliases:
     - Typical thermal resistance
     - R_θJC
-    found_in: 5/9
-  v_f_max@if_1_5a_ta_25c:
-    label: V_F max @ IF=1.5A, TA=25°C
-    unit: V
-    stat: max
-    conditions: IF=1.5A, TA=25°C
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum instantaneous forward voltage
-    - V_F
-    - VF
-    found_in: 5/9
-rare_specs:
-  t_stg_range:
-    label: T_STG range
-    unit: °C
-    stat: range
+    - R θJL
+    - Typical Thermal Resistance, Junction-Case
+    - R θJC
+    found_in: 8/9
+  r_jl_typ:
+    label: R_θJL typ
+    unit: °C/W
+    stat: typ
     conditions: null
-    rule: contains
+    rule: <=
     critical: false
     aliases:
+    - Typical thermal resistance
+    - R_θJL
     - Storage Temperature Range
-    - T STG
     - T_STG
-    found_in: 2/9
-  t_rr_max:
-    label: T_rr max
-    unit: nS
-    stat: max
-    conditions: IF=0.5A, IR=1.0A, IRR=0.25A
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Reverse Recovery Time
-    - T rr
-    found_in: 1/9
-  t_rr_max@gsr2w005_gsr2w04:
-    label: T_rr max @ GSR2W005-GSR2W04
-    unit: nS
-    stat: max
-    conditions: GSR2W005-GSR2W04
-    rule: <=
-    critical: false
-    aliases:
-    - Max. Reverse Recovery Time
-    - T_RR
-    found_in: 1/9
-  t_rr_max@gsr2w06:
-    label: T_rr max @ GSR2W06
-    unit: nS
-    stat: max
-    conditions: GSR2W06
-    rule: <=
-    critical: false
-    aliases:
-    - Max. Reverse Recovery Time
-    - T_RR
-    found_in: 1/9
-  t_rr_max@gsr2w08_gsr2w10:
-    label: T_rr max @ GSR2W08-GSR2W10
-    unit: nS
-    stat: max
-    conditions: GSR2W08-GSR2W10
-    rule: <=
-    critical: false
-    aliases:
-    - Max. Reverse Recovery Time
-    - T_RR
-    found_in: 1/9
-  v_f_max:
+    found_in: 8/9
+  vf_max:
     label: V_F max
     unit: V
     stat: max
@@ -286,15 +227,8 @@ rare_specs:
     aliases:
     - Maximum instantaneous forward voltage
     - V_F
-    found_in: 1/9
-  v_f_max@if_2a_ta_25c:
-    label: V_F max @ IF=2A, TA=25°C
-    unit: V
-    stat: max
-    conditions: IF=2A, TA=25°C
-    rule: <=
-    critical: false
-    aliases:
+    - VF
     - Maximum Instantaneous Forward Voltage at 4.0A per Diode
     - V F
-    found_in: 1/9
+    found_in: 8/9
+rare_specs: {}

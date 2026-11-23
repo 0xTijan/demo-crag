@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: Pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T06:24:32+00:00'
+  at: '2026-11-23T14:58:51+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -77,6 +77,47 @@ specs:
     - R θJA
     - T J
     found_in: 10/10
+  v_br_cbo_min:
+    label: V(BR)CBO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Base Breakdown Voltage
+    - V(BR)CBO
+    - Collector-base breakdown voltage
+    - V (BR)CBO
+    found_in: 10/10
+  v_br_ceo_min:
+    label: V(BR)CEO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Emitter Breakdown Voltage
+    - V(BR)CEO
+    - Collector-emitter breakdown voltage
+    - V (BR)CEO
+    - Collector-Emitter Sustaining Voltage
+    - V CEO(SUS)
+    found_in: 10/10
+  v_br_ebo_min:
+    label: V(BR)EBO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Emitter Base Breakdown Voltage
+    - V(BR)EBO
+    - Emitter-base breakdown voltage
+    - V (BR)EBO
+    found_in: 10/10
   v_cbo_max:
     label: V_CBO max
     unit: V
@@ -123,63 +164,22 @@ specs:
     - VEBO
     - Emitter-Base Voltage
     found_in: 10/10
-  i_cbo_max:
-    label: I CBO max
-    unit: μA
+  c_ob_max:
+    label: Cob max
+    unit: pF
     stat: max
     conditions: null
     rule: <=
     critical: false
     aliases:
-    - Collector cut-off current
-    - ICBO
-    - Collector Base Cutoff Current
-    - ICEO
-    - I CBO
-    - Collector-Base Cutoff Current
-    - Collector Cutoff Current
+    - Collector output capacitance
+    - Cob
+    - Package
+    - Transition frequency
+    - C ob
+    - Delay Time
+    - t d
     found_in: 10/10
-  v_br_cbo_min:
-    label: V(BR)CBO min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Collector Base Breakdown Voltage
-    - V(BR)CBO
-    - Collector-base breakdown voltage
-    - V (BR)CBO
-    found_in: 9/10
-  v_br_ceo_min:
-    label: V(BR)CEO min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Collector Emitter Breakdown Voltage
-    - V(BR)CEO
-    - Collector-emitter breakdown voltage
-    - V (BR)CEO
-    - Collector-Emitter Sustaining Voltage
-    - V CEO(SUS)
-    found_in: 9/10
-  v_br_ebo_min:
-    label: V(BR)EBO min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Emitter Base Breakdown Voltage
-    - V(BR)EBO
-    - Emitter-base breakdown voltage
-    - V (BR)EBO
-    found_in: 9/10
   hfe_range:
     label: hFE range
     unit: null
@@ -193,10 +193,26 @@ specs:
     - hFE
     - hFE1
     - h FE
-    found_in: 9/10
+    found_in: 10/10
+  i_cbo_max:
+    label: ICBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Collector cut-off current
+    - ICBO
+    - Collector Base Cutoff Current
+    - ICEO
+    - I CBO
+    - Collector-Base Cutoff Current
+    - Collector Cutoff Current
+    found_in: 10/10
   i_ebo_max:
-    label: I EBO max
-    unit: μA
+    label: IEBO max
+    unit: nA
     stat: max
     conditions: null
     rule: <=
@@ -209,62 +225,7 @@ specs:
     - I CBO
     - I EBO
     - Emitter Cutoff Current
-    found_in: 9/10
-  t_stg_range:
-    label: T STG range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Storage temperature range
-    - T STG
-    - Storage Temperature
-    found_in: 9/10
-  v_ce_sat_max:
-    label: VCE(sat) max
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Collector-emitter saturation voltage
-    - VCE(sat)
-    - Collector Emitter Saturation Voltage
-    - Collector-emittersaturation voltage
-    - V CE(sat)
-    found_in: 9/10
-  f_t_min:
-    label: fT min
-    unit: MHz
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Transition frequency
-    - fT
-    - Delay time
-    - f T
-    found_in: 8/10
-  r_thja_max:
-    label: R θJA max
-    unit: °C/W
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal Resistance from Junction to Ambient
-    - R θJA
-    - Thermal Resistance Junction to Ambient
-    - RthJA
-    - Max. Thermal Resistance from Junction to Ambient
-    - Thermal Resistance, Junction to Case
-    - R thj-c
-    found_in: 8/10
+    found_in: 10/10
   v_be_sat_max:
     label: VBE(sat) max
     unit: V
@@ -283,7 +244,23 @@ specs:
     - Base-Emitter Voltage
     - VBE1
     - VBE2
-    found_in: 8/10
+    - V CE(sat)
+    found_in: 10/10
+  v_ce_sat_max:
+    label: VCE(sat) max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Collector-emitter saturation voltage
+    - VCE(sat)
+    - Collector Emitter Saturation Voltage
+    - Collector-emittersaturation voltage
+    - V CE(sat)
+    - Low collector saturation voltage
+    found_in: 10/10
   package:
     label: Package
     unit: null
@@ -293,28 +270,55 @@ specs:
     critical: true
     aliases:
     - Package
-    found_in: 7/10
-  c_ob_max:
-    label: Cob max
-    unit: pF
+    found_in: 9/10
+  f_t_min:
+    label: fT min
+    unit: MHz
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Transition frequency
+    - fT
+    - Delay time
+    - f T
+    found_in: 9/10
+  r_thja_max:
+    label: R θJA max
+    unit: °C/W
     stat: max
     conditions: null
     rule: <=
     critical: false
     aliases:
-    - Collector output capacitance
-    - Cob
-    - Package
-    - Transition frequency
-    - C ob
-    found_in: 7/10
-rare_specs:
-  t_j_range:
-    label: T J range
+    - Thermal Resistance from Junction to Ambient
+    - R θJA
+    - Thermal Resistance Junction to Ambient
+    - RthJA
+    - Max. Thermal Resistance from Junction to Ambient
+    - Thermal Resistance, Junction to Case
+    - R thj-c
+    found_in: 9/10
+  t_stg_range:
+    label: T STG range
     unit: °C
     stat: range
     conditions: null
     rule: contains
     critical: false
+    aliases:
+    - Storage temperature range
+    - T STG
+    - Storage Temperature
+    found_in: 9/10
+rare_specs:
+  must_match:
+    label: must_match
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
     aliases: []
     found_in: 0/10

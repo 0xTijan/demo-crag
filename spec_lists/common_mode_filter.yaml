@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: none
 drafted:
-  at: '2026-11-23T08:34:05+00:00'
+  at: '2026-11-23T15:26:59+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -36,6 +36,7 @@ specs:
     critical: true
     aliases:
     - Package
+    - Type
     found_in: 7/7
   insulation_resistance_min:
     label: Insulation Resistance min
@@ -61,43 +62,6 @@ specs:
     - DCR (Ω) max.
     - DCR
     found_in: 6/7
-  impedance_min@100mhz:
-    label: Impedance min @ 100 MHz
-    unit: Ω
-    stat: min
-    conditions: 100 MHz
-    rule: '>='
-    critical: false
-    aliases:
-    - Impedance(Ω) @10MHz
-    - Impedance
-    - Z
-    - Impedance (Ω)
-    found_in: 6/7
-  rated_voltage:
-    label: Rated Voltage
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Rated Voltage Vdc (V) typ.
-    - Rated Voltage
-    - Vdc
-    - Rated Voltage Vdc (V)
-    found_in: 6/7
-  tolerance:
-    label: Tolerance
-    unit: '%'
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Inductance Tolerance
-    - Tolerance
-    found_in: 6/7
   idc_max:
     label: IDC max
     unit: mA
@@ -111,7 +75,7 @@ specs:
     - Rated Current (mA) max.
     - Rated Current
     - I
-    found_in: 5/7
+    found_in: 6/7
   operating_temp_range:
     label: Operating Temperature Range
     unit: °C
@@ -123,9 +87,33 @@ specs:
     - Operating Temperature Range
     - Temperature
     - Operating Temperature
+    found_in: 6/7
+  rated_voltage_vdc:
+    label: Rated Voltage Vdc
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Rated Voltage Vdc (V) typ.
+    - Rated Voltage
+    - Vdc
+    - Rated Voltage Vdc (V)
+    found_in: 6/7
+  impedance_min:
+    label: Impedance min @ 100 MHz
+    unit: Ω
+    stat: min
+    conditions: 100 MHz
+    rule: '>='
+    critical: false
+    aliases:
+    - Impedance
+    - Z
     found_in: 5/7
-  shelf_life:
-    label: Shelf Life
+  shelf_life_max:
+    label: Shelf Life Max
     unit: years
     stat: max
     conditions: null
@@ -135,15 +123,25 @@ specs:
     - Shelf life
     - Storage Time
     found_in: 5/7
-  storage_temp_range:
-    label: Storage Temperature Range
+  storage_temp_max:
+    label: Storage Temperature Max
     unit: °C
-    stat: range
+    stat: max
     conditions: null
-    rule: contains
+    rule: <=
     critical: false
     aliases:
     - Storage Temperature
+    found_in: 5/7
+  tolerance:
+    label: Tolerance
+    unit: '%'
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Tolerance
     found_in: 5/7
   withstanding_voltage:
     label: Withstanding Voltage
@@ -158,14 +156,12 @@ specs:
     - Withstanding Voltage (V)
     found_in: 5/7
 rare_specs:
-  impedance_typ@100mhz:
+  impedance_typ:
     label: Impedance typ @ 100 MHz
     unit: Ω
     stat: typ
     conditions: 100 MHz
     rule: ≈
     critical: false
-    aliases:
-    - Impedance(Ω) @10MHz
-    - Impedance
-    found_in: 2/7
+    aliases: []
+    found_in: 0/7

@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T08:37:43+00:00'
+  at: '2026-11-23T15:27:56+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -157,6 +157,17 @@ specs:
     - Transition Frequency
     - fT
     found_in: 6/6
+  h_fe_range:
+    label: h FE range
+    unit: null
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - DC current gain
+    - h FE
+    found_in: 6/6
   i_cbo_max:
     label: I CBO max
     unit: nA
@@ -213,28 +224,11 @@ specs:
     - Storage Temperature Range
     - T stg
     found_in: 6/6
-  v_be_on_range:
-    label: V BEON range
-    unit: V
-    stat: range
-    conditions: vce_5v_ic_2ma
-    rule: ≈
-    critical: false
-    aliases:
-    - Base-emitter saturation voltage
-    - V BE(sat)
-    - Base Emitter Turn-On Voltage
-    - V BE(on)
-    - Base-Emitter Voltage
-    - VBE
-    - V BEON
-    - VBE(1)
-    found_in: 6/6
   v_ce_sat_max:
-    label: V CE(sat) max
+    label: V CE(sat) max @ I C=10mA, I B=0.5mA
     unit: V
     stat: max
-    conditions: ic_10ma_ib_0_5ma
+    conditions: i_c_10ma_i_b_0_5ma
     rule: <=
     critical: false
     aliases:
@@ -243,45 +237,18 @@ specs:
     - Collector Emitter Saturation Voltage
     - VCE(SAT)
     - VCE(sat)(1)
-    found_in: 6/6
-  v_ce_sat_max@ic_100ma_ib_5ma:
-    label: V CE(sat) max @ IC=100mA, IB=5mA
-    unit: V
-    stat: max
-    conditions: ic_100ma_ib_5ma
-    rule: <=
-    critical: false
-    aliases:
-    - Collector-emitter saturation voltage
-    - V CE(sat)
-    - Collector Emitter Saturation Voltage
-    - VCE(SAT)
     - VCE(sat)(2)
     found_in: 6/6
-  h_fe_range:
-    label: h FE range
-    unit: null
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - DC current gain
-    - h FE
-    found_in: 5/6
-  v_be_on_max:
-    label: V BEON max
+rare_specs:
+  v_be_sat_typ:
+    label: V BE(sat) typ @ I C=10mA, I B=0.5mA
     unit: V
-    stat: max
-    conditions: vce_5v_ic_2ma
+    stat: typ
+    conditions: i_c_10ma_i_b_0_5ma
     rule: ≈
     critical: false
     aliases:
-    - Base Emitter Turn-On Voltage
-    - V BE(on)
-    - Base-Emitter Voltage
-    - VBE
-    - V BEON
-    - VBE(2)
-    found_in: 5/6
-rare_specs: {}
+    - Base-emitter saturation voltage
+    - V BE(sat)
+    - VBE(SAT)
+    found_in: 2/6

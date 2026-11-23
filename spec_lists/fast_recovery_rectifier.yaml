@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: diode "cathode band / polarity mark"
 drafted:
-  at: '2026-11-23T06:15:58+00:00'
+  at: '2026-11-23T14:57:07+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,40 +30,6 @@ drafted:
   - goodarksemi/gsv03g_ff0a65e2.md
   - goodarksemi/rs1002fl_1e3a26d4.md
 specs:
-  if_av_max:
-    label: IF(AV) max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Forward Current (DC)
-    - IF(AV)
-    - Maximum average forward rectified current
-    - I_F(AV)
-    - Maximum average forward current
-    - I F(AV)
-    - I FAV
-    found_in: 10/10
-  ifsm_max:
-    label: IFSM max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Repetitive Peak Forward Current
-    - IFRM
-    - Peak forward surge current,8.3ms single half sine-wave superimposed on rated loa
-    - IFSM
-    - Peak forward surge current
-    - I_FSM
-    - Peak Forward Surge Current 8.3ms Single Half Sine-wave Superimposed On Rated Loa
-    - I FSM
-    - Peak Forward Surge Current (8.3 ms Single Half Sine-Wave Superimposed on Rated L
-    found_in: 10/10
   vrrm_max:
     label: VRRM max
     unit: V
@@ -93,6 +59,40 @@ specs:
     - CJ
     - C_J
     found_in: 10/10
+  if_av_max:
+    label: IF(AV) max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Forward Current (DC)
+    - IF(AV)
+    - Maximum average forward rectified current
+    - I_F(AV)
+    - Maximum average forward current
+    - I F(AV)
+    - I FAV
+    found_in: 10/10
+  ifsm_max:
+    label: IFSM max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Repetitive Peak Forward Current
+    - IFRM
+    - Peak forward surge current,8.3ms single half sine-wave superimposed on rated loa
+    - IFSM
+    - Peak forward surge current
+    - I_FSM
+    - Peak Forward Surge Current 8.3ms Single Half Sine-wave Superimposed On Rated Loa
+    - I FSM
+    - Peak Forward Surge Current (8.3 ms Single Half Sine-Wave Superimposed on Rated L
+    found_in: 10/10
   ir_max:
     label: IR max
     unit: µA
@@ -109,23 +109,6 @@ specs:
     - Maximum DC Reverse Current at Rated DC Blocking Voltage
     - I R
     found_in: 10/10
-  rja_typ:
-    label: RθJA typ
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal Resistance from Junction to Ambient
-    - RθJA
-    - Thermal Resistance, Junction to Ambient
-    - Typical thermal resistance
-    - R_θJA
-    - R θJA
-    - Rth(ja)
-    - Package
-    found_in: 10/10
   tstg_range:
     label: TSTG range
     unit: °C
@@ -136,10 +119,7 @@ specs:
     aliases:
     - Storage Temperature Range
     - TSTG
-    - Operating junction temperature range
-    - TJ
     - T STG
-    - T J
     - Storage and Operating Junction Temperature
     - Operating Junction, Storage Temperature Range
     - TJ, TSTG
@@ -149,7 +129,7 @@ specs:
     unit: V
     stat: typ
     conditions: null
-    rule: ≈
+    rule: <=
     critical: false
     aliases:
     - Forward Voltage
@@ -173,18 +153,21 @@ specs:
     - V_DC
     - V DC
     found_in: 9/10
-  vrms_max:
-    label: VRMS max
-    unit: V
-    stat: max
+  rja_typ:
+    label: RθJA typ
+    unit: °C/W
+    stat: typ
     conditions: null
-    rule: '>='
-    critical: true
+    rule: <=
+    critical: false
     aliases:
-    - Maximum RMS voltage
-    - VRMS
-    - V_RMS
-    - V RMS
+    - Thermal Resistance from Junction to Ambient
+    - RθJA
+    - Thermal Resistance, Junction to Ambient
+    - Typical thermal resistance
+    - R_θJA
+    - R θJA
+    - Rth(ja)
     found_in: 9/10
   trr_max:
     label: trr max
@@ -201,6 +184,19 @@ specs:
     - t rr
     - Typical Reverse Recovery Time
     found_in: 9/10
+  vrms_max:
+    label: VRMS max
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Maximum RMS voltage
+    - VRMS
+    - V_RMS
+    - V RMS
+    found_in: 9/10
   ir_max@tj_125c:
     label: IR max @ TJ=125°C
     unit: µA
@@ -216,16 +212,6 @@ specs:
     - I R
     - Maximum DC Reverse Current
     found_in: 8/10
-  package:
-    label: Package
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Package
-    found_in: 6/10
   rjc_typ:
     label: RθJC typ
     unit: °C/W
@@ -238,7 +224,7 @@ specs:
     - RθJC
     - Typical Thermal Resistance
     - R θJC
-    found_in: 5/10
+    found_in: 8/10
   rjl_typ:
     label: RθJL typ
     unit: °C/W
@@ -251,15 +237,36 @@ specs:
     - RθJL
     - Typical Thermal Resistance
     - R θJL
-    found_in: 5/10
+    found_in: 8/10
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 7/10
 rare_specs:
+  trr_typ:
+    label: trr typ
+    unit: µs
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Typical Reverse Recovery Time
+    - Trr
+    found_in: 2/10
   pd_max:
     label: PD max
     unit: mW
     stat: max
     conditions: null
     rule: '>='
-    critical: true
+    critical: false
     aliases:
     - Power Dissipation
     - PD
@@ -270,7 +277,7 @@ rare_specs:
     stat: max
     conditions: null
     rule: '>='
-    critical: true
+    critical: false
     aliases:
     - Junction Temperature
     - TJ

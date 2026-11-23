@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: pinout (fuse type)
 drafted:
-  at: '2026-11-23T08:38:56+00:00'
+  at: '2026-11-23T15:28:10+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -26,16 +26,6 @@ drafted:
   - goodarksemi/s1206h_9d294369.md
   - goodarksemi/s6125f_2c40e17a.md
 specs:
-  interrupting_rating:
-    label: Interrupting Rating
-    unit: A
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Interrupting Rating
-    found_in: 6/6
   package:
     label: Package
     unit: null
@@ -46,17 +36,6 @@ specs:
     aliases:
     - Package
     - Case
-    found_in: 6/6
-  voltage_rating:
-    label: Voltage Rating
-    unit: V
-    stat: range
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Voltage Rating
-    - Voltage Rating DC
     found_in: 6/6
   ampere_rating:
     label: Ampere Rating
@@ -69,6 +48,26 @@ specs:
     - Electrical Characteristics
     - Ampere Rating
     - Current Rating
+    found_in: 6/6
+  current_rating:
+    label: Current Rating
+    unit: mA
+    stat: range
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Current Rating
+    found_in: 6/6
+  interrupting_rating:
+    label: Interrupting Rating
+    unit: A
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Interrupting Rating
     found_in: 6/6
   resistance:
     label: Resistance
@@ -94,6 +93,17 @@ specs:
     - Typical Melt I2t
     - I2t
     - Typical Melting I2t
+    found_in: 6/6
+  voltage_rating:
+    label: Voltage Rating
+    unit: V
+    stat: range
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Voltage Rating
+    - Voltage Rating DC
     found_in: 6/6
   alpha_code_marking:
     label: Alpha Code Marking

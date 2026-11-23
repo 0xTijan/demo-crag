@@ -13,9 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: pinout (G/D/S order)
+visual_check: Pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T09:05:48+00:00'
+  at: '2026-11-23T15:35:17+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -50,8 +50,8 @@ specs:
   acceleration_noise_density:
     label: Acceleration noise density
     unit: ug/sqrt(Hz)
-    stat: range
-    conditions: fs_00_normal_mode_odr_1000hz
+    stat: value
+    conditions: fs_00_normal_mode_odr_125hz
     rule: '='
     critical: false
     aliases:
@@ -167,7 +167,7 @@ specs:
   mechanical_shock:
     label: Mechanical shock
     unit: g
-    stat: value
+    stat: max
     conditions: duration_lt_200us
     rule: '>='
     critical: false
@@ -210,7 +210,7 @@ specs:
   sensitivity:
     label: Sensitivity
     unit: LSB/g
-    stat: range
+    stat: value
     conditions: fs_00
     rule: '='
     critical: false

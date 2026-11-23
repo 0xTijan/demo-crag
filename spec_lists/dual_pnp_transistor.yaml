@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T08:44:55+00:00'
+  at: '2026-11-23T15:29:40+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -64,6 +64,45 @@ specs:
     - Power Dissipation
     - P tot
     found_in: 5/5
+  v_br_cbo_max:
+    label: V(BR)CBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: true
+    aliases:
+    - Collector-Base Breakdown Voltage
+    - V (BR)CBO
+    - V(BR)CBO
+    - Collector Base Breakdown Voltage
+    found_in: 5/5
+  v_br_ceo_max:
+    label: V(BR)CEO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: true
+    aliases:
+    - Collector-Emitter Breakdown Voltage
+    - V (BR)CEO
+    - V(BR)CEO
+    - Collector Emitter Breakdown Voltage
+    found_in: 5/5
+  v_br_ebo_max:
+    label: V(BR)EBO max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: true
+    aliases:
+    - Emitter-Base Breakdown Voltage
+    - V (BR)EBO
+    - V(BR)EBO
+    - Emitter Base Breakdown Voltage
+    found_in: 5/5
   vcbo_max:
     label: VCBO max
     unit: V
@@ -74,12 +113,8 @@ specs:
     aliases:
     - Collector-Base Voltage
     - VCBO
-    - Collector-Base Breakdown Voltage
-    - V (BR)CBO
-    - V(BR)CBO
     - Collector Base Voltage
     - V CBO
-    - Collector Base Breakdown Voltage
     found_in: 5/5
   vceo_max:
     label: VCEO max
@@ -91,12 +126,8 @@ specs:
     aliases:
     - Collector-Emitter Voltage
     - VCEO
-    - Collector-Emitter Breakdown Voltage
-    - V (BR)CEO
-    - V(BR)CEO
     - Collector Emitter Voltage
     - V CEO
-    - Collector Emitter Breakdown Voltage
     found_in: 5/5
   vebo_max:
     label: VEBO max
@@ -108,14 +139,10 @@ specs:
     aliases:
     - Emitter-Base Voltage
     - VEBO
-    - Emitter-Base Breakdown Voltage
-    - V (BR)EBO
-    - V(BR)EBO
     - Emitter Base Voltage
     - V EBO
-    - Emitter Base Breakdown Voltage
     found_in: 5/5
-  cob_max:
+  c_ob_max:
     label: Cob max
     unit: pF
     stat: max
@@ -129,7 +156,7 @@ specs:
     - Cob
     - C ob
     found_in: 5/5
-  ft_min:
+  f_t_min:
     label: fT min
     unit: MHz
     stat: min
@@ -142,103 +169,7 @@ specs:
     - fT
     - Gain Bandwidth Product
     found_in: 5/5
-  icbo_max:
-    label: ICBO max
-    unit: nA
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Collector Cut-off Current
-    - I CBO
-    - Collector Cutoff Current
-    - ICBO
-    - Collector Base Cutoff Current
-    - I CEX
-    found_in: 5/5
-  iebo_max:
-    label: IEBO max
-    unit: nA
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Emitter Cut-off Current
-    - I EBO
-    - Collector-Emitter Saturation Voltage
-    - VCE(SAT)1
-    - Emitter Base Cutoff Current
-    - Base Cut-off Current
-    found_in: 5/5
-  tj_range:
-    label: TJ range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating Junction Temperature Range
-    - TJ
-    - Storage Temperature Range
-    - TSTG
-    - Junction & Storage Temperature
-    - Operating and Storage Temperature Range
-    - T, T J stg
-    - Junction Temperature
-    - Storage Temperature
-    found_in: 5/5
-  vbe_sat_max:
-    label: VBE(sat) max
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Base-Emitter Saturation Voltage
-    - V BE(sat)
-    - Base-Emitter Voltage
-    - VBE(1)
-    - VBE(2)
-    - Base Emitter On Voltage
-    - V BE(ON)
-    - V BE(sat)1
-    - V BE(sat)2
-    found_in: 5/5
-  vce_sat_max:
-    label: VCE(sat) max
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Collector-Emitter Saturation Voltage
-    - V CE(sat)
-    - VCE(SAT)2
-    - Collector Emitter Saturation Voltage
-    - V CE(sat)1
-    - V CE(sat)2
-    found_in: 5/5
-  r_ja_max:
-    label: RθJA max
-    unit: °C/W
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Typical Thermal Resistance from Junction to Ambient
-    - RθJA
-    - Thermal Resistance from Junction to Ambient
-    - Thermal Resistance from Junction Ambient
-    - R θJA
-    - Thermal Resistance from Junction to Ambient Air
-    found_in: 4/5
-  hfe_min:
+  h_fe_min:
     label: hFE min
     unit: null
     stat: min
@@ -253,5 +184,166 @@ specs:
     - h FE(3)
     - h FE(4)
     - h FE(5)
+    found_in: 5/5
+  icbo_max:
+    label: ICBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Collector Cut-off Current
+    - I CBO
+    - Collector Cutoff Current
+    - ICBO
+    - Collector Base Cutoff Current
+    found_in: 5/5
+  iebo_max:
+    label: IEBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Emitter Cut-off Current
+    - I EBO
+    - DC Current Gain
+    - hFE
+    - Emitter Base Cutoff Current
+    - Base Cut-off Current
+    found_in: 5/5
+  r_ja_max:
+    label: RθJA max
+    unit: °C/W
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Typical Thermal Resistance from Junction to Ambient
+    - RθJA
+    - Thermal Resistance from Junction to Ambient
+    - Thermal Resistance from Junction Ambient
+    - R θJA
+    - Junction Temperature
+    - TJ
+    - Thermal Resistance from Junction to Ambient Air
+    found_in: 5/5
+  tj_range:
+    label: TJ range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating Junction Temperature Range
+    - TJ
+    - Junction & Storage Temperature
+    - Operating and Storage Temperature Range
+    - T, T J stg
+    - Junction Temperature
+    found_in: 5/5
+  v_be_sat_max:
+    label: VBE(sat) max
+    unit: V
+    stat: max
+    conditions: ic_ib_10ma_0_5ma
+    rule: <=
+    critical: false
+    aliases:
+    - Base-Emitter Saturation Voltage
+    - V BE(sat)
+    - Base-Emitter Voltage
+    - VBE(1)
+    - Base Emitter On Voltage
+    - V BE(ON)
+    - V BE(sat)1
+    - V BE(sat)2
+    found_in: 5/5
+  v_ce_sat_max:
+    label: VCE(sat) max
+    unit: V
+    stat: max
+    conditions: ic_ib_10ma_0_5ma
+    rule: <=
+    critical: false
+    aliases:
+    - Collector-Emitter Saturation Voltage
+    - V CE(sat)
+    - VCE(SAT)1
+    - Collector Emitter Saturation Voltage
+    - V CE(sat)1
+    - VCE(SAT)2
+    - V CE(sat)2
+    found_in: 5/5
+  tstg_range:
+    label: TSTG range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature Range
+    - TSTG
+    - Storage Temperature
     found_in: 3/5
-rare_specs: {}
+rare_specs:
+  nf_typ:
+    label: NF typ
+    unit: dB
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Noise Figure
+    - NF
+    found_in: 2/5
+  td_max:
+    label: td max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Delay Time
+    - t d
+    found_in: 2/5
+  tf_max:
+    label: tf max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Fall Time
+    - t f
+    found_in: 2/5
+  tr_max:
+    label: tr max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Rise Time
+    - t r
+    found_in: 2/5
+  ts_max:
+    label: ts max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Storage Time
+    - t s
+    found_in: 2/5

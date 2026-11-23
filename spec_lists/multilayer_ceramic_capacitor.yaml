@@ -14,9 +14,10 @@ status: draft
 must_match:
 - package
 - dielectric
-visual_check: Capacitor "polarity (none for ceramic)" or "marking" (e.g., 3.9pF, 100pF)
+visual_check: Capacitor "pinout (no pins, but polarity for polarized types)". For non-polarized types, no visual
+  check needed.
 drafted:
-  at: '2026-11-23T08:21:01+00:00'
+  at: '2026-11-23T15:25:15+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -28,16 +29,6 @@ drafted:
   - viking/mcrf05btn2516r8_821d39ba.md
   - viking/op-series-data-sheet-edition-rev-a1_5811d324.md
 specs:
-  dielectric:
-    label: Dielectric
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Dielectric
-    found_in: 7/7
   package:
     label: Package
     unit: null
@@ -51,6 +42,28 @@ specs:
     - Dimensions (L×W)
     - Size
     found_in: 7/7
+  dielectric:
+    label: Dielectric
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Dielectric
+    found_in: 7/7
+  rated_voltage:
+    label: Rated Voltage
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Voltage (VDCW)
+    - Rated voltage (DC)
+    - Voltage
+    found_in: 6/7
   capacitance:
     label: Capacitance
     unit: pF
@@ -60,6 +73,16 @@ specs:
     critical: false
     aliases:
     - Capacitance
+    found_in: 6/7
+  capacitance_tolerance:
+    label: Capacitance Tolerance
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Capacitance Tolerance
     found_in: 6/7
   operating_temp_range:
     label: Operating Temperature Range
@@ -73,29 +96,18 @@ specs:
     - Operating Temperature Range
     - Operation Temperature Range
     found_in: 6/7
-  rated_voltage:
-    label: Rated Voltage
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Voltage (VDCW)
-    - Rated voltage (DC)
-    - Voltage
-    found_in: 5/7
-  capacitance_tolerance:
-    label: Capacitance Tolerance
+  packaging:
+    label: Packaging
     unit: null
     stat: value
     conditions: null
-    rule: '='
+    rule: info
     critical: false
     aliases:
-    - Capacitance Tolerance
-    found_in: 5/7
-rare_specs:
+    - Packaging (7" Reel) - Paper tape
+    - Packaging (7" Reel) - Plastic tape
+    - Packaging
+    found_in: 6/7
   temperature_coefficient:
     label: Temperature Coefficient
     unit: ppm/°C
@@ -106,50 +118,19 @@ rare_specs:
     aliases:
     - Temperature Coefficient
     - Capacitance
-    found_in: 3/7
-  bending_test:
-    label: Bending Test
+    found_in: 6/7
+rare_specs:
+  executive_standard:
+    label: Executive Standard
     unit: null
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Substrate Bending test
-    - Bending Test
-    found_in: 2/7
-  damp_heat_load:
-    label: Damp Heat Load
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Temperature Sudden Change
-    - Humidity (Damp Heat) Load
-    found_in: 2/7
-  damp_heat_steady:
-    label: Damp Heat Steady
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - High Temperature High Humidity (Steady)
-    - Humidity (Damp Heat) Steady State
-    found_in: 2/7
-  endurance:
-    label: Endurance
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Durability
-    - High Temperature Load (Endurance)
+    - Executive Standard
+    - Rated Voltage Range
+    - Measuring Method
     found_in: 2/7
   insulation_resistance:
     label: Insulation Resistance
@@ -175,16 +156,6 @@ rare_specs:
     - Q
     - Q/D.F.
     found_in: 2/7
-  resistance_to_soldering_heat:
-    label: Resistance to Soldering Heat
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Resistance to Soldering Heat
-    found_in: 2/7
   solderability:
     label: Solderability
     unit: '%'
@@ -195,27 +166,15 @@ rare_specs:
     aliases:
     - Solderability
     found_in: 2/7
-  temperature_cycle:
-    label: Temperature Cycle
+  termination:
+    label: Termination
     unit: null
     stat: value
     conditions: null
-    rule: info
+    rule: '='
     critical: false
     aliases:
-    - Adhesive Strength of Termination
-    - Temperature Cycle
-    found_in: 2/7
-  vibration_resistance:
-    label: Vibration Resistance
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Vibration
-    - Vibration Resistance
+    - Termination
     found_in: 2/7
   voltage_proof:
     label: Voltage Proof
@@ -228,23 +187,23 @@ rare_specs:
     - Voltage proof
     - Dielectric Strength
     found_in: 2/7
-  adhesive_strength:
-    label: Adhesive Strength
-    unit: N
-    stat: min
+  aec_q200:
+    label: AEC-Q200 Compliance
+    unit: null
+    stat: value
     conditions: null
-    rule: '>='
+    rule: '='
     critical: false
     aliases:
-    - Adhesive Strength of Termination
+    - AEC-Q200 Compliance
     found_in: 1/7
-  esr:
-    label: ESR
-    unit: mΩ
-    stat: range
+  rohs:
+    label: RoHS
+    unit: null
+    stat: value
     conditions: null
-    rule: <=
+    rule: '='
     critical: false
     aliases:
-    - ESR
+    - RoHS
     found_in: 1/7

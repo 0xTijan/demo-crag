@@ -16,7 +16,7 @@ must_match:
 - aec_q200
 visual_check: Pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T08:29:51+00:00'
+  at: '2026-11-23T15:26:32+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -29,6 +29,19 @@ drafted:
   - viking/swr-series-data-sheet-edition-rev-c_0b682c18.md
   - viking/swr-series_14cc59d2.md
 specs:
+  aec_q200:
+    label: AEC-Q200 Qualified
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - AEC-Q200 Qualified
+    - AEC-Q200 Compliance
+    - Marking
+    - AEC-Q200
+    found_in: 8/8
   max_operating_voltage:
     label: Max Operating Voltage
     unit: V
@@ -62,7 +75,7 @@ specs:
     - Package
     found_in: 8/8
   operating_temp_range:
-    label: Operating Temperature Range
+    label: Operating Temp. Range
     unit: °C
     stat: range
     conditions: null
@@ -72,26 +85,38 @@ specs:
     - Operating Temperature Range
     - Operating Temp. Range
     found_in: 8/8
+  power_rating:
+    label: Power Rating
+    unit: W
+    stat: range
+    conditions: at_70c
+    rule: '>='
+    critical: false
+    aliases:
+    - Power Rating
+    - Power Rating at 70°C
+    found_in: 8/8
   resistance_range:
     label: Resistance Range
     unit: Ω
     stat: range
     conditions: null
-    rule: contains
+    rule: '='
     critical: false
     aliases:
     - Resistance Range
+    - Resistance Range (E24)
+    found_in: 8/8
+  tcr:
+    label: TCR
+    unit: PPM/°C
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - TCR
     - TCR (PPM/°C)
-    - AEC-Q200 Compliance
-    - MSL
-    - RoHS
-    - Part Numbering
-    - Dimensions
-    - L (mm)
-    - W (mm)
-    - T (mm)
-    - D1 (mm)
-    - D2 (mm)
     found_in: 8/8
   tolerance:
     label: Resistance Tolerance
@@ -104,52 +129,25 @@ specs:
     - Tolerance
     - Resistance Tolerance
     found_in: 8/8
-  aec_q200:
-    label: AEC-Q200 Qualified
-    unit: null
-    stat: value
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: G
+    stat: min
     conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - AEC-Q200 Qualified
-    - AEC-Q200 Compliance
-    - AEC-Q200
-    found_in: 7/8
-  power_rating:
-    label: Power Rating
-    unit: W
-    stat: range
-    conditions: at_70c
     rule: '>='
     critical: false
     aliases:
-    - Power Rating
-    - Power Rating at 70°C
-    found_in: 6/8
-  tcr:
-    label: TCR
-    unit: PPM/°C
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - TCR
-    - TCR (PPM/°C)
-    found_in: 6/8
-  rohs:
-    label: RoHS Compliant
+    - Insulation Resistance
+    found_in: 5/8
+  msl:
+    label: MSL
     unit: null
     stat: value
     conditions: null
     rule: '='
     critical: false
     aliases:
-    - RoHS
-    - Marking
-    - Flammability
-    - Soldering Condition
+    - MSL
     found_in: 4/8
   solderability:
     label: Solderability
@@ -172,23 +170,13 @@ specs:
     - Voltage Proof
     found_in: 4/8
 rare_specs:
-  insulation_resistance:
-    label: Insulation Resistance
-    unit: G
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Insulation Resistance
-    found_in: 3/8
-  msl:
-    label: MSL
+  rohs:
+    label: RoHS
     unit: null
     stat: value
     conditions: null
     rule: '='
     critical: false
     aliases:
-    - MSL
-    found_in: 3/8
+    - RoHS
+    found_in: 2/8

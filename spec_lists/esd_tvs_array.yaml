@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T06:49:44+00:00'
+  at: '2026-11-23T15:07:50+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -124,6 +124,22 @@ specs:
     - Storage Temperature Range
     - T_S
     found_in: 10/10
+  v_c_max:
+    label: V_C max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Clamping Voltage
+    - V C
+    - V_C
+    - Dynamic Resistance
+    - R_dyn
+    - Clamping Voltage (IEC 61000-4-5)
+    - VC
+    found_in: 10/10
   package:
     label: Package
     unit: null
@@ -165,20 +181,6 @@ specs:
     - Peak Pulse Power (8/20µs)
     - P pk
     found_in: 8/10
-  v_c_max:
-    label: V_C max
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Clamping Voltage
-    - V C
-    - Clamping Voltage (IEC 61000-4-5)
-    - VC
-    - V_C
-    found_in: 6/10
   v_c_typ:
     label: V_C typ
     unit: V
@@ -193,10 +195,9 @@ specs:
     - Clamping Voltage (IEC 61000-4-2)
     - VC
     - Clamping Voltage
-    - V C
     found_in: 5/10
   v_esd_max:
-    label: VESD max
+    label: V_ESD max
     unit: kV
     stat: max
     conditions: null
@@ -211,4 +212,46 @@ specs:
     - V ESD
     - ESD per IEC 61000-4-2 (Contact)
     found_in: 5/10
-rare_specs: {}
+rare_specs:
+  v_t_range:
+    label: V_T range
+    unit: V
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Trigger Voltage(ESD)
+    - V_T
+    - Trigger Voltage
+    - VT
+    found_in: 4/10
+  r_dyn_typ:
+    label: R_dyn typ
+    unit: Ω
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Dynamic Resistance
+    - Rdyn
+    found_in: 3/10
+  v_esd_air_max:
+    label: V_ESD air max
+    unit: kV
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases: []
+    found_in: 0/10
+  v_esd_contact_max:
+    label: V_ESD contact max
+    unit: kV
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases: []
+    found_in: 0/10

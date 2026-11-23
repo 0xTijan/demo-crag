@@ -13,9 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: Package (Twin SMD Ceramic PTC Thermistor)
+visual_check: PTC thermistor pinout (two terminals)
 drafted:
-  at: '2026-11-23T08:42:54+00:00'
+  at: '2026-11-23T15:29:02+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -51,76 +51,37 @@ specs:
     - Maximum current
     - Rated voltage (RMS)
     found_in: 6/6
-  coating_material:
-    label: Coating Material
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Coating material
-    - Case material
-    found_in: 6/6
-  flammability_rating:
-    label: Flammability Rating
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Flammability rating
-    found_in: 6/6
-  lead_material:
-    label: Lead Material
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Lead material
-    found_in: 6/6
-  lead_solderability:
-    label: Lead Solderability
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Lead solderability
-    found_in: 6/6
-  r_25c_range:
+  r25_range:
     label: Rated Zero Power Resistance (25°C) range
     unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Rated zero power resistance (25℃)
+    found_in: 6/6
+  r25_typ:
+    label: Resistance (25°C) typ
+    unit: Ω
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Resistance(25℃)
+    - Resistance
+    found_in: 6/6
+  temp_range_v_0:
+    label: Temp Range (V=0) range
+    unit: °C
     stat: range
     conditions: null
     rule: contains
     critical: false
     aliases:
-    - Rated zero power resistance (25℃)
-    found_in: 6/6
-  solder_heat_withstand:
-    label: Solder Heat Withstand
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Solder heat withstand
-    found_in: 6/6
-  storage_humidity:
-    label: Storage Humidity
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Storage humidity
+    - Operating temperature range (V=0)
+    - Operating temperature range (V=0) (V=Vmax)
     found_in: 6/6
   temp_range_v_vmax:
     label: Temp Range (V=Vmax)
@@ -137,7 +98,7 @@ specs:
     - Operating temperature range V=VmaX
     found_in: 6/6
   weight:
-    label: Weight
+    label: Weight typ
     unit: g
     stat: typ
     conditions: null
@@ -146,19 +107,6 @@ specs:
     aliases:
     - Weight
     found_in: 6/6
-  i_max:
-    label: Max Current
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Maximum current
-    - Max Current
-    - 'Surge test: 10/1000μs, 1KV, 25A, impulse 30 times, No crack and fire.'
-    - ISmax :Overcurrent withstanding（@25°C，450Vac）
-    found_in: 5/6
   hold_current_40c:
     label: Hold Current at 40±2°C min
     unit: mA
@@ -170,28 +118,6 @@ specs:
     - Hold current at 40±2℃
     - 1A→0.5A
     - Hold current at 25±2℃ 40±2℃ 60±2℃
-    found_in: 5/6
-  r_25c_typ:
-    label: Resistance (25°C) typ
-    unit: Ω
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Resistance(25℃)
-    - Resistance
-    found_in: 5/6
-  temp_range_v_0:
-    label: Temp Range (V=0)
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating temperature range (V=0)
-    - Operating temperature range (V=0) (V=Vmax)
     found_in: 5/6
   trip_time_3a_0_5a:
     label: Trip Time 3A→0.5A max
@@ -206,17 +132,28 @@ specs:
     - Trip time 3A→0.5A 1A→0.5A 0.5A→0.15A
     - Trip time 2.5A→0.5A 1A→0.5A 0.75A→0.15A
     found_in: 5/6
-  initial_resistance_diff:
-    label: Initial Resistance Difference
-    unit: Ω
+  i_max:
+    label: Max Current
+    unit: A
     stat: max
     conditions: null
-    rule: <=
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum current
+    - Max Current
+    - ISmax :Overcurrent withstanding（@25°C，450Vac）
+    found_in: 4/6
+  surge_test:
+    label: Surge Test (10/1000μs, 1KV, 25A, 30 cycles) typ
+    unit: A
+    stat: typ
+    conditions: null
+    rule: '>='
     critical: false
     aliases:
-    - The initial resistance difference of one package
-    - The initial resistance difference of Two PTC thermistors in one house
-    - The initial resistance difference of two PTC thermistor in one device at 25℃
+    - 'Surge test: 10/1000μs, 1.0KV, 25A,30 Cycles'
+    - 'Surge test: 10/1000μs, 1KV, 25A, impulse 30 times, No crack and fire.'
     found_in: 4/6
   hold_current_25c:
     label: Hold Current at 25±2°C min
@@ -228,8 +165,28 @@ specs:
     aliases:
     - Hold current at 25±2℃
     found_in: 3/6
+  initial_resistance_diff:
+    label: Initial Resistance Difference (Two PTC in one house) max
+    unit: Ω
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - The initial resistance difference of Two PTC thermistors in one house
+    found_in: 3/6
+  initial_resistance_diff_25c:
+    label: Initial Resistance Difference (Two PTC in one device at 25°C) max
+    unit: Ω
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - The initial resistance difference of two PTC thermistor in one device at 25℃
+    found_in: 3/6
   power_conduct_test:
-    label: Power Conduct Test
+    label: Power Conduct Test (250 VAC, no current-limited resistance for 15min) typ
     unit: V
     stat: typ
     conditions: null
@@ -240,7 +197,7 @@ specs:
     - 'Power conduct test: 250 VAC, Rs=58Ω on15min,one cycle no damage.'
     found_in: 3/6
   power_contact_test:
-    label: Power Contact Test
+    label: Power Contact Test (220 VAC, 3A, on 1 min, off 10min, 20times, ∆R/R≤20%) typ
     unit: V
     stat: typ
     conditions: null
@@ -252,7 +209,7 @@ specs:
     - 'Power contact test: 220 VAC, 3A, on 1 min, off 10min, 20times, ∆R/R≤20%.'
     found_in: 3/6
   power_induction_test:
-    label: Power Induction Test
+    label: Power Induction Test (600VAC, 1A, On 0.2s, Off 60s, 10 times) typ
     unit: V
     stat: typ
     conditions: null
@@ -262,61 +219,6 @@ specs:
     - 'Power induction test: 650VAC, Rs=600Ω, On 1s, Off 60s, 10 times, No damage and f'
     - 'Power induction test: 600VAC, 1A, On 0.2s, Off 60s, 10 times, No damage and fire'
     found_in: 3/6
-  surge_test:
-    label: Surge Test
-    unit: A
-    stat: typ
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - 'Surge test: 10/1000μs, 1.0KV, 25A,30 Cycles'
-    - 'Surge test: 10/700μs, 1.5KV, 37.5A,30 Cycles'
-    - 'Surge test: 10/1000μs, 1KV, 25A, impulse 30 times, No crack and fire.'
-    found_in: 3/6
-rare_specs:
-  climatic_category:
-    label: Climatic Category
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Climatic category
-    found_in: 2/6
-  compliant_with_itu_t_k21:
-    label: Compliant with ITU-T K.21
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Compliant with ITU-T K.21
-    - Compliant with ITU-T K21
-    found_in: 2/6
-  housing_material:
-    label: Housing Material
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Housing material
-    found_in: 2/6
-  recovery_time:
-    label: Recovery Time @25°C
-    unit: s
-    stat: value
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Recovery time Ac 220V, initial current 1A
-    - Recovery time (@25°C)
-    found_in: 2/6
   trip_time_0_5a_0_15a:
     label: Trip Time 0.5A→0.15A max
     unit: s
@@ -328,7 +230,8 @@ rare_specs:
     - 0.5 A→0.15A
     - Trip time 1 A→0.5A
     - Trip time 0.75A→0.15A
-    found_in: 2/6
+    found_in: 3/6
+rare_specs:
   trip_time_1a_0_5a:
     label: Trip Time 1A→0.5A max
     unit: s
@@ -341,7 +244,7 @@ rare_specs:
     - Trip time 2A→0.5A
     found_in: 2/6
   curie_temp:
-    label: Curie Temperature
+    label: Curie Temperature value
     unit: °C
     stat: value
     conditions: null
@@ -360,15 +263,25 @@ rare_specs:
     aliases:
     - Hold current at 70±2℃
     found_in: 1/6
-  trip_time_0_35a_0_15a:
-    label: Trip Time 0.35A→0.15A max
+  recovery_time:
+    label: Recovery Time (@25°C) value
     unit: s
-    stat: max
+    stat: value
     conditions: null
     rule: <=
     critical: false
     aliases:
-    - Trip time 0.35A→0.15A
+    - Recovery time (@25°C)
+    found_in: 1/6
+  rhv:
+    label: Minimum Equivalent Resistance (10/700μs, 4KV/40Ω) value
+    unit: Ω
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - RHV :Minimum equivalent resistance (@ 10/700 uS, 4 KV / 40 Ω )
     found_in: 1/6
   trip_time_0_75a_0_15a:
     label: Trip Time 0.75A→0.15A max
@@ -377,5 +290,27 @@ rare_specs:
     conditions: null
     rule: <=
     critical: false
-    aliases: []
-    found_in: 0/6
+    aliases:
+    - Trip time 0.5 A→0.15A
+    - Trip time 0.35A→0.15A
+    found_in: 1/6
+  v_fault:
+    label: Security Failure Voltage (10R loading) value
+    unit: Vrms
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - VFault :Security failure voltage (with 10R loading)
+    found_in: 1/6
+  vsurge:
+    label: Lightning Surge Test (10/700μs, RS=40Ω) value
+    unit: Vp
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Vsurge :Lightning surge test (10/700 uS, RS = 40 Ω )
+    found_in: 1/6

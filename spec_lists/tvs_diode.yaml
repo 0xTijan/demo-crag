@@ -13,9 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: pinout (cathode band / polarity mark)
+visual_check: null
 drafted:
-  at: '2026-11-23T06:38:10+00:00'
+  at: '2026-11-23T15:04:45+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,22 +30,6 @@ drafted:
   - goodarksemi/gsma6txa_b373d030.md
   - goodarksemi/gsmfxxca_eb247c60.md
 specs:
-  vbr_range:
-    label: VBR range @ IT=1mA
-    unit: V
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Breakdown Voltage VBR (Volts)
-    - VBR
-    - Breakdown Voltage VBR
-    - Breakdown Voltage
-    - V BR
-    - Breakdown Voltage V BR @ I T3
-    - V_BR
-    found_in: 5/10
   package:
     label: Package
     unit: null
@@ -55,11 +39,10 @@ specs:
     critical: true
     aliases:
     - Package
-    found_in: 4/10
-rare_specs:
+    found_in: 10/10
   tj_range:
     label: TJ range
-    unit: °C
+    unit: c
     stat: range
     conditions: null
     rule: '='
@@ -67,22 +50,26 @@ rare_specs:
     aliases:
     - Operating junction and storage temperature range
     - TJ, TSTG
-    found_in: 4/10
-  vwm_value@vrwm:
-    label: VRWM value
+    - Operating junction temperature range
+    - T J
+    - Junction Temperature
+    - T_J
+    found_in: 9/10
+  vbr_range:
+    label: VBR range @ IT=1mA
     unit: V
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
+    stat: range
+    conditions: it_1ma
+    rule: '>='
+    critical: false
     aliases:
-    - Reverse Stand-off Voltage
-    - V RWM
-    - Reverse standoff voltage
-    - VRWM
-    - Rated Voltage
-    - V R
-    found_in: 4/10
+    - Breakdown Voltage V BR @ I T3
+    - V_BR
+    - Breakdown Voltage
+    - V BR
+    - VBR
+    - Break-down Voltage
+    found_in: 9/10
   vwm_value:
     label: VWM value
     unit: V
@@ -96,7 +83,10 @@ rare_specs:
     - Stand off Voltage VWM
     - Stand-off Voltage
     - V WM
-    found_in: 4/10
+    - Working Peak Reverse Voltage V RWM
+    - V_RWM
+    - Reverse Standoff Voltage
+    found_in: 9/10
   vc_max:
     label: VC max @ IPPM
     unit: V
@@ -108,35 +98,9 @@ rare_specs:
     - Maximum Clamping Voltage at IPPM VC(Volts)
     - VC
     - Maximum Clamping Voltage at IPPM VC
-    found_in: 3/10
-  id_max:
-    label: ID max @ VWM
-    unit: µA
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum reverse leakage at VWM ID (µA)
-    - ID
-    - Maximum reverse leakage at VWM ID
-    found_in: 3/10
-  vbr_range@it_1ma:
-    label: VBR range @ IT=1mA
-    unit: V
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Break-down Voltage
-    - V BR
-    - Breakdown voltage
-    - VBR
-    - Reverse Breakdown Voltage
-    found_in: 3/10
-  ifs_max:
-    label: IFSM max @ 8.3ms half-sine wave
+    found_in: 6/10
+  ifsm_max:
+    label: IFSM max
     unit: A
     stat: max
     conditions: null
@@ -145,31 +109,21 @@ rare_specs:
     aliases:
     - Peak forward surge current, 8.3ms single half-sine wave
     - IFSM
-    found_in: 2/10
+    found_in: 5/10
   ippm_max:
-    label: IPP max @ 10/1000us waveform
+    label: IPP max @ 10/1000us
     unit: A
     stat: max
     conditions: null
     rule: '>='
     critical: false
     aliases:
-    - Peak pulse current with a 10/1000us waveform
-    - IPPM
-    found_in: 2/10
-  pd_max@tl_75c:
-    label: PD max @ TL=75°C
-    unit: W
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Power dissipation, on infinite heat sink at TL=75℃
-    - PD
-    found_in: 2/10
+    - Maximum Peak Pulse Current IppM (A)
+    - IppM
+    - Maximum Peak Pulse Current IppM
+    found_in: 5/10
   pppm_max:
-    label: PPPM max @ 10/1000us waveform
+    label: PPPM max @ 10/1000us
     unit: W
     stat: max
     conditions: null
@@ -178,10 +132,10 @@ rare_specs:
     aliases:
     - Peak power dissipation with a 10/1000us waveform
     - PPPM
-    found_in: 2/10
+    found_in: 5/10
   rthja_typ:
-    label: RθJA typ @ T=25°C
-    unit: °C/W
+    label: RθJA typ
+    unit: c/w
     stat: typ
     conditions: null
     rule: <=
@@ -189,21 +143,10 @@ rare_specs:
     aliases:
     - Typical Thermal Resistance , Junction to Ambient
     - RθJA
-    found_in: 2/10
-  rthjc_typ:
-    label: RθJC typ @ T=25°C
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Typical Thermal Resistance , Junction to Case
-    - RθJC
-    found_in: 2/10
+    found_in: 5/10
   rthjl_typ:
-    label: RθJL typ @ T=25°C
-    unit: °C/W
+    label: RθJL typ
+    unit: c/w
     stat: typ
     conditions: null
     rule: <=
@@ -211,147 +154,39 @@ rare_specs:
     aliases:
     - Typical Thermal Resistance , Junction to Lead
     - RθJL
-    found_in: 2/10
-  vc_max@ippm_5a:
-    label: VC max @ IPPM=5A
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: true
-    aliases:
-    - Clamping voltage
-    - VC
-    found_in: 1/10
-  vc_typ@iec_61000_4_2_8kv_contact_discharge:
-    label: VC typ @ IEC 61000-4-2 8KV Contact Discharge
-    unit: V
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: true
-    aliases:
-    - Clamping Voltage
-    - V C
-    found_in: 1/10
-  vc_typ@ippm_5a_tlp_16a:
-    label: VC typ @ IPPM=5A,TLP 16A
-    unit: V
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: true
-    aliases:
-    - Clamping Voltage (TLP 16A)
-    - V C
-    found_in: 1/10
-  vc_typ@ippm_5a_tlp_8a:
-    label: VC typ @ IPPM=5A,TLP 8A
-    unit: V
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: true
-    aliases:
-    - Clamping Voltage (TLP 8A)
-    - V C
-    found_in: 1/10
-  c_j_max@vr_0v_f_1mhz:
-    label: CJ max @ VR=0V,f=1MHz
-    unit: pF
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Junction capacitance
-    - CJ
-    found_in: 1/10
-  c_j_range@vr_0v_f_1mhz:
-    label: CJ range @ VR=0V,f=1MHz
-    unit: pF
-    stat: range
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Junction Capacitance
-    - C J
-    found_in: 1/10
-  c_j_typ@vr_0v_f_1mhz:
-    label: CJ typ @ VR=0V,f=1MHz
-    unit: pF
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Junction capacitance
-    - CJ
-    found_in: 1/10
-  c_p_typ@vr_0v_f_1mhz:
-    label: CP typ @ VR=0V,f=1MHz
-    unit: pF
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Capacitance
-    - C P
-    found_in: 1/10
-  id_range@vr_3v3:
-    label: ID range @ VR=3.3V
-    unit: μA
-    stat: range
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Reverse Leakage Current
-    - I R
-    found_in: 1/10
-  id_range@vr_6v:
-    label: ID range @ VR=6V
+    found_in: 5/10
+rare_specs:
+  id_max:
+    label: ID max @ VWM
     unit: uA
-    stat: range
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Leakage Current
-    - I L
-    found_in: 1/10
-  id_typ@vrwm:
-    label: ID typ @ VRWM
-    unit: nA
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Leakage Current
-    - I LEAK
-    found_in: 1/10
-  r_dyn_typ@i_0_to_30a_tlp:
-    label: Rdyn typ @ I=0-30A,TLP
-    unit: Ω
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Dynamic Resistance
-    - R dyn
-    found_in: 1/10
-  vc_max@ippm_12a:
-    label: VC max @ IPPM=12A
-    unit: V
     stat: max
     conditions: null
     rule: <=
     critical: false
     aliases:
-    - Clamping voltage
-    - VC
-    found_in: 1/10
+    - Maximum reverse leakage at VWM ID (µA)
+    - ID
+    - Maximum reverse leakage at VWM ID
+    - Maximum Reverse Leakage
+    - I D
+    found_in: 4/10
+  rthjc_typ:
+    label: RθJC typ
+    unit: c/w
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Typical Thermal Resistance , Junction to Case
+    - RθJC
+    found_in: 3/10
+  tstg_range:
+    label: TSTG range
+    unit: c
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases: []
+    found_in: 0/10

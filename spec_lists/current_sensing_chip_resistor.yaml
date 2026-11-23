@@ -14,9 +14,9 @@ status: draft
 must_match:
 - package
 - size
-visual_check: SMD Type designed for automatic insertion (D1.11)
+visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T07:28:12+00:00'
+  at: '2026-11-23T15:15:32+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -68,30 +68,6 @@ specs:
     - T
     - Operating Temperature Range
     found_in: 10/10
-  resistance_range:
-    label: Resistance Range
-    unit: mΩ
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Resistance Range
-    - Resistance
-    - R
-    - Resistance Range (mΩ)
-    found_in: 9/10
-  tcr:
-    label: TCR
-    unit: PPM/°C
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - TCR
-    - Temperature Coefficient of Resistance
-    found_in: 9/10
   power_rating:
     label: Power Rating
     unit: W
@@ -104,20 +80,22 @@ specs:
     - Power Rating
     - P
     - Power Rating at 70°C
-    found_in: 8/10
-  storage_temp_range:
-    label: Storage Temp. Range
-    unit: °C
+    found_in: 10/10
+  resistance_range:
+    label: Resistance Range
+    unit: mΩ
     stat: range
     conditions: null
-    rule: contains
+    rule: ≈
     critical: false
     aliases:
-    - Storage Temperature
-    - Mechanical Shock
-    found_in: 8/10
+    - Resistance Range
+    - Resistance
+    - R
+    - Resistance Range (mΩ)
+    found_in: 10/10
   tolerance:
-    label: Resistance Tolerance
+    label: Tolerance
     unit: '%'
     stat: range
     conditions: null
@@ -129,7 +107,66 @@ specs:
     - Tol
     - Storage Temperature
     - T
+    found_in: 10/10
+  humidity:
+    label: Humidity
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Weight
+    - Humidity
+    - Thermal Shock Range
+    - Leaching
+    found_in: 9/10
+  storage_temp_range:
+    label: Storage Temp. Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    - Mechanical Shock
+    found_in: 9/10
+  tcr:
+    label: TCR
+    unit: PPM/°C
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - TCR
+    - Temperature Coefficient of Resistance
+    found_in: 9/10
+  shelf_life:
+    label: Shelf Life
+    unit: years
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Shelf Life
     found_in: 8/10
+  endurance:
+    label: Endurance
+    unit: null
+    stat: range
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Operational Life
+    - Rated Continuous Working Voltage
+    - RCWV
+    - Endurance
+    - Load life
+    found_in: 7/10
   resistance_to_soldering_heat:
     label: Resistance to Soldering Heat
     unit: null
@@ -142,39 +179,61 @@ specs:
     - R_heat
     - Resistance to solder heat
     found_in: 7/10
-  tape_width:
-    label: Tape Width
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Pad Layout A
-    - Pad Layout B
-    - Pad Layout C
-    - Tape Width
-    - Tape Width (W)
-    - Material
-    - B
-    - C
-    - D
-    - E
-    - H1
-    - H2
-    found_in: 7/10
-  marking:
-    label: Marking
+  short_time_overload:
+    label: Short Time Overload
     unit: null
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Features
-    - Marking
-    - Part Numbering
-    - Resistance to solvents
+    - Max. Overload Current
+    - Short Time Overload
+    found_in: 7/10
+  solderability:
+    label: Solderability
+    unit: '%'
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Solderability
+    found_in: 7/10
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: MΩ
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Insulation Resistance
+    found_in: 6/10
+  rated_continuous_working_voltage:
+    label: Rated Continuous Working Voltage
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Rated Continuous Working Voltage
+    - Operating Voltage
+    - V
+    - High Temperature Exposure
+    - Dielectric Withstand Voltage
+    found_in: 6/10
+  rated_terminal_temperature:
+    label: Rated Terminal Temperature
+    unit: °C
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Rated Terminal Temperature
+    - T
     found_in: 6/10
   rohs:
     label: RoHS
@@ -187,17 +246,6 @@ specs:
     - RoHS
     - RoHS Compliance
     found_in: 6/10
-  short_time_overload:
-    label: Short Time Overload
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Max. Overload Current
-    - Short Time Overload
-    found_in: 6/10
   aec_q200:
     label: AEC-Q200
     unit: null
@@ -209,17 +257,6 @@ specs:
     - AEC-Q200
     - AEC-Q200 Compliance
     found_in: 5/10
-  solderability:
-    label: Solderability
-    unit: '%'
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Solderability
-    found_in: 5/10
-rare_specs:
   bending_strength:
     label: Bending Strength
     unit: null
@@ -229,31 +266,19 @@ rare_specs:
     critical: false
     aliases:
     - Bending Strength
-    found_in: 4/10
-  endurance:
-    label: Endurance
+    found_in: 5/10
+  damp_heat_with_load:
+    label: Damp Heat with Load
     unit: null
     stat: range
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Operational Life
-    - Temperature Cycling
-    - Endurance
+    - Biased Humidity
     - Damp Heat with Load
-    - Load life
-    found_in: 4/10
-  flammability:
-    label: Flammability
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Flammability
-    found_in: 4/10
+    - High temperature and humidity
+    found_in: 5/10
   high_temperature_exposure:
     label: High Temperature Exposure
     unit: null
@@ -264,54 +289,191 @@ rare_specs:
     aliases:
     - High Temperature Exposure
     - High temperature storage
-    found_in: 4/10
-  insulation_resistance:
-    label: Insulation Resistance
-    unit: MΩ
-    stat: min
+    found_in: 5/10
+  material:
+    label: Material
+    unit: null
+    stat: value
     conditions: null
-    rule: '>='
+    rule: '='
     critical: false
     aliases:
-    - Insulation Resistance
+    - Material
+    found_in: 5/10
+  thermal_shock:
+    label: Thermal Shock
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Temperature Cycling
+    - Thermal Shock
+    found_in: 5/10
+rare_specs:
+  flammability:
+    label: Flammability
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Flammability
     found_in: 4/10
-  reel_diameter:
-    label: Reel Diameter
-    unit: inch
+  mechanical_shock:
+    label: Mechanical Shock
+    unit: null
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
     - Mechanical Shock
+    found_in: 2/10
+  operating_current:
+    label: Operating Current
+    unit: A
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Operating Current
+    - I
+    found_in: 2/10
+  vibration:
+    label: Vibration
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
     - Vibration
-    - ESD
-    - Terminal strength
-    - Rated Continuous Working Voltage
-    - Shelf Life
-    - Reflow Profiles
-    - Preheat Min. Temperature
-    - Preheat Max. Temperature
-    - Preheating time
-    - Ramp-up rate
-    - Liquidous temperature
-    found_in: 3/10
-  damp_heat_with_load:
-    label: Damp Heat with Load
+    found_in: 2/10
+  derating_curve:
+    label: Derating Curve
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Derating Curve
+    found_in: 1/10
+  dry_heat:
+    label: Dry Heat
     unit: null
     stat: range
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Biased Humidity
+    - Dry Heat
     found_in: 1/10
-  land_pattern:
-    label: Land Pattern
-    unit: mm
+  low_inductance:
+    label: Low Inductance
+    unit: nH
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Low Inductance
+    found_in: 1/10
+  max_operating_current:
+    label: Max. Operating Current
+    unit: A
+    stat: range
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Max. Operating Current
+    found_in: 1/10
+  rapid_change_of_temperature:
+    label: Rapid Change of Temperature
+    unit: null
     stat: value
     conditions: null
     rule: info
+    critical: false
+    aliases:
+    - Rapid Change of Temperature
+    found_in: 1/10
+  sulfur_resistance:
+    label: Sulfur Resistance
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Sulfur Resistance
+    found_in: 1/10
+  voltage_proof:
+    label: Voltage Proof
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Voltage Proof
+    found_in: 1/10
+  bias_humidity:
+    label: Biased Humidity
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/10
+  dielectric_withstand_voltage:
+    label: Dielectric Withstand Voltage
+    unit: VAC
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases: []
+    found_in: 0/10
+  leaching:
+    label: Leaching
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/10
+  load_life:
+    label: Load Life
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/10
+  max_operating_voltage:
+    label: Max. Operating Voltage
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases: []
+    found_in: 0/10
+  resistance:
+    label: Resistance
+    unit: mΩ
+    stat: range
+    conditions: null
+    rule: ≈
     critical: false
     aliases: []
     found_in: 0/10

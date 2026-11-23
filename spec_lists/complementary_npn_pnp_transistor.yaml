@@ -13,9 +13,10 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: MOSFET pinout (G/D/S order)
+visual_check: MOSFET pinout (G/D/S order) or diode cathode band / polarity mark (for complementary pair, check both
+  NPN and PNP pinout)
 drafted:
-  at: '2026-11-23T08:07:51+00:00'
+  at: '2026-11-23T15:23:36+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -40,6 +41,9 @@ specs:
     aliases:
     - Package
     - Marking
+    - Quantity
+    - HSF Status
+    - Carrier
     found_in: 10/10
   v_cbo_max:
     label: VCBO max
@@ -60,6 +64,21 @@ specs:
     - Collector Base Breakdown Voltage
     - V(BR)CBO
     found_in: 10/10
+  v_cbo_min:
+    label: VCBO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Base Breakdown Voltage
+    - V (BR)CBO
+    - Collector-base Breakdown Voltage
+    - Collector−Base Breakdown Voltage
+    - VCBO
+    - V(BR)CBO
+    found_in: 10/10
   v_ceo_max:
     label: VCEO max
     unit: V
@@ -76,6 +95,21 @@ specs:
     - VCEO
     - Collector to Emitter Voltage
     - Collector Emitter Breakdown Voltage
+    - V(BR)CEO
+    found_in: 10/10
+  v_ceo_min:
+    label: VCEO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Collector Emitter Breakdown Voltage
+    - V (BR)CEO
+    - Collector-Emitter Breakdown Voltage
+    - Collector−Emitter Breakdown Voltage
+    - VCEO
     - V(BR)CEO
     found_in: 10/10
   v_ebo_max:
@@ -95,6 +129,21 @@ specs:
     - VEBO
     - Emitter to Base Voltage
     - Emitter Base Breakdown Voltage
+    - V(BR)EBO
+    found_in: 10/10
+  v_ebo_min:
+    label: VEBO min
+    unit: V
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Emitter Base Breakdown Voltage
+    - V (BR)EBO
+    - Emitter-Base Breakdown Voltage
+    - Emitter−Base Breakdown Voltage
+    - VEBO
     - V(BR)EBO
     found_in: 10/10
   h_fe_min:
@@ -147,6 +196,37 @@ specs:
     - IEBO
     - Emitter Base Cut-Off Current
     - Emitter-Base Cutoff Current
+    found_in: 10/10
+  r_ja_max:
+    label: RθJA max
+    unit: °C/W
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Thermal resistance From junction to ambient
+    - R θJA
+    - Thermal Resistance Junction to Ambient
+    - Collector-Base Breakdown Voltage
+    - V (BR)CBO
+    - RθJA
+    found_in: 10/10
+  tf_max:
+    label: tf max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Fall time
+    - tf
+    - Package
+    - Collector-base Breakdown Voltage
+    - V (BR)CBO
+    - tr
+    - t f
     found_in: 10/10
   v_be_sat_max:
     label: VBE(sat) max
@@ -242,12 +322,26 @@ specs:
     aliases:
     - Collector Output Capacitance
     - C ob
+    - Output Capacitance
     - Collector Capacitance
     - C C
     - Output Capacity
-    - Output Capacitance
     - Cobo
     - Cob
+    found_in: 9/10
+  f_t_min:
+    label: fT min
+    unit: MHz
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Transition frequency
+    - f T
+    - fT
+    - Gain Bandwidth Product
+    - Current Gain-Bandwidth Product
     found_in: 9/10
   t_stg_range:
     label: TSTG range
@@ -264,127 +358,6 @@ specs:
     - Operating and Storage Temperature Range
     - T, TJSTG
     found_in: 9/10
-  f_t_min:
-    label: fT min
-    unit: MHz
-    stat: min
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Transition frequency
-    - f T
-    - fT
-    - Current Gain-Bandwidth Product
-    found_in: 8/10
-  r_ja_max:
-    label: RθJA max
-    unit: °C/W
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal resistance From junction to ambient
-    - R θJA
-    - Thermal Resistance Junction to Ambient
-    - Collector-Base Breakdown Voltage
-    - V (BR)CBO
-    - RθJA
-    found_in: 7/10
-  v_ceo_min:
-    label: VCEO min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Collector Emitter Breakdown Voltage
-    - V (BR)CEO
-    - Collector-Emitter Breakdown Voltage
-    - Collector−Emitter Breakdown Voltage
-    - VCEO
-    found_in: 6/10
-  v_ebo_min:
-    label: VEBO min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Emitter Base Breakdown Voltage
-    - V (BR)EBO
-    - Emitter-Base Breakdown Voltage
-    - Emitter−Base Breakdown Voltage
-    - VEBO
-    found_in: 6/10
-  v_cbo_min:
-    label: VCBO min
-    unit: V
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Collector Base Breakdown Voltage
-    - V (BR)CBO
-    - Collector-base Breakdown Voltage
-    - Collector−Base Breakdown Voltage
-    - VCBO
-    found_in: 5/10
-  td_max:
-    label: td max
-    unit: nS
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Delay time
-    - td
-    - Turn-on Time
-    - t d
-    found_in: 5/10
-  tf_max:
-    label: tf max
-    unit: nS
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Fall time
-    - tf
-    - t f
-    found_in: 5/10
-  tr_max:
-    label: tr max
-    unit: nS
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Rise time
-    - tr
-    - t r
-    found_in: 5/10
-  ts_max:
-    label: ts max
-    unit: nS
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Storage time
-    - ts
-    - t stg
-    - t S
-    found_in: 5/10
-rare_specs:
   h_fe_range:
     label: hFE range
     unit: null
@@ -395,4 +368,42 @@ rare_specs:
     aliases:
     - DC current gain
     - h FE(3)
-    found_in: 1/10
+    found_in: 8/10
+  ts_max:
+    label: ts max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Storage time
+    - ts
+    - Noise Figure
+    - NF
+    - t stg
+    - t S
+    found_in: 7/10
+  td_max:
+    label: td max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Delay time
+    - td
+    - Rise time
+    - tr
+    found_in: 5/10
+rare_specs:
+  tr_max:
+    label: tr max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases: []
+    found_in: 0/10

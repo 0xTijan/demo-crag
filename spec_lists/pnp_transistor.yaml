@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: PNP transistor pinout (E/B/C order)
 drafted:
-  at: '2026-11-23T06:47:26+00:00'
+  at: '2026-11-23T15:07:16+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,23 +30,6 @@ drafted:
   - goodarksemi/mmbta92_0fc889a1.md
   - goodarksemi/pzt2907a_fad28d47.md
 specs:
-  ibrcebo_max:
-    label: V(BR)EBO max
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: true
-    aliases:
-    - Emitter Base Breakdown Voltage
-    - V(BR)EBO
-    - Emitter-Base Breakdown Voltage
-    - V (BR)EBO
-    - VEBO
-    - Base-Emitter Breakdown Voltage
-    - Emitter Base Cutoff Current
-    - I EBO
-    found_in: 10/10
   ic_max:
     label: IC max
     unit: A
@@ -132,6 +115,25 @@ specs:
     - f T
     - Current Gain-Bandwidth Product
     found_in: 10/10
+  hfe_min:
+    label: hFE min
+    unit: '-'
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - DC Current Gain
+    - hFE
+    - h FE
+    - h FE(1)
+    - h FE(2)
+    - h FE(3)
+    - hFE(1)
+    - hFE(2)
+    - hFE(3)
+    - hFE(4)
+    found_in: 10/10
   icbo_max:
     label: ICBO max
     unit: nA
@@ -147,6 +149,26 @@ specs:
     - Collector-Base Cut-Off Current
     - Collector Emitter Cutoff Current
     - I CEO
+    found_in: 10/10
+  iebo_max:
+    label: IEBO max
+    unit: nA
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Emitter Base Cutoff Current
+    - IEBO
+    - Collector Base Breakdown Voltage
+    - V (BR)CBO
+    - Emitter Cut-Off Current
+    - I EBO
+    - DC Current Gain
+    - hFE
+    - Emitter-Base Cut-Off Current
+    - Base-Emitter Breakdown Voltage
+    - V (BR)EBO
     found_in: 10/10
   rthja_max:
     label: RthJA max
@@ -217,21 +239,6 @@ specs:
     - V CE(sat)
     - Collector-Emitter Saturation Voltage
     found_in: 10/10
-  ibrceo_max:
-    label: V(BR)CEO max
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: true
-    aliases:
-    - Collector Emitter Breakdown Voltage
-    - V(BR)CEO
-    - Collector Emitter Base Breakdown Voltage
-    - V (BR)CEO
-    - Collector-Emitter Breakdown Voltage
-    - VCEO
-    found_in: 9/10
   cob_typ:
     label: Cob typ
     unit: pF

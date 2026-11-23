@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: MELF pinout (end to end)
 drafted:
-  at: '2026-11-23T09:00:31+00:00'
+  at: '2026-11-23T15:33:21+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -44,7 +44,7 @@ specs:
     - Flammability
     found_in: 3/3
   max_operating_voltage:
-    label: Max operating voltage
+    label: Max. operating voltage
     unit: V
     stat: max
     conditions: null
@@ -54,7 +54,7 @@ specs:
     - Max. Operating Voltage
     found_in: 3/3
   max_resistance_change:
-    label: Max resistance change
+    label: Max. resistance change
     unit: '%'
     stat: max
     conditions: null
@@ -72,6 +72,7 @@ specs:
     critical: false
     aliases:
     - Operating temperature range
+    - Operating Temp. Range
     found_in: 3/3
   operating_voltage_max:
     label: Operating voltage max
@@ -82,6 +83,7 @@ specs:
     critical: false
     aliases:
     - Operating voltage U max.
+    - Max. Operating Voltage
     found_in: 3/3
   power_rating_p70:
     label: Power rating P70
@@ -98,7 +100,7 @@ specs:
     unit: null
     stat: range
     conditions: null
-    rule: ≈
+    rule: contains
     critical: false
     aliases:
     - Resistance range
@@ -134,14 +136,15 @@ specs:
     - Solderability
     found_in: 3/3
   tc_r:
-    label: TCR
+    label: TCR (PPM/°C)
     unit: ppm/°C
-    stat: value
+    stat: range
     conditions: null
     rule: ≈
     critical: false
     aliases:
     - TCR (PPM/°C)
+    - Temperature Coefficient of Resistance (T.C.R.)
     found_in: 3/3
   temperature_coefficient:
     label: Temperature coefficient
@@ -152,6 +155,7 @@ specs:
     critical: false
     aliases:
     - Temperature coefficient
+    - Package
     found_in: 3/3
   aec_q200:
     label: AEC-Q200
@@ -175,7 +179,7 @@ specs:
     - Insulation Resistance
     found_in: 2/3
   max_overload_voltage:
-    label: Max overload voltage
+    label: Max. overload voltage
     unit: V
     stat: max
     conditions: null

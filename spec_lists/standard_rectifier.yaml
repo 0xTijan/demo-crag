@@ -13,9 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: diode "cathode band / polarity mark"
+visual_check: cathode band / polarity mark, pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T06:21:24+00:00'
+  at: '2026-11-23T14:58:07+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -66,31 +66,6 @@ specs:
     - Peak Forward Surge Current 8.3ms Single Half Sine-Wave Superimposed on Rated Loa
     - Peak forward surge current, 8.3ms single half-sine-wave superimposed on rated lo
     found_in: 10/10
-  tj_range:
-    label: Operating junction temperature range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: true
-    aliases:
-    - Operating junction temperature range
-    - TJ
-    - Operating Junction Temperature
-    - Junction Temperature
-    found_in: 10/10
-  tstg_range:
-    label: Storage temperature range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: true
-    aliases:
-    - Storage temperature range
-    - TSTG
-    - Storage Temperature
-    found_in: 10/10
   vrrm_max:
     label: VRRM max
     unit: V
@@ -107,6 +82,74 @@ specs:
     - V RRM
     - Repetitive Peak Reverse Voltage
     found_in: 10/10
+  rthja_typ:
+    label: RθJA typ
+    unit: °C/W
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Thermal Resistance, Junction to Ambient
+    - RθJA
+    - RthJA
+    - Package
+    - Typical Thermal Resistance1)
+    - Max. Thermal Resistance, Junction to Case
+    - R_THJ-C
+    found_in: 10/10
+  tj_range:
+    label: Operating junction temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating junction temperature range
+    - TJ
+    - Operating Junction Temperature
+    - Junction Temperature
+    found_in: 10/10
+  tstg_range:
+    label: Storage temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage temperature range
+    - TSTG
+    - Storage Temperature
+    found_in: 10/10
+  vf_typ:
+    label: VF typ
+    unit: V
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Forward Drop Voltage
+    - VF
+    - Maximum forward drop voltage
+    - Maximum instantaneous forward voltage
+    - V_F
+    - Maximum Instantaneous Forward Voltage @1A
+    - V F
+    - Forward Voltage at 45A
+    found_in: 10/10
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 9/10
   vdc_max:
     label: VDC max
     unit: V
@@ -139,39 +182,6 @@ specs:
     - I R
     - Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage
     found_in: 8/10
-  rthja_typ:
-    label: RθJA typ
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal Resistance, Junction to Ambient
-    - RθJA
-    - RthJA
-    - Package
-    - Typical Thermal Resistance1)
-    - Max. Thermal Resistance, Junction to Case
-    - R_THJ-C
-    found_in: 8/10
-  vf_typ:
-    label: VF typ
-    unit: V
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Forward Drop Voltage
-    - VF
-    - Maximum forward drop voltage
-    - Maximum instantaneous forward voltage
-    - V_F
-    - Maximum Instantaneous Forward Voltage @1A
-    - V F
-    - Forward Voltage at 45A
-    found_in: 8/10
   vrms_max:
     label: VRMS max
     unit: V
@@ -203,16 +213,29 @@ specs:
     - Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage
     - I_R
     found_in: 7/10
-  package:
-    label: Package
-    unit: null
-    stat: value
+  rthjc_typ:
+    label: RθJC typ
+    unit: °C/W
+    stat: typ
     conditions: null
-    rule: '='
-    critical: true
+    rule: <=
+    critical: false
     aliases:
-    - Package
-    found_in: 6/10
+    - Thermal Resistance, Junction to Case
+    - RθJC
+    - RthJC
+    found_in: 7/10
+  vf_max:
+    label: VF max
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Forward drop voltage
+    - VF
+    found_in: 7/10
   cj_typ:
     label: CJ typ
     unit: pF
@@ -227,17 +250,17 @@ specs:
     - Typical Junction Capacitance @4.0 V, 1 MHz
     - C J
     found_in: 6/10
-  rthjc_typ:
-    label: RθJC typ
-    unit: °C/W
+  trr_typ:
+    label: trr typ
+    unit: uS
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
-    - Thermal Resistance, Junction to Case
-    - RθJC
-    - RthJC
+    - Typical reverse recovery time
+    - trr
+    - Maximum reverse recovery time
     found_in: 5/10
 rare_specs:
   rthjl_typ:
@@ -253,37 +276,14 @@ rare_specs:
     - RthJL
     - Typical Thermal Resistance1)
     found_in: 4/10
-  trr_typ:
-    label: trr typ
-    unit: uS
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Typical reverse recovery time
-    - trr
-    - Maximum reverse recovery time
-    found_in: 3/10
   dv_dt_max:
     label: dv/dt max
     unit: V/uS
     stat: max
     conditions: null
     rule: '>='
-    critical: true
+    critical: false
     aliases:
     - Voltage rate of change (rated VR)
     - dv/dt
-    found_in: 2/10
-  vf_max:
-    label: VF max
-    unit: V
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Forward drop voltage
-    - VF
     found_in: 2/10

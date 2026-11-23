@@ -14,9 +14,16 @@ status: draft
 must_match:
 - package
 - aec_q200
-visual_check: Footprint (for package)
+- operating_temp_range
+- sulfur_test
+- storage_temp
+- shelf_life
+- size
+- voltage_proof
+- resistance_to_soldering_heat
+visual_check: Footprint, Pinout (no pins for resistors), Marking (no marking for small sizes)
 drafted:
-  at: '2026-11-23T07:23:25+00:00'
+  at: '2026-11-23T15:14:31+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -61,6 +68,27 @@ specs:
     aliases:
     - Max. Operating Voltage
     found_in: 9/10
+  power_rating:
+    label: Power Rating
+    unit: W
+    stat: value
+    conditions: at_70c
+    rule: '>='
+    critical: false
+    aliases:
+    - Power Rating
+    - Power Rating at 70°C
+    found_in: 9/10
+  resistance_range:
+    label: Resistance Range
+    unit: Ω
+    stat: value
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Resistance Range
+    found_in: 9/10
   solderability:
     label: Solderability
     unit: '%'
@@ -83,15 +111,15 @@ specs:
     - TCR (PPM/°C)
     - Temperature Coefficient of Resistance (T.C.R.)
     found_in: 9/10
-  resistance_range:
-    label: Resistance Range
-    unit: Ω
+  max_overload_voltage:
+    label: Max. Overload Voltage
+    unit: V
     stat: value
     conditions: null
-    rule: contains
+    rule: '>='
     critical: false
     aliases:
-    - Resistance Range
+    - Max. Overload Voltage
     found_in: 8/10
   shelf_life:
     label: Shelf Life
@@ -103,28 +131,7 @@ specs:
     aliases:
     - Shelf Life
     found_in: 8/10
-  max_overload_voltage:
-    label: Max. Overload Voltage
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Max. Overload Voltage
-    found_in: 7/10
-  power_rating:
-    label: Power Rating
-    unit: W
-    stat: value
-    conditions: at 70°C
-    rule: '>='
-    critical: false
-    aliases:
-    - Power Rating
-    - Power Rating at 70°C
-    found_in: 7/10
-  storage_temp_range:
+  storage_temp:
     label: Storage Temperature
     unit: °C
     stat: range
@@ -133,6 +140,26 @@ specs:
     critical: false
     aliases:
     - Storage Temperature
+    found_in: 8/10
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: GΩ
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Insulation Resistance
+    found_in: 7/10
+  size:
+    label: Size
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Size
     found_in: 7/10
   aec_q200:
     label: AEC-Q200
@@ -146,15 +173,25 @@ specs:
     - AEC-Q200 Compliance
     - AEC-Q200
     found_in: 6/10
-  insulation_resistance:
-    label: Insulation Resistance
-    unit: GΩ
-    stat: min
+  marking:
+    label: Marking
+    unit: null
+    stat: value
     conditions: null
-    rule: '>='
+    rule: info
     critical: false
     aliases:
-    - Insulation Resistance
+    - Marking
+    found_in: 6/10
+  resistance_to_soldering_heat:
+    label: Resistance to Soldering Heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance to Soldering Heat
     found_in: 6/10
   sulfur_test:
     label: Sulfur Test
@@ -166,6 +203,21 @@ specs:
     aliases:
     - Sulfur Test
     found_in: 6/10
+  endurance:
+    label: Endurance
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Operational Life
+    - Biased Humidity
+    - High Temperature Exposure
+    - Board Flex
+    - Endurance
+    - Damp Heat with Load
+    found_in: 5/10
   resistance_tolerance:
     label: Resistance Tolerance
     unit: '%'
@@ -187,27 +239,6 @@ specs:
     - Voltage Proof
     found_in: 5/10
 rare_specs:
-  endurance:
-    label: Endurance
-    unit: Ω
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Operational Life
-    - Biased Humidity
-    - High Temperature Exposure
-    - Board Flex
-    - Endurance
-    - Damp Heat with Load
-    - Dry Heat
-    - Bending Strength
-    - Variation of resistance with temperature
-    - Short Time Overload
-    - Damp Heat
-    - Resistance to Soldering Heat
-    found_in: 4/10
   flammability:
     label: Flammability
     unit: null
@@ -218,6 +249,26 @@ rare_specs:
     aliases:
     - Flammability
     found_in: 4/10
+  short_time_overload:
+    label: Short Time Overload
+    unit: mΩ
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Short Time Overload
+    found_in: 4/10
+  leaching:
+    label: Leaching
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Leaching
+    found_in: 3/10
   rohs:
     label: RoHS
     unit: null
@@ -228,6 +279,107 @@ rare_specs:
     aliases:
     - RoHS
     found_in: 3/10
+  temperature_cycling:
+    label: Temperature Cycling
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Temperature Cycling
+    - Reflow Profiles
+    found_in: 3/10
+  terminal_strength:
+    label: Terminal Strength
+    unit: kg
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Terminal Strength
+    found_in: 3/10
+  a:
+    label: A
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - A
+    found_in: 2/10
+  b:
+    label: B
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - B
+    found_in: 2/10
+  bending_strength:
+    label: Bending Strength
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Bending Strength
+    found_in: 2/10
+  dry_heat:
+    label: Dry Heat
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Dry Heat
+    found_in: 2/10
+  e:
+    label: E
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - E
+    found_in: 2/10
+  esd:
+    label: ESD
+    unit: KV
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - ESD
+    found_in: 2/10
+  f:
+    label: F
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - F
+    found_in: 2/10
+  mechanical_shock:
+    label: Mechanical Shock
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Mechanical Shock
+    found_in: 2/10
   msl:
     label: MSL
     unit: null
@@ -238,3 +390,193 @@ rare_specs:
     aliases:
     - MSL
     found_in: 2/10
+  p0:
+    label: P0
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - P0
+    - P 0
+    found_in: 2/10
+  p1:
+    label: P1
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - P1
+    - P 1
+    found_in: 2/10
+  p2:
+    label: P2
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - P2
+    - P 2
+    found_in: 2/10
+  phi_a:
+    label: ΦA
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - ΦA
+    found_in: 2/10
+  phi_b:
+    label: ΦB
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - ΦB
+    found_in: 2/10
+  phi_c:
+    label: ΦC
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - ΦC
+    found_in: 2/10
+  phi_d0:
+    label: ΦD0
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - ΦD0
+    - ΦD 0
+    found_in: 2/10
+  rapid_change_of_temperature:
+    label: Rapid Change of Temperature
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Rapid Change of Temperature
+    found_in: 2/10
+  reel_diameter:
+    label: Reel Diameter
+    unit: inch
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Reel Diameter
+    found_in: 2/10
+  reflow_profiles:
+    label: Reflow Profiles
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Ramp-up rate
+    - Liquidous temperature
+    - Min. Peak temperature
+    - Max. Peak temperature
+    - Time within 5°C of the specified classification temperature
+    - Ramp-down rate
+    - Time 25°C to peak temperature
+    found_in: 2/10
+  resistance_to_solvents:
+    label: Resistance to Solvents
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance to Solvents
+    found_in: 2/10
+  t:
+    label: T
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - T
+    found_in: 2/10
+  tape_width:
+    label: Tape Width
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Tape Width
+    found_in: 2/10
+  vibration:
+    label: Vibration
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Vibration
+    found_in: 2/10
+  w:
+    label: W
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - W
+    found_in: 2/10
+  damp_heat:
+    label: Damp Heat
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Damp Heat
+    found_in: 1/10
+  rated_current:
+    label: Rated Current
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Rated Current
+    found_in: 1/10
+  variation_resistance_temp:
+    label: Variation of resistance with temperature
+    unit: mΩ
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Variation of resistance with temperature
+    found_in: 1/10

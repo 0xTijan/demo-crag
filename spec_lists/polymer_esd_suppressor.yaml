@@ -15,7 +15,7 @@ must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T07:18:08+00:00'
+  at: '2026-11-23T15:13:10+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -51,6 +51,8 @@ specs:
     critical: true
     aliases:
     - Maximum Contact Discharge Voltage Per IEC61000-4-2
+    - Maximum Storage Temperature
+    - TSTG
     - '-'
     - Maximum Contact Discharge Voltage
     found_in: 10/10
@@ -74,7 +76,7 @@ specs:
     label: Capacitance typ
     unit: pF
     stat: typ
-    conditions: null
+    conditions: VR=0V, f=1MHz
     rule: ≈
     critical: false
     aliases:
@@ -87,7 +89,7 @@ specs:
     label: Leakage Current range
     unit: uA
     stat: range
-    conditions: null
+    conditions: DC applied voltage
     rule: <=
     critical: false
     aliases:
@@ -97,21 +99,7 @@ specs:
     - Capacitance
     - C P
     found_in: 10/10
-  t_solder_max:
-    label: Lead Temperature max
-    unit: °C
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum Lead Temperature for Soldering During 10s
-    - TL
-    - T L
-    - Rated Voltage
-    - V R
-    found_in: 10/10
-  toper_range:
+  t_oper_range:
     label: Operating Temperature range
     unit: °C
     stat: range
@@ -124,7 +112,21 @@ specs:
     - T OPER
     - Maximum Operating Temperature Range
     found_in: 10/10
-  tstg_range:
+  t_solder_max:
+    label: Lead Temperature max
+    unit: °C
+    stat: max
+    conditions: soldering 10s
+    rule: '>='
+    critical: false
+    aliases:
+    - Maximum Lead Temperature for Soldering During 10s
+    - TL
+    - T L
+    - Rated Voltage
+    - V R
+    found_in: 10/10
+  t_stg_range:
     label: Storage Temperature range
     unit: °C
     stat: range
@@ -133,15 +135,15 @@ specs:
     critical: false
     aliases:
     - Maximum Storage Temperature
-    - TSTG
     - T STG
+    - TSTG
     - Maximum Storage Temperature Range
     found_in: 10/10
   vc_typ:
     label: Clamping Voltage typ
     unit: V
     stat: typ
-    conditions: null
+    conditions: IEC61000-4-2 8KV contact discharge
     rule: ≈
     critical: false
     aliases:
@@ -155,7 +157,7 @@ specs:
     label: Trigger Voltage typ
     unit: V
     stat: typ
-    conditions: null
+    conditions: IEC61000-4-2 8KV contact discharge
     rule: ≈
     critical: false
     aliases:
@@ -174,17 +176,17 @@ specs:
     critical: true
     aliases:
     - Package
-    found_in: 8/10
+    found_in: 9/10
   esd_pulse_min:
     label: ESD Pulse Withstand min
     unit: pulses
     stat: min
-    conditions: null
+    conditions: IEC61000-4-2 8KV contact discharge
     rule: '>='
     critical: false
     aliases:
     - ESD Pulse Withstand
     - '-'
     - Pulses
-    found_in: 6/10
+    found_in: 7/10
 rare_specs: {}

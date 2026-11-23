@@ -13,9 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: Pinout (inductor leads)
+visual_check: Pinout (inductor type)
 drafted:
-  at: '2026-11-23T06:56:58+00:00'
+  at: '2026-11-23T15:08:29+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -38,8 +38,38 @@ specs:
     critical: true
     aliases:
     - Package
-    - Product Identification
     - Dimensions
+    - Product Identification
+    found_in: 9/9
+  dc_r:
+    label: DCR max
+    unit: Ω
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - DCR
+    - DCR (Ω) ±20%
+    - DCR (Ω) max.
+    found_in: 9/9
+  idc_max:
+    label: IDC max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Rated DC Current
+    - IDC
+    - IDC (A) max.
+    - I rms
+    - Saturation Current
+    - Isat
+    - Temperature Rise Current
+    - Irms
+    - I sat
     found_in: 9/9
   inductance:
     label: Inductance
@@ -52,12 +82,23 @@ specs:
     - Inductance
     - L
     found_in: 9/9
+  operating_temp_range:
+    label: Operating temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Operating temperature range
+    - Characteristics
+    found_in: 9/9
   test_condition:
     label: Test Condition
     unit: null
     stat: value
     conditions: null
-    rule: ≈
+    rule: '='
     critical: false
     aliases:
     - Test Condition
@@ -75,42 +116,28 @@ specs:
     - Inductor Tolerance
     - Inductance Tolerance
     found_in: 9/9
-  dcr_max:
-    label: DCR max
-    unit: Ω
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - DCR
-    - DCR (Ω) ±20%
-    - DCR (Ω) max.
-    found_in: 8/9
-  idc_max:
-    label: IDC max
+  i_rms_max:
+    label: I rms max
     unit: A
     stat: max
     conditions: null
     rule: '>='
     critical: false
     aliases:
-    - Rated DC Current
-    - IDC
-    - IDC (A) max.
     - I rms
-    found_in: 7/9
-  operating_temp_range:
-    label: Operating temperature range
-    unit: °C
-    stat: range
+    - Operating temperature range
+    found_in: 8/9
+  shelf_life:
+    label: Shelf life
+    unit: years
+    stat: max
     conditions: null
-    rule: contains
+    rule: '>='
     critical: false
     aliases:
-    - Operating temperature range
-    - Characteristics
-    found_in: 6/9
+    - Shelf life
+    - Parts Per Reel
+    found_in: 8/9
   storage_temp_range:
     label: Storage temperature range
     unit: °C
@@ -121,8 +148,9 @@ specs:
     aliases:
     - Storage temperature range
     - Storage Temperature
+    - Shelf Storage conditions
     - Issued Date
-    found_in: 6/9
+    found_in: 8/9
   i_sat_max:
     label: I sat max
     unit: A
@@ -133,38 +161,63 @@ specs:
     aliases:
     - I sat
     - Saturation Rated Current
-    found_in: 5/9
-rare_specs:
-  shelf_life_max:
-    label: Shelf life max
-    unit: years
-    stat: max
+    - Characteristics
+    found_in: 7/9
+  tape_size_p:
+    label: Tape size P
+    unit: mm
+    stat: value
     conditions: null
-    rule: '>='
+    rule: '='
     critical: false
     aliases:
-    - Shelf life
-    - Shelf Storage conditions
-    found_in: 4/9
-  humidity_max:
-    label: Humidity max
-    unit: '%'
-    stat: max
+    - Parts Per Reel
+    - Tape size P
+    - Tape size
+    - Pitch
+    - P
+    found_in: 7/9
+  parts_per_reel:
+    label: Parts Per Reel
+    unit: null
+    stat: value
     conditions: null
-    rule: <=
+    rule: '='
+    critical: false
+    aliases:
+    - Parts Per Reel
+    found_in: 6/9
+  tape_size_w:
+    label: Tape size W
+    unit: mm
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Tape size
+    - Tape size W
+    found_in: 6/9
+rare_specs:
+  humidity:
+    label: Humidity
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: contains
     critical: false
     aliases:
     - Humidity
-    found_in: 3/9
-  i_rms_max:
-    label: I rms max
-    unit: A
-    stat: max
+    found_in: 4/9
+  solderability:
+    label: Solderability
+    unit: '%'
+    stat: min
     conditions: null
     rule: '>='
     critical: false
     aliases:
-    - I rms
+    - Solderability
     found_in: 3/9
   core_material:
     label: Core Material
@@ -176,18 +229,18 @@ rare_specs:
     aliases:
     - Core Material
     found_in: 1/9
-  em_i:
+  emi:
     label: EMI
     unit: null
     stat: value
-    conditions: null
+    conditions: Low
     rule: '='
     critical: false
     aliases:
     - EMI
     found_in: 1/9
-  frequency_range_max:
-    label: Frequency range max
+  frequency_range:
+    label: Frequency range
     unit: MHz
     stat: max
     conditions: null

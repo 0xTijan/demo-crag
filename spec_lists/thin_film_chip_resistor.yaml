@@ -13,11 +13,11 @@ version: 1
 status: draft
 must_match:
 - package
-- operating_temp_range
 - aec_q200
+- operating_temp_range
 visual_check: Pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T07:44:03+00:00'
+  at: '2026-11-23T15:19:17+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -43,6 +43,24 @@ specs:
     - Package
     - Size
     found_in: 10/10
+  resistance_change_endurance:
+    label: Endurance
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Operational Life
+    - Endurance
+    - Packing Quantity
+    - Environmental Characteristics
+    - Endurance Standard at 70℃ 1000hrs
+    - Endurance Standard at 70℃ 8000hrs
+    - Endurance Power at 70℃ 1000hrs
+    - Endurance Power at 70℃ 8000hrs
+    - Endurance Advanced temperature at 85℃ 1000hrs
+    found_in: 10/10
   solderability:
     label: Solderability
     unit: '%'
@@ -54,6 +72,28 @@ specs:
     - Solderability
     - Environmental Characteristics
     found_in: 10/10
+  max_operating_voltage:
+    label: Max. Operating Voltage
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Max. Operating Voltage
+    - Standard Electrical Specifications
+    found_in: 9/10
+  max_overload_voltage:
+    label: Max. Overload Voltage
+    unit: V
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Max. Overload Voltage
+    - Standard Electrical Specifications
+    found_in: 9/10
   operating_temp_range:
     label: Operating Temp. Range
     unit: °C
@@ -66,53 +106,6 @@ specs:
     - Standard Electrical Specifications
     - Operating Temperature Range
     found_in: 9/10
-  sulfur_test:
-    label: Sulfur Test
-    unit: null
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Sulfur Test
-    - Environmental Characteristics
-    - ESD
-    - Resistance to solvents
-    found_in: 9/10
-  tc_r_ppm_c:
-    label: TCR (PPM/°C)
-    unit: PPM/°C
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - TCR (PPM/°C)
-    - Standard Electrical Specifications
-    - TCR
-    - Temperature Coefficient of Resistance
-    - TCR (PPM/℃)
-    found_in: 9/10
-  max_operating_voltage:
-    label: Max. Operating Voltage
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Max. Operating Voltage
-    found_in: 8/10
-  max_overload_voltage:
-    label: Max. Overload Voltage
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Max. Overload Voltage
-    found_in: 8/10
   flammability:
     label: Flammability
     unit: null
@@ -124,7 +117,7 @@ specs:
     - Flammability
     - Environmental Characteristics
     - RoHS
-    found_in: 8/10
+    found_in: 9/10
   marking:
     label: Marking
     unit: null
@@ -135,18 +128,44 @@ specs:
     aliases:
     - Marking
     - Marking Code
-    - Packaging Code
-    found_in: 8/10
-  resistance_range:
-    label: Resistance Range
-    unit: Ω
-    stat: range
+    - Temperature Coefficient of Resistance (T.C.R.)
+    found_in: 9/10
+  resistance_change_soldering_heat:
+    label: Resistance to Soldering Heat
+    unit: '%'
+    stat: max
     conditions: null
-    rule: contains
+    rule: <=
     critical: false
     aliases:
-    - Resistance Range
-    found_in: 8/10
+    - Resistance to Soldering Heat
+    - Environmental Characteristics
+    found_in: 9/10
+  storage_temp_range:
+    label: Storage Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Storage Temperature
+    - ESD
+    - Q/GDW 11179.3
+    found_in: 9/10
+  tcr_ppm_c:
+    label: TCR (PPM/°C)
+    unit: PPM/°C
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - TCR (PPM/°C)
+    - Standard Electrical Specifications
+    - TCR
+    - TCR (PPM/℃)
+    found_in: 9/10
   esd:
     label: ESD
     unit: V
@@ -157,7 +176,76 @@ specs:
     aliases:
     - ESD
     - Environmental Characteristics
-    found_in: 7/10
+    found_in: 8/10
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: MΩ
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Insulation Resistance
+    - Resistance to Soldering Heat
+    found_in: 8/10
+  resistance_change_biased_humidity:
+    label: Biased Humidity
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Biased Humidity
+    - Environmental Characteristics
+    found_in: 8/10
+  resistance_change_high_temp_exposure:
+    label: High Temperature Exposure
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - High Temperature Exposure
+    - Environmental Characteristics
+    - High Temperature Exposure 125℃
+    - High Temperature Exposure 155℃
+    - High Temperature Exposure 175℃
+    found_in: 8/10
+  resistance_range:
+    label: Resistance Range
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance Range
+    found_in: 8/10
+  resistance_tolerance:
+    label: Resistance Tolerance
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Resistance Range
+    - Resistance Tolerance
+    found_in: 8/10
+  sulfur_test:
+    label: Sulfur Test
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Sulfur Test
+    - Environmental Characteristics
+    - Resistance to solvents
+    found_in: 8/10
   power_rating_at_70c:
     label: Power Rating at 70°C
     unit: W
@@ -167,8 +255,32 @@ specs:
     critical: false
     aliases:
     - Power Rating at 70°C
+    - Power Rating at 85°C
     - Standard Electrical Specifications
     - Power Rating
+    found_in: 7/10
+  resistance_change_bending_strength:
+    label: Bending Strength (Board Flex)
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Bending Strength (Board Flex)
+    - Bending Strength
+    - Environmental Characteristics
+    found_in: 7/10
+  resistance_change_temperature_cycling:
+    label: Temperature Cycling
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Temperature Cycling
+    - Environmental Characteristics
     found_in: 7/10
   aec_q200:
     label: AEC-Q200
@@ -182,45 +294,127 @@ specs:
     - AEC-Q200 Qualified
     - AEC-Q200 Compliance
     found_in: 6/10
-  insulation_resistance:
-    label: Insulation Resistance
-    unit: MΩ
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Insulation Resistance
-    - Resistance to Soldering Heat
-    found_in: 5/10
-  resistance_tolerance:
-    label: Resistance Tolerance
+  resistance_change_short_time_overload:
+    label: Short Time Overload
     unit: '%'
-    stat: range
+    stat: max
     conditions: null
-    rule: ≈
+    rule: <=
     critical: false
     aliases:
-    - Resistance Tolerance
+    - Short Time Overload
+    found_in: 6/10
+  resistance_change_vibration:
+    label: Vibration
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Vibration
+    found_in: 6/10
+  resistance_change_mechanical_shock:
+    label: Mechanical Shock
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Mechanical Shock
     found_in: 5/10
   shelf_life:
     label: Shelf Life
     unit: years
     stat: value
     conditions: null
-    rule: '>='
+    rule: '='
     critical: false
     aliases:
     - Shelf Life
     found_in: 5/10
-  storage_temp_range:
-    label: Storage Temperature Range
-    unit: °C
-    stat: range
+rare_specs:
+  resistance_change_resistance_change:
+    label: Resistance Change
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Endurance
+    found_in: 4/10
+  resistance_change_damp_heat:
+    label: Damp Heat with Load
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Environmental Characteristics
+    - Damp Heat with Load
+    found_in: 2/10
+  resistance_change_low_temp_operation:
+    label: Low Temperature Operation
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Environmental Characteristics
+    - Low Temperature Operation
+    found_in: 2/10
+  resistance_change_single_pulse:
+    label: Single pulse high voltage overload
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Environmental Characteristics
+    - Single pulse high voltage overload
+    found_in: 2/10
+  resistance_change_thermal_shock:
+    label: Thermal Shock
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Thermal Shock
+    found_in: 2/10
+  resistance:
+    label: Resistance
+    unit: Ω
+    stat: value
     conditions: null
     rule: '='
     critical: false
     aliases:
-    - Storage Temperature
-    found_in: 5/10
-rare_specs: {}
+    - Resistance
+    found_in: 1/10
+  resistance_change_low_temp_exposure:
+    label: Low Temperature Exposure
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Low Temperature Exposure
+    found_in: 1/10
+  resistance_change_periodic_overload:
+    label: Periodic electric overload
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Environmental Characteristics
+    found_in: 1/10

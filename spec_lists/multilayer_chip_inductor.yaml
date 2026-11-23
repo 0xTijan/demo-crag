@@ -16,7 +16,7 @@ must_match:
 - size
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T08:24:44+00:00'
+  at: '2026-11-23T15:26:04+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -64,6 +64,27 @@ specs:
     - DCR (Ω) max.
     - DCR (Ω) ±25%
     found_in: 7/7
+  dimensions:
+    label: Dimensions
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - A
+    - B
+    - W
+    - E
+    - F
+    - P0
+    - P1
+    - P2
+    - ψD0
+    - T
+    - L
+    - L1
+    found_in: 7/7
   idc_max:
     label: IDC max
     unit: mA
@@ -90,6 +111,17 @@ specs:
     - Inductance (nH)
     - Inductance (uH)
     found_in: 7/7
+  inductance_tolerance:
+    label: Inductance Tolerance
+    unit: '%'
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Inductance Tolerance
+    - Tolerance
+    found_in: 7/7
   operating_temp_range:
     label: Operating Temperature Range
     unit: °C
@@ -101,31 +133,6 @@ specs:
     - Operating Temperature Range
     - Operating Temperature
     found_in: 7/7
-  srf_min:
-    label: SRF min
-    unit: MHz
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - SRF
-    - SRF min.
-    - SRF (MHz) min.
-    - SRF (MHz)
-    - f_SRF
-    found_in: 7/7
-  inductance_tolerance:
-    label: Inductance Tolerance
-    unit: '%'
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Inductance Tolerance
-    - Tolerance
-    found_in: 6/7
   q_min:
     label: Q min
     unit: null
@@ -138,5 +145,216 @@ specs:
     - Q
     - Q min
     - Q min.
+    - SRF (MHz)
+    - f_SRF
+    found_in: 7/7
+  srf_min:
+    label: SRF min
+    unit: MHz
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - SRF
+    - SRF min.
+    - SRF (MHz) min.
     found_in: 6/7
-rare_specs: {}
+  storage_temp_range:
+    label: Storage Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    - Test Condition
+    found_in: 5/7
+  test_frequency:
+    label: Test Frequency
+    unit: MHz
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Test Frequency
+    - Test Freq.
+    - L/Q Freq.
+    - L/Q Test Condition
+    - Test Condition
+    found_in: 5/7
+  shelf_life:
+    label: Shelf Life
+    unit: years
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Shelf life
+    - Inductance (uH)
+    found_in: 4/7
+  weight:
+    label: Weight
+    unit: g
+    stat: value
+    conditions: 1000pcs
+    rule: ≈
+    critical: false
+    aliases:
+    - Weight
+    - Weight (g) (1000pcs)
+    found_in: 4/7
+rare_specs:
+  aec_q200_compliance:
+    label: AEC-Q200 Compliance
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - AEC-Q200 Compliance
+    found_in: 3/7
+  packaging_code:
+    label: Packaging Code
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Packaging Code
+    found_in: 3/7
+  quantity:
+    label: Quantity
+    unit: EA
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Quantity
+    found_in: 3/7
+  reel_dimension:
+    label: Reel Dimension
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Reel Dimension
+    - Tape Specifications
+    - Reel Dimension A
+    - Reel Dimension B
+    - Reel Dimension C
+    - Reel Dimension W
+    - Reel Dimension T
+    - Quantity
+    - Tape Specifications A
+    - Tape Specifications B
+    - Tape Specifications T
+    - Tape Specifications W
+    found_in: 3/7
+  humidity:
+    label: Humidity
+    unit: '%RH'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Humidity
+    found_in: 2/7
+  l_q_freq:
+    label: L/Q Freq.
+    unit: MHz
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - L/Q Freq.
+    found_in: 2/7
+  part_numbering:
+    label: Part Numbering
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Part Numbering
+    found_in: 2/7
+  reliability_test:
+    label: Reliability Test
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - High Temperature Exposure (Storage)
+    - Temperature Cycle
+    - Biased Humidity
+    - Operational Life
+    - Mechanical Shock
+    - Vibration
+    - Resistance to Soldering Heat
+    - Solderability
+    - Board Flex
+    - Terminal Strength (SMD)
+    - Bending Strength
+    - Dropping
+    found_in: 2/7
+  test_voltage:
+    label: Test Voltage
+    unit: mV
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Test Voltage
+    found_in: 2/7
+  reflow_profiles:
+    label: Reflow Profiles
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Reflow Profiles
+    found_in: 1/7
+  test_equipment:
+    label: Test Equipment
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Test Equipment
+    found_in: 1/7
+  land_pattern:
+    label: Land Pattern
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  tape_specifications:
+    label: Tape Specifications
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7

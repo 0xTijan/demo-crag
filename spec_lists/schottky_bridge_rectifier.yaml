@@ -13,9 +13,9 @@ version: 1
 status: draft
 must_match:
 - package
-visual_check: pinout (bridge pin order)
+visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T08:35:41+00:00'
+  at: '2026-11-23T15:27:22+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -27,6 +27,39 @@ drafted:
   - goodarksemi/mb12s-mb110s_1f051331.md
   - goodarksemi/mb22s-mb210s_72f71910.md
 specs:
+  if_av_max:
+    label: IF(AV) max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Maximum Average Forward Rectified Current
+    - I(AV)
+    - I (AV)
+    - Average Rectified Output Current @ 60Hz Sine Wave, R-load, T (FIG.1) A
+    - IO
+    - I F(AV)
+    - Average Forward Current
+    - Maximum Average Forward Output Current
+    found_in: 7/7
+  ifsm_max:
+    label: IFSM max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Peak Forward Surge Current
+    - IFSM
+    - I FSM
+    - Surge (Non-Repetitive) Forward Current @ 60Hz Half Sine Wave, 1 Cycle, TJ=25°C
+    - Peak Forward Surge Current 8.3ms Single Half Sine-Wave
+    - Peak Forward Surge Current (8.3ms Single Half Sine-Wave)
+    - Peak Forward Surge Current 8.3 MS Single Half Sine-Wave Superimposed on Rated Lo
+    found_in: 7/7
   package:
     label: Package
     unit: null
@@ -52,39 +85,6 @@ specs:
     - V RRM
     - V DC
     - Repetitive Peak Reverse Voltage
-    found_in: 7/7
-  if_av_max:
-    label: I(AV) max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum Average Forward Rectified Current
-    - I(AV)
-    - I (AV)
-    - Average Rectified Output Current @ 60Hz Sine Wave, R-load, T (FIG.1) A
-    - IO
-    - I F(AV)
-    - Average Forward Current
-    - Maximum Average Forward Output Current
-    found_in: 7/7
-  ifsm_max:
-    label: IFSM max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Peak Forward Surge Current
-    - IFSM
-    - I FSM
-    - Surge (Non-Repetitive) Forward Current @ 60Hz Half Sine Wave, 1 Cycle, TJ=25°C
-    - Peak Forward Surge Current 8.3ms Single Half Sine-Wave
-    - Peak Forward Surge Current (8.3ms Single Half Sine-Wave)
-    - Peak Forward Surge Current 8.3 MS Single Half Sine-Wave Superimposed on Rated Lo
     found_in: 7/7
   ir_max@ta_25c:
     label: IR max @ TA=25°C
@@ -123,6 +123,22 @@ specs:
     - Operation Junction and Storage Temperature Range
     - Operation Junction Temperature Range
     found_in: 7/7
+  ir_max@ta_100c:
+    label: IR max @ TA=100°C
+    unit: mA
+    stat: max
+    conditions: TA=100°C
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum Instantaneous Reverse Current
+    - IR
+    - I R
+    - Maximum DC Reverse Current at Rated DC Blocking Voltage Per Diode
+    - IRRM
+    - Reverse Current
+    - I 2 R
+    found_in: 5/7
   rthja_typ:
     label: RθJA typ
     unit: °C/W
@@ -152,60 +168,32 @@ specs:
     - T STG
     - Storage Temperature
     found_in: 5/7
-  c_j_typ:
-    label: CJ typ
-    unit: pF
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Maximum Instantaneous Forward Voltage Drop Per Diode
-    - VF
-    - Junction Capacitance
-    - C J
-    - Typical Junction Capacitance per at 4.0 V, 1.0 MHz
-    found_in: 4/7
-  ir_max@ta_100c:
-    label: IR max @ TA=100°C
-    unit: mA
+  vf_max:
+    label: VF max @ I=1A
+    unit: V
     stat: max
-    conditions: TA=100°C
+    conditions: I=1A
     rule: <=
     critical: false
     aliases:
-    - Maximum Instantaneous Reverse Current
-    - IR
-    - I R
-    - Maximum DC Reverse Current at Rated DC Blocking Voltage Per Diode
-    - IRRM
-    - Reverse Current
-    - I 2 R
-    found_in: 4/7
+    - Maximum Instantaneous Forward Voltage
+    - VF
+    - V F
+    - Maximum Instantaneous Forward Voltage at 2.0A
+    found_in: 5/7
   vrm_max:
     label: VRMS max
     unit: V
     stat: max
     conditions: null
     rule: '>='
-    critical: false
+    critical: true
     aliases:
     - Maximum RMS Voltage
     - VRMS
     - V RMS
     found_in: 4/7
 rare_specs:
-  vdc_max:
-    label: VDC max
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Maximum DC Blocking Voltage
-    - V DC
-    found_in: 2/7
   rthjc_typ:
     label: RθJC typ
     unit: °C/W
@@ -217,29 +205,13 @@ rare_specs:
     - Typical Thermal Resistance
     - R θJC
     - Typical Thermal Resistance, Junction-Case
-    found_in: 2/7
-  vf_max@i_1a:
-    label: VF max @ I=1A
+    found_in: 3/7
+  vdc_max:
+    label: VDC max
     unit: V
     stat: max
-    conditions: I=1A
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Instantaneous Forward Voltage
-    - VF
-    - Maximum Instantaneous Forward Voltage at 1.0A
-    - V F
-    found_in: 2/7
-  vf_max@i_2a:
-    label: VF max @ I=2A
-    unit: V
-    stat: max
-    conditions: I=2A
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Instantaneous Forward Voltage
-    - VF
-    - Maximum Instantaneous Forward Voltage at 2.0A
-    found_in: 2/7
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases: []
+    found_in: 0/7
