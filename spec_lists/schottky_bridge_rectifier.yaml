@@ -10,12 +10,12 @@
 type: schottky_bridge_rectifier
 name: Schottky bridge rectifier
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:27:22+00:00'
+  at: '2026-11-23T17:02:45+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:

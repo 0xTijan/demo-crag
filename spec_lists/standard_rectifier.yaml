@@ -10,12 +10,12 @@
 type: standard_rectifier
 name: standard recovery rectifier
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: cathode band / polarity mark, pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T14:58:07+00:00'
+  at: '2026-11-23T16:32:22+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:

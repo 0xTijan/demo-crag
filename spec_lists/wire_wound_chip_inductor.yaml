@@ -10,12 +10,12 @@
 type: wire_wound_chip_inductor
 name: wire wound chip inductor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:30:44+00:00'
+  at: '2026-11-23T17:06:15+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -61,7 +61,7 @@ specs:
     unit: μH
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Inductance
@@ -89,22 +89,12 @@ specs:
     - Size
     - Size (Inch)
     found_in: 2/2
-  storage_temp_range:
-    label: Storage Temp Range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Storage Temperature
-    found_in: 2/2
   test_freq:
     label: Test Freq.
     unit: MHz
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Test Freq.
@@ -116,7 +106,7 @@ specs:
     unit: '%'
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Tolerance
@@ -140,26 +130,6 @@ specs:
     critical: false
     aliases:
     - Construction
-    found_in: 1/2
-  humidity_max:
-    label: Humidity max
-    unit: '%RH'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Humidity
-    found_in: 1/2
-  material:
-    label: Material
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Material
     found_in: 1/2
   moisture_sensitivity_level:
     label: Moisture Sensitivity Level
@@ -191,16 +161,6 @@ specs:
     aliases:
     - Q min.
     - Q
-    found_in: 1/2
-  shelf_life_max:
-    label: Shelf life max
-    unit: years
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Shelf life
     found_in: 1/2
   srf_min:
     label: SRF min
@@ -244,4 +204,44 @@ specs:
     aliases:
     - Type
     found_in: 1/2
-rare_specs: {}
+rare_specs:
+  storage_temp_range:
+    label: Storage Temp Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 2/2
+  humidity_max:
+    label: Humidity max
+    unit: '%RH'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Humidity
+    found_in: 1/2
+  material:
+    label: Material
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Material
+    found_in: 1/2
+  shelf_life_max:
+    label: Shelf life max
+    unit: years
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Shelf life
+    found_in: 1/2

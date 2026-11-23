@@ -10,12 +10,12 @@
 type: complementary_mosfet
 name: N-channel and P-channel complementary MOSFET
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: null
 drafted:
-  at: '2026-11-23T15:12:42+00:00'
+  at: '2026-11-23T16:43:08+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -43,8 +43,8 @@ specs:
     - BV_DSS
     - BV DSS
     found_in: 10/10
-  bvdss_min@vgs_0v:
-    label: BVDSS min @ VGS=0V, ID=-250uA
+  bvdss_min_neg:
+    label: BVDSS min (N)
     unit: V
     stat: min
     conditions: VGS=0V, ID=-250uA
@@ -64,11 +64,11 @@ specs:
     - Fall Time
     - tf
     found_in: 10/10
-  id_max@ta_100c:
-    label: ID max @ TA=100°C
+  id_max@tc_100c:
+    label: ID max @ TC=100°C
     unit: A
     stat: max
-    conditions: TA=100°C
+    conditions: TC=100°C
     rule: '>='
     critical: true
     aliases:
@@ -81,11 +81,11 @@ specs:
     - I D
     - Drain Current - Continuous (TC=100°C)
     found_in: 10/10
-  id_max@ta_25c:
-    label: ID max @ TA=25°C
+  id_max@tc_25c:
+    label: ID max @ TC=25°C
     unit: A
     stat: max
-    conditions: TA=25°C
+    conditions: TC=25°C
     rule: '>='
     critical: true
     aliases:
@@ -114,33 +114,6 @@ specs:
     - I DM
     - Drain Current - Pulsed
     found_in: 10/10
-  is_max:
-    label: IS max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Continuous Source Current
-    - IS
-    - Maximum Body-Diode Continuous Current
-    - I S
-    found_in: 10/10
-  ism_max:
-    label: ISM max
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Pulsed Source Current
-    - ISM
-    - Diode Forward Voltage
-    - VSD
-    - I SM
-    found_in: 10/10
   package:
     label: Package
     unit: null
@@ -151,11 +124,11 @@ specs:
     aliases:
     - Package
     found_in: 10/10
-  pd_max@ta_25c:
-    label: PD max @ TA=25°C
+  pd_max@tc_25c:
+    label: PD max @ TC=25°C
     unit: W
     stat: max
-    conditions: TA=25°C
+    conditions: TC=25°C
     rule: '>='
     critical: true
     aliases:
@@ -213,7 +186,7 @@ specs:
     - I DSS
     found_in: 10/10
   bvdss_temp_coeff_neg:
-    label: BVDSS temp coeff (neg)
+    label: BVDSS temp coeff (N)
     unit: V/°C
     stat: typ
     conditions: Reference to 25°C, ID=-1mA
@@ -233,57 +206,87 @@ specs:
     - Input Capacitance
     - Ciss
     found_in: 10/10
-  ciss_typ@vgs_0v_f_1mhz:
-    label: Ciss typ @ VDS=15V, VGS=0V, F=1MHz
+  ciss_typ:
+    label: Ciss typ
     unit: pF
     stat: typ
-    conditions: VDS=15V, VGS=0V, F=1MHz
+    conditions: null
     rule: <=
     critical: false
     aliases:
     - Input Capacitance
     - Clss
     - Ciss
-    - C iss
+    - Maximum Body-Diode Continuous Current
+    - IS
+    - Output Capacitance
+    - Coss
+    - Gate Resistance
+    - R g
     found_in: 10/10
-  coss_typ@vgs_0v_f_1mhz:
-    label: Coss typ @ VDS=15V, VGS=0V, F=1MHz
+  coss_typ:
+    label: Coss typ
     unit: pF
     stat: typ
-    conditions: VDS=15V, VGS=0V, F=1MHz
+    conditions: null
     rule: <=
     critical: false
     aliases:
     - Output Capacitance
     - Coss
-    - C oss
+    - Diode Forward Voltage
+    - VSD
+    - Reverse Transfer Capacitance
+    - Crss
+    - Continuous Source Current
+    - I S
     found_in: 10/10
-  crss_typ@vgs_0v_f_1mhz:
-    label: Crss typ @ VDS=15V, VGS=0V, F=1MHz
+  crss_typ:
+    label: Crss typ
     unit: pF
     stat: typ
-    conditions: VDS=15V, VGS=0V, F=1MHz
+    conditions: null
     rule: <=
     critical: false
     aliases:
     - Reverse Transfer Capacitance
     - Crss
-    - C rss
+    - Drain-Source Breakdown Voltage
+    - BV DSS
+    - Gate Resistance
+    - R g
+    - Pulsed Source Current
+    - I SM
     found_in: 10/10
   gfs_typ:
-    label: gfs typ @ VDS=10V, ID=2A
+    label: gfs typ
     unit: S
     stat: typ
-    conditions: VDS=10V, ID=2A
+    conditions: null
     rule: '>='
     critical: false
     aliases:
     - Forward Transconductance
     - gfs
+    - Input Capacitance
+    - Ciss
     - Total Gate Charge
     - Qg
+    found_in: 10/10
+  gfs_typ_neg:
+    label: gfs typ (N)
+    unit: S
+    stat: typ
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
     - Operating Temperature Range
     - Package
+    - Forward Transconductance
+    - gfs
+    - Total Gate Charge
+    - Qg
     found_in: 10/10
   idss_max@vgs_0v_tj_125c:
     label: IDSS max @ VDS=16V, VGS=0V, TJ=125°C
@@ -298,6 +301,15 @@ specs:
     - Gate-Body Leakage Current
     - IGSS
     - I DSS
+    found_in: 10/10
+  idss_max_neg_vds_16v_vgs_0v_tj_125c:
+    label: IDSS max @ VDS=-16V, VGS=0V, TJ=125°C
+    unit: μA
+    stat: max
+    conditions: VDS=-16V, VGS=0V, TJ=125°C
+    rule: <=
+    critical: false
+    aliases:
     - Fall Time
     - tf
     - Diode Forward Voltage
@@ -305,18 +317,20 @@ specs:
     - Turn-On Delay Time
     - td(on)
     - Rise Time
+    - Tr
+    - Input Capacitance
+    - Ciss
+    - Reverse Transfer Capacitance
+    - Crss
     found_in: 10/10
-  idss_max@vgs_0v_tj_25c:
-    label: IDSS max @ VDS=20V, VGS=0V, TJ=25°C
+  idss_max_neg_vds_20v_vgs_0v_tj_25c:
+    label: IDSS max @ VDS=-20V, VGS=0V, TJ=25°C
     unit: μA
     stat: max
-    conditions: VDS=20V, VGS=0V, TJ=25°C
+    conditions: VDS=-20V, VGS=0V, TJ=25°C
     rule: <=
     critical: false
     aliases:
-    - Drain-Source Leakage Current
-    - IDSS
-    - I DSS
     - Turn-Off Delay Time
     - td(off)
     - Reverse Transfer Capacitance
@@ -326,8 +340,11 @@ specs:
     - Turn-On Delay Time
     - Td(on)
     - Fall Time
+    - Tf
+    - Output Capacitance
+    - Coss
     found_in: 10/10
-  igss_max@vgs_10v:
+  igss_max_neg_vgs_10v_vds_0v:
     label: IGSS max @ VGS=±10V, VDS=0V
     unit: nA
     stat: max
@@ -335,9 +352,6 @@ specs:
     rule: <=
     critical: false
     aliases:
-    - Gate-Source Leakage Current
-    - IGSS
-    - I GSS
     - Input Capacitance
     - Clss
     - Package
@@ -347,6 +361,47 @@ specs:
     - Td(off)
     - Output Capacitance
     - Coss
+    - Diode Forward Voltage
+    - VSD
+    - C oss
+    found_in: 10/10
+  is_max:
+    label: IS max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Continuous Source Current
+    - IS
+    - Pulsed Source Current
+    - ISM
+    - Input Capacitance
+    - Ciss
+    - Diode Forward Voltage
+    - VSD
+    - I S
+    - V SD
+    found_in: 10/10
+  ism_max:
+    label: ISM max
+    unit: A
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Pulsed Source Current
+    - ISM
+    - Diode Forward Voltage
+    - VSD
+    - Output Capacitance
+    - Coss
+    - Drain-Source Breakdown Voltage
+    - BVDSS
+    - I SM
+    - BV DSS
     found_in: 10/10
   pd_derate:
     label: PD derate
@@ -365,11 +420,23 @@ specs:
     - P D
     - Power Dissipation - Derate above 25°C
     found_in: 10/10
-  qgd_typ@vgs_4_5v:
-    label: Qgd typ @ VDS=10V, VGS=4.5V, ID=3A
+  qg_typ:
+    label: Qg typ
     unit: nC
     stat: typ
-    conditions: VDS=10V, VGS=4.5V, ID=3A
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Total Gate Charge
+    - Qg
+    - Q g
+    found_in: 10/10
+  qgd_typ:
+    label: Qgd typ
+    unit: nC
+    stat: typ
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -378,11 +445,11 @@ specs:
     - Gate Drain Charge
     - Q gd
     found_in: 10/10
-  qgs_typ@vgs_4_5v:
-    label: Qgs typ @ VDS=10V, VGS=4.5V, ID=3A
+  qgs_typ:
+    label: Qgs typ
     unit: nC
     stat: typ
-    conditions: VDS=10V, VGS=4.5V, ID=3A
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -421,43 +488,6 @@ specs:
     - Drain-Source Breakdown Voltage
     - BVDSS
     found_in: 10/10
-  rds_on_typ:
-    label: RDS(ON) typ @ VGS=-4.5V, ID=-3A
-    unit: mΩ
-    stat: typ
-    conditions: VGS=-4.5V, ID=-3A
-    rule: <=
-    critical: false
-    aliases:
-    - Output Capacitance
-    - Coss
-    - Turn-Off Delay Time
-    - td(off)
-    - Reverse Transfer Capacitance
-    - Crss
-    - Static Drain-Source On-Resistance
-    - RDS(ON)
-    - Turn-Off Fall Time
-    - tf
-    - Fall Time
-    - Diode Forward Voltage
-    found_in: 10/10
-  rds_on_typ@vgs_1_8v:
-    label: RDS(ON) typ @ VGS=1.8V, ID=1.5A
-    unit: mΩ
-    stat: typ
-    conditions: VGS=1.8V, ID=1.5A
-    rule: <=
-    critical: false
-    aliases:
-    - Static Drain-Source On-Resistance
-    - RDS(ON)
-    - Gate Threshold Voltage
-    - VGS(th)
-    - Forward Transconductance
-    - gfs
-    - V GS(th)
-    found_in: 10/10
   rds_on_typ@vgs_2_5v:
     label: RDS(ON) typ @ VGS=2.5V, ID=2A
     unit: mΩ
@@ -484,11 +514,71 @@ specs:
     - Static Drain-Source On- Resistance
     - R DS(ON)
     found_in: 10/10
-  td_off_typ@vgs_4_5v:
-    label: td(off) typ @ VDD=10V, VGS=4.5V, RG=25Ω, ID=1A
+  rds_on_typ_neg_vgs_1_8v_id_1a:
+    label: RDS(ON) typ @ VGS=-1.8V, ID=-1A
+    unit: mΩ
+    stat: typ
+    conditions: VGS=-1.8V, ID=-1A
+    rule: <=
+    critical: false
+    aliases:
+    - Diode Forward Voltage
+    - VSD
+    - Maximum Body-Diode Continuous Current
+    - IS
+    - Output Capacitance
+    - Coss
+    - Package
+    - V SD
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
+    - Gate Threshold Voltage
+    - VGS(th)
+    found_in: 10/10
+  rds_on_typ_neg_vgs_2_5v_id_2a:
+    label: RDS(ON) typ @ VGS=-2.5V, ID=-2A
+    unit: mΩ
+    stat: typ
+    conditions: VGS=-2.5V, ID=-2A
+    rule: <=
+    critical: false
+    aliases:
+    - Reverse Transfer Capacitance
+    - Crss
+    - Turn-Off Fall Time
+    - tf
+    - Input Capacitance
+    - Ciss
+    - Reverse Recovery Charge
+    - Q rr
+    - C rss
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
+    found_in: 10/10
+  rds_on_typ_neg_vgs_4_5v_id_3a:
+    label: RDS(ON) typ @ VGS=-4.5V, ID=-3A
+    unit: mΩ
+    stat: typ
+    conditions: VGS=-4.5V, ID=-3A
+    rule: <=
+    critical: false
+    aliases:
+    - Output Capacitance
+    - Coss
+    - Turn-Off Delay Time
+    - td(off)
+    - Fall Time
+    - Tf
+    - Reverse Recovery Time
+    - T rr
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
+    found_in: 10/10
+  td_off_typ:
+    label: td(off) typ
     unit: nS
     stat: typ
-    conditions: VDD=10V, VGS=4.5V, RG=25Ω, ID=1A
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -496,11 +586,11 @@ specs:
     - td(off)
     - T d(off)
     found_in: 10/10
-  td_on_typ@vgs_4_5v:
-    label: td(on) typ @ VDD=10V, VGS=4.5V, RG=25Ω, ID=1A
+  td_on_typ:
+    label: td(on) typ
     unit: nS
     stat: typ
-    conditions: VDD=10V, VGS=4.5V, RG=25Ω, ID=1A
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -508,17 +598,19 @@ specs:
     - td(on)
     - T d(on)
     found_in: 10/10
-  tf_typ@vgs_4_5v:
-    label: tf typ @ VDD=10V, VGS=4.5V, RG=25Ω, ID=1A
+  tf_typ:
+    label: tf typ
     unit: nS
     stat: typ
-    conditions: VDD=10V, VGS=4.5V, RG=25Ω, ID=1A
+    conditions: null
     rule: <=
     critical: false
     aliases:
     - Fall Time
     - tf
     - Turn-Off Fall Time
+    - Input Capacitance
+    - Ciss
     - T f
     found_in: 10/10
   tj_range:
@@ -533,15 +625,15 @@ specs:
     - TJ
     - Junction and Storage Temperature Range
     - TJ/STG
-    - T J
     - Storage Temperature Range
     - TSTG
+    - T J
     found_in: 10/10
-  tr_typ@vgs_4_5v:
-    label: tr typ @ VDD=10V, VGS=4.5V, RG=25Ω, ID=1A
+  tr_typ:
+    label: tr typ
     unit: nS
     stat: typ
-    conditions: VDD=10V, VGS=4.5V, RG=25Ω, ID=1A
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -555,29 +647,29 @@ specs:
     unit: V
     stat: min
     conditions: VGS=VDS, ID=250uA
-    rule: ≈
+    rule: '>='
     critical: false
     aliases:
     - Gate Threshold Voltage
     - VGS(th)
+    - V GS(th)
     found_in: 10/10
   vgs_th_min_neg:
-    label: VGS(th) min (neg)
+    label: VGS(th) min (N)
     unit: V
     stat: min
     conditions: VGS=VDS, ID=-250uA
-    rule: ≈
+    rule: '>='
     critical: false
     aliases:
     - Pin Count
-    - Reverse Transfer Capacitance
-    - Crss
-    - HSF Status
+    - Pulsed Source Current
+    - ISM
     - Gate Threshold Voltage
     - VGS(th)
     found_in: 10/10
   vgs_th_temp_coeff_neg:
-    label: VGS(th) temp coeff (neg)
+    label: VGS(th) temp coeff (N)
     unit: mV/°C
     stat: typ
     conditions: VGS=VDS, ID=-250uA
@@ -590,44 +682,48 @@ specs:
     - VGS(th) Temperature Coefficient
     - △VGS(th)
     found_in: 10/10
-  vgs_th_typ_neg:
-    label: VGS(th) typ (neg)
-    unit: V
-    stat: typ
-    conditions: VGS=VDS, ID=-250uA
-    rule: ≈
-    critical: false
-    aliases:
-    - Continuous Source Current
-    - IS
-    - Gate Threshold Voltage
-    - VGS(th)
-    found_in: 10/10
-  vsd_max@vgs_0v_tj_25c:
-    label: VSD max @ VGS=0V, IS=1A, TJ=25°C
+  vsd_max:
+    label: VSD max
     unit: V
     stat: max
-    conditions: VGS=0V, IS=1A, TJ=25°C
+    conditions: null
     rule: <=
     critical: false
     aliases:
     - Diode Forward Voltage
     - VSD
+    - Drain-Source Breakdown Voltage
+    - BV_DSS
     - Reverse Transfer Capacitance
     - Crss
-    - V SD
+    - BVDSS Temperature Coefficient
+    - △BVDSS/△TJ
+    - BV Temperature Coefficient DSS
+    - △BV DSS/△T J
     found_in: 10/10
-  qg_typ@vgs_4_5v:
-    label: Qg typ @ VDS=10V, VGS=4.5V, ID=3A
-    unit: nC
-    stat: typ
-    conditions: VDS=10V, VGS=4.5V, ID=3A
+  idss_max@vgs_0v_tj_25c:
+    label: IDSS max @ VDS=20V, VGS=0V, TJ=25°C
+    unit: μA
+    stat: max
+    conditions: VDS=20V, VGS=0V, TJ=25°C
     rule: <=
     critical: false
     aliases:
-    - Total Gate Charge
-    - Qg
-    - Q g
+    - Drain-Source Leakage Current
+    - IDSS
+    - I DSS
+    found_in: 9/10
+  igss_max@vgs_10v:
+    label: IGSS max @ VGS=±10V, VDS=0V
+    unit: nA
+    stat: max
+    conditions: VGS=±10V, VDS=0V
+    rule: <=
+    critical: false
+    aliases:
+    - Gate-Source Leakage Current
+    - IGSS
+    - I GSS
     found_in: 9/10
   tstg_range:
     label: TSTG range
@@ -639,21 +735,160 @@ specs:
     aliases:
     - Storage Temperature Range
     - TSTG
+    - Operating Junction Temperature Range
+    - TJ
     - T STG
     found_in: 9/10
-  vgs_th_max_neg:
-    label: VGS(th) max (neg)
-    unit: V
-    stat: max
-    conditions: VGS=VDS, ID=-250uA
+  vgs_th_temp_coeff:
+    label: VGS(th) temp coeff
+    unit: mV/°C
+    stat: typ
+    conditions: VGS=VDS, ID=250uA
     rule: ≈
     critical: false
     aliases:
-    - Pulsed Source Current
-    - ISM
+    - VGS(th) Temperature Coefficient
+    - △VGS(th)
+    - V Temperature Coefficient GS(th)
+    - △V GS(th)
+    found_in: 9/10
+  vsd_max_neg:
+    label: VSD max (N)
+    unit: V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Diode Forward Voltage
+    - VSD
+    found_in: 9/10
+  ciss_typ_neg:
+    label: Ciss typ (N)
+    unit: pF
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Input Capacitance
+    - Ciss
+    found_in: 8/10
+  coss_typ_neg:
+    label: Coss typ (N)
+    unit: pF
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Output Capacitance
+    - Coss
+    found_in: 8/10
+  crss_typ_neg:
+    label: Crss typ (N)
+    unit: pF
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Reverse Transfer Capacitance
+    - Crss
+    found_in: 8/10
+  qgd_typ_neg:
+    label: Qgd typ (N)
+    unit: nC
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Gate-Drain Charge
+    - Qgd
+    found_in: 8/10
+  qgs_typ_neg:
+    label: Qgs typ (N)
+    unit: nC
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - RoHS
+    - Gate-Source Charge
+    - Qgs
+    found_in: 8/10
+  rds_on_max_neg_vgs_1_8v_id_1a:
+    label: RDS(ON) max @ VGS=-1.8V, ID=-1A
+    unit: mΩ
+    stat: max
+    conditions: VGS=-1.8V, ID=-1A
+    rule: <=
+    critical: false
+    aliases:
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
     - Gate Threshold Voltage
     - VGS(th)
-    found_in: 9/10
+    found_in: 8/10
+  td_off_typ_neg:
+    label: td(off) typ (N)
+    unit: nS
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Turn-Off Delay Time
+    - Td(off)
+    found_in: 8/10
+  td_on_typ_neg:
+    label: td(on) typ (N)
+    unit: nS
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Turn-On Delay Time
+    - Td(on)
+    found_in: 8/10
+  tf_typ_neg:
+    label: tf typ (N)
+    unit: nS
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Fall Time
+    - Tf
+    found_in: 8/10
+  tr_typ_neg:
+    label: tr typ (N)
+    unit: nS
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Rise Time
+    - Tr
+    found_in: 8/10
+  vgs_th_max:
+    label: VGS(th) max
+    unit: V
+    stat: max
+    conditions: VGS=VDS, ID=250uA
+    rule: '>='
+    critical: false
+    aliases:
+    - Gate Threshold Voltage
+    - VGS(th)
+    - Forward Transconductance
+    - gfs
+    found_in: 8/10
   vgs_th_typ:
     label: VGS(th) typ
     unit: V
@@ -666,105 +901,34 @@ specs:
     - VGS(th)
     - V Temperature Coefficient GS(th)
     - △VGS(th)
-    - VGS(th) Temperature Coefficient
-    - △V GS(th)
-    found_in: 9/10
-  qgd_typ:
-    label: Qgd typ @ VDS=-10V, VGS=-4.5V, ID=-2A
-    unit: nC
-    stat: typ
-    conditions: VDS=-10V, VGS=-4.5V, ID=-2A
-    rule: <=
-    critical: false
-    aliases:
-    - Gate-Drain Charge
-    - Qgd
     found_in: 8/10
-  qgs_typ:
-    label: Qgs typ @ VDS=-10V, VGS=-4.5V, ID=-2A
-    unit: nC
-    stat: typ
-    conditions: VDS=-10V, VGS=-4.5V, ID=-2A
-    rule: <=
-    critical: false
-    aliases:
-    - RoHS
-    - Gate-Source Charge
-    - Qgs
-    found_in: 8/10
-  td_off_typ:
-    label: td(off) typ @ VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A
-    unit: nS
-    stat: typ
-    conditions: VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A
-    rule: <=
-    critical: false
-    aliases:
-    - Turn-Off Delay Time
-    - Td(off)
-    found_in: 8/10
-  td_on_typ:
-    label: td(on) typ @ VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A
-    unit: nS
-    stat: typ
-    conditions: VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A
-    rule: <=
-    critical: false
-    aliases:
-    - Turn-On Delay Time
-    - Td(on)
-    found_in: 8/10
-  tf_typ:
-    label: tf typ @ VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A
-    unit: nS
-    stat: typ
-    conditions: VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A
-    rule: <=
-    critical: false
-    aliases:
-    - Fall Time
-    - Tf
-    found_in: 8/10
-  tr_typ:
-    label: tr typ @ VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A
-    unit: nS
-    stat: typ
-    conditions: VDD=-10V, VGS=-4.5V, RG=25Ω, ID=-1A
-    rule: <=
-    critical: false
-    aliases:
-    - Rise Time
-    - Tr
-    found_in: 8/10
-  vgs_th_max:
-    label: VGS(th) max
-    unit: V
+  rds_on_max_neg_vgs_2_5v_id_2a:
+    label: RDS(ON) max @ VGS=-2.5V, ID=-2A
+    unit: mΩ
     stat: max
-    conditions: VGS=VDS, ID=250uA
-    rule: ≈
+    conditions: VGS=-2.5V, ID=-2A
+    rule: <=
     critical: false
     aliases:
-    - Gate Threshold Voltage
-    - VGS(th)
-    - Forward Transconductance
-    - gFS
-    found_in: 8/10
-  vgs_th_temp_coeff:
-    label: VGS(th) temp coeff
-    unit: mV/°C
-    stat: typ
-    conditions: VGS=VDS, ID=250uA
-    rule: ≈
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
+    found_in: 7/10
+  rds_on_max_neg_vgs_4_5v_id_3a:
+    label: RDS(ON) max @ VGS=-4.5V, ID=-3A
+    unit: mΩ
+    stat: max
+    conditions: VGS=-4.5V, ID=-3A
+    rule: <=
     critical: false
     aliases:
-    - VGS(th) Temperature Coefficient
-    - △VGS(th)
-    found_in: 8/10
-  qg_typ:
-    label: Qg typ @ VDS=-10V, VGS=-4.5V, ID=-2A
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
+    found_in: 7/10
+  qg_typ_neg:
+    label: Qg typ (N)
     unit: nC
     stat: typ
-    conditions: VDS=-10V, VGS=-4.5V, ID=-2A
+    conditions: null
     rule: <=
     critical: false
     aliases:
@@ -772,4 +936,292 @@ specs:
     - Total Gate Charge
     - Qg
     found_in: 6/10
-rare_specs: {}
+  rds_on_max@vgs_4_5v:
+    label: RDS(ON) max @ VGS=4.5V, ID=3A
+    unit: mΩ
+    stat: max
+    conditions: VGS=4.5V, ID=3A
+    rule: <=
+    critical: false
+    aliases:
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
+    found_in: 6/10
+  rds_on_typ@vgs_1_8v:
+    label: RDS(ON) typ @ VGS=1.8V, ID=1.5A
+    unit: mΩ
+    stat: typ
+    conditions: VGS=1.8V, ID=1.5A
+    rule: <=
+    critical: false
+    aliases:
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
+    - Gate Threshold Voltage
+    - VGS(th)
+    found_in: 5/10
+rare_specs:
+  ciss_max:
+    label: Ciss max
+    unit: pF
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Input Capacitance
+    - Ciss
+    found_in: 4/10
+  ciss_max_neg:
+    label: Ciss max (N)
+    unit: pF
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Input Capacitance
+    - Ciss
+    found_in: 4/10
+  coss_max:
+    label: Coss max
+    unit: pF
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Output Capacitance
+    - Coss
+    found_in: 4/10
+  coss_max_neg:
+    label: Coss max (N)
+    unit: pF
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Output Capacitance
+    - Coss
+    found_in: 4/10
+  crss_max:
+    label: Crss max
+    unit: pF
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Reverse Transfer Capacitance
+    - Crss
+    found_in: 4/10
+  crss_max_neg:
+    label: Crss max (N)
+    unit: pF
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Reverse Transfer Capacitance
+    - Crss
+    found_in: 4/10
+  qg_max:
+    label: Qg max
+    unit: nC
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Total Gate Charge
+    - Qg
+    found_in: 4/10
+  qg_max_neg:
+    label: Qg max (N)
+    unit: nC
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Total Gate Charge
+    - Qg
+    found_in: 4/10
+  qgd_max:
+    label: Qgd max
+    unit: nC
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Gate-Drain Charge
+    - Qgd
+    found_in: 4/10
+  qgd_max_neg:
+    label: Qgd max (N)
+    unit: nC
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Gate-Drain Charge
+    - Qgd
+    found_in: 4/10
+  qgs_max:
+    label: Qgs max
+    unit: nC
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Gate-Source Charge
+    - Qgs
+    found_in: 4/10
+  qgs_max_neg:
+    label: Qgs max (N)
+    unit: nC
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Gate-Source Charge
+    - Qgs
+    found_in: 4/10
+  td_off_max:
+    label: td(off) max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Turn-Off Delay Time
+    - Td(off)
+    found_in: 4/10
+  td_off_max_neg:
+    label: td(off) max (N)
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Turn-Off Delay Time
+    - Td(off)
+    found_in: 4/10
+  td_on_max:
+    label: td(on) max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Turn-On Delay Time
+    - Td(on)
+    found_in: 4/10
+  td_on_max_neg:
+    label: td(on) max (N)
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Turn-On Delay Time
+    - Td(on)
+    found_in: 4/10
+  tf_max:
+    label: tf max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Fall Time
+    - Tf
+    found_in: 4/10
+  tf_max_neg:
+    label: tf max (N)
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Fall Time
+    - Tf
+    found_in: 4/10
+  tr_max:
+    label: tr max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Rise Time
+    - Tr
+    found_in: 4/10
+  tr_max_neg:
+    label: tr max (N)
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Rise Time
+    - Tr
+    found_in: 4/10
+  rds_on_max@vgs_2_5v:
+    label: RDS(ON) max @ VGS=2.5V, ID=2A
+    unit: mΩ
+    stat: max
+    conditions: VGS=2.5V, ID=2A
+    rule: <=
+    critical: false
+    aliases:
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
+    found_in: 3/10
+  vgs_th_max_neg:
+    label: VGS(th) max (N)
+    unit: V
+    stat: max
+    conditions: VGS=VDS, ID=-250uA
+    rule: '>='
+    critical: false
+    aliases:
+    - Gate Threshold Voltage
+    - VGS(th)
+    found_in: 3/10
+  vgs_th_typ_neg:
+    label: VGS(th) typ (N)
+    unit: V
+    stat: typ
+    conditions: VGS=VDS, ID=-250uA
+    rule: ≈
+    critical: false
+    aliases:
+    - Gate Threshold Voltage
+    - VGS(th)
+    found_in: 3/10
+  rds_on_max@vgs_1_8v:
+    label: RDS(ON) max @ VGS=1.8V, ID=1.5A
+    unit: mΩ
+    stat: max
+    conditions: VGS=1.8V, ID=1.5A
+    rule: <=
+    critical: false
+    aliases:
+    - Static Drain-Source On-Resistance
+    - RDS(ON)
+    found_in: 2/10

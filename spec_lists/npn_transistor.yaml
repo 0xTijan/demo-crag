@@ -10,12 +10,12 @@
 type: npn_transistor
 name: NPN bipolar transistor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: Pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T14:58:51+00:00'
+  at: '2026-11-23T16:33:06+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -195,8 +195,8 @@ specs:
     - h FE
     found_in: 10/10
   i_cbo_max:
-    label: ICBO max
-    unit: nA
+    label: I CBO max
+    unit: μA
     stat: max
     conditions: null
     rule: <=
@@ -211,8 +211,8 @@ specs:
     - Collector Cutoff Current
     found_in: 10/10
   i_ebo_max:
-    label: IEBO max
-    unit: nA
+    label: I EBO max
+    unit: μA
     stat: max
     conditions: null
     rule: <=
@@ -224,6 +224,8 @@ specs:
     - Collector cut-off current
     - I CBO
     - I EBO
+    - Collector-Emitter Cutoff Current
+    - I CEO
     - Emitter Cutoff Current
     found_in: 10/10
   v_be_sat_max:
@@ -320,5 +322,14 @@ rare_specs:
     conditions: null
     rule: '='
     critical: true
-    aliases: []
-    found_in: 0/10
+    aliases:
+    - Mounting position
+    - Halogen and Antimony Free
+    - RoHS compliant
+    - AEC-Q101 Qualified
+    - Marking
+    - Packaging
+    - SPQ
+    - Complement to the NPN MJE340
+    - Minimum Lot-to-Lot variations
+    found_in: 3/10

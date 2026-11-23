@@ -10,12 +10,12 @@
 type: polymer_esd_suppressor
 name: polymer ESD suppressor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:13:10+00:00'
+  at: '2026-11-23T16:43:35+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -99,20 +99,7 @@ specs:
     - Capacitance
     - C P
     found_in: 10/10
-  t_oper_range:
-    label: Operating Temperature range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Maximum Operating Temperature
-    - TOPER
-    - T OPER
-    - Maximum Operating Temperature Range
-    found_in: 10/10
-  t_solder_max:
+  t_lead_max:
     label: Lead Temperature max
     unit: °C
     stat: max
@@ -125,6 +112,19 @@ specs:
     - T L
     - Rated Voltage
     - V R
+    found_in: 10/10
+  t_oper_range:
+    label: Operating Temperature range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Maximum Operating Temperature
+    - TOPER
+    - T OPER
+    - Maximum Operating Temperature Range
     found_in: 10/10
   t_stg_range:
     label: Storage Temperature range

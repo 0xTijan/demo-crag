@@ -10,13 +10,13 @@
 type: pulse_withstanding_chip_resistor
 name: pulse / surge withstanding chip resistor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 - aec_q200
-visual_check: Pinout (G/D/S order)
+visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:26:32+00:00'
+  at: '2026-11-23T17:01:56+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -101,7 +101,7 @@ specs:
     unit: Ω
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Resistance Range
@@ -123,7 +123,7 @@ specs:
     unit: '%'
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Tolerance
@@ -131,7 +131,7 @@ specs:
     found_in: 8/8
   insulation_resistance:
     label: Insulation Resistance
-    unit: G
+    unit: GΩ
     stat: min
     conditions: null
     rule: '>='
@@ -149,6 +149,28 @@ specs:
     aliases:
     - MSL
     found_in: 4/8
+rare_specs:
+  sulfur_test:
+    label: Sulfur Test
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Sulfur Test
+    - Max. Overload Voltage
+    found_in: 8/8
+  shelf_life:
+    label: Shelf Life
+    unit: year
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Shelf Life
+    found_in: 5/8
   solderability:
     label: Solderability
     unit: '%'
@@ -164,12 +186,11 @@ specs:
     unit: null
     stat: value
     conditions: null
-    rule: info
+    rule: '='
     critical: false
     aliases:
     - Voltage Proof
     found_in: 4/8
-rare_specs:
   rohs:
     label: RoHS
     unit: null

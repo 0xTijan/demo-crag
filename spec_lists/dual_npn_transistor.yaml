@@ -10,12 +10,12 @@
 type: dual_npn_transistor
 name: dual NPN transistor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:27:56+00:00'
+  at: '2026-11-23T17:03:18+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:

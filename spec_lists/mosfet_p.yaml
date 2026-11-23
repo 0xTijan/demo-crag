@@ -10,12 +10,12 @@
 type: mosfet_p
 name: P-channel MOSFET
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: MOSFET pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T14:56:32+00:00'
+  at: '2026-11-23T16:30:46+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,25 +30,11 @@ drafted:
   - goodarksemi/gsfd4015_f4567467.md
   - goodarksemi/gsfq3041_43cefed3.md
 specs:
-  eas_max:
-    label: EAS max
-    unit: mJ
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: true
-    aliases:
-    - Single Avalanche Energy (Note 2)
-    - EAS
-    - Power Dissipation
-    - P D
-    - Single Pulse Avalanche Energy, (L=0.3mH)
-    found_in: 10/10
   id_max@tc_25c:
     label: ID max @ TC=25°C
     unit: A
     stat: max
-    conditions: tc_25c
+    conditions: TC=25°C
     rule: '>='
     critical: true
     aliases:
@@ -75,25 +61,11 @@ specs:
     - I DM
     - Drain Current-Pulsed
     found_in: 10/10
-  package:
-    label: Package
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Package
-    - Forward Current, Continuous
-    - I SD
-    - Total Gate Charge
-    - Qg
-    found_in: 10/10
   rds_on_max@vgs_10v:
     label: RDS(on) max @ VGS=-10V, ID=-20A
     unit: mΩ
     stat: max
-    conditions: vgs_10v_id_20a
+    conditions: VGS=-10V, ID=-20A
     rule: <=
     critical: true
     aliases:
@@ -106,11 +78,30 @@ specs:
     - Static Drain-Source On-Resistance
     - Drain Static-Source On-Resistance
     found_in: 10/10
+  rds_on_max@vgs_4_5v:
+    label: RDS(on) max @ VGS=-4.5V, ID=-10A
+    unit: mΩ
+    stat: max
+    conditions: VGS=-4.5V, ID=-10A
+    rule: <=
+    critical: true
+    aliases:
+    - Drain-Source On-state Resistance (Note 4)
+    - RDS(on)
+    - Drain-Source On-state Resistance
+    - Total Gate Charge
+    - Qg
+    - Drain-Source On-state Resistance (Note 3)
+    - R DS(on)
+    - Drain-Source On-Resistance
+    - Static Drain-Source On-Resistance
+    - Drain Static-Source On-Resistance
+    found_in: 10/10
   vbrdss_min:
     label: V(BR)DSS min
     unit: V
     stat: min
-    conditions: vgs_0v_id_-250ua
+    conditions: VGS=0V, ID=-250µA
     rule: '>='
     critical: true
     aliases:
@@ -151,14 +142,14 @@ specs:
     - V GS
     - Gate-Source Voltage
     - Typical Gate-Source Voltage
-    - E AS
-    - EAS
+    - R θJA
+    - RθJA
     found_in: 10/10
   vsd_max:
     label: VSD max
     unit: V
     stat: max
-    conditions: if_-20a_vgs_0v
+    conditions: null
     rule: <=
     critical: true
     aliases:
@@ -173,7 +164,7 @@ specs:
     unit: pF
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Input Capacitance
@@ -186,7 +177,7 @@ specs:
     unit: pF
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Output Capacitance
@@ -198,18 +189,32 @@ specs:
     unit: pF
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Reverse Transfer Capacitance
     - Crss
     - C rss
     found_in: 10/10
+  eas_max:
+    label: EAS max
+    unit: mJ
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Single Avalanche Energy (Note 2)
+    - EAS
+    - Power Dissipation
+    - P D
+    - Single Pulse Avalanche Energy, (L=0.3mH)
+    found_in: 10/10
   idss_max:
     label: IDSS max
     unit: uA
     stat: max
-    conditions: vds_-40v_vgs_0v
+    conditions: VDS=-40V, VGS=0V
     rule: <=
     critical: false
     aliases:
@@ -223,7 +228,7 @@ specs:
     label: IGSS max
     unit: nA
     stat: max
-    conditions: vgs_20v_vds_0v
+    conditions: VGS=±20V, VDS=0V
     rule: <=
     critical: false
     aliases:
@@ -239,7 +244,7 @@ specs:
     unit: nC
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Total Gate Charge
@@ -255,13 +260,14 @@ specs:
     unit: nC
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Gate-Drain Charge
     - Qgd
     - Turn-off Delay Time
     - t d(off)
+    - Package
     - Gate-to-Drain Charge
     - Q gd
     found_in: 10/10
@@ -270,13 +276,15 @@ specs:
     unit: nC
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Gate-Source Charge
     - Qgs
     - Turn-on Rise Time
     - t r
+    - Diode Forward Voltage
+    - VSD
     - Q gs
     found_in: 10/10
   qrr_typ:
@@ -284,7 +292,7 @@ specs:
     unit: nC
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Reverse Recovery Charge
@@ -304,7 +312,6 @@ specs:
     - RthJA
     - Thermal Resistance, Junction-to-Ambient, (t ≤ 10s)
     - RθJA
-    - R θJA
     found_in: 10/10
   rthjc_max:
     label: RthJC max
@@ -330,7 +337,7 @@ specs:
     unit: ns
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Turn-off Delay Time
@@ -342,7 +349,7 @@ specs:
     unit: ns
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Turn-on Delay Time
@@ -354,7 +361,7 @@ specs:
     unit: ns
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Turn-off Fall Time
@@ -387,7 +394,7 @@ specs:
     unit: ns
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Turn-on Rise Time
@@ -400,7 +407,7 @@ specs:
     unit: ns
     stat: typ
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
     - Reverse Recovery Time
@@ -414,7 +421,7 @@ specs:
     label: VGS(TH) range
     unit: V
     stat: range
-    conditions: vds_vgs_ids_-250ua
+    conditions: VDS=VGS, IDS=-250uA
     rule: ≈
     critical: false
     aliases:
@@ -426,7 +433,7 @@ specs:
     label: ID max @ TC=100°C
     unit: A
     stat: max
-    conditions: tc_100c
+    conditions: TC=100°C
     rule: '>='
     critical: true
     aliases:
@@ -440,11 +447,21 @@ specs:
     - Drain Current-Continuous (TA=70°C)
     - Drain Current-Continuous, T =100°C, V =10V
     found_in: 9/10
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 9/10
   pd_max@tc_25c:
     label: PD max @ TC=25°C
     unit: W
     stat: max
-    conditions: tc_25c
+    conditions: TC=25°C
     rule: '>='
     critical: true
     aliases:
@@ -455,42 +472,37 @@ specs:
     - Power Dissipation (T =25°C)
     - P D
     found_in: 9/10
-  rds_on_max@vgs_4_5v:
-    label: RDS(on) max @ VGS=-4.5V, ID=-10A
-    unit: mΩ
-    stat: max
-    conditions: vgs_4_5v_id_10a
-    rule: <=
-    critical: true
-    aliases:
-    - Drain-Source On-state Resistance (Note 4)
-    - RDS(on)
-    - Drain-Source On-state Resistance
-    - Total Gate Charge
-    - Qg
-    - Drain-Source On-state Resistance (Note 3)
-    - R DS(on)
-    - Drain-Source On-Resistance
-    - Static Drain-Source On-Resistance
-    - Drain Static-Source On-Resistance
-    found_in: 9/10
-rare_specs:
   pd_max@tc_100c:
     label: PD max @ TC=100°C
     unit: W
     stat: max
-    conditions: tc_100c
+    conditions: TC=100°C
     rule: '>='
     critical: true
     aliases:
     - Power Dissipation
     - PD
-    found_in: 4/10
+    - Power Dissipation - Derate above 25°C
+    found_in: 5/10
+rare_specs:
+  rds_on_max@vgs_2_5v:
+    label: RDS(on) max @ VGS=-2.5V, ID=-5A
+    unit: mΩ
+    stat: max
+    conditions: VGS=-2.5V, ID=-5A
+    rule: <=
+    critical: true
+    aliases:
+    - Drain-Source On-Resistance
+    - RDS(ON)
+    - Static Drain-Source On-Resistance
+    - R DS(ON)
+    found_in: 3/10
   idss_max@tj_125c:
     label: IDSS max @ TJ=125°C
     unit: uA
     stat: max
-    conditions: vds_-40v_vgs_0v_tj_125c
+    conditions: VDS=-40V, VGS=0V, TJ=125°C
     rule: <=
     critical: false
     aliases:
@@ -499,15 +511,3 @@ rare_specs:
     - Drain-to-Source Leakage Current
     - I DSS
     found_in: 3/10
-  rds_on_max@vgs_2_5v:
-    label: RDS(on) max @ VGS=-2.5V, ID=-5A
-    unit: mΩ
-    stat: max
-    conditions: vgs_2_5v_id_5a
-    rule: <=
-    critical: true
-    aliases:
-    - Drain-Source On-Resistance
-    - RDS(ON)
-    - Static Drain-Source On-Resistance
-    found_in: 2/10

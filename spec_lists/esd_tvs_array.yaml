@@ -10,12 +10,12 @@
 type: esd_tvs_array
 name: ESD / TVS diode array
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:07:50+00:00'
+  at: '2026-11-23T16:37:39+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -148,7 +148,6 @@ specs:
     rule: '='
     critical: true
     aliases:
-    - Features
     - Package
     found_in: 9/10
   c_j_typ:
@@ -170,7 +169,7 @@ specs:
     stat: max
     conditions: null
     rule: '>='
-    critical: true
+    critical: false
     aliases:
     - Peak Pulse Power (TP=8/20μS)
     - P PP
@@ -195,7 +194,8 @@ specs:
     - Clamping Voltage (IEC 61000-4-2)
     - VC
     - Clamping Voltage
-    found_in: 5/10
+    - V C
+    found_in: 7/10
   v_esd_max:
     label: V_ESD max
     unit: kV
@@ -237,21 +237,3 @@ rare_specs:
     - Dynamic Resistance
     - Rdyn
     found_in: 3/10
-  v_esd_air_max:
-    label: V_ESD air max
-    unit: kV
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases: []
-    found_in: 0/10
-  v_esd_contact_max:
-    label: V_ESD contact max
-    unit: kV
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases: []
-    found_in: 0/10

@@ -10,12 +10,12 @@
 type: sic_schottky_diode
 name: SiC Schottky diode
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: pinout (cathode band / polarity mark)
+visual_check: cathode band / polarity mark (for diode)
 drafted:
-  at: '2026-11-23T15:05:54+00:00'
+  at: '2026-11-23T16:35:51+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -73,11 +73,23 @@ specs:
     - Working peak reverse voltage
     - VRWM
     found_in: 10/10
+  c_max@tj_25c_f_1mhz:
+    label: C max @ VR=400V, TJ=25°C, f=1MHz
+    unit: pF
+    stat: max
+    conditions: VR=400V, TJ=25°C, f=1MHz
+    rule: ≈
+    critical: false
+    aliases:
+    - Total capacitance
+    - C
+    - Total capacitance (Per leg)
+    found_in: 10/10
   c_typ@tj_25c_f_1mhz:
-    label: C typ @ VR=400V, TJ=25°C, f=1MHz
+    label: C typ @ VR=800V, TJ=25°C, f=1MHz
     unit: pF
     stat: typ
-    conditions: VR=400V, TJ=25°C, f=1MHz
+    conditions: VR=800V, TJ=25°C, f=1MHz
     rule: ≈
     critical: false
     aliases:
@@ -90,6 +102,17 @@ specs:
     unit: A
     stat: max
     conditions: TC=135°C
+    rule: '>='
+    critical: false
+    aliases:
+    - Maximum average forward rectified current
+    - IF(AV)
+    found_in: 10/10
+  if_av_max@tc_155c:
+    label: IF(AV) max @ TC=155°C
+    unit: A
+    stat: max
+    conditions: TC=155°C
     rule: '>='
     critical: false
     aliases:
@@ -177,7 +200,7 @@ specs:
     - QC
     - Total capacitive charge (Per leg)
     found_in: 10/10
-  r_jc_typ:
+  rthjc_typ:
     label: RθJC typ
     unit: °C/W
     stat: typ
@@ -234,40 +257,7 @@ specs:
     - VF
     - Forward drop voltage (Per leg)
     found_in: 10/10
-  if_av_max@tc_155c:
-    label: IF(AV) max @ TC=155°C
-    unit: A
-    stat: max
-    conditions: TC=155°C
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum average forward rectified current
-    - IF(AV)
-    found_in: 8/10
 rare_specs:
-  c_max@tj_25c_f_1mhz:
-    label: C max @ VR=400V, TJ=25°C, f=1MHz
-    unit: pF
-    stat: max
-    conditions: VR=400V, TJ=25°C, f=1MHz
-    rule: ≈
-    critical: false
-    aliases:
-    - Total capacitance
-    - C
-    found_in: 4/10
-  if_av_max@tc_160c:
-    label: IF(AV) max @ TC=160°C
-    unit: A
-    stat: max
-    conditions: TC=160°C
-    rule: '>='
-    critical: false
-    aliases:
-    - Maximum average forward rectified current
-    - IF(AV)
-    found_in: 2/10
   ir_typ@tj_175c:
     label: IR typ @ VR=650V, TJ=175°C
     unit: µA
@@ -290,21 +280,3 @@ rare_specs:
     - Reverse leakage current (Per leg)
     - IR
     found_in: 2/10
-  if_av_max@tc_153c:
-    label: IF(AV) max @ TC=153°C
-    unit: A
-    stat: max
-    conditions: TC=153°C
-    rule: '>='
-    critical: false
-    aliases: []
-    found_in: 0/10
-  if_av_max@tc_157c:
-    label: IF(AV) max @ TC=157°C
-    unit: A
-    stat: max
-    conditions: TC=157°C
-    rule: '>='
-    critical: false
-    aliases: []
-    found_in: 0/10

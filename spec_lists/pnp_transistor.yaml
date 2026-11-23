@@ -10,12 +10,12 @@
 type: pnp_transistor
 name: PNP bipolar transistor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: PNP transistor pinout (E/B/C order)
 drafted:
-  at: '2026-11-23T15:07:16+00:00'
+  at: '2026-11-23T16:37:10+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:

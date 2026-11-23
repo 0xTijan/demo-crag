@@ -10,12 +10,12 @@
 type: ptc_thermistor
 name: ceramic PTC thermistor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: PTC thermistor pinout (two terminals)
+visual_check: Package footprint, pinout (if applicable)
 drafted:
-  at: '2026-11-23T15:29:02+00:00'
+  at: '2026-11-23T17:04:20+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -51,29 +51,8 @@ specs:
     - Maximum current
     - Rated voltage (RMS)
     found_in: 6/6
-  r25_range:
-    label: Rated Zero Power Resistance (25°C) range
-    unit: Ω
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Rated zero power resistance (25℃)
-    found_in: 6/6
-  r25_typ:
-    label: Resistance (25°C) typ
-    unit: Ω
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Resistance(25℃)
-    - Resistance
-    found_in: 6/6
-  temp_range_v_0:
-    label: Temp Range (V=0) range
+  operating_temp_range_v_0:
+    label: Operating Temp Range (V=0)
     unit: °C
     stat: range
     conditions: null
@@ -82,6 +61,27 @@ specs:
     aliases:
     - Operating temperature range (V=0)
     - Operating temperature range (V=0) (V=Vmax)
+    found_in: 6/6
+  r_zpr_25c:
+    label: Rated Zero Power Resistance (25°C)
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Rated zero power resistance (25℃)
+    found_in: 6/6
+  resistance_25c:
+    label: Resistance (25°C)
+    unit: Ω
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Resistance(25℃)
+    - Resistance
     found_in: 6/6
   temp_range_v_vmax:
     label: Temp Range (V=Vmax)
@@ -97,18 +97,8 @@ specs:
     - Operating temperature range V=0
     - Operating temperature range V=VmaX
     found_in: 6/6
-  weight:
-    label: Weight typ
-    unit: g
-    stat: typ
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Weight
-    found_in: 6/6
   hold_current_40c:
-    label: Hold Current at 40±2°C min
+    label: Hold Current (40±2°C)
     unit: mA
     stat: min
     conditions: null
@@ -119,8 +109,20 @@ specs:
     - 1A→0.5A
     - Hold current at 25±2℃ 40±2℃ 60±2℃
     found_in: 5/6
+  surge_test:
+    label: Surge Test
+    unit: A
+    stat: typ
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - 'Surge test: 10/1000μs, 1.0KV, 25A,30 Cycles'
+    - 'Surge test: 10/700μs, 1.5KV, 37.5A,30 Cycles'
+    - 'Surge test: 10/1000μs, 1KV, 25A, impulse 30 times, No crack and fire.'
+    found_in: 5/6
   trip_time_3a_0_5a:
-    label: Trip Time 3A→0.5A max
+    label: Trip Time 3A→0.5A
     unit: s
     stat: max
     conditions: null
@@ -144,19 +146,20 @@ specs:
     - Max Current
     - ISmax :Overcurrent withstanding（@25°C，450Vac）
     found_in: 4/6
-  surge_test:
-    label: Surge Test (10/1000μs, 1KV, 25A, 30 cycles) typ
-    unit: A
-    stat: typ
+  initial_resistance_diff:
+    label: Initial Resistance Difference
+    unit: Ω
+    stat: max
     conditions: null
-    rule: '>='
+    rule: <=
     critical: false
     aliases:
-    - 'Surge test: 10/1000μs, 1.0KV, 25A,30 Cycles'
-    - 'Surge test: 10/1000μs, 1KV, 25A, impulse 30 times, No crack and fire.'
+    - The initial resistance difference of one package
+    - The initial resistance difference of Two PTC thermistors in one house
+    - The initial resistance difference of two PTC thermistor in one device at 25℃
     found_in: 4/6
   hold_current_25c:
-    label: Hold Current at 25±2°C min
+    label: Hold Current (25±2°C)
     unit: mA
     stat: min
     conditions: null
@@ -165,28 +168,8 @@ specs:
     aliases:
     - Hold current at 25±2℃
     found_in: 3/6
-  initial_resistance_diff:
-    label: Initial Resistance Difference (Two PTC in one house) max
-    unit: Ω
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - The initial resistance difference of Two PTC thermistors in one house
-    found_in: 3/6
-  initial_resistance_diff_25c:
-    label: Initial Resistance Difference (Two PTC in one device at 25°C) max
-    unit: Ω
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - The initial resistance difference of two PTC thermistor in one device at 25℃
-    found_in: 3/6
   power_conduct_test:
-    label: Power Conduct Test (250 VAC, no current-limited resistance for 15min) typ
+    label: Power Conduct Test
     unit: V
     stat: typ
     conditions: null
@@ -197,7 +180,7 @@ specs:
     - 'Power conduct test: 250 VAC, Rs=58Ω on15min,one cycle no damage.'
     found_in: 3/6
   power_contact_test:
-    label: Power Contact Test (220 VAC, 3A, on 1 min, off 10min, 20times, ∆R/R≤20%) typ
+    label: Power Contact Test
     unit: V
     stat: typ
     conditions: null
@@ -209,7 +192,7 @@ specs:
     - 'Power contact test: 220 VAC, 3A, on 1 min, off 10min, 20times, ∆R/R≤20%.'
     found_in: 3/6
   power_induction_test:
-    label: Power Induction Test (600VAC, 1A, On 0.2s, Off 60s, 10 times) typ
+    label: Power Induction Test
     unit: V
     stat: typ
     conditions: null
@@ -220,7 +203,7 @@ specs:
     - 'Power induction test: 600VAC, 1A, On 0.2s, Off 60s, 10 times, No damage and fire'
     found_in: 3/6
   trip_time_0_5a_0_15a:
-    label: Trip Time 0.5A→0.15A max
+    label: Trip Time 0.5A→0.15A
     unit: s
     stat: max
     conditions: null
@@ -232,8 +215,18 @@ specs:
     - Trip time 0.75A→0.15A
     found_in: 3/6
 rare_specs:
+  weight:
+    label: Weight
+    unit: g
+    stat: typ
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Weight
+    found_in: 6/6
   trip_time_1a_0_5a:
-    label: Trip Time 1A→0.5A max
+    label: Trip Time 1A→0.5A
     unit: s
     stat: max
     conditions: null
@@ -244,17 +237,17 @@ rare_specs:
     - Trip time 2A→0.5A
     found_in: 2/6
   curie_temp:
-    label: Curie Temperature value
+    label: Curie Temperature
     unit: °C
     stat: value
     conditions: null
-    rule: '>='
+    rule: ≈
     critical: false
     aliases:
     - Curie temperature
     found_in: 1/6
   hold_current_70c:
-    label: Hold Current at 70±2°C min
+    label: Hold Current (70±2°C)
     unit: mA
     stat: min
     conditions: null
@@ -263,8 +256,18 @@ rare_specs:
     aliases:
     - Hold current at 70±2℃
     found_in: 1/6
+  operating_heat_capacity:
+    label: Operating Heat Capacity
+    unit: J
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Operating heat capacity（@25°C, 230Vac）
+    found_in: 1/6
   recovery_time:
-    label: Recovery Time (@25°C) value
+    label: Recovery Time
     unit: s
     stat: value
     conditions: null
@@ -274,7 +277,7 @@ rare_specs:
     - Recovery time (@25°C)
     found_in: 1/6
   rhv:
-    label: Minimum Equivalent Resistance (10/700μs, 4KV/40Ω) value
+    label: RHV
     unit: Ω
     stat: value
     conditions: null
@@ -284,7 +287,7 @@ rare_specs:
     - RHV :Minimum equivalent resistance (@ 10/700 uS, 4 KV / 40 Ω )
     found_in: 1/6
   trip_time_0_75a_0_15a:
-    label: Trip Time 0.75A→0.15A max
+    label: Trip Time 0.75A→0.15A
     unit: s
     stat: max
     conditions: null
@@ -295,7 +298,7 @@ rare_specs:
     - Trip time 0.35A→0.15A
     found_in: 1/6
   v_fault:
-    label: Security Failure Voltage (10R loading) value
+    label: VFault
     unit: Vrms
     stat: value
     conditions: null
@@ -305,7 +308,7 @@ rare_specs:
     - VFault :Security failure voltage (with 10R loading)
     found_in: 1/6
   vsurge:
-    label: Lightning Surge Test (10/700μs, RS=40Ω) value
+    label: Vsurge
     unit: Vp
     stat: value
     conditions: null

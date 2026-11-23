@@ -10,13 +10,13 @@
 type: polymer_aluminum_capacitor
 name: conductive polymer aluminum solid electrolytic capacitor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 - polarity
 visual_check: Polarity (polarized)
 drafted:
-  at: '2026-11-23T15:30:26+00:00'
+  at: '2026-11-23T17:05:56+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -36,19 +36,8 @@ specs:
     aliases:
     - Package
     found_in: 5/5
-  polarity:
-    label: Polarity
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Polarity
-    - Package
-    found_in: 5/5
   rated_voltage:
-    label: Rated voltage
+    label: Rated Voltage
     unit: V
     stat: range
     conditions: null
@@ -69,15 +58,18 @@ specs:
     - Capacitance Tolerance
     - Tolerance on Rated Capacitance
     found_in: 5/5
-  endurance:
-    label: Endurance
-    unit: hours
-    stat: value
-    conditions: 105°C
-    rule: '>='
+  category_temperature_range:
+    label: Category Temperature Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
     critical: false
     aliases:
-    - Endurance
+    - Category temperature range
+    - Temperature Range
+    - Operating Temperature Range
+    - Operating temperature
     found_in: 5/5
   esr:
     label: ESR
@@ -101,16 +93,26 @@ specs:
     - Leakage Current
     - I_L
     found_in: 5/5
-  rated_capacitance:
-    label: Rated Capacitance
+  leakage_current_note:
+    label: Leakage Current Note
     unit: null
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Rated Capacitance
-    - Rated Voltage
+    - Leakage Current
+    found_in: 5/5
+  polarity:
+    label: Polarity
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Polarity
+    - Package
     found_in: 5/5
   rohs_compliant:
     label: RoHS Compliant
@@ -134,18 +136,6 @@ specs:
     - tanδ
     - Tangent of loss angle (tanδ)
     found_in: 5/5
-  category_temperature_range:
-    label: Category temperature range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: true
-    aliases:
-    - Category temperature range
-    - Operating Temperature Range
-    - Operating temperature
-    found_in: 4/5
   capacitance:
     label: Capacitance
     unit: uF
@@ -180,16 +170,15 @@ specs:
     label: Frequency Correction Factor
     unit: null
     stat: value
-    conditions: 100KHz≦f≦300KHz
+    conditions: 120Hz≦f<1KHz
     rule: ≈
     critical: false
     aliases:
     - Frequency Correction Factor
-    - Frequency
     - Coefficient
     found_in: 4/5
   impedance_ratio:
-    label: Impedance ratio
+    label: Impedance Ratio
     unit: null
     stat: max
     conditions: -55±3°C or 105±2°C, 100kHz
@@ -202,16 +191,6 @@ specs:
     - Impedance ratio Z(-55°C)/Z(+20°C)
     - Impedance ratio Z(-105°C)/Z(+20°C)
     found_in: 4/5
-  bending_strength:
-    label: Bending Strength of Lead Wire Terminations
-    unit: N
-    stat: range
-    conditions: 'Lead wire diameter (mm): 0.35<d≦0.5'
-    rule: ≈
-    critical: false
-    aliases:
-    - Bending Strength of Lead Wire Terminations
-    found_in: 3/5
   pull_strength_load:
     label: Pull Strength Load of Lead Wire Terminations
     unit: N
@@ -233,16 +212,6 @@ specs:
     - Rated Ripple Current
     - I_rms
     found_in: 3/5
-  resistance_to_soldering_heat:
-    label: Resistance to Soldering Heat
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Resistance to Soldering Heat
-    found_in: 3/5
   resistance_to_solvent:
     label: Resistance to Solvent
     unit: null
@@ -252,6 +221,47 @@ specs:
     critical: false
     aliases:
     - Resistance to Solvent
+    found_in: 3/5
+  surge_voltage:
+    label: Surge Voltage
+    unit: V
+    stat: value
+    conditions: rated voltage*1.15
+    rule: '>='
+    critical: false
+    aliases:
+    - Surge voltage
+    found_in: 3/5
+rare_specs:
+  endurance:
+    label: Endurance
+    unit: hours
+    stat: value
+    conditions: 105°C
+    rule: '>='
+    critical: false
+    aliases:
+    - Endurance
+    found_in: 5/5
+  bending_strength:
+    label: Bending Strength of Lead Wire Terminations
+    unit: N
+    stat: range
+    conditions: 'Lead wire diameter (mm): 0.35<d≦0.5'
+    rule: ≈
+    critical: false
+    aliases:
+    - Bending Strength of Lead Wire Terminations
+    found_in: 3/5
+  resistance_to_soldering_heat:
+    label: Resistance to Soldering Heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Resistance to Soldering Heat
     found_in: 3/5
   solderability:
     label: Solderability
@@ -263,26 +273,35 @@ specs:
     aliases:
     - Solderability
     found_in: 3/5
-  surge_voltage:
-    label: Surge voltage
-    unit: V
-    stat: value
-    conditions: rated voltage*1.15
-    rule: '>='
-    critical: false
-    aliases:
-    - Surge voltage
-    found_in: 3/5
-rare_specs:
-  construction:
-    label: Construction
+  applied_voltage:
+    label: Applied Voltage
     unit: null
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
+    - Applied Voltage
+    found_in: 2/5
+  construction:
+    label: Construction
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
     - Construction
+    found_in: 2/5
+  emboss_plastic_tape_ea:
+    label: Emboss Plastic Tape (EA)
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Emboss Plastic Tape (EA)
     found_in: 2/5
   marking:
     label: Marking
@@ -304,6 +323,38 @@ rare_specs:
     aliases:
     - Packaging Code
     found_in: 2/5
+  ripple_current:
+    label: Ripple Current
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Ripple Current
+    found_in: 2/5
+  soldering_pad_a:
+    label: Soldering Pad a
+    unit: mm
+    stat: range
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Soldering Pad a
+    - a
+    found_in: 2/5
+  soldering_pad_b:
+    label: Soldering Pad b
+    unit: mm
+    stat: range
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Soldering Pad b
+    - b
+    found_in: 2/5
   storage_duration:
     label: Storage Duration
     unit: years
@@ -312,18 +363,7 @@ rare_specs:
     rule: '>='
     critical: false
     aliases:
-    - Storage Duration
-    found_in: 2/5
-  storage_humidity:
-    label: Storage Humidity
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
     - Storage duration
-    - Storage Humidity
     found_in: 2/5
   storage_temperature:
     label: Storage Temperature
@@ -346,33 +386,93 @@ rare_specs:
     aliases:
     - Vibration
     found_in: 2/5
-  production_period_code:
-    label: Production Period Code
-    unit: null
-    stat: value
+  maximum_operating_temperature:
+    label: Maximum Operating Temperature
+    unit: °C
+    stat: max
     conditions: null
-    rule: info
+    rule: <=
     critical: false
     aliases:
-    - Production Period Code
+    - Maximum Operating Temperature
     found_in: 1/5
-  series:
-    label: Series
+  over_voltage:
+    label: Over Voltage
     unit: null
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Series
+    - Over voltage
     found_in: 1/5
-  suitable_for:
-    label: Suitable for
-    unit: null
-    stat: value
+  reel_a:
+    label: Reel A
+    unit: mm
+    stat: range
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Suitable for
+    - Reel A
+    found_in: 1/5
+  reel_b:
+    label: Reel B
+    unit: mm
+    stat: range
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Reel B
+    found_in: 1/5
+  reel_c:
+    label: Reel C
+    unit: mm
+    stat: range
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Reel C
+    found_in: 1/5
+  reel_t:
+    label: Reel T
+    unit: mm
+    stat: range
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Reel T
+    found_in: 1/5
+  reel_w:
+    label: Reel W
+    unit: mm
+    stat: range
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Reel W
+    found_in: 1/5
+  soldering_pad_c:
+    label: Soldering Pad c
+    unit: mm
+    stat: range
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Soldering Pad c
+    found_in: 1/5
+  storage_humidity:
+    label: Storage Humidity
+    unit: '%'
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Storage Humidity
     found_in: 1/5

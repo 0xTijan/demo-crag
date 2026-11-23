@@ -10,13 +10,13 @@
 type: multilayer_chip_inductor
 name: multilayer / thin film chip inductor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 - size
 visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:26:04+00:00'
+  at: '2026-11-23T17:01:27+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -160,6 +160,33 @@ specs:
     - SRF min.
     - SRF (MHz) min.
     found_in: 6/7
+  test_frequency:
+    label: Test Frequency
+    unit: MHz
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Test Frequency
+    - Test Freq.
+    - L/Q Freq.
+    - L/Q Test Condition
+    - Test Condition
+    found_in: 5/7
+rare_specs:
+  shelf_life:
+    label: Shelf Life
+    unit: years
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Shelf life
+    - Humidity
+    - Inductance (uH)
+    found_in: 5/7
   storage_temp_range:
     label: Storage Temperature Range
     unit: °C
@@ -171,31 +198,6 @@ specs:
     - Storage Temperature
     - Test Condition
     found_in: 5/7
-  test_frequency:
-    label: Test Frequency
-    unit: MHz
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Test Frequency
-    - Test Freq.
-    - L/Q Freq.
-    - L/Q Test Condition
-    - Test Condition
-    found_in: 5/7
-  shelf_life:
-    label: Shelf Life
-    unit: years
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Shelf life
-    - Inductance (uH)
-    found_in: 4/7
   weight:
     label: Weight
     unit: g
@@ -207,7 +209,6 @@ specs:
     - Weight
     - Weight (g) (1000pcs)
     found_in: 4/7
-rare_specs:
   aec_q200_compliance:
     label: AEC-Q200 Compliance
     unit: null
@@ -227,6 +228,17 @@ rare_specs:
     critical: false
     aliases:
     - Packaging Code
+    found_in: 3/7
+  part_numbering:
+    label: Part Numbering
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Part Numbering
+    - Product Type
     found_in: 3/7
   quantity:
     label: Quantity
@@ -264,7 +276,7 @@ rare_specs:
     unit: '%RH'
     stat: max
     conditions: null
-    rule: <=
+    rule: '>='
     critical: false
     aliases:
     - Humidity
@@ -274,23 +286,104 @@ rare_specs:
     unit: MHz
     stat: value
     conditions: null
-    rule: ≈
+    rule: info
     critical: false
     aliases:
     - L/Q Freq.
     found_in: 2/7
-  part_numbering:
-    label: Part Numbering
+  resistance_to_soldering_heat:
+    label: Resistance to Soldering Heat
     unit: null
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Part Numbering
+    - Resistance to Soldering Heat
     found_in: 2/7
-  reliability_test:
-    label: Reliability Test
+  solderability:
+    label: Solderability
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Solderability
+    - Resistance to Soldering Heat
+    found_in: 2/7
+  test_voltage:
+    label: Test Voltage
+    unit: mV
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Test Voltage
+    found_in: 2/7
+  bending_strength:
+    label: Bending Strength
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Bending Strength
+    found_in: 1/7
+  biased_humidity:
+    label: Biased Humidity
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Biased Humidity
+    found_in: 1/7
+  board_flex:
+    label: Board Flex
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Board Flex
+    found_in: 1/7
+  damp_heat:
+    label: Damp Heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Damp Heat (Steady States)
+    found_in: 1/7
+  dropping:
+    label: Dropping
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Dropping
+    found_in: 1/7
+  environmental_characteristics:
+    label: Environmental Characteristics
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Environmental Characteristics
+    found_in: 1/7
+  high_temperature_exposure:
+    label: High Temperature Exposure
     unit: null
     stat: value
     conditions: null
@@ -298,28 +391,127 @@ rare_specs:
     critical: false
     aliases:
     - High Temperature Exposure (Storage)
-    - Temperature Cycle
-    - Biased Humidity
-    - Operational Life
-    - Mechanical Shock
-    - Vibration
-    - Resistance to Soldering Heat
-    - Solderability
-    - Board Flex
-    - Terminal Strength (SMD)
-    - Bending Strength
-    - Dropping
-    found_in: 2/7
-  test_voltage:
-    label: Test Voltage
-    unit: mV
+    found_in: 1/7
+  liquidous_temp:
+    label: Liquidous temperature
+    unit: °C
     stat: value
     conditions: null
-    rule: ≈
+    rule: info
     critical: false
     aliases:
-    - Test Voltage
-    found_in: 2/7
+    - Liquidous temperature
+    found_in: 1/7
+  loading_at_high_temperature:
+    label: Loading at High Temperature
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Loading at High Temperature
+    found_in: 1/7
+  loading_under_damp_heat:
+    label: Loading Under Damp Heat
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Loading Under Damp Heat
+    found_in: 1/7
+  max_peak_temp:
+    label: Max. Peak temperature
+    unit: °C
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Max. Peak temperature
+    found_in: 1/7
+  mechanical_shock:
+    label: Mechanical Shock
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Mechanical Shock
+    found_in: 1/7
+  min_peak_temp:
+    label: Min. Peak temperature
+    unit: °C
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Min. Peak temperature
+    found_in: 1/7
+  operational_life:
+    label: Operational Life
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Operational Life
+    found_in: 1/7
+  preheat_max_temp:
+    label: Preheat Max Temperature
+    unit: °C
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Preheat Max Temperature
+    found_in: 1/7
+  preheat_min_temp:
+    label: Preheat Min. Temperature
+    unit: °C
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Preheat Min. Temperature
+    found_in: 1/7
+  preheating_time:
+    label: Preheating time
+    unit: seconds
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Preheating time
+    found_in: 1/7
+  ramp_down_rate:
+    label: Ramp-down rate
+    unit: °C/second
+    stat: max
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Ramp-down rate
+    found_in: 1/7
+  ramp_up_rate:
+    label: Ramp-up rate
+    unit: °C/second
+    stat: max
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Ramp-up rate
+    found_in: 1/7
   reflow_profiles:
     label: Reflow Profiles
     unit: null
@@ -330,18 +522,161 @@ rare_specs:
     aliases:
     - Reflow Profiles
     found_in: 1/7
-  test_equipment:
-    label: Test Equipment
+  resistance_to_high_temperature:
+    label: Resistance to High Temperature
     unit: null
     stat: value
     conditions: null
     rule: info
     critical: false
     aliases:
-    - Test Equipment
+    - Resistance to High Temperature
     found_in: 1/7
-  land_pattern:
-    label: Land Pattern
+  resistance_to_low_temperature:
+    label: Resistance to Low Temperature
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Resistance to Low Temperature
+    found_in: 1/7
+  temperature_cycle:
+    label: Temperature Cycle
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Temperature Cycle
+    found_in: 1/7
+  terminal_strength:
+    label: Terminal Strength
+    unit: N
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Terminal Strength (SMD)
+    found_in: 1/7
+  thermal_shock:
+    label: Thermal Shock
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Thermal Shock
+    found_in: 1/7
+  time_from_25c_to_peak_temp:
+    label: Time from 25 °C to peak temperature
+    unit: minutes
+    stat: max
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Time from 25 °C to peak temperature
+    found_in: 1/7
+  time_maintained_above_liquidous_temp:
+    label: Time maintained above Liquidous temperature
+    unit: seconds
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Time maintained above Liquidous temperature
+    found_in: 1/7
+  time_within_5c_of_peak_temp:
+    label: Time within 5 °C of peak temperature
+    unit: seconds
+    stat: max
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Time within 5 °C of peak temperature
+    found_in: 1/7
+  vibration:
+    label: Vibration
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Vibration
+    found_in: 1/7
+  land_pattern_a:
+    label: Land Pattern A
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  land_pattern_b:
+    label: Land Pattern B
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  land_pattern_c:
+    label: Land Pattern C
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  reel_dimension_a:
+    label: Reel Dimension A
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  reel_dimension_b:
+    label: Reel Dimension B
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  reel_dimension_c:
+    label: Reel Dimension C
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  reel_dimension_t:
+    label: Reel Dimension T
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  reel_dimension_w:
+    label: Reel Dimension W
     unit: mm
     stat: value
     conditions: null
@@ -352,6 +687,69 @@ rare_specs:
   tape_specifications:
     label: Tape Specifications
     unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  tape_specifications_a:
+    label: Tape Specifications A
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  tape_specifications_b:
+    label: Tape Specifications B
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  tape_specifications_f:
+    label: Tape Specifications F
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  tape_specifications_p:
+    label: Tape Specifications P
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  tape_specifications_t:
+    label: Tape Specifications T
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  tape_specifications_w:
+    label: Tape Specifications W
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases: []
+    found_in: 0/7
+  test_condition:
+    label: Test Condition
+    unit: null
     stat: value
     conditions: null
     rule: info

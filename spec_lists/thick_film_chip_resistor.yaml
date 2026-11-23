@@ -10,20 +10,13 @@
 type: thick_film_chip_resistor
 name: thick film chip resistor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 - aec_q200
-- operating_temp_range
-- sulfur_test
-- storage_temp
-- shelf_life
-- size
-- voltage_proof
-- resistance_to_soldering_heat
-visual_check: Footprint, Pinout (no pins for resistors), Marking (no marking for small sizes)
+visual_check: Footprint (for package)
 drafted:
-  at: '2026-11-23T15:14:31+00:00'
+  at: '2026-11-23T16:44:47+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -53,7 +46,7 @@ specs:
     unit: °C
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Operating Temp. Range
@@ -64,7 +57,7 @@ specs:
     stat: value
     conditions: null
     rule: '>='
-    critical: false
+    critical: true
     aliases:
     - Max. Operating Voltage
     found_in: 9/10
@@ -72,7 +65,7 @@ specs:
     label: Power Rating
     unit: W
     stat: value
-    conditions: at_70c
+    conditions: at 70°C
     rule: '>='
     critical: false
     aliases:
@@ -88,16 +81,6 @@ specs:
     critical: false
     aliases:
     - Resistance Range
-    found_in: 9/10
-  solderability:
-    label: Solderability
-    unit: '%'
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Solderability
     found_in: 9/10
   tc_r:
     label: TCR
@@ -117,29 +100,9 @@ specs:
     stat: value
     conditions: null
     rule: '>='
-    critical: false
+    critical: true
     aliases:
     - Max. Overload Voltage
-    found_in: 8/10
-  shelf_life:
-    label: Shelf Life
-    unit: year
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Shelf Life
-    found_in: 8/10
-  storage_temp:
-    label: Storage Temperature
-    unit: °C
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Storage Temperature
     found_in: 8/10
   insulation_resistance:
     label: Insulation Resistance
@@ -151,15 +114,18 @@ specs:
     aliases:
     - Insulation Resistance
     found_in: 7/10
-  size:
-    label: Size
+  marking:
+    label: Marking
     unit: null
     stat: value
     conditions: null
-    rule: '='
+    rule: info
     critical: false
     aliases:
-    - Size
+    - Marking
+    - Function Code
+    - Packaging Code
+    - Packaging Quantity
     found_in: 7/10
   aec_q200:
     label: AEC-Q200
@@ -173,15 +139,66 @@ specs:
     - AEC-Q200 Compliance
     - AEC-Q200
     found_in: 6/10
-  marking:
-    label: Marking
-    unit: null
+  resistance_tolerance:
+    label: Resistance Tolerance
+    unit: '%'
     stat: value
     conditions: null
-    rule: info
+    rule: ≈
     critical: false
     aliases:
-    - Marking
+    - Resistance Tolerance
+    found_in: 5/10
+rare_specs:
+  shelf_life:
+    label: Shelf Life
+    unit: year
+    stat: value
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Shelf Life
+    found_in: 8/10
+  solderability:
+    label: Solderability
+    unit: '%'
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Solderability
+    found_in: 8/10
+  storage_temp:
+    label: Storage Temperature
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 8/10
+  endurance:
+    label: Endurance
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Operational Life
+    - Biased Humidity
+    - High Temperature Exposure
+    - Board Flex
+    - Endurance
+    - Damp Heat with Load
+    - Variation of resistance with temperature
+    - Short Time Overload
+    - Damp Heat
+    - Dry Heat
+    - Bending Strength
     found_in: 6/10
   resistance_to_soldering_heat:
     label: Resistance to Soldering Heat
@@ -203,31 +220,6 @@ specs:
     aliases:
     - Sulfur Test
     found_in: 6/10
-  endurance:
-    label: Endurance
-    unit: Ω
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Operational Life
-    - Biased Humidity
-    - High Temperature Exposure
-    - Board Flex
-    - Endurance
-    - Damp Heat with Load
-    found_in: 5/10
-  resistance_tolerance:
-    label: Resistance Tolerance
-    unit: '%'
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Resistance Tolerance
-    found_in: 5/10
   voltage_proof:
     label: Voltage Proof
     unit: null
@@ -238,7 +230,6 @@ specs:
     aliases:
     - Voltage Proof
     found_in: 5/10
-rare_specs:
   flammability:
     label: Flammability
     unit: null
@@ -251,10 +242,10 @@ rare_specs:
     found_in: 4/10
   short_time_overload:
     label: Short Time Overload
-    unit: mΩ
-    stat: max
+    unit: null
+    stat: value
     conditions: null
-    rule: <=
+    rule: '='
     critical: false
     aliases:
     - Short Time Overload
@@ -288,7 +279,7 @@ rare_specs:
     critical: false
     aliases:
     - Temperature Cycling
-    - Reflow Profiles
+    - Max. Peak temperature
     found_in: 3/10
   terminal_strength:
     label: Terminal Strength
@@ -305,7 +296,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - A
@@ -315,37 +306,17 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - B
-    found_in: 2/10
-  bending_strength:
-    label: Bending Strength
-    unit: Ω
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Bending Strength
-    found_in: 2/10
-  dry_heat:
-    label: Dry Heat
-    unit: Ω
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Dry Heat
     found_in: 2/10
   e:
     label: E
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - E
@@ -365,7 +336,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - F
@@ -395,7 +366,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - P0
@@ -406,7 +377,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - P1
@@ -417,7 +388,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - P2
@@ -428,7 +399,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - ΦA
@@ -438,7 +409,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - ΦB
@@ -448,7 +419,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - ΦC
@@ -458,7 +429,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - ΦD0
@@ -479,26 +450,10 @@ rare_specs:
     unit: inch
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Reel Diameter
-    found_in: 2/10
-  reflow_profiles:
-    label: Reflow Profiles
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Ramp-up rate
-    - Liquidous temperature
-    - Min. Peak temperature
-    - Max. Peak temperature
-    - Time within 5°C of the specified classification temperature
-    - Ramp-down rate
-    - Time 25°C to peak temperature
     found_in: 2/10
   resistance_to_solvents:
     label: Resistance to Solvents
@@ -515,7 +470,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - T
@@ -525,7 +480,7 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Tape Width
@@ -545,11 +500,31 @@ rare_specs:
     unit: mm
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - W
     found_in: 2/10
+  bending_strength:
+    label: Bending Strength
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Bending Strength
+    found_in: 1/10
+  dry_heat:
+    label: Dry Heat
+    unit: Ω
+    stat: range
+    conditions: null
+    rule: ≈
+    critical: false
+    aliases:
+    - Dry Heat
+    found_in: 1/10
   damp_heat:
     label: Damp Heat
     unit: Ω
@@ -557,26 +532,5 @@ rare_specs:
     conditions: null
     rule: ≈
     critical: false
-    aliases:
-    - Damp Heat
-    found_in: 1/10
-  rated_current:
-    label: Rated Current
-    unit: A
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Rated Current
-    found_in: 1/10
-  variation_resistance_temp:
-    label: Variation of resistance with temperature
-    unit: mΩ
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Variation of resistance with temperature
-    found_in: 1/10
+    aliases: []
+    found_in: 0/10

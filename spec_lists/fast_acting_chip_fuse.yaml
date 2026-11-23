@@ -10,12 +10,12 @@
 type: fast_acting_chip_fuse
 name: fast acting chip fuse
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: pinout (fuse type)
+visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:28:10+00:00'
+  at: '2026-11-23T17:03:32+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -26,6 +26,16 @@ drafted:
   - goodarksemi/s1206h_9d294369.md
   - goodarksemi/s6125f_2c40e17a.md
 specs:
+  interrupting_rating:
+    label: Interrupting Rating
+    unit: A
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Interrupting Rating
+    found_in: 6/6
   package:
     label: Package
     unit: null
@@ -36,6 +46,28 @@ specs:
     aliases:
     - Package
     - Case
+    found_in: 6/6
+  voltage_rating_dc:
+    label: Voltage Rating DC
+    unit: V
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: true
+    aliases:
+    - Voltage Rating
+    - Voltage Rating DC
+    found_in: 6/6
+  alpha_code_marking:
+    label: Alpha Code Marking
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Product Code
+    - Alpha Code Marking
     found_in: 6/6
   ampere_rating:
     label: Ampere Rating
@@ -59,21 +91,11 @@ specs:
     aliases:
     - Current Rating
     found_in: 6/6
-  interrupting_rating:
-    label: Interrupting Rating
-    unit: A
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Interrupting Rating
-    found_in: 6/6
   resistance:
     label: Resistance
     unit: ohms
     stat: typ
-    conditions: null
+    conditions: DC Cold Resistance (Measured at 10% of rated current)
     rule: <=
     critical: false
     aliases:
@@ -94,35 +116,14 @@ specs:
     - I2t
     - Typical Melting I2t
     found_in: 6/6
-  voltage_rating:
-    label: Voltage Rating
+  voltage_rating_ac:
+    label: Voltage Rating AC
     unit: V
-    stat: range
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Voltage Rating
-    - Voltage Rating DC
-    found_in: 6/6
-  alpha_code_marking:
-    label: Alpha Code Marking
-    unit: null
     stat: value
     conditions: null
-    rule: info
-    critical: false
+    rule: '>='
+    critical: true
     aliases:
-    - Alpha Code Marking
-    found_in: 5/6
-  opening_time:
-    label: Opening Time
-    unit: s
-    stat: range
-    conditions: amp_rating_100
-    rule: <=
-    critical: false
-    aliases:
-    - Opening Time
-    found_in: 5/6
+    - Voltage Rating
+    found_in: 4/6
 rare_specs: {}

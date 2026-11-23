@@ -10,14 +10,13 @@
 type: thin_film_chip_resistor
 name: thin film chip resistor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 - aec_q200
-- operating_temp_range
-visual_check: Pinout (G/D/S order)
+visual_check: Package footprint (0402, 0603, etc.) and marking (3-digit or 4-digit) for resistor value.
 drafted:
-  at: '2026-11-23T15:19:17+00:00'
+  at: '2026-11-23T16:48:52+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -42,35 +41,6 @@ specs:
     aliases:
     - Package
     - Size
-    found_in: 10/10
-  resistance_change_endurance:
-    label: Endurance
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Operational Life
-    - Endurance
-    - Packing Quantity
-    - Environmental Characteristics
-    - Endurance Standard at 70℃ 1000hrs
-    - Endurance Standard at 70℃ 8000hrs
-    - Endurance Power at 70℃ 1000hrs
-    - Endurance Power at 70℃ 8000hrs
-    - Endurance Advanced temperature at 85℃ 1000hrs
-    found_in: 10/10
-  solderability:
-    label: Solderability
-    unit: '%'
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Solderability
-    - Environmental Characteristics
     found_in: 10/10
   max_operating_voltage:
     label: Max. Operating Voltage
@@ -99,72 +69,24 @@ specs:
     unit: °C
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: true
     aliases:
     - Operating Temp. Range
     - Standard Electrical Specifications
     - Operating Temperature Range
     found_in: 9/10
-  flammability:
-    label: Flammability
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Flammability
-    - Environmental Characteristics
-    - RoHS
-    found_in: 9/10
   marking:
     label: Marking
     unit: null
     stat: value
     conditions: null
-    rule: '='
+    rule: info
     critical: false
     aliases:
     - Marking
     - Marking Code
     - Temperature Coefficient of Resistance (T.C.R.)
-    found_in: 9/10
-  resistance_change_soldering_heat:
-    label: Resistance to Soldering Heat
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Resistance to Soldering Heat
-    - Environmental Characteristics
-    found_in: 9/10
-  storage_temp_range:
-    label: Storage Temperature Range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Storage Temperature
-    - ESD
-    - Q/GDW 11179.3
-    found_in: 9/10
-  tcr_ppm_c:
-    label: TCR (PPM/°C)
-    unit: PPM/°C
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - TCR (PPM/°C)
-    - Standard Electrical Specifications
-    - TCR
-    - TCR (PPM/℃)
     found_in: 9/10
   esd:
     label: ESD
@@ -177,31 +99,9 @@ specs:
     - ESD
     - Environmental Characteristics
     found_in: 8/10
-  insulation_resistance:
-    label: Insulation Resistance
-    unit: MΩ
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Insulation Resistance
-    - Resistance to Soldering Heat
-    found_in: 8/10
-  resistance_change_biased_humidity:
-    label: Biased Humidity
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Biased Humidity
-    - Environmental Characteristics
-    found_in: 8/10
-  resistance_change_high_temp_exposure:
+  high_temperature_exposure:
     label: High Temperature Exposure
-    unit: '%'
+    unit: °C
     stat: max
     conditions: null
     rule: <=
@@ -213,12 +113,23 @@ specs:
     - High Temperature Exposure 155℃
     - High Temperature Exposure 175℃
     found_in: 8/10
+  insulation_resistance:
+    label: Insulation Resistance
+    unit: MΩ
+    stat: value
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Insulation Resistance
+    - Resistance to Soldering Heat
+    found_in: 8/10
   resistance_range:
     label: Resistance Range
     unit: Ω
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Resistance Range
@@ -228,23 +139,23 @@ specs:
     unit: '%'
     stat: range
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Resistance Range
     - Resistance Tolerance
     found_in: 8/10
-  sulfur_test:
-    label: Sulfur Test
-    unit: '%'
-    stat: max
+  tcr_ppm_c:
+    label: TCR (PPM/°C)
+    unit: PPM/°C
+    stat: range
     conditions: null
-    rule: <=
+    rule: ≈
     critical: false
     aliases:
-    - Sulfur Test
-    - Environmental Characteristics
-    - Resistance to solvents
+    - TCR (PPM/°C)
+    - TCR
+    - TCR (PPM/℃)
     found_in: 8/10
   power_rating_at_70c:
     label: Power Rating at 70°C
@@ -259,29 +170,6 @@ specs:
     - Standard Electrical Specifications
     - Power Rating
     found_in: 7/10
-  resistance_change_bending_strength:
-    label: Bending Strength (Board Flex)
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Bending Strength (Board Flex)
-    - Bending Strength
-    - Environmental Characteristics
-    found_in: 7/10
-  resistance_change_temperature_cycling:
-    label: Temperature Cycling
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Temperature Cycling
-    - Environmental Characteristics
-    found_in: 7/10
   aec_q200:
     label: AEC-Q200
     unit: null
@@ -294,127 +182,223 @@ specs:
     - AEC-Q200 Qualified
     - AEC-Q200 Compliance
     found_in: 6/10
-  resistance_change_short_time_overload:
-    label: Short Time Overload
+  resistance_to_solvents:
+    label: Resistance to solvents
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Resistance to solvents
+    - Preheat Min. Temperature
+    - Environmental Characteristics
+    found_in: 6/10
+rare_specs:
+  endurance:
+    label: Endurance
     unit: '%'
-    stat: max
+    stat: value
     conditions: null
     rule: <=
     critical: false
     aliases:
+    - Operational Life
+    - Endurance
+    - Low Temperature Operation
+    - Packing Quantity
+    - Environmental Characteristics
     - Short Time Overload
-    found_in: 6/10
-  resistance_change_vibration:
-    label: Vibration
+    - Endurance Standard at 70℃ 1000hrs
+    - Endurance Standard at 70℃ 8000hrs
+    - Endurance Power at 70℃ 1000hrs
+    - Endurance Power at 70℃ 8000hrs
+    - Endurance Advanced temperature at 85℃ 1000hrs
+    found_in: 10/10
+  flammability:
+    label: Flammability
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: false
+    aliases:
+    - Flammability
+    - Time within 5°C of peak temperature
+    - Environmental Characteristics
+    - RoHS
+    found_in: 10/10
+  solderability:
+    label: Solderability
+    unit: '%'
+    stat: min
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Solderability
+    - Resistance to Soldering Heat
+    - Environmental Characteristics
+    found_in: 10/10
+  resistance_to_soldering_heat:
+    label: Resistance to Soldering Heat
     unit: '%'
     stat: max
     conditions: null
     rule: <=
     critical: false
     aliases:
-    - Vibration
-    found_in: 6/10
-  resistance_change_mechanical_shock:
-    label: Mechanical Shock
+    - Resistance to Soldering Heat
+    - Environmental Characteristics
+    found_in: 9/10
+  bending_strength:
+    label: Bending Strength (Board Flex)
+    unit: mm
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Bending Strength (Board Flex)
+    - Bending Strength
+    - Shelf Life
+    - Environmental Characteristics
+    found_in: 8/10
+  bias_humidity:
+    label: Biased Humidity
+    unit: '%'
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Biased Humidity
+    - Environmental Characteristics
+    found_in: 8/10
+  sulfur_test:
+    label: Sulfur Test
     unit: '%'
     stat: max
     conditions: null
     rule: <=
     critical: false
     aliases:
-    - Mechanical Shock
-    found_in: 5/10
+    - Sulfur Test
+    - Environmental Characteristics
+    - Resistance to solvents
+    found_in: 8/10
+  temperature_cycling:
+    label: Temperature Cycling
+    unit: cycles
+    stat: value
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Temperature Cycling
+    - Environmental Characteristics
+    found_in: 7/10
+  storage_temperature:
+    label: Storage Temperature
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    - Q/GDW 11179.3
+    found_in: 6/10
   shelf_life:
     label: Shelf Life
     unit: years
     stat: value
     conditions: null
-    rule: '='
+    rule: '>='
     critical: false
     aliases:
     - Shelf Life
     found_in: 5/10
-rare_specs:
-  resistance_change_resistance_change:
-    label: Resistance Change
-    unit: '%'
-    stat: max
+  packaging_quantity:
+    label: Packaging Quantity
+    unit: pcs
+    stat: value
     conditions: null
-    rule: <=
+    rule: info
     critical: false
     aliases:
-    - Endurance
+    - Packaging Quantity
+    - Tape Width
+    - Reel Diameter
+    - ΦA (mm)
+    - ΦB (mm)
+    - ΦC (mm)
+    - W (mm)
+    - T (mm)
+    - Peel force of top cover tape
+    - Packaging
+    - Packing Quantity
+    - Paper Tape (EA)
     found_in: 4/10
-  resistance_change_damp_heat:
-    label: Damp Heat with Load
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Environmental Characteristics
-    - Damp Heat with Load
-    found_in: 2/10
-  resistance_change_low_temp_operation:
-    label: Low Temperature Operation
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Environmental Characteristics
-    - Low Temperature Operation
-    found_in: 2/10
-  resistance_change_single_pulse:
-    label: Single pulse high voltage overload
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Environmental Characteristics
-    - Single pulse high voltage overload
-    found_in: 2/10
-  resistance_change_thermal_shock:
-    label: Thermal Shock
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal Shock
-    found_in: 2/10
-  resistance:
-    label: Resistance
-    unit: Ω
+  rohs:
+    label: RoHS
+    unit: null
     stat: value
     conditions: null
     rule: '='
     critical: false
     aliases:
-    - Resistance
-    found_in: 1/10
-  resistance_change_low_temp_exposure:
-    label: Low Temperature Exposure
-    unit: '%'
-    stat: max
+    - RoHS
+    - Lead-free
+    found_in: 4/10
+  dielectric_withstand_voltage:
+    label: Dielectric Withstand Voltage
+    unit: V
+    stat: value
     conditions: null
-    rule: <=
+    rule: '>='
     critical: false
     aliases:
-    - Low Temperature Exposure
-    found_in: 1/10
-  resistance_change_periodic_overload:
-    label: Periodic electric overload
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
+    - Dielectric Withstand Voltage
     - Environmental Characteristics
-    found_in: 1/10
+    found_in: 3/10
+  land_pattern:
+    label: Land Pattern
+    unit: mm
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Land Pattern
+    found_in: 2/10
+  soldering_condition:
+    label: Soldering Condition
+    unit: null
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Preheat Max. Temperature
+    - Preheating time
+    - Ramp-up rate
+    - Liquidous temperature
+    - Time maintained above Liquidous temperature
+    - Min. Peak temperature
+    - Max. Peak temperature
+    - Ramp-down rate
+    - Time from 25°C to peak temperature
+    - Soldering Condition
+    found_in: 2/10
+  vcr_ppm_v:
+    label: VCR (PPM/V)
+    unit: PPM/V
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - VCR (PPM/V)
+    - Standard Electrical Specifications
+    found_in: 2/10

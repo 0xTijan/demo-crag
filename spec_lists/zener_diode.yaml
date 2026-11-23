@@ -10,12 +10,12 @@
 type: zener_diode
 name: Zener diode
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: cathode band / polarity mark (Zener diode)
+visual_check: cathode band / polarity mark
 drafted:
-  at: '2026-11-23T14:59:54+00:00'
+  at: '2026-11-23T16:34:08+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -84,17 +84,6 @@ specs:
     - V(V) @I 1 z ZT
     - V (V) Z
     found_in: 9/10
-  package:
-    label: Package
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: true
-    aliases:
-    - Package
-    - Part Number
-    found_in: 8/10
   p_tot_max:
     label: Ptot max
     unit: W
@@ -110,6 +99,16 @@ specs:
     - P D
     - PD
     found_in: 8/10
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
+    found_in: 7/10
   vr_value:
     label: VR value
     unit: V

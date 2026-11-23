@@ -10,12 +10,12 @@
 type: three_axis_accelerometer
 name: three-axis digital accelerometer
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: Pinout (G/D/S order)
+visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:35:17+00:00'
+  at: '2026-11-23T17:09:40+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -52,7 +52,7 @@ specs:
     unit: ug/sqrt(Hz)
     stat: value
     conditions: fs_00_normal_mode_odr_125hz
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Acceleration noise density
@@ -100,7 +100,7 @@ specs:
     unit: V
     stat: range
     conditions: spi_i2c
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Digital high level input voltage
@@ -112,7 +112,7 @@ specs:
     unit: V
     stat: range
     conditions: spi_i2c
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Digital low level input voltage
@@ -134,7 +134,7 @@ specs:
     unit: V
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - high level output voltage
@@ -146,7 +146,7 @@ specs:
     unit: V
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Low level output voltage
@@ -158,28 +158,18 @@ specs:
     unit: g
     stat: range
     conditions: fs_00
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Measurement range
     - FS
-    found_in: 3/3
-  mechanical_shock:
-    label: Mechanical shock
-    unit: g
-    stat: max
-    conditions: duration_lt_200us
-    rule: '>='
-    critical: false
-    aliases:
-    - Mechanical Shock
     found_in: 3/3
   operation_temperature_range:
     label: Operation temperature range
     unit: °C
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Operation temperature range
@@ -190,7 +180,7 @@ specs:
     unit: Hz
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Output data rate
@@ -212,7 +202,7 @@ specs:
     unit: LSB/g
     stat: value
     conditions: fs_00
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Sensitivity
@@ -223,7 +213,7 @@ specs:
     unit: '%/°C'
     stat: range
     conditions: fs_00
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Sensitivity change vs. temperature
@@ -240,22 +230,12 @@ specs:
     - Start-up time
     - TSU
     found_in: 3/3
-  storage_temperature:
-    label: Storage temperature
-    unit: °C
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Storage Temperature
-    found_in: 3/3
   system_bandwidth:
     label: System bandwidth
     unit: Hz
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - System bandwidth
@@ -266,7 +246,7 @@ specs:
     unit: mg
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Typical zero-g level offset accuracy
@@ -288,7 +268,7 @@ specs:
     unit: mg/°C
     stat: range
     conditions: max_delta_from_25c
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Zero-g level change vs. temperature
@@ -299,10 +279,30 @@ specs:
     unit: mg
     stat: typ
     conditions: x_fs_00
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Self-test Output Change
     - Vst
     found_in: 2/3
-rare_specs: {}
+rare_specs:
+  mechanical_shock:
+    label: Mechanical shock
+    unit: g
+    stat: value
+    conditions: duration_lt_200us
+    rule: '>='
+    critical: false
+    aliases:
+    - Mechanical Shock
+    found_in: 3/3
+  storage_temperature:
+    label: Storage temperature
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 3/3

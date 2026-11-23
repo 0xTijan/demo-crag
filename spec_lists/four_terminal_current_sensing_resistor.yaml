@@ -10,12 +10,12 @@
 type: four_terminal_current_sensing_resistor
 name: four-terminal current sensing resistor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: none (all dimensions are covered by the package specification)
+visual_check: pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:32:00+00:00'
+  at: '2026-11-23T17:06:58+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -33,16 +33,8 @@ specs:
     aliases:
     - Product Type
     - Dimensions (L×W)
-    - Packaging Code
-    - Power Rating at 70°C
-    - Operating Temp. Range
-    - Resistance Range (mΩ)
-    - Temperature Coefficient of Resistance (T.C.R.)
-    - Short Time Overload
-    - Insulation Resistance
-    - Endurance
-    - Damp Heat with Load
-    - Bending Strength
+    - Size
+    - Package
     found_in: 3/3
   power_rating:
     label: Power Rating
@@ -59,76 +51,38 @@ specs:
     unit: '%'
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Resistance Tolerance
-    found_in: 3/3
-  size:
-    label: Size
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Size
     found_in: 3/3
   resistance:
     label: Resistance
     unit: mΩ
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - Resistance
     found_in: 2/3
 rare_specs:
-  marking_code:
-    label: Marking Code
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Marking Code
-    found_in: 1/3
   tc_r:
     label: TCR
     unit: PPM/°C
     stat: value
     conditions: null
-    rule: '='
+    rule: ≈
     critical: false
     aliases:
     - TCR (PPM/°C)
     found_in: 1/3
-  a:
-    label: A
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
   aec_q200:
     label: AEC-Q200
     unit: null
     stat: value
     conditions: null
     rule: '='
-    critical: false
-    aliases: []
-    found_in: 0/3
-  b:
-    label: B
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
     critical: false
     aliases: []
     found_in: 0/3
@@ -141,93 +95,12 @@ rare_specs:
     critical: false
     aliases: []
     found_in: 0/3
-  c:
-    label: C
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  d:
-    label: d
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  diameter_a:
-    label: ØA
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  diameter_b:
-    label: ØB
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  diameter_c:
-    label: ØC
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  diameter_d0:
-    label: ΦD0
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
   dielectric_withstand_voltage:
     label: Dielectric Withstand Voltage
     unit: V
     stat: value
     conditions: null
     rule: '>='
-    critical: false
-    aliases: []
-    found_in: 0/3
-  dimensions:
-    label: Dimensions
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  e:
-    label: E
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  f:
-    label: F
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
     critical: false
     aliases: []
     found_in: 0/3
@@ -276,24 +149,6 @@ rare_specs:
     critical: false
     aliases: []
     found_in: 0/3
-  length:
-    label: L
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  liquidous_temp:
-    label: Liquidous temperature
-    unit: °C
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
   load_life:
     label: Load Life
     unit: null
@@ -330,105 +185,6 @@ rare_specs:
     critical: false
     aliases: []
     found_in: 0/3
-  p0:
-    label: P0
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  p1:
-    label: P1
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  p2:
-    label: P2
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  packaging_code:
-    label: Packaging Code
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases: []
-    found_in: 0/3
-  peak_temp_max:
-    label: Max. Peak temperature
-    unit: °C
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  peak_temp_min:
-    label: Min. Peak temperature
-    unit: °C
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  preheat_temp_max:
-    label: Preheat Max Temperature
-    unit: °C
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  preheat_temp_min:
-    label: Preheat Min. Temperature
-    unit: °C
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  preheating_time:
-    label: Preheating time
-    unit: seconds
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  ramp_down_rate:
-    label: Ramp-down rate
-    unit: °C/second
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  ramp_up_rate:
-    label: Ramp-up rate
-    unit: °C/second
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
   resistance_range:
     label: Resistance Range
     unit: mΩ
@@ -453,6 +209,15 @@ rare_specs:
     stat: value
     conditions: null
     rule: info
+    critical: false
+    aliases: []
+    found_in: 0/3
+  resistance_tolerance_range:
+    label: Resistance Tolerance Range
+    unit: '%'
+    stat: range
+    conditions: null
+    rule: contains
     critical: false
     aliases: []
     found_in: 0/3
@@ -501,63 +266,9 @@ rare_specs:
     critical: false
     aliases: []
     found_in: 0/3
-  tape_reel_dimensions:
-    label: Tape & Reel Dimensions
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
   temperature_cycling:
     label: Temperature Cycling
     unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  thickness:
-    label: T
-    unit: mm
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  time_above_liquidous:
-    label: Time above T L
-    unit: seconds
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  time_to_peak_temp:
-    label: Time to peak temperature
-    unit: minutes
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  time_within_5c:
-    label: Time within 5 °C of Tc
-    unit: seconds
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases: []
-    found_in: 0/3
-  width:
-    label: W
-    unit: mm
     stat: value
     conditions: null
     rule: info

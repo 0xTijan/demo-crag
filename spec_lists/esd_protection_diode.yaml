@@ -10,12 +10,12 @@
 type: esd_protection_diode
 name: ESD protection diode
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: diode "cathode band / polarity mark"
 drafted:
-  at: '2026-11-23T14:57:33+00:00'
+  at: '2026-11-23T16:31:48+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:

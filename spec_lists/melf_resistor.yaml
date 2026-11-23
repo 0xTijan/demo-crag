@@ -10,12 +10,12 @@
 type: melf_resistor
 name: metal film MELF resistor
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: MELF pinout (end to end)
+visual_check: MELF resistor pinout (end to end)
 drafted:
-  at: '2026-11-23T15:33:21+00:00'
+  at: '2026-11-23T17:08:15+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -33,28 +33,8 @@ specs:
     aliases:
     - Package
     found_in: 3/3
-  flammability:
-    label: Flammability
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Flammability
-    found_in: 3/3
-  max_operating_voltage:
-    label: Max. operating voltage
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Max. Operating Voltage
-    found_in: 3/3
   max_resistance_change:
-    label: Max. resistance change
+    label: Max resistance change
     unit: '%'
     stat: max
     conditions: null
@@ -115,37 +95,6 @@ specs:
     aliases:
     - Resistance tolerance
     found_in: 3/3
-  shelf_life:
-    label: Shelf life
-    unit: years
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Shelf Life
-    found_in: 3/3
-  solderability:
-    label: Solderability
-    unit: null
-    stat: min
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Solderability
-    found_in: 3/3
-  tc_r:
-    label: TCR (PPM/°C)
-    unit: ppm/°C
-    stat: range
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - TCR (PPM/°C)
-    - Temperature Coefficient of Resistance (T.C.R.)
-    found_in: 3/3
   temperature_coefficient:
     label: Temperature coefficient
     unit: ppm/°C
@@ -156,6 +105,7 @@ specs:
     aliases:
     - Temperature coefficient
     - Package
+    - TCR (PPM/°C)
     found_in: 3/3
   aec_q200:
     label: AEC-Q200
@@ -178,14 +128,34 @@ specs:
     aliases:
     - Insulation Resistance
     found_in: 2/3
-  max_overload_voltage:
-    label: Max. overload voltage
-    unit: V
-    stat: max
+rare_specs:
+  flammability:
+    label: Flammability
+    unit: null
+    stat: value
     conditions: null
-    rule: '>='
+    rule: info
     critical: false
     aliases:
-    - Max. Overload Voltage
-    found_in: 2/3
-rare_specs: {}
+    - Flammability
+    found_in: 3/3
+  shelf_life:
+    label: Shelf life
+    unit: years
+    stat: value
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Shelf Life
+    found_in: 3/3
+  solderability:
+    label: Solderability
+    unit: null
+    stat: min
+    conditions: null
+    rule: info
+    critical: false
+    aliases:
+    - Solderability
+    found_in: 3/3

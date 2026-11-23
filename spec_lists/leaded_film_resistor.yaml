@@ -10,12 +10,12 @@
 type: leaded_film_resistor
 name: leaded film resistor (metal, carbon, oxide)
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: pinout (G/D/S order)
+visual_check: null
 drafted:
-  at: '2026-11-23T15:24:51+00:00'
+  at: '2026-11-23T16:59:39+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,21 +30,32 @@ drafted:
   - viking/mof-series-data-sheet-edition-rev-b3_7e1cf4bb.md
 specs:
   max_working_voltage:
-    label: max working voltage
+    label: Max Working Voltage
     unit: V
-    stat: max
+    stat: value
     conditions: null
     rule: '>='
     critical: true
     aliases:
     - Max. Working Voltage
     - Operating voltage U max.
-    - Max. operating voltage
     - Operating Voltage
     - U max.
+    - Max. Operating Voltage
+    found_in: 9/9
+  operating_temp_range:
+    label: Operating Temp Range
+    unit: °C
+    stat: range
+    conditions: null
+    rule: contains
+    critical: true
+    aliases:
+    - Operating Temp. Range
+    - Operating temperature range
     found_in: 9/9
   package:
-    label: package
+    label: Package
     unit: null
     stat: value
     conditions: null
@@ -53,32 +64,21 @@ specs:
     aliases:
     - Package
     found_in: 9/9
-  operating_temp_range:
-    label: operating temp range
-    unit: °C
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases:
-    - Operating Temp. Range
-    - Operating temperature range
-    found_in: 9/9
   power_rating_at_70c:
-    label: power rating at 70°C
+    label: Power Rating at 70°C
     unit: W
     stat: value
     conditions: null
     rule: '>='
-    critical: false
+    critical: true
     aliases:
     - Power Rating at 70°C
     - Power rating P 70
-    - Power rating
+    - Power Rating
     - P
     found_in: 9/9
   resistance_range:
-    label: resistance range
+    label: Resistance Range
     unit: Ω
     stat: range
     conditions: null
@@ -88,17 +88,17 @@ specs:
     - Resistance Range (±5%)
     - Resistance Range (E6)
     - Resistance Range (E24)
-    - Resistance Value
     - Resistance range
+    - Resistance Value
     - Resistance Range (Standard Power Rating)
     - Resistance Range (High Power Rating)
     found_in: 9/9
   tc_r:
-    label: TCR
+    label: TCR (PPM/°C)
     unit: ppm/°C
     stat: range
     conditions: null
-    rule: ≈
+    rule: contains
     critical: false
     aliases:
     - Temperature coefficient
@@ -106,30 +106,18 @@ specs:
     - TCR (PPM/°C)
     found_in: 9/9
   max_overload_voltage:
-    label: max overload voltage
+    label: Max Overload Voltage
     unit: V
-    stat: max
+    stat: value
     conditions: null
     rule: '>='
-    critical: false
+    critical: true
     aliases:
     - Max. Overload Voltage
     - Overload Voltage
     found_in: 8/9
-  solderability:
-    label: solderability
-    unit: '%'
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Solderability
-    - High power rating
-    - Environmental Characteristics
-    found_in: 8/9
   insulation_resistance:
-    label: insulation resistance
+    label: Insulation Resistance
     unit: MΩ
     stat: min
     conditions: null
@@ -139,44 +127,19 @@ specs:
     - Insulation Resistance
     - Environmental Characteristics
     found_in: 7/9
-  max_overload_voltage_high_power:
-    label: max overload voltage high power
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Max. Overload Voltage
-    - Max. Overload Voltage (High Power Rating)
-    found_in: 7/9
-  resistance_change_after_1000h:
-    label: resistance change after 1000 h
-    unit: '%'
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Endurance
-    - Max. resistance change at P70 for resistance range, ΔR/R max., after 1000 h
-    - Max. Resistance Change
-    - ΔR/R
-    - Environmental Characteristics
-    found_in: 7/9
   resistance_tolerance:
-    label: resistance tolerance
+    label: Resistance Tolerance
     unit: '%'
     stat: range
     conditions: null
-    rule: ≈
+    rule: contains
     critical: false
     aliases:
     - Resistance tolerance
     - Tolerance
     found_in: 7/9
   robustness_of_terminations:
-    label: robustness of terminations
+    label: Robustness of Terminations
     unit: N
     stat: min
     conditions: null
@@ -184,63 +147,35 @@ specs:
     critical: false
     aliases:
     - Robustness of Terminations
-    - Terminal Strength
     - Environmental Characteristics
-    found_in: 6/9
-  dielectric_withstanding_voltage_high_power:
-    label: dielectric withstanding voltage high power
+    found_in: 5/9
+rare_specs:
+  voltage_proof:
+    label: Voltage Proof
     unit: V
-    stat: max
+    stat: value
     conditions: null
     rule: '>='
     critical: false
     aliases:
+    - Dielectric Withstanding Voltage
+    - Max. operating voltage
     - Voltage Proof
-    - Dielectric Withstanding Voltage (High Power Rating)
-    found_in: 5/9
-  dimensions:
-    label: dimensions
-    unit: mm
-    stat: value
+    - Insulation Resistance
+    found_in: 8/9
+  solderability:
+    label: Solderability
+    unit: '%'
+    stat: min
     conditions: null
-    rule: info
+    rule: '>='
     critical: false
     aliases:
-    - L (mm)
-    - L 1 min. (mm)
-    - ΦD (mm)
-    - ΦD 1 (mm)
-    - K (mm)
-    - Weight 1,000EA (g)
-    - Dimensions
-    - Measured
-    - L
-    - D
-    - H
-    found_in: 5/9
-  flameproof_construction:
-    label: flameproof construction
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Voltage Proof
-    found_in: 5/9
-  resistance_to_soldering_heat:
-    label: resistance to soldering heat
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Resistance to Soldering Heat
+    - Solderability
     - Environmental Characteristics
-    found_in: 5/9
+    found_in: 7/9
   shelf_life:
-    label: shelf life
+    label: Shelf Life
     unit: years
     stat: max
     conditions: null
@@ -249,31 +184,8 @@ specs:
     aliases:
     - Shelf life
     found_in: 5/9
-  short_time_overload:
-    label: short time overload
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Short Time Overload
-    - Resistance to Soldering Heat
-    - Environmental Characteristics
-    found_in: 5/9
-  solvent_resistance_of_marking:
-    label: solvent resistance of marking
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Solvent Resistance of Marking
-    - Environmental Characteristics
-    found_in: 5/9
   storage_temperature:
-    label: storage temperature
+    label: Storage Temperature
     unit: °C
     stat: range
     conditions: null
@@ -282,43 +194,9 @@ specs:
     aliases:
     - Storage Temperature
     found_in: 5/9
-  temperature_cycling:
-    label: temperature cycling
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Temperature Cycling
-    - Environmental Characteristics
-    found_in: 5/9
-  voltage_proof:
-    label: voltage proof
-    unit: V
-    stat: value
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Dielectric Withstanding Voltage
-    - Voltage Proof
-    found_in: 5/9
-rare_specs:
-  damp_heat_steady_state:
-    label: damp heat steady state
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Damp Heat, Steady State
-    - Environmental Characteristics
-    found_in: 4/9
   humidity:
-    label: humidity
-    unit: '%'
+    label: Humidity
+    unit: '%RH'
     stat: max
     conditions: null
     rule: <=
@@ -326,254 +204,23 @@ rare_specs:
     aliases:
     - Humidity
     found_in: 4/9
-  marking:
-    label: marking
+  resistance_to_soldering_heat:
+    label: Resistance to Soldering Heat
     unit: null
     stat: value
     conditions: null
-    rule: info
+    rule: '='
     critical: false
     aliases:
-    - Product
-    - Marking
+    - Resistance to Soldering Heat
     found_in: 4/9
-  max_working_voltage_high_power:
-    label: max working voltage high power
-    unit: V
-    stat: max
+  temperature_cycling:
+    label: Temperature Cycling
+    unit: null
+    stat: value
     conditions: null
-    rule: '>='
+    rule: '='
     critical: false
     aliases:
-    - Max. Operating Voltage
-    - Max. Working Voltage (High Power Rating)
+    - Temperature Cycling
     found_in: 4/9
-  periodic_pulse_overload_test:
-    label: periodic pulse overload test
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Periodic-Pulse Overload Test
-    - Environmental Characteristics
-    found_in: 4/9
-  construction:
-    label: construction
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Damp Heat, Steady State
-    - Construction
-    found_in: 3/9
-  power_rating_high_power:
-    label: power rating high power
-    unit: W
-    stat: range
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Power Rating at 70°C
-    - Power Rating (High Power Rating)
-    found_in: 3/9
-  weight:
-    label: weight
-    unit: g
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Weight 1,000EA (g)
-    - Weight
-    - Weight (g) (1000pcs)
-    found_in: 3/9
-  aec_q200_qualified:
-    label: AEC-Q200 qualified
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - AEC-Q200 Qualified
-    found_in: 2/9
-  packaging_code:
-    label: packaging code
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Packaging Code
-    found_in: 2/9
-  coating:
-    label: coating
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Coating
-    found_in: 1/9
-  excellent_overall_stability:
-    label: excellent overall stability
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Excellent overall stability
-    found_in: 1/9
-  lead_free:
-    label: lead-free
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Lead-free
-    found_in: 1/9
-  reel_diameter:
-    label: reel diameter
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Reel Diameter
-    found_in: 1/9
-  resistance_standard_tolerance:
-    label: resistance standard tolerance
-    unit: '%'
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - Resistance Standard Tolerance
-    found_in: 1/9
-  rohs_compliant:
-    label: RoHS compliant
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - RoHS compliant
-    found_in: 1/9
-  smd_enabled_structure:
-    label: SMD enabled structure
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - SMD enabled structure
-    found_in: 1/9
-  sn_termination_on_ni_barrier_layer:
-    label: Sn termination on Ni barrier layer
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Sn termination on Ni barrier layer
-    found_in: 1/9
-  special:
-    label: special
-    unit: null
-    stat: value
-    conditions: null
-    rule: info
-    critical: false
-    aliases:
-    - Special
-    found_in: 1/9
-  sulfur_resistance:
-    label: sulfur resistance
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Sulfur resistance
-    found_in: 1/9
-  tc_r_high_power:
-    label: TCR high power
-    unit: ppm/°C
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases:
-    - TCR (High Power Rating)
-    found_in: 1/9
-  dielectric_withstanding_voltage:
-    label: dielectric withstanding voltage
-    unit: V
-    stat: max
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases: []
-    found_in: 0/9
-  endurance:
-    label: endurance
-    unit: null
-    stat: value
-    conditions: null
-    rule: ≈
-    critical: false
-    aliases: []
-    found_in: 0/9
-  flameproof:
-    label: flameproof
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases: []
-    found_in: 0/9
-  high_power_rating:
-    label: high power rating
-    unit: null
-    stat: value
-    conditions: null
-    rule: '='
-    critical: false
-    aliases: []
-    found_in: 0/9
-  resistance_range_high_power:
-    label: resistance range high power
-    unit: Ω
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases: []
-    found_in: 0/9
-  resistance_value:
-    label: resistance value
-    unit: Ω
-    stat: range
-    conditions: null
-    rule: contains
-    critical: false
-    aliases: []
-    found_in: 0/9

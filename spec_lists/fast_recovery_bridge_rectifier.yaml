@@ -10,12 +10,12 @@
 type: fast_recovery_bridge_rectifier
 name: fast / superfast recovery bridge rectifier
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: pin order (~ ~ + -)
 drafted:
-  at: '2026-11-23T15:19:50+00:00'
+  at: '2026-11-23T16:49:26+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:

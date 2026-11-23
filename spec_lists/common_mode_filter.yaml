@@ -10,12 +10,12 @@
 type: common_mode_filter
 name: common mode choke / filter
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: none
+visual_check: Pinout (common mode choke has two windings, typically labeled as input and output for each winding)
 drafted:
-  at: '2026-11-23T15:26:59+00:00'
+  at: '2026-11-23T17:02:22+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -38,19 +38,6 @@ specs:
     - Package
     - Type
     found_in: 7/7
-  insulation_resistance_min:
-    label: Insulation Resistance min
-    unit: MΩ
-    stat: min
-    conditions: null
-    rule: '>='
-    critical: false
-    aliases:
-    - Insulation Resistance (MΩ) min.
-    - Insulation Resistance
-    - IR
-    - Insulation Resistance (min.)
-    found_in: 7/7
   dcr_max:
     label: DCR max
     unit: Ω
@@ -59,22 +46,20 @@ specs:
     rule: <=
     critical: false
     aliases:
-    - DCR (Ω) max.
     - DCR
+    - DCR (Ω) max.
     found_in: 6/7
-  idc_max:
-    label: IDC max
-    unit: mA
-    stat: max
+  insulation_resistance_min:
+    label: Insulation Resistance min
+    unit: MΩ
+    stat: min
     conditions: null
     rule: '>='
     critical: false
     aliases:
-    - IDC (mA) max.
-    - IDC
-    - Rated Current (mA) max.
-    - Rated Current
-    - I
+    - Insulation Resistance
+    - IR
+    - Insulation Resistance (MΩ) min.
     found_in: 6/7
   operating_temp_range:
     label: Operating Temperature Range
@@ -88,19 +73,19 @@ specs:
     - Temperature
     - Operating Temperature
     found_in: 6/7
-  rated_voltage_vdc:
-    label: Rated Voltage Vdc
-    unit: V
-    stat: value
+  idc_max:
+    label: IDC max
+    unit: mA
+    stat: max
     conditions: null
     rule: '>='
     critical: false
     aliases:
-    - Rated Voltage Vdc (V) typ.
-    - Rated Voltage
-    - Vdc
-    - Rated Voltage Vdc (V)
-    found_in: 6/7
+    - IDC
+    - Rated Current (mA) max.
+    - Rated Current
+    - I
+    found_in: 5/7
   impedance_min:
     label: Impedance min @ 100 MHz
     unit: Ω
@@ -112,26 +97,17 @@ specs:
     - Impedance
     - Z
     found_in: 5/7
-  shelf_life_max:
-    label: Shelf Life Max
-    unit: years
-    stat: max
+  rated_voltage:
+    label: Rated Voltage
+    unit: V
+    stat: value
     conditions: null
     rule: '>='
     critical: false
     aliases:
-    - Shelf life
-    - Storage Time
-    found_in: 5/7
-  storage_temp_max:
-    label: Storage Temperature Max
-    unit: °C
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Storage Temperature
+    - Rated Voltage
+    - Vdc
+    - Rated Voltage Vdc (V)
     found_in: 5/7
   tolerance:
     label: Tolerance
@@ -156,6 +132,27 @@ specs:
     - Withstanding Voltage (V)
     found_in: 5/7
 rare_specs:
+  shelf_life_max:
+    label: Shelf Life Max
+    unit: years
+    stat: max
+    conditions: null
+    rule: '>='
+    critical: false
+    aliases:
+    - Shelf life
+    - Storage Time
+    found_in: 5/7
+  storage_temp_max:
+    label: Storage Temperature Max
+    unit: °C
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Storage Temperature
+    found_in: 5/7
   impedance_typ:
     label: Impedance typ @ 100 MHz
     unit: Ω

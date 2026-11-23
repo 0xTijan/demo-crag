@@ -10,12 +10,12 @@
 type: igbt_transistor
 name: IGBT (insulated gate bipolar transistor)
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
 visual_check: IGBT pinout (G/D/S order)
 drafted:
-  at: '2026-11-23T15:33:01+00:00'
+  at: '2026-11-23T17:07:58+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -85,7 +85,6 @@ specs:
     critical: true
     aliases:
     - Package
-    - TO-247AD
     found_in: 3/3
   pd_max:
     label: PD(max)
@@ -264,6 +263,17 @@ specs:
     - Gate to Emitter Leakage Current
     - IGES
     found_in: 3/3
+  q_rr_typ:
+    label: Qrr typ
+    unit: nC
+    stat: typ
+    conditions: if_50a_didt_500a_us
+    rule: ≈
+    critical: false
+    aliases:
+    - Reverse Recovery Charge
+    - Qrr
+    found_in: 3/3
   qg_typ:
     label: Qg typ
     unit: nC
@@ -297,16 +307,16 @@ specs:
     - Gate-Emitter Charge
     - Qge
     found_in: 3/3
-  qrr_typ:
-    label: Qrr typ
-    unit: nC
+  t_rr_typ:
+    label: Trr typ
+    unit: ns
     stat: typ
     conditions: if_50a_didt_500a_us
     rule: ≈
     critical: false
     aliases:
-    - Reverse Recovery Charge
-    - Qrr
+    - Reverse Recovery Time
+    - Trr
     found_in: 3/3
   td_off_typ:
     label: td(off) typ
@@ -357,17 +367,6 @@ specs:
     - t r
     - Turn-on Rise Time
     - tr
-    found_in: 3/3
-  trr_typ:
-    label: Trr typ
-    unit: ns
-    stat: typ
-    conditions: if_50a_didt_500a_us
-    rule: ≈
-    critical: false
-    aliases:
-    - Reverse Recovery Time
-    - Trr
     found_in: 3/3
   vce_sat_typ:
     label: VCE(sat) typ

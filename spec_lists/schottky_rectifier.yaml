@@ -10,12 +10,12 @@
 type: schottky_rectifier
 name: Schottky barrier rectifier / diode
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: diode cathode band / polarity mark (for Schottky rectifier)
+visual_check: diode cathode band / polarity mark (cathode band on the package)
 drafted:
-  at: '2026-11-23T14:48:21+00:00'
+  at: '2026-11-23T16:27:22+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -30,17 +30,20 @@ drafted:
   - goodarksemi/mbrb20300s_837e1551.md
   - goodarksemi/sk3c0b_c06f3973.md
 specs:
-  package:
-    label: Package
-    unit: null
-    stat: value
+  vdc_max:
+    label: VDC max
+    unit: V
+    stat: max
     conditions: null
-    rule: '='
+    rule: '>='
     critical: true
     aliases:
-    - Package
-    - Maximum Instantaneous Forward Voltage Drop
-    - VF
+    - Maximum DC blocking voltage
+    - VDC
+    - V DC
+    - Surge (Non-Repetitive) Forward Current @ 60Hz Half-Sine Wave, 1 Cycle, T =25°C A
+    - IFSM
+    - V_DC
     found_in: 10/10
   vrrm_max:
     label: VRRM max
@@ -66,31 +69,74 @@ specs:
     aliases:
     - Peak forward surge current,8.3ms single half sine-wave superimposed on rated loa
     - IFSM
+    - Peak Forward Surge Current 8.3ms Single Half Sine-Wave Superimposed on Rated Loa
+    - I FSM
+    - I_FSM
+    - Peak Forward Surge Current (8.3ms Single Half Sine-Wave Superimposed on Rated Lo
     found_in: 10/10
-  vdc_max:
-    label: VDC max
-    unit: V
-    stat: max
+  rthja_typ:
+    label: RthJA typ
+    unit: °C/W
+    stat: typ
     conditions: null
-    rule: '>='
-    critical: true
+    rule: <=
+    critical: false
     aliases:
-    - Maximum DC blocking voltage
-    - VDC
-    found_in: 9/10
+    - Thermal Resistance, Junction to Ambient
+    - RthJA
+    - RθJA
+    - Typical Thermal Resistance, Junction to Case
+    - R θJC
+    - Thermal Resistance
+    - RθJ-A
+    - Typical Thermal Resistance
+    - R_θJA
+    - R θJA
+    found_in: 10/10
+  rthjc_typ:
+    label: RthJC typ
+    unit: °C/W
+    stat: typ
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Thermal Resistance, Junction to Case
+    - RthJC
+    - RθJC
+    - Typical Thermal Resistance
+    - R_θJL
+    - R θJC
+    found_in: 10/10
   tj_range:
     label: TJ range
     unit: °C
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Operating junction temperature range
     - TJ
-    - Junction Temperature in DC forward Current without reverse bias, t ≤1h
-    found_in: 9/10
-  vrm_max:
+    - Peak repetitive reverse current per leg at tp=4.0us ,1KHz
+    - IRRM
+    - T J
+    - Junction Temperature
+    - Operating Junction and Storage Temperature Range
+    - T_J, T_STG
+    found_in: 10/10
+  vf_max:
+    label: VF max @ IF=0.5A
+    unit: V
+    stat: max
+    conditions: IF=0.5A
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum forward drop voltage
+    - VF
+    found_in: 10/10
+  vrms_max:
     label: VRMS max
     unit: V
     stat: max
@@ -102,6 +148,20 @@ specs:
     - VRMS
     - Working peak reverse voltage
     - VRWM
+    - V RMS
+    - Average Rectified Output Current @ 60Hz Sine Wave, Resistance Load, T (FIG.1) L
+    - IO
+    - V_RMS
+    found_in: 10/10
+  package:
+    label: Package
+    unit: null
+    stat: value
+    conditions: null
+    rule: '='
+    critical: true
+    aliases:
+    - Package
     found_in: 9/10
   if_av_max:
     label: IF(AV) max
@@ -109,107 +169,61 @@ specs:
     stat: max
     conditions: null
     rule: '>='
-    critical: true
+    critical: false
     aliases:
     - Maximum average forward rectified current
     - IF(AV)
     - Maximum average forward
-    found_in: 8/10
-  ir_max@tj_25c:
-    label: IR max @ VR=0V TJ=25°C
-    unit: mA
-    stat: max
-    conditions: VR=0V, TJ=25°C
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum reverse leakage current @VR
-    - IR
-    - Reverse leakage current @VR
-    - Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage
-    - I R
-    - Maximum DC Reverse Current at Rated DC Blocking Voltage @ VRM=VRRM
-    - IRRM
-    - Maximum DC Reverse Current at Rated DC Blocking Voltage
-    - I_R
-    found_in: 8/10
-  tj_range_2:
-    label: TJ range (operating)
-    unit: °C
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Operating Junction Temperature Range
-    - T J
-    - Junction Temperature
-    - Tj
-    found_in: 8/10
+    - Maximum Average Forward Rectified Current (See Fig.1) Per Leg
+    - I (AV)
+    - Maximum Average Forward Rectified Current (See Fig.1) Total Device
+    - I_F(AV)
+    - Maximum Average Forward Recitified Current
+    - I F(AV)
+    found_in: 9/10
   tstg_range:
     label: TSTG range
     unit: °C
     stat: range
     conditions: null
-    rule: '='
+    rule: contains
     critical: false
     aliases:
     - Storage temperature range
     - TSTG
-    found_in: 8/10
-  tstg_range_2:
-    label: TSTG range (storage)
-    unit: °C
-    stat: range
-    conditions: null
-    rule: '='
-    critical: false
-    aliases:
-    - Storage Temperature Range
     - T STG
-    found_in: 8/10
-  rthjc_typ:
-    label: RθJC typ
-    unit: °C/W
-    stat: typ
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Thermal Resistance, Junction to Case
-    - RthJC
-    - RθJC
-    found_in: 7/10
+    - Storage Temperature
+    found_in: 9/10
   ir_max@tj_100c:
-    label: IR max @ VR=0V TJ=100°C
+    label: IR max @ VR=40V, TJ=100°C
     unit: mA
     stat: max
-    conditions: VR=0V, TJ=100°C
+    conditions: VR=40V, TJ=100°C
     rule: <=
     critical: false
     aliases:
-    - Maximum reverse leakage current @VR
-    - IR
     - Reverse leakage current @VR
-    - Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage
-    - I R
+    - IR
+    - Maximum reverse leakage current @VR
     - Maximum DC Reverse Current at Rated DC Blocking Voltage @ VRM=VRRM
     - IRRM
     found_in: 6/10
-  rthja_typ:
-    label: RθJA typ
-    unit: °C/W
-    stat: typ
-    conditions: null
+  ir_max@tj_25c:
+    label: IR max @ VR=50V, TJ=25°C
+    unit: uA
+    stat: max
+    conditions: VR=50V, TJ=25°C
     rule: <=
     critical: false
     aliases:
-    - Thermal Resistance, Junction to Ambient
-    - RthJA
-    - RθJA
+    - Reverse leakage current @VR
+    - IR
+    - Maximum reverse leakage current @VR
+    - Maximum DC Reverse Current at Rated DC Blocking Voltage @ VRM=VRRM
+    - IRRM
     found_in: 6/10
   rthjl_typ:
-    label: RθJL typ
+    label: RthJL typ
     unit: °C/W
     stat: typ
     conditions: null
@@ -219,44 +233,27 @@ specs:
     - Thermal Resistance, Junction to Lead
     - RthJL
     - RθJL
-    found_in: 5/10
-rare_specs:
-  vf_max@tj_25c:
-    label: VF max @ IF=0.5A TJ=25°C
-    unit: V
-    stat: max
-    conditions: IF=0.5A, TJ=25°C
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum forward drop voltage
-    - VF
-    - Forward Drop Voltage
-    found_in: 4/10
+    - Thermal Resistance
+    - RθJ-L
+    - Typical Thermal Resistance
+    - R θJL
+    found_in: 6/10
   cj_typ@f_1mhz:
-    label: CJ typ @ VR=4V f=1MHz
+    label: CJ typ @ VR=4.0V, f=1MHz
     unit: pF
     stat: typ
-    conditions: VR=4V, f=1MHz
+    conditions: VR=4.0V, f=1MHz
     rule: ≈
     critical: false
     aliases:
     - Typical junction capacitance
     - CJ
-    found_in: 3/10
-  ir_max@tj_125c:
-    label: IR max @ VR=35V TJ=125°C
-    unit: mA
-    stat: max
-    conditions: VR=35V, TJ=125°C
-    rule: <=
-    critical: false
-    aliases:
-    - Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage
-    - I R
-    found_in: 2/10
+    - C_J
+    - C J
+    found_in: 5/10
+rare_specs:
   vf_max@tj_125c:
-    label: VF max @ IF=20A TJ=125°C
+    label: VF max @ IF=20A, TJ=125°C
     unit: V
     stat: max
     conditions: IF=20A, TJ=125°C
@@ -265,9 +262,33 @@ rare_specs:
     aliases:
     - Forward Drop Voltage
     - VF
+    - Forward drop voltage (Note1)
+    found_in: 3/10
+  vf_max@tj_25c:
+    label: VF max @ IF=20A, TJ=25°C
+    unit: V
+    stat: max
+    conditions: IF=20A, TJ=25°C
+    rule: <=
+    critical: false
+    aliases:
+    - Forward Drop Voltage
+    - VF
+    - Forward drop voltage (Note1)
+    found_in: 3/10
+  ir_max@tj_125c:
+    label: IR max @ TJ=125°C
+    unit: mA
+    stat: max
+    conditions: TJ=125°C
+    rule: <=
+    critical: false
+    aliases:
+    - Maximum Instantaneous Reverse Current at Rated DC Blocking Voltage
+    - I R
     found_in: 2/10
   vf_max@ta_25c:
-    label: VF max @ IF=1A TA=25°C
+    label: VF max @ IF=1A, TA=25°C
     unit: V
     stat: max
     conditions: IF=1A, TA=25°C
@@ -276,9 +297,11 @@ rare_specs:
     aliases:
     - Forward Drop Voltage
     - VF
-    found_in: 1/10
+    - Maximum Instantaneous Forward Voltage
+    - V_F
+    found_in: 2/10
   vf_typ@ta_125c:
-    label: VF typ @ IF=5A TA=125°C
+    label: VF typ @ IF=5A, TA=125°C
     unit: V
     stat: typ
     conditions: IF=5A, TA=125°C

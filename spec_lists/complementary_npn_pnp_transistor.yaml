@@ -10,13 +10,13 @@
 type: complementary_npn_pnp_transistor
 name: complementary NPN + PNP transistor pair
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: MOSFET pinout (G/D/S order) or diode cathode band / polarity mark (for complementary pair, check both
-  NPN and PNP pinout)
+visual_check: MOSFET pinout (G/D/S order), diode cathode band / polarity mark, bridge pin order (~ ~ + -), resistor
+  (none)
 drafted:
-  at: '2026-11-23T15:23:36+00:00'
+  at: '2026-11-23T16:54:25+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -40,10 +40,6 @@ specs:
     critical: true
     aliases:
     - Package
-    - Marking
-    - Quantity
-    - HSF Status
-    - Carrier
     found_in: 10/10
   v_cbo_max:
     label: VCBO max
@@ -220,12 +216,11 @@ specs:
     rule: <=
     critical: false
     aliases:
-    - Fall time
-    - tf
-    - Package
-    - Collector-base Breakdown Voltage
-    - V (BR)CBO
-    - tr
+    - Collector to Base Breakdown Voltage
+    - VCBO
+    - DC Current Gain
+    - h FE
+    - Fall Time
     - t f
     found_in: 10/10
   v_be_sat_max:
@@ -369,21 +364,6 @@ specs:
     - DC current gain
     - h FE(3)
     found_in: 8/10
-  ts_max:
-    label: ts max
-    unit: nS
-    stat: max
-    conditions: null
-    rule: <=
-    critical: false
-    aliases:
-    - Storage time
-    - ts
-    - Noise Figure
-    - NF
-    - t stg
-    - t S
-    found_in: 7/10
   td_max:
     label: td max
     unit: nS
@@ -396,8 +376,15 @@ specs:
     - td
     - Rise time
     - tr
-    found_in: 5/10
-rare_specs:
+    - Noise Figure
+    - NF
+    - Turn-on Time
+    - Turn–On Time
+    - ton
+    - t d
+    - t r
+    - t on
+    found_in: 7/10
   tr_max:
     label: tr max
     unit: nS
@@ -405,5 +392,27 @@ rare_specs:
     conditions: null
     rule: <=
     critical: false
-    aliases: []
-    found_in: 0/10
+    aliases:
+    - Storage time
+    - ts
+    - t stg
+    - Turn-off Time
+    - t off
+    - t S
+    found_in: 5/10
+  ts_max:
+    label: ts max
+    unit: nS
+    stat: max
+    conditions: null
+    rule: <=
+    critical: false
+    aliases:
+    - Fall time
+    - tf
+    - tr
+    - t f
+    - Storage Time
+    - t stg
+    found_in: 5/10
+rare_specs: {}

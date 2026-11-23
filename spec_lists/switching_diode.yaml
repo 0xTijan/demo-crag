@@ -10,12 +10,12 @@
 type: switching_diode
 name: small-signal switching diode
 version: 1
-status: draft
+status: reviewed
 must_match:
 - package
-visual_check: pinout (cathode band / polarity mark)
+visual_check: diode cathode band / polarity mark
 drafted:
-  at: '2026-11-23T15:06:33+00:00'
+  at: '2026-11-23T16:36:28+00:00'
   model: qwen3:30b-a3b
   min_share: 0.5
   samples:
@@ -121,21 +121,24 @@ specs:
     - V RSM
     - Repetitive Peak Reverse Voltage
     found_in: 10/10
-  cj_typ:
-    label: CJ typ
+  cj_max:
+    label: CJ max
     unit: pF
-    stat: typ
+    stat: max
     conditions: vr_0v_f_1mhz
-    rule: ≈
+    rule: <=
     critical: false
     aliases:
+    - Capacitance
+    - Cj
     - Typical junction capacitance
     - C J
-    - Capacitance
     - C
     - Total Capacitance
     - C tot
     - C_T
+    - Capacitance Between Terminals
+    - CT
     found_in: 10/10
   ir_max:
     label: IR max
